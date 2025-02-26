@@ -1,0 +1,109 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-network",
+            "title": "Happy Customers",
+            "content": "<p>Join the majority who love and trust our quality.</p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-delivery",
+            "title": "Fast & Free Shipping",
+            "content": "<p>Get your neon sign in just 6-8 business days.</p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-alert",
+            "title": "2-year warranty",
+            "content": "<p>Experience hassle-free product assurance.</p>"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-secure-payment",
+            "title": "100% secure payments",
+            "content": "<p>Safe and secure payments via Credit Card & PayPal.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4"
+      ],
+      "settings": {
+        "stack_mobile": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "text",
+          "settings": {
+            "title": "About Neonsfeer",
+            "content": "<p>Illuminating spaces with bespoke neon artistry, crafted for those who seek the extraordinary.</p><p><br/><strong>Opening hours</strong><br/>Monday - Friday: 8AM - 6PM<br/>Saturday and Sunday: 9AM - 5PM<br/></p><p><strong>Contact us</strong><br/>info@neonsfeer.com<br/>+1 (646) 760-1539</p><p>Neonsfeer<br/>67-04 Myrtle Ave #443<br/>Glendale, NY 11385</p>"
+          }
+        },
+        "links_zBbHbJ": {
+          "type": "links",
+          "settings": {
+            "menu": "products"
+          }
+        },
+        "footer-1": {
+          "type": "links",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "footer-2": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Newsletter",
+            "subheading": "<p>Sign up for news, insights, and deals—straight to your inbox!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "links_zBbHbJ",
+        "footer-1",
+        "footer-2"
+      ],
+      "settings": {
+        "show_social_media": true,
+        "enable_follow_on_shop": false,
+        "show_payment_icons": false,
+        "show_locale_selector": false,
+        "show_country_selector": false
+      }
+    }
+  },
+  "order": [
+    "text-with-icons",
+    "footer"
+  ]
+}

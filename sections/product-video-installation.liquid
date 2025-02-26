@@ -1,0 +1,147 @@
+<div class="installation-section builder_USSS product-second-installation-video">
+    <div class="container">
+        <div class="row">
+            {% for block in section.blocks %}
+                {% if block.type=='text-button'%}
+                    <div class="col-md-4 cstm-text-button">
+                        <div class="cstm-heading-installation">
+                            <h2>{{ block.settings.content_heading }}</h2>
+                        </div>
+                        <div class="cstm-content-installation">
+                            <p class="small">{{ block.settings.content }}</p>
+                        </div>
+                        <div class="wrap_cstm_div">
+                            <div class="cstm-button-installation">
+                                <form method="post" action="/cart/add">
+                                    <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                                </form>
+                            </div>
+                            <div class="cstm-button-installation-image"></div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if block.type=='installation-video' %}
+                    <div class="col-md-4 cstm-installation-video">
+                        {% if  block.settings.overlay != blank %}
+                            <div class="overlay-video-yt">
+                                <div class="overlay-img">
+                                    {%- assign image_url_1 = block.settings.overlay | image_url: width: block.settings.overlay.width | image_tag: loading: 'lazy', class: 'image-1', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'-%}
+                                    {{ image_url_1 }}
+                                </div>
+                                <div class="overlay-img-btn">
+                                    <button class="video-toggle-button">
+                                        <img height="100%" width="100%" class="lazyload image--fade-in" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Group_8425.svg?v=1687774934">
+                                    </button>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="youtube-video-section" style="display:none;">
+                            {% if block.settings.Video_url != blank %}
+                                <video width="100%" height="100%" playsinline muted loop controls>
+                                    <source data-src="{{ block.settings.Video_url }}" src="{{ block.settings.Video_url }}" type="video/mp4">
+                                </video>
+                            {% endif %}
+                        </div>
+                        <div class="video-custom-steps">
+                            <div class="cstm-content-installation">
+                                <h3>{{ block.settings.Heading }}</h3>
+                            </div>
+                            <div class="cstm-content-installation">
+                                <p>{{ block.settings.content_video }}</p>
+                            </div>
+                        </div>
+                    </div>  
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+    "name": "Product Install Video",
+    "settings": [],
+    "blocks":[{
+    "type":"text-button",
+    "name":"text-button",
+    "settings":[
+          {
+          "type":"text",
+          "id":"add_to_cart_btn_text",
+          "label":"Add to cart label"
+            },
+    
+          {
+          "type":"text",
+          "id":"content_heading",
+          "label":"Heading"
+          },
+          
+          
+          {
+          "type":"text",
+          "id":"content",
+          "label":"Content"
+          },
+          {
+          "type":"url",
+          "id":"content_link",
+          "label":"Button-Link"
+          },
+          
+          {
+          "type":"text",
+          "id":"content_text",
+          "label":"Button Name"
+          },
+            {
+              "type":"image_picker",
+          "id":"image_picker",
+          "label":"Button Name"
+            }
+        ]
+    
+        },
+    
+        {
+        "type":"installation-video",
+        "name":"installation-video",
+        
+        "settings":[
+        {
+          "type":"image_picker",
+          "id":"overlay",
+          "label":"Overlay Image"
+        },
+        {
+        "type":"url",
+        "id":"Video_url",
+        "label":"Video_link"
+        },
+        {
+        "type":"textarea",
+        "id":"Heading",
+        "label":"Video_Heading"
+        },
+        
+        {
+        "type":"textarea",
+        "id":"content_video",
+        "label":"Content"
+        }]
+        
+        }],
+        "presets":[{
+        "name":"Product Install Video"
+        }]
+    
+    
+    
+      }
+    {% endschema %}
+    
+    {% stylesheet %}
+    {% endstylesheet %}
+    
+    {% javascript %}
+    {% endjavascript %}
+    

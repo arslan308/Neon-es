@@ -1,0 +1,13 @@
+<div class="product-item">
+  <a href="{{ product.url }}" class="product-item__image-wrapper">
+    <img
+      src="{{ product.featured_image | img_url: 'master' }}"
+      alt="{{ product.title | escape }}"
+      class="product-item__primary-image"
+    />
+    <div class="product-item__info">
+      <h3 class="product-item__title">{{ product.title }}</h3>
+      <span class="product-item__price">{{ product.price | money }}</span>
+    </div>
+  </a>
+</div>

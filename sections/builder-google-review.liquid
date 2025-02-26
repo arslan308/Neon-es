@@ -1,0 +1,560 @@
+
+<div class="custom-google-reviews {{ section.settings.spacing }} lead_page_NL_price_with_logo_discount">
+<div class="custom-google-rev-head container">
+    <div class="custom-rev-head-flex builder-page-review">
+      <h2 class="rev-head"><img src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/copy_4_1.svg?v=1687770618">{{ section.settings.title }}</h2>
+      <div class="slider-toggle">
+        <div class="buttons-slider-tg">
+          <button class="custom-slide-arrows custom-prev-arrows">
+            {% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder'or template contains 'page.form_page_' or template == 'product.custom_neon' or template contains  'product.neon_maken' %}
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.13998 5.50882L2.11875 5.4875H2.14884H10.1879V4.5125H2.14884H2.11875L2.13998 4.49118L5.9131 0.702565L5.22095 0.0176493L0.258981 5L5.22095 9.98235L5.9131 9.29744L2.13998 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/></svg>
+            {% else %}
+            <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="21.98" cy="21" r="20.25" stroke="black" stroke-width="1.5"></circle><path d="M24.98 13L16.98 21L24.98 29" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path></g></svg>
+            {% endif %}
+            </button>
+          <button class="custom-slide-arrows custom-next-arrows">
+            {% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder'or template contains 'page.form_page_' or template == 'product.custom_neon' or template contains  'product.neon_maken' %}
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.15433 5.50882L8.17556 5.4875H8.14547H0.106372V4.5125H8.14547H8.17556L8.15433 4.49118L4.38121 0.702565L5.07336 0.0176493L10.0353 5L5.07336 9.98235L4.38121 9.29744L8.15433 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/></svg>
+            {% else %}
+            <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="21.98" cy="21" r="20.25" transform="rotate(-180 21.98 21)" stroke="black" stroke-width="1.5"></circle><path d="M18.98 29L26.98 21L18.98 13" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path></g></svg>
+            {% endif %}
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="google-reviews-main-new container ">
+    <div class="google-review-items-new">
+      {% for block in section.blocks %}
+        {%- case block.type -%}
+          {%- when 'image-with-review' -%}
+            <div class="google-review">
+              <div>
+                {%- if block.settings.user-uploaded-img != blank -%}
+                  <img src="{{ block.settings.user-uploaded-img | img_url: '2048x2048' }}" width="100%" height="300px" class="pro-image">
+                {%- else -%}
+                  {%- if block.settings.image_url != blank -%}
+                    <img src="{{ block.settings.image_url }}" width="100%" height="300px" class="pro-image">
+                  {%- else -%}
+                    <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c.webp?v=1735747963" width="100%" height="300px" class="pro-image">
+                  {%- endif -%}
+                {%- endif -%}
+  
+                <div class="customers-review">
+                  {%- if block.settings.user-img != blank -%}
+                    <img src="{{ block.settings.user-img | img_url: '2048x2048' }}" class="image-review-size">
+                  {%- endif -%}
+                  <h2>{{ block.settings.user-name }}
+                    {% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder'or template contains 'page.form_page_' or template == 'product.custom_neon' or template contains  'product.neon_maken' %}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#715AEF"/>
+                        <mask id="mask0_471_8088" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+                          <rect x="3.52948" y="3.52954" width="16.9412" height="16.9412" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_471_8088)">
+                          <path d="M10.2709 16.2355L6.24734 12.212L7.25323 11.2061L10.2709 14.2238L16.7473 7.74731L17.7532 8.7532L10.2709 16.2355Z" fill="white"/>
+                        </g>
+                      </svg>
+                    {% else %}
+                      <img src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Group_8588_1.png?v=1688548470" >
+                    {% endif %}
+                  </h2>
+                  <div class="review-image">
+                    {% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder'or template contains 'page.form_page_' or template =="product.custom_neon" or template contains  'product.neon_maken' %}
+                      <svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.04195 17.34L5.18195 10.98L0.0219532 7.52H6.34195L8.60195 0.699999L10.902 7.52H17.182L12.022 10.98L14.202 17.34L8.60195 13.28L3.04195 17.34ZM22.2412 17.34L24.3812 10.98L19.2212 7.52H25.5412L27.8012 0.699999L30.1012 7.52H36.3812L31.2212 10.98L33.4012 17.34L27.8012 13.28L22.2412 17.34ZM41.4404 17.34L43.5804 10.98L38.4204 7.52H44.7404L47.0004 0.699999L49.3004 7.52H55.5804L50.4204 10.98L52.6004 17.34L47.0004 13.28L41.4404 17.34ZM60.6396 17.34L62.7796 10.98L57.6196 7.52H63.9396L66.1996 0.699999L68.4996 7.52H74.7796L69.6196 10.98L71.7996 17.34L66.1996 13.28L60.6396 17.34ZM79.8388 17.34L81.9788 10.98L76.8188 7.52H83.1388L85.3988 0.699999L87.6988 7.52H93.9788L88.8188 10.98L90.9988 17.34L85.3988 13.28L79.8388 17.34Z" fill="#FFBB0E"/>
+                      </svg>
+                    {% else %}
+                      <img src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Frame_8870.png?v=1688533619" height="19px">
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.user-discription }}</p>
+                </div>
+              </div>
+            </div>
+          {%- endcase -%}
+        {%- endfor -%}
+    </div>
+  </div>
+  
+  <div class="reputon-google-reviews-widget container" id="47782490-f962-11ec-9541-d3f22c760941"></div>
+</div>
+<script>
+{% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder' or template contains 'page.form_page_' or template=="product.custom_neon" or template contains  'product.neon_maken' %}
+jQuery(document).ready(function($){
+  $('.google-review-items-new').slick({
+  dots: false,
+  centerMode: true,
+  centerPadding: '40px',
+  arrows:true,
+  speed: 300,
+  slidesToShow: 3,
+  adaptiveHeight: false,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,        
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+{% else %}
+
+jQuery(document).ready(function($){
+  $('.google-review-items-new').slick({
+  dots: true,
+  infinite: false,
+  arrows:true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  adaptiveHeight: false,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,        
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+{% endif %}
+
+  $(".builder-page-review button.custom-slide-arrows.custom-next-arrows").on("click", function(){
+    $(".google-reviews-main-new  button.slick-next").trigger("click");
+  })
+  $(".builder-page-review button.custom-slide-arrows.custom-prev-arrows").on("click", function(){
+    $(".google-reviews-main-new  button.slick-prev").trigger("click");
+  })
+  $('.google-review-items-new').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  if ( $(".google-reviews-main-new  button.slick-next").hasClass("slick-disabled") )
+  {
+    $(".builder-page-review button.custom-slide-arrows.custom-next-arrows").addClass("slick-disabled");
+    $(".builder-page-review button.custom-slide-arrows.custom-prev-arrows").removeClass("slick-disabled");
+  }
+    else
+  {
+    $(".builder-page-review button.custom-slide-arrows.custom-next-arrows").removeClass("slick-disabled");
+  }
+  if ( $(".google-reviews-main-new  button.slick-prev").hasClass("slick-disabled") )
+  {
+    $(".builder-page-review button.custom-slide-arrows.custom-prev-arrows").addClass("slick-disabled");
+    $(".builder-page-review button.custom-slide-arrows.custom-next-arrows").removeClass("slick-disabled");
+  }
+    else
+  {
+    $(".builder-page-review button.custom-slide-arrows.custom-prev-arrows").removeClass("slick-disabled");
+  }
+});
+});
+</script>
+
+
+
+<style>
+
+
+  {% if template contains 'product.lead_page' or template contains 'page.form_page_' or template contains 'product.builder_'  or template == 'product.neon_builder' or template=="product.custom_neon" or template contains  'product.neon_maken' %}
+    .slick-list {
+    padding-left: 0px!important;
+}
+    {% endif %}
+.carousel-holder--2XSx7 {
+    display: none;
+}
+  .custom-google-reviews h2.rev-head {
+    display: none;
+}
+  .custom-rev-head-flex {
+    justify-content: flex-end;
+}
+
+.custom-google-section {
+    background: #F7F4F1;
+    padding: 70px 0px;
+}
+.google-review-items-new button{
+  opacity:0;
+}
+  .google-review-items-new .slick-track{
+      display:flex;
+      gap:10px;
+  }
+.review-image {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.google-review-items-new .google-review .pro-image {
+    height: 250px;
+    object-fit: fill;
+}
+.google-review {
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    background-color: #fff;
+    height: auto;
+    margin-bottom: 10px;
+    display:-webkit-inline-box;
+}
+.google-reviews {
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    columns: 4;
+}
+.customers-review {
+    text-align: center;
+    padding: 0px 23px 30px;
+}
+.customers-review > img {
+    margin-top: -40px;
+}
+.customers-review.simple-user-review > img {
+    margin-top: 0px;
+}
+.customers-review h2 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #1F2430;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+    margin: 24px 0px 10px;
+    align-items: center;
+}
+.customers-review > p {
+    color: #1F2430;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 16px 0px 11px;
+}
+.customers-review h2 img {
+    height: 20px;
+    width: 20px;
+}
+.customers-review .google-upload-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+.customers-review .google-upload-time p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #363D41;
+}
+.customers-review.simple-user-review {
+    padding-top: 30px;
+}
+
+.custom-google-section h1.custom-review-heading {
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+.custom-google-section .custom-review-discription {
+    color: #677279;
+    text-align: center;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+ 
+@media(max-width:1199.98px){
+
+.google-reviews {
+    columns: 3;
+}
+
+}
+@media(max-width:991.98px){
+
+.google-reviews {
+    columns: 2;
+}
+
+}
+@media(max-width:767.98px){
+
+.google-reviews {
+    columns: 1;
+}
+.builder-page-review .rev-head {
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+.builder-page-review .rev-head img {
+    display: none !important;
+} 
+.builder-page-review .slider-toggle {
+    top: 0px;
+}
+.builder-page-review .slider-toggle button svg {
+    width: 42px !important;
+}
+  .google-review-items-new .google-review .pro-image {
+    height: 200px;
+}
+ .google-review-items-new .customers-review {
+    text-align: center;
+    padding: 0px 23px 0px;
+}
+}
+  
+</style>
+
+
+{% schema %}
+  {
+    "name": "Builder Reviews",
+    "settings": [
+      {
+        "type":"text",
+        "id":"spacing",
+        "label":"Add Class"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Heading",
+        "default":"What our customers say"
+      }
+    ],
+    "blocks": [
+    {
+      "type": "image-with-review",
+      "name": "Image With Review",
+      "settings": [
+          {
+          "type": "header",
+          "content": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "user-uploaded-img",
+            "label": "Uploaded Img"
+          },
+          {
+          "type": "header",
+          "content": "User Image & Content"
+          },
+          {
+            "type": "image_picker",
+            "id": "user-img",
+            "label": "User Img"
+          },
+          {
+            "type": "text",
+            "id": "user-name",
+            "label": "User Name"
+          },
+          {
+            "type": "textarea",
+            "id": "user-discription",
+            "label": "User Discription"
+          },
+          {
+            "type": "text",
+            "id": "uplod-time",
+            "label": "Uplod Time"
+          },
+          {
+            "type": "url",
+            "id": "image_url",
+            "label": "Enter Image URLs"
+          }
+      ]
+    }
+],
+    "presets":[
+      {
+        "name":"Builder Google Reviews",
+        "blocks": [
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Codigital",
+              "user-discription": "\"A high-quality product that provides a unique, top-tier appearance. Exactly what we were looking for at Codigital.\"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/DSC04063_1_2048x2048.jpg?v=1730736993"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Kevin Liam",
+              "user-discription": "“Absolutely great! We are very happy with it!”",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/image_2048x2048.jpg?v=1730736991"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Joe Biondo III",
+              "user-discription": "\" The design process was very easy, and our sign was shipped in a timely manner. The quality of our sign was excellent and very easy to install. I would definitely recommend Neonsfeer for all your neon sign needs.\"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/image_1_2048x2048.jpg?v=1730736991"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Ashley",
+              "user-discription": "\"We ordered a sign for our companies open house and I am shocked how quickly it was shipped to us and how great it looks! It had all necessary parts to hang and a remote as well with all setting options. We are looking to order more for other offices in various states!\"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_-_Copy_2048x2048.png?v=1730736899"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Daniel",
+              "user-discription": "\"The quality is insane! makes my office space look amazing and the glow from it makes me feel like I'm in time square! \"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Angela",
+              "user-discription": "\"Few issues with delivery with fed ex but sorted out in the end.\nCommunication with Neonsfeer was second to none sorted out professionally by Olivia thankyou by the way.\nOverall the product is very good quality and I love it .\"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_2048x2048.png?v=1712056892"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Mathias",
+              "user-discription": "\"I purchased a Neon Sign for my bar from Neonsfeer. I selected the company initially because the online tool was excellent. I then spoke to several people all of whom were very helpful and professional. I needed to sign quite quickly and it came earlier than expected and I am delighted with the quality of what I received\"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Eric Williams",
+              "user-discription": "\"Man, these guys had my sign made and shipped to me in 9 days . I am beyond happy with my new warm white neon signage. That warm whiteis bright and the craftmanship is superb! I highly recommend Neonsfeer to anyone in the market for a beautiful neon sign for their business. Matter of fact I'm ordering myself another one but this one in white \"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_58_1_6_2048x2048.png?v=1712056876"
+            }
+          },
+          {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "",
+              "user-name": "Physiotherapie Schafflund",
+              "user-discription": "\"I ordered a neon sign from Neonsfeer for my physiotherapy clinic, and I love it! It adds a vibrant and welcoming touch to the space. The quality is fantastic, and the delivery was quick. Highly recommended!\"",
+              "uplod-time": "",
+              "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_61_2048x2048.png?v=1730736899"
+            }
+          }
+        ]
+      }   
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

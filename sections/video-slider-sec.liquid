@@ -1,0 +1,298 @@
+<div class="video-slider-section {{ section.settings.style_class }}">
+    <div class="page-width container">
+        <section class="splide" aria-labelledby="carousel-heading">
+            <h1 id="carousel-heading">{{ section.settings.people-trust }}</h1>
+            {{ section.settings.testimonial-description }}
+    
+            <div class="splide__track">
+                <ul class="splide__list">
+                  
+                  {% for block in section.blocks %}
+                    <li class="splide__slide">
+                        <video width="100%" height="100%" playsinline="" muted="" loop="" controls="">
+                          <source data-src="{{ block.settings.video-url }}" src="{{ block.settings.video-url }}" type="video/mp4">
+                        </video>
+                        <img src="{{ block.settings.customer-img | img_url: '2048x2048' }}" width="100%">
+                        <div class="customer-contant">
+                          <div>
+                            <h5>{{ block.settings.customer-name }}</h5>
+                            <p style="text-align: left;">{{ block.settings.customer-post }}</p>
+                          </div>
+                            <div class="video-button" >
+                                <img src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/play.png?v=1688461513" alt="Video Icon" width="40px">
+                            </div>
+                        </div>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
+
+
+<style>
+
+
+.video-slider-section {
+    padding: 70px 0px 180px;
+    position: relative;
+}
+.video-slider-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 36%;
+    width: 100%;
+    background-color: #1F2430;
+}
+.splide__arrow svg {
+    fill: #fff;
+}
+  
+.customer-contant .video-button img {
+    filter: brightness(0) invert(1);
+}
+.customer-contant {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 22px 25px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    align-items: center;
+}
+.customer-contant h5 {
+  display: flex;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.customer-contant p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.codepen-info {
+	 max-width: 950px;
+	 margin: 0 auto;
+	 background: #f4f4f4;
+	 padding: 20px 30px;
+	 margin-top: 40px;
+}
+ .codepen-info h1 {
+	 font-weight: 500;
+	 text-align: center;
+	 color: black;
+	 margin-top: 0;
+}
+ .codepen-info p {
+	 color: #777;
+}
+ .codepen-info .src {
+	 padding: 15px;
+	 background: white;
+	 border-radius: 5px;
+	 margin-bottom: 15px;
+}
+ .codepen-info .src p.coded {
+	 background: #f1f1f1;
+	 color: black;
+}
+ .splide__slide img {
+	 max-width: 100%;
+}
+.splide__arrows 
+ button.splide__arrow {
+    margin: 0;
+    left: calc( 50% - 40px);
+    top: 100%;
+    transform: translateY(50px);
+    background-color: #505257;
+    opacity: 1;
+    padding: 9px !important;
+}
+.splide__arrow--next {
+    right: calc( 50% - 40px);
+    left: auto !IMPORTANT;
+}
+ .splide__pagination {
+	 margin-bottom: -35px;
+}
+ .splide__pagination__page {
+	 display: none;
+}
+
+
+ul.splide__list li.video-show video {
+    z-index: 1;
+    object-fit: cover;
+}
+ul.splide__list li video {
+    position: absolute;
+    height: 100%;
+    max-width: 412px;
+    border-radius: 15px;
+    z-index: -1;
+    background-color: #000;
+}
+  
+.splide__slide img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+h1#carousel-heading {
+    font-size: 50px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+}
+section#splide01 > p {
+    width: 45%;
+    text-align: center;
+    margin: -5px auto 50px;
+    font-size: 20px;
+    line-height: 28px;
+}
+  
+
+@media(max-width:1199.98px){
+
+section#splide01 > p {
+    width: 70%;
+}
+
+}
+
+  
+@media(max-width:991.98px){
+
+section#splide01 > p {
+    width: 100%;
+}
+
+}
+    
+@media(max-width:767.98px){
+
+section#splide01 > p {
+    font-size: 16px;
+    line-height: 20px;
+}
+h1#carousel-heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+  
+}
+
+
+  
+</style>
+<script>
+
+var splide = new Splide(".splide", {
+	perPage: 4,
+	gap: "25px",
+	breakpoints: {
+		991: {
+			perPage: 2,
+			gap: "20px",
+		},
+		767: {
+			perPage: 1,
+			gap: "10px",
+		}
+	}
+});
+
+splide.mount();
+
+
+$(".customer-contant .video-button").click(function(){
+    $( this ).parents("li.splide__slide").addClass( "video-show" );
+  });
+  
+</script>
+
+
+{% schema %}
+{
+"name": "Video Slider Section",
+"settings": [
+    {
+      "type": "text",
+      "id": "people-trust",
+      "label": "Testimonial Heading"
+    },
+    {
+      "type": "text",
+      "id": "style_class",
+      "label": "Custom Class"
+    },
+    {
+      "type": "richtext",
+      "id": "testimonial-description",
+      "label": "Testimonial Description"
+    }
+],
+"blocks": [
+    {
+      "type": "customer-slider",
+      "name": "customer-slider",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "customer-img",
+          "label": "Customer Image"
+        },
+        {
+          "type": "text",
+          "id": "customer-name",
+          "label": "Customer Name"
+        },
+        {
+          "type": "text",
+          "id": "customer-post",
+          "label": "Customer Post"
+        },
+        {
+          "type": "url",
+          "id": "video-url",
+          "label": "Video URL"
+        }
+      ]
+  }
+],
+"presets": [
+  {
+  "name": "Video Slider Section",
+  "category": "ADVANCED LAYOUT",
+  "blocks": [
+      {
+        "type": "customer-slider"
+      }
+    ]
+  }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

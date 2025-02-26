@@ -1,0 +1,1889 @@
+<link rel="stylesheet" href="{{ 'uspl-price-with-logo-discount.css' | asset_url }}">
+
+<style>
+    .hidePrice {
+      display: none !important;
+    }
+  
+    /*Bounce*/
+    @keyframes kreep {
+      0% {
+        -webkit-transform: scale(1.1, .9);
+        transform: scale(1.1, .9);
+      }
+  
+      50% {
+        -webkit-transform: scale(.9, 1.1) translateY(-.5rem)
+      }
+  
+      70% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  
+    .kreep {
+      display: inline-block;
+      /*name-duration-function(ease,eas-in,linear)-delay-count-direction */
+      animation: kreep 0.7s ease 2s infinite alternate;
+    }
+  
+    .dis-none {
+      display: none !important;
+    }
+  
+    .product-image-section .fa.fa-chevron-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #000;
+      font-weight: 700;
+      right: 0;
+      background: #FFFFFF;
+      border-radius: 50px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      line-height: 60px;
+      align-content: center;
+      font-size: 24px;
+    }
+  
+    .product-image-section .fa.fa-chevron-left {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #000000;
+      font-weight: 700;
+      left: -27px;
+      background: #ffffff;
+      border-radius: 50px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      line-height: 60px;
+      align-content: center;
+      font-size: 24px;
+    }
+    .accordion-content {
+      display: none;
+      transition: max-height 0.3s ease;
+      overflow: hidden;
+    }
+    .accordion-toggle.active+.accordion-content {
+      display: block;
+    }
+    @media(max-width:1024px) {
+      .product-image-section .fa.fa-chevron-right {
+        right: 2px;
+      }
+    }
+    @media(max-width:767px) {
+      .product-image-section .fa.fa-chevron-left {
+        left: 0px;
+      }
+    }
+</style>
+{% if settings.vat_percent != blank %}
+    {% assign vatPercent = settings.vat_percent | times: 0.01 %}
+    {% assign vatPercentDecimal = vatPercent | plus: 1 %}
+{% else %}
+    {% assign vatPercentDecimal = 1 %}
+{% endif %}
+<div class="product-image-section lead_page_UK_price_with_logo_discount">
+    <div class="container width-100">
+        <div class="quote-ready">
+            <h2>{{ section.settings.SectionTitle }}</h2>
+            <ul>
+            {{  section.settings.SectionToplist }}
+            </ul>
+        </div>
+        <div class="product-title-discription-add-to-cart-main mobile_view">
+            <div class="product-title-discription-add-to-cart-main-content-section dd">
+                <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5>
+                <div class="product-image-title-discription-price-Prijs-main-class">
+                    <div class="product-image-title-discription-price rr">
+                        <div class="normal-price 111">  
+                            <div class="calculated-normal-price">
+                                {% assign pric = product.price | divided_by:vatPercentDecimal  %}      
+                                {% assign realp = product.price %}
+                                {% assign newp = pric | minus:realp %}
+                                {% assign prc = realp | minus: newp%}
+                                {% if product.compare_at_price != blank %}  
+                                    {{ product.price |money }}&nbsp;&nbsp;<del>{{ product.compare_at_price|money  }}</del>
+                                {% else %}
+                                    {{ prc |money }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="save-energy-block">
+                        {% if section.settings.image != blank %}
+                            <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image | img_url:  "master" }}" alt="{{  section.settings.image.alt | escape }}">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="product-specs-block">
+                    {% if section.settings.title1 != blank and section.settings.title2 != blank and section.settings.title3 != blank %}
+                        <div class="specs-block-flex">
+                            <div class="s-b-c">
+                                <div class="s-b-c-logo">
+                                    {% if section.settings.image_1 != blank %}
+                                        <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image_1 | img_url:  "master" }}" alt="{{  section.settings.image_1.alt | escape }}">
+                                    {% endif %}
+                                </div>
+                                <div class="s-b-c-title">
+                                    <div class="s-b-c-m-t">{{ section.settings.title1 }}</div>
+                                    <div class="s-b-c-s-t">{{ section.settings.subtitle1 }}</div>
+                                </div>
+                            </div>
+                            <div class="separator-line">
+                                <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 2 56" fill="none">
+                                    <path d="M1 0.390137V55.3901" stroke="#E9E8F9"/>
+                                </svg>
+                            </div>
+                            <div class="s-b-c">
+                                <div class="s-b-c-logo">
+                                    {% if section.settings.image2 != blank %}
+                                        <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image2 | img_url:  "master" }}" alt="{{  section.settings.image2.alt | escape }}">  
+                                    {% endif %}
+                                </div>
+                                <div class="s-b-c-title">
+                                    <div class="s-b-c-m-t">{{ section.settings.title2 }}</div>
+                                    <div class="s-b-c-s-t">{{ section.settings.subtitle2 }}</div>
+                                </div>
+                            </div>
+                            <div class="separator-line">
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2 56" fill="none">
+                                    <path d="M1 0.390137V55.3901" stroke="#E9E8F9"/>
+                                </svg>
+                            </div>
+                            <div class="s-b-c">
+                                <div class="s-b-c-logo">
+                                    {% if section.settings.image3 != blank %}
+                                        <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image3 | img_url:  "master" }}" alt="{{  section.settings.image3.alt | escape }}"> 
+                                    {% endif %}
+                                </div>
+                                <div class="s-b-c-title">
+                                    <div class="s-b-c-m-t">{{ section.settings.title3 }}</div>
+                                    <div class="s-b-c-s-t">{{ section.settings.subtitle3 }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="product-title-discription-add-to-cart-main desktop_view">
+            <div class="product-title-discription-add-to-cart-main-content-section">
+                <form method="post" action="/cart/add">
+                <div class="box-design-btn-text">
+                    <div class="product-image-title-discription-price-Prijs-main-class price-containt-text">
+                            <div class="toggle-container">
+                                <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5>
+                                {% if settings.vat_percent != blank %}
+                                    <div class="toggle-box">
+                                    <p class="toggle-label IncByExc">{{ section.settings.inc_vat }}</p>
+                                    <label class="switch">
+                                        <input type="checkbox" name="includeExcludeToggel" class="includeExcludeToggel">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="product-image-title-discription-price gt">
+                                <div class="normal-price 222">
+                                    {% assign P1 = 0 %}
+                                    {% assign C1 = 0 %}
+                                    <div class="exclude_vat">
+                                        
+                            
+                                        <div class="calculated-vat-price" id="exclude_vat">
+                                            {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                                {{ product.selected_or_first_available_variant.compare_at_price | divided_by:vatPercentDecimal | money }}
+                                                {% assign C1 = product.selected_or_first_available_variant.compare_at_price | divided_by:vatPercentDecimal %}
+                                                {% assign C1 = C1 | plus:0 | round: 2 %}
+                                            {% else %}
+                                                <span style="display: none;"></span>
+                                            {% endif %}
+                                        </div>
+                            
+                                        {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                            <div class="price-for-flex">
+                                                <h3 class="discount-price exclude_vat_discount">
+                                                    {{ product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal | money }}
+                                                    {% assign P1 = product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal %}
+                                                    {% assign P1 = P1 | plus:0 | round: 2 %}
+                                                </h3>
+                                                {% if settings.vat_percent != blank %}
+                                                    <span>{{ section.settings.price_exclu_vat }}</span>
+                                                {% endif %}
+                                            </div>
+                                        {% else %}
+                                        <div class="price-for-flex">
+                                            <h3 class="discount-price exclude_vat_discount">
+                                              {{ product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal | money }}
+                                            </h3>
+                                            {% if settings.vat_percent != blank %}
+                                                <span>{{ section.settings.price_exclu_vat }}</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                            
+                                    <div class="include_vat hidePrice">
+                                        <div class="calculated-vat-price" id="include_vat">
+                                            {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                                {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                                            {% else %}
+                                                <span style="display: none;"></span>
+                                            {% endif %}
+                                        </div>
+                                        
+                                        {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                            <div class="price-for-flex">
+                                                <h3 class="discount-price include_vat_discount" id="include_vat_discount">
+                                                    {{ product.selected_or_first_available_variant.price | money }}
+                                                </h3>
+                                                <span>{{ section.settings.price_inc_vat }}</span>
+                                            </div>
+                                        {% else %}
+                                        <div class="price-for-flex">
+                                            <h3 class="discount-price include_vat_discount" id="include_vat_discount">
+                                                {{ product.selected_or_first_available_variant.price | money }}
+                                            </h3>
+                                            <span>{{ section.settings.price_inc_vat }}</span>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+
+                                </div>
+                                {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
+                                {% assign Current = product.selected_or_first_available_variant.price %}
+                                
+                                {% if Compare > Current %}
+                                    <div class="static-save-text hidePrice static_save_text_incl" id="static_save_text_incl">
+                                        {{ section.settings.save_text }} {{ Compare | minus: Current | money }}
+                                    </div>
+                                {% endif %}
+
+                                {% if C1 > P1 %}
+                                    <div class="static-save-text static_save_text_updated" id="static_save_text">
+                                        {{ section.settings.save_text }} {{ C1 | minus: P1 | money }}
+                                    </div>                 
+                                {% endif %}
+                                
+                                
+                            </div>
+
+                                {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                                    {% assign discount = C1 | minus: P1 %}
+                                    {% assign discount_percentage = discount | times: 100 | divided_by: C1 %}
+                                    {% comment %} <div class="discount-card includedDiscountCard">
+                                        <h5 class="discount-text-dark"><span class="ForPercentage">{{ discount_percentage | round }}</span>% off {{ section.settings.discount_card_message }}
+                                            <span tooltip="{{ section.settings.discount_car_toltip }}" flow="down">
+                                                ⓘ
+                                            </span>
+                                        </h5>
+                                        <p class="discount-text-light">{{ section.settings.discount_message_complete }}</p>
+                                    </div> {% endcomment %}
+
+                                    {% assign original_price1 = product.selected_or_first_available_variant.compare_at_price %}
+                                    {% assign sale_price1 = product.selected_or_first_available_variant.price %}
+
+                                    {% assign discount = original_price1 | minus: sale_price1 %}
+                                    {% assign discount_percentage1 = discount | times: 100 | divided_by: original_price1 %}
+
+                                    <div class="discount-card includedDiscountCard hidePrice">
+                                        <h5 class="discount-text-dark"> {{ discount_percentage1 | round }}% off {{ section.settings.discount_card_message }}
+                                            <span tooltip="{{ section.settings.discount_car_toltip }}" flow="down">
+                                                ⓘ
+                                            </span>
+                                        </h5>
+                                        <p class="discount-text-light">{{ section.settings.discount_message_complete }}</p>
+                                    </div>
+                                {% endif %}
+                                <div class="shipping-text-design"> 
+                                    <div class="product-title-discription-add-to-cart">
+                                            <input type="hidden" id="varintid" name="id" default_var_id="{{ product.variants.first.id }}" value="" />
+                                            <input type="submit" value="{{ section.settings.add_to_cart_btn_text }}" class="btn custom-layer-trigger" />
+                                    </div>
+                                </div>  
+                                {% if product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                    <div class="arrive_text" style="display: none;">
+                                        {% if product.metafields.custom.discount_time != blank %} 
+                                            <script>
+                                                // Pass the metafield value to JavaScript
+                                                var discountTime = "{{ product.metafields.custom.discount_time }}"; 
+                                            </script>
+                                            {{ section.settings.discount_message }} 
+                                            <b class="new_timer"></b>⏰
+                                        {% endif %}
+                                    </div>     
+                                {% endif %}
+                                <div class="product-image-title-discription-price-shipping shipping-first">
+                                <div class="shipping-image">
+                                    {% if section.settings.image_shipping != blank %}
+                                    {%- assign image_url_3 = section.settings.image_shipping | image_url: width: section.settings.image_shipping.width | image_tag: loading: 'lazy', class: 'image-3', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+                                    {{image_url_3}}
+                                    {% endif %}
+                                </div>
+                                <span style="width: 100%;">
+                                    <div class="time-date" style="color: #fff !important; padding-left: 0 !important; line-height: 20px; font-size: 15px !important; font-weight: 600; width: 70%; text-align: justify;">
+                                        <span>
+                                            {{ section.settings.order_message }}
+                                            <span class="del-on-t"></span>
+                                            <br>
+                                            <div class="delivery-date"></div>
+                                            <b>{{ formatted_delivery_date }}</b>
+
+                                            <span class="i_section tooltip">
+                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1248 1248" width="1248" height="1248">
+                                                    ...your SVG content...
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </div>  
+                                </span>
+                            </div>
+                            <div class="variationwrapper desktop-variation"> 
+                                <div class="mobile-wrapper-1">
+                                    <div class="product-containt-text">
+                                        <h4 class="formtitle accordion-toggle">{{ section.settings.quote_customize_title }}</h4>
+                                        <div class="main-list-text">
+                                            <table>
+                                                {%- for option in product.options_with_values -%}
+                                                    <tr classs="custom-tr">
+                                                        <th>{{ option.name }}</th>
+                                                        <td>
+                                                            <div class="select-wrapper select-wrapper--primary">
+                                                                {%- render 'icon', icon: 'arrow-bottom' -%}
+                                                                <select class="product-form__single-selector variation_option" name="{{ option.name }}" id="{{ option.name }}" data-option-position="{{ option.position }}">
+                                                                    {%- for value in option.values -%}
+                                                                    <option value="{{ value | escape }}" {% if value == option.selected_value %}selected="selected"{% endif %}>{{ value }}</option>
+                                                                    {%- endfor -%}
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                {% for block in section.blocks %}
+                                                    {% if block.type == "Custom_Options" %}
+                                                        {%if block.settings.option_value != blank%}
+                                                            {% assign option_value = block.settings.option_value | split:", " %}
+                                                            <tr>
+                                                                <th>
+                                                                    {{block.settings.text_option }}
+                                                                    {% if block.settings.text_tooltip != blank %}
+                                                                        <span tooltip="{{ block.settings.text_tooltip }}" flow="down">
+                                                                            <svg width="15px" height="15px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path fill="none" stroke="#2db218" stroke-width="2" d="M12,22 C17.5228475,22 22,17.5228475,22,12 C22,6.4771525,17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,10 L12,18 M12,6 L12,8"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                    {% endif %}
+                                                                </th>
+                                                                <td>
+                                                                    {%- render 'icon', icon: 'arrow-bottom' -%}
+                                                                    <select class="product-form__single-selector" name="properties[{{block.settings.class_comp}}]">
+                                                                        {% for option in option_value %}
+                                                                            <option value="{{ option }}">{{ option }}</option>
+                                                                        {% endfor %}
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </table>
+                                        </div>
+                                        <div class="allVariationDiv">
+                                            {% for variant in product.variants %}
+                                                {% assign org_price_attr = variant.price | divided_by: vatPercentDecimal %}
+                                                {% assign div_price_attr = variant.compare_at_price | divided_by: vatPercentDecimal %}
+                                                {% assign main_price_attr = div_price_attr %}
+                                                {% assign cal_price_attr = main_price_attr | minus: org_price_attr %}
+
+                                                {% assign toggle_org_price_attr = variant.price %}
+                                                {% assign toggle_div_price_attr = variant.price %}
+                                                {% assign toggle_main_price_attr = toggle_div_price_attr %}
+                                                {% assign toggle_cal_price_attr = toggle_org_price_attr | minus: toggle_main_price_attr %}
+                                                <input class="block-swatch__radio product-form__single-selector"
+                                                price_1="{{ variant.price | divided_by:vatPercentDecimal| money }}"
+                                                price_2="{{ variant.compare_at_price | divided_by:vatPercentDecimal  | money }}"
+                                                media_id="{{ variant.image.id }}"
+                                                price_new="{{ variant.price }}"
+                                                price="{{ variant.price | money }}"
+                                                incl_price="{{  variant.compare_at_price | money }}" 
+                                                minus_price="{{ cal_price_attr | money }}"
+                                                minus_price_without_vat="{{ variant.compare_at_price| minus: variant.price | money }}"
+                                                toggle_incl_price="{{ toggle_cal_price_attr | money }}" 
+                                                minus_price_label="{{ section.settings.save_text }}" value="{{ variant.id }}"
+                                                translate="no"
+                                                title="{{ variant.title }}" type="radio" name="allVariation">
+                                            {% endfor %}
+                                        </div>
+                                    </div> 
+                                    <div class="product-specs-block">
+                                        {% if section.settings.title1 != blank and section.settings.title2 != blank and section.settings.title3 != blank %}
+                                            <div class="specs-block-flex">
+                                                <div class="s-b-c">
+                                                    <div class="s-b-c-logo">
+                                                        {% if section.settings.image_1 != blank %}
+                                                            <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image_1 | img_url:  "master" }}" alt="{{  section.settings.image_1.alt | escape }}">
+                                                        {% endif %}
+                                                    </div>
+                                                    <div class="s-b-c-title">
+                                                        <div class="s-b-c-m-t">{{ section.settings.title1 }}</div>
+                                                        <div class="s-b-c-s-t">{{ section.settings.subtitle1 }}</div>
+                                                    </div>
+                                                </div>
+                                                <div class="separator-line">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 2 56" fill="none">
+                                                        <path d="M1 0.390137V55.3901" stroke="#E9E8F9"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="s-b-c">
+                                                    <div class="s-b-c-logo">
+                                                        {% if section.settings.image2 != blank %}
+                                                            <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image2 | img_url:  "master" }}" alt="{{  section.settings.image2.alt | escape }}">  
+                                                        {% endif %}
+                                                    </div>
+                                                    <div class="s-b-c-title">
+                                                        <div class="s-b-c-m-t">{{ section.settings.title2 }}</div>
+                                                        <div class="s-b-c-s-t">{{ section.settings.subtitle2 }}</div>
+                                                    </div>
+                                                </div>
+                                                <div class="separator-line">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2 56" fill="none">
+                                                        <path d="M1 0.390137V55.3901" stroke="#E9E8F9"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="s-b-c">
+                                                    <div class="s-b-c-logo">
+                                                        {% if section.settings.image3 != blank %}
+                                                            <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image3 | img_url:  "master" }}" alt="{{  section.settings.image3.alt | escape }}"> 
+                                                        {% endif %}
+                                                    </div>
+                                                    <div class="s-b-c-title">
+                                                        <div class="s-b-c-m-t">{{ section.settings.title3 }}</div>
+                                                        <div class="s-b-c-s-t">{{ section.settings.subtitle3 }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <span class="cstm_alert_section" style="display:none">{{ section.settings.alert_section }}</span>
+                                    <div class="accessoires-wrapper">
+                                        <h6>{{ section.settings.accessoires_title }}</h6>
+                                        <span>{{ section.settings.include_icon }}
+                                            <span tooltip="{{ section.settings.include_icon_toolip }}" flow="down">
+                                            <svg width="15px" height="15px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="none" stroke="#2db218" stroke-width="2" d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,10 L12,18 M12,6 L12,8"/>
+                                            </svg>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="mobile-accodion-2 mobaile-vieww">
+                                    <div class="receive-list">
+                                        {% if section.blocks.size > 0 %}
+                                            <h5 class="accordion-toggle">{{ section.settings.accordion_text }}</h5>
+                                            <ul class="receive-list-main">
+                                            {% for block in section.blocks %}
+                                                {% if block.type == 'list_item' %}
+                                                <li>
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <mask id="mask{{ forloop.index }}" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                                                        <rect y="0.862305" width="20" height="20" fill="#D9D9D9"/>
+                                                    </mask>
+                                                    <g mask="url(#mask{{ forloop.index }})">
+                                                        <path d="M8.33333 14.5291L5 11.1958L6.16667 10.0291L8.33333 12.1958L13.8333 6.6958L15 7.86247L8.33333 14.5291Z" fill="#715AEF"/>
+                                                    </g>
+                                                    </svg>
+                                                    {{ block.settings.icon_text }}
+                                                </li>
+                                                {% endif %}
+                                            {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    </div>
+                                <div class="logo">
+                                    <img src="https://cdn.shopify.com/s/files/1/0716/0542/0325/files/logo_upload_logo.png?v=1727671539" alt="">
+                                </div>
+                                <div class="product-title-discription-add-to-cart-main-payment">
+                                    {% for type in shop.enabled_payment_types %}
+                                        {{ type | payment_type_svg_tag: class: 'payment-list__item' }}
+                                    {% endfor %}
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="mobile-featured-image"></div>
+                </div>
+                
+                    {%  if section.settings.atc_show %} 
+                        <div class="sticky-atc-layer">
+                            <div class="container product-about-main">
+                                <div class="product-about">
+                                    <div class="product-image">
+                                        {% if product.images.size > 0 %}
+                                            {%- assign image_url_1 = product.images.first | image_url: width: product.images.first.width | image_tag: loading: 'lazy', class: 'image-1', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'-%}
+                                            {{image_url_1 }}
+                                        {% endif %} 
+                                    </div>
+                                    <div class="product-image-title-discription-price gt">
+                                <div class="normal-price 222">
+                                    {% assign P1 = 0 %}
+                                    {% assign C1 = 0 %}
+                                    <div class="exclude_vat">
+                                        
+                            
+                                        <div class="calculated-vat-price" id="exclude_vat_popup_bar">
+                                            {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                                {{ product.selected_or_first_available_variant.compare_at_price | divided_by:vatPercentDecimal | money }}
+                                                {% assign C1 = product.selected_or_first_available_variant.compare_at_price | divided_by:vatPercentDecimal %}
+                                                {% assign C1 = C1 | plus:0 | round: 2 %}
+                                            {% else %}
+                                                <span style="display: none;"></span>
+                                            {% endif %}
+                                        </div>
+                            
+                                        {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                            <div class="price-for-flex">
+                                                <h3 class="discount-price exclude_vat_discount">
+                                                    {{ product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal | money }}
+                                                    {% assign P1 = product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal %}
+                                                    {% assign P1 = P1 | plus:0 | round: 2 %}
+                                                </h3>
+                                                {% if settings.vat_percent != blank %}
+                                                    <span>{{ section.settings.price_exclu_vat }}</span>
+                                                {% endif %}
+                                            </div>
+                                        {% else %}
+                                        <div class="price-for-flex">
+                                            <h3 class="discount-price exclude_vat_discount">
+                                              {{ product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal | money }}
+                                            </h3>
+                                            {% if settings.vat_percent != blank %}
+                                                <span>{{ section.settings.price_exclu_vat }}</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                            
+                                    <div class="include_vat hidePrice">
+                                        <div class="calculated-vat-price" id="include_vat">
+                                            {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                                {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                                            {% else %}
+                                                <span style="display: none;"></span>
+                                            {% endif %}
+                                        </div>
+                                        
+                                        {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                            <div class="price-for-flex">
+                                                <h3 class="discount-price include_vat_discount" id="include_vat_discount">
+                                                    {{ product.selected_or_first_available_variant.price | money }}
+                                                </h3>
+                                                <span>{{ section.settings.price_inc_vat }}</span>
+                                            </div>
+                                        {% else %}
+                                        <div class="price-for-flex">
+                                            <h3 class="discount-price include_vat_discount" id="include_vat_discount">
+                                                {{ product.selected_or_first_available_variant.price | money }}
+                                            </h3>
+                                            <span>{{ section.settings.price_inc_vat }}</span>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+
+                                </div>
+                                {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
+                                {% assign Current = product.selected_or_first_available_variant.price %}
+                                
+                                {% if Compare > Current %}
+                                    <div class="static-save-text hidePrice static_save_text_incl popup-save" id="static_save_text_incl">
+                                        {{ section.settings.save_text }} {{ Compare | minus: Current | money }}
+                                    </div>
+                                {% endif %}
+
+                                {% if C1 > P1 %}
+                                    <div class="static-save-text static_save_text_updated popup-save" id="static_save_text">
+                                        {{ section.settings.save_text }} {{ C1 | minus: P1 | money }}
+                                    </div>                 
+                                {% endif %}
+                                
+                                
+                            </div>
+                                </div>
+                                <div class="buttons-main-wrapper">
+                                    <div class="adjust-btn-custom">
+                                        <input class="custmize custmizepop button button--primary for-desk customization-btn" type="button" value="{{ section.settings.formodify }}">
+                                        <input class="custmize custmizepop button button--primary for-mobile customization-btn" type="button" value="{{ section.settings.mbformodify }}">
+                                    </div>
+                                    <div>
+                                        <div class="product-title-discription-add-to-cart for-desktop">
+                                            <input type="hidden" id="varintid" name="id" default_var_id="{{ product.variants.first.id }}" value="" />
+                                            <input type="submit" value="{{ section.settings.fordirectcart }}" class="btn custom-layer-trigger button button--primary for-desk" />
+                                        </div>
+                                        <div class="product-title-discription-add-to-cart for-mobile-sc">
+                                            <input type="hidden" id="varintid" name="id" default_var_id="{{ product.variants.first.id }}" value="" />
+                                            <input type="submit" value="{{ section.settings.mbfordirectcart }}" class="btn custom-layer-trigger button button--primary add-for-mobile" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div id="customPopup" class="popup-overlay">
+                        <div class="popup-content">
+                            <div class="options-side">
+                                <div class="variationwrapper desktop-variation"> 
+                                    <div class="close-icon" style="display: flex ; padding: 20px 64px; gap: 6px;">
+                                        <div id="closePopup" class="icon-holder" style="height:28px; width: 28px; overflow: hidden; background:#715aef; cursor: pointer; border-radius: 20px; display: grid ; justify-items: center; align-items: center;">
+                                            <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back.svg?v=1740136813"/>
+                                        </div>
+                                        <div>{{ section.settings.popup_close }}</div>
+                                    </div>
+                                    <div class="mobile-wrapper-1">
+                                        <div class="product-containt-text">
+                                            <h4 class="formtitle accordion-toggle">{{ section.settings.quote_customize_title }}</h4>
+                                            <div class="main-list-text">
+                                                <table>
+                                                    {%- for option in product.options_with_values -%}
+                                                        <tr classs="custom-tr">
+                                                            <th>{{ option.name }}</th>
+                                                            <td>
+                                                                <div class="select-wrapper select-wrapper--primary">
+                                                                    {%- render 'icon', icon: 'arrow-bottom' -%}
+                                                                    <select class="product-form__single-selector variation_option_popup" name="{{ option.name }}" id="{{ option.name }}" data-option-position="{{ option.position }}">
+                                                                        {%- for value in option.values -%}
+                                                                        <option value="{{ value | escape }}" {% if value == option.selected_value %}selected="selected"{% endif %}>{{ value }}</option>
+                                                                        {%- endfor -%}
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                    {% for block in section.blocks %}
+                                                        {% if block.type == "Custom_Options" %}
+                                                            {%if block.settings.option_value != blank%}
+                                                                {% assign option_value = block.settings.option_value | split:", " %}
+                                                                <tr>
+                                                                    <th>
+                                                                        {{block.settings.text_option }}
+                                                                        {% if block.settings.text_tooltip != blank %}
+                                                                            <span tooltip="{{ block.settings.text_tooltip }}" flow="down">
+                                                                                <svg width="15px" height="15px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path fill="none" stroke="#2db218" stroke-width="2" d="M12,22 C17.5228475,22 22,17.5228475,22,12 C22,6.4771525,17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,10 L12,18 M12,6 L12,8"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        {% endif %}
+                                                                    </th>
+                                                                    <td>
+                                                                        {%- render 'icon', icon: 'arrow-bottom' -%}
+                                                                        <select class="product-form__single-selector-popup" name="properties[{{block.settings.class_comp}}]">
+                                                                            {% for option in option_value %}
+                                                                                <option value="{{ option }}">{{ option }}</option>
+                                                                            {% endfor %}
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </table>
+                                            </div>
+                                            <div class="allVariationDiv">
+                                                {% for variant in product.variants %}
+                                                    {% assign org_price_attr = variant.price | divided_by: vatPercentDecimal %}
+                                                    {% assign div_price_attr = variant.compare_at_price | divided_by: vatPercentDecimal %}
+                                                    {% assign main_price_attr = div_price_attr %}
+                                                    {% assign cal_price_attr = main_price_attr | minus: org_price_attr %}
+
+                                                    {% assign toggle_org_price_attr = variant.price %}
+                                                    {% assign toggle_div_price_attr = variant.price %}
+                                                    {% assign toggle_main_price_attr = toggle_div_price_attr %}
+                                                    {% assign toggle_cal_price_attr = toggle_org_price_attr | minus: toggle_main_price_attr %}
+                                                    <input class="block-swatch__radio product-form__single-selector"
+                                                    price_1="{{ variant.price | divided_by:vatPercentDecimal| money }}"
+                                                    price_2="{{ variant.compare_at_price | divided_by:vatPercentDecimal  | money }}"
+                                                    media_id="{{ variant.image.id }}"
+                                                    price_new="{{ variant.price }}"
+                                                    price="{{ variant.price | money }}"
+                                                    incl_price="{{  variant.compare_at_price | money }}" 
+                                                    minus_price="{{ cal_price_attr | money }}"
+                                                    minus_price_without_vat="{{ variant.compare_at_price| minus: variant.price | money }}"
+                                                    toggle_incl_price="{{ toggle_cal_price_attr | money }}" 
+                                                    minus_price_label="{{ section.settings.save_text }}" value="{{ variant.id }}"
+                                                    translate="no"
+                                                    title="{{ variant.title }}" type="radio" name="allVariation">
+                                                {% endfor %}
+                                            </div>
+                                        </div> 
+                                        <div class="product-specs-block">
+                                            {% if section.settings.title1 != blank and section.settings.title2 != blank and section.settings.title3 != blank %}
+                                                <div class="specs-block-flex">
+                                                    <div class="s-b-c">
+                                                        <div class="s-b-c-logo">
+                                                            {% if section.settings.image_1 != blank %}
+                                                                <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image_1 | img_url:  "master" }}" alt="{{  section.settings.image_1.alt | escape }}">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="s-b-c-title">
+                                                            <div class="s-b-c-m-t">{{ section.settings.title1 }}</div>
+                                                            <div class="s-b-c-s-t">{{ section.settings.subtitle1 }}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator-line">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 2 56" fill="none">
+                                                            <path d="M1 0.390137V55.3901" stroke="#E9E8F9"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="s-b-c">
+                                                        <div class="s-b-c-logo">
+                                                            {% if section.settings.image2 != blank %}
+                                                                <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image2 | img_url:  "master" }}" alt="{{  section.settings.image2.alt | escape }}">  
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="s-b-c-title">
+                                                            <div class="s-b-c-m-t">{{ section.settings.title2 }}</div>
+                                                            <div class="s-b-c-s-t">{{ section.settings.subtitle2 }}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator-line">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2 56" fill="none">
+                                                            <path d="M1 0.390137V55.3901" stroke="#E9E8F9"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="s-b-c">
+                                                        <div class="s-b-c-logo">
+                                                            {% if section.settings.image3 != blank %}
+                                                                <img  height="100%" width="100%"  class="lazyload image--fade-in" data-src="{{  section.settings.image3 | img_url:  "master" }}" alt="{{  section.settings.image3.alt | escape }}"> 
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="s-b-c-title">
+                                                            <div class="s-b-c-m-t">{{ section.settings.title3 }}</div>
+                                                            <div class="s-b-c-s-t">{{ section.settings.subtitle3 }}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="pop-product-image for-mobile" style="border-radius: 8px;">
+                                            {% if product.images.size > 0 %}
+                                                {%- assign image_url_1 = product.images.first | image_url: width: product.images.first.width | image_tag: loading: 'lazy', class: 'image-1', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'-%}
+                                                {{image_url_1 }}
+                                            {% endif %}
+                                        </div>
+                                        <span class="cstm_alert_section" style="display:none">{{ section.settings.alert_section }}</span>
+                                        <div class="accessoires-wrapper">
+                                            <h6>{{ section.settings.accessoires_title }}</h6>
+                                            <span>{{ section.settings.include_icon }}
+                                                <span tooltip="{{ section.settings.include_icon_toolip }}" flow="down">
+                                                <svg width="15px" height="15px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill="none" stroke="#2db218" stroke-width="2" d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,10 L12,18 M12,6 L12,8"/>
+                                                </svg>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="support-widget">
+                                            <div class="support-container">
+                                                <img src="{{ section.settings.support_id_image | img_url: '100x100' }}" alt="Support Image" class="support-image">
+                                                <div class="support-content">
+                                                    <p class="support-title">{{ section.settings.support_text }}</p>
+                                                    <div class="support-actions">
+                                                        {% comment %} <a href="{{ section.settings.chat_link }}" class="support-button">
+                                                            {{ section.settings.chat_text }}
+                                                        </a> {% endcomment %}
+                                                        <a href="tel:{{ section.settings.support_phone }}" class="support-phone">
+                                                            {{ section.settings.support_phone }}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-details-pop">
+                                <div class="pop-product-image" style="border-radius: 8px;">
+                                    {% if product.images.size > 0 %}
+                                        {%- assign image_url_1 = product.images.first | image_url: width: product.images.first.width | image_tag: loading: 'lazy', class: 'image-1', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'-%}
+                                        {{image_url_1 }}
+                                    {% endif %}
+                                </div>
+                                <div class="pop-product-detail product-image-title-discription-price-Prijs-main-class price-containt-text">
+                                    <div class="toggle-container">
+                                <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5>
+                                {% if settings.vat_percent != blank %}
+                                    <div class="toggle-box">
+                                    <p class="toggle-label IncByExc">{{ section.settings.inc_vat }}</p>
+                                    <label class="switch">
+                                        <input type="checkbox" name="includeExcludeToggel" class="includeExcludeToggel">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="product-image-title-discription-price gt">
+                                <div class="normal-price 222">
+                                    {% assign P1 = 0 %}
+                                    {% assign C1 = 0 %}
+                                    <div class="exclude_vat">
+                                        
+                            
+                                        <div class="calculated-vat-price" id="exclude_vat_popup">
+                                            {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                                {{ product.selected_or_first_available_variant.compare_at_price | divided_by:vatPercentDecimal | money }}
+                                                {% assign C1 = product.selected_or_first_available_variant.compare_at_price | divided_by:vatPercentDecimal %}
+                                                {% assign C1 = C1 | plus:0 | round: 2 %}
+                                            {% else %}
+                                                <span style="display: none;"></span>
+                                            {% endif %}
+                                        </div>
+                            
+                                        {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                            <div class="price-for-flex">
+                                                <h3 class="discount-price exclude_vat_discount">
+                                                    {{ product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal | money }}
+                                                    {% assign P1 = product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal %}
+                                                    {% assign P1 = P1 | plus:0 | round: 2 %}
+                                                </h3>
+                                                {% if settings.vat_percent != blank %}
+                                                    <span>{{ section.settings.price_exclu_vat }}</span>
+                                                {% endif %}
+                                            </div>
+                                        {% else %}
+                                        <div class="price-for-flex">
+                                            <h3 class="discount-price exclude_vat_discount">
+                                              {{ product.selected_or_first_available_variant.price | divided_by:vatPercentDecimal | money }}
+                                            </h3>
+                                            {% if settings.vat_percent != blank %}
+                                                <span>{{ section.settings.price_exclu_vat }}</span>
+                                            {% endif %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                            
+                                    <div class="include_vat hidePrice">
+                                        <div class="calculated-vat-price" id="include_vat">
+                                            {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                                {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                                            {% else %}
+                                                <span style="display: none;"></span>
+                                            {% endif %}
+                                        </div>
+                                        
+                                        {% if product.selected_or_first_available_variant.compare_at_price != blank and product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                            <div class="price-for-flex">
+                                                <h3 class="discount-price include_vat_discount" id="include_vat_discount">
+                                                    {{ product.selected_or_first_available_variant.price | money }}
+                                                </h3>
+                                                <span>{{ section.settings.price_inc_vat }}</span>
+                                            </div>
+                                        {% else %}
+                                        <div class="price-for-flex">
+                                            <h3 class="discount-price include_vat_discount" id="include_vat_discount">
+                                                {{ product.selected_or_first_available_variant.price | money }}
+                                            </h3>
+                                            <span>{{ section.settings.price_inc_vat }}</span>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+
+                                </div>
+                                {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
+                                {% assign Current = product.selected_or_first_available_variant.price %}
+                                
+                                {% if Compare > Current %}
+                                    <div class="static-save-text hidePrice static_save_text_incl" id="static_save_text_incl">
+                                        {{ section.settings.save_text }} {{ Compare | minus: Current | money }}
+                                    </div>
+                                {% endif %}
+
+                                {% if C1 > P1 %}
+                                    <div class="static-save-text static_save_text_updated" id="static_save_text">
+                                        {{ section.settings.save_text }} {{ C1 | minus: P1 | money }}
+                                    </div>                 
+                                {% endif %}
+                                
+                                
+                            </div>
+
+                                {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+                                    {% assign discount = C1 | minus: P1 %}
+                                    {% assign discount_percentage = discount | times: 100 | divided_by: C1 %}
+                                    {% comment %} <div class="discount-card includedDiscountCard">
+                                        <h5 class="discount-text-dark"><span class="ForPercentage">{{ discount_percentage | round }}</span>% off {{ section.settings.discount_card_message }}
+                                            <span tooltip="{{ section.settings.discount_car_toltip }}" flow="down">
+                                                ⓘ
+                                            </span>
+                                        </h5>
+                                        <p class="discount-text-light">{{ section.settings.discount_message_complete }}</p>
+                                    </div> {% endcomment %}
+
+                                    {% assign original_price1 = product.selected_or_first_available_variant.compare_at_price %}
+                                    {% assign sale_price1 = product.selected_or_first_available_variant.price %}
+
+                                    {% assign discount = original_price1 | minus: sale_price1 %}
+                                    {% assign discount_percentage1 = discount | times: 100 | divided_by: original_price1 %}
+
+                                    <div class="discount-card includedDiscountCard hidePrice" style="text-align: justify;">
+                                        <h5 class="discount-text-dark"> {{ discount_percentage1 | round }}% off {{ section.settings.discount_card_message }}
+                                            <span tooltip="{{ section.settings.discount_car_toltip }}" flow="down">
+                                                ⓘ
+                                            </span>
+                                        </h5>
+                                        <p class="discount-text-light">{{ section.settings.discount_message_complete }}</p>
+                                    </div>
+                                {% endif %}
+                                <div class="shipping-text-design"> 
+                                    <div class="product-title-discription-add-to-cart">
+                                            <input type="hidden" id="varintid" name="id" default_var_id="{{ product.variants.first.id }}" value="" />
+                                            <input type="submit" value="{{ section.settings.add_to_cart_btn_text }}" class="btn custom-layer-trigger" />
+                                    </div>
+                                </div>  
+                                {% if product.selected_or_first_available_variant.compare_at_price > 0 %}
+                                    <div class="arrive_text" style="display: none;">
+                                        {% if product.metafields.custom.discount_time != blank %} 
+                                            <script>
+                                                var discountTime = "{{ product.metafields.custom.discount_time }}"; 
+                                            </script>
+                                            {{ section.settings.discount_message }} 
+                                            <b class="new_timer"></b>⏰
+                                        {% endif %}
+                                    </div>   
+                                 {% endif %}
+                                <div class="product-image-title-discription-price-shipping shipping-first">
+                                <div class="shipping-image">
+                                    {% if section.settings.image_shipping != blank %}
+                                    {%- assign image_url_3 = section.settings.image_shipping | image_url: width: section.settings.image_shipping.width | image_tag: loading: 'lazy', class: 'image-3', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+                                    {{image_url_3}}
+                                    {% endif %}
+                                </div>
+                                <span style="width: 100%; text-align: justify;">
+                                    <div class="time-date" style="color: #fff !important; padding-left: 0 !important; line-height: 20px; font-size: 15px !important; font-weight: 600; width: 70%;">
+                                        <span>
+                                            {{ section.settings.order_message }}
+                                            <span class="del-on-t"></span>
+                                            <br>
+                                            <div class="delivery-date"></div>
+                                            <span class="i_section tooltip">
+                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1248 1248" width="1248" height="1248">
+                                                    ...your SVG content...
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </div>  
+                                </span>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> 
+        <div class="product-images product-image-relative" id="#detail">
+                {% if product.images.size > 0 %}
+                    {%- assign image_url_1 = product.images.first | image_url: width: product.images.first.width | image_tag: loading: 'lazy', class: 'image-1', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'-%}
+                    {{image_url_1 }}
+                {% endif %}   
+                <div class="request-form-wrapper">
+                    <div class="avtar-wrapper">
+                        <img src="{{ section.settings.form_user_image }}" alt="">
+                        <h4>{{ section.settings.form_question }}</h4>
+                    </div>
+                    {% form 'contact' %}
+                    {{ form.errors | default_errors }}
+                    <div class="email">
+                    {% if customer.email != blank %}
+                        <input type="email" name="contact[email]" id="email" value="{{ customer.email }}" placeholder="{{ customer.email }}">
+                    {% else %}
+                        <input type="email" name="contact[email]" placeholder="{{ section.settings.form_email_placeholder }}" id="email" value="">
+                    {% endif %}
+                    <input type="input" name="contact[product_title]" placeholder="{{ section.settings.form_email_placeholder }}" id="Ptitle" value="{{ product.title }}">
+                    </div>
+                      <div class="message">
+                    <textarea name="contact[body]" placeholder="{{ section.settings.form_text_placeholder }}" id="message"></textarea>
+                      </div>
+                      <div class="submit">
+                    <input type="submit" value="{{ section.settings.form_questionsubmittext }}" />
+                     </div>
+                    {% endform %}
+                </div>        
+        </div>
+    </div>    
+</div>
+<div class="scroll-down-btn">
+    <button class="scroll_down_btn_cstm kreep"><i class="fa-sharp fa-solid fa-arrow-down"></i></button>
+</div>
+  <style>
+    @media only screen and (max-width: 767.9px) {
+        .product-image-title-discription-price-shipping .time-date{width: 100% !important;}
+    }
+    .price-for-flex{
+        display: flex;
+        align-items: end;
+    }
+  </style>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    var popup = document.getElementById("customPopup");
+    var openButtons = document.querySelectorAll(".custmizepop");
+    var closeButton = document.getElementById("closePopup");
+    var popupSaveDivs = document.querySelectorAll(".popup-save");
+
+    function isMobileScreen() {
+        return window.innerWidth <= 999;
+    }
+
+    function toggleCustomizePopDisplay(hide) {
+        if (isMobileScreen()) {
+            openButtons.forEach(function (button) {
+                hide ? button.classList.add("hide-customizepop") : button.classList.remove("hide-customizepop");
+            });
+        }
+    }
+
+    function togglePopupSaveDisplay(show) {
+        popupSaveDivs.forEach(function (div) {
+            div.style.display = show ? "block" : "none";
+        });
+    }
+
+    if (isMobileScreen()) {
+        popupSaveDivs.forEach(function (div) {
+            div.style.display = "none";
+        });
+    }
+
+    openButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            popup.style.display = "flex";
+            toggleCustomizePopDisplay(true);
+            togglePopupSaveDisplay(true);
+        });
+    });
+
+    closeButton.addEventListener("click", function () {
+        popup.style.display = "none";
+        toggleCustomizePopDisplay(false);
+        togglePopupSaveDisplay(false);
+    });
+
+    popup.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            popup.style.display = "none";
+            toggleCustomizePopDisplay(false);
+            togglePopupSaveDisplay(false);
+        }
+    });
+
+    window.addEventListener("resize", function () {
+        if (popup.style.display !== "flex") {
+            togglePopupSaveDisplay(false);
+        }
+    });
+});
+
+    </script>
+    {%- assign delivery_text = section.settings.delivery_date -%}         
+    <script>
+        class DeliveryDate {
+          constructor(selector, deliveryText) {
+            this.selector = selector;
+            this.deliveryText = deliveryText;
+            this.monthTranslations = {
+              default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+              fr: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+              es: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+              de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+              nl: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
+            };
+          }
+      
+          getStoreLanguage() {
+            let storeLang = document.documentElement.lang || "default";
+            return this.monthTranslations[storeLang] ? storeLang : "default"; // Fallback to English if not found
+          }
+      
+          calculateFutureDate(daysToAdd) {
+            let date = new Date();
+            date.setDate(date.getDate() + daysToAdd);
+            return { day: date.getDate(), monthIndex: date.getMonth() }; // Month is 0-based
+          }
+      
+          updateDeliveryDates() {
+            let storeLang = this.getStoreLanguage();
+            let futureDate = this.calculateFutureDate(9); // Add 9 days
+            let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
+      
+            document.querySelectorAll(this.selector).forEach(el => {
+              el.innerHTML = `${this.deliveryText} ${futureDate.day} ${monthName}`;
+            });
+      
+            console.log("Store Language:", storeLang);
+            console.log("Month Index:", futureDate.monthIndex);
+            console.log("Month Name:", monthName);
+            console.log("Final Date Output:", futureDate.day, monthName);
+          }
+        }
+      
+        document.addEventListener("DOMContentLoaded", function () {
+          let deliveryText = {{ delivery_text | json }}; // Get the Liquid variable from theme settings
+          let deliveryDate = new DeliveryDate(".delivery-date", deliveryText);
+          deliveryDate.updateDeliveryDates();
+        });
+      </script>
+  <script>
+      $('.slider-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          fade: true,
+          asNavFor: '.slider-nav',
+          prevArrow: '<div class="slick-prev"><span class="sr-only sr-only-focusable">&#8249;</span></div>',
+          nextArrow: '<div class="slick-next"><span class="sr-only sr-only-focusable">&#8250;</span></div>'
+      });
+      $('.slider-nav').slick({
+          slidesToShow:5,
+          slidesToScroll: 1,
+          loop:true,
+          infinite: true,
+          asNavFor: '.slider-for',
+          dots: true,
+          focusOnSelect: true,
+          responsive: [
+              {
+                  breakpoint: 1450,
+                  settings: {
+                      slidesToShow: 4,
+                      slidesToScroll: 1,
+                  },
+              },
+              {
+                  breakpoint: 1200,
+                  settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 1,
+                  },
+              },
+              {
+                  breakpoint: 1030,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 1,
+                  },
+              },
+              {
+                  breakpoint: 800,
+                  settings:{
+                      slidesToShow: 4,
+                      slidesToScroll: 1,
+                  },
+              },
+              {
+                  breakpoint: 450,
+                  settings:{
+                      slidesToShow: 4,
+                      slidesToScroll: 1,
+                  },
+              },
+          ],
+      });
+  </script>  
+  
+<script>
+    let format = {{ shop.money_format | json }}; // Rendered as a JSON-safe string
+    console.log("Original Format:", format);
+
+    let currencySymbol = format.replace(/\{\{\s*amount\s*\}\}/g, "").replace(/\{\{\s*amount_with_comma_separator\s*\}\}/g, "").trim();
+
+    console.log("Currency Symbol:", currencySymbol);
+
+    jQuery(document).ready(function () {
+    function checkCheckboxStatus(isChecked) {
+        if (isChecked) {
+            jQuery('input[name="includeExcludeToggel"]').prop('checked', true); // Check all
+
+            console.log('checked');
+            jQuery('.normal-price.222 .exclude_vat').addClass('hidePrice');
+            if (jQuery('.static_save_text_updated')) {
+                jQuery('.static_save_text_updated').addClass('hidePrice');
+            }
+            if (jQuery('.static_save_text_incl')) {
+                jQuery('.static_save_text_incl').removeClass('hidePrice');
+            }
+            jQuery('#static_save_text_toggle').removeClass('hidePrice');
+            jQuery('.normal-price.222 .include_vat').removeClass('hidePrice');
+            jQuery('.IncByExc').text("{{ section.settings.exclu_vat }}");
+        } 
+        else {
+            console.log('not checked');
+            jQuery('input[name="includeExcludeToggel"]').prop('checked', false); // Check all
+
+            jQuery('.normal-price.222 .exclude_vat').removeClass('hidePrice');
+            jQuery('.normal-price.222 .include_vat').addClass('hidePrice');
+            jQuery('#static_save_text_toggle').addClass('hidePrice');
+            if (jQuery('.static_save_text_incl')) {
+                jQuery('.static_save_text_incl').addClass('hidePrice');
+            }
+            jQuery('.static_save_text_updated').removeClass('hidePrice');
+            jQuery('.IncByExc').text("{{ section.settings.inc_vat }}");
+        }
+    }
+
+    // checkCheckboxStatus(); /// Run function on page load
+
+    // Bind event listener to all checkboxes
+        jQuery('input[name="includeExcludeToggel"]').on('change', function () {
+            console.log("This object:", $(this));
+            if ($(this).prop('checked')) {
+                console.log("Checked!");
+                checkCheckboxStatus(true);
+            } else {
+                console.log("Not Checked!");
+                checkCheckboxStatus(false);
+            }
+        });
+});
+
+    jQuery(document).ready(function(){
+        jQuery('#varintid, input[name="id"]').val(jQuery('#varintid').attr('default_var_id'));
+    });
+    jQuery(document).on('change', '.variation_option', function() {
+        
+    var variation_title = '';
+        jQuery('.variation_option').each(function () {
+            var selected_value = jQuery(this).val();
+            if (selected_value) {
+                variation_title += (variation_title ? ' / ' : '') + selected_value;
+            }
+        });
+        var _name = $(this).attr('name');
+        var _val = $(this).val();
+
+        $('.variation_option_popup[name="'+_name+'"]').val(_val);
+
+        console.log('variation_title',variation_title);
+        var variation_price = jQuery('input[type="radio"][name="allVariation"][title="'+variation_title+'"]').attr('price');
+        var selected_variation_id = jQuery('input[type="radio"][name="allVariation"][title="'+variation_title+'"]').val();
+        console.log('selected_variation_id',selected_variation_id);
+        jQuery('#varintid, input[name="id"]').val(selected_variation_id);
+        //price_with_vat
+        var pric_1 = jQuery('input[type="radio"][name="allVariation"][title="'+variation_title+'"]').attr('price_1');
+        //compare_at_with_vat
+        var pric_2 = jQuery('input[type="radio"][name="allVariation"][title="'+variation_title+'"]').attr('price_2');
+        //price_without_vat
+        var pric_org = jQuery('input[type="radio"][name="allVariation"][title="' + variation_title + '"]').attr('price');
+        //compare_at_without_vat
+        var incl_price = jQuery('input[type="radio"][name="allVariation"][title="' + variation_title + '"]').attr('incl_price');
+        var minus_price = jQuery('input[type="radio"][name="allVariation"][title="' + variation_title + '"]').attr('minus_price');
+        var minus_price_without_vat = jQuery('input[type="radio"][name="allVariation"][title="' + variation_title + '"]').attr('minus_price_without_vat');
+        
+        var incl_minus_price = jQuery('input[type="radio"][name="allVariation"][title="' + variation_title + '"]').attr('toggle_incl_price');
+        var minus_price_label = jQuery('input[type="radio"][name="allVariation"][title="' + variation_title + '"]').attr('minus_price_label');
+        var concat_minus_price = minus_price_label +" "+ minus_price;
+        var concat_minus_price_without_vat = minus_price_label +" "+ minus_price_without_vat;
+        var concat_incl_minus_price = minus_price_label +" "+ incl_minus_price;
+        console.log("pric_1");
+        console.log(pric_1);
+        console.log("pric_2");
+        console.log(pric_2);
+        console.log("incl_price");
+        console.log(incl_price);
+        console.log("pric_org");
+        console.log(pric_org);
+        jQuery('.normal-price #exclude_vat').text(pric_2); 
+        jQuery('.normal-price #exclude_vat_popup').text(pric_2); 
+        jQuery('.normal-price #exclude_vat_popup_bar').text(pric_2); 
+        let price_percent_exclude = 0;
+        let price_percent_include = 0;
+        if(incl_price ==  "" || incl_price ==null){
+            const element = document.querySelector(".arrive_text");
+                if (element) {
+                element.style.display = "none";
+                } else {
+                console.error("Element with class '.arrive_text' not found.");
+                }
+        }else{
+            const element = document.querySelector(".arrive_text");
+                if (element) {
+                element.style.display = "block";
+                } else {
+                console.error("Element with class '.arrive_text' not found.");
+                }
+        }
+        if (pric_2) {
+            // Check if price_2 is equal to "$0.00", and convert it to a decimal number
+            // Dynamically remove the currency symbol
+            let priceDecimal = parseFloat(pric_2.replace(currencySymbol, "").replace(",", "."));
+            console.log("priceDecimal");
+            console.log(priceDecimal);
+            if (priceDecimal <= 0) {
+                console.log("i am here::::");
+                // Hide specific elements if the price is greater than $0.00
+                document.querySelector("#exclude_vat").style.display = "none";
+                document.querySelector("#exclude_vat_popup").style.display = "none";
+                document.querySelector("#exclude_vat_popup_bar").style.display = "none";
+                if(document.querySelector(".static_save_text_updated")){
+                    document.querySelector(".static_save_text_updated").style.display = "none";
+                }
+                if(document.querySelector(".discount-card.includedDiscountCard")){
+                    document.querySelector(".discount-card.includedDiscountCard").style.display = "none";
+                }
+                
+            }
+            else{
+                console.log("i am here2::::");
+                // pric_1 / priceDecimal
+                let pric_1Decimal = parseFloat(pric_1.replace(currencySymbol, "").replace(",", "."));
+                console.log(pric_1Decimal);
+                console.log(priceDecimal);
+
+                price_percent_exclude = (pric_1Decimal / priceDecimal)*100;
+                price_percent_exclude = 100 - price_percent_exclude;
+                console.log("price_percent_exclude");
+                console.log(price_percent_exclude.toFixed(2));
+                if(document.querySelector(".discount-card.includedDiscountCard")){
+                    
+                    document.querySelector(".discount-card.includedDiscountCard").style.display = "block";
+                }
+                if(document.querySelector(".ForPercentage")){
+                    document.querySelector(".ForPercentage").textContent= price_percent_exclude.toFixed(2);
+                }
+                
+                // Show hidden elements and dynamically calculate the percentage
+                document.querySelector("#exclude_vat").style.display = "block";
+                document.querySelector("#exclude_vat_popup").style.display = "block";
+                document.querySelector("#exclude_vat_popup_bar").style.display = "block";
+                if(document.querySelector(".static_save_text_updated")){
+                    document.querySelector(".static_save_text_updated").style.display = "block";
+                }
+            }
+        } else {
+            console.log("i am here3::::");
+            document.querySelector("#exclude_vat").style.display = "block";
+            document.querySelector("#exclude_vat_popup").style.display = "block";
+            document.querySelector("#exclude_vat_popup_bar").style.display = "block";
+            if(document.querySelector(".static_save_text_updated")){
+                document.querySelector(".static_save_text_updated").style.display = "block";
+            }
+            if(document.querySelector(".discount-card.includedDiscountCard")){
+                document.querySelector(".discount-card.includedDiscountCard").style.display = "block";
+            }
+        }
+
+        if (incl_price == null || incl_price == "") {
+            if(document.querySelector(".static_save_text_incl")){
+                document.querySelector(".static_save_text_incl").style.display = "none";
+            }
+            document.querySelector("#include_vat").style.display = "none";
+            if(document.querySelector(".discount-card.includedDiscountCard")){
+                document.querySelector(".discount-card.includedDiscountCard").style.display = "none";
+            }
+        } else {
+            let pric_orgDecimal = parseFloat(pric_org.replace(currencySymbol, "").replace(",", "."));
+            let incl_priceDecimal = parseFloat(incl_price.replace(currencySymbol, "").replace(",", "."));
+            
+            price_percent_include = (pric_orgDecimal/ incl_priceDecimal)*100;
+            price_percent_include = 100-price_percent_include;
+            
+            console.log("price_percent_include");
+            console.log(price_percent_include.toFixed(2));
+            if(document.querySelector(".discount-card.includedDiscountCard")){
+                document.querySelector(".discount-card.includedDiscountCard").style.display = "block";
+            }
+            if(document.querySelector(".ForPercentage")){
+                document.querySelector(".ForPercentage").textContent= price_percent_include.toFixed(2);
+            }
+            if(document.querySelector(".static_save_text_incl")){
+                document.querySelector(".static_save_text_incl").style.display = "block";
+            }
+            document.querySelector("#include_vat").style.display = "block";
+        }
+
+
+        jQuery('.normal-price .exclude_vat_discount').text(pric_1);
+        jQuery('.exclude_vat_discount').text(pric_1);
+        jQuery('.normal-price #include_vat').text(incl_price);
+        jQuery('.normal-price #include_vat_discount').text(pric_org);
+        jQuery('.include_vat_discount').text(pric_org);
+        if (jQuery('input[name="includeExcludeToggel"').is(':checked')) {
+            console.log("checked Included");
+            console.log(minus_price_without_vat);
+            if(jQuery('.static_save_text_incl')){
+                jQuery('.static_save_text_incl').text(concat_minus_price_without_vat);
+            }
+        }else{
+            console.log("Unchecked");
+            console.log(concat_minus_price);
+            if(jQuery('.static_save_text_updated')){
+                jQuery('.static_save_text_updated').text(concat_minus_price);
+            }
+        }
+
+        jQuery('#static_save_text_toggle').text(concat_incl_minus_price);
+        jQuery('.logo_discount').text(pric_2);
+        jQuery('.logo_discount').text(pric_2);
+    });
+    jQuery(document).on('click','span#p1', function(){
+      jQuery(".tooltip-sec #popup1").addClass("popupopen");
+    });
+  jQuery(document).on('click','span#p2', function(){
+      jQuery(".tooltip-sec #popup2").addClass("popupopen");
+    });
+  jQuery(document).on('click','span#p3', function(){
+      jQuery(".tooltip-sec #popup3").addClass("popupopen");
+    });
+  jQuery(document).on('click','span#p4', function(){
+      jQuery(".tooltip-sec #popup4").addClass("popupopen");
+    });
+    jQuery(document).on('click','.tooltip-sec .close', function(){
+      jQuery(".tooltip-sec .overlay").removeClass("popupopen");
+    });
+    jQuery(document).on('click','#less-dis', function(){
+      jQuery("#dis-popup").addClass("popupopen");
+    });
+    jQuery(document).on('click','#dis-popup .close', function(){
+      jQuery("#dis-popup").removeClass("popupopen");
+    });
+
+</script>
+<script>
+    
+    $('.variation_option_popup').change(function(){
+        var _name = $(this).attr('name');
+        var _val = $(this).val();
+        console.log(_name);
+        console.log(_val);
+        $('.variation_option[name="'+_name+'"]').val(_val).trigger('change');
+    });
+
+    $('.product-form__single-selector-popup').change(function(){
+        var _name = $(this).attr('name');
+        var _val = $(this).val();
+        console.log(_name);
+        console.log(_val);
+        $('.product-form__single-selector[name="'+_name+'"]').val(_val).trigger('change');
+    });
+
+    $('.product-form__single-selector').change(function(){
+        var _name = $(this).attr('name');
+        var _val = $(this).val();
+        console.log(_name);
+        console.log(_val);
+        $('.product-form__single-selector-popup[name="'+_name+'"]').val(_val);
+    });
+</script>
+<script>
+    function handleResponsiveScripts() {
+      if ($(window).width() <= 991) {
+        
+        const DesktopVariation = document.querySelector('.variationwrapper.desktop-variation');
+        const MobileVariation = document.querySelector('.mobile-featured-image');
+        if (DesktopVariation && MobileVariation && !MobileVariation.contains(DesktopVariation)) { // Avoid duplicate insertion
+          MobileVariation.appendChild(DesktopVariation);
+        }
+        if ($('.product-images-clone').length === 0) {
+          var clonedElement = $('.product-images').clone().addClass('product-images-clone'); // Add a class to the cloned element
+          clonedElement.insertBefore('.variationwrapper.desktop-variation');
+        }
+      } else {
+        $('.product-images-clone').remove();
+      }
+    }
+  
+    $(document).ready(function () {
+      handleResponsiveScripts();
+    });
+  
+    $(window).resize(function () {
+      handleResponsiveScripts();
+    });
+</script> 
+<script>
+ function cdtd() {
+    var xmas = new Date("September 30, 2024 20:59:59");
+    var now = new Date();
+    var timeDiff = xmas.getTime() - now.getTime();
+
+    if (timeDiff <= 0) {
+        clearTimeout(timer);
+        var clockDiv = document.querySelector("#clockdiv");
+        if (clockDiv) {
+            clockDiv.style.display = "none";
+        }
+        return;
+    }
+
+    var seconds = Math.floor(timeDiff / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+
+    hours %= 24;
+    minutes %= 60;
+
+    document.getElementById("hoursBox").innerHTML = hours;
+    document.getElementById("minsBox").innerHTML = minutes;
+
+    var timer = setTimeout(cdtd, 1000); // Pass function reference
+}
+
+</script>
+<script>
+function countdownToMetafieldDate() {
+    const timerElements = document.querySelectorAll(".new_timer");
+    const discountDiv = document.querySelector(".arrive_text");
+
+    if (!timerElements.length || !discountDiv) {
+        console.error("Timer element or discount div not found");
+        return;
+    }
+
+    if (!discountTime || discountTime.trim() === "") {
+        console.error("Metafield date is empty");
+        discountDiv.style.display = "none";
+        return;
+    }
+
+    console.log("Metafield date:", discountTime);
+    const targetDate = new Date(discountTime + "T24:00:00Z");
+
+    if (isNaN(targetDate.getTime())) {
+        console.error("Invalid metafield date:", discountTime);
+        timerElements.forEach(timerElement => {
+            timerElement.textContent = "Invalid Date";
+        });
+        return;
+    }
+
+    console.log("Target date:", targetDate);
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate.getTime() - now;
+
+        if (timeRemaining > 0) {
+            const remainingHours = Math.floor(timeRemaining / (1000 * 60 * 60));
+            const remainingMinutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const remainingSeconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            const formattedTime = `${remainingHours.toString().padStart(2, "0")}:${remainingMinutes.toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
+            timerElements.forEach(timerElement => {
+                timerElement.textContent = formattedTime;
+            });
+            discountDiv.style.display = "block";
+        } else {
+            clearInterval(intervalId);
+            timerElements.forEach(timerElement => {
+                timerElement.textContent = "00:00:00";
+            });
+            discountDiv.style.display = "none";
+        }
+    }
+    const intervalId = setInterval(updateCountdown, 1000);
+    updateCountdown();
+}
+document.addEventListener("DOMContentLoaded", countdownToMetafieldDate);
+
+</script>
+  <script>cdtd();</script>
+  {% schema %}
+  {
+  "name": "Logo Discount Product",
+  "settings": [
+    {
+        "id": "SectionTitle",
+        "type": "text",
+        "label": "Title",
+        "default": "Your Quote is Ready!"
+    },
+    {
+        "id": "timer",
+        "type": "text",
+        "label": "Timer"
+    },
+    {
+      "type": "checkbox",
+      "id": "atc_show",
+      "label": "Add to cart div",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "support_id_image",
+      "label": "Support Image"
+    },
+    {
+      "type": "text",
+      "id": "support_text",
+      "label": "Support Message",
+      "default": "Hulp nodig? Bel of chat met Sjoerd!"
+    },
+    {
+      "type": "text",
+      "id": "accessoires_title",
+      "label": "Accessoires Title",
+      "default": "Accessories"
+    },
+    {
+        "type":"text",
+        "id":"include_icon_toolip",
+        "label":"Title For Tooltip",
+        "default": "Your neon logo comes complete with a dimmer, remote control, adapter, and all necessary mounting materials. Thanks to the plug & play system, you can set up the lighting within 5 minutes and enjoy it right away."
+    },
+    {
+      "type": "text",
+      "id": "include_icon",
+      "label": "Include icon Text",
+      "default": "Included"
+    },
+    {
+      "type": "text",
+      "id": "chat_text",
+      "label": "Chat Button Text",
+      "default": "Chat met Sjoerd"
+    },
+    {
+      "type": "url",
+      "id": "chat_link",
+      "label": "Chat Link"
+    },
+    {
+      "type": "text",
+      "id": "popup_close",
+      "label": "Back Popup",
+      "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "support_phone",
+      "label": "Phone Number",
+      "default": "+31 850 000 749"
+    },
+    {
+      "type": "text",
+      "id": "quote_customize_title",
+      "label": "Quote Title",
+      "default": "Customize your quote"
+    },
+    {
+        "id": "form_user_image",
+        "type": "url",
+        "label": "Form User Image"
+    },
+    {
+        "id": "form_email_placeholder",
+        "type": "text",
+        "label": "Form Placeholder",
+        "default": "Email"
+    },
+    {
+     "type":"text",
+     "id":"inc_vat",
+     "label":"Include Vat",
+     "default":"Display incl. VAT"
+    },
+    {
+     "type":"text",
+     "id":"price_inc_vat",
+     "label":"Include Vat",
+     "default":"incl. VAT"
+    },
+    {
+     "type":"text",
+     "id":"exclu_vat",
+     "label":"Exclusive Vat",
+     "default":"Display excl. VAT"
+    },
+    {
+     "type":"text",
+     "id":"price_exclu_vat",
+     "label":"Exclusive Vat",
+     "default":"excl. VAT"
+    },
+    {
+        "id": "form_text_placeholder",
+        "type": "text",
+        "label": "Form Placeholder 2",
+        "default":"For example: Hi John, how do I hang my logo?"
+    },
+    {
+        "id": "form_question",
+        "type": "text",
+        "label": "Form Title",
+        "default": "Ask a question to John"
+    },
+    {
+        "id": "form_questionsubmittext",
+        "type": "text",
+        "label": "Form submit button",
+        "default": "Send question"
+    },
+    {
+        "id": "formodify",
+        "type": "text",
+        "label": "Modify btn"
+    },
+    {
+        "id": "mbformodify",
+        "type": "text",
+        "label": "Mobile Modify btn"
+    },
+    {
+        "id": "fordirectcart",
+        "type": "text",
+        "label": "order btn"
+    },
+    {
+        "id": "mbfordirectcart",
+        "type": "text",
+        "label": "Mobile order btn"
+    },
+    {
+        "id": "TopPriceText",
+        "type": "text",
+        "label": "Top price small title",
+        "default": "Price for your Neon Logo:"
+    },
+    {
+        "id": "SectionToplist",
+        "type": "html",
+        "label": "List",
+        "default": "<li> <svg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z' fill='#EC40A4'/> </svg> Fast 8-Day Delivery </li> <li> <svg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z' fill='#EC40A4'/> </svg> 2-year warranty </li> <li> <svg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z' fill='#EC40A4'/> </svg> Free shipping </li>"
+    },
+    {
+      "id": "accordion_text",
+      "type": "text",
+      "label": "Accordion Toggle Text",
+      "default": "You receive"
+    },
+    {
+     "type":"text",
+     "id":"save_text",
+     "label":"Total Saving"
+    },
+    {
+    "type":"image_picker",
+    "id":"image_shipping",
+    "label":"Shipping Logo"
+    },
+    {
+    "type":"text",
+    "id":"alert_section",
+    "label":"Enter text"
+    },
+    {
+        "type": "text",
+        "id": "discount_card_message",
+        "label": "Discount Card Message",
+        "default": "25% Off Black Friday Deal Applied! "
+    },
+
+    {
+        "type": "text",
+        "id": "discount_car_toltip",
+        "label": "Discount Card Toltip",
+        "default": "The biggest sale of the year is live! 🎉 Grab 25% off on your order today and enjoy incredible Black Friday savings. Complete your purchase now to secure this exclusive discount! 🛍️💸"
+    },
+    {
+    "type": "text",
+    "id": "discount_message_complete",
+    "label": "Discount Complete Message",
+    "default": "Complete your order to keep your discount"
+    },
+    {
+        "type": "text",
+        "id": "discount_message",
+        "label": "Discount Arrives",
+        "default": "Discount ends in"
+    },
+    {
+    "type": "text",
+    "id": "order_message",
+    "label": "Delivery Time",
+    "default": "Ordered before 11:59 PM"
+    },
+    {
+    "type": "text",
+    "id": "delivery_date",
+    "label": "Delivery Date",
+    "default": "Delivered on"
+    },
+    {
+    "type":"text",
+    "id":"add_to_cart_btn_text",
+    "label":"Add to cart label"
+    }
+  ],
+    "blocks":[
+        {
+        "type":"paymenticon",
+        "name":"Payment Icons",
+        "settings":[
+            {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+            },
+            {
+            "type":"checkbox",
+            "id":"check",
+            "label":"Hide icon in mobile"
+            }
+        ]
+    },
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "id": "icon_text",
+          "type": "text",
+          "label": "List Item Text"
+        }
+      ]
+    },
+    {
+        "type":"Custom_Options",
+        "name":"Custom Product options",
+        "settings":[
+            {
+                "type":"text",
+                "id":"text_option",
+                "label":"Title For Option"
+            },
+            {
+                "type":"text",
+                "id":"text_tooltip",
+                "label":"Title For Tooltip"
+            },
+            {
+                "type":"text",
+                "id":"option_value",
+                "label":"Option Values"
+            },
+            {
+                "type":"text",
+                "id":"class_comp",
+                "label":"Class should be exactly one of them",
+                "info":"Backboard,UV-Print,Power-point,Cable-Length"
+            }
+            
+        ]
+    }
+  ],
+
+  "presets":[{
+  "category":"image_product",
+  "name":"Logo Discount Product"
+  }]
+  }
+  {% endschema %}
+  

@@ -1,0 +1,123 @@
+<div class="main-section-threee-image youtube-video-and-images lead_page_NL_price_with_logo_discount">
+    <div class="container">
+     <div class="row">
+       <div class="wrap-sec-images"> 
+           <div class="col-md-6"> 
+             <h2 class="col-heading">{{ section.settings.image_heading }}</h2>
+             <div class="image-wrapper">
+             {% for block in section.blocks %}
+                 <div class="img-box">
+                   <img class="img-fluid" src="{{ block.settings.img-card | img_url:'master' }}" alt="Image" >
+                 </div>
+             {% endfor %}
+           </div>
+             </div>
+         <div class="col-md-6">
+           <h2 class="col-heading">{{ section.settings.content_heading }}</h2>
+           <div class="video-cls video-one">{{ section.settings.video }}</div>
+             </div>
+         </div>
+                
+       </div>
+     </div>
+    </div>
+ <style>
+
+
+
+    .main-section-threee-image {
+     background-color: #F7F4F1;
+     padding: 60px 20px 0;
+    }
+   .main-video-heading h2 {
+     font-size: 30px;
+     line-height: 35px;
+     margin-bottom: 14px;
+     font-weight: 600;
+     color: #000;
+     letter-spacing: 1px;
+     max-width: 100%;
+     margin: 0 auto 40px;
+     text-align: center;
+ }
+ .wrap-sec-images {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+ }
+ .wrap-sec-images h2{
+   font-size: 26px;
+     font-weight: 500;
+     line-height: 34px;
+ }
+ .wrap-sec-images .col-md-6{
+   width:50%;
+ }
+   .wrap-sec-images iframe {
+     border-radius: 10px;
+ }
+ @media(max-width:1199.98px){
+ .wrap-sec-images iframe {
+     width: 300PX;
+     height: 170px;
+ }
+ } 
+ @media(max-width:991.98px){
+ .wrap-sec-images iframe {
+     width: 230PX;
+     height: 160px;
+ }
+ }
+ @media(max-width:767.98px){
+ .wrap-sec-images iframe {
+     width: 330PX;
+     height: 210px;
+ }
+ .main-section-threee-image {
+     padding: 60px 0px 0;
+ }
+   .wrap-sec-images {
+     gap: 10px;
+ }
+ }
+ </style>
+ {% schema %}
+   {
+     "name": "One Video Four Images",
+     "settings": [
+       {
+         "type":"text",
+         "id":"image_heading",
+         "label":"Heading for Images"
+         },
+       {
+         "type":"text",
+         "id":"content_heading",
+         "label":"Heading For Video"
+         },
+         {
+         "type":"html",
+         "id":"video",
+         "label":"Add Video"
+         }
+     ],
+      "blocks": [
+     {
+       "type": "Image",
+       "name": "Add Image",
+       "settings": [
+         {
+         "type":"image_picker",
+         "id":"img-card",
+         "label":"Add Image"
+         }
+       ]
+     }
+ ],
+      "presets":[{
+ "name":"One Video Four Images"
+ }]
+   }
+ {% endschema %}
+  

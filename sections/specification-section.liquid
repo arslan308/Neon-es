@@ -1,0 +1,439 @@
+<section class="section specification-section" data-section-id="{{ section.id }}" data-section-type="image-with-text">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ section.settings.section_title }}</h2> 
+        </div>
+        {%- capture image -%}
+            <div class="image-with-text__image-container">
+                <div class="image-container-flex-right">
+                    {% for block in section.blocks %}
+                        {% if block.type == "specs" %}
+                            <div class="container-block-specs">
+                                <div class="text-area-left-t"> 
+                                    <h2>{{ block.settings.title }}</h2>
+                                </div>
+                                <div class="text-area-right-t">
+                                    <div class="subtitle-description-main {% if block.settings.check %}checkbox_main{% endif %}">
+                                        <div class="subtitle-main">
+                                            <div class="subtitle">{{ block.settings.subtitle }}</div>
+                                            {% if block.settings.subtitle_description != blank %}
+                                                <div class="up-down-icon down-icon">
+                                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 3.95874L1.97208 11.9862L0 10.0142L10 0.0141602L20 10.0142L18.0279 11.9862L10 3.95874Z" fill="white"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="up-down-icon up-icon">
+                                                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 3.95874L1.97208 11.9862L0 10.0142L10 0.0141602L20 10.0142L18.0279 11.9862L10 3.95874Z" fill="white"></path>
+                                                    </svg>
+                                                </div>
+                                                {% if block.settings.image-drop != blank or block.settings.video_url != blank %}
+                                                    {%- assign imagedrop_1 = block.settings.image-drop | image_url: width: block.settings.image-drop.width | image_tag: loading: 'lazy', class: 'image-2 img-block', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+                                                    {% if block.settings.image-drop != blank %}
+                                                        {{imagedrop_1}}
+                                                    {% endif %}
+                                                {% else %}
+                                                    {%- assign video_url = block.settings.video_url | file_url -%}
+                                                    {% if block.settings.video_url != blank %}
+                                                        <video controls class="vid-block" sizes="min(100vw, 520px)"> 
+                                                            <source src="{{ video_url }}" type="video/mp4" />
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    {% endif %}      
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
+                                        <div class="subtitle-description hidden">{{ block.settings.subtitle_description }}</div>
+                                        {% if block.settings.check %}  
+                                            <div style="display: flex;">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                                  <rect width="26" height="26" rx="13" fill="white"/>
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2168 14.7268C11.3076 14.8099 11.4547 14.8099 11.5455 14.7268L18.6032 8.2628C18.7497 8.12868 19 8.22366 19 8.41334V10.822C19 10.8785 18.9755 10.9326 18.9319 10.9725L12.203 17.1355L11.5455 17.7376C11.4547 17.8208 11.3076 17.8208 11.2168 17.7376L10.5593 17.1355L7.06808 13.9379C6.97731 13.8548 6.97731 13.72 7.06808 13.6368L8.38302 12.4325C8.47379 12.3494 8.62097 12.3494 8.71175 12.4325L11.2168 14.7268Z" fill="#212D78"/>
+                                              </svg>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {%- endcapture -%}
+            {%- capture text -%}
+            <div class="image-with-text__text-container">
+                {%- assign imagebg_1 = section.settings.bgimage1 | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', class: 'image-bg img-bg-block', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+                {{ imagebg_1 }}
+                {% if section.settings.video_url_section != blank %}
+                    <video controls class="hidden vid-bg-block" style="width: 100%; height: 100%;"> 
+                        <source src="{{ section.settings.video_url_section | file_url }}" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                {% endif %}
+            </div>
+            {%- endcapture -%}            
+        <div class="image-with-text custom-section-image-and-text">
+            {%- if section.settings.image_position == 'left' -%}
+                {{ image }}
+                {{ text }}
+            {%- else -%}
+                {{ text }}
+                {{ image }}
+            {%- endif -%}
+        </div>
+    </div>
+</section>
+<style>
+    .up-down-icon.down-icon svg{transform: rotate(180deg);}
+.subtitle-description {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.subtitle-description.visible {
+    opacity: 1;
+    height: auto;
+        max-width: 500px;
+}
+
+.up-down-icon.down-icon {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+.up-down-icon.down-icon.hidden {
+    display: none;
+}
+
+.up-down-icon.up-icon {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+.up-down-icon.up-icon.active {
+    display: block;
+}
+.text-area-right-t img,
+.text-area-right-t video {
+    display: none;
+}
+.hidden{display: none;}
+.visible {
+    display: block;
+}
+
+    .up-down-icon{cursor: pointer;}   
+    .specification-section .subtitle-description-main.checkbox_main{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }                               
+    .specification-section .subtitle-description-main{
+        display: grid; 
+        width: 100%;
+    }
+    .specification-section .text-area-left-t{
+        background-color: #F7F5FF; 
+        display: block !important; 
+        padding: 28px 48px; 
+        white-space: nowrap; 
+        border-right: 1px solid #b9b5cc;
+    }
+    .specification-section .subtitle-description-main .subtitle-main{
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+    }
+    .specification-section .container-block-specs{
+        display: grid;
+        grid-template-columns: 25% 1fr;
+        border-bottom: 1px solid #b9b5cc;
+    }
+    .specification-section .container-block-specs:last-child{
+        border: 0 !important;
+    }
+    .specification-section .text-area-right-t{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 12px;
+        padding: 28px 48px;
+        align-items: center;
+        width: 100%;
+    }
+    .specification-section .text-area-right-t .subtitle{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .specification-section .container-block-specs .text-area-left-t h2{
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
+    }
+    .specification-section .section-title{
+        width: 100%; 
+        text-align: center;
+        color: black;
+        margin-bottom: 40px;
+        font-size: 43px;
+        font-weight: 700;
+        line-height: 43.38px;
+    }
+    .specification-section .image-with-text__image-container{
+        border-radius: 0 16px 16px 0;
+        padding: 0;
+    }
+    .specification-section .image-container-flex-right{
+        width: 100%;
+        background: #715AEF;
+        color: white;
+        border-radius: 0 16px 16px 0;
+    }
+    .specification-section .image-with-text.custom-section-image-and-text{
+        padding: 0;
+        border-radius:16px;
+    }
+    .specification-section{
+        background: white;
+        margin: 0;
+        padding: 60px 0;
+    }
+    .specification-section .custom-section-image-and-text{
+        display: grid; 
+        grid-template-columns: 30% 2fr;
+    }
+    .specification-section .image-with-text__text-container{
+        border-radius: 16px 0 0 16px;
+        background-color: #D9D9D9;
+        padding: 0 !important;
+    }
+    .specification-section .image-with-text__text-container img{height: 100%; border-radius: 16px 0 0 16px; width: 100%;}
+    .specification-section .image-with-text__text-container:after{
+        display: none; 
+        background-color: transparent;
+    }
+    @media only screen and (max-width: 767.9px){
+        .specification-section .image-with-text__text-container img{border-radius: 16px 16px 0 0;}
+        .specification-section .image-with-text.custom-section-image-and-text{display: flex !important;}
+        .specification-section .image-with-text__text-container{border-radius: 16px 16px 0 0;}
+        .specification-section .text-area-right-t{padding: 0 !important;}
+        .specification-section .image-container-flex-right{border-radius: 0 0 16px 16px;}
+        .specification-section .container-block-specs{
+            display: grid;
+            grid-template-columns: auto;
+            padding: 40px 36px;
+            grid-gap: 20px;
+        }
+        .specification-section .text-area-left-t{
+            background-color: unset; 
+            padding: 0;
+            border: 0;
+        }
+        .specification-section .container-block-specs .text-area-left-t h2{
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+    }
+</style> 
+<script>
+const downIcons = document.querySelectorAll(".down-icon");
+const upIcons = document.querySelectorAll(".up-icon");
+const imgBlock = document.querySelectorAll(".img-block"); 
+const vidBlock = document.querySelectorAll(".vid-block");
+const subtitleDescriptions = document.querySelectorAll(".subtitle-description");
+const LeftImage = document.querySelector(".img-bg-block");
+const LeftVedio = document.querySelector(".vid-bg-block");
+
+document.querySelectorAll(".text-area-right-t img, .text-area-right-t video").forEach((media) => {
+    media.classList.add("hidden");
+});
+
+if (subtitleDescriptions.length > 0) {
+    downIcons[0].classList.add("hidden");
+    upIcons[0].classList.add("active");
+    subtitleDescriptions[0].classList.add("visible");
+}
+
+downIcons.forEach((downIcon, index) => {
+    downIcon.addEventListener("click", function () {
+        // Hide all subtitle descriptions and reset icons
+        subtitleDescriptions.forEach((description) => description.classList.remove("visible"));
+        downIcons.forEach((icon) => icon.classList.remove("hidden"));
+        upIcons.forEach((icon) => icon.classList.remove("active"));
+
+        // Update current icon and description
+        this.classList.add("hidden");
+        upIcons[index].classList.add("active");
+        subtitleDescriptions[index].classList.add("visible");
+
+        // Get the current imgBlock and vidBlock sources
+        let imgBlockSrc = imgBlock[index]?.getAttribute('src');
+        let imgBlockSrcSet = imgBlock[index]?.getAttribute('srcset');
+        let imgBlockVedio = vidBlock[index]?.querySelector('source')?.getAttribute('src');
+
+        // Show image if it exists
+        if (imgBlockSrc) {
+            LeftImage.setAttribute('src', imgBlockSrc);
+            LeftImage.setAttribute('srcset', imgBlockSrcSet);
+            LeftImage.classList.remove('hidden');
+            LeftVedio.classList.add('hidden'); // Hide video if image exists
+        } else if (imgBlockVedio) {
+            // Show video if it exists and no image
+            LeftVedio.querySelector('source').setAttribute('src', imgBlockVedio);
+            LeftVedio.load(); // Reload video to reflect source change
+            LeftVedio.classList.remove('hidden');
+            LeftImage.classList.add('hidden'); // Hide image if video exists
+        } else {
+            // Hide both if neither exists
+            LeftImage.classList.add('hidden');
+            LeftVedio.classList.add('hidden');
+        }
+    });
+});
+
+upIcons.forEach((upIcon, index) => {
+    upIcon.addEventListener("click", function () {
+        // Do nothing if the current tab is active, only close if another tab is clicked
+        subtitleDescriptions.forEach((description, i) => {
+            if (i !== index) {
+                description.classList.remove("visible");
+                downIcons[i].classList.remove("hidden");
+                upIcons[i].classList.remove("active");
+            }
+        });
+    });
+});
+
+
+</script>
+
+{% schema %}
+  {
+    "name": "Our Specification",
+    "settings": [
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "right"
+      },
+      {
+        "type": "range",
+        "id": "image_width",
+        "min": 20,
+        "max": 70,
+        "step": 5,
+        "unit": "%",
+        "label": "Image width",
+        "default": 50
+      },
+      {
+        "type": "image_picker",
+        "id": "bgimage1",
+        "label": "Backgound Image"
+      },
+      {
+        "type": "url",
+        "id": "video_url_section",
+        "label": "Backgound Video"
+      },
+      
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "Specificaties"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link",
+        "default": "/collections/all"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Custom Attribute"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_heading",
+        "label": "Right Logo"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"specs",
+        "name":"Specifications",
+        "settings":[
+          {
+            "type":"text",
+            "id":"title",
+            "label":"Title"
+          },
+          {
+            "type":"textarea",
+            "id":"subtitle",
+            "label":"Subtitle"
+          },
+          {
+            "type": "text",
+            "id": "subtitle_description",
+            "label": "Subtitle Description"
+          },
+          {
+            "type":"checkbox",
+            "id":"check",
+            "label":"True/False"
+          },
+          {
+            "type": "image_picker",
+            "id": "image-drop",
+            "label": "Upload Image"
+          },
+          {
+            "type": "url",
+            "id": "video_url",
+            "label": "Video URL"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Our Specification",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}
+  

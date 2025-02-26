@@ -1,0 +1,268 @@
+<div class="faq-tabing {{ section.settings.add_class }}">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="rev-head">{{ section.settings.title }}</h2>
+      <p class="description">{{ section.settings.description }}</p>
+    </div>
+    <ul class="tabs">
+      {% assign tab_count = 0 %}
+      {% for block in section.blocks %}
+        {% if block.type == 'tab' %}
+          {% assign tab_count = tab_count | plus: 1 %}
+          <li class="tab-link {% if tab_count == 1 %}current{% endif %}" data-tab="tab-{{ tab_count }}">
+            {{ block.settings.tab_title }}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% assign tab_count = 0 %}
+    {% for block in section.blocks %}
+      {% if block.type == 'tab' %}
+        {% assign tab_count = tab_count | plus: 1 %}
+        <div id="tab-{{ tab_count }}" class="tab-content {% if tab_count == 1 %}current{% endif %}">
+          {% for accordion in section.blocks %}
+            {% if accordion.type == 'accordion_item' %}
+              {% assign selected_tab = accordion.settings.tab_association | plus: 0 %}
+              {% if selected_tab == tab_count %}
+                {% assign accordion_title = accordion.settings.accordion_title %}
+                {% assign accordion_content = accordion.settings.accordion_content %}
+                <div class="accordion-item">
+                  <div class="accordion-title" data-toggle="accordion-{{ tab_count }}-{{ forloop.index }}">
+                    <h5>{{ accordion_title }}</h5>
+
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 3.95874L1.97208 11.9862L0 10.0142L10 0.0141602L20 10.0142L18.0279 11.9862L10 3.95874Z" fill="black" />
+                    </svg>
+                  </div>
+                  <div id="accordion-{{ tab_count }}-{{ forloop.index }}" class="accordion-content">
+                    {{ accordion_content }}
+                  </div>
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% comment %} <a class="load-more-button tab-{{ tab_count }}">{{ section.settings.btn}} </a> {% endcomment %}
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const accordionItems = document.querySelectorAll("#tab-{{ tab_count }} .accordion-item");
+            const loadMoreBtn = document.createElement("a");
+            let itemsToShow = 5;
+            loadMoreBtn.innerText = "{{ section.settings.btn }}";
+            loadMoreBtn.style.display = "block";
+            loadMoreBtn.classList.add("load-more-button");
+            accordionItems.forEach((item, index) => {
+              if (index >= itemsToShow) item.style.display = "none";
+            });
+            if(accordionItems.length > itemsToShow){
+              document.querySelector("#tab-{{ tab_count }}").appendChild(loadMoreBtn);
+            }
+            loadMoreBtn.addEventListener("click", function () {
+              itemsToShow += 5;
+              accordionItems.forEach((item, index) => {
+                if (index < itemsToShow) item.style.display = "block";
+              });
+              if (itemsToShow >= accordionItems.length) {
+                loadMoreBtn.style.display = "none";
+              }
+            });
+          });
+        </script>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<style>
+  .accordion-content.open {
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabs = document.querySelectorAll('.tab-link');
+    var tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('current'); });
+        tabContents.forEach(function (c) { c.classList.remove('current'); });
+        tab.classList.add('current');
+        var tabID = tab.getAttribute('data-tab');
+        document.getElementById(tabID).classList.add('current');
+      });
+    });
+
+    var accordions = document.querySelectorAll('.accordion-title');
+
+    accordions.forEach(function (accordion) {
+      accordion.addEventListener('click', function () {
+
+        var openAccordion = document.querySelector('.accordion-item.open-item');
+
+        if (openAccordion && openAccordion !== accordion.closest('.accordion-item')) {
+          openAccordion.querySelector('.accordion-title').classList.remove('active');
+          openAccordion.querySelector('.accordion-content').classList.remove('open');
+          openAccordion.classList.remove('open-item');
+        }
+
+        var content = document.querySelector('#' + accordion.getAttribute('data-toggle'));
+        var accordionItem = accordion.closest('.accordion-item');
+
+        content.classList.toggle('open');
+        accordion.classList.toggle('active');
+        accordionItem.classList.toggle('open-item');
+      });
+    });
+  });
+</script>
+{% schema %}
+  {
+    "name": "Faq Tab",
+    "settings": [
+      {
+        "type": "text",
+        "id": "add_class",
+        "label": "Add Class"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Descritption"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Read More",
+        "default": "Bekijk alle vragen"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tab",
+        "name": "Tab",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab Title",
+            "default": "Tab Title"
+          }
+        ]
+      },
+      {
+        "type": "accordion_item",
+        "name": "Accordion Item",
+        "limit": 50,
+        "settings": [
+          {
+            "type": "text",
+            "id": "accordion_title",
+            "label": "Accordion Title",
+            "default": "Accordion Title"
+          },
+        {
+          "type": "richtext",
+          "id": "accordion_content",
+          "label": "Accordion Content",
+          "default": "<p>Accordion Content</p>"
+        },
+        {
+          "type": "select",
+          "id": "tab_association",
+          "label": "Select the associated tab",
+          "options": [
+            { "value": "1", "label": "Tab 1" },
+            { "value": "2", "label": "Tab 2" },
+            { "value": "3", "label": "Tab 3" },
+            { "value": "4", "label": "Tab 4" },
+            { "value": "5", "label": "Tab 5" },
+            { "value": "6", "label": "Tab 6" }
+
+          ],
+          "default": "1"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Faq Tab",
+      "category": "Custom",
+      "blocks": [
+      {
+        "type": "tab",
+        "settings": {
+          "tab_title": "Product information"
+        }
+      },
+      {
+        "type": "tab",
+        "settings": {
+          "tab_title": "Delivery times"
+        }
+      },
+      {
+        "type": "tab",
+        "settings": {
+          "tab_title": "Installation"
+        }
+      },
+      {
+        "type": "tab",
+        "settings": {
+          "tab_title": "Warranty"
+        }
+      },
+      {
+        "type": "accordion_item",
+        "settings": {
+          "accordion_title": "How much does a custom neon cost?",
+          "accordion_content": "<p>Prices vary based on design, size and LED length. Text only starts at around €220. For exact costs, please submit your design for a quote.</p>",
+          "tab_association": "1"
+        }
+      },
+      {
+        "type": "accordion_item",
+        "settings": {
+          "accordion_title": "What type of LED lighting is used?",
+          "accordion_content": "<p>EvoLux V23, developed in 2023, with a lifespan of 100,000 hours and 1,500 lumens—the best on the market.</p>",
+          "tab_association": "1"
+        }
+      },
+      {
+        "type": "accordion_item",
+        "settings": {
+          "accordion_title": "Are there any costs associated with requesting a quote and sample?",
+          "accordion_content": "<p>No, this is free and without obligation.</p>",
+          "tab_association": "1"
+        }
+      },
+      {
+        "type": "accordion_item",
+        "settings": {
+          "accordion_title": "Do the examples match the final boards?",
+          "accordion_content": "<p>Expect precision. Our design previews reflect the final product. From color to text, trust us to match your vision. Design with confidence with us. The final product will be created as the preview, but because it is handcrafted, it may vary slightly to ensure the best possible result</p>",
+          "tab_association": "1"
+        }
+      },
+      {
+        "type": "accordion_item",
+        "settings": {
+          "accordion_title": "What color choices are available?",
+          "accordion_content": "<p>Available colour options? Yes, all logos can be converted to neon and we offer 12 LED neon colours plus an RGB option. The available colours are: White, Warm White, Pink, Light Pink, Blue, Ice Blue, Turquoise, Green, Red, Orange, Yellow and Purple.</p>",
+          "tab_association": "1"
+        }
+      }
+    ]
+    }
+
+  ]
+}
+{% endschema %}

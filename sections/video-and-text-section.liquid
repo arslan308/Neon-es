@@ -1,0 +1,140 @@
+<div class="video-and-text-section  page-logan-cst-video-sc">
+  <div class="container">
+  <div class="video-text-header">
+    {% if section.settings.link != blank %}
+      <a class="button-link" href="javascript:void(0);">
+      <span>
+        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32.4951 31.9907C32.3513 31.9907 32.2587 31.9907 32.1648 31.9907C26.95 31.9907 21.7339 32.012 16.5191 31.9832C12.5955 31.9619 9.1323 30.6296 6.15205 28.0888C3.39825 25.7407 1.59408 22.7895 0.858404 19.2392C0.0126221 15.1584 0.660721 11.2878 2.83523 7.72989C5.16113 3.92557 8.51673 1.44231 12.8758 0.445256C17.8766 -0.698166 22.4308 0.367694 26.4408 3.56152C29.4498 5.95971 31.3503 9.08598 32.1473 12.8528C32.3463 13.7935 32.4739 14.7668 32.4801 15.7263C32.5114 21.0556 32.4964 26.3849 32.4964 31.7142C32.4964 31.7956 32.4964 31.8756 32.4964 31.9895L32.4951 31.9907ZM17.9905 19.1616C18.0005 19.0815 18.0105 19.0303 18.0118 18.979C18.043 17.9106 18.4572 17.0374 19.2842 16.3456C19.7471 15.959 20.18 15.5362 20.6029 15.1058C21.4449 14.2489 22.0004 13.2556 22.018 12.0133C22.0392 10.5009 21.5876 9.20858 20.3114 8.29784C19.4756 7.70111 18.5172 7.44466 17.51 7.35709C16.2239 7.24575 14.9527 7.30329 13.7441 7.82121C11.9024 8.60935 10.984 10.3095 11.0403 12.2398H14.8689C15.0202 11.8169 15.1103 11.3928 15.313 11.0313C15.6483 10.4346 16.2226 10.2882 16.8745 10.3795C17.4112 10.4546 17.7778 10.7436 17.9379 11.2577C18.1832 12.0484 18.1231 12.809 17.5851 13.467C17.2773 13.8436 16.9483 14.2201 16.5679 14.5191C15.4456 15.4011 14.8338 16.5382 14.7225 17.9519C14.6912 18.3497 14.6837 18.7488 14.6637 19.1616H17.9892H17.9905ZM16.3715 24.7148C16.5967 24.6823 16.8257 24.6686 17.0459 24.6148C17.8816 24.4096 18.4472 23.7603 18.551 22.9071C18.6436 22.1453 18.2332 21.3809 17.4925 21.0181C16.7043 20.6315 15.9011 20.6416 15.1354 21.0794C14.1557 21.6399 13.8667 22.9459 14.5248 23.8329C14.9777 24.4434 15.6145 24.7061 16.3715 24.7161V24.7148Z" fill="white"/>
+        </svg>
+      </span>
+      <span class="ask-text">
+       {{ section.settings.label }}
+      </span>
+    </a>
+    {% endif %}
+  </div>
+  <div class="video-text-flex">
+        <h2 class="heading-v-t">
+          {{ section.settings.heading }}
+        </h2>
+    <div class="video-text-flex-in">
+      <div class="text-blocks-left flex-in-m">
+        
+        <div class="v-t-items">
+          {% for block in section.blocks %}
+            {% if block.type == 'order' %}
+          <div class="v-t-item">
+            {%- assign logo_img = block.settings.logo | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', class: 'image-1', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'-%}
+            <div class="v-t-img">
+                {%- if block.settings.logo -%}
+                  {{logo_img}}
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}   
+            </div>
+            <div class="v-t-title">
+              <h5>{{ block.settings.title }}</h5>
+              <p>{{ block.settings.subtitle }}</p>
+            </div>
+          </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="video-block-right flex-in-m">
+        <div class="video-section-in-rght">
+          <div class="overlay-banner-v">
+            {% if section.settings.img != blank %}
+              {%- assign image_url_1 = section.settings.img | image_url: width: section.settings.img.width | image_tag: loading: 'lazy', class: 'image--fade-in', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'-%}
+              {{ image_url_1 }}
+            {% endif %}
+            <div class="button-click-over">
+              <button class="ov-btn">
+                <img height="100%" width="100%" class="lazyload image--fade-in" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Group_8423.png?v=1687496423">
+              </button>
+            </div>
+          </div>
+          <div class="video-container-v-t" style="display:none;">
+             {% if section.settings.video != blank %}
+              <video width="100%" height="100%" muted loop controls>
+                <source src="{{ section.settings.video }}" type="video/mp4">
+              </video>
+            {% endif %}            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Video and Text",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Heading"
+      },
+      {
+        "type":"text",
+        "id":"label",
+        "label":"Button Label"
+      },
+      {
+        "type":"url",
+        "id":"link",
+        "label":"Button Link"
+      },
+      {
+        "type":"header",
+        "content":"Video"
+      },
+      {
+        "type":"image_picker",
+        "id":"img",
+        "label":"Video Overlay Image"
+      },
+      {
+        "type":"url",
+        "id":"video",
+        "label":"Video"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"order",
+        "name":"Order Processing",
+        "settings":[
+          {
+            "type":"text",
+            "id":"title",
+            "label":"Title"
+          },
+          {
+            "type":"textarea",
+            "id":"subtitle",
+            "label":"Subtitle"
+          },
+          {
+            "type":"image_picker",
+            "id":"logo",
+            "label":"Logo"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"Video and Text"
+      }      
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

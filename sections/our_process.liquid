@@ -1,0 +1,133 @@
+<section class="section home-order-process {{ section.settings.custom_class }}" data-section-id="{{ section.id }}" data-section-type="our-process">
+  <div class="container">
+    <header class="section__header">
+      <div class="section__header-stack">
+        <h2 class="section__title heading h3">{{ section.settings.title | escape }}</h2>
+      </div>
+    </header>
+    {%- assign bg_img = section.settings.process_backgroud | img_url: '1x1' | replace: '_1x1.', '.' -%}
+    <div class="process-wrapper" style="background-image: url('{{ bg_img }}');">
+      <div class="custom-process">
+        <div class="process-step-block">
+          <div class="process-step-number">01 
+            <span><img src="{{ section.settings.step_1_icon | img_url: '300x300' }}" alt="Step 1 Icon"></span>
+          </div>
+          <div class="process-step-heading">{{ section.settings.step_1_heading }}</div>
+          <div class="process-step-description">{{ section.settings.step_1_desc }}</div>
+        </div>
+        <div class="process-step-block">
+          <div class="process-step-number">02 
+            <span>
+              <img src="{{ section.settings.step_2_icon | img_url: '300x300' }}" alt="Step 2 Icon"></span>
+          </div>
+          <div class="process-step-heading">{{ section.settings.step_2_heading }}</div>
+          <div class="process-step-description">{{ section.settings.step_2_desc }}</div>
+        </div>
+        <div class="process-step-block">
+          <div class="process-step-number">03 
+            <span><img src="{{ section.settings.step_3_icon | img_url: '300x300' }}" alt="Step 3 Icon"></span>
+          </div>
+          <div class="process-step-heading">{{ section.settings.step_3_heading }}</div>
+          <div class="process-step-description">{{ section.settings.step_3_desc }}</div>
+        </div>
+      </div>
+      <div class="process-button-wrapper">
+        <a href="{{ section.settings.button_link }}" class="btn button button--primary">{{ section.settings.button_text }}</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{% schema %}
+{
+"name": "Our Process",
+"settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Our Process"
+    },
+    {
+      "type": "image_picker",
+      "id": "process_backgroud",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "step_1_icon",
+      "label": "Step 1 Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "step_2_icon",
+      "label": "Step 2 Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "step_3_icon",
+      "label": "Step 3 Icon"
+    },
+    {
+      "type": "text",
+      "id": "step_1_heading",
+      "label": "Step 1 Heading"
+    },
+    {
+      "type": "text",
+      "id": "step_1_desc",
+      "label": "Step 1 Description"
+    },
+    {
+      "type": "text",
+      "id": "step_2_heading",
+      "label": "Step 2 Heading"
+    },
+    {
+      "type": "text",
+      "id": "step_2_desc",
+      "label": "Step 2 Description"
+    },
+    {
+      "type": "text",
+      "id": "step_3_heading",
+      "label": "Step 3 Heading"
+    },
+    {
+      "type": "text",
+      "id": "step_3_desc",
+      "label": "Step 3 Description"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+],
+"presets": [
+{
+"name": "Our Process",
+"category": "Our Process"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

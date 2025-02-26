@@ -1,0 +1,193 @@
+<section class="section builder_USSS" data-section-id="{{ section.id }}" data-section-type="image-with-text" {% if section.settings.bgimage != blank %}style="background-image:url({{ section.settings.bgimage | img_url:"master" }})"{% endif %}>
+    <div class="container">
+      {%- capture image -%}
+        <div class="image-with-text__image-container" {% comment %}style="width: {{ section.settings.image_width }}%;"{% endcomment %}>
+        <div class="left-our-values">
+          {% for block in section.blocks %}
+              {% if block.type == "specs" %}
+            <div class="container-block-specs">
+            <div class="text-area-left-t"> 
+                <h2>{{ block.settings.title }}</h2>
+            </div>
+            <div class="text-area-right-t"> 
+              
+                <div class="subtitle">{{ block.settings.subtitle }}</div>
+              {% if block.settings.check %}  
+              <div class="checkbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <rect width="26" height="26" rx="13" fill="white"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2168 14.7268C11.3076 14.8099 11.4547 14.8099 11.5455 14.7268L18.6032 8.2628C18.7497 8.12868 19 8.22366 19 8.41334V10.822C19 10.8785 18.9755 10.9326 18.9319 10.9725L12.203 17.1355L11.5455 17.7376C11.4547 17.8208 11.3076 17.8208 11.2168 17.7376L10.5593 17.1355L7.06808 13.9379C6.97731 13.8548 6.97731 13.72 7.06808 13.6368L8.38302 12.4325C8.47379 12.3494 8.62097 12.3494 8.71175 12.4325L11.2168 14.7268Z" fill="#212D78"/>
+                  </svg>
+                </div>
+                {% endif %}
+            </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+          <div class="image-container-flex-right">
+            {% for block in section.blocks %}
+              {% if block.type == "specs" %}
+            <div class="container-block-specs">
+            <div class="text-area-left-t"> 
+                <h2>{{ block.settings.title }}</h2>
+            </div>
+            <div class="text-area-right-t"> 
+              {% if forloop.index == 1 %}<div class="heading-right-section">{% if section.settings.right_heading != blank %}
+                <img height="100%" width="100%" class="lazyload image--fade-in logo-section" style="display: block !Important;" src="{{  section.settings.right_heading | img_url:  "master" }}">
+            {% endif %}</div>{% endif %}
+                <div class="subtitle">{{ block.settings.subtitle }}</div>
+              {% if block.settings.check %}  
+                  <div class="checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <rect width="26" height="26" rx="13" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2168 14.7268C11.3076 14.8099 11.4547 14.8099 11.5455 14.7268L18.6032 8.2628C18.7497 8.12868 19 8.22366 19 8.41334V10.822C19 10.8785 18.9755 10.9326 18.9319 10.9725L12.203 17.1355L11.5455 17.7376C11.4547 17.8208 11.3076 17.8208 11.2168 17.7376L10.5593 17.1355L7.06808 13.9379C6.97731 13.8548 6.97731 13.72 7.06808 13.6368L8.38302 12.4325C8.47379 12.3494 8.62097 12.3494 8.71175 12.4325L11.2168 14.7268Z" fill="#212D78"/>
+                    </svg>
+                  </div>
+              {% endif %}
+            </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {%- endcapture -%}
+  
+      {%- capture text -%}
+        <div class="image-with-text__text-container" {% if section.settings.bgimage1 != blank %} style="background-image:url({{ section.settings.bgimage1 | img_url:"master" }})"{% endif %}>
+          <div class="image-with-text__text-aligner">
+            {%- if section.settings.title != blank -%}
+              <h2 class="heading h3">{{ section.settings.title | escape }}</h2>
+            {%- endif -%}
+  
+            <div class="rte">
+              {{ section.settings.content }}
+  
+              {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
+                <a href="{{ section.settings.button_link }}" class="button button--primary" link-title="{{section.settings.class}}" >{{ section.settings.button_text | escape }} <svg width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.4608 5.04014V0.0400391L29.9608 6.04004L23.4608 12.04V7.04014H0.0391235V5.04014H23.4608Z" fill="white"/></svg></a>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endcapture -%}
+  
+      <div class="image-with-text custom-section-image-and-text">
+        {%- if section.settings.image_position == 'left' -%}
+          {{ image }}
+          {{ text }}
+        {%- else -%}
+          {{ text }}
+          {{ image }}
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+  
+  {% schema %}
+  {
+    "name": "Our Competitors",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bgimage",
+        "label": "Backgound Image"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "range",
+        "id": "image_width",
+        "min": 20,
+        "max": 70,
+        "step": 5,
+        "unit": "%",
+        "label": "Image width",
+        "default": 50
+      },
+      {
+        "type": "image_picker",
+        "id": "bgimage1",
+        "label": "Backgound Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Your title"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>Use this text to share information about your brand with your customers.<br>Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text",
+        "default": "Our products"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link",
+        "default": "/collections/all"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Custom Attribute"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_heading",
+        "label": "Right Logo"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"specs",
+        "name":"Specifications",
+        "settings":[
+          {
+            "type":"text",
+            "id":"title",
+            "label":"Title"
+          },
+          {
+            "type":"textarea",
+            "id":"subtitle",
+            "label":"Subtitle"
+          },
+          {
+            "type":"checkbox",
+            "id":"check",
+            "label":"True/False"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Our Competitors",
+        "settings": {}
+      }
+    ]
+  }
+  {% endschema %}
+  

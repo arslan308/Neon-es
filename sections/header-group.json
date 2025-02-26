@@ -1,0 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_RYgcmj": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Collections",
+            "image_1_heading": "Your image",
+            "image_1_text": "Tell your story",
+            "image_1_link": "",
+            "image_2_heading": "Your image",
+            "image_2_text": "Tell your story",
+            "image_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_RYgcmj"
+      ],
+      "settings": {
+        "enable_sticky_header": true,
+        "logo": "shopify://shop_images/Neonsfeer_logo_high_quality_b0625196-d790-4dd6-9f8d-85d8dba5a51b.png",
+        "profile_img": "shopify://shop_images/sales-rep2.png",
+        "logo_max_width": 155,
+        "mobile_logo_max_width": 150,
+        "show_locale_selector": false,
+        "show_country_selector": false,
+        "navigation_menu": "main-menu",
+        "navigation_mobile_menu": "",
+        "desktop_navigation_layout": "inline",
+        "desktop_navigation_open_trigger": "hover",
+        "show_navigation_social_media": false,
+        "navigation_phone_number": "Call us +1 (646) 760-1539",
+        "navigation_email": "info@theneonsfeer.com",
+        "show_button": true,
+        "button_text": "Free quote and design",
+        "custom_link": "shopify://pages/logo-request",
+        "show_condensed_search": false,
+        "show_search_filter": false,
+        "search_menu": "",
+        "show_search_menu_title": false
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

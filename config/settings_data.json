@@ -1,0 +1,862 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "vat_percent": "",
+    "google_tag_manager": "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n    })(window,document,'script','dataLayer','GTM-N53RS5D');</script>",
+    "google_site_verification": "hLChpdehPdyY2Wrb4e5kj3zcdE0c-qgayw5HAnT3DdU",
+    "heading_color": "#000000",
+    "text_color": "#677279",
+    "accent_color": "#ff13a7",
+    "link_color": "#00badb",
+    "border_color": "#e1e3e4",
+    "background": "#f9f9fd",
+    "secondary_background": "#ffffff",
+    "error_color": "#ff0000",
+    "success_color": "#00aa00",
+    "primary_button_background": "#ff13a7",
+    "primary_button_text_color": "#ffffff",
+    "secondary_button_background": "#7853f7",
+    "secondary_button_text_color": "#ffffff",
+    "header_background": "#7853f7",
+    "header_text_color": "#ffffff",
+    "header_light_text_color": "#a3afef",
+    "header_accent_color": "#ff13a7",
+    "footer_background_color": "#7853f7",
+    "footer_heading_text_color": "#ffffff",
+    "footer_body_text_color": "#ffffff",
+    "footer_accent_color": "#ff13a7",
+    "product_on_sale_accent": "#ee0000",
+    "product_in_stock_color": "#008a00",
+    "product_low_stock_color": "#ee0000",
+    "product_sold_out_color": "#8a9297",
+    "product_label_1_background": "#008a00",
+    "product_label_2_background": "#00a500",
+    "product_star_color": "#ffbd00",
+    "base_text_font_size": 16,
+    "heading_font": "din_next_n5",
+    "text_font": "din_next_n4",
+    "underline_links": true,
+    "animation_image_zoom": true,
+    "show_vendor": false,
+    "show_secondary_image": true,
+    "show_reviews_badge": false,
+    "show_discount": false,
+    "discount_mode": "saving",
+    "product_price_position": "after_title",
+    "product_image_size": "natural",
+    "show_color_swatch": false,
+    "show_inventory_quantity": false,
+    "low_inventory_threshold": 0,
+    "cart_type": "page",
+    "cart_empty_button_link": "shopify://collections/all",
+    "cart_show_checkout_button": true,
+    "cart_show_free_shipping_threshold": false,
+    "cart_free_shipping_threshold": "50",
+    "social_facebook": "facebook.com",
+    "social_twitter": "",
+    "social_pinterest": "",
+    "social_instagram": "instagram.com",
+    "social_vimeo": "",
+    "social_tumblr": "",
+    "social_youtube": "",
+    "social_linkedin": "",
+    "social_snapchat": "",
+    "social_fancy": "",
+    "favicon": "shopify://shop_images/favicon_neonsfeer.jpg",
+    "search_mode": "product,article",
+    "share_image": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#00badb",
+    "checkout_button_color": "#00badb",
+    "checkout_error_color": "#ff0000",
+    "sections": {
+      "header-announcement-bar": {
+        "type": "header-announcement-bar",
+        "blocks": {
+          "21d1b31d-c21a-4182-af3b-83c7eab5e51d": {
+            "type": "text",
+            "settings": {
+              "image": "shopify://shop_images/Untitled-1_3.png",
+              "text": "4.8"
+            }
+          },
+          "d9bdf4ee-a706-4247-aed2-a18a34f84440": {
+            "type": "text",
+            "settings": {
+              "image": "shopify://shop_images/free.png",
+              "text": "Gratis verzending"
+            }
+          },
+          "baa6f3ae-5c19-41f3-92e2-3f26d94e3e19": {
+            "type": "text",
+            "settings": {
+              "image": "shopify://shop_images/free_3_2_1.webp",
+              "text": "8-daagse levering"
+            }
+          },
+          "77871e7b-e8e6-469d-bce1-306f2013dfc4": {
+            "type": "text",
+            "settings": {
+              "image": "shopify://shop_images/image_2.png",
+              "text": "2 jaar garantie"
+            }
+          }
+        },
+        "block_order": [
+          "21d1b31d-c21a-4182-af3b-83c7eab5e51d",
+          "d9bdf4ee-a706-4247-aed2-a18a34f84440",
+          "baa6f3ae-5c19-41f3-92e2-3f26d94e3e19",
+          "77871e7b-e8e6-469d-bce1-306f2013dfc4"
+        ],
+        "settings": {}
+      },
+      "image_with_banner": {
+        "type": "image_with_banner",
+        "settings": {
+          "bgimage": "shopify://shop_images/Rectangle_1603_1.png",
+          "image": "shopify://shop_images/Group_8607_49c4b7f0-1f70-44f9-87d9-5fec2d9b1610.png",
+          "image_position": "right",
+          "image_width": 50,
+          "title": "Our customers are 99% satisfied",
+          "content": "<p>We're delighted to see our customers thrilled with their product and Néonsfeer's customer service! They're spreading the word to all their friends and family.</p>",
+          "button_text": "",
+          "button_link": "shopify://collections/all",
+          "reting-img": "shopify://shop_images/Frame_8859.png",
+          "class": "",
+          "first_user_profile": "shopify://shop_images/User_Pic_12.png",
+          "first_user_name": "Jonathan",
+          "first_user_description": "I love my neon sign from Neonsfeer!",
+          "second_user_profile": "shopify://shop_images/User_Pic_11.png",
+          "second_user_name": "Bob",
+          "second_user_description": "The Neonsfeer team was super fast with answering my questions. They handled everything for delivery and sign pickup."
+        }
+      },
+      "rich-text": {
+        "type": "rich-text",
+        "settings": {
+          "text_width": "regular",
+          "title": "Let your neon creativity shine",
+          "content": "",
+          "button_text": "Create, let's get started",
+          "button_link": "https://neonsfeer.com/products/design-your-neon-sign"
+        }
+      },
+      "video-slider-sec": {
+        "type": "video-slider-sec",
+        "blocks": {
+          "customer_slider_E39JDX": {
+            "type": "customer-slider",
+            "settings": {
+              "customer-img": "shopify://shop_images/101_2048x2048_1ce527db-be6a-480a-b6a4-a4f3c43868db.webp",
+              "customer-name": "Webjongens",
+              "customer-post": "Den Burg",
+              "video-url": "https://cdn.shopify.com/videos/c/o/v/9dac062c945f4f3fa5e71c7c5254122f.mp4"
+            }
+          },
+          "customer_slider_ciUjmK": {
+            "type": "customer-slider",
+            "settings": {
+              "customer-img": "shopify://shop_images/404_2048x2048-new.webp",
+              "customer-name": "Ruud de Boer<br> (Lastafelshop)",
+              "customer-post": "Koudekerk aan den Rijn",
+              "video-url": "https://cdn.shopify.com/videos/c/o/v/405d566fe2a844a886072ca89fe55bcc.mp4"
+            }
+          },
+          "customer_slider_yLJkDp": {
+            "type": "customer-slider",
+            "settings": {
+              "customer-img": "shopify://shop_images/303_2048x2048-new.webp",
+              "customer-name": "Iris (Curls by Iris)",
+              "customer-post": "Arnhem",
+              "video-url": "https://cdn.shopify.com/videos/c/o/v/a1e10a4ca3544986bddfb3d717f152fd.mp4"
+            }
+          },
+          "customer_slider_WqcyCL": {
+            "type": "customer-slider",
+            "settings": {
+              "customer-img": "shopify://shop_images/505_2048x2048-new.webp",
+              "customer-name": "Shem",
+              "customer-post": "Uden",
+              "video-url": "https://cdn.shopify.com/videos/c/o/v/328f6e8b570048cda28efb4696061399.mp4"
+            }
+          },
+          "customer_slider_nJMkHt": {
+            "type": "customer-slider",
+            "settings": {
+              "customer-img": "shopify://shop_images/202_2048x2048-new.webp",
+              "customer-name": "Madelon",
+              "customer-post": "Amsterdam",
+              "video-url": "https://cdn.shopify.com/videos/c/o/v/ed4ad412b93d4bbb9a383370405a7d38.mp4"
+            }
+          }
+        },
+        "block_order": [
+          "customer_slider_E39JDX",
+          "customer_slider_ciUjmK",
+          "customer_slider_yLJkDp",
+          "customer_slider_WqcyCL",
+          "customer_slider_nJMkHt"
+        ],
+        "settings": {
+          "people-trust": "",
+          "style_class": "for-arrows",
+          "testimonial-description": ""
+        }
+      },
+      "custom-google-review": {
+        "type": "custom-google-review",
+        "blocks": {
+          "image_with_review_bJbkbA": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_22-02-2024_om_17.19_2048x2048_2048x2048_36a4c7bc-70f5-420d-b795-c059c1b6c6da_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/roy_2048x2048_ea527ad9-861d-485b-8206-ec74f4d09493_2048x2048-new.webp",
+              "user-name": "Roy van de Valk",
+              "user-discription": "Good communication, quality is great and also for a fair price. I am very happy with it!",
+              "uplod-time": "2 months ago"
+            }
+          },
+          "simple_review_hXTHJM": {
+            "type": "simple-review",
+            "settings": {
+              "user-img": "shopify://shop_images/Ellipse_4_2-svg_1.svg",
+              "user-name": "Evolve Gaming",
+              "user-discription": "We ordered a logo for our showroom. Very happy with the result. Definitely recommended!",
+              "uplod-time": "2 months ago"
+            }
+          },
+          "image_with_review_VcPaNk": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/steve_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/stevee_2_2048x2048-new.png",
+              "user-name": "Steve Steels",
+              "user-discription": "We asked Neonsfeer to create and produce 2 neon logos for our stand and were very pleased with the result. It completely met our expectations... Great job! Steve (Kalahari Events)",
+              "uplod-time": "2 months ago"
+            }
+          },
+          "image_with_review_8jyeiG": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Rectangle_3638_1_2048x2048-new.png",
+              "user-img": "shopify://shop_images/Ellipse_232_2048x2048_89f0867e-ebe4-47d3-9f1d-decabc9ccc1b.png",
+              "user-name": "Mario Haneca",
+              "user-discription": "Very satisfied with my neon logo from neonsfeer - fast service - good product. Do not hesitate.",
+              "uplod-time": "2 months ago"
+            }
+          },
+          "image_with_review_jYtJPt": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/ZMHgD3rqVfCsTr4dPYYpSOXK0CMWtnnraFgZfbhuFHEBXfsqp6z5Ttx5e3EAIrmeOdC487V8lR3TXgD1xucoXGObjmuLz2RMelYO-2_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/Ellipse_231_2048x2048-new.png",
+              "user-name": "Student association Averroës",
+              "user-discription": "We have always been happy with the experience and the fast delivery, good service. Damn ho!",
+              "uplod-time": "3 months ago"
+            }
+          },
+          "image_with_review_MFif7w": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_22-10-2023_om_10.49_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/jordi_2048x2048-new.webp",
+              "user-name": "Jordi Deckert",
+              "user-discription": "Nothing but praise for this company! We came into contact with Neonsfeer via social media and because we wanted something that would stand out, we chose to have a logo converted into this special lighting. From the very first moment, we were perfectly guided by the employees. Almost nothing was too much to ask and everything was explained neatly. Something went wrong with the delivery of the first product. This was resolved perfectly and with a new urgent delivery we were quickly provided with a new logo. This is how a company's satisfaction guarantee should work! During meetings or trade fairs, we receive many comments about our beautiful and fun logo, highly recommended.",
+              "uplod-time": "1 month ago"
+            }
+          },
+          "simple_review_xtV7TU": {
+            "type": "simple-review",
+            "settings": {
+              "user-img": "shopify://shop_images/Ellipse_4_4-svg_1_2048x2048-new.svg",
+              "user-name": "Technique",
+              "user-discription": "Very friendly company, neon logo was delivered quickly within the agreed time. The design was great. Except for a small hole that could have been moved better, I am super satisfied.",
+              "uplod-time": "3 weeks ago"
+            }
+          },
+          "simple_review_TdrNDr": {
+            "type": "simple-review",
+            "settings": {
+              "user-img": "shopify://shop_images/Ellipse_4_4-svg_4_2048x2048_b0d4dda5-8d0f-4a18-926e-0d6e15b9d56f.svg",
+              "user-name": "Bianca",
+              "user-discription": "\"Wowwww I am so happy with my neon 🤩! Thanks to the great thinking along and the great telephone customer service, I am super amazed. I spoke to several parties but Neonsfeer was helpful, personal and transparent. And the delivery was also faster than indicated!\"",
+              "uplod-time": "6 weeks ago"
+            }
+          },
+          "image_with_review_WbtArR": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/7YO3lJK8kvZ8n2H5mQymLSgjgncU4ii53W8NNVeM19U0wcCJs8h0lRJ6B3sQuriveP2e1zt1WhAXJr7LcJ80JPu61TbMoJLOdDYN-2_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/d_daan_2048x2048-new.png",
+              "user-name": "Dylan (Flatline Agency)",
+              "user-discription": "We are very happy with our new neon lamp. Beautiful result in combination with the moss wall.",
+              "uplod-time": "5 months ago."
+            }
+          },
+          "image_with_review_ahNPjc": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_22-02-2024_om_17.18_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/jantje_2048x2048-new.webp",
+              "user-name": "Stakenborg",
+              "user-discription": "Good quality, good service and nice people I have had contact with...fast delivery...great",
+              "uplod-time": ""
+            }
+          },
+          "image_with_review_wMHyhV": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/cRBbex8Q5oWIpMIMraz2jIS4DYLb2AzGESWP7AKfRKbj43gULWqvQ1GfeEBUuSqoonmPrvYSlJ9yFrW5mVQ7drEfXAtxhKiiTZSU_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/s_sjoerd_2048x2048-new.png",
+              "user-name": "Siddiqur (Taste of India Restaurant)",
+              "user-discription": "Great help from Chris, ordered 3 beautiful neon signs for my restaurant in Nijmegen.",
+              "uplod-time": "3 months ago"
+            }
+          },
+          "image_with_review_98CwbX": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_10-10-2023_om_14.22_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/K_karel_2048x2048-new.png",
+              "user-name": "Karel Voets",
+              "user-discription": "Top service, good communication and fast delivery, after a phone call with the representative also got a good price. Recommended for all your neon wishes.",
+              "uplod-time": "1 month ago"
+            }
+          },
+          "image_with_review_FAzeXc": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/1.22_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/Ellipse_232_2048x2048-new.png",
+              "user-name": "DJ Gialy",
+              "user-discription": "Delivered within 7 days, great that Neonsfeer was able to think along for an urgent delivery, so that I had the neon in time for one of my shows.",
+              "uplod-time": "7 months ago"
+            }
+          },
+          "image_with_review_7ynXyH": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Rectangle_3638_10_2048x2048-new.png",
+              "user-img": "shopify://shop_images/Ellipse_4_4-svg_2048x2048_1.png",
+              "user-name": "Madelon",
+              "user-discription": "Wow, what a design, at first a bit skeptical about what I could expect. But my expectations were far exceeded. Via the configurator I designed my own text and it was delivered neatly within 8 days. Installation was also arranged in the slightest.",
+              "uplod-time": "2 weeks ago"
+            }
+          },
+          "image_with_review_gyKpkm": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/backerstreet_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/Ellipse_232_2048x2048_2c5a2fe1-7aca-45c9-bcd1-40ffee22efc5.png",
+              "user-name": "Mark (Bleeckerstreet)",
+              "user-discription": "Very satisfied, the result is great. Service, product and delivery time are fine.",
+              "uplod-time": "4 months ago"
+            }
+          },
+          "simple_review_4mfXQM": {
+            "type": "simple-review",
+            "settings": {
+              "user-img": "shopify://shop_images/C_chritsoph_2048x2048-new.png",
+              "user-name": "Puremen Uden",
+              "user-discription": "Already placed an order at Neonsfeer twice. Super happy me and the lighting still shines every day in the store.",
+              "uplod-time": "1 year ago"
+            }
+          },
+          "image_with_review_nf8ffB": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Rectangle_3638_3_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/Ellipse_234_2048x2048-new.png",
+              "user-name": "Iris (Cups by Iris)",
+              "user-discription": "Wow super service from Neonsfeer, can't say anything else. Every day I get compliments about the eye catcher, recommended. Well helped by Chris.",
+              "uplod-time": "6 months ago"
+            }
+          },
+          "image_with_review_FUq6AX": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Rectangle_3638_12_2048x2048-new.png",
+              "user-img": "shopify://shop_images/User_Pic_11_2048x2048-new.webp",
+              "user-name": "N VN",
+              "user-discription": "Beautiful product with a unique look, a real eye-catcher. Many people have asked us where we bought this product. And the company also provides very good service!",
+              "uplod-time": "1 month ago"
+            }
+          },
+          "image_with_review_twmFEa": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Rectangle_3638_13_2048x2048-new.png",
+              "user-img": "shopify://shop_images/Ellipse_4_2_1_-svg_1.svg",
+              "user-name": "Margriet Sloot-Smidt",
+              "user-discription": "Very good price-quality ratio. Fast delivery, excellent contact with the company. Can recommend this to everyone. We made our own design and it turned out exactly as we requested.",
+              "uplod-time": "1 month ago"
+            }
+          },
+          "image_with_review_PMgpax": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Rectangle_3638_14_2048x2048-new.png",
+              "user-img": "shopify://shop_images/Ellipse_236_2048x2048-new.png",
+              "user-name": "Yordi Keizer",
+              "user-discription": "A few weeks ago I received a beautiful neon logo of our company logo. During the ordering process we were helped and advised well. The result is beautiful. Good price/quality! Very satisfied with my purchase👌🏻.",
+              "uplod-time": "6 months ago"
+            }
+          },
+          "image_with_review_HTiCia": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/K1RDmzJmIZFnZh7meD3MFpqIf-WhatsAppImage20230919at21.21.44_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/User_Pic_9_2048x2048-new.webp",
+              "user-name": "David (Raceplanet)",
+              "user-discription": "Turned out super nice. Custom made neon logo. Good and personal advice, they think along with you for the best end result.",
+              "uplod-time": "5 months ago"
+            }
+          },
+          "image_with_review_DU7G9M": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/6ED76677-6350-4202-BCD1-77FD9A031889_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/Ellipse_236_2048x2048-new.png",
+              "user-name": "Julia",
+              "user-discription": "For my new gym in Breda I ended up at Neonsfeer. Very well helped, together we came to this unique design. Very happy with it",
+              "uplod-time": "3 months ago"
+            }
+          },
+          "image_with_review_kNVcFQ": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/imageProxy-14_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/J_2048x2048-new.png",
+              "user-name": "Jean-Paul Godfroy (HUSWELL)",
+              "user-discription": "Very satisfied with the result, ordered 3 large neon signs with full color option for HUSWELL.",
+              "uplod-time": "2 weeks ago"
+            }
+          },
+          "image_with_review_Ay7wwL": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Rectangle_3638_18_2048x2048-new.png",
+              "user-img": "shopify://shop_images/Ellipse_4_2048x2048-new.webp",
+              "user-name": "Marie Hillen",
+              "user-discription": "Smooth order, fast delivery and fast response from customer service. We are satisfied!",
+              "uplod-time": "8 months ago"
+            }
+          },
+          "simple_review_A8UHUD": {
+            "type": "simple-review",
+            "settings": {
+              "user-img": "shopify://shop_images/Ellipse_230_2048x2048-new.png",
+              "user-name": "Nick Loch",
+              "user-discription": "Very satisfied, fast delivery and good quality. In short, exactly what we wanted!",
+              "uplod-time": "9 months ago"
+            }
+          },
+          "simple_review_K4TU9C": {
+            "type": "simple-review",
+            "settings": {
+              "user-img": "shopify://shop_images/Ellipse_228_2048x2048-new.png",
+              "user-name": "John Cancer",
+              "user-discription": "Top product. Good communication. An asset to the image in both stores in Renesse and Zierikzee. Customers think it's fantastic, just like us.",
+              "uplod-time": "10 months ago"
+            }
+          },
+          "image_with_review_Jgr73b": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/FBECBD9C-557E-4B4D-96DA-B20D005E0CD4_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/R_raymond_2048x2048-new.webp",
+              "user-name": "Raymond Mertens",
+              "user-discription": "Super product, we ordered 3 for our new business and they look so good on the facade that we ordered 2 more. Really beautiful and very striking. Service afterwards also very good and they also communicate pleasantly, which is something that most online stores sometimes leave to be desired. 100 points for Neonsfeer!",
+              "uplod-time": "6 months ago"
+            }
+          },
+          "image_with_review_8dTtg3": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_22-02-2024_om_17.20_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/guler_2048x2048-new.webp",
+              "user-name": "Guler Yeral",
+              "user-discription": "Customer service: top! Logo: top! Delivery time: top! Price/quality: excellent! We recommend Neonsfeer to everyone, you explain it and they know exactly how you want it. Negotiated via Whatsapp and email, that went so smoothly! Many thanks to the Neonsfeer team, kind regards from team Captain Cook in Ypres, Belgium 🤗",
+              "uplod-time": "1 month ago"
+            }
+          },
+          "image_with_review_CTHNTG": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_05-03-2024_om_10.35_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/randy_2048x2048-new.png",
+              "user-name": "Randy Bekkers",
+              "user-discription": "Easy communication and fast service.",
+              "uplod-time": "2 weeks ago"
+            }
+          },
+          "image_with_review_pxkfi9": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_05-03-2024_om_10.38_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/fitness_centrum_2048x2048-new.png",
+              "user-name": "Fitness Center Corpus",
+              "user-discription": "Good communication, beautiful design and a real asset to the wall!",
+              "uplod-time": "3 months ago"
+            }
+          },
+          "image_with_review_HnwWjd": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_29-03-2024_om_10.58_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/henk_2048x2048-new.webp",
+              "user-name": "Henk vA",
+              "user-discription": "Beautiful neon led delivered by Neonsfeer.. Everything perfectly arranged and neatly delivered as agreed..we are very happy… And I will also order the next one from this company.. Really recommended",
+              "uplod-time": "3 weeks ago"
+            }
+          },
+          "image_with_review_HQTMxJ": {
+            "type": "image-with-review",
+            "settings": {
+              "user-uploaded-img": "shopify://shop_images/Foto_29-03-2024_om_11.02_2048x2048-new.webp",
+              "user-img": "shopify://shop_images/n_ndsfnjk_2048x2048-new.png",
+              "user-name": "Nicole Klinkhamer",
+              "user-discription": "Bought a very nice neon lamp for our salon! Top quality and super easy to hang. Very happy with the result!",
+              "uplod-time": "2 months ago"
+            }
+          }
+        },
+        "block_order": [
+          "image_with_review_bJbkbA",
+          "simple_review_hXTHJM",
+          "image_with_review_VcPaNk",
+          "image_with_review_8jyeiG",
+          "image_with_review_jYtJPt",
+          "image_with_review_MFif7w",
+          "simple_review_xtV7TU",
+          "simple_review_TdrNDr",
+          "image_with_review_WbtArR",
+          "image_with_review_ahNPjc",
+          "image_with_review_wMHyhV",
+          "image_with_review_98CwbX",
+          "image_with_review_FAzeXc",
+          "image_with_review_7ynXyH",
+          "image_with_review_gyKpkm",
+          "simple_review_4mfXQM",
+          "image_with_review_nf8ffB",
+          "image_with_review_FUq6AX",
+          "image_with_review_twmFEa",
+          "image_with_review_PMgpax",
+          "image_with_review_HTiCia",
+          "image_with_review_DU7G9M",
+          "image_with_review_kNVcFQ",
+          "image_with_review_Ay7wwL",
+          "simple_review_A8UHUD",
+          "simple_review_K4TU9C",
+          "image_with_review_Jgr73b",
+          "image_with_review_8dTtg3",
+          "image_with_review_CTHNTG",
+          "image_with_review_pxkfi9",
+          "image_with_review_HnwWjd",
+          "image_with_review_HQTMxJ"
+        ],
+        "settings": {
+          "custom-review-heading": "",
+          "custom-review-discription": ""
+        }
+      },
+      "image-text": {
+        "type": "image-text",
+        "settings": {
+          "bgimage": "shopify://shop_images/Group_8432_80b281eb-9537-40c2-a078-d596130e3606.png",
+          "image": "shopify://shop_images/Frame_8430_0ac8b989-3bb1-4bfb-ab5c-e19eb82619fa.png",
+          "image_position": "left",
+          "image_width": 50,
+          "bgimage1": "shopify://shop_images/Rectangle_3615_89ad96f1-3747-46ec-8a1c-545d7bc09473_1.png",
+          "title": "Ontdek de kunstenaar in jezelf",
+          "content": "<p>Design jouw unieke neon creatie in minder dan 5 minuten en ontvang deze binnen 10 dagen in huis.</p>",
+          "button_text": "Design nu!",
+          "button_link": "https://neonsfeer.com/products/design-your-neon-sign",
+          "class": ""
+        }
+      },
+      "image-and-text": {
+        "type": "image-and-text",
+        "settings": {
+          "bgimage": "shopify://shop_images/Group_8432_80b281eb-9537-40c2-a078-d596130e3606.png",
+          "image": "shopify://shop_images/Frame_8430_0ac8b989-3bb1-4bfb-ab5c-e19eb82619fa.png",
+          "image_position": "left",
+          "image_width": 50,
+          "title": "Looking for a text in neon?",
+          "content": "<p>Design your neon sign in just 5 minutes! Pick your text, select a font, choose a color, and place your order through our user-friendly design tool.</p>",
+          "button_text": "Create now",
+          "button_link": "https://neonsfeer.com/products/design-your-neon-sign",
+          "class": ""
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "6251270934270006384": {
+        "type": "shopify://apps/stape-server-gtm/blocks/gtm/7e13c847-7971-409d-8fe0-29ec14d5f048",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "10004392781266402770": {
+        "type": "shopify://apps/sign-customiser/blocks/neon-customiser-embed/29c3b558-f454-440f-b53e-26c5e867a515",
+        "disabled": false,
+        "settings": {
+          "initial_screen": "VISUALISER",
+          "experimental": false,
+          "scroll_order": false,
+          "height": 100,
+          "height_reduction": 0,
+          "height_reduction_mobile": 0,
+          "price_box_options": "bottom",
+          "rtl": false
+        }
+      },
+      "15134163510845626300": {
+        "type": "shopify://apps/geoip-country-redirect/blocks/speeedup_link/a3fa1a12-9aad-4707-ab56-45ccf9191aa7",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Metal": {
+      "heading_color": "#1e2d7d",
+      "text_color": "#677279",
+      "accent_color": "#00badb",
+      "link_color": "#00badb",
+      "border_color": "#e1e3e4",
+      "background": "#f3f5f6",
+      "secondary_background": "#ffffff",
+      "error_color": "#ff0000",
+      "success_color": "#00aa00",
+      "primary_button_background": "#00badb",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#1e2d7d",
+      "secondary_button_text_color": "#ffffff",
+      "header_background": "#1e2d7d",
+      "header_text_color": "#ffffff",
+      "header_light_text_color": "#a3afef",
+      "header_accent_color": "#00badb",
+      "product_on_sale_accent": "#ee0000",
+      "product_in_stock_color": "#008a00",
+      "product_low_stock_color": "#ee0000",
+      "product_sold_out_color": "#8a9297",
+      "product_label_1_background": "#008a00",
+      "product_label_2_background": "#00a500",
+      "product_star_color": "#ffbd00",
+      "footer_background_color": "#f3f5f6",
+      "footer_heading_text_color": "#1e2d7d",
+      "footer_body_text_color": "#677279",
+      "footer_accent_color": "#00badb",
+      "base_text_font_size": 16,
+      "heading_font": "barlow_n5",
+      "text_font": "barlow_n4",
+      "underline_links": true,
+      "animation_image_zoom": true,
+      "search_mode": "product,article",
+      "show_vendor": true,
+      "show_secondary_image": true,
+      "product_price_position": "after_title",
+      "product_image_size": "natural",
+      "show_discount": true,
+      "discount_mode": "saving",
+      "show_color_swatch": false,
+      "show_inventory_quantity": false,
+      "low_inventory_threshold": 0,
+      "show_reviews_badge": false,
+      "cart_type": "drawer",
+      "cart_empty_button_link": "shopify://collections/all",
+      "cart_show_checkout_button": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "share_image": "",
+      "social_facebook": "",
+      "social_twitter": "",
+      "social_pinterest": "",
+      "social_instagram": "",
+      "social_vimeo": "",
+      "social_tumblr": "",
+      "social_youtube": "",
+      "social_linkedin": "",
+      "social_snapchat": "",
+      "social_fancy": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#00badb",
+      "checkout_button_color": "#00badb",
+      "checkout_error_color": "#ff0000"
+    },
+    "Wood": {
+      "heading_color": "#3a2a2f",
+      "text_color": "#3a2a2f",
+      "accent_color": "#ff6128",
+      "link_color": "#ff6128",
+      "border_color": "#e7e2de",
+      "background": "#f7f4f2",
+      "secondary_background": "#ffffff",
+      "error_color": "#f71b1b",
+      "success_color": "#48b448",
+      "primary_button_background": "#ff6128",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#3a2a2f",
+      "secondary_button_text_color": "#ffffff",
+      "header_background": "#3a2a2f",
+      "header_text_color": "#ffffff",
+      "header_light_text_color": "#e9e2dd",
+      "header_accent_color": "#ff6128",
+      "product_on_sale_accent": "#ee0000",
+      "product_in_stock_color": "#008a00",
+      "product_low_stock_color": "#ee0000",
+      "product_sold_out_color": "#d1d1d4",
+      "product_label_1_background": "#ff6128",
+      "product_label_2_background": "#a95ebe",
+      "product_star_color": "#ffb647",
+      "footer_background_color": "#f7f4f2",
+      "footer_heading_text_color": "#3a2a2f",
+      "footer_body_text_color": "#3a2a2f",
+      "footer_accent_color": "#ff6128",
+      "base_text_font_size": 15,
+      "heading_font": "poppins_n5",
+      "text_font": "inter_n4",
+      "underline_links": true,
+      "animation_image_zoom": true,
+      "search_mode": "product,article,page",
+      "show_vendor": true,
+      "show_secondary_image": true,
+      "show_discount": true,
+      "discount_mode": "percentage",
+      "product_price_position": "after_title",
+      "product_image_size": "square",
+      "show_color_swatch": false,
+      "show_inventory_quantity": true,
+      "low_inventory_threshold": 1,
+      "show_reviews_badge": false,
+      "cart_type": "drawer",
+      "cart_empty_button_link": "shopify://collections/all",
+      "cart_show_checkout_button": true,
+      "cart_show_free_shipping_threshold": true,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#f7f4f2",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#ff6128",
+      "checkout_button_color": "#ff6128",
+      "checkout_error_color": "#f71b1b"
+    },
+    "Fabric": {
+      "heading_color": "#222021",
+      "text_color": "#616161",
+      "accent_color": "#cb1836",
+      "link_color": "#cb1836",
+      "border_color": "#e8e8e8",
+      "background": "#f5f5f5",
+      "secondary_background": "#ffffff",
+      "error_color": "#cf0e0e",
+      "success_color": "#1c7b36",
+      "primary_button_background": "#cb1836",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#222021",
+      "secondary_button_text_color": "#ffffff",
+      "header_background": "#222021",
+      "header_text_color": "#ffffff",
+      "header_light_text_color": "#e8e8e8",
+      "header_accent_color": "#cb1836",
+      "footer_background_color": "#222021",
+      "footer_heading_text_color": "#ffffff",
+      "footer_body_text_color": "#ffffff",
+      "footer_accent_color": "#cb1836",
+      "product_on_sale_accent": "#cf0e0e",
+      "product_in_stock_color": "#1c7b36",
+      "product_low_stock_color": "#cf0e0e",
+      "product_sold_out_color": "#8a9297",
+      "product_label_1_background": "#3f6ab1",
+      "product_label_2_background": "#8a44ae",
+      "product_star_color": "#ffbd00",
+      "base_text_font_size": 16,
+      "heading_font": "figtree_n6",
+      "text_font": "figtree_n4",
+      "underline_links": true,
+      "animation_image_zoom": true,
+      "search_mode": "product,article",
+      "show_vendor": true,
+      "show_secondary_image": true,
+      "show_discount": true,
+      "discount_mode": "percentage",
+      "product_price_position": "before_title",
+      "product_image_size": "square",
+      "show_color_swatch": true,
+      "show_inventory_quantity": true,
+      "low_inventory_threshold": 2,
+      "show_reviews_badge": true,
+      "cart_type": "drawer",
+      "cart_empty_button_link": "shopify://collections/all",
+      "cart_show_checkout_button": true,
+      "cart_show_free_shipping_threshold": true,
+      "cart_free_shipping_threshold": "49",
+      "social_facebook": "",
+      "social_twitter": "",
+      "social_pinterest": "",
+      "social_instagram": "",
+      "social_vimeo": "",
+      "social_tumblr": "",
+      "social_youtube": "",
+      "social_linkedin": "",
+      "social_snapchat": "",
+      "social_fancy": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#cb1836",
+      "checkout_button_color": "#cb1836",
+      "checkout_error_color": "#ff0000"
+    }
+  }
+}

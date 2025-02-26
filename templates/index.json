@@ -1,0 +1,382 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "landing_video_page_rRBhWf": {
+      "type": "landing-video-page",
+      "settings": {
+        "custom_class": "",
+        "videofile": "shopify://files/videos/99fd39fabb1d450e940d13e216e7cd2d.mp4",
+        "mobile_videofile": "shopify://files/videos/mobile.mp4",
+        "review_text": "",
+        "title": "Make your space stand out!",
+        "description": "Let your creativity shine with a customized LED neon sign",
+        "text_align": "text-center",
+        "link_text": "Design Your Logo",
+        "link": "shopify://pages/logo-request",
+        "link_text1": "Design Your Text",
+        "link1": "https://neonsfeer.com/products/design-your-neon-sign"
+      }
+    },
+    "logo_list_VNDjzg": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_HAT6eq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/brews.png",
+            "link": ""
+          }
+        },
+        "logo_aW9iG8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fitness.png",
+            "link": ""
+          }
+        },
+        "logo_nYctBJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/flex.png",
+            "link": ""
+          }
+        },
+        "logo_iM6jde": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/rednull.png",
+            "link": ""
+          }
+        },
+        "logo_zeawdQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/treats.png",
+            "link": ""
+          }
+        },
+        "logo_bq37eU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/nokia.png",
+            "link": ""
+          }
+        },
+        "logo_7A7pyQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/roast_-_Copy.png",
+            "link": ""
+          }
+        },
+        "logo_98dbTY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/roast_-_Copy.png",
+            "link": ""
+          }
+        },
+        "logo_tKik9A": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/1_280x_f1ebdcad-4dff-45d4-b69d-ec5f0d2e5ab6.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_HAT6eq",
+        "logo_aW9iG8",
+        "logo_nYctBJ",
+        "logo_iM6jde",
+        "logo_zeawdQ",
+        "logo_bq37eU",
+        "logo_7A7pyQ",
+        "logo_98dbTY",
+        "logo_tKik9A"
+      ],
+      "settings": {
+        "title": "We help these brands grow",
+        "link_title": "",
+        "link": ""
+      }
+    },
+    "three_image_graphic_FWAK7j": {
+      "type": "three-image-graphic",
+      "settings": {
+        "image_1": "shopify://shop_images/1_2c0861cd-3849-431e-9bf6-72547723bbf8.webp",
+        "neon_text_image": "shopify://shop_images/text-img.png",
+        "image_2": "shopify://shop_images/Nieuw_project_-_2023-09-12T143931.430_cd20ba2c-28e0-4285-96d2-9158ace16e8c.webp",
+        "image_3": "shopify://shop_images/3_923ca18a-0dfa-4d4f-a1cf-d2d300cb6f82.webp",
+        "image_position": "left",
+        "image_width": 40,
+        "title": "Create a unique neon creation",
+        "content": "Design your neon sign in just 5 minutes! Choose your text, select a font, pick a color and place your order using our user-friendly design tool.",
+        "button_text": "Design Neon Text",
+        "button_link": "https://neonsfeer.com/products/design-your-neon-sign",
+        "class": ""
+      }
+    },
+    "two_img_graphic_iaMyYy": {
+      "type": "two-img-graphic",
+      "settings": {
+        "image_1": "shopify://shop_images/1two.webp",
+        "image_2": "shopify://shop_images/2two.webp",
+        "image_position": "right",
+        "image_width": 50,
+        "title": "Transform your (company) logo to neon",
+        "content": "We transform your logo into a unique neon lighting creation. Upload your logo and receive a preview and a quote within 24 hours.",
+        "button_text": "Neon Logo Design",
+        "button_link": "shopify://pages/logo-request",
+        "class": ""
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "custom_class": "",
+        "collection": "best-sold",
+        "title": "Best Selling Neon Lighting",
+        "products_count": 12,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_quick_buy": false,
+        "link_title": "",
+        "link_url": ""
+      }
+    },
+    "our_process_nGmxYU": {
+      "type": "our_process",
+      "settings": {
+        "custom_class": "home-order-process",
+        "title": "Make a neon sign in 5 minutes",
+        "process_backgroud": "shopify://shop_images/newone.png",
+        "step_1_icon": "shopify://shop_images/pen-tool.png",
+        "step_2_icon": "shopify://shop_images/thai-bath.png",
+        "step_3_icon": "shopify://shop_images/truck_416e4d02-4d24-432e-9b8a-8c0de54112b4.png",
+        "step_1_heading": "Submit Your Logo",
+        "step_1_desc": "Complete our 1-minute form, select the logo you'd like to transform into neon, and receive a quote within 24 hours.",
+        "step_2_heading": "Get a Personalized Quote",
+        "step_2_desc": "Receive a price and neon preview. We'll work together, adjusting based on your feedback, for the ideal design.",
+        "step_3_heading": "Fast & Free Shipping",
+        "step_3_desc": "Have your custom neon sign at your doorstep in just 6-8 business days, with zero shipping costs.",
+        "button_text": "Get free quote",
+        "button_link": "shopify://pages/logo-request"
+      }
+    },
+    "collection_with_image_8UDryq": {
+      "type": "collection-with-image",
+      "settings": {
+        "collection": "best-sold",
+        "products_count": 20,
+        "show_quick_buy": false,
+        "background": "#ffffff",
+        "text_color": "#000000",
+        "title": "Colors that Come Alive",
+        "content": "Bring walls to life with our luminous neon signs. Dive deep into a splash of colors and let your dreams shine brightly.",
+        "button_background": "#ff13a7",
+        "button_text_color": "#ffffff",
+        "button_text": "Shop Now",
+        "button_link": "shopify://collections/multiple-colors"
+      }
+    },
+    "vertical_product_slider_URDqRp": {
+      "type": "vertical-product-slider",
+      "blocks": {
+        "collection_iJeDUH": {
+          "type": "collection",
+          "settings": {
+            "collection": "multiple-colors"
+          }
+        },
+        "collection_HQzXLV": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-neonsfeer-collections"
+          }
+        },
+        "collection_yaze9K": {
+          "type": "collection",
+          "settings": {
+            "collection": "city-neon"
+          }
+        }
+      },
+      "block_order": [
+        "collection_iJeDUH",
+        "collection_HQzXLV",
+        "collection_yaze9K"
+      ],
+      "settings": {
+        "custom_class": "",
+        "products_count": 12,
+        "background": "shopify://shop_images/Group_8695_53046a30-4ce9-4f03-97de-26ed68cc2690.webp",
+        "text_color": "#ffffff",
+        "title": "Light Up Your Story",
+        "content": "Every sign tells a story. Dive into our diverse range of LED neon signs and find the one that speaks to you.",
+        "button_background": "#ff13a7",
+        "button_text_color": "#ffffff",
+        "button_text": "Shop Now",
+        "button_link": "shopify://collections/animals"
+      }
+    },
+    "text_with_image_forarrow_JmVEjm": {
+      "type": "text-with-image-forarrow",
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/Group-8583_700x_700x_700x_4ad48dbf-5929-45ab-886c-8195b03e49e9.webp",
+        "image_position": "left",
+        "image_width": 50,
+        "title": "Neon up your life! Choose one of the popular neon quotes",
+        "content": "<p>Give power to your words, let them shine! Discover quotes that speak in neon. Let your space sparkle!</p>",
+        "list_one": "",
+        "list_two": "",
+        "list_three": "",
+        "add_to_cart_btn_text": "",
+        "button_text": "Shop Now",
+        "button_link": "shopify://collections/all",
+        "button_text_2": "",
+        "button_link_2": "shopify://collections/all",
+        "class": ""
+      }
+    },
+    "videos_slider_Jad4gQ": {
+      "type": "videos-slider",
+      "blocks": {
+        "customer_slider_3UijwC": {
+          "type": "customer-slider",
+          "settings": {
+            "customer-img": "shopify://shop_images/1.webp",
+            "customer-name": "Emily Davis",
+            "customer-post": "Los Angeles",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/742f8ef214ca45faa2849420968abc1a.mp4"
+          }
+        },
+        "customer_slider_npYNf9": {
+          "type": "customer-slider",
+          "settings": {
+            "customer-img": "shopify://shop_images/2.webp",
+            "customer-name": "Grace Walker",
+            "customer-post": "Santa Fe, New Mexico",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/5e857c2beaee418cb722427aadc25c89.mp4"
+          }
+        },
+        "customer_slider_YGLjfN": {
+          "type": "customer-slider",
+          "settings": {
+            "customer-img": "shopify://shop_images/3.webp",
+            "customer-name": "Sophia Williams",
+            "customer-post": "Portland, Oregon",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/a8b5f24654964b32bfd02251d1d9f7e0.mp4"
+          }
+        },
+        "customer_slider_8LeEhy": {
+          "type": "customer-slider",
+          "settings": {
+            "customer-img": "shopify://shop_images/4.webp",
+            "customer-name": "Chloé",
+            "customer-post": "Ann Arbor, Michigan",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/cdbe526327b64b5aa6fc74a037dcc3d6.mp4"
+          }
+        },
+        "customer_slider_hBta9m": {
+          "type": "customer-slider",
+          "settings": {
+            "customer-img": "shopify://shop_images/5.webp",
+            "customer-name": "Alexander Foster",
+            "customer-post": "Burlington, Vermont",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/c033dc82a6d84fe7b4ea36a6eaf2e133.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "customer_slider_3UijwC",
+        "customer_slider_npYNf9",
+        "customer_slider_YGLjfN",
+        "customer_slider_8LeEhy",
+        "customer_slider_hBta9m"
+      ],
+      "settings": {
+        "custom_class": "",
+        "people-trust": "More than 1500 satisfied customers in USA",
+        "video-discription": "",
+        "image": "shopify://shop_images/Frame_8079.webp",
+        "button_background": "#7853f7",
+        "button_text_color": "#ffffff",
+        "button_text": "Discover all reviews",
+        "button_link": "shopify://pages/klantbeoordelingen"
+      }
+    },
+    "page_instagram_R6Bzc3": {
+      "type": "page-instagram",
+      "blocks": {
+        "image_DiPNVi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Nieuw_project_-_2023-09-12T143931.430_ef681152-c5b4-4923-b217-01aaefa3c406.webp",
+            "link": ""
+          }
+        },
+        "image_QyLftp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/339191919_186180107182718_6333811962209220774_n_1_48356ec6-75c6-4f1b-a720-f94ce6dc4fde.webp",
+            "link": ""
+          }
+        },
+        "image_cXcT3i": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/338952188_747702260285551_5310308553518028950_n_1.jpg",
+            "link": ""
+          }
+        },
+        "image_gqdf3N": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/339346511_1445008616314296_582059811559271482_n_2_2.svg",
+            "link": ""
+          }
+        },
+        "image_Ec4ArT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_6_5608b07f-1c8a-4bed-ad95-5c83e8c2b4cf.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_DiPNVi",
+        "image_QyLftp",
+        "image_cXcT3i",
+        "image_gqdf3N",
+        "image_Ec4ArT"
+      ],
+      "settings": {
+        "title": "Follow  <svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"50\" height=\"50\" viewbox=\"0,0,256,256\">\n<g fill=\"#ffffff\" fill-rule=\"nonzero\" stroke=\"none\" stroke-width=\"1\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"\" stroke-dashoffset=\"0\" font-family=\"none\" font-weight=\"none\" font-size=\"none\" text-anchor=\"none\" style=\"mix-blend-mode: normal\"><g transform=\"scale(5.12,5.12)\"><path d=\"M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z\"></path></g></g>\n</svg>  @neonsfeer on Instagram"
+      }
+    }
+  },
+  "order": [
+    "landing_video_page_rRBhWf",
+    "logo_list_VNDjzg",
+    "three_image_graphic_FWAK7j",
+    "two_img_graphic_iaMyYy",
+    "featured-collection",
+    "our_process_nGmxYU",
+    "collection_with_image_8UDryq",
+    "vertical_product_slider_URDqRp",
+    "text_with_image_forarrow_JmVEjm",
+    "videos_slider_Jad4gQ",
+    "page_instagram_R6Bzc3"
+  ]
+}

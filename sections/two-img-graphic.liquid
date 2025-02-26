@@ -1,0 +1,137 @@
+<section class="section two-image_graphic" data-section-id="{{ section.id }}" data-section-type="image-with-text">
+  <div class="container">
+    {%- capture image -%}
+      <div class="image-with-text__image-container" style="width: {{ section.settings.image_width }}%;">
+        {%- if section.settings.image_1 != blank -%}
+          <div class="image-graphic">
+            <div class="image-block">
+              {%- assign image_url_1 = section.settings.image_1 | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', class: 'image-1', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+              {%- assign image_url_2 = section.settings.image_2 | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', class: 'image-2', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+              <div class="graphic-main-img">
+                  {%- if section.settings.image_1 -%}
+                    {{image_url_1}}
+                    {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+              </div>
+              {%- if section.settings.image_2 -%}
+                {{image_url_2}}
+                {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endcapture -%}
+
+    {%- capture text -%}
+      <div class="image-with-text__text-container">
+        <div class="image-with-text__text-aligner">
+          {%- if section.settings.title != blank -%}
+            <h2 class="heading h3 section-title">{{ section.settings.title | escape }}</h2>
+          {%- endif -%}
+
+          <div class="rte">
+            <p style="color: black;">{{ section.settings.content }}</p>
+            {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
+              <a href="{{ section.settings.button_link }}" class="button button--primary" link-title="{{section.settings.class}}" >{{ section.settings.button_text | escape }}</a>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endcapture -%}
+
+    <div class="image-with-text">
+      {%- if section.settings.image_position == 'left' -%}
+        {{ image }}
+        {{ text }}
+      {%- else -%}
+        {{ text }}
+        {{ image }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Two Image Graphic",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1",
+      "info": "578 x 425px .jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2",
+      "info": "292 x 314px .jpg recommended"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 20,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "label": "Image width",
+      "default": 50
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Your title"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers.<br>Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Our products"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/collections/all"
+    },
+	{
+      "type": "text",
+      "id": "class",
+      "label": "Custom Attribute"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Two Image Graphic",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

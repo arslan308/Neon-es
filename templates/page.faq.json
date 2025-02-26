@@ -1,0 +1,577 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "separator-1": {
+          "type": "separator",
+          "settings": {
+            "title": "Product information"
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "What is a LED Neon sign?",
+            "answer": "<p>A LED neon sign is a modern and energy-efficient alternative to traditional neon lighting. Instead of fragile glass tubes and gas, LED neon signs use durable, flexible silicone with embedded LED lights. <br/><br/>This results in the same vibrant neon glow but with enhanced safety, longevity, and efficiency. Perfect for creating an eye-catching atmosphere, whether for business or personal use.</p>"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "What are the perks of a LED Neon Sign?",
+            "answer": "<p>LED neon signs offer several advantages over traditional neon lighting:</p><p>- <strong>Energy-efficient:</strong> Uses significantly less power while maintaining a bright and vibrant glow, making it a sustainable choice.</p><p>- <strong>Highly durable:</strong> Made from flexible and shatterproof silicone, eliminating the risk of broken glass.</p><p>- <strong>Safe & low-maintenance:</strong> Contains no harmful gases, does not overheat, and requires minimal upkeep.</p><p>- <strong>Versatile & easy to install:</strong> Lightweight and simple to mount, making it perfect for any space.</p><p>With its combination of efficiency, durability, and safety, LED neon is the modern lighting solution that outshines traditional neon in every way.</p>"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "title": "Can I hang a neonsfeer outside?",
+            "answer": "<p>Our standard neon signs are designed for indoor use. However, we also offer weather-resistant options specifically made to withstand outdoor conditions. These signs come with extra protection to ensure durability and longevity.</p><p>Want to place your neon sign outdoors? Choose our weather-resistant option for an additional 20%. Need advice? Contact us at info@neonsfeer.com, and we’ll be happy to help!</p>"
+          }
+        },
+        "question_CXqrxQ": {
+          "type": "question",
+          "settings": {
+            "title": "What's the average weight of an LED Neon sign?",
+            "answer": "<p>LED neon signs are lightweight and easy to install. Depending on the size and design, the average weight ranges between <strong>2 to 3 kilograms</strong>. This makes them suitable for mounting on most walls without requiring additional support. Despite their low weight, our signs maintain a sturdy and durable construction for long-lasting performance.</p>"
+          }
+        },
+        "question_XW3L4q": {
+          "type": "question",
+          "settings": {
+            "title": "Can you connect an LED neon to a switch?",
+            "answer": "<p>Yes, it's possible to connect your LED neon sign to a switch! However, we recommend having this done by a qualified electrician to ensure it's installed safely and correctly. Please note that if you do it yourself, the warranty on your neon sign may be voided. <br/> <br/>For the best experience and to keep your warranty intact, we advise enlisting a professional. That way, you can enjoy your neon without any worries!</p>"
+          }
+        },
+        "question_WkgNCa": {
+          "type": "question",
+          "settings": {
+            "title": "What's the power consumption of an LED Neon sign?",
+            "answer": "<p>Our LED neon signs are energy-efficient and designed to provide maximum impact without excessive energy use. On average, an LED neon sign consumes between 50 and 80 watts, which is similar to the power consumption of a small incandescent bulb. <br/><br/>This means you can enjoy the vibrant glow of your neon sign while keeping your electricity costs low. With Neonsfeer, you can brighten up your space without worrying about your energy bill!</p>"
+          }
+        },
+        "question_AzghF4": {
+          "type": "question",
+          "settings": {
+            "title": "What's the cord length?",
+            "answer": "<p>Our standard LED neon signs come with a 2-meter cord, located at the bottom center of the sign. This length is typically sufficient to position your neon sign exactly where you want it. If you require additional length or a different cord placement, simply let us know. We’re happy to accommodate your specific needs!</p>"
+          }
+        },
+        "question_JmK6Ha": {
+          "type": "question",
+          "settings": {
+            "title": "What colors are available?",
+            "answer": "<p>We offer 12 LED neon colors:</p><p>White, Warm White, Pink, Light Pink, Blue, Icy Blue, Turquoise, Green, Red, Orange, Yellow, and Purple.</p><p>Want all colors in one neon? Choose our RGB option, which allows you to adjust the color with the included remote control and dimmer. This option is available for an additional 25% charge.</p>"
+          }
+        },
+        "separator-2": {
+          "type": "separator",
+          "settings": {
+            "title": "Order & Payment"
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "settings": {
+            "title": "How can I place an order?",
+            "answer": "<p>Placing an order with Neonsfeer is simple and quick. We offer three ways to create your perfect neon:</p><ol><li><strong>Standard Collection Designs:</strong> Choose from our extensive collection of ready-made designs. These designs are available for immediate order, so you can enjoy your neon lighting right away.</li><li><strong>Design Neon Text:</strong> Have a specific text in mind? Create your own neon text by entering your desired text through our configurator. Choose from different fonts and colors, and we’ll take care of the rest!</li><li><strong>Design Neon Logo:</strong> Want to turn a logo into neon? Simply upload your logo, and our team will create a custom design for you. You’ll receive a mockup for approval before we proceed with production.</li></ol><p>Pick the option that suits you best, follow the steps, and your neon design will be on its way to you in no time!</p>"
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "settings": {
+            "title": "What payment methods are accepted?",
+            "answer": "<p>Ready to get your Neonsfeer sign? We've made the payment process easy and secure, with a variety of options to choose from. You can use your credit card for a classic and straightforward choice, or pay via PayPal for a secure transaction. </p><p>We also accept Apple Pay for those who prefer a quick and seamless checkout experience. Whatever method you choose, completing your purchase is simple and hassle-free.</p>"
+          }
+        },
+        "question_DyBXKp": {
+          "type": "question",
+          "settings": {
+            "title": "Can I change or cancel my order?",
+            "answer": "<p>We understand that sometimes you may change your mind. Unfortunately, for our custom products, it's not possible to make changes or cancel the order as they are specially made just for you. </p><p>For our standard products, we can look into possible modifications or cancellations. Please contact us as soon as possible, and we’ll do our best to see how we can assist you.</p>"
+          }
+        },
+        "question_r7jRJj": {
+          "type": "question",
+          "settings": {
+            "title": "What's the status of my order?",
+            "answer": "<p>Once your order is shipped, you’ll receive an email with your tracking code, so you can monitor its progress. We understand the excitement and are doing everything we can to deliver your neon items as quickly as possible. </p><p>On average, you can expect delivery within 6-8 business days. If you have any questions in the meantime, don't hesitate to contact us – we’re here to help!</p>"
+          }
+        },
+        "question_RErP9j": {
+          "type": "question",
+          "settings": {
+            "title": "Can I apply a discount code?",
+            "answer": "<p>Yes, you can! Applying a discount code is simple. Just enter your code in the designated field during checkout, and the discount will be applied to your order total. If you have any issues or questions, feel free to reach out – we’re happy to assist!</p>"
+          }
+        },
+        "question_RjknGn": {
+          "type": "question",
+          "settings": {
+            "title": "Is there an option for resale and/or discounts for resellers?",
+            "answer": "<p>Yes, we offer exclusive reseller discounts at Neonsfeer. If you’re interested in partnering with us, simply send an email to info@neonsfeer.com. Our team will be happy to discuss the details and explore how we can work together. </p><p>Whether you operate a retail store or an online business, we’re excited to collaborate with you and help you offer high-quality neon products to your customers.</p>"
+          }
+        },
+        "question_fzwKRr": {
+          "type": "question",
+          "settings": {
+            "title": "Can I order Bulkorers",
+            "answer": "<p>Yes, we accept bulk orders! If you have a large order or need a custom quote for a bulk purchase, feel free to reach out to us at info@neonsfeer.nl. </p><p>We’re happy to discuss your needs and provide you with tailored pricing options to suit your requirements.</p>"
+          }
+        },
+        "separator_kPNcak": {
+          "type": "separator",
+          "settings": {
+            "title": "Shipping and delivery"
+          }
+        },
+        "question_HcV8cj": {
+          "type": "question",
+          "settings": {
+            "title": "What are the shipping costs?",
+            "answer": "<p>At Neonsfeer, we believe in making your shopping experience as enjoyable as possible. That's why we offer <strong>free shipping</strong> on all our neon signs. There are no extra delivery charges - just order, sit back, and let your neon masterpiece shine its way to you.</p><p>Ready to light up your space? Enjoy free shipping with every purchase, no hidden fees.</p>"
+          }
+        },
+        "question_dNyxET": {
+          "type": "question",
+          "settings": {
+            "title": "What's the delivery timeframe?",
+            "answer": "<p>Once you've selected your perfect Neonsfeer design, we aim to get it to you as quickly as possible. On average, you can expect your neon sign to arrive within <strong>6-8 business days</strong>.</p><p>We’re committed to ensuring your order is carefully prepared and delivered promptly, so you can soon enjoy the glow of your new Neonsfeer piece. While the wait might feel a little long, we promise it’s worth it.</p>"
+          }
+        },
+        "question_J8kaDG": {
+          "type": "question",
+          "settings": {
+            "title": "Can I track the delivery status of my order?",
+            "answer": "<p>Yes, absolutely! Once your order is on its way, you’ll receive a shipping confirmation along with a tracking link. You can track your order's delivery status at any time via this link:<a href=\"https://neonsfeer.com/apps/volgpakket\"> </a><a href=\"https://neonsfeer.com/a/track-order\"><span style=\"text-decoration:underline\">https://neonsfeer.com/a/track-order</span></a></p><p>Should you have any questions or encounter any issues, don't hesitate to reach out. We're here to assist you every step of the way.</p>"
+          }
+        },
+        "question_DGHrUn": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if my product is damaged upon delivery?",
+            "answer": "<p>If your Neonsfeer neon sign arrives damaged, don't worry – we're here to help! Please take clear photos and videos of the damage within 48 hours of receiving your order. This will help us quickly assess the situation. </p><p>Once you've got everything documented, reach out to us immediately. We want you to love your Neonsfeer product, and if something’s not right, we’ll work to resolve it as quickly as possible. We're just an email away and ready to assist you!</p>"
+          }
+        },
+        "question_BYXKHx": {
+          "type": "question",
+          "settings": {
+            "title": "Do you also deliver internationally?",
+            "answer": "<p>Yes, we do! While we offer free delivery within the United States, we also ship to other countries. If you're located outside the U.S. and want to bring the glow of Neonsfeer to your home, just send us an email at info@neonsfeer.com. </p><p>We’ll be happy to explore the shipping options and bring your neon dream to life, no matter where you are. Because at Neonsfeer, everyone deserves a little neon magic!</p>"
+          }
+        },
+        "question_GzBein": {
+          "type": "question",
+          "settings": {
+            "title": "What's the estimated delivery time for custom creations?",
+            "answer": "<p>Your custom Neonsfeer design is on its way faster than you think! While each piece is crafted with care and attention to detail, we aim to deliver your unique neon creation within approximately 6-8 business days. </p><p>We do everything we can to bring your vision to life as quickly as possible, so you can enjoy your new neon piece in no time.</p>"
+          }
+        },
+        "separator_33YXVh": {
+          "type": "separator",
+          "settings": {
+            "title": "Installations & maintenance"
+          }
+        },
+        "question_q4p7BR": {
+          "type": "question",
+          "settings": {
+            "title": "How do I install a Neonsfeer?",
+            "answer": "<p>We’ve made the installation process as easy as possible. Inside the packaging, you’ll find everything you need, including clear, step-by-step instructions. Choose the perfect spot for your neon sign, and use the provided screws and anchors to securely mount it. </p><p>Once it’s in place, plug it into an electrical outlet, and you’re good to go! You’ll now have your very own custom neon artwork, designed just for you by Neonsfeer. Don’t forget to share your glowing masterpiece with us on social media! #Neonsfeer</p>"
+          }
+        },
+        "question_8EDbLA": {
+          "type": "question",
+          "settings": {
+            "title": "Does the Neonsfeer works on mains power?",
+            "answer": "<p>Yes, Neonsfeer works on mains power. When you place your order, we’ll provide an adapter that connects to your electrical outlet. Simply plug it in, and your Neonsfeer sign will be ready to light up your space. </p><p>No additional setup needed—just plug it in, and enjoy the glow of your new neon sign!</p>"
+          }
+        },
+        "question_qr9eRF": {
+          "type": "question",
+          "settings": {
+            "title": "How do I clean my LED neons?",
+            "answer": "<p>For safety, always disconnect the power supply before cleaning your LED neon sign. Then, use a soft, dry microfiber cloth to gently wipe away any dust or dirt. Avoid using cleaning products or wet cloths, as water and electricity don’t mix well.</p><p>In terms of maintenance, there’s not much you need to do. As long as you keep your LED neon sign in a safe place and handle it with care, it will continue to brighten your space for years to come.</p>"
+          }
+        },
+        "question_cwAizX": {
+          "type": "question",
+          "settings": {
+            "title": "What precautions should I take when installing my LED neon?",
+            "answer": "<p>When installing your Neonsfeer neon sign, it's important to take a few precautions to ensure it's properly set up. First, choose a sturdy wall for mounting your sign – it deserves a solid foundation.</p><p>Next, avoid overloading your power supply. Plugging your sign into an overloaded power strip can cause issues, so make sure it has its own dedicated space.</p><p>Finally, ensure your sign is securely fastened. Just like any valuable artwork, it’s important to prevent it from falling.</p><p>By following these simple steps, you can enjoy your neon sign safely and beautifully for years to come.</p>"
+          }
+        },
+        "question_xxcwf7": {
+          "type": "question",
+          "settings": {
+            "title": "Can I hang my LED neon outside?",
+            "answer": "<p>Yes, you can! While our standard neon signs are designed for indoor use, we also offer weather-resistant options for outdoor use. If you're looking to bring that Neonsfeer glow to your garden, terrace, or any outdoor space, simply choose the weather-resistant option during checkout. </p><p>Our outdoor-ready neon signs are specially crafted to withstand the elements and still shine bright!</p>"
+          }
+        },
+        "question_VEhcLt": {
+          "type": "question",
+          "settings": {
+            "title": "Do I need any special tools to install my LED neon?",
+            "answer": "<p>You don’t need any special tools to install your LED neon panel. We’ve made sure that everything you need is included in the kit – no extra hassle required! Simply plug the cord into an electrical outlet, and you're all set to enjoy the glow. 🌟</p><p>If you're placing the panel higher up, a ladder or sturdy chair might come in handy, but that's the only extra you'll need. At Neonsfeer, we keep things simple and easy, so you can focus on enjoying your beautiful neon artwork!</p>"
+          }
+        },
+        "question_h4izRK": {
+          "type": "question",
+          "settings": {
+            "title": "What if I don’t want to or can’t drill into my wall?",
+            "answer": "<p>No problem! We offer several alternatives:</p><ul><li><strong>Ceiling mounting:</strong> Upon request, we can provide a free hanging system with cables.</li><li><strong>Placing on a surface:</strong> You can place your neon on a shelf or table. We also offer an optional freestanding frame.</li><li><strong>Double-sided tape</strong>: In some cases, you can use strong 3M double-sided tape, as long as the surface is smooth and suitable.</li></ul><p>Need advice on the best option? Feel free to reach out!</p>"
+          }
+        },
+        "separator_hPKndt": {
+          "type": "separator",
+          "settings": {
+            "title": "Returns & Warranty:"
+          }
+        },
+        "question_yUqfMX": {
+          "type": "question",
+          "settings": {
+            "title": "What's the delivery time frame?",
+            "answer": "<p>At Neonsfeer, we aim to deliver your neon masterpiece within an average of 6-8 working days. While delivery times may vary slightly, we’re dedicated to working closely with our trusted logistics partner, FedEx, to ensure your order arrives as quickly as possible. </p><p>We understand the excitement of welcoming your new decor, and we’re committed to getting your Neonsfeer lighting to you as soon as we can</p>"
+          }
+        },
+        "question_jgURQ7": {
+          "type": "question",
+          "settings": {
+            "title": "How can I return a product?",
+            "answer": "<p>For standard products, returns are possible. However, custom items are unique and cannot be returned.</p><p>To return a standard product, please contact our team via email. Make sure the item is in its original condition and within the return window. We’ll provide you with the necessary instructions to complete the return process and find the best solution for you</p>"
+          }
+        },
+        "question_UtkcDT": {
+          "type": "question",
+          "settings": {
+            "title": "How can I return a product?",
+            "answer": "<p>For standard products, returns are possible. However, custom items are unique and cannot be returned once in production.</p><p>If you wish to return a custom item, it's important to contact us as soon as possible. Since custom items are made specifically for you, we begin production shortly after the order is placed. If you need to make changes or cancel your order, we recommend getting in touch right away so we can assess the situation and find the best solution. </p><p>For standard products, simply contact our team via email, ensuring the item is in its original condition and within the return window. We’ll guide you through the return process from there.</p>"
+          }
+        },
+        "question_4rFNDn": {
+          "type": "question",
+          "settings": {
+            "title": "What about the warranty?",
+            "answer": "<p>We’ve got you covered with our 2-year warranty on all our neon lighting! Whether you have an indoor or outdoor panel, you can enjoy your Neonsfeer creation with peace of mind.</p><p>If anything goes wrong, please reach out to us, and we’ll be happy to assist you. Your satisfaction is our priority!</p>"
+          }
+        },
+        "question_zQEzGj": {
+          "type": "question",
+          "settings": {
+            "title": "How do I claim the warranty?",
+            "answer": "<p>If you need to claim the warranty for your Neonsfeer LED neon lighting, we've made the process simple and straightforward.</p><p><strong>Step 1: </strong>Take clear photos and videos that show the issue or defect. This helps us understand the problem better. 📸<br/><strong>Step 2:</strong> Email us at info@neonsfeer.com with your photos and a description of the issue. We'll get back to you as quickly as possible and work to resolve it promptly.</p><p>We're here to ensure your Neonsfeer continues to shine bright</p>"
+          }
+        },
+        "question_zUrRFf": {
+          "type": "question",
+          "settings": {
+            "title": "What issues are covered by the warranty and which ones are not?",
+            "answer": "<p>Our warranty covers manufacturing defects, electrical issues, and problems with the lighting itself, so you can enjoy your Neonsfeer without worries. </p><p>However, the warranty does not cover damages caused by misuse, such as drops, water damage, or damage from pets. </p><p>If something unexpected happens, don't worry! Contact us, and we'll work with you to find the best solution. We're here to ensure your Neonsfeer continues to shine bright! </p>"
+          }
+        },
+        "separator_D9EG7w": {
+          "type": "separator",
+          "settings": {
+            "title": "Commercial information"
+          }
+        },
+        "question_ydCDxi": {
+          "type": "question",
+          "settings": {
+            "title": "What's our company philosophy?",
+            "answer": "<p>At Neonsfeer, we create more than just lighting—we create atmosphere. Our mission is to bring creativity and inspiration into any space with high-quality, custom neon designs.</p><p>Each piece is crafted with precision and innovation, ensuring it makes a lasting impact. Whether for a home, business, or event, our signs set the perfect ambiance while reflecting personal style.</p><p>With a strong focus on craftsmanship and customer satisfaction, we aim to deliver exceptional quality and a unique lighting experience.</p>"
+          }
+        },
+        "question_cptzMW": {
+          "type": "question",
+          "settings": {
+            "title": "How can I reach customer service?",
+            "answer": "<p>Need help? We're easy to reach! Give us a call for direct assistance, or email us at info@neonsfeer.com, and we’ll get back to you as soon as possible. Whatever your question, we’re here to help!</p>"
+          }
+        },
+        "question_gKPAYL": {
+          "type": "question",
+          "settings": {
+            "title": "Do you collaborate with physical stores?",
+            "answer": "<p>Yes! We’re proud to partner with select stores that showcase our neon designs. In Amersfoort, you can visit Spektakel Wonen, where a stunning selection of our signs is on display. And in Beek, Market Eight brings the Neonsfeer glow to life with some of our most striking pieces.</p><p>If you're nearby, stop by to experience our neon art in person—these stores are ready to welcome you!</p>"
+          }
+        },
+        "question_RjMtR4": {
+          "type": "question",
+          "settings": {
+            "title": "Can I place a group order?",
+            "answer": "<p>Definitely! We’re happy to accommodate bulk orders and can offer special pricing and personalized service. Whether you're planning a large event, decorating a restaurant or store, or simply need multiple neon signs, we’ve got you covered.</p><p>Get in touch with us to discuss your needs and quantities, and we’ll provide you with the best possible offer. Let’s bring the Neonsfeer glow to your space on a grand scale!</p>"
+          }
+        },
+        "question_FGCjzn": {
+          "type": "question",
+          "settings": {
+            "title": "Where can I see your LED neon products in person?",
+            "answer": "<p>We understand that seeing our LED neon products in person is important, and we’re excited to offer that opportunity at a few fantastic physical stores.</p><p>In Amersfoort, you can visit Spektakel Wonen and experience our Neonsfeer signs in a vibrant store setting. In Beek, Market Eight is the perfect spot to discover our neon artworks while exploring their unique store ambiance.</p><p>If you’d like to see our neon creations up close, be sure to stop by these locations and immerse yourself in the Neonsfeer glow!</p>"
+          }
+        },
+        "question_wjEBBF": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer special discounts for businesses?",
+            "answer": "<p>Yes, we offer special discounts for businesses! Whether you’re running a trendy café, stylish office, or vibrant retail space, we’re happy to provide exclusive offers tailored to your needs.</p><p>Just reach out to us, let us know about your business, and how you want to incorporate our neon lighting. We’ll work with you to create a unique ambiance that will impress both your customers and staff.</p><p>Get in touch, and let’s make your business shine with the magic of Neonsfeer!</p>"
+          }
+        },
+        "question_BkyA93": {
+          "type": "question",
+          "settings": {
+            "title": "What are our sustainability efforts?",
+            "answer": "<p>At Neonsfeer, sustainability is a key part of our mission. We use energy-efficient LED technology in all our neon lights, helping reduce energy consumption and extend product lifespans. We also partner with local suppliers and manufacturers to minimize our ecological footprint.</p><p>To reduce waste, we use recyclable packaging and ensure our production process has minimal environmental impact. Additionally, we aim to raise awareness among our customers about sustainability and responsible consumption.</p><p>When you choose Neonsfeer, you’re not just getting stylish neon lighting; you’re also supporting efforts to make the world greener and brighter.</p>"
+          }
+        },
+        "question_ePb4fc": {
+          "type": "question",
+          "settings": {
+            "title": "Are our LED lighting products energy-efficient?",
+            "answer": "<p>Yes, absolutely! At Neonsfeer, we’re committed to both creating a stunning ambiance and promoting energy savings. Our LED neon lighting products are highly energy-efficient, providing a bright, vibrant glow with minimal energy consumption.</p><p>Thanks to advanced LED technology, our neon signs use much less energy compared to traditional neon lighting, helping you enjoy a beautiful display without the high electricity bills. Additionally, our LED neon signs have a longer lifespan, saving you both energy and money in the long run.</p><p>By choosing our LED neon lighting, you’re opting for a stylish and sustainable solution that not only enhances your space but also helps protect the environment.</p>"
+          }
+        },
+        "question_LCp4LB": {
+          "type": "question",
+          "settings": {
+            "title": "How do LED neons help save on energy?",
+            "answer": "<p>With our LED neon lighting, energy conservation is at the forefront! LED neon lighting is a highly energy-efficient alternative to traditional neon, using significantly less power while still delivering a vibrant and lively glow.</p><p>Thanks to advanced LED technology, our neon signs consume far less electricity than older neon lamps, helping to reduce energy usage and lower electricity bills. Plus, LED neon signs have a much longer lifespan, which means less frequent replacements, saving you both energy and money.</p><p>By choosing our LED neon lighting, you’re not only enhancing your space but also making a positive impact on the environment, all while enjoying a bright and lasting ambiance.</p>"
+          }
+        },
+        "question_ePLARD": {
+          "type": "question",
+          "settings": {
+            "title": "What eco-friendly materials do we use in our products and packaging?",
+            "answer": "<p>At Neonsfeer, we prioritize sustainability and take our environmental responsibility seriously. That’s why we use eco-friendly materials in both our products and packaging.</p><p>Our LED neon lighting is made from high-quality, environmentally safe materials designed for long-lasting use. By utilizing energy-efficient LEDs, we help reduce electricity consumption and lessen the impact on the power grid.</p><p>We’re also committed to sustainable packaging. All of our packaging materials are recyclable, allowing you to recycle them and contribute to a greener future.</p><p>When you choose Neonsfeer, you can feel confident that we’re doing our part to ensure our products and packaging are as eco-friendly as possible, helping to make a positive impact on the planet.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "separator-1",
+        "question-1",
+        "question-2",
+        "question-3",
+        "question_CXqrxQ",
+        "question_XW3L4q",
+        "question_WkgNCa",
+        "question_AzghF4",
+        "question_JmK6Ha",
+        "separator-2",
+        "question-4",
+        "question-5",
+        "question_DyBXKp",
+        "question_r7jRJj",
+        "question_RErP9j",
+        "question_RjknGn",
+        "question_fzwKRr",
+        "separator_kPNcak",
+        "question_HcV8cj",
+        "question_dNyxET",
+        "question_J8kaDG",
+        "question_DGHrUn",
+        "question_BYXKHx",
+        "question_GzBein",
+        "separator_33YXVh",
+        "question_q4p7BR",
+        "question_8EDbLA",
+        "question_qr9eRF",
+        "question_cwAizX",
+        "question_xxcwf7",
+        "question_VEhcLt",
+        "question_h4izRK",
+        "separator_hPKndt",
+        "question_yUqfMX",
+        "question_jgURQ7",
+        "question_UtkcDT",
+        "question_4rFNDn",
+        "question_zQEzGj",
+        "question_zUrRFf",
+        "separator_D9EG7w",
+        "question_ydCDxi",
+        "question_cptzMW",
+        "question_gKPAYL",
+        "question_RjMtR4",
+        "question_FGCjzn",
+        "question_wjEBBF",
+        "question_BkyA93",
+        "question_ePb4fc",
+        "question_LCp4LB",
+        "question_ePLARD"
+      ],
+      "settings": {
+        "show_contact_info": false,
+        "contact_info_heading": "Any question?",
+        "contact_info_text": "<p>If we still haven't answered your question, you can contact us below and we will get back to you as soon as possible.</p>",
+        "contact_1_icon": "bi-phone",
+        "contact_1_heading": "Customer support",
+        "contact_1_text": "<p>Enter your text here</p>",
+        "contact_2_icon": "bi-email",
+        "contact_2_heading": "Send a message",
+        "contact_2_text": "<p>Enter your text here</p>"
+      }
+    },
+    "faq_HRCchK": {
+      "type": "faq",
+      "blocks": {
+        "separator_Qt3QFe": {
+          "type": "separator",
+          "settings": {
+            "title": "Safety & Compliance"
+          }
+        },
+        "question_8TYBTD": {
+          "type": "question",
+          "settings": {
+            "title": "Do our products comply with EU safety standards?",
+            "answer": "<p>Yes, absolutely. At Neonsfeer, safety is our top priority. All our products fully comply with the strict safety standards set by the European Union.</p><p>Our neon lighting is carefully crafted using high-quality materials, ensuring that you can enjoy the ambiance it creates with complete peace of mind. You can trust that our products are safe for use in your home or business, so no worries - just enjoyment!</p>"
+          }
+        },
+        "question_rJTxAB": {
+          "type": "question",
+          "settings": {
+            "title": "What are the safety guidelines for handling LED neons?",
+            "answer": "<p>At Neonsfeer, we want you to enjoy the beauty of our LED neon lighting while keeping safety a priority. Here are some important guidelines to follow:</p><ol><li><strong>Handle with care</strong>: Our neon lighting is made with delicate materials, so treat it gently. No rough handling, please.</li><li><strong>Indoor use only</strong>: Our LED neon lighting is designed for indoor use and is not waterproof. Please keep it away from wet conditions.</li><li><strong>Avoid touching when on</strong>: The lighting can get hot while in use, so avoid touching it when it's on to prevent burns.</li><li><strong>Ensure proper ventilation</strong>: Make sure there is enough space around the lighting to prevent overheating.</li></ol><p>By following these guidelines, you can enjoy your Neonsfeer lighting safely and with peace of mind.</p>"
+          }
+        },
+        "question_An3BqE": {
+          "type": "question",
+          "settings": {
+            "title": "Are our products CE marked?",
+            "answer": "<p>Yes, all our LED neon products are CE marked, which means they meet the strict safety, quality, and reliability standards set by European regulations. With the CE mark, you can be confident that our products are safe, high-quality, and fully compliant with all necessary regulations. Enjoy the ambiance our LED neon lighting creates, knowing it’s both beautiful and up to standard.</p>"
+          }
+        },
+        "separator_Nrzxec": {
+          "type": "separator",
+          "settings": {
+            "title": "Personalization and Custom Orders"
+          }
+        },
+        "question_e8dEP9": {
+          "type": "question",
+          "settings": {
+            "title": "Do we offer custom LED neon lighting designs?",
+            "answer": "<p>Yes, at Neonsfeer, we specialize in creating custom LED neon designs tailored to your unique style. Whether you want to showcase a favorite quote, your logo, or a special symbol, we’ll bring your vision to life. No standard designs here—just personalized neon art that truly reflects you. Share your ideas with us, and we’ll take care of the rest to create a one-of-a-kind neon piece you’ll love. Let's light up your world with a design that’s all your own!</p>"
+          }
+        },
+        "question_MmQyYq": {
+          "type": "question",
+          "settings": {
+            "title": "Can I have my company logo made in LED neon?",
+            "answer": "<p>Yes, at Neonsfeer, we can transform your company logo into a stunning LED neon sign. Whether your logo features vibrant colors, sleek typography, or a combination of both, we’ll craft a design that brings your brand to life. </p><p>Simply share your logo with us, and we’ll turn it into a striking neon piece that will captivate your customers and make a lasting impression. Let’s create a standout neon logo that perfectly reflects your brand and adds a touch of sparkle to your business.</p>"
+          }
+        },
+        "question_a6GXtr": {
+          "type": "question",
+          "settings": {
+            "title": "What color options are available for LED light signs?",
+            "answer": "<p>At Neonsfeer, we offer a wide selection of 12 vibrant colors to suit any style or setting. From warm tones like yellow and orange to cool shades such as blue and green, there's a color for every mood and ambiance. While we don't provide specific color codes, our range of standard colors offers plenty of options to customize your LED neon sign. </p><p>You can view the full color selection on our color page at neonsfeer.com/pages/colors. Whether you're designing for an indoor or outdoor space, you can trust our products to meet the highest quality and safety standards. Choose your perfect hue and let your creativity shine!</p>"
+          }
+        },
+        "question_riB7Tf": {
+          "type": "question",
+          "settings": {
+            "title": "Can I adjust an LED light sign to display different colors?",
+            "answer": "<p>Yes, you can! At Neonsfeer, we offer an RGB version of our LED neon signs that allows you to customize the colors and create the perfect ambiance. With the RGB option, you’ll receive a remote control to easily switch between a wide range of colors, from soft pastels to vibrant hues.</p><p>Please note that the RGB option comes with an additional 25% surcharge. If you're interested in this colorful upgrade, simply reach out to us via email at info@theneonsfeer.com, and our team will be happy to assist you. Let your creativity run wild and transform your neon sign into a dynamic work of art!</p>"
+          }
+        },
+        "question_qBVbVU": {
+          "type": "question",
+          "settings": {
+            "title": "What's the price of a custom LED light sign?",
+            "answer": "<p>At Neonsfeer, we offer customized LED neon signs starting at €220. The final price depends on factors like design complexity, size, and any additional features you choose. Don’t worry though—we have options for every budget!</p><p>Whether you’re looking to transform your company logo or create a personal design, our team is here to bring your vision to life. </p><p>If you'd like to learn more about pricing and possibilities, feel free to reach out to us at info@neonsfeer.com, and we'll provide all the details you need. Let's make your space shine with a one-of-a-kind neon sign!</p>"
+          }
+        },
+        "separator_UL9an7": {
+          "type": "separator",
+          "settings": {
+            "title": "Trouble shoorting"
+          }
+        },
+        "question_EbiFfH": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if my LED neon isn't lighting up?",
+            "answer": "<p>Oh no! If your LED neon isn’t turning on, don’t worry—here’s a quick checklist to help you troubleshoot:</p><ol><li><strong>Check the power supply:</strong> Ensure the adapter is properly plugged into both the outlet and the neon sign. Also, verify there are no loose connections.</li><li><strong>Try another adapter:</strong> If the sign still won’t light up, test it with a different adapter. Sometimes, a faulty adapter is the issue.</li><li><strong>Test without the dimmer:</strong> If you're using a dimmer, try connecting the lighting directly to the adapter without the dimmer in between. This will help identify if the dimmer is the problem.</li></ol><p>If none of these steps work, don’t hesitate to reach out! Email us at info@neonsfeer.com, and we’ll help get your neon lighting glowing again. We want your space to shine bright!</p>"
+          }
+        },
+        "question_HgNXXf": {
+          "type": "question",
+          "settings": {
+            "title": "How do I fix brightness issues with my LED neon?",
+            "answer": "<p>No worries—we’re here to help your LED neon lighting shine at its brightest! Here are a few steps to troubleshoot brightness issues:</p><ol><li><strong>Check the connections:</strong> Ensure all connections are secure. Loose connections can sometimes cause brightness issues.</li><li><strong>Clean the lighting:</strong> Dust and dirt can dull the glow. Gently wipe the sign with a soft cloth to restore its radiant brightness.</li><li><strong>Adjust the dimmer:</strong> If you’re using a dimmer, make sure it’s set to the desired brightness. Sometimes the dimmer may not be at its highest setting.</li><li><strong>Verify the power supply:</strong> Confirm the power supply is providing enough power. A low-power supply can affect the brightness, so try a different one to see if that solves the issue.</li></ol><p>If the issue persists, don’t hesitate to contact us! We’re always here to help, and we’ll make sure your neon lighting shines as it should. Send us an email at info@neonsfeer.com, and we’ll get back to you as soon as possible!</p>"
+          }
+        },
+        "question_Lddcrd": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if my LED neon changes color?",
+            "answer": "<p>No need to worry—we’re here to help your LED neon lighting stay true to the right color! If you notice the color changing unexpectedly, here are some steps to resolve it:</p><ol><li><strong>Check the connections:</strong> Ensure all connections are secure. Loose connections can sometimes cause color display issues.</li><li><strong>Reset the lighting:</strong> Turn off the lighting, wait for a few minutes, and then turn it back on. A quick reset can often solve the problem.</li><li><strong>Verify the settings:</strong> If you have RGB LED neon lighting, double-check that the correct color mode is selected. It’s possible another color mode was accidentally activated.</li><li><strong>Test without the dimmer:</strong> If you’re using a dimmer, try connecting the lighting directly to the power source without the dimmer. A faulty dimmer can sometimes affect the color.</li></ol><p>If these steps don’t resolve the issue, don’t hesitate to reach out! We’re here to help and will make sure your LED neon lighting displays the perfect color. Send us a message at info@neonsfeer.com, and we’ll take care of it!</p>"
+          }
+        },
+        "question_q9JAHg": {
+          "type": "question",
+          "settings": {
+            "title": "What could potentially shorten the lifespan of my LED neon?",
+            "answer": "<p>If the lifespan of your LED neon lighting is shorter than expected, there are a few potential factors that could be causing it. Here are some possible causes:</p><ol><li><strong>Excessive Heat:</strong> LED neon lights are sensitive to heat. Prolonged exposure to high temperatures can reduce their lifespan. Be sure not to install your lighting in areas where heat tends to accumulate.</li><li><strong>Poor Power Quality:</strong> Using low-quality or incompatible power sources can lead to issues. It's important to use a high-quality power supply that's suited to your lighting to ensure optimal performance and longevity.</li><li><strong>Improper Usage:</strong> Not following installation, usage, or maintenance instructions can shorten the lifespan of your lighting. Always ensure you're using the correct voltage, dimmer, and adhering to the recommended environmental conditions.</li><li><strong>Faulty Wiring or Connections:</strong> Loose connections or faulty wiring can cause malfunctions that may reduce the lighting's lifespan. Regularly check all connections to ensure they are secure and stable.</li></ol><p>If you notice your LED neon lighting isn’t lasting as long as expected, check for these potential causes and feel free to contact us for assistance. We're here to help you keep your neon lighting shining bright for as long as possible!</p>"
+          }
+        },
+        "question_69jKHk": {
+          "type": "question",
+          "settings": {
+            "title": "How can I fix color rendering issues with my LED neon?",
+            "answer": "<p>If you're experiencing color rendering issues with your LED neon lighting, don't worry, we can help! Here are a few steps to troubleshoot the problem:</p><ol><li><strong>Check the power supply:</strong> Ensure your lighting’s power supply is functioning properly. A low or inconsistent power supply can affect color rendering. If you suspect an issue with the power supply, please contact us for further assistance.</li><li><strong>Clean the lighting:</strong> Dust and dirt can sometimes impact the color output. Gently clean the neon tubes with a soft cloth to restore their brightness and vibrancy.</li><li><strong>Inspect the wiring:</strong> Loose or damaged connections can cause color issues. Check that all connections are tight and secure, and ensure there are no short circuits or exposed wires.</li><li><strong>Adjust the dimmer:</strong> If you're using a dimmer, make sure it's set correctly. The dimmer can affect the color rendering, so adjusting it might resolve the problem.</li></ol><p>If these steps don’t solve the issue, please reach out to us. We're here to assist and ensure your LED neon lighting shines with perfect color!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "separator_Qt3QFe",
+        "question_8TYBTD",
+        "question_rJTxAB",
+        "question_An3BqE",
+        "separator_Nrzxec",
+        "question_e8dEP9",
+        "question_MmQyYq",
+        "question_a6GXtr",
+        "question_riB7Tf",
+        "question_qBVbVU",
+        "separator_UL9an7",
+        "question_EbiFfH",
+        "question_HgNXXf",
+        "question_Lddcrd",
+        "question_q9JAHg",
+        "question_69jKHk"
+      ],
+      "settings": {
+        "show_contact_info": true,
+        "contact_info_heading": "Any question?",
+        "contact_info_text": "<p>If we still haven't answered your question, you can contact us below and we will get back to you as soon as possible.</p>",
+        "contact_1_icon": "bi-phone",
+        "contact_1_heading": "Customer support",
+        "contact_1_text": "<p>Enter your text here</p>",
+        "contact_2_icon": "bi-email",
+        "contact_2_heading": "Send a message",
+        "contact_2_text": "<p>Enter your text here</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq",
+    "faq_HRCchK"
+  ]
+}

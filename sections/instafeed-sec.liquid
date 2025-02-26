@@ -1,0 +1,30 @@
+<section class="instafeed-sec" style="margin-top: 40px;">
+  <a href="#" class="insta-name btn button button--primary">{{ section.settings.button_text }}</a>
+</section>
+<style>
+.instafeed-sec {
+    position: relative;
+    height: 947px;
+    background-image: url("https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Section_5_-_Image_Grid.png?v=1676262651");
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+{% schema %}
+    {
+        "name": "Our Insta Feed",
+        "settings": [
+            {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+            }
+        ],
+        "presets": [
+        {
+          "name": "Our Insta Feed",
+          "settings": {}
+        }
+      ]
+    }
+{% endschema %}

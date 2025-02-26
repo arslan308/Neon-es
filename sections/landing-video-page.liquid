@@ -1,0 +1,334 @@
+<div class="outerDiv {{ section.settings.custom_class }}">
+<div class="desktop-video">
+  {{
+    section.settings.videofile
+    | video_tag: image_size: '1100x', autoplay: true, loop: true, muted: true, playsinline: true, defaultmuted: true, controls: false
+  }}
+</div>
+<div class="mobile-video">
+{{
+    section.settings.mobile_videofile
+    | video_tag: image_size: '1100x', autoplay: true, loop: true, muted: true, playsinline: true, defaultmuted: true, controls: false
+}}
+</div>
+  <div class="innerText">
+    {% if section.settings.review_text != blank %}
+    <div class="review-box">
+      <div class="start-wrapper">
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[16px]">
+          <path d="M8.9992 13.695L3.70945 16.656L4.8907 10.71L0.439453 6.594L6.4597 5.88L8.9992 0.375L11.5387 5.88L17.559 6.594L13.1077 10.71L14.289 16.656L8.9992 13.695Z" fill="#ffffff"></path>
+        </svg>
+
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[16px]">
+          <path d="M8.9992 13.695L3.70945 16.656L4.8907 10.71L0.439453 6.594L6.4597 5.88L8.9992 0.375L11.5387 5.88L17.559 6.594L13.1077 10.71L14.289 16.656L8.9992 13.695Z" fill="#ffffff"></path>
+        </svg>
+
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[16px]">
+          <path d="M8.9992 13.695L3.70945 16.656L4.8907 10.71L0.439453 6.594L6.4597 5.88L8.9992 0.375L11.5387 5.88L17.559 6.594L13.1077 10.71L14.289 16.656L8.9992 13.695Z" fill="#ffffff"></path>
+        </svg>
+
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[16px]">
+          <path d="M8.9992 13.695L3.70945 16.656L4.8907 10.71L0.439453 6.594L6.4597 5.88L8.9992 0.375L11.5387 5.88L17.559 6.594L13.1077 10.71L14.289 16.656L8.9992 13.695Z" fill="#ffffff"></path>
+        </svg>
+
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[16px]">
+          <path d="M8.9992 13.695L3.70945 16.656L4.8907 10.71L0.439453 6.594L6.4597 5.88L8.9992 0.375L11.5387 5.88L17.559 6.594L13.1077 10.71L14.289 16.656L8.9992 13.695Z" fill="#ffffff"></path>
+        </svg>
+      </div>
+      <p>
+        {{ section.settings.review_text }}
+      </p>
+      
+    </div>
+{% endif %}
+    <h2>{{ section.settings.title }}</h2>
+    <p>
+        {{ section.settings.description }}
+      </p>
+    <div class="landing-botton" style="display: flex; gap:15px">
+      <a href="{{ section.settings.link }}" class="buttonVid">{{ section.settings.link_text }}</a>
+      <a href="{{ section.settings.link1 }}" class="buttonVid sec">{{ section.settings.link_text1 }}</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var lazyVideos = [].slice.call(document.querySelectorAll('video.lazy'));
+
+    if ('IntersectionObserver' in window) {
+      var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (video) {
+          if (video.isIntersecting) {
+            for (var source in video.target.children) {
+              var videoSource = video.target.children[source];
+              if (typeof videoSource.tagName === 'string' && videoSource.tagName === 'SOURCE') {
+                videoSource.src = videoSource.dataset.src;
+              }
+            }
+
+            video.target.load();
+            video.target.classList.remove('lazy');
+            lazyVideoObserver.unobserve(video.target);
+          }
+        });
+      });
+
+      lazyVideos.forEach(function (lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
+      });
+    }
+  });
+</script>
+<style>
+.homepage-video-sec h2 {
+  font-size: 60px !important;
+  line-height: 70px !important;
+  max-width: 80%;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+}
+.review-box {
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.review-box p{
+  margin-bottom: 0 !important;
+}
+.homepage-video-sec a.buttonVid:last-child {
+  background: #ff13a7;
+}
+.homepage-video-sec a.buttonVid {
+  border-radius: 30px;
+}
+.homepage-video-sec .innerText > div {
+  display: flex;
+  gap: 0 15px;
+}
+video{
+  width: 100%;
+}
+.mobile-video{
+  display: none;
+}
+  .outerDiv {
+    width: 100%;
+    height: 56vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .videoAdd {
+    position: absolute;
+    right: 0;
+    bottom: -150px;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .innerText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: 'DIN Next', sans-serif;
+  }
+
+  .innerText h2 {font-size: 60px; line-height: 70px; max-width: 80%; text-transform: uppercase; font-weight: 600; margin-bottom: 7px;}
+
+  .innerText p {
+    max-width: 650px;
+    margin: 0 auto 22px;
+    line-height: 1.43;
+  }
+
+  .buttonVid {
+    color: #ffffff;
+    background: #7853f7;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 48px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: var(--text-font-bolder-weight);
+    font-size: var(--base-text-font-size);
+    cursor: pointer; 
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;  }
+    .buttonVid.sec{background: #ff13a7;}
+    @media screen and (max-width: 1199.98px) {
+    .videoAdd {
+      bottom: -72px;
+    }
+    .homepage-video-sec h2 {
+    max-width: 90%;
+  }
+  }
+
+  @media screen and (max-width: 991.98px) {
+    .videoAdd {
+      bottom: 0;
+    }
+    .homepage-video-sec h2 {
+    font-size: 50px !important;
+    line-height: 60px !important;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+    .outerDiv {
+      height: auto !important
+    }
+    .homepage-video-sec a.buttonVid {
+  padding: 0 20px;
+}
+  @media screen and (max-width: 600px) {
+    .innerText h2{font-size: 40px; line-height: 40px;}
+    .innerText p{margin: 0 auto 15px;}
+    .landing-botton{display: flex; flex-direction: column; gap: 10px;}
+}
+.homepage-video-sec p {
+  max-width: 90% !important;
+}
+    .homepage-video-sec .innerText  > div {
+  row-gap: 10px;
+  flex-direction: column;
+}
+    .homepage-video-sec h2 {
+    font-size: 30px !important;
+    line-height: 40px !important;
+}
+    .mobile-video{
+  display: block;
+}
+.desktop-video{
+  display: none;
+}
+body .homepage-video-sec {
+    height:400px;
+}
+    .videoAdd {
+      right: -97px;
+      width: 145%;
+    }
+  }
+  @media screen and (max-width: 400px){
+    .outerDiv {
+      height: auto !important
+    }
+
+    .videoAdd {
+      right: -155px;
+      bottom: 0;
+      width: 198%;
+    }
+    .innerText p {
+      max-width: 300px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Landing Video Upload",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Add Class"
+    },
+    {
+      "type": "video",
+      "id": "videofile",
+      "label": "Desktop Video"
+    },
+    {
+      "type": "video",
+      "id": "mobile_videofile",
+      "label": "Mobile Video"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "review_text",
+      "label": "Review"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Headline",
+      "default": "Video with text overlay"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "This area is used to describe your store."
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alignment",
+      "default": "text-center",
+      "options": [
+        { "value": "text-left", "label": "Align Left" },
+        { "value": "text-center", "label": "Align Center" },
+        { "value": "text-right", "label": "Align Right" }
+      ]
+    },
+
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Text",
+      "default": "View products"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "link_text1",
+      "label": "Text",
+      "default": "View products"
+    },
+    {
+      "type": "url",
+      "id": "link1",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Video Upload",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}

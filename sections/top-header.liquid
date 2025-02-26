@@ -1,0 +1,61 @@
+{% style %}
+    <style>
+      .responsive-image {
+        position: relative;
+      }
+    
+      .desktop-image {
+        display: block;
+      }
+    
+      .mobile-image {
+        display: none;
+      }
+    
+      @media screen and (max-width: 768px) {
+        .desktop-image {
+          display: none;
+        }
+    
+        .mobile-image {
+          display: block;
+        }
+      }
+    </style>
+    {% endstyle %}
+    
+    <div class="responsive-image">
+      {% if section.settings.desktop_image != blank %}
+        <img class="desktop-image" src="{{ section.settings.desktop_image | img_url: 'master' }}" alt="Desktop Image">
+      {% endif %}
+    
+      {% if section.settings.mobile_image != blank %}
+        <img class="mobile-image" src="{{ section.settings.mobile_image | img_url: 'master' }}" alt="Mobile Image">
+      {% endif %}
+    </div>
+
+{% schema %}
+    {
+      "name": "Top Header",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Top Header",
+          "category": "Image"
+        }
+      ]
+    }
+    {% endschema %}
+
+    

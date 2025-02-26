@@ -1,0 +1,1085 @@
+/* Injected CSS Code */
+body{
+  font-family: "DIN Next", sans-serif !important;
+}
+.form-label.form-label-auto {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'DIN NEXT';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19.14px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 8px;
+  }
+
+  .form-label.form-label-auto sub {
+    color: #EC40A4;
+    vertical-align: top;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .step_form_inner .form-input-wide {
+    width: 100% !important;
+    margin-bottom: 16px;
+    /* margin-top: 36px; */
+  }
+
+  .step_form_inner .form-section h2 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 15px;
+    max-width: 500px;
+  }
+
+  .step_form_inner li[data-type=control_fileupload] .qq-upload-button {
+    background-color: transparent;
+    color: #000;
+    border: 1px dashed #A41B6B;
+    height: 155px;
+    font-family: 'DIN NEXT';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.42px;
+    text-align: center;
+  }
+
+  .step_form_inner ul.page-section li#cid_11 {
+    margin-top: 8px;
+  }
+
+  .step_form_inner .inputContainer {
+    height: 155px;
+  }
+
+  .step_form_inner li[data-type=control_fileupload] .qq-upload-button:before {
+    display: none;
+  }
+
+  .step_form_inner li[data-type=control_fileupload] .qq-upload-button span {
+    color: #EC40A4;
+  }
+
+  .step_form_inner li[data-type=control_fileupload] .qq-upload-button p {
+    max-width: 230px;
+  }
+
+  .step_form_inner .form-pagebreak {
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+  }
+
+  .step_form_inner .form-pagebreak-next {
+  border-color: unset !important;
+  color: #ffffff;
+  white-space: nowrap;
+  background: #ff13a7;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 30px !important;
+  line-height: 48px;
+  border-radius: 30px !important;
+  text-align: center;
+  font-weight: var(--text-font-bolder-weight);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  width: 100%;
+  }
+  .step_form_inner .form-pagebreak-next:hover{background-color: #EC40A4 !important;}
+
+  .step_form_inner .form-pagebreak-next-container {
+    width: 100%;
+  }
+  .step_form_inner .form-input-wide input {
+    font-family: 'DIN NEXT' !important;
+    font-size: 15px !important;
+    font-weight: 400;
+    line-height: 19.14px;
+    color: #656565;
+    border-radius: 8px !important;
+    border: 0 !important;
+    padding: 16px;
+    min-height: 42px;
+  }
+  .step_form_inner ul.page-section .title_box{margin-bottom: 15px;}
+  .swap_sec .step_form_inner li[data-type=control_fileupload] .qq-upload-button{border: 1px dashed #715AEF !important;}
+  .step_form_inner .form-input-wide ul{margin-bottom: 24px;}
+  .step_form_inner .form-input-wide li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: DIN NEXT;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.14px;
+    text-align: left;
+    color: #656565;
+  }
+  .step_form_inner ul.page-section li#cid_11{margin: 0 !important;}
+  .step_form_inner .form-input-wide{margin: 0 !important;}
+  button#form-pagebreak-next_12{margin-top: 16px !important;}
+  .step_form_inner .form-input-wide li::before{
+    content: url('https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check_small_a05e62c7-662b-4ac7-b09b-b27ab4570e2f.png?v=1736944757');
+    margin-right: 8px;
+  }
+  .step_form_inner .form-line-active {
+    background-color: transparent;
+  }
+
+  .step_form_inner .swap_sec .form-line-active {
+    background-color: #F7F5FF;
+  }
+
+  .swap_sec .video_part {
+    order: 2;
+  }
+
+  .swap_sec .form_part {
+    order: 1;
+  }
+
+  .swap_sec .video_part .video_potion {
+    display: none;
+  }
+
+  .jfUpload-heading.forDesktop {
+    color: #A41B6B !important;
+    font-size: 13px !important;
+  }
+
+  .swap_sec .video_part .timer_box {
+    background-color: #FFEBF7;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .swap_sec .video_part .timer_box:before {
+    content: "" !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFEBF7;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .swap_sec .tab-status {
+    display: none !important;
+  }
+
+  body .step_form_row.swap_sec {
+    grid-template-columns: min(550px, min(50%, 100%)) 1fr;
+  }
+
+  body .swap_sec .form_part .form_inner {
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+
+  .title_box p {
+    font-family: "DIN NEXT";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.14px;
+    text-align: left;
+  }
+
+  .box_inner {
+    background-color: #F7F5FF;
+    border-radius: 8px;
+    padding: 36px 24px;
+    /* margin: 36px 0 0 !important; */
+  }
+
+  .box_inner h3 {
+    font-family: 'DIN NEXT';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.97px;
+    margin-bottom: 16px;
+  }
+
+  .box_inner .icon_list {
+    padding: 0;
+    margin: 0 0 24px;
+  }
+
+  .box_inner .icon_list li {
+    list-style: none;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px !important;
+    font-family: 'DIN NEXT';
+    font-size: 15px;
+    font-weight: 400;
+    color: #656565;
+    line-height: 19.14px;
+  }
+
+  .box_inner .icon_list li:before {
+    content: "";
+    background-image: url(https://cdn.shopify.com/s/files/1/0716/0542/0325/files/check_small_5913dd75-af57-4908-8800-a018562c6e83.png);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+  }
+
+  .swap_sec .arrive_text {
+    display: none;
+  }
+
+  .swap_sec .bg-1 {
+    background-color: #F7F5FF;
+    margin-top: 0 !important;
+    padding: 0 24px !important;
+  }
+
+  .swap_sec .outer_text {
+    background-color: #F7F5FF;
+    margin-top: 0;
+    padding: 16px 24px 36px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  body .right_image_bg .box_inner {
+    padding: 36px 24px 20px !important;
+    margin-top: 36px !important;
+  }
+
+  .right_image_bg .outer_text {
+    display: none;
+  }
+
+  .mt-0 {
+    margin-top: 0 !important;
+  }
+
+  .mb-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .radio_box .form-label-title {
+    font-family: 'DIN NEXT';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.97px;
+    text-align: left;
+  }
+
+  .radio_box .form-radio-item {
+    margin: 16px 0 0 !important;
+  }
+
+  .radio_box .form-radio-item label {
+    color: #ffffff;
+    white-space: nowrap;
+    background: #ff13a7;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 0 30px !important;
+    line-height: 48px;
+    border-radius: 30px !important;
+    text-align: center;
+    font-weight: var(--text-font-bolder-weight);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  }
+
+  .radio_box .form-radio-item label::before,
+  .radio_box .form-radio-item label::after {
+    opacity: 0;
+  }
+
+  .radio_box .form-multiple-column {
+    display: grid;
+    gap: 0 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .radio_box .form-multiple-column .form-radio-item {
+    width: 100% !important;
+    margin: 16px 0 0 !important;
+  }
+
+  .swap_sec.right_image_bg .video_part .timer_box:before {
+    opacity: 0.4;
+    background-color: #fff;
+  }
+
+  .right_image_bg .timer_box>div {
+    background-color: #F7F5FF;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .right_image_bg .timer_box .box_head {
+    margin: 0;
+  }
+
+  .right_image_bg .timer_box a {
+    display: flex;
+  }
+
+  .timer_box a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    font-family: 'DIN NEXT';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16.59px;
+    text-align: left;
+    color: #FF1D1F;
+  }
+
+  .last-step .user_info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .last-step .user_info img {
+    width: 45px;
+    height: auto;
+  }
+
+  .last-step .form-buttons-center {
+    background-color: #f7f5ff;
+    padding: 0 24px 36px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .last-step .form-pagebreak button {
+    background-color: #715AEF;
+    border: 0;
+    color: #fff;
+    border-radius: 50px;
+    font-family: 'DIN NEXT';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.14px;
+    width: 100%;
+    height: 42px;
+    margin: 0;
+  }
+
+  body .last-step .box_inner {
+    margin-top: 284px !important;
+  }
+
+  div#cid_10 {
+    margin: 0;
+  }
+
+  .last-step textarea {
+    border: 0;
+    height: 76px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: 'DIN NEXT';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.86px;
+    color: #656565;
+  }
+
+  .radio_box .form-radio-item label:hover {
+    background-color: #715AEF;
+  }
+
+  .last-step textarea::placeholder,
+  textarea::placeholder {
+    padding-right: 58%;
+  }
+
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+
+  .custom_steps_form {
+    padding: 15px 0 60px;
+  }
+  .slick-slider{margin-bottom: 0 !important;}
+  .request_qu {
+    margin-bottom: 15px;
+  }
+  .request_qu.swap_sec2{display: none;}
+  .request_qu .heading_top {
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 24px;
+    font-family: 'DIN Next';
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  .request_qu ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .request_qu ul li {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    color: #656565;
+    position: relative;
+    padding-left: 19px;
+  }
+
+  .request_qu ul li:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(https://cdn.shopify.com/s/files/1/0716/0542/0325/files/check_small_f9883555-4055-4a96-9008-c29d1552ee1c.png?v=1727518005);
+    background-repeat: no-repeat;
+    background-size: 11px;
+    width: 16px;
+    height: 16px;
+    background-position: center center;
+  }
+
+  .request_qu ul li:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  /** video portion css **/
+  .video_part video {
+    height: 485px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  /** video portion css **/
+  .video_part .second_form {
+    display: none;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  /** first step form css **/
+  .step_form_inner .step_form_row {
+    display: grid;
+    grid-template-columns: 1fr min(600px, min(50%, 100%));
+    gap: 24px;
+  }
+
+  .step_form_inner .form-all {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .step_form_inner ul.page-section {
+    padding: 0;
+  }
+
+  .step_form_inner .form-line {
+    margin: 8px 0 0 0 !important;
+    padding: 0;
+  }
+
+  .step_form_inner .step_form_row .form_part .form-input::placeholder {
+    color: #cbd5e1;
+  }
+
+  .step_form_inner .step_form_row .form_part .form-input:focus {
+    outline: none;
+  }
+
+  .step_form_inner .step_form_row .form_part .form_inner {
+    background: #FFEBF7;
+    padding: 20px 36px;
+    border-radius: 8px;
+  }
+
+  .step_form_inner .step_form_row .form_part .btn {
+    border: 0;
+    background: var(--color-1);
+    padding: 1rem;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* .step_form_inner .step_form_row .form_part .btn[disabled] {
+opacity: .5;
+pointer-events: none;
+} */
+
+  .step_form_inner .step_form_row .form_part .btn:hover {
+    background: #7853f7;
+    transition: ease-in-out .3s all;
+  }
+
+  .step_form_inner .step_form_row .form_part .btn-submit:hover {
+    background-color: #7853f7;
+  }
+
+  .step_form_inner .step_form_row .form_part .pagination {
+    margin-top: 24px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+  }
+
+  .step_form_inner .step_form_row .form_part .btn {
+    border: 0;
+    background: #EC40A4;
+    padding: 13px 20px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .step_form_inner .step_form_row .form_part .tab-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .step_form_inner .step_form_row .form_part .tab-status span {
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    margin-right: 00;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #A41B6B;
+    font-family: 'DIN Next';
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .step_form_inner .step_form_row .form_part .tab-status span .tab_name {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #656565;
+  }
+
+  .step_form_inner .step_form_row .form_part .tab-status span.active {
+    border-color: #715AEF;
+  }
+
+  .step_form_inner .step_form_row .form_part .tab-status:has(span.active:nth-child(2)) .tab_name {
+    color: #A41B6B;
+  }
+
+  .custom_steps_form.swap_sec_padding{padding-top: 20px !important;}
+  .custom_steps_form .step_form_inner .step_form_row .form_part .tab-status span.active .tab_name {
+    color: #715AEF;
+    font-weight: 700;
+  }
+
+  .step_form_inner .step_form_row .tabpanel h3 {
+    font-size: 28px;
+    line-height: 35px;
+    font-family: 'DIN Next';
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .step_form_inner .step_form_row .custom-file-upload {
+    height: 190px;
+    display: grid;
+    place-content: center;
+    border: 2px dashed #A41B6B;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    cursor: pointer;
+  }
+
+  .step_form_inner .step_form_row .custom-file-upload>div {
+    width: 100%;
+    max-width: 258px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .step_form_inner .step_form_row .custom-file-upload .upload_title {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'DIN Next';
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .step_form_inner .step_form_row .custom-file-upload .upload_title span {
+    color: #EC40A4;
+  }
+
+  .step_form_inner .step_form_row .custom-file-upload .upload_subtitle {
+    font-size: 13px;
+    line-height: 16px;
+    color: #A41B6B;
+  }
+
+  .step_form_inner .step_form_row .custom-file-upload .upload_subtitle span {
+    text-decoration: underline;
+  }
+
+  .step_form_inner .step_form_row .form_part .hidden,
+  .step_form_inner .step_form_row .form_part input[type="file"] {
+    display: none;
+  }
+
+  .step_form_inner .step_form_row .form_part .field_box label {
+    display: block;
+    font-size: 15px;
+    line-height: 19px;
+    color: #000;
+    font-family: 'DIN Next';
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .step_form_inner .step_form_row .form_part .field_box input {
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    padding-inline: 16px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+    font-family: 'DIN Next';
+  }
+
+  .step_form_inner .step_form_row .form_part .field_box:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .step_form_inner .step_form_row .form_part .field_box input::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+    color: #656565;
+  }
+
+  .arrive_text {
+    font-size: 13px;
+    text-align: center;
+    line-height: 17px;
+    font-family: 'DIN Next';
+    color: #715AEF;
+    background: #F7F5FF;
+    padding: 10px 22%;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .outer_text {
+    text-align: center;
+    font-size: 13px;
+    line-height: 17px;
+    color: #656565;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  .timer_box {
+    text-align: center;
+    display: none;
+  }
+
+  .timer_box .box_head {
+    font-family: 'DIN Next';
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 7px;
+  }
+
+  .timer_box .time {
+    font-size: 34px;
+    line-height: 43px;
+    font-family: 'DIN Next';
+    font-weight: 700;
+    color: #EC40A4;
+  }
+
+  /** first step form css **/
+  /** second form step css **/
+  .second_form_inner .heading_part {
+    margin-bottom: 36px;
+  }
+
+  #sec_form {
+    background: #F7F5FF;
+    padding: 24px;
+    border-radius: 8px;
+  }
+
+  .second_form_inner h2 {
+    font-size: 34px;
+    line-height: 43px;
+    font-family: 'DIN Next';
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .second_form_inner p {
+    font-size: 15px;
+    line-height: 19px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    color: #656565;
+    text-align: left;
+  }
+
+  .second_form_inner .form_group h4 {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'DIN Next';
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .second_form_inner .form_group ul {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+
+  .second_form_inner .form_group ul li {
+    font-size: 15px;
+    line-height: 19px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    text-align: left;
+    color: #656565;
+    margin-bottom: 8px;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .second_form_inner .form_group ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0716/0542/0325/files/purple_check_small_14a25479-01a0-4f3a-ac6f-a25865156787.png?v=1727708875);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center center;
+  }
+
+  .second_form_inner .file_group {
+    border: 2px dashed #715AEF;
+    border-radius: 8px;
+    padding: 41px 20px;
+  }
+
+  .second_form_inner .file_group .file_wrap {
+    width: 100%;
+    max-width: 324px;
+    margin: auto;
+    display: grid;
+  }
+
+  .second_form_inner .file_group .file_wrap .file_heading {
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'DIN Next';
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .second_form_inner .file_group .file_wrap input[type="file"] {
+    display: none;
+  }
+
+  .second_form_inner .file_group .file_wrap label {
+    font-size: 13px;
+    line-height: 17px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    color: #715AEF;
+    margin-bottom: 16px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .second_form_inner .file_group .file_wrap label span {
+    text-decoration: underline;
+  }
+
+  .second_form_inner .file_group .file_wrap .file_btn {
+    border: 0;
+    background: #EC40A4;
+    padding: 13px 20px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .second_form_inner .form_group .extra_text {
+    font-size: 13px;
+    line-height: 17px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    margin-top: 24px;
+  }
+
+  .second_form_inner .form_group .extra_text span {
+    text-decoration: underline;
+  }
+
+  .second_form_inner .form_group input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+  }
+
+  .second_form_inner .form_group .radio_group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .second_form_inner .form_group .radio_group .radio_box {
+    background: #EC40A4;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .second_form_inner .form_group .radio_group .radio_box:hover {
+    background: #715AEF;
+  }
+
+  .second_form_inner .form_group .radio_group .radio_box label {
+    font-size: 15px;
+    line-height: 19px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    color: #fff;
+    display: block;
+    padding: 30.5px 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .second_form_inner .form_group .person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .second_form_inner .form_group .person .p_img {
+    width: 45px;
+    height: 45px;
+    margin-right: 14px;
+  }
+
+  .second_form_inner .form_group .person .p_text {
+    font-size: 18px;
+    line-height: 23px;
+    font-family: 'DIN Next';
+    font-weight: 700;
+  }
+
+  .second_form_inner .form_group #question {
+    width: 100%;
+    height: 76px;
+    padding: 19px;
+    border-radius: 8px;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    color: #000;
+  }
+
+  .second_form_inner .form_group #question::placeholder {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+  }
+
+  .second_form_inner .form_group input[type="submit"] {
+    border: 0;
+    background: #715AEF;
+    padding: 13px 20px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-family: 'DIN Next';
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .second_form_inner .form_group.step_one~.form_group,
+  #sec_form .form_group.hide {
+    display: none;
+  }
+
+  #sec_form .form_group.show {
+    display: block;
+  }
+
+  /** second form step css **/
+  /** layout change effect **/
+  .step_form_inner .step_form_row.layout_change {
+    grid-template-columns: min(600px, min(50%, 100%)) 1fr;
+    height: 600px;
+  }
+
+  .step_form_inner .layout_change .form_part .tab-status,
+  .step_form_inner .layout_change .form_part #custom_form_one,
+  .step_form_inner .layout_change .form_part .outer_text,
+  .step_form_inner .layout_change .video_potion,
+  .step_form_inner .layout_change .arrive_text {
+    display: none;
+  }
+
+  .step_form_inner .layout_change .timer_box,
+  .step_form_inner .layout_change .video_part .second_form {
+    display: block;
+  }
+
+  .step_form_inner .layout_change .form_part .form_inner {
+    display: grid;
+    place-content: center;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    .last-step textarea{height: 125px !important;}
+    .radio_box .form-multiple-column{grid-template-columns: 1fr !important;}
+    .step_form_inner .form-pagebreak-next{
+      white-space: normal;
+      line-height: 18px !important;
+      padding: 10px 30px !important;
+    }
+    .radio_box .form-radio-item label{font-size: 14px; padding: 0 20px !important;}
+    body .step_form_inner .step_form_row {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+    }
+
+    body .video_part video {
+      height: 191px;
+    }
+
+    .swap_sec .video_part .timer_box {
+      min-height: 260px;
+    }
+
+    .right_image_bg .timer_box>div {
+      width: 90%;
+    }
+
+    /* body .last-step .box_inner {
+      margin-top: 24px !important;
+    } */
+
+    .request_qu ul {
+      flex-wrap: wrap;
+    }
+
+    .request_qu ul li {
+      width: 100%;
+      margin: 0 0 8px;
+    }
+
+    .custom_steps_form {
+      padding: 24px 0 28px !important;
+    }
+
+    .request_qu {
+      margin-bottom: 24px;
+    }
+
+    .step_form_inner .step_form_row .form_part .form_inner {
+      padding: 24px;
+    }
+
+    .form_page_DE .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .arrive_text {
+      margin-top: 24px;
+      padding: 20px 45px;
+    }
+
+    .step_form_inner .form-section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 34px;
+      letter-spacing: -0.6px;
+    }
+  }

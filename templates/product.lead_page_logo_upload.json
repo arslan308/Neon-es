@@ -1,0 +1,545 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "custom_step_form_section_TNdRMm": {
+      "type": "Custom-Step-Form-Section",
+      "settings": {
+        "sectionTitle": "Request a quote",
+        "MainList": "<li>Receive a <strong>free design</strong>\n</li>\n<li>In your mailbox within <strong>3 hours</strong>\n</li>\n<li>Delivered within <strong>6 working days</strong>\n</li>",
+        "Video_url": "https://cdn.shopify.com/videos/c/o/v/ce4dd3b12b8f4a43a25a9cfebfa61297.mp4",
+        "tabTitle1": "1. Upload your logo",
+        "tabContent1": "<h2>Receive a quote <br>and a free sample design</h2>",
+        "uploadContent": "<p>Upload your logo and receive the <span>lowest price option</span> in your mail</p>\n<div class=\"jfUpload-heading forDesktop\">Drag and drop files here</div>\n<div class=\"jfUpload-heading forMobile\">Choose a file</div>",
+        "Button1": "Complete request",
+        "QouteText": "Upload today and receive your logo on",
+        "delivery_date": "{month} {day}",
+        "tabTitle2": "2. Your details",
+        "FormHeading": "<h2>Almost done!<br> Fill in your details </h2>",
+        "inputlable1": "Name",
+        "inputplaceholder1": "Bijv. Anja",
+        "inputlable2": "Email address",
+        "inputplaceholder2": "Bijv. joost@bb.nl",
+        "inputlable3": "Phone number",
+        "inputplaceholder3": "Phone number",
+        "ButtonTextForm": "Send and receive quote within 3 hours!",
+        "freeSample": "Your free sample is being prepared",
+        "freeSampleDesc": "Once the logo is ready, a preview will appear here. In the meantime, check out some examples or scroll further for FAQs and inspiration!",
+        "freeSampleFormDescription": "<h4>Better example? Upload a photo of your wall!</h4>\n<ul>\n  <li>Receive a final quote</li>\n  <li>Your sample will be made on your wall photo</li>\n  <li>We can calculate your price more accurately</li>\n</ul>",
+        "uploadPhotoFormfree": "<div class=\"file_heading\">Upload photo</div>\n<label for=\"wall_image\">Drag or <span>choose files</span></label>",
+        "uploadPhotobuttonfree": "Add wall to your example",
+        "HelpUsTtile": "Help us! How did you find Neonsphere?",
+        "Friends": "Acquaintance or friend",
+        "SearchEngine": "Search Engine",
+        "FaceBook": "FaceBook",
+        "Insta": "Instagram",
+        "Youtube": "Youtube",
+        "Linkdin": "Linkdin",
+        "NewsLetter": "Newsletter",
+        "other": "Other",
+        "AskPersonText": "Ask Sjoerd a question",
+        "AskPersonPlacholder": "For example: Hi Sjoerd, how do I hang up my logo?",
+        "StraightViewText": "Send a straight-on view of the wall <span>(voorbeeld)</span>",
+        "formButtonQoute": "<div class=\"box_head\">Your sample will appear here within:</div>\n<div class=\"time\">\n  <span id=\"timer\">2:59</span> hours\n</div>",
+        "formButtonQouteImage": "shopify://shop_images/accae7d9ba33cbcd362459e523457bfe.webp",
+        "RemoveWallPhotoText": "Remove wall photo",
+        "EndButtonText": "Send question",
+        "timerHmtl": "Upload today and receive your logo on {month} {day}. Still <b id=\"new_timer\">00:00:00</b> valid."
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": false,
+            "show_reviews_badge": false,
+            "show_share_buttons": false
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "variant_image",
+            "variant_image_options": "",
+            "show_quantity_selector": false,
+            "show_taxes_included": true,
+            "show_inventory_quantity": false,
+            "low_inventory_threshold": 0,
+            "progress_bar_max_value": 50
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "ce70369f-34ae-4ab0-b267-cd943956ab37": {
+          "type": "description",
+          "settings": {
+            "display_mode": "show_all"
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "buy_buttons",
+        "ce70369f-34ae-4ab0-b267-cd943956ab37"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_size": "medium",
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "zoom_effect": "outside",
+        "carousel_effect": "fade"
+      }
+    },
+    "logo_list_B9Emxy": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_gLnfBg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/brews.png",
+            "link": ""
+          }
+        },
+        "logo_fxaTDb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fitness.png",
+            "link": ""
+          }
+        },
+        "logo_Q7AfkG": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/flex.png",
+            "link": ""
+          }
+        },
+        "logo_4MykJ4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/redbull.webp",
+            "link": ""
+          }
+        },
+        "logo_aLVFiR": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/brews.png",
+            "link": ""
+          }
+        },
+        "logo_Rz3E9k": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fitness.png",
+            "link": ""
+          }
+        },
+        "logo_r3J8Wb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/flex.png",
+            "link": ""
+          }
+        },
+        "logo_mDDkRN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/redbull.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_gLnfBg",
+        "logo_fxaTDb",
+        "logo_Q7AfkG",
+        "logo_4MykJ4",
+        "logo_aLVFiR",
+        "logo_Rz3E9k",
+        "logo_r3J8Wb",
+        "logo_mDDkRN"
+      ],
+      "settings": {
+        "title": "500+ businesses preceded you",
+        "link_title": "",
+        "link": ""
+      }
+    },
+    "builder_google_review_DrE9hn": {
+      "type": "builder-google-review",
+      "blocks": {
+        "image_with_review_EBjEKc": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Codigital",
+            "user-discription": "\"A high-quality product that provides a unique, top-tier appearance. Exactly what we were looking for at Codigital.\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC04063_1_2048x2048.jpg?v=1730736993"
+          }
+        },
+        "image_with_review_ke3UR6": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Kevin Liam",
+            "user-discription": "“Absolutely great! We are very happy with it!”",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/image_2048x2048.jpg?v=1730736991"
+          }
+        },
+        "image_with_review_kKVgR4": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Joe Biondo III",
+            "user-discription": "\" The design process was very easy, and our sign was shipped in a timely manner. The quality of our sign was excellent and very easy to install. I would definitely recommend Neonsfeer for all your neon sign needs.\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/image_1_2048x2048.jpg?v=1730736991"
+          }
+        },
+        "image_with_review_6kFcy4": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Ashley",
+            "user-discription": "\"We ordered a sign for our companies open house and I am shocked how quickly it was shipped to us and how great it looks! It had all necessary parts to hang and a remote as well with all setting options. We are looking to order more for other offices in various states!\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_-_Copy_2048x2048.png?v=1730736899"
+          }
+        },
+        "image_with_review_kUTc3a": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Daniel",
+            "user-discription": "\"The quality is insane! makes my office space look amazing and the glow from it makes me feel like I'm in time square! \"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
+          }
+        },
+        "image_with_review_Ncw38p": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Angela",
+            "user-discription": "\"Few issues with delivery with fed ex but sorted out in the end.\nCommunication with Neonsfeer was second to none sorted out professionally by Olivia thankyou by the way.\nOverall the product is very good quality and I love it .\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_2048x2048.png?v=1712056892"
+          }
+        },
+        "image_with_review_rqEapE": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Mathias",
+            "user-discription": "\"I purchased a Neon Sign for my bar from Neonsfeer. I selected the company initially because the online tool was excellent. I then spoke to several people all of whom were very helpful and professional. I needed to sign quite quickly and it came earlier than expected and I am delighted with the quality of what I received\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
+          }
+        },
+        "image_with_review_7eD6wY": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Eric Williams",
+            "user-discription": "\"Man, these guys had my sign made and shipped to me in 9 days . I am beyond happy with my new warm white neon signage. That warm whiteis bright and the craftmanship is superb! I highly recommend Neonsfeer to anyone in the market for a beautiful neon sign for their business. Matter of fact I'm ordering myself another one but this one in white \"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_58_1_6_2048x2048.png?v=1712056876"
+          }
+        },
+        "image_with_review_RYYfjw": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Physiotherapie Schafflund",
+            "user-discription": "\"I ordered a neon sign from Neonsfeer for my physiotherapy clinic, and I love it! It adds a vibrant and welcoming touch to the space. The quality is fantastic, and the delivery was quick. Highly recommended!\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_61_2048x2048.png?v=1730736899"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_review_EBjEKc",
+        "image_with_review_ke3UR6",
+        "image_with_review_kKVgR4",
+        "image_with_review_6kFcy4",
+        "image_with_review_kUTc3a",
+        "image_with_review_Ncw38p",
+        "image_with_review_rqEapE",
+        "image_with_review_7eD6wY",
+        "image_with_review_RYYfjw"
+      ],
+      "settings": {
+        "spacing": "",
+        "title": "What our customers say"
+      }
+    },
+    "image_card_custom_form_YEp9Hf": {
+      "type": "image-card-custom-form",
+      "blocks": {
+        "card_zpdrxH": {
+          "type": "card",
+          "settings": {
+            "number": "<svg width=\"9\" height=\"24\" viewbox=\"0 0 9 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.876 0.0399981V23.5H4.116V5.004L0.75 7.214V2.624L4.592 0.0399981H8.876Z\" fill=\"white\"></path>\n</svg>",
+            "upload_image": "shopify://shop_images/Rectangle_126.jpg",
+            "card_title": "Submit Your <span>logo</span>",
+            "card_content": "Complete our 1-minute form, select your logo and receive a quote within 3 hours.",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/ce4dd3b12b8f4a43a25a9cfebfa61297.mp4"
+          }
+        },
+        "card_kA69PE": {
+          "type": "card",
+          "settings": {
+            "number": "<svg width=\"15\" height=\"25\" viewbox=\"0 0 15 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.718 20.488V24.5H0.234V21.44L8.088 12.192C9.55 10.492 10.264 9.064 10.264 7.534C10.264 5.63 8.87 4.678 7.34 4.678C5.742 4.678 4.552 5.664 4.416 7.534H0.2C0.2 3.488 3.532 0.733998 7.578 0.733998C11.794 0.733998 14.99 3.658 14.99 7.534C14.99 10.628 12.95 13.042 11.454 14.81L6.626 20.488H14.718Z\" fill=\"white\"></path>\n</svg>",
+            "upload_image": "shopify://shop_images/Rectangle_127.jpg",
+            "card_title": "Receive a <span>free</span> sample design within <span>3 hours</span>",
+            "card_content": "We will create a sample design with your logo and -if uploaded- your wall incorporated into it.",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/716afc504ddf4100be096956282d6349.mp4"
+          }
+        },
+        "card_NpBcRx": {
+          "type": "card",
+          "settings": {
+            "number": "<svg width=\"17\" height=\"25\" viewbox=\"0 0 17 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M6.096 14.402V10.39H7.83C9.768 10.39 11.094 9.37 11.094 7.398C11.094 5.834 9.904 4.678 8.17 4.678C6.504 4.678 5.45 5.732 5.246 7.194H1.03C1.2 3.352 4.362 0.733998 8.408 0.733998C12.692 0.733998 15.82 3.692 15.82 7.194C15.82 9.846 14.188 11.478 12.624 12.328C14.63 13.314 16.16 15.15 16.16 17.938C16.16 21.746 13.508 24.806 8.68 24.806C3.716 24.806 0.894 22.018 0.724 18.21H4.906C5.144 19.706 6.266 20.794 8.374 20.794C10.278 20.794 11.434 19.434 11.434 17.7C11.434 15.626 10.244 14.402 7.83 14.402H6.096Z\" fill=\"white\"></path>\n</svg>",
+            "upload_image": "shopify://shop_images/Rectangle_128.png",
+            "card_title": "Order and receive your NeonLogo within <span>8 days</span>",
+            "card_content": "We will create a sample design with your logo and -if uploaded- your wall incorporated into it.",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/19630dc0f0ae4166b1d1cce0db8215e6.mp4"
+          }
+        },
+        "card_7rYkV9": {
+          "type": "card",
+          "settings": {
+            "number": "<svg width=\"19\" height=\"24\" viewbox=\"0 0 19 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.83 0.0399981H14.032L6.722 16.122H11.21V10.138H15.97V16.122H18.112V20.168H15.97V23.5H11.21V20.168H0.806V16.87L8.83 0.0399981Z\" fill=\"white\"></path>\n</svg>",
+            "upload_image": "shopify://shop_images/Rectangle_128_1.jpg",
+            "card_title": "Hang your NeonLogo. It's only <span>5 ​​minutes work</span>",
+            "card_content": "We will create a sample design with your logo and -if uploaded- your wall incorporated into it.",
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/3de6221327624656b1f1bd4d40ad6e6f.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "card_zpdrxH",
+        "card_kA69PE",
+        "card_NpBcRx",
+        "card_7rYkV9"
+      ],
+      "settings": {
+        "add_class": "",
+        "title": "This is how it works",
+        "slide_show": 4
+      }
+    },
+    "image_with_text_sale_page_GcYeXQ": {
+      "type": "image-with-text-sale-page",
+      "settings": {
+        "custom_class": "image_text_sec",
+        "PaddingImage": "25px 25px 18px",
+        "image_position": "right",
+        "image_width": 50,
+        "title": "",
+        "content": "Order Your Custom Neon",
+        "list_one": "<p>Delivered in <strong>8 working days</strong></p>",
+        "list_two": "<p>Includes a <strong>free</strong> remote control</p>",
+        "list_three": "<p>Now with an exclusive <strong>25% discount</strong></p>",
+        "add_to_cart_btn_text": "",
+        "button_text": "Request a quote",
+        "button_link": "#",
+        "button_text_2": "Contact us",
+        "button_link_2": "shopify://pages/contact",
+        "class": "",
+        "Video_url": "https://cdn.shopify.com/videos/c/o/v/ce4dd3b12b8f4a43a25a9cfebfa61297.mp4"
+      }
+    },
+    "youtube_review_slider_pynaLL": {
+      "type": "youtube-review-slider",
+      "blocks": {
+        "youtube_video_tY4DiC": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/rmAXhKwI-jU?si=zjwsPjs6XfYL-YJd"
+          }
+        },
+        "youtube_video_k3B9gf": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/nQ3CLUjMPXE?si=CmqxVsmXjn3aykYz"
+          }
+        },
+        "youtube_video_Bdhych": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/Y_VktCCtSjE?si=Jp95tz0A87yHWynv"
+          }
+        },
+        "youtube_video_ehRknR": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/iSYjCttYcrc?si=5ukWqdbZmtEl0vvX"
+          }
+        },
+        "youtube_video_eae9FY": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
+          }
+        },
+        "youtube_video_bFH7Wh": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/D_rUmnRczuw?si=l8vJe8aiB-f1HjJb"
+          }
+        },
+        "youtube_video_ckCeJj": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/R7u1pzMz2Xo?si=BW4kLhHAB7AHIHyO"
+          }
+        }
+      },
+      "block_order": [
+        "youtube_video_tY4DiC",
+        "youtube_video_k3B9gf",
+        "youtube_video_Bdhych",
+        "youtube_video_ehRknR",
+        "youtube_video_eae9FY",
+        "youtube_video_bFH7Wh",
+        "youtube_video_ckCeJj"
+      ],
+      "settings": {
+        "spacing": "",
+        "title": "Client videos",
+        "slide_show": 4
+      }
+    },
+    "faq_new_jMPh8B": {
+      "type": "faq-new",
+      "blocks": {
+        "tab_3n8cFR": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Product information"
+          }
+        },
+        "tab_VXcJ3a": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Delivery times"
+          }
+        },
+        "tab_qkVCfH": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Installation"
+          }
+        },
+        "tab_46zapw": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Warranty"
+          }
+        },
+        "accordion_item_jQ3QfE": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "How much does a custom neon cost?",
+            "accordion_content": "Prices vary based on design, size and LED length. Text only starts at around €220. For exact costs, please submit your design for a quote.",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_JjJhbw": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What type of LED lighting is used?",
+            "accordion_content": "EvoLux V23, developed in 2023, with a lifespan of 100,000 hours and 1,500 lumens—the best on the market.",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_CweJzh": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Accordion Title",
+            "accordion_content": "Are there any costs associated with requesting a quote and sample?",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_ARAezc": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Do the examples match the final boards?",
+            "accordion_content": "Expect precision. Our design previews reflect the final product. From color to text, trust us to match your vision. Design with confidence with us. The final product will be created as the preview, but because it is handcrafted, it may vary slightly to ensure the best possible result",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_R6XbfL": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What color choices are available?",
+            "accordion_content": "Available colour options? Yes, all logos can be converted to neon and we offer 12 LED neon colours plus an RGB option. The available colours are: White, Warm White, Pink, Light Pink, Blue, Ice Blue, Turquoise, Green, Red, Orange, Yellow and Purple.",
+            "tab_association": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_3n8cFR",
+        "tab_VXcJ3a",
+        "tab_qkVCfH",
+        "tab_46zapw",
+        "accordion_item_jQ3QfE",
+        "accordion_item_JjJhbw",
+        "accordion_item_CweJzh",
+        "accordion_item_ARAezc",
+        "accordion_item_R6XbfL"
+      ],
+      "settings": {
+        "add_class": "",
+        "title": "Frequently Asked Questions",
+        "description": "View our frequently asked questions for answers about specific product features, use and maintenance.",
+        "btn": "View all questions."
+      }
+    },
+    "image_with_text_sale_page_pDGEnC": {
+      "type": "image-with-text-sale-page",
+      "settings": {
+        "custom_class": "image_text_sec",
+        "PaddingImage": "25px 25px 18px",
+        "image_position": "right",
+        "image_width": 50,
+        "title": "",
+        "content": "Order Your Custom Neon",
+        "list_one": "<p>Delivered in <strong>8 working days</strong></p>",
+        "list_two": "<p>Includes a <strong>free</strong> remote control</p>",
+        "list_three": "<p>Now with an exclusive <strong>25% discount</strong></p>",
+        "add_to_cart_btn_text": "",
+        "button_text": "Request a quote",
+        "button_link": "#",
+        "button_text_2": "Contact us",
+        "button_link_2": "shopify://pages/contact",
+        "class": "",
+        "Video_url": "https://cdn.shopify.com/videos/c/o/v/ce4dd3b12b8f4a43a25a9cfebfa61297.mp4"
+      }
+    }
+  },
+  "order": [
+    "custom_step_form_section_TNdRMm",
+    "main",
+    "logo_list_B9Emxy",
+    "builder_google_review_DrE9hn",
+    "image_card_custom_form_YEp9Hf",
+    "image_with_text_sale_page_GcYeXQ",
+    "youtube_review_slider_pynaLL",
+    "faq_new_jMPh8B",
+    "image_with_text_sale_page_pDGEnC"
+  ]
+}

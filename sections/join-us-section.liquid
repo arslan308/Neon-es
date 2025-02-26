@@ -1,0 +1,47 @@
+<section class="offer-sec">
+  <div class="container">
+    <h2 class="offer-title">{{ section.settings.section_title }}</h2>
+    <div class="d-flex">
+      <a href="{{section.settings.button_url }}" class="offer-btn-first">{{ section.settings.button_text }}</a>
+      <a href="{{section.settings.button_url2 }}" class="offer-btn">{{ section.settings.button_text2 }}</a>
+    </div>
+  </div>
+</section>
+{% schema %}
+    {
+        "name": "Join Us",
+        "settings": [
+            {
+            "type": "text",
+            "id": "section_title",
+            "label": "section Text"
+            },
+            {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+            },
+            {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button Link"
+            },
+            {
+            "type": "text",
+            "id": "button_text2",
+            "label": "second Button Text"
+            },
+            {
+            "type": "url",
+            "id": "button_url2",
+            "label": "second Button Link"
+            }
+        ],
+        "presets": [
+        {
+          "name": "Join Us",
+          "settings": {}
+        }
+      ]
+    }
+{% endschema %}

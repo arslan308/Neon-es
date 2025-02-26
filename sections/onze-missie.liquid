@@ -1,0 +1,47 @@
+<section class="onze-missie">
+  <div class="missie-bg">
+    <div class="container">
+        {% if section.settings.section_image %}
+            <img class="bag-image-onze"  loading="lazy"
+            src="{{ section.settings.section_image | img_url: '600x600' }}" 
+            srcset="{{ section.settings.section_image | img_url: '600x600' }} 600w,
+                    {{ section.settings.section_image | img_url: '1200x1200' }} 1200w"
+            sizes="(max-width: 600px) 100vw, 50vw" 
+            alt="Section Image">
+        {% endif %}
+      <h3>{{ section.settings.section_title }}</h3>
+      <p>{{ section.settings.section_description }}</p>
+    </div>
+  </div>
+</section>
+<style>
+    .onze-missie .bag-image-onze{width: 100%;}
+</style>
+{% schema %}
+    {
+        "name": "Top Image with Text",
+        "settings": [
+            {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title"
+            },
+            {
+            "type": "text",
+            "id": "section_description",
+            "label": "Section Description"
+            },
+            {
+            "type": "image_picker",
+            "id": "section_image",
+            "label": "Section Image"
+            }
+        ],
+        "presets": [
+        {
+          "name": "Top Image with Text",
+          "settings": {}
+        }
+      ]
+    }
+    {% endschema %}

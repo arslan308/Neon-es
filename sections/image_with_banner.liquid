@@ -1,0 +1,202 @@
+<link rel="stylesheet" href="{{ 'custom-customer-section.css' | asset_url }}">
+
+<section class="section Reviews builder_USSS image-and-text-cst" data-section-id="{{ section.id }}" data-section-type="image-with-text" {% if section.settings.bgimage != blank %}style="background-image:url({{ section.settings.bgimage | img_url:"master" }})"{% endif %}>
+    <div class="container">
+      {%- capture image -%}
+        <div class="image-with-text__image-containerx" {% comment %}style="width: {{ section.settings.image_width }}%;"{% endcomment %}>
+          {%- if section.settings.image -%}
+            <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: section.settings.image.aspect_ratio }}%">
+              {%- capture supported_sizes -%}{%- render 'image-size', sizes: '300,400,500,600,700,800,900,1000,1100,1200', image: section.settings.image -%}{%- endcapture -%}
+              {%- assign image_url_3 = section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', class: 'image-3', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+              
+              <div class="reviews">
+                {{image_url_3}}
+                <div class="review_box box_1 ">
+                    <div class="review_profile"> 
+                   {{ section.settings.first_user_profile | image_url: width: 1500 | image_tag }}
+                    </div>
+                    <h1>{{ section.settings.first_user_name }} <img class="lazyload blue_tick" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/is_authorized.251bdd339c2e6ec6929f.png?v=1689758121"></h1>
+                    <img class="lazyload review_star" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Frame_8870.png?v=1688533619">
+                    <p>{{ section.settings.first_user_description }}</p>
+                  <img class="lazyload review_Logo" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/image-removebg-preview.png?v=1689752173">
+                </div>
+                <div class="review_box box_2">
+                    <div class="review_profile"> 
+                   {{ section.settings.second_user_profile | image_url: width: 1500 | image_tag }}
+                    </div>
+                    <h1>{{ section.settings.second_user_name }} <img class="lazyload blue_tick" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/is_authorized.251bdd339c2e6ec6929f.png?v=1689758121"></h1>
+                    <img class="lazyload review_star" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Frame_8870.png?v=1688533619">
+                    <p>{{ section.settings.second_user_description }}</p>
+                  <img class="lazyload review_Logo" src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/Trustpilot_star_green_RGB_1.png?v=1689752173">
+                </div>
+               </div>
+              <noscript>
+                <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.image.alt | escape }}">
+              </noscript>
+            </div>
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      {%- endcapture -%}
+  
+      {%- capture text -%}
+        <div class="image-with-text__text-container" {% if section.settings.bgimage1 != blank %} style="background-image:url({{ section.settings.bgimage1 | img_url:"master" }})"{% endif %}>
+          <div class="image-with-text__text-aligner">
+            {%- if section.settings.title != blank -%}
+              <h2 class="heading h3">{{ section.settings.title | escape }}</h2>
+            {%- endif -%}
+  
+            <div class="rte">
+              {{ section.settings.content }}
+  
+              {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
+                <a href="{{ section.settings.button_link }}" class="button button--primary" link-title="{{section.settings.class}}" >{{ section.settings.button_text | escape }} <svg width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.4608 5.04014V0.0400391L29.9608 6.04004L23.4608 12.04V7.04014H0.0391235V5.04014H23.4608Z" fill="white"/></svg>
+                </a>
+              {%- endif -%}
+            </div>
+            {%- if section.settings.reting-img != blank -%}
+              <img src="{{ section.settings.reting-img | img_url: '2048x2048' }}">
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endcapture -%}
+  
+      <div class="image-with-text custom-section-image-and-text">
+        {%- if section.settings.image_position == 'left' -%}
+          {{ image }}
+          {{ text }}
+        {%- else -%}
+          {{ text }}
+          {{ image }}
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+  
+                  
+  
+  {% schema %}
+  {
+    "name": "Image With Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bgimage",
+        "label": "Backgound Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "1200 x 800px .jpg recommended"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "range",
+        "id": "image_width",
+        "min": 20,
+        "max": 70,
+        "step": 5,
+        "unit": "%",
+        "label": "Image width",
+        "default": 50
+      },
+      {
+        "type": "image_picker",
+        "id": "bgimage1",
+        "label": "Backgound Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Your title"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>Use this text to share information about your brand with your customers.<br>Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text",
+        "default": "Our products"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link",
+        "default": "/collections/all"
+      },
+      {
+        "type": "image_picker",
+        "id": "reting-img",
+        "label": "Reting Image"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Custom Attribute"
+      },
+      {
+        "type": "image_picker",
+        "id": "first_user_profile",
+        "label": "First USer Profile"
+      },
+      {
+        "type": "text",
+        "id": "first_user_name",
+        "label": "First USer Name",
+        "default": "Quick links"
+      },
+      {
+        "type": "textarea",
+        "id": "first_user_description",
+        "label": "First USer Description",
+        "default": "Welcome to my shop!"
+      },
+          {
+        "type": "image_picker",
+        "id": "second_user_profile",
+        "label": "Second USer Profile"
+      },
+      {
+        "type": "text",
+        "id": "second_user_name",
+        "label": "Second USer Name",
+        "default": "Quick links"
+      },
+      {
+        "type": "textarea",
+        "id": "second_user_description",
+        "label": "Second USer Description",
+        "default": "Welcome to my shop!"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Image With Banner",
+        "settings": {}
+      }
+    ]
+  }
+  {% endschema %}

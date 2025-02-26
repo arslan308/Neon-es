@@ -1,0 +1,1122 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17346169674b4f063a": {
+      "type": "apps",
+      "blocks": {
+        "sign_customiser_neon_customiser_Wj4JiE": {
+          "type": "shopify://apps/sign-customiser/blocks/neon-customiser/29c3b558-f454-440f-b53e-26c5e867a515",
+          "settings": {
+            "customiser_id": "2092",
+            "experimental": false,
+            "experimental_iframe": false,
+            "initial_screen": "VISUALISER",
+            "scroll_order": false,
+            "height": 100,
+            "height_reduction": 60,
+            "height_reduction_mobile": 220,
+            "price_box_options": "bottom",
+            "rtl": false
+          }
+        }
+      },
+      "block_order": [
+        "sign_customiser_neon_customiser_Wj4JiE"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "custom_liquid_xG6Dqr": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "settings": {
+        "title": "",
+        "include_margins": false,
+        "liquid": "<style>\n#{{section.id}} {\n  visibility: hidden !important;\n}\n</style>\n<script>\nwindow.addEventListener('load', function() {\nsetTimeout(() => {\nconsole.log(\"started::::\");\nconst shippingDiv = document.querySelector('div.tw-w-auto.tw-text-main-price');\n\nconst priceSpan = document.getElementById('P0-1');\n\nif (shippingDiv && priceSpan) {\n  const shippingDivClone = shippingDiv.cloneNode(true);\n  \n  priceSpan.insertAdjacentElement('afterend', shippingDivClone);\n}\n    }, 2000);\n\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n\n});\n</script>"
+      }
+    },
+    "custom_liquid_aRgthj": {
+      "type": "custom-liquid",
+      "settings": {
+        "title": "",
+        "include_margins": false,
+        "liquid": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n\n<style>\n#{{section.id}} {\n  visibility: hidden !important;\n}\n#neon-customiser-app .npc-frame-preview .tw-text-right{\n display:none!important;\n}\n#neon-customiser-app .npc-sidebar-price-box .tw-hidden {\n    display: flex!important;\n    margin: 0 !important;\n}\n#neon-customiser-app .npc-sidebar-price-box .npc-price{\n    display: flex;\n    flex-direction: row;\n    align-content: center;\n    justify-content: center;\n    align-items: center;\n    gap: 6px;\n    margin-bottom: .7rem;\n}\n#neon-customiser-app .npc-sidebar-price-box .tw-w-auto.tw-text-main-price{\n    font-size: 14px;\n    font-weight: 400;\n}\n#neon-customiser-app .npc-selections-font .npc-selections-font-list .npc-list {\n    grid-template-columns: repeat(4,minmax(0px,1fr));\n}\nbody {\n  touch-action: pan-x pan-y;\n  overflow-y: visible;\n  overflow-x: hidden;\n}\n  #neon-customiser-app .npc-selections-size .npc-list {\n    display: grid;\n    grid-template-columns: auto auto auto auto;\n    grid-auto-rows: auto;\n    gap: 4px;\n  }\n#neon-customiser-app .npc-selections-size .npc-selections-size-list .npc-selection-button-subtitle {\n    display: none;\n}\n#neon-customiser-app .npc-sidebar-price-button-container > button {\n    border-radius: 40px;\n}\n\n.sc-gUQvok.gOXayL, .sc-fXeWAj button.sc-gUQvok {\n    background: #FF13A7;\n}\n\n.sc-kNzDjo.gbMmMx {\n    background: #7853F7;\n    color: white !important;\n    padding: 10px 40px 10px 40px !important;\n    top: 0px !important;\n    right: 0px !important;\n    margin-top: -10px;\n    position: absolute;\n}\nspan.sc-hWBuOZ.dUWCbn.npc-price.npc-frame-price , .sc-hUplSX.hIgGXI {\n    color: #fff;\n}\n.sc-gIDmLj:before {\n    border-radius: 50px !important;\n}\n#neon-customiser-app .npc-selections-color .npc-preview-selector span {\n    width: 100% !important;\n    height: 45px !important;\n    border-radius: 50px !important;\n}\n#neon-customiser-app .npc-selections-color .npc-selections-color-previews .npc-list {\n    grid-template-columns: repeat(7, minmax(0px, 1fr)) !important;\n}\n.npc-sidebar-price-button-container button {\n    background: #ff12a6;\n}\n\n\n@media screen and (max-width: 1024px) {\n#shopify-section-header,\n#shopify-section-header-announcement-bar {\n    position: relative !important;\ntop: 0px;\n}\nbody #main {\n    padding-top: 0px !important;\n}\n#neon-customiser-app .npc-sidebar-price-box.display-mode {\n    position: fixed;\n    bottom: 0px;\n    z-index: 999;\n    background: #7853f7;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 6px 20px;\n}\n.sc-bLdqUH.cTEldh > div {\n    background: #7853f7;\n    padding: 10px;\n    position: absolute;\n    top: -17px;\n    right: -18px;\n}\nspan.sc-cfJLRR.dbFiWF, .sc-jibziO.cFuHFf {\n    color: #fff;\n}\n.sc-gyElHZ.ebtMUF {\n    display: block !important;\n    margin: 0;\n    line-height: 20px;\n}\nspan.sc-ksdxgE.bLkPPz.npc-price.npc-sidebar-price span {\n    font-size: 24px !important;\n}\n.fPCWtX {\n    height: 30vh;\n}\n.sc-ekrjqK.qIHKz {\n    display: none;\n}\n.npc-sidebar-price-box .sc-gUQvok {\n    padding: 16px 60px !important;\n}\nspan.sc-ksdxgE.bLkPPz.npc-price.npc-sidebar-price {\n    display: grid;\n}\nspan.sc-ksdxgE.bLkPPz.npc-price.npc-sidebar-price .size {\n    font-size: 16px !important;\n    font-weight: 500;\n}\n.hvEYaL {\n    flex-direction: column-reverse !important;\n}\na.sc-kBzgEd.bMNQNk.npc-link--custom-design {\n    margin: 0px 0px 10px 0;\n}\n\n.npc-price span {\n    font-size: 22px;\n}\n.tw-flex.tw-items-center.tw-justify-end.rtl\\:tw-justify-start {\n    display: none;\n}\n.npc-sidebar-price-button-container button {\n    padding: 17px 50px;\n    font-size: 16px;\n}\n}\n\n@media screen and (min-width: 1024px) {\n#neon-customiser-app .npc-selections-font .npc-selections-font-list .npc-list {\n    grid-template-columns: repeat(3,minmax(0px,1fr));\n}\nspan.sc-ksdxgE.bLkPPz.npc-price.npc-sidebar-price {\n    display: none;\n}\n.npc-sidebar-price-box .tw-hidden {\n    display: none !important;\n}\n}\n@media screen and (min-width: 1400px) {\n#neon-customiser-app .npc-sidebar {\n    max-width: 500px !important;\n}\n}\n</style>"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": false,
+            "show_reviews_badge": false,
+            "show_share_buttons": true
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "swatch",
+            "variant_image_options": "",
+            "show_quantity_selector": true,
+            "show_taxes_included": false,
+            "show_inventory_quantity": false,
+            "low_inventory_threshold": 0,
+            "progress_bar_max_value": 50
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "display_mode": "show_all"
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "buy_buttons",
+        "description"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_size": "small",
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "zoom_effect": "outside",
+        "carousel_effect": "fade"
+      }
+    },
+    "builder_google_review_i44VWE": {
+      "type": "builder-google-review",
+      "blocks": {
+        "image_with_review_hbKyDC": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Codigital",
+            "user-discription": "\"A high-quality product that provides a unique, top-tier appearance. Exactly what we were looking for at Codigital.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/CleanShot_2025-01-19_at_11.37.25_2x_ef3b0e11-c7c6-4a1c-a7a4-6a7031deb9c2.png?v=1737283354"
+          }
+        },
+        "image_with_review_GxrjwH": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Kevin Liam",
+            "user-discription": "“Absolutely great! We are very happy with it!”",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/image_2048x2048.jpg?v=1730736991"
+          }
+        },
+        "image_with_review_C7M4DD": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Joe Biondo III",
+            "user-discription": "\" The design process was very easy, and our sign was shipped in a timely manner. The quality of our sign was excellent and very easy to install. I would definitely recommend Neonsfeer for all your neon sign needs.\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/image_1_2048x2048.jpg?v=1730736991"
+          }
+        },
+        "image_with_review_nzKnTH": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Ashley",
+            "user-discription": "\"We ordered a sign for our companies open house and I am shocked how quickly it was shipped to us and how great it looks! It had all necessary parts to hang and a remote as well with all setting options. We are looking to order more for other offices in various states!\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_-_Copy_2048x2048.png?v=1730736899"
+          }
+        },
+        "image_with_review_4DnYMV": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Daniel",
+            "user-discription": "\"The quality is insane! makes my office space look amazing and the glow from it makes me feel like I'm in time square! \"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
+          }
+        },
+        "image_with_review_rqfc9H": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Angela",
+            "user-discription": "\"Few issues with delivery with fed ex but sorted out in the end.\nCommunication with Neonsfeer was second to none sorted out professionally by Olivia thankyou by the way.\nOverall the product is very good quality and I love it .\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_2048x2048.png?v=1712056892"
+          }
+        },
+        "image_with_review_mqX64g": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Mathias",
+            "user-discription": "\"I purchased a Neon Sign for my bar from Neonsfeer. I selected the company initially because the online tool was excellent. I then spoke to several people all of whom were very helpful and professional. I needed to sign quite quickly and it came earlier than expected and I am delighted with the quality of what I received\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
+          }
+        },
+        "image_with_review_69Fm9y": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Eric Williams",
+            "user-discription": "\"Man, these guys had my sign made and shipped to me in 9 days . I am beyond happy with my new warm white neon signage. That warm whiteis bright and the craftmanship is superb! I highly recommend Neonsfeer to anyone in the market for a beautiful neon sign for their business. Matter of fact I'm ordering myself another one but this one in white \"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_58_1_6_2048x2048.png?v=1712056876"
+          }
+        },
+        "image_with_review_TyXUW6": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Physiotherapie Schafflund",
+            "user-discription": "\"I ordered a neon sign from Neonsfeer for my physiotherapy clinic, and I love it! It adds a vibrant and welcoming touch to the space. The quality is fantastic, and the delivery was quick. Highly recommended!\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/schlaf.png?v=1737283260"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_review_hbKyDC",
+        "image_with_review_GxrjwH",
+        "image_with_review_C7M4DD",
+        "image_with_review_nzKnTH",
+        "image_with_review_4DnYMV",
+        "image_with_review_rqfc9H",
+        "image_with_review_mqX64g",
+        "image_with_review_69Fm9y",
+        "image_with_review_TyXUW6"
+      ],
+      "settings": {
+        "spacing": "",
+        "title": "What our customers say"
+      }
+    },
+    "color_video_J8kqgk": {
+      "type": "color-video",
+      "blocks": {
+        "installation_color_video_HJm9UV": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "first-vid",
+            "overlayimage": "shopify://shop_images/1-ezgif.com-avif-to-png-converter.png",
+            "overlayimageplay": "shopify://shop_images/Play.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/05fc3e7981694bcb9571e5577332ae84.mp4",
+            "Heading-video": "Red"
+          }
+        },
+        "installation_color_video_LLK3fb": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "two-vid",
+            "overlayimage": "shopify://shop_images/2_2.png",
+            "overlayimageplay": "shopify://shop_images/Play_1.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/2bcbfd3bef0d4e4b9438f9808323306c.mp4",
+            "Heading-video": "Orange"
+          }
+        },
+        "installation_color_video_FgmkK7": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "three-vid",
+            "overlayimage": "shopify://shop_images/3_1.png",
+            "overlayimageplay": "shopify://shop_images/Play_2.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/4ee0c93c0aed46859809bc4c08e3ac32.mp4",
+            "Heading-video": "White"
+          }
+        },
+        "installation_color_video_6NY8Ba": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "four-vid",
+            "overlayimage": "shopify://shop_images/4_1.png",
+            "overlayimageplay": "shopify://shop_images/Play_3.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/f823214d17e546c7854c039ae4136e08.mp4",
+            "Heading-video": "Warm White"
+          }
+        },
+        "installation_color_video_3niGd4": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "five-vid",
+            "overlayimage": "shopify://shop_images/5_1_c1de8d45-1231-4be1-9381-cf4f7b45a543.png",
+            "overlayimageplay": "shopify://shop_images/Play_4.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/f861f7828d01490c8ea286944b360eaa.mp4",
+            "Heading-video": "Turquoise"
+          }
+        },
+        "installation_color_video_ziRRfY": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "six-vid",
+            "overlayimage": "shopify://shop_images/6f.png",
+            "overlayimageplay": "shopify://shop_images/Play_5.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/7273f9d3583b41b3a09313dde3c93cec.mp4",
+            "Heading-video": "Green"
+          }
+        },
+        "installation_color_video_xRBLe9": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "seven-vid",
+            "overlayimage": "shopify://shop_images/7_1.png",
+            "overlayimageplay": "shopify://shop_images/Play_6.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/a07ad8347790470dbb90dd0cfa65684b.mp4",
+            "Heading-video": "Ice Blue"
+          }
+        },
+        "installation_color_video_tgnqAQ": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "eight-vid",
+            "overlayimage": "shopify://shop_images/8_1_e56701bd-7e7c-40ed-9e32-122d80ecb626.png",
+            "overlayimageplay": "shopify://shop_images/Play_7.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/57c368bca3194196968707e5d0cde4c7.mp4",
+            "Heading-video": "Blue"
+          }
+        },
+        "installation_color_video_wDcjy9": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "nine-vid",
+            "overlayimage": "shopify://shop_images/9.png",
+            "overlayimageplay": "shopify://shop_images/Play_8.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/9dde5b26e8f844fd96157fd1e1a58255.mp4",
+            "Heading-video": "Yellow"
+          }
+        },
+        "installation_color_video_PttpwC": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "ten-vid",
+            "overlayimage": "shopify://shop_images/10.png",
+            "overlayimageplay": "shopify://shop_images/Play_9.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/fffa667fcc7d403cb965dfbaa97d9040.mp4",
+            "Heading-video": "Pink"
+          }
+        },
+        "installation_color_video_MJzry6": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "eleven-vid",
+            "overlayimage": "shopify://shop_images/11_eabe58fb-135c-4d42-bbf4-ed1c5118e0c4.png",
+            "overlayimageplay": "shopify://shop_images/Play_10.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/29ae0e5854be44fdb089ac702f7b3cb5.mp4",
+            "Heading-video": "Light Pink"
+          }
+        },
+        "installation_color_video_LHRH4H": {
+          "type": "installation-color-video",
+          "settings": {
+            "add-class": "last-vid",
+            "overlayimage": "shopify://shop_images/11_52493ce7-eebe-4a87-a828-bf801aec21ef_MConverter.eu.png",
+            "overlayimageplay": "shopify://shop_images/Play_11_840fc190-a417-45d9-912d-5f2299bfd704.png",
+            "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/9560e700fddc426aaace492b13f1f3b0.mp4",
+            "Heading-video": "Purple"
+          }
+        }
+      },
+      "block_order": [
+        "installation_color_video_HJm9UV",
+        "installation_color_video_LLK3fb",
+        "installation_color_video_FgmkK7",
+        "installation_color_video_6NY8Ba",
+        "installation_color_video_3niGd4",
+        "installation_color_video_ziRRfY",
+        "installation_color_video_xRBLe9",
+        "installation_color_video_tgnqAQ",
+        "installation_color_video_wDcjy9",
+        "installation_color_video_PttpwC",
+        "installation_color_video_MJzry6",
+        "installation_color_video_LHRH4H"
+      ],
+      "settings": {
+        "content_heading": "Available colours",
+        "content": "Discover how our 12 vibrant colours shine in real life"
+      }
+    },
+    "2645e059-91e1-450a-baf5-5016c05b782b": {
+      "type": "product-video-and-text",
+      "blocks": {
+        "99783e49-23ae-4787-ac31-2211f9bce2cd": {
+          "type": "order",
+          "settings": {
+            "title": "Mounting material",
+            "subtitle": "",
+            "logo": "shopify://shop_images/Frame_8550_1.svg"
+          }
+        },
+        "42d16048-b650-473e-935b-c2111d2be56c": {
+          "type": "order",
+          "settings": {
+            "title": "Durable adapter",
+            "subtitle": "",
+            "logo": "shopify://shop_images/Frame_8549_1.svg"
+          }
+        },
+        "8f911d68-0753-493c-b5f9-ed51feffda95": {
+          "type": "order",
+          "settings": {
+            "title": "Remote control",
+            "subtitle": "",
+            "logo": "shopify://shop_images/Frame_8548_1.svg"
+          }
+        },
+        "3d05f5b5-2d26-4b21-a112-85ea23160658": {
+          "type": "order",
+          "settings": {
+            "title": "Transparant Cable",
+            "subtitle": "",
+            "logo": "shopify://shop_images/Frame_8547_184a148d-4c7e-4738-9fc4-24f46965fa01.svg"
+          }
+        }
+      },
+      "block_order": [
+        "99783e49-23ae-4787-ac31-2211f9bce2cd",
+        "42d16048-b650-473e-935b-c2111d2be56c",
+        "8f911d68-0753-493c-b5f9-ed51feffda95",
+        "3d05f5b5-2d26-4b21-a112-85ea23160658"
+      ],
+      "settings": {
+        "position": "left",
+        "heading": "What's in the box?",
+        "subheading": "Everything you need to hang your neon sign on your wall and create an amazing atmosphere.",
+        "img": "shopify://shop_images/Rectangle_18-svg_2.svg",
+        "video": "https://cdn.shopify.com/videos/c/o/v/ac926312bf5b444fa756b683122f34fb.mp4",
+        "v_head": "Neon up your life",
+        "v_sub": ""
+      }
+    },
+    "79591b01-5cc7-4918-a6b5-fa3b05c61bfc": {
+      "type": "our-competitors",
+      "blocks": {
+        "1d53a581-f748-4e74-b6a2-9ded112de1d8": {
+          "type": "specs",
+          "settings": {
+            "title": "Type LED",
+            "subtitle": "EvoLux V23",
+            "check": false
+          }
+        },
+        "ae92ab41-ca45-426a-8a34-fe43fb5ebdf7": {
+          "type": "specs",
+          "settings": {
+            "title": "Brightness",
+            "subtitle": "1500 lumens",
+            "check": false
+          }
+        },
+        "be688158-d6d5-4d62-bb05-977b6945872d": {
+          "type": "specs",
+          "settings": {
+            "title": "Service life",
+            "subtitle": "100,000 hrs",
+            "check": false
+          }
+        },
+        "b66adf0b-e876-4650-907c-02e6accf264b": {
+          "type": "specs",
+          "settings": {
+            "title": "Energy",
+            "subtitle": "Label A++",
+            "check": false
+          }
+        },
+        "7820ed12-0d4a-47be-acce-b5b885d44ec6": {
+          "type": "specs",
+          "settings": {
+            "title": "Dimmable",
+            "subtitle": "",
+            "check": true
+          }
+        },
+        "5c262b1a-9a31-4fba-9f0f-dafcc74ed3a9": {
+          "type": "specs",
+          "settings": {
+            "title": "100% silent",
+            "subtitle": "",
+            "check": true
+          }
+        },
+        "22048d2f-4e8e-4422-89db-6ffcf3e42522": {
+          "type": "specs",
+          "settings": {
+            "title": "Warranty",
+            "subtitle": "24 months",
+            "check": false
+          }
+        },
+        "45d66eeb-6d63-4149-a978-462e7a8bdb84": {
+          "type": "specs",
+          "settings": {
+            "title": "Experience",
+            "subtitle": "+5 years",
+            "check": false
+          }
+        },
+        "d7437bee-75b3-4743-b6df-66b44af46422": {
+          "type": "specs",
+          "settings": {
+            "title": "Connection",
+            "subtitle": "Plug",
+            "check": false
+          }
+        },
+        "dd9d14dd-9140-489f-8c28-a591168abaea": {
+          "type": "specs",
+          "settings": {
+            "title": "Production",
+            "subtitle": "In-house",
+            "check": false
+          }
+        },
+        "cc2801bf-1f1b-4a08-991e-c36a3accbba3": {
+          "type": "specs",
+          "settings": {
+            "title": "Weight",
+            "subtitle": "A few lbs",
+            "check": false
+          }
+        },
+        "e2a48f64-afe6-40aa-b8bf-b04de75b4eb7": {
+          "type": "specs",
+          "settings": {
+            "title": "Certification",
+            "subtitle": "",
+            "check": true
+          }
+        }
+      },
+      "block_order": [
+        "1d53a581-f748-4e74-b6a2-9ded112de1d8",
+        "ae92ab41-ca45-426a-8a34-fe43fb5ebdf7",
+        "be688158-d6d5-4d62-bb05-977b6945872d",
+        "b66adf0b-e876-4650-907c-02e6accf264b",
+        "7820ed12-0d4a-47be-acce-b5b885d44ec6",
+        "5c262b1a-9a31-4fba-9f0f-dafcc74ed3a9",
+        "22048d2f-4e8e-4422-89db-6ffcf3e42522",
+        "45d66eeb-6d63-4149-a978-462e7a8bdb84",
+        "d7437bee-75b3-4743-b6df-66b44af46422",
+        "dd9d14dd-9140-489f-8c28-a591168abaea",
+        "cc2801bf-1f1b-4a08-991e-c36a3accbba3",
+        "e2a48f64-afe6-40aa-b8bf-b04de75b4eb7"
+      ],
+      "settings": {
+        "bgimage": "shopify://shop_images/Group_8432_81fc40aa-364f-41cb-bf58-682cb0773606.svg",
+        "image_position": "right",
+        "image_width": 50,
+        "bgimage1": "shopify://shop_images/Rectangle_3615_7c523219-521d-488a-b1f3-8a31e264d700.svg",
+        "title": "Why Choose Neonsfeer?",
+        "content": "<p>Crafting more than neon signs, we prioritize quality, service, and reliability. Using the best materials, we aim to enhance your space with our standout products. Experience Neonsfeer's brilliance.</p>",
+        "button_text": "ABOUT US",
+        "button_link": "shopify://pages/about-us",
+        "class": "",
+        "right_heading": "shopify://shop_images/logo.png"
+      }
+    },
+    "logo_list_B9Emxy": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_gLnfBg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/brews.png",
+            "link": ""
+          }
+        },
+        "logo_fxaTDb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fitness.png",
+            "link": ""
+          }
+        },
+        "logo_Q7AfkG": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/flex.png",
+            "link": ""
+          }
+        },
+        "logo_4MykJ4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/redbull.webp",
+            "link": ""
+          }
+        },
+        "logo_aLVFiR": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/brews.png",
+            "link": ""
+          }
+        },
+        "logo_Rz3E9k": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/fitness.png",
+            "link": ""
+          }
+        },
+        "logo_r3J8Wb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/flex.png",
+            "link": ""
+          }
+        },
+        "logo_mDDkRN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/redbull.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_gLnfBg",
+        "logo_fxaTDb",
+        "logo_Q7AfkG",
+        "logo_4MykJ4",
+        "logo_aLVFiR",
+        "logo_Rz3E9k",
+        "logo_r3J8Wb",
+        "logo_mDDkRN"
+      ],
+      "settings": {
+        "title": "500+ businesses preceded you",
+        "link_title": "",
+        "link": ""
+      }
+    },
+    "43dd7608-1e7c-4a63-b8ba-fe6499337fb3": {
+      "type": "product-video-installation",
+      "blocks": {
+        "e2ab5965-075a-48f3-b9b7-81092c7ec5bb": {
+          "type": "text-button",
+          "settings": {
+            "add_to_cart_btn_text": "",
+            "content_heading": "Easy setup",
+            "content": "Set up your neon sign in under 5 minutes! We provide everything you need, so you won't have to worry about installation. Check out our instructional videos on the installation process and let yourself be guided effortlessly.",
+            "content_link": "",
+            "content_text": ""
+          }
+        },
+        "6ec0f00f-597f-4a6d-9de9-2d432bcb04d7": {
+          "type": "installation-video",
+          "settings": {
+            "overlay": "shopify://shop_images/Rectangle_3625_2.svg",
+            "Video_url": "https://cdn.shopify.com/videos/c/o/v/96ce200ad67a43688c432d90c81db73e.mp4",
+            "Heading": "Easy to hang",
+            "content_video": "Hang your neon sign on the wall using the provided mounting kit (screws, anchors, and cover caps)."
+          }
+        },
+        "42861d47-32ea-4305-8558-ffe2392dd164": {
+          "type": "installation-video",
+          "settings": {
+            "overlay": "shopify://shop_images/Rectangle_3625_1_2.svg",
+            "Video_url": "https://cdn.shopify.com/videos/c/o/v/af6e5e7996f547eb8a75259f4e084318.mp4",
+            "Heading": "Plug in",
+            "content_video": "Easily connect your neon sign to the adapter and simply plug it into the socket, ready to shine brightly!"
+          }
+        }
+      },
+      "block_order": [
+        "e2ab5965-075a-48f3-b9b7-81092c7ec5bb",
+        "6ec0f00f-597f-4a6d-9de9-2d432bcb04d7",
+        "42861d47-32ea-4305-8558-ffe2392dd164"
+      ],
+      "settings": {}
+    },
+    "image_and_text_HGDwGy": {
+      "type": "image-and-text",
+      "settings": {
+        "bgimage": "shopify://shop_images/svgviewer-png-output_6.png",
+        "image": "shopify://shop_images/Frame_8430_600x-svg_300x_df5e0c6_700x_2.png",
+        "image_position": "left",
+        "image_width": 50,
+        "bgimage1": "shopify://shop_images/svgviewer-png-output_8.png",
+        "title": "Looking for a neon logo?",
+        "content": "<p>Complete our 1-minute form, upload your logo and receive a quote within 24 hours.</p>",
+        "button_text": "Upload Logo",
+        "button_link": "shopify://pages/logo-request",
+        "class": ""
+      }
+    },
+    "youtube_review_slider_pynaLL": {
+      "type": "youtube-review-slider",
+      "blocks": {
+        "youtube_video_tY4DiC": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/rmAXhKwI-jU?si=zjwsPjs6XfYL-YJd"
+          }
+        },
+        "youtube_video_k3B9gf": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/nQ3CLUjMPXE?si=CmqxVsmXjn3aykYz"
+          }
+        },
+        "youtube_video_Bdhych": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/Y_VktCCtSjE?si=Jp95tz0A87yHWynv"
+          }
+        },
+        "youtube_video_ehRknR": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/iSYjCttYcrc?si=5ukWqdbZmtEl0vvX"
+          }
+        },
+        "youtube_video_eae9FY": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
+          }
+        },
+        "youtube_video_bFH7Wh": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/D_rUmnRczuw?si=l8vJe8aiB-f1HjJb"
+          }
+        },
+        "youtube_video_ckCeJj": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/R7u1pzMz2Xo?si=BW4kLhHAB7AHIHyO"
+          }
+        }
+      },
+      "block_order": [
+        "youtube_video_tY4DiC",
+        "youtube_video_k3B9gf",
+        "youtube_video_Bdhych",
+        "youtube_video_ehRknR",
+        "youtube_video_eae9FY",
+        "youtube_video_bFH7Wh",
+        "youtube_video_ckCeJj"
+      ],
+      "settings": {
+        "spacing": "",
+        "title": "Client videos",
+        "slide_show": 4
+      }
+    },
+    "specification_section_aTQcTL": {
+      "type": "specification-section",
+      "blocks": {
+        "specs_a6zHeF": {
+          "type": "specs",
+          "settings": {
+            "title": "Type LED",
+            "subtitle": "EvoLux V23",
+            "subtitle_description": "EvoLux V23 is energiezuiniger, duurzamer en biedt betere prestaties en gebruiksgemak dan zijn concurrenten.",
+            "check": false,
+            "image-drop": "shopify://shop_images/e8d19777c57a7fc57c6c52ad1575f334.png",
+            "video_url": "https://www.youtube.com/shorts/sPw_5G18uz8"
+          }
+        },
+        "specs_YTHqPa": {
+          "type": "specs",
+          "settings": {
+            "title": "Brightness",
+            "subtitle": "1500 lumens",
+            "subtitle_description": "EvoLux V23 is energiezuiniger, duurzamer en biedt betere prestaties en gebruiksgemak dan zijn concurrenten.",
+            "check": false,
+            "image-drop": "shopify://shop_images/d39ad12debc13003399a1846325e9c51.png",
+            "video_url": "https://www.youtube.com/shorts/F2ezI3tN0VA"
+          }
+        },
+        "specs_ki4kjx": {
+          "type": "specs",
+          "settings": {
+            "title": "Service life",
+            "subtitle": "100,000 hrs",
+            "subtitle_description": "EvoLux V23 is more energy-efficient, sustainable, and offers better performance and ease of use than its competitors",
+            "check": false,
+            "image-drop": "shopify://shop_images/bfa531812cdb949fd7182d217efe1d7a.jpg",
+            "video_url": ""
+          }
+        },
+        "specs_fFBxxW": {
+          "type": "specs",
+          "settings": {
+            "title": "Energy",
+            "subtitle": "Label A++",
+            "subtitle_description": "EvoLux V23 is more energy-efficient, sustainable, and offers better performance and ease of use than its competitors",
+            "check": false,
+            "image-drop": "shopify://shop_images/IMG_1903.heic",
+            "video_url": "https://www.youtube.com/shorts/sPw_5G18uz8"
+          }
+        },
+        "specs_jmnf43": {
+          "type": "specs",
+          "settings": {
+            "title": "Dimmable",
+            "subtitle": "Yes, dimmable",
+            "subtitle_description": "",
+            "check": true,
+            "video_url": ""
+          }
+        },
+        "specs_3mDAiX": {
+          "type": "specs",
+          "settings": {
+            "title": "100% silent",
+            "subtitle": "Yes, 100% silent",
+            "subtitle_description": "",
+            "check": true,
+            "video_url": ""
+          }
+        },
+        "specs_xqMBWd": {
+          "type": "specs",
+          "settings": {
+            "title": "Warranty",
+            "subtitle": "5 years warranty",
+            "subtitle_description": "",
+            "check": true,
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "specs_a6zHeF",
+        "specs_YTHqPa",
+        "specs_ki4kjx",
+        "specs_fFBxxW",
+        "specs_jmnf43",
+        "specs_3mDAiX",
+        "specs_xqMBWd"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_position": "right",
+        "image_width": 70,
+        "bgimage1": "shopify://shop_images/DSC00193-2.jpg",
+        "video_url_section": "https://www.youtube.com/shorts/sPw_5G18uz8",
+        "section_title": "Specifications",
+        "title": "",
+        "content": "",
+        "button_text": "",
+        "button_link": "shopify://collections/all",
+        "class": ""
+      }
+    },
+    "faq_new_jMPh8B": {
+      "type": "faq-new",
+      "blocks": {
+        "tab_3n8cFR": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Product information"
+          }
+        },
+        "tab_VXcJ3a": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Delivery times & Ordering"
+          }
+        },
+        "tab_qkVCfH": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Installation & Maintenance"
+          }
+        },
+        "tab_46zapw": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Warranty & Returns"
+          }
+        },
+        "accordion_item_jQ3QfE": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "How do I design my own neon sign?",
+            "accordion_content": "<p>Design your neon in just a few steps. Enter your desired text, choose a font, and select the right size.<br/> <br/>Click \"Add to Cart\" when you're done. Light up your space with a touch of you!</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_JjJhbw": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "How much does a neon sign cost?",
+            "accordion_content": "<p>The price depends on the size, font, and any extra options you choose. You can see the price instantly in our customizer.</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_CweJzh": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "My font isn’t available, what now?",
+            "accordion_content": "<p>Can’t find your desired font? No problem! Send it to us via email at info@neonsfeer.nl, and we’ll create your neon sign in your unique style.</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_ARAezc": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "How is the size determined?",
+            "accordion_content": "<p>You choose the length, and we take care of the corresponding height. Sometimes, the height may slightly differ (1-2 cm) to keep the design well-balanced. This way, your neon sign will always look great.</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_R6XbfL": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Can I add extra symbols or custom designs?",
+            "accordion_content": "<p>From adjusting text to adding symbols, we’re happy to assist. Send your specific requests to info@neonsfeer.nl, and we’ll bring your neon ideas to life.</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_UEG4rT": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Does the preview on the website match the actual product?",
+            "accordion_content": "<p>Expect precision. Our preview designs match the final product. From color to text, trust that we’ll align with your vision. Design with confidence with us.</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_WmdW3r": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What colors are available?",
+            "accordion_content": "<p>We offer 12 LED neon colors:<br/> <br/>White, Warm White, Pink, Light Pink, Blue, Icy Blue, Turquoise, Green, Red, Orange, Yellow, and Purple.<br/> <br/>Want all colors in one neon? Choose our RGB option, which allows you to adjust the color with the included remote control and dimmer. This option is available for an additional 25% charge.</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_m79HCR": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Can I use my neon sign outdoors?",
+            "accordion_content": "<p>Our standard neon signs are designed for indoor use. For outdoor use, we offer weather-resistant options for an additional charge.<br/> <br/>If you want to hang your neon outdoors, choose our weather-resistant option for an extra 20%.</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_Gryepg": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What is the delivery time?",
+            "accordion_content": "<p>The delivery time is 6-8 business days from the moment of order to delivery. Need your neon sign sooner? <br/> <br/>Contact us during the ordering process, and we’ll explore the possibilities for expedited delivery.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_JbLFj8": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Do you offer free shipping?",
+            "accordion_content": "<p>We offer free shipping on all our neon signs. You will receive a tracking number and benefit from premium insured shipping, ensuring your order arrives safely and hassle-free.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_XNBNpa": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Can I change or cancel my order?",
+            "accordion_content": "<p>Noticed a mistake in your order? Contact us immediately. We’ll do our best to process your change or cancellation as quickly as possible, before we start production.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_tWA8tq": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Bulk Orders & Resellers",
+            "accordion_content": "<p>Are you a reseller or have a large order? We are open to bulk orders and resellers.<br/>Contact us at info@neonsfeer.nl for custom offers and applicable pricing.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_FbqnF7": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "How do I install my neon sign?",
+            "accordion_content": "<p>Each neon sign comes with all the necessary materials and clear instructions. Installation is quick and easy, so you can enjoy your neon sign in no time.</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_xgXnKD": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What’s included in my package?",
+            "accordion_content": "<p>We provide everything you need to easily hang your neon sign on the wall:<br/><br/><strong>1.</strong> Mounting hardware<br/><strong>2.</strong> Durable adapter<br/><strong>3.</strong> Remote control<br/><strong>4.</strong> Dimmer<br/><strong>5.</strong> Transparent cable</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_PFdnfJ": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What if I don’t want to or can’t drill into my wall?",
+            "accordion_content": "<p>No problem! We offer several alternatives:<br/><br/><strong>- Ceiling mounting:</strong> Upon request, we can provide a free hanging system with cables.<br/><br/><strong>- Placing on a surface:</strong> You can place your neon on a shelf or table. We also offer an optional freestanding frame.<br/><br/><strong>- Double-sided tape:</strong> In some cases, you can use strong 3M double-sided tape, as long as the surface is smooth and suitable.<br/><br/>Need advice on the best option? Feel free to reach out!</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_nPDrxc": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "How do I use my remote control and dimmer?",
+            "accordion_content": "<p>Your neon sign comes with a remote control and dimmer, allowing you to easily adjust the brightness and light effects.<br/> <br/><strong>- Standard neon (1 color):</strong> Simply turn the light on or off and adjust the brightness.<br/> <br/><strong>- RGB option: </strong>Choose a fixed color or let the colors transition smoothly.<br/> <br/>That way, you’ll always have the perfect atmosphere at your fingertips!</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_ynnJxQ": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Is there a warranty on my neon sign?",
+            "accordion_content": "<p>At Neonsfeer, we offer a 2-year warranty on all our neon signs. If any issues arise, we will provide a suitable solution, such as repair or replacement.</p>",
+            "tab_association": "4"
+          }
+        },
+        "accordion_item_79Ntkt": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Why choose Neonsfeer?",
+            "accordion_content": "<p><strong>✓ Over 8,150 satisfied customers:</strong> We take pride in the trust of over 8,150 happy customers who have chosen us for their neon needs. Our goal is always to exceed expectations and provide our customers with a perfect experience, from design to delivery.<br/><br/><strong>✓ Price/Quality ratio:</strong> At Neonsfeer, affordability and quality go hand in hand. You get the best of both worlds.<br/><br/><strong>✓ Extended warranty:</strong> Enjoy peace of mind with a 24-month warranty that ensures your purchase is protected.<br/><br/><strong>✓ Superior durability:</strong> By using advanced LED technology, Neonsfeer neon signs are not only lighter but also more durable than their traditional glass counterparts.<br/><br/><strong>✓ Environmentally friendly choice:</strong> Make a green choice! Neonsfeer's LED neons are energy-efficient and have an impressive lifespan of over 100,000 hours.<br/><br/><strong>✓ Safety first:</strong> Say goodbye to the dangers of overheating and breakable glass. Neonsfeer LED neons are designed with your safety as the top priority.<br/><br/><strong>✓ Hassle-free installation:</strong> Set up your neon sign in no time. It's quick and easy.<br/><br/><strong>✓ Ultimate control:</strong> Personalize your neon experience with the included remote control. From on/off and adjusting brightness to changing flash speeds, you have full control.</p>",
+            "tab_association": "4"
+          }
+        }
+      },
+      "block_order": [
+        "tab_3n8cFR",
+        "tab_VXcJ3a",
+        "tab_qkVCfH",
+        "tab_46zapw",
+        "accordion_item_jQ3QfE",
+        "accordion_item_JjJhbw",
+        "accordion_item_CweJzh",
+        "accordion_item_ARAezc",
+        "accordion_item_R6XbfL",
+        "accordion_item_UEG4rT",
+        "accordion_item_WmdW3r",
+        "accordion_item_m79HCR",
+        "accordion_item_Gryepg",
+        "accordion_item_JbLFj8",
+        "accordion_item_XNBNpa",
+        "accordion_item_tWA8tq",
+        "accordion_item_FbqnF7",
+        "accordion_item_xgXnKD",
+        "accordion_item_PFdnfJ",
+        "accordion_item_nPDrxc",
+        "accordion_item_ynnJxQ",
+        "accordion_item_79Ntkt"
+      ],
+      "settings": {
+        "add_class": "",
+        "title": "Frequently Asked Questions",
+        "description": "View our frequently asked questions for answers about specific product features, use and maintenance.",
+        "btn": "View all questions."
+      }
+    },
+    "image_with_text_kPTnwL": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "custom_class": "image_text_sec",
+        "image": "shopify://shop_images/ed56da52ec6db75809e1f8dd2f431c76_84dd63da-41a1-417c-8fec-187ff0c0518f.webp",
+        "image_position": "right",
+        "image_width": 50,
+        "title": "Your logo for just",
+        "content": "Order your Neon Logo",
+        "list_one": "<p>Delivered within <strong>8 working</strong> days!</p>",
+        "list_two": "<p>Includes free <strong>remote </strong>control</p>",
+        "list_three": "<p>Now with <strong>free shipping</strong></p>",
+        "add_to_cart_btn_text": "Order Now",
+        "button_text": "Order NeonLogo",
+        "button_link": "#",
+        "button_text_2": "",
+        "button_link_2": "#",
+        "class": ""
+      }
+    },
+    "youtube_video_and_images_benRrN": {
+      "type": "youtube-video-and-images",
+      "blocks": {
+        "image_7AHY48": {
+          "type": "Image",
+          "settings": {}
+        },
+        "image_m4tEAE": {
+          "type": "Image",
+          "settings": {
+            "img-card": "shopify://shop_images/Rectangle_125.webp"
+          }
+        },
+        "image_rYKT9d": {
+          "type": "Image",
+          "settings": {
+            "img-card": "shopify://shop_images/Rectangle_123.webp"
+          }
+        },
+        "image_A7CRNM": {
+          "type": "Image",
+          "settings": {
+            "img-card": "shopify://shop_images/Rectangle_124.webp"
+          }
+        },
+        "image_Nd6HqV": {
+          "type": "Image",
+          "settings": {
+            "img-card": "shopify://shop_images/Rectangle_122.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_7AHY48",
+        "image_m4tEAE",
+        "image_rYKT9d",
+        "image_A7CRNM",
+        "image_Nd6HqV"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_heading": "They went before you",
+        "content_heading": "Video",
+        "video": "<iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/aL1uIilM_U4?si=Gy1TLO9YzBRa4UFl\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"\"></iframe>"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "show_quick_buy": false
+      }
+    }
+  },
+  "order": [
+    "17346169674b4f063a",
+    "custom_liquid_xG6Dqr",
+    "custom_liquid_aRgthj",
+    "main",
+    "builder_google_review_i44VWE",
+    "color_video_J8kqgk",
+    "2645e059-91e1-450a-baf5-5016c05b782b",
+    "79591b01-5cc7-4918-a6b5-fa3b05c61bfc",
+    "logo_list_B9Emxy",
+    "43dd7608-1e7c-4a63-b8ba-fe6499337fb3",
+    "image_and_text_HGDwGy",
+    "youtube_review_slider_pynaLL",
+    "specification_section_aTQcTL",
+    "faq_new_jMPh8B",
+    "image_with_text_kPTnwL",
+    "youtube_video_and_images_benRrN",
+    "product-recommendations"
+  ]
+}

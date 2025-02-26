@@ -1,0 +1,56 @@
+.img-card-custom-form .wrapper {
+    display: flex !important;
+    gap: 0 24px;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.img-card-custom-form .imgcard-wrapper {
+    background: #F7F5FF;
+    border-radius: 8px;
+    width: calc(25% - 24px);
+}
+.img-card-custom-form .wrapper .img {
+    position: relative;
+}
+.img-card-custom-form .number-wrapper {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background: #715AEF;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    left: 20px;
+    top: -16px;
+    z-index: 99999;
+}
+.img-card-custom-form .img img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+.img-card-custom-form .info-wrapper {
+    padding: 36px 24px;
+}
+.img-card-custom-form .info-wrapper h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+.img-card-custom-form .info-wrapper p {
+    font-size: 16px;
+    color: #656565;
+    line-height: 22px;
+}
+.template-product .section {
+    margin-top: 0;
+    padding: 40px 0;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px){
+    .img-card-custom-form .wrapper{display: block;}
+}

@@ -1,0 +1,123 @@
+<section class="just-do-it for-white {{ section.settings.custom_class }}">
+  <div class="container">
+    <h3 class="section-main-title">{{ section.settings.section_title_main }}</h3>
+    <div class="row-one {{ section.settings.row_class }}">
+      {% if section.settings.content_order == 'text-left' %}
+        <div class="col-45 info-section">
+          <h3 class="section-title">{{ section.settings.section_title }}</h3>
+          <p class="section-description">{{ section.settings.section_description }}</p>
+          <p class="section-description">{{ section.settings.section_description2 }}</p>
+        </div>
+        <div class="col-45 img">
+            {% if section.settings.section_image %}
+                <img class="do-it-image"  loading="lazy"
+                src="{{ section.settings.section_image | img_url: '600x600' }}" 
+                srcset="{{ section.settings.section_image | img_url: '600x600' }} 600w,
+                        {{ section.settings.section_image | img_url: '1200x1200' }} 1200w"
+                sizes="(max-width: 600px) 100vw, 50vw" 
+                alt="Section Image">
+            {% endif %}
+        </div>
+      {% else %}
+        <div class="col-45 img">
+            {% if section.settings.section_image %}
+                <img class="do-it-image"  loading="lazy"
+                src="{{ section.settings.section_image | img_url: '600x600' }}" 
+                srcset="{{ section.settings.section_image | img_url: '600x600' }} 600w,
+                        {{ section.settings.section_image | img_url: '1200x1200' }} 1200w"
+                sizes="(max-width: 600px) 100vw, 50vw" 
+                alt="Section Image">
+            {% endif %}
+        </div>
+        <div class="col-45 info-section">
+          <h3 class="section-title">{{ section.settings.section_title }}</h3>
+          <p class="section-description">{{ section.settings.section_description }}</p>
+          <p class="section-description">{{ section.settings.section_description2 }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+.without-background .section-description{
+  font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156.8%;
+    color: #262626;
+    margin-bottom: 15px;
+    max-width: 535px;
+}
+.without-background .info-section{
+  padding: 0 !important;
+  width: 45% !important;
+}
+@media screen and (max-width: 767px) {
+  .without-background .second-row .col-45.img{margin-bottom: 80px !important;}
+  .without-background .row-first .col-45.img{margin-bottom: 80px !important;}
+  .without-background .second-row{flex-direction: column-reverse;}
+  .without-background .section-description{font-size: 16px !important;}
+  .just-do-it.rebels .section-main-title{font-size: 26px !important; margin-top: 80px;}
+}
+</style>
+
+{% schema %}
+    {
+        "name": "About Image with Text",
+        "settings": [
+            {
+            "type": "text",
+            "id": "section_title_main",
+            "label": "section Title Main"
+            },
+            {
+            "type": "text",
+            "id": "custom_class",
+            "label": "Custom CSS Class",
+            "default": "default-class"
+            },
+            {
+            "type": "text",
+            "id": "row_class",
+            "label": "Custom CSS Class"
+            },
+            {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title"
+            },
+            {
+            "type": "text",
+            "id": "section_description",
+            "label": "Section Description"
+            },
+            {
+            "type": "text",
+            "id": "section_description2",
+            "label": "Section Description"
+            },
+            {
+            "type": "image_picker",
+            "id": "section_image",
+            "label": "Section Image"
+            },
+            {
+            "type": "select",
+            "id": "content_order",
+            "label": "Content Order",
+            "options": [
+                { "value": "text-left", "label": "Text Left, Image Right" },
+                { "value": "image-left", "label": "Image Left, Text Right" }
+            ]
+            }
+        ],
+        "presets": [
+        {
+          "name": "About Image with Text",
+          "settings": {}
+        }
+      ]
+    }
+    {% endschema %}

@@ -1,0 +1,40 @@
+<section>
+  <div class="container">
+    <div class="one-image">
+        <img class="full-images" src="{{ section.settings.slide_image2 | img_url: 'master' }}">
+    </div>
+  </div>
+</section>
+<style>
+    .one-image{display: flex; justify-content: center;}
+    .one-image .full-images{
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 10px;
+        margin: 0;
+    }
+</style>
+{% schema %}
+{
+  "name": "image one",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_image2",
+      "label": "Image"
+    }
+  ],
+
+   "presets": [
+    {
+      "name": "image one"
+    }
+  ]
+  }
+{% endschema %}

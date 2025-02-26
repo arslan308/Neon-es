@@ -1,0 +1,206 @@
+<div class="header-nnoucement-bar-section">
+  <div class="container">
+     {%- unless template == 'cart' or template == 'list-collections' or template == '404' or template contains 'product.builder_' or template contains 'page.form_page_' -%}
+        {%- assign t = template | split: '.' | first -%}
+           {%- unless t == 'index' -%}
+              <div class="announcement-breadcrumb">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="/">Home</a>
+            </li>
+            {%- unless t == 'index' -%}
+              {%- case t -%}
+                {%- when 'page' -%}
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+                  </li>
+                {%- when 'product' -%}
+                  {%- assign current_collection = collection %}
+                  {%- if current_collection == nil and product.collections.size > 0 -%}
+                  {%- assign current_collection = product.collections.last -%}
+                  {%- endif -%}
+                    
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link" href="{{ current_collection.url }}">
+                        {{ current_collection.handle }}
+                      </a>
+                    </li>
+  
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">
+                      {{ collection.handle }} {{- product.title -}}
+                    </a>
+                  </li>
+                {%- when 'collection' and collection.handle -%}
+                  {%- if current_tags -%}
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link" href="{{ collection.url }}">
+                        {{ collection.handle }}
+                      </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                      {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                      <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">
+                        {{- current_tags | join: ' + ' -}}
+                      </a>
+                    </li>
+                  {%- else -%}
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">
+                        {{- collection.handle -}}
+                      </a>
+                    </li>
+                  {%- endif -%}
+                {%- when 'blog' -%}
+                  {%- if current_tags -%}
+                    <li class="breadcrumbs__item">{{ blog.handle | link_to: blog.url }}</li>
+                    <li class="breadcrumbs__item">
+                      {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+                      <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">
+                        {{- current_tags | join: ' + ' -}}
+                      </a>
+                    </li>
+                  {%- else -%}
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.handle }}</a>
+                    </li>
+                  {%- endif -%}
+                {%- when 'article' -%}
+                  <li class="breadcrumbs__item">{{ blog.handle | link_to: blog.url }}</li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">
+                      {{- article.title -}}
+                    </a>
+                  </li>
+                {%- else -%}
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">
+                      {{- page_title -}}
+                    </a>
+                  </li>
+              {%- endcase -%}
+            {%- endunless -%}
+          </ol>
+        </div>
+            {%- endunless -%}
+        {%- endunless -%}
+      
+    <div class="header-announcement-bar-blocks">
+      {% assign i=0 %}
+      {% for block in section.blocks %}
+        {% assign i=i | plus :1 %}
+                <div class="header-nnoucement-bar-section-main-block">
+                    <div class="item-main">
+                        <div class="header-nnoucement-bar-section-block-image">
+                        {% if block.settings.image != blank %}
+                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+                        {% endif %}
+                        </div>
+                        <div class="header-nnoucement-bar-section-block-text cstm{{ i }}">
+                        {% if block.settings.text != blank %}
+                            {{ block.settings.text }} 
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+ 
+   <style>
+.header-nnoucement-bar-section {
+	display: none;
+}
+ol{
+  list-style-type: none; 
+}
+</style>
+<script>
+   
+   setTimeout(function() { $(".header-nnoucement-bar-section").css("display","block"); }, 120);
+  
+  setTimeout(function() {
+    $('.header-announcement-bar-blocks').slick({
+    dots: false,
+    infinite: false,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+        {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            autoplaySpeed: 5000,
+            autoplay:false
+        }
+        },
+        {
+        breakpoint: 600,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplaySpeed: 5000,
+            autoplay:true,
+            arrows:false
+        }
+        },
+        {
+        breakpoint: 567,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplaySpeed: 5000,
+            autoplay:true,
+            arrows:false
+        }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
+    });
+}, 120);   
+
+</script>
+{% schema %}
+  {
+    "name": "Header Annoucement Bar",
+    "settings": [],
+    "blocks": [
+     {
+       "name": "content",
+       "type": "text",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+         {
+           "type":"text",
+           "id":"text",
+           "label":"Text"
+         }
+       ]
+     }
+    ],
+     "presets": [
+    {
+      "name": "Header Annoucement Bar",
+      "category":"Header Annoucement Bar"
+    }
+     ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,199 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
+
+<div class="video-slider-section {{ section.settings.custom_class }}">
+  <div class="page-width container">
+      <section class="splide" aria-labelledby="carousel-heading">
+
+        <div class="video-sec-title"> 
+          <div class="video-title"><h2 id="carousel-heading">{{ section.settings.people-trust }}</h2>
+          {{ section.settings.video-discription }}
+          </div>
+            <div class="video-title-btn">
+          {%- if section.settings.image != blank -%}
+              {{ section.settings.image | image_url: width: 1500 | image_tag }}
+          {%- endif -%}
+          {%- if section.settings.button_text != blank -%}
+            <a href="{{ section.settings.button_link | default: collection.url | default: '#' }}" class="featured-collection__cta button button--floating">{{ section.settings.button_text | escape }}</a>
+          {%- endif -%}
+          </div>
+        </div>
+          <div class="splide__track">
+              <ul class="splide__list">
+                
+                {% for block in section.blocks %}
+                  <li class="splide__slide">
+                      <video width="100%" height="100%" playsinline="" muted="" loop="" controls="">
+                        <source data-src="{{ block.settings.video-url }}" src="{{ block.settings.video-url }}" type="video/mp4">
+                      </video>
+                      <img src="{{ block.settings.customer-img | img_url: '2048x2048' }}" width="100%">
+                      <div class="customer-contant">
+                        <div>
+                          <h5>{{ block.settings.customer-name }}</h5>
+                          <p>{{ block.settings.customer-post }}</p>
+                        </div>
+                          <div class="video-button" >
+                              <img src="https://cdn.shopify.com/s/files/1/0446/7376/1431/files/play.png?v=1688461513" alt="Video Icon" width="40px">
+                          </div>
+                      </div>
+                  </li>
+                {%- endfor -%}
+              </ul>
+          </div>
+      </section>
+  </div>
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
+
+<style>
+#shopify-section-{{ section.id }} .button {
+color: {{ section.settings.button_text_color }};
+background-color: {{ section.settings.button_background }};
+}
+@media screen and (max-width: 600px){
+  .video-slider-section div#splide01-track{
+    width: 80%;
+    margin: auto;
+  }
+}
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide(".splide", {
+      perPage: 4,
+      gap: "25px",
+      breakpoints: {
+        991: {
+          perPage: 2,
+          gap: "20px",
+        },
+        767: {
+          perPage: 1,
+          gap: "10px",
+        },
+      },
+    });
+    splide.mount();
+
+    document.querySelectorAll(".customer-contant .video-button").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const slide = this.closest("li.splide__slide");
+        if (slide) slide.classList.add("video-show");
+      });
+    });
+  });
+</script>
+
+
+
+{% schema %}
+{
+"name": "Video Slider Section",
+"settings": [
+  {
+    "type": "text",
+    "id": "custom_class",
+    "label": "Custom Class"
+  },
+  {
+    "type": "text",
+    "id": "people-trust",
+    "label": "Testimonial Heading"
+  },
+  {
+    "type": "richtext",
+    "id": "video-discription",
+    "label": "Video Discription"
+  },
+  {
+    "type": "image_picker",
+    "id": "image",
+    "label": "Image"
+  },
+  {
+    "type": "header",
+    "content": "Button"
+  },
+  {
+    "type": "color",
+    "id": "button_background",
+    "label": "Background",
+    "default": "#ffffff"
+  },
+  {
+    "type": "color",
+    "id": "button_text_color",
+    "label": "Text",
+    "default": "#0774d7"
+  },
+  {
+    "type": "text",
+    "id": "button_text",
+    "label": "Text",
+    "default": "Learn more"
+  },
+  {
+    "type": "url",
+    "id": "button_link",
+    "label": "Link",
+    "info": "If left empty, collection URL is used."
+  }
+],
+"blocks": [
+    {
+  "type": "customer-slider",
+  "name": "customer-slider",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "customer-img",
+      "label": "Customer Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumbnail-img",
+      "label": "Thumbnail Image"
+    },
+    {
+      "type": "text",
+      "id": "customer-name",
+      "label": "Customer Name"
+    },
+    {
+      "type": "text",
+      "id": "customer-post",
+      "label": "Customer Post"
+    },
+    {
+      "type": "url",
+      "id": "video-url",
+      "label": "Video URL"
+    }
+  ]
+}
+
+],
+"presets": [
+{
+"name": "Video Slider Section",
+"category": "ADVANCED LAYOUT",
+"blocks": [
+    {
+      "type": "customer-slider"
+    }
+  ]
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,430 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": false,
+            "show_reviews_badge": false,
+            "show_share_buttons": false
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "none",
+            "variant_image_options": "",
+            "show_quantity_selector": false,
+            "show_taxes_included": true,
+            "show_inventory_quantity": false,
+            "low_inventory_threshold": 0,
+            "progress_bar_max_value": 50
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "ce70369f-34ae-4ab0-b267-cd943956ab37": {
+          "type": "description",
+          "settings": {
+            "display_mode": "show_all"
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "variant_selector",
+        "buy_buttons",
+        "ce70369f-34ae-4ab0-b267-cd943956ab37"
+      ],
+      "settings": {
+        "image_size": "medium",
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "zoom_effect": "outside",
+        "carousel_effect": "fade"
+      }
+    },
+    "builder_google_review_tzBiEM": {
+      "type": "builder-google-review",
+      "blocks": {
+        "image_with_review_nyRabT": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Codigital",
+            "user-discription": "\"A high-quality product that provides a unique, top-tier appearance. Exactly what we were looking for at Codigital.\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC04063_1_2048x2048.jpg?v=1730736993"
+          }
+        },
+        "image_with_review_hkgPBb": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Kevin Liam",
+            "user-discription": "“Absolutely great! We are very happy with it!”",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/image_2048x2048.jpg?v=1730736991"
+          }
+        },
+        "image_with_review_mxH4GY": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Joe Biondo III",
+            "user-discription": "\" The design process was very easy, and our sign was shipped in a timely manner. The quality of our sign was excellent and very easy to install. I would definitely recommend Neonsfeer for all your neon sign needs.\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/image_1_2048x2048.jpg?v=1730736991"
+          }
+        },
+        "image_with_review_9jaLyn": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Ashley",
+            "user-discription": "\"We ordered a sign for our companies open house and I am shocked how quickly it was shipped to us and how great it looks! It had all necessary parts to hang and a remote as well with all setting options. We are looking to order more for other offices in various states!\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_-_Copy_2048x2048.png?v=1730736899"
+          }
+        },
+        "image_with_review_g79qHx": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Daniel",
+            "user-discription": "\"The quality is insane! makes my office space look amazing and the glow from it makes me feel like I'm in time square! \"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
+          }
+        },
+        "image_with_review_mhrNgN": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Angela",
+            "user-discription": "\"Few issues with delivery with fed ex but sorted out in the end.\nCommunication with Neonsfeer was second to none sorted out professionally by Olivia thankyou by the way.\nOverall the product is very good quality and I love it .\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_2048x2048.png?v=1712056892"
+          }
+        },
+        "image_with_review_Mnf77K": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Mathias",
+            "user-discription": "\"I purchased a Neon Sign for my bar from Neonsfeer. I selected the company initially because the online tool was excellent. I then spoke to several people all of whom were very helpful and professional. I needed to sign quite quickly and it came earlier than expected and I am delighted with the quality of what I received\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
+          }
+        },
+        "image_with_review_V9gyJR": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Eric Williams",
+            "user-discription": "\"Man, these guys had my sign made and shipped to me in 9 days . I am beyond happy with my new warm white neon signage. That warm whiteis bright and the craftmanship is superb! I highly recommend Neonsfeer to anyone in the market for a beautiful neon sign for their business. Matter of fact I'm ordering myself another one but this one in white \"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_58_1_6_2048x2048.png?v=1712056876"
+          }
+        },
+        "image_with_review_VyQFfa": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Physiotherapie Schafflund",
+            "user-discription": "\"I ordered a neon sign from Neonsfeer for my physiotherapy clinic, and I love it! It adds a vibrant and welcoming touch to the space. The quality is fantastic, and the delivery was quick. Highly recommended!\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_61_2048x2048.png?v=1730736899"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_review_nyRabT",
+        "image_with_review_hkgPBb",
+        "image_with_review_mxH4GY",
+        "image_with_review_9jaLyn",
+        "image_with_review_g79qHx",
+        "image_with_review_mhrNgN",
+        "image_with_review_Mnf77K",
+        "image_with_review_V9gyJR",
+        "image_with_review_VyQFfa"
+      ],
+      "settings": {
+        "spacing": "",
+        "title": "What our customers say"
+      }
+    },
+    "rich_text_with_image_7nY9Wp": {
+      "type": "rich-text-with-image",
+      "settings": {
+        "text_width": "wide",
+        "image_width": 50,
+        "title": "Neon Sign Making at Neonsfeer",
+        "content": "<p>Want a striking neon sign that<br/>is both stylish and durable? Neonsfeer is the place to go. We offer<strong>a variety of options for creating neon signs</strong>, perfect for both<strong>business</strong>and<strong>personalapplications</strong>. Whether you want a striking<strong>company logo</strong>or an<strong>atmospheric ambiance for your home</strong>, Neonsfeer has the perfect solution for you.</p>",
+        "button_text": "Have a neon sign made",
+        "button_text1": "Create your own neon sign",
+        "button_link": "shopify://collections/all",
+        "button_link1": "shopify://collections/all"
+      }
+    },
+    "simple_rich_text_4kxLzq": {
+      "type": "simple-rich-text",
+      "settings": {
+        "text_width": "wide",
+        "title": "",
+        "content": "<h2>Have a neon sign made</h2><p>Want to have a neon <strong>sign made</strong> that immediately catches the eye? At Neonsfeer, we offer a <strong>wide range of options</strong> to bring your vision to life. Our neon signs are perfect for a variety of applications, from eye-catching <strong>shop signs</strong> to atmospheric <strong>home decorations</strong> . Each sign is <strong>custom-made</strong> with high-quality materials, so it is <strong>durable</strong> and <strong>weatherproof</strong> .</p><p>Our processes are simple and transparent. We start with a consultation where we discuss your wishes and create a design that perfectly suits your style and needs. Our <strong>neon signs</strong> are made of high-quality materials, which makes them <strong>ideal</strong> for both <strong>indoor</strong> and <strong>outdoor use</strong> . In addition, our neon signs are <strong>energy efficient</strong> and <strong>low maintenance</strong> .</p><p>At Neonsfeer, you can <strong>create neon signs</strong> that perfectly match the unique style and needs of your business or room. From sleek, modern<br/>designs to colorful, eye-catching displays, our neon signs will grab the attention of passersby and <strong>enhance your business image</strong> . Each sign is custom-made using the highest quality materials, resulting in a remarkable and long-lasting presentation of your brand.</p><p>Designing the neon sign you want to have made is easy and starts with a <strong>consultation with our design team</strong> . We work closely together to understand your vision and translate it into a neon creation that <strong>fits perfectly</strong> with your interior.</p><p>Neon lighting not only offers <strong>aesthetic benefits</strong> , but is also an efficient way to <strong>increase your visibility</strong> . Click<br/>here to have your <a href=\"https://neonsfeer.nl/pages/logoaanvraag\">neon sign made</a> , and let Neonsfeer help you with a solution that perfectly suits your situation.</p><p><strong>Tip</strong> : Check out the <a href=\"https://neonsfeer.nl/products/neon-logo-maken\">neon logo maker</a> page for all the options to design your perfect logo.</p>",
+        "button_text": "",
+        "button_text1": "",
+        "button_link": "shopify://collections/all",
+        "button_link1": "shopify://collections/all"
+      }
+    },
+    "simple_rich_text_cHax8m": {
+      "type": "simple-rich-text",
+      "settings": {
+        "text_width": "wide",
+        "title": "",
+        "content": "<p><strong>These customers came before you</strong></p><p>Be inspired by our satisfied customers who have already chosen a neon or LED sign. In our carousel of projects you will see the variety and creativity that Neonsfeer has to offer, and you will get an idea of ​​what we can<br/>do for you too.</p>",
+        "button_text": "",
+        "button_text1": "",
+        "button_link": "shopify://collections/all",
+        "button_link1": "shopify://collections/all"
+      }
+    },
+    "simple_rich_text_zcbBVt": {
+      "type": "simple-rich-text",
+      "settings": {
+        "text_width": "wide",
+        "title": "",
+        "content": "<h2>Make your own neon sign</h2><p>Would you rather get started with <strong>designing your own neon sign</strong> ? At Neonsfeer we offer a user-friendly <a href=\"https://neonsfeer.nl/products/customize-jouw-neon-new\" title=\"https://neonsphere.nl/products/customize-jouw-neon-new\">online customizer</a> . With this you can <strong>easily create a neon sign yourself</strong> , perfectly adapted to your wishes.</p><p>Our customizer makes it easy to choose <strong>text</strong> , <strong>fonts</strong> , <strong>colors</strong> , and <strong>sizes . Whether you want to light up a company name</strong> , <strong>slogan</strong><br/>, or <strong>inspirational quote</strong> , you have complete control over the design. Once you're happy with your creation, we'll get to work making your neon sign.</p><p>Start your design process by getting inspired by our <strong>extensive collection</strong> of <strong>neon signs</strong> . Whether you’re looking<br/>for something classic, modern, or completely out-of-the-box, our collection has something for everyone. Get inspired by the different colors, styles, and sizes, and see how other customers have transformed their spaces with our neon signs.</p><h3>How does the customizer work?</h3><ol><li><strong>Start your design:</strong> Go to our online customizer tool. Here you can start designing your neon advertising letters.</li><li><strong>Choose your text</strong> : Enter the text you want to see in neon. This could be your company name, slogan or an inspirational quote.</li><li><strong>Select a font:</strong> Choose from a wide range of fonts that best match the look and feel of your brand or message.</li><li><strong>Choose a Color:</strong> Select the color from our extensive color palette that best suits your design and the location where it will be displayed.</li><li><strong>Determine the size:</strong> Choose the right size of your neon sign letters so that it fits perfectly in the desired place.</li><li><strong>Determine the location:</strong> Our tool instantly shows you what your design will look like, both indoors and outdoors, so you can make any adjustments before placing your order.</li></ol><p>Once you are happy with your design, you can proceed to the order page. With a few clicks, your order is complete, and we will start manufacturing your <strong>custom neon sign</strong> . Click here and <a href=\"https://neonsfeer.nl/products/customize-jouw-neon-new\" title=\"Make your own neon sign\">create your own neon sign.</a></p>",
+        "button_text": "",
+        "button_text1": "",
+        "button_link": "shopify://collections/all",
+        "button_link1": "shopify://collections/all"
+      }
+    },
+    "simple_rich_text_3bTndn": {
+      "type": "simple-rich-text",
+      "settings": {
+        "text_width": "wide",
+        "title": "",
+        "content": "<p><strong>These customers came before you </strong></p><p>Be inspired by the stories and photos of satisfied customers who have already successfully had their own neon sign made by Neonsfeer. By viewing our carousel, you will see the various possibilities and the impact that a custom neon logo can have. Let these success stories motivate you to get started yourself and put your brand in the spotlight.</p>",
+        "button_text": "",
+        "button_text1": "",
+        "button_link": "shopify://collections/all",
+        "button_link1": "shopify://collections/all"
+      }
+    },
+    "image_slide_2_UDHFDk": {
+      "type": "image-slide-2",
+      "blocks": {
+        "slide_AKbpJX": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/gamezone-post2_8ee1d3ff-abc2-4bca-bf88-6562e4a5ad25.jpg",
+            "slide_title": ""
+          }
+        },
+        "slide_HNngAr": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/WarmWhite_4ea606ae-9001-4fd8-b580-39ca03ea2dd5.png",
+            "slide_title": ""
+          }
+        },
+        "slide_cXd3Bf": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/24f130f3713eeb278829d521a98f513a.jpg",
+            "slide_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_AKbpJX",
+        "slide_HNngAr",
+        "slide_cXd3Bf"
+      ],
+      "settings": {
+        "title": "",
+        "slider-class": ""
+      }
+    },
+    "image_slide_2_3Uez6G": {
+      "type": "image-slide-2",
+      "blocks": {
+        "slide_NayJPW": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/gamezone-post2_8ee1d3ff-abc2-4bca-bf88-6562e4a5ad25.jpg",
+            "slide_title": ""
+          }
+        },
+        "slide_jpCwV3": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/WarmWhite_4ea606ae-9001-4fd8-b580-39ca03ea2dd5.png",
+            "slide_title": ""
+          }
+        },
+        "slide_T3DTaP": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/24f130f3713eeb278829d521a98f513a.jpg",
+            "slide_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_NayJPW",
+        "slide_jpCwV3",
+        "slide_T3DTaP"
+      ],
+      "settings": {
+        "title": "",
+        "slider-class": ""
+      }
+    },
+    "simple_rich_text_dBWwJW": {
+      "type": "simple-rich-text",
+      "settings": {
+        "text_width": "wide",
+        "title": "Good to know if you are going to have a neon sign made",
+        "content": "<p>When making a neon sign at Neonsfeer, there are a few practical things to keep in mind:</p><ul><li><strong>Pricing information</strong> : Costs vary depending on the complexity and size of the design. Contact us for a detailed quote or request a quote through our website.</li><li><strong>Delivery times</strong> : The standard delivery time is approximately 10 days from the time of order to delivery.</li><li><strong>Response Times</strong> : Our customer service team typically responds to questions and requests within a few hours.</li></ul><p>Our neon signs are <strong>lightweight</strong> and <strong>easy to install</strong> . The standard cord length is 2 meters, but we also offer customizations on request. For outdoor use we have customized, weatherproof solutions.</p><p><strong>Tip: Check out our </strong><a href=\"https://neonsfeer.nl/products/neon-verlichting-buiten\">outdoor neon lighting</a> page for more information about neon signs that are suitable for outdoor hanging.</p>",
+        "button_text": "Have a neon sign made",
+        "button_text1": "Make your own neon sign",
+        "button_link": "shopify://collections/all",
+        "button_link1": "shopify://collections/all"
+      }
+    },
+    "simple_rich_text_Fng8ke": {
+      "type": "simple-rich-text",
+      "settings": {
+        "text_width": "wide",
+        "title": "",
+        "content": "<h2>Conclusion</h2><p>At Neonsfeer you can <strong>create your perfect neon sign</strong> , whether it is signs, <a href=\"https://neonsfeer.nl/products/neon-letters-maken\" title=\"https://neonsphere.nl/products/neon-letters-maken\">making neon letters</a> or logos. With our custom solutions, high-quality materials and customer-oriented service, we ensure that your neon sign makes a striking and lasting statement.</p><p>Are you ready to transform your space with a unique neon sign? Contact <a href=\"https://neonsfeer.nl/pages/contact\"><strong>Neonsfeer</strong></a> today and discover the possibilities of <strong>having a neon sign made.</strong></p>",
+        "button_text": "",
+        "button_text1": "",
+        "button_link": "shopify://collections/all",
+        "button_link1": "shopify://collections/all"
+      }
+    },
+    "one_image_footer_Ld9mnJ": {
+      "type": "one-image-footer",
+      "settings": {
+        "title": "",
+        "slide_image2": "shopify://shop_images/Footer_Newsletter_600x600_52fc4553-1224-461c-ba05-4243cc17a465.png"
+      }
+    },
+    "faq_new_knHBi6": {
+      "type": "faq-new",
+      "blocks": {
+        "tab_V9CK4i": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Product information"
+          }
+        },
+        "tab_zfq4dn": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Delivery times"
+          }
+        },
+        "tab_MQhGcA": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Installation"
+          }
+        },
+        "tab_rpDh7A": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Warranty"
+          }
+        },
+        "accordion_item_DHMC3C": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "How much does a custom neon cost?",
+            "accordion_content": "Prices vary based on design, size and LED length. Text only starts at around €220. For exact costs, please submit your design for a quote.",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_7FNeCR": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What type of LED lighting is used?",
+            "accordion_content": "EvoLux V23, developed in 2023, with a lifespan of 100,000 hours and 1,500 lumens—the best on the market.",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_eccFmU": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Are there any costs associated with requesting a quote and sample?",
+            "accordion_content": "No, this is free and without obligation.",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_WBexrR": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Do the examples match the final boards?",
+            "accordion_content": "Expect precision. Our design previews reflect the final product. From color to text, trust us to match your vision. Design with confidence with us. The final product will be created as the preview, but because it is handcrafted, it may vary slightly to ensure the best possible result",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_jANTAV": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "What color choices are available?",
+            "accordion_content": "Available colour options? Yes, all logos can be converted to neon and we offer 12 LED neon colours plus an RGB option. The available colours are: White, Warm White, Pink, Light Pink, Blue, Ice Blue, Turquoise, Green, Red, Orange, Yellow and Purple.",
+            "tab_association": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_V9CK4i",
+        "tab_zfq4dn",
+        "tab_MQhGcA",
+        "tab_rpDh7A",
+        "accordion_item_DHMC3C",
+        "accordion_item_7FNeCR",
+        "accordion_item_eccFmU",
+        "accordion_item_WBexrR",
+        "accordion_item_jANTAV"
+      ],
+      "settings": {
+        "add_class": "",
+        "title": "",
+        "description": "",
+        "btn": "Bekijk alle vragen"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "builder_google_review_tzBiEM",
+    "rich_text_with_image_7nY9Wp",
+    "simple_rich_text_4kxLzq",
+    "simple_rich_text_cHax8m",
+    "image_slide_2_3Uez6G",
+    "simple_rich_text_zcbBVt",
+    "simple_rich_text_3bTndn",
+    "image_slide_2_UDHFDk",
+    "simple_rich_text_dBWwJW",
+    "simple_rich_text_Fng8ke",
+    "one_image_footer_Ld9mnJ",
+    "faq_new_knHBi6"
+  ]
+}

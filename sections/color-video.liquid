@@ -1,0 +1,163 @@
+<div class="Color-video-section">
+    <div class="container">
+      <div class="row">
+        <div class="cstm-text-button">
+          <div class="cstm-heading-installation">
+            <h2>{{section.settings.content_heading}}</h2>
+          </div>
+          <div class="cstm-content-installation">
+            <p class="small">{{section.settings.content}}</p>
+          </div>
+        </div>
+        <div class="video-loop ">
+          {% for block in section.blocks %}
+             {%if block.type=='installation-color-video' %}
+               <div class="col-md-4 cstm-installation-video {{ block.settings.add-class }}">
+         {% if  block.settings.overlayimage != blank %}
+           <button class="video-toggle-button">
+        <div class="overlay-video-yt">
+          <div class="overlay-img">
+            {%- assign image_url_1 = block.settings.overlayimage | img_url: "master" -%}
+            <img height="100%" width="100%" class="lazyload image--fade-in" src="{{ image_url_1 }}" loading="lazy" sizes="min(100vw, 520px)" srcset="
+            {{ block.settings.overlayimage | img_url: '300x' }} 300w,
+            {{ block.settings.overlayimage | img_url: '400x' }} 400w,
+            {{ block.settings.overlayimage | img_url: '500x' }} 500w,
+            {{ block.settings.overlayimage | img_url: '600x' }} 600w,
+            {{ block.settings.overlayimage | img_url: '700x' }} 700w,
+            {{ block.settings.overlayimage | img_url: '800x' }} 800w,
+            {{ block.settings.overlayimage | img_url: '900x' }} 900w,
+            {{ block.settings.overlayimage | img_url: '1000x' }} 1000w,
+            {{ block.settings.overlayimage | img_url: '1100x' }} 1100w,
+            {{ block.settings.overlayimage | img_url: '1200x' }} 1200w,
+            {{ block.settings.overlayimage | img_url: '1300x' }} 1300w,
+            {{ block.settings.overlayimage | img_url: '1400x' }} 1400w,
+            {{ block.settings.overlayimage | img_url: '1500x' }} 1500w,
+            {{ block.settings.overlayimage | img_url: '1600x' }} 1600w,
+            {{ block.settings.overlayimage | img_url: '1700x' }} 1700w,
+            {{ block.settings.overlayimage | img_url: '1800x' }} 1800w,
+            {{ block.settings.overlayimage | img_url: '1900x' }} 1900w,
+            {{ block.settings.overlayimage | img_url: '2000x' }} 2000w
+            ">
+          </div>
+          <div class="overlay-img-btn">
+            {%- assign image_url_2 = block.settings.overlayimageplay | img_url: "master" -%}
+            <img height="100%" width="100%" class="lazyload image--fade-in" src="{{ image_url_2 }}" loading="lazy" sizes="min(100vw, 520px)" srcset="
+              {{ block.settings.overlayimageplay | img_url: '300x' }} 300w,
+              {{ block.settings.overlayimageplay | img_url: '400x' }} 400w,
+              {{ block.settings.overlayimageplay | img_url: '500x' }} 500w,
+              {{ block.settings.overlayimageplay | img_url: '600x' }} 600w,
+              {{ block.settings.overlayimageplay | img_url: '700x' }} 700w,
+              {{ block.settings.overlayimageplay | img_url: '800x' }} 800w,
+              {{ block.settings.overlayimageplay | img_url: '900x' }} 900w,
+              {{ block.settings.overlayimageplay | img_url: '1000x' }} 1000w,
+              {{ block.settings.overlayimageplay | img_url: '1100x' }} 1100w,
+              {{ block.settings.overlayimageplay | img_url: '1200x' }} 1200w,
+              {{ block.settings.overlayimageplay | img_url: '1300x' }} 1300w,
+              {{ block.settings.overlayimageplay | img_url: '1400x' }} 1400w,
+              {{ block.settings.overlayimageplay | img_url: '1500x' }} 1500w,
+              {{ block.settings.overlayimageplay | img_url: '1600x' }} 1600w,
+              {{ block.settings.overlayimageplay | img_url: '1700x' }} 1700w,
+              {{ block.settings.overlayimageplay | img_url: '1800x' }} 1800w,
+              {{ block.settings.overlayimageplay | img_url: '1900x' }} 1900w,
+              {{ block.settings.overlayimageplay | img_url: '2000x' }} 2000w
+            ">
+            <h3>{{block.settings.Heading-video}}</h3>
+          </div>
+        </div>
+             </button>
+           {% endif %}
+        <div class="youtube-video-section" style="display:none;">
+          {% if block.settings.Video_url_clr != blank %}
+                  <video width="100%" height="100%" playsinline muted loop controls>
+                    <source data-src="{{ block.settings.Video_url_clr }}" src="{{ block.settings.Video_url_clr }}" type="video/mp4">
+                  </video>
+          <h3 class="video-heading">{{block.settings.Heading-video}}</h3>
+                {% endif %}
+         
+        </div>
+      </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+       </div>
+    </div>
+  </div>
+  <style>
+
+  
+  </style>
+  <script>
+      $(document).ready(function () {
+            function playFile() {
+              $(".youtube-video-section video ").not(this).each(function () {
+                  $(this).get(0).pause();
+              });
+              this[this.get(0).paused ? "play" : "pause"]();
+          }
+  
+          $('.youtube-video-section video ').on("click play", function() {
+              playFile.call(this);
+          });
+      })
+  </script>
+  
+  {% schema %}
+    {
+      "name": "Color Video",
+      "settings": [
+        {
+          "type":"text",
+          "id":"content_heading",
+          "label":"Heading"
+          },
+          {
+          "type":"text",
+          "id":"content",
+          "label":"Content"
+          }
+      ],
+         "blocks":[
+        {
+          "type":"installation-color-video",
+        "name":"installation-color-video",
+        
+        "settings":[
+           {
+          "type":"text",
+          "id":"add-class",
+          "label":"Add Class"
+          },
+        {
+          "type":"image_picker",
+          "id":"overlayimage",
+          "label":"Overlay Image"
+        },
+        {
+          "type":"image_picker",
+          "id":"overlayimageplay",
+          "label":"Overlay Image"
+        },
+        {
+        "type":"url",
+        "id":"Video_url_clr",
+        "label":"Video_link"
+        },
+        {
+        "type":"textarea",
+        "id":"Heading-video",
+        "label":"Video_Heading"
+        }
+          ]
+        }
+      ],
+      "presets":[{
+  "name":"Color Video"
+  }]
+    }
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}

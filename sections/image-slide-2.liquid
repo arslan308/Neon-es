@@ -1,0 +1,119 @@
+<section style="position: relative;">
+    <div class="container container--narrow{{ section.settings.slider-class }} ">
+        <div class="slider-container">
+            <div class="image-container Pre_slide">
+                {% for block in section.blocks %}
+                    <div class="slider-image">
+                        <img src="{{ block.settings.slide_image | img_url: 'master' }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="slider-next slick-arrow">
+                <svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg>
+            </div>
+            <div class="slider-prev slick-arrow">
+                <svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .slideshow:not(.slideshow--edge2edge){height: auto !important;}
+    .slider-image.slick-slide{margin: 0 15px;}
+    .slider-container .slider-image img{width: 100%; border-radius: 10px;}
+    .slider-container .slick-arrow{
+    background-color: #7853F7;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    cursor: pointer;
+    }
+    .slider-container .slick-arrow svg{
+        width: 15px;
+    height: 15px;
+    fill: #fff;
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+    }
+    .slider-container .slider-prev.slick-arrow{left: 20%;}
+    .slider-container .slider-next.slick-arrow{right: 20%;}
+</style>
+<script>
+$(document).ready(function() {
+    $('.Pre_slide').each(function() {
+        $(this).slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            nextArrow: $(this).siblings('.slider-next'),
+            prevArrow: $(this).siblings('.slider-prev'),
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+});
+
+  </script>
+
+{% schema %}
+{
+  "name": "Slideshow image 2",
+  "tag": "section",
+  "class": "slideshow bg-slider",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    },
+    {
+      "type": "text",
+      "id": "slider-class",
+      "label": "Custom Class"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "slide_image",
+           "label": "Image"
+         }, 
+         {
+            "type": "text",
+            "id":"slide_title",
+            "label":"Title"
+         }
+       ]
+     }
+   ],
+   "presets": [
+    {
+      "name": "Slideshow image 2"
+    }
+  ]
+  }
+{% endschema %}
