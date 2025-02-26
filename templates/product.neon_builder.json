@@ -244,7 +244,7 @@
           "type": "installation-color-video",
           "settings": {
             "add-class": "four-vid",
-            "overlayimage": "shopify://shop_images/4_1.png",
+            "overlayimage": "shopify://shop_images/4_1_c655b166-40bc-4696-86bb-dc30b9c48a7a.png",
             "overlayimageplay": "shopify://shop_images/Play_3.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/f823214d17e546c7854c039ae4136e08.mp4",
             "Heading-video": "Warm White"
@@ -294,7 +294,7 @@
           "type": "installation-color-video",
           "settings": {
             "add-class": "nine-vid",
-            "overlayimage": "shopify://shop_images/9.png",
+            "overlayimage": "shopify://shop_images/9_f7d3b21e-16fc-4b99-ba6a-24ff72dd7a6c.png",
             "overlayimageplay": "shopify://shop_images/Play_8.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/9dde5b26e8f844fd96157fd1e1a58255.mp4",
             "Heading-video": "Yellow"
@@ -304,7 +304,7 @@
           "type": "installation-color-video",
           "settings": {
             "add-class": "ten-vid",
-            "overlayimage": "shopify://shop_images/10.png",
+            "overlayimage": "shopify://shop_images/10_97eb4df3-06bc-4c16-bb65-f423cc679747.png",
             "overlayimageplay": "shopify://shop_images/Play_9.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/fffa667fcc7d403cb965dfbaa97d9040.mp4",
             "Heading-video": "Pink"
