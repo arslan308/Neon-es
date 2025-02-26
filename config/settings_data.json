@@ -131,15 +131,15 @@
       "image_with_banner": {
         "type": "image_with_banner",
         "settings": {
-          "bgimage": "shopify://shop_images/Rectangle_1603_1.png",
-          "image": "shopify://shop_images/Group_8607_49c4b7f0-1f70-44f9-87d9-5fec2d9b1610.png",
+          "bgimage": "shopify://shop_images/Rectangle_1603_1.webp",
+          "image": "shopify://shop_images/Group_8607_d20cb577-b266-4775-a4fe-4adbb163a296.webp",
           "image_position": "right",
           "image_width": 50,
           "title": "Our customers are 99% satisfied",
           "content": "<p>We're delighted to see our customers thrilled with their product and Néonsfeer's customer service! They're spreading the word to all their friends and family.</p>",
           "button_text": "",
           "button_link": "shopify://collections/all",
-          "reting-img": "shopify://shop_images/Frame_8859.png",
+          "reting-img": "shopify://shop_images/Frame_8859_2048x2048_0cf77e87-6b1a-4730-bde4-b28a444bb7c1.png",
           "class": "",
           "first_user_profile": "shopify://shop_images/User_Pic_12.png",
           "first_user_name": "Jonathan",
@@ -257,7 +257,6 @@
             "type": "image-with-review",
             "settings": {
               "user-uploaded-img": "shopify://shop_images/Rectangle_3638_1_2048x2048-new.png",
-              "user-img": "shopify://shop_images/Ellipse_232_2048x2048_89f0867e-ebe4-47d3-9f1d-decabc9ccc1b.png",
               "user-name": "Mario Haneca",
               "user-discription": "Very satisfied with my neon logo from neonsfeer - fast service - good product. Do not hesitate.",
               "uplod-time": "2 months ago"
@@ -355,7 +354,6 @@
             "type": "image-with-review",
             "settings": {
               "user-uploaded-img": "shopify://shop_images/Rectangle_3638_10_2048x2048-new.png",
-              "user-img": "shopify://shop_images/Ellipse_4_4-svg_2048x2048_1.png",
               "user-name": "Madelon",
               "user-discription": "Wow, what a design, at first a bit skeptical about what I could expect. But my expectations were far exceeded. Via the configurator I designed my own text and it was delivered neatly within 8 days. Installation was also arranged in the slightest.",
               "uplod-time": "2 weeks ago"
@@ -365,7 +363,6 @@
             "type": "image-with-review",
             "settings": {
               "user-uploaded-img": "shopify://shop_images/backerstreet_2048x2048-new.webp",
-              "user-img": "shopify://shop_images/Ellipse_232_2048x2048_2c5a2fe1-7aca-45c9-bcd1-40ffee22efc5.png",
               "user-name": "Mark (Bleeckerstreet)",
               "user-discription": "Very satisfied, the result is great. Service, product and delivery time are fine.",
               "uplod-time": "4 months ago"
@@ -597,7 +594,6 @@
         "type": "image-and-text",
         "settings": {
           "bgimage": "shopify://shop_images/Group_8432_80b281eb-9537-40c2-a078-d596130e3606.png",
-          "image": "shopify://shop_images/Frame_8430_0ac8b989-3bb1-4bfb-ab5c-e19eb82619fa.png",
           "image_position": "left",
           "image_width": 50,
           "title": "Looking for a text in neon?",
@@ -633,11 +629,6 @@
           "price_box_options": "bottom",
           "rtl": false
         }
-      },
-      "15134163510845626300": {
-        "type": "shopify://apps/geoip-country-redirect/blocks/speeedup_link/a3fa1a12-9aad-4707-ab56-45ccf9191aa7",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
