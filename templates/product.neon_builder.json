@@ -15,7 +15,7 @@
         "sign_customiser_neon_customiser_Wj4JiE": {
           "type": "shopify://apps/sign-customiser/blocks/neon-customiser/29c3b558-f454-440f-b53e-26c5e867a515",
           "settings": {
-            "customiser_id": "2092",
+            "customiser_id": "",
             "experimental": false,
             "experimental_iframe": false,
             "initial_screen": "VISUALISER",
@@ -325,7 +325,6 @@
           "settings": {
             "add-class": "last-vid",
             "overlayimage": "shopify://shop_images/11_52493ce7-eebe-4a87-a828-bf801aec21ef_MConverter.eu.png",
-            "overlayimageplay": "shopify://shop_images/Play_11_840fc190-a417-45d9-912d-5f2299bfd704.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/9560e700fddc426aaace492b13f1f3b0.mp4",
             "Heading-video": "Purple"
           }
@@ -381,8 +380,7 @@
           "type": "order",
           "settings": {
             "title": "Transparant Cable",
-            "subtitle": "",
-            "logo": "shopify://shop_images/Frame_8547_184a148d-4c7e-4738-9fc4-24f46965fa01.svg"
+            "subtitle": ""
           }
         }
       },
@@ -651,7 +649,6 @@
         "image": "shopify://shop_images/Frame_8430_600x-svg_300x_df5e0c6_700x_2.png",
         "image_position": "left",
         "image_width": 50,
-        "bgimage1": "shopify://shop_images/svgviewer-png-output_8.png",
         "title": "Looking for a neon logo?",
         "content": "<p>Complete our 1-minute form, upload your logo and receive a quote within 24 hours.</p>",
         "button_text": "Upload Logo",
@@ -730,7 +727,6 @@
             "subtitle": "EvoLux V23",
             "subtitle_description": "EvoLux V23 is energiezuiniger, duurzamer en biedt betere prestaties en gebruiksgemak dan zijn concurrenten.",
             "check": false,
-            "image-drop": "shopify://shop_images/e8d19777c57a7fc57c6c52ad1575f334.png",
             "video_url": "https://www.youtube.com/shorts/sPw_5G18uz8"
           }
         },
@@ -741,7 +737,6 @@
             "subtitle": "1500 lumens",
             "subtitle_description": "EvoLux V23 is energiezuiniger, duurzamer en biedt betere prestaties en gebruiksgemak dan zijn concurrenten.",
             "check": false,
-            "image-drop": "shopify://shop_images/d39ad12debc13003399a1846325e9c51.png",
             "video_url": "https://www.youtube.com/shorts/F2ezI3tN0VA"
           }
         },
@@ -752,7 +747,6 @@
             "subtitle": "100,000 hrs",
             "subtitle_description": "EvoLux V23 is more energy-efficient, sustainable, and offers better performance and ease of use than its competitors",
             "check": false,
-            "image-drop": "shopify://shop_images/bfa531812cdb949fd7182d217efe1d7a.jpg",
             "video_url": ""
           }
         },
@@ -811,7 +805,6 @@
       "settings": {
         "image_position": "right",
         "image_width": 70,
-        "bgimage1": "shopify://shop_images/DSC00193-2.jpg",
         "video_url_section": "https://www.youtube.com/shorts/sPw_5G18uz8",
         "section_title": "Specifications",
         "title": "",
@@ -1029,7 +1022,6 @@
       "disabled": true,
       "settings": {
         "custom_class": "image_text_sec",
-        "image": "shopify://shop_images/ed56da52ec6db75809e1f8dd2f431c76_84dd63da-41a1-417c-8fec-187ff0c0518f.webp",
         "image_position": "right",
         "image_width": 50,
         "title": "Your logo for just",
@@ -1060,9 +1052,7 @@
         },
         "image_rYKT9d": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Rectangle_123.webp"
-          }
+          "settings": {}
         },
         "image_A7CRNM": {
           "type": "Image",
@@ -1072,9 +1062,7 @@
         },
         "image_Nd6HqV": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Rectangle_122.webp"
-          }
+          "settings": {}
         }
       },
       "block_order": [
