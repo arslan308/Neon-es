@@ -87,7 +87,6 @@
         "logo_tKik9A": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/1_280x_f1ebdcad-4dff-45d4-b69d-ec5f0d2e5ab6.png",
             "link": ""
           }
         }
@@ -143,7 +142,7 @@
       "type": "featured-collection",
       "settings": {
         "custom_class": "",
-        "collection": "best-sold",
+        "collection": "ninos",
         "title": "Best Selling Neon Lighting",
         "products_count": 12,
         "layout": "vertical",
