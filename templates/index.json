@@ -174,7 +174,7 @@
     "collection_with_image_8UDryq": {
       "type": "collection-with-image",
       "settings": {
-        "collection": "best-sold",
+        "collection": "baby-showers",
         "products_count": 20,
         "show_quick_buy": false,
         "background": "#ffffff",
