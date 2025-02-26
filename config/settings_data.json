@@ -594,6 +594,7 @@
         "type": "image-and-text",
         "settings": {
           "bgimage": "shopify://shop_images/Group_8432_80b281eb-9537-40c2-a078-d596130e3606.png",
+          "image": "shopify://shop_images/Frame_8430_0ac8b989-3bb1-4bfb-ab5c-e19eb82619fa.webp",
           "image_position": "left",
           "image_width": 50,
           "title": "Looking for a text in neon?",
