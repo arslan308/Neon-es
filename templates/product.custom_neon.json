@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "price_with_logo_discount_main_product_XipGip": {
       "type": "price-with-logo-discount-main-product",
@@ -157,10 +157,14 @@
         "SectionTitle": "Your Quote is Ready!",
         "timer": "",
         "atc_show": true,
-        "support_id_image": "shopify://shop_images/image_23_5cc5b003-7d52-4040-980d-660f486035e6.png",
+        "support_id_image": "shopify://shop_images/image_23.png",
         "support_text": "Need help? Call or chat with Sjoerd!",
+        "accessoires_title": "Accessories",
+        "include_icon_toolip": "Your neon logo comes complete with a dimmer, remote control, adapter, and all necessary mounting materials. Thanks to the plug & play system, you can set up the lighting within 5 minutes and enjoy it right away.",
+        "include_icon": "Included",
         "chat_text": "Chat with Sjoerd",
         "chat_link": "",
+        "popup_close": "Back",
         "support_phone": "+31 850 000 749",
         "quote_customize_title": "Customize your quote",
         "form_user_image": "https://cdn.shopify.com/s/files/1/0446/7376/1431/files/imageProxy_1.png?v=1730875983",
@@ -181,7 +185,7 @@
         "accordion_text": "You receive",
         "save_text": "You Save",
         "image_shipping": "shopify://shop_images/local_shipping_1.png",
-        "alert_section": "", 
+        "alert_section": "",
         "discount_card_message": "Black Friday Deal Applied!",
         "discount_car_toltip": "The biggest sale of the year is live! 🎉 Grab 25% off on your order today and enjoy incredible Black Friday savings. Complete your purchase now to secure this exclusive discount! 🛍️💸",
         "discount_message_complete": "Complete your order to keep your discount",
@@ -369,7 +373,7 @@
           "type": "installation-color-video",
           "settings": {
             "add-class": "four-vid",
-            "overlayimage": "shopify://shop_images/4_1.png",
+            "overlayimage": "shopify://shop_images/4_1_c655b166-40bc-4696-86bb-dc30b9c48a7a.png",
             "overlayimageplay": "shopify://shop_images/Play_3.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/f823214d17e546c7854c039ae4136e08.mp4",
             "Heading-video": "Warm White"
@@ -419,7 +423,7 @@
           "type": "installation-color-video",
           "settings": {
             "add-class": "nine-vid",
-            "overlayimage": "shopify://shop_images/9.png",
+            "overlayimage": "shopify://shop_images/9_f7d3b21e-16fc-4b99-ba6a-24ff72dd7a6c.png",
             "overlayimageplay": "shopify://shop_images/Play_8.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/9dde5b26e8f844fd96157fd1e1a58255.mp4",
             "Heading-video": "Yellow"
@@ -429,7 +433,7 @@
           "type": "installation-color-video",
           "settings": {
             "add-class": "ten-vid",
-            "overlayimage": "shopify://shop_images/10.png",
+            "overlayimage": "shopify://shop_images/10_6ae5850c-e878-48b6-aa8e-67296734d36b.png",
             "overlayimageplay": "shopify://shop_images/Play_9.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/fffa667fcc7d403cb965dfbaa97d9040.mp4",
             "Heading-video": "Pink"
@@ -450,7 +454,6 @@
           "settings": {
             "add-class": "last-vid",
             "overlayimage": "shopify://shop_images/11_52493ce7-eebe-4a87-a828-bf801aec21ef_MConverter.eu.png",
-            "overlayimageplay": "shopify://shop_images/Play_11_840fc190-a417-45d9-912d-5f2299bfd704.png",
             "Video_url_clr": "https://cdn.shopify.com/videos/c/o/v/9560e700fddc426aaace492b13f1f3b0.mp4",
             "Heading-video": "Purple"
           }
@@ -533,7 +536,6 @@
       "type": "image-with-text-sale-page",
       "settings": {
         "custom_class": "image_text_sec",
-        "image": "shopify://shop_images/Group_283_31129ed0-3dce-4f88-8acb-ce9c6410c799.jpg",
         "PaddingImage": "",
         "image_position": "right",
         "image_width": 50,
@@ -784,7 +786,6 @@
       "type": "image-with-text-sale-page",
       "settings": {
         "custom_class": "image_text_sec",
-        "image": "shopify://shop_images/9e76decacb85278be8222dd47f0351c7.jpg",
         "PaddingImage": "",
         "image_position": "right",
         "image_width": 50,
