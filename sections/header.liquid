@@ -221,11 +221,11 @@
             </nav>
           {%- endif -%}
 
-          {% if template != 'page.form_page_template' and section.settings.show_button %}
-           <a href="{{ section.settings.custom_link }}" class="custom-button button button--primary requid-btn"> 
-             {{ section.settings.button_text }}
-           </a> 
-         {% endif %}
+          {% if template != 'page.form_page_template' and template != 'product.neon_builder' and template != 'cart' and section.settings.show_button %}
+             <a href="{{ section.settings.custom_link }}" class="custom-button button button--primary requid-btn"> 
+               {{ section.settings.button_text }}
+             </a> 
+          {% endif %}
           
           <div class="header__action-list">
             <div class="header__action-item hidden-tablet-and-up custom-search-bar">
