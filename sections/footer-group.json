@@ -18,32 +18,32 @@
           "type": "item",
           "settings": {
             "icon": "bi-network",
-            "title": "Happy Customers",
-            "content": "<p>Join the majority who love and trust our quality.</p>"
+            "title": "Más de 8.150 clientes satisfechos",
+            "content": "<p>Muchos confían en nuestra oferta de primera clase.</p>"
           }
         },
         "item-2": {
           "type": "item",
           "settings": {
             "icon": "bi-delivery",
-            "title": "Fast & Free Shipping",
-            "content": "<p>Get your neon sign in just 6-8 business days.</p>"
+            "title": "Envío Rápido y Gratis",
+            "content": "<p>Recibe tu letrero de neón en solo 6-8 días hábiles.</p>"
           }
         },
         "item-3": {
           "type": "item",
           "settings": {
             "icon": "bi-alert",
-            "title": "2-year warranty",
-            "content": "<p>Experience hassle-free product assurance.</p>"
+            "title": "Garantía de 2 años",
+            "content": "<p>Consigue un producto con garantías y sin complicaciones.</p>"
           }
         },
         "item-4": {
           "type": "item",
           "settings": {
             "icon": "bi-secure-payment",
-            "title": "100% secure payments",
-            "content": "<p>Safe and secure payments via Credit Card & PayPal.</p>"
+            "title": "Pagos 100% seguros",
+            "content": "<p>Pagos seguros con tarjeta de crédito, PayPal y Klarna</p>"
           }
         }
       },
@@ -63,14 +63,14 @@
         "footer-0": {
           "type": "text",
           "settings": {
-            "title": "About Neonsfeer",
-            "content": "<p>Illuminating spaces with bespoke neon artistry, crafted for those who seek the extraordinary.</p><p><br/><strong>Opening hours</strong><br/>Monday - Friday: 8AM - 6PM<br/>Saturday and Sunday: 9AM - 5PM<br/></p><p><strong>Contact us</strong><br/>info@neonsfeer.com<br/>+1 (646) 760-1539</p><p>Neonsfeer<br/>67-04 Myrtle Ave #443<br/>Glendale, NY 11385</p>"
+            "title": "SOBRE NEONSFEER",
+            "content": "<p>Iluminando espacios personalizados con arte de neón para quienes buscan lo extraordinario.<br/><br/><strong>Horario de funcionamiento</strong><br/>Lunes a viernes: 08:00 - 17:00<br/>Sábado y domingo: 10:00 - 16:00<br/><br/><strong>Contacto</strong><br/>info@neonsfeer.es<br/>+34 511 604 926</p>"
           }
         },
         "links_zBbHbJ": {
           "type": "links",
           "settings": {
-            "menu": "products"
+            "menu": "product"
           }
         },
         "footer-1": {
@@ -82,8 +82,8 @@
         "footer-2": {
           "type": "newsletter",
           "settings": {
-            "title": "Newsletter",
-            "subheading": "<p>Sign up for news, insights, and deals—straight to your inbox!</p>"
+            "title": "Boletín",
+            "subheading": "<p>Introduce tu correo electrónico y mantente al día.</p>"
           }
         }
       },
