@@ -398,39 +398,39 @@
         "1d53a581-f748-4e74-b6a2-9ded112de1d8": {
           "type": "specs",
           "settings": {
-            "title": "Type LED",
-            "subtitle": "EvoLux V23",
+            "title": "Tipo de LED",
+            "subtitle": "EcoLED Ultra",
             "check": false
           }
         },
         "ae92ab41-ca45-426a-8a34-fe43fb5ebdf7": {
           "type": "specs",
           "settings": {
-            "title": "Brightness",
-            "subtitle": "1500 lumens",
+            "title": "Luminosidad",
+            "subtitle": "1200 - 1500 lúmenes",
             "check": false
           }
         },
         "be688158-d6d5-4d62-bb05-977b6945872d": {
           "type": "specs",
           "settings": {
-            "title": "Service life",
-            "subtitle": "100,000 hrs",
+            "title": "Horas de quema",
+            "subtitle": "100.000 horas",
             "check": false
           }
         },
         "b66adf0b-e876-4650-907c-02e6accf264b": {
           "type": "specs",
           "settings": {
-            "title": "Energy",
-            "subtitle": "Label A++",
+            "title": "Energía",
+            "subtitle": "Etiqueta energética A++",
             "check": false
           }
         },
         "7820ed12-0d4a-47be-acce-b5b885d44ec6": {
           "type": "specs",
           "settings": {
-            "title": "Dimmable",
+            "title": "Regulable",
             "subtitle": "",
             "check": true
           }
@@ -438,7 +438,7 @@
         "5c262b1a-9a31-4fba-9f0f-dafcc74ed3a9": {
           "type": "specs",
           "settings": {
-            "title": "100% silent",
+            "title": "100% silencioso",
             "subtitle": "",
             "check": true
           }
@@ -446,40 +446,40 @@
         "22048d2f-4e8e-4422-89db-6ffcf3e42522": {
           "type": "specs",
           "settings": {
-            "title": "Warranty",
-            "subtitle": "24 months",
+            "title": "Garantizar",
+            "subtitle": "24 meses",
             "check": false
           }
         },
         "45d66eeb-6d63-4149-a978-462e7a8bdb84": {
           "type": "specs",
           "settings": {
-            "title": "Experience",
-            "subtitle": "+5 years",
+            "title": "Experiencia",
+            "subtitle": "+5 años",
             "check": false
           }
         },
         "d7437bee-75b3-4743-b6df-66b44af46422": {
           "type": "specs",
           "settings": {
-            "title": "Connection",
-            "subtitle": "Plug",
+            "title": "Conexión",
+            "subtitle": "Enchufe",
             "check": false
           }
         },
         "dd9d14dd-9140-489f-8c28-a591168abaea": {
           "type": "specs",
           "settings": {
-            "title": "Production",
-            "subtitle": "In-house",
+            "title": "Producción",
+            "subtitle": "Gestión propia",
             "check": false
           }
         },
         "cc2801bf-1f1b-4a08-991e-c36a3accbba3": {
           "type": "specs",
           "settings": {
-            "title": "Weight",
-            "subtitle": "A few lbs",
+            "title": "Peso",
+            "subtitle": "Varios kilos",
             "check": false
           }
         },
@@ -511,10 +511,10 @@
         "image_position": "right",
         "image_width": 50,
         "bgimage1": "shopify://shop_images/Rectangle_3615_7c523219-521d-488a-b1f3-8a31e264d700.svg",
-        "title": "Why Choose Neonsfeer?",
-        "content": "<p>Crafting more than neon signs, we prioritize quality, service, and reliability. Using the best materials, we aim to enhance your space with our standout products. Experience Neonsfeer's brilliance.</p>",
-        "button_text": "ABOUT US",
-        "button_link": "shopify://pages/about-us",
+        "title": "¿Por qué elegir Neonsfeer?",
+        "content": "<p>Hacemos mucho más que simples letreros de neón: priorizamos la calidad, el servicio y la confiabilidad. Utilizando los mejores materiales, nuestro objetivo es mejorar tu espacio gracias a nuestros productos exclusivos. Conoce la luminosidad de Neonsfeer.</p>",
+        "button_text": "ACERCA DE",
+        "button_link": "https://neonsfeer.es/pages/acerca-de-neonsfeer",
         "class": "",
         "right_heading": "shopify://shop_images/logo.png"
       }
@@ -590,7 +590,7 @@
         "logo_mDDkRN"
       ],
       "settings": {
-        "title": "500+ businesses preceded you",
+        "title": "Algunos de nuestros clientes",
         "link_title": "",
         "link": ""
       }
@@ -602,8 +602,8 @@
           "type": "text-button",
           "settings": {
             "add_to_cart_btn_text": "",
-            "content_heading": "Easy setup",
-            "content": "Set up your neon sign in under 5 minutes! We provide everything you need, so you won't have to worry about installation. Check out our instructional videos on the installation process and let yourself be guided effortlessly.",
+            "content_heading": "Instalación sencilla",
+            "content": "¡Instala tu iluminación de neón en menos de 5 minutos! Nosotros proporcionamos todo lo que necesitas para que no te preocupes por la instalación. Mira nuestros videos explicativos sobre el proceso de instalación.",
             "content_link": "",
             "content_text": ""
           }
@@ -613,8 +613,8 @@
           "settings": {
             "overlay": "shopify://shop_images/Rectangle_3625_2.svg",
             "Video_url": "https://cdn.shopify.com/videos/c/o/v/96ce200ad67a43688c432d90c81db73e.mp4",
-            "Heading": "Easy to hang",
-            "content_video": "Hang your neon sign on the wall using the provided mounting kit (screws, anchors, and cover caps)."
+            "Heading": "Fácil de colgar",
+            "content_video": "Fija tu luz de neón a la pared con el kit de montaje suministrado (tornillos, tacos y tapas)."
           }
         },
         "42861d47-32ea-4305-8558-ffe2392dd164": {
@@ -622,8 +622,8 @@
           "settings": {
             "overlay": "shopify://shop_images/Rectangle_3625_1_2.svg",
             "Video_url": "https://cdn.shopify.com/videos/c/o/v/af6e5e7996f547eb8a75259f4e084318.mp4",
-            "Heading": "Plug in",
-            "content_video": "Easily connect your neon sign to the adapter and simply plug it into the socket, ready to shine brightly!"
+            "Heading": "Enchufar",
+            "content_video": "¡Conecta fácilmente tu iluminación de neón al adaptador y enchúfalo a la toma de corriente, listo para brillar!"
           }
         }
       },
@@ -641,10 +641,10 @@
         "image": "shopify://shop_images/Frame_8430_600x-svg_300x_df5e0c6_700x_2.png",
         "image_position": "left",
         "image_width": 50,
-        "title": "Looking for a neon logo?",
-        "content": "<p>Complete our 1-minute form, upload your logo and receive a quote within 24 hours.</p>",
-        "button_text": "Upload Logo",
-        "button_link": "shopify://pages/logo-request",
+        "title": "¿Necesitas un letrero de neón?",
+        "content": "<p>En solo 1 minuto puedes rellenar nuestro formulario y seleccionar el logotipo que quieres transformar en neón. Recibirás un presupuesto en menos de 24 horas.</p>",
+        "button_text": "Cargar logotipo",
+        "button_link": "shopify://pages/solicitar-presupuesto",
         "class": ""
       }
     },
@@ -705,7 +705,7 @@
       ],
       "settings": {
         "spacing": "",
-        "title": "Client videos",
+        "title": "Videos de clientes",
         "slide_show": 4
       }
     },
@@ -1004,9 +1004,9 @@
       ],
       "settings": {
         "add_class": "",
-        "title": "Frequently Asked Questions",
-        "description": "View our frequently asked questions for answers about specific product features, use and maintenance.",
-        "btn": "View all questions."
+        "title": "Preguntas frecuentes",
+        "description": "Consulta nuestras preguntas frecuentes para obtener respuestas sobre características específicas del producto, uso y mantenimiento.",
+        "btn": "Ver todas las preguntas"
       }
     },
     "image_with_text_kPTnwL": {
