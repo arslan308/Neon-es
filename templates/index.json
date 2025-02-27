@@ -16,13 +16,13 @@
         "videofile": "shopify://files/videos/99fd39fabb1d450e940d13e216e7cd2d.mp4",
         "mobile_videofile": "shopify://files/videos/mobile.mp4",
         "review_text": "",
-        "title": "Make your space stand out!",
-        "description": "Let your creativity shine with a customized LED neon sign",
+        "title": "Haz que tu espacio destaque",
+        "description": "Deja volar tu creatividad con un letrero de neón LED personalizado.",
         "text_align": "text-center",
-        "link_text": "Design Your Logo",
-        "link": "shopify://pages/logo-request",
-        "link_text1": "Design Your Text",
-        "link1": "https://neonsfeer.com/products/design-your-neon-sign"
+        "link_text": "Diseñe tu logo",
+        "link": "https://neonsfeer.es/pages/solicitar-presupuesto",
+        "link_text1": "Diseñe tu texto",
+        "link1": "https://neonsfeer.es/products/texto-en-neon"
       }
     },
     "logo_list_VNDjzg": {
@@ -103,7 +103,7 @@
         "logo_tKik9A"
       ],
       "settings": {
-        "title": "We help these brands grow",
+        "title": "Ayudamos a estas marcas a crecer",
         "link_title": "",
         "link": ""
       }
@@ -117,10 +117,10 @@
         "image_3": "shopify://shop_images/3_923ca18a-0dfa-4d4f-a1cf-d2d300cb6f82.webp",
         "image_position": "left",
         "image_width": 40,
-        "title": "Create a unique neon creation",
-        "content": "Design your neon sign in just 5 minutes! Choose your text, select a font, pick a color and place your order using our user-friendly design tool.",
-        "button_text": "Design Neon Text",
-        "button_link": "https://neonsfeer.com/products/design-your-neon-sign",
+        "title": "Crea un Letrero de Neón con Texto al Instante",
+        "content": "¡Diseña su letrero de neón en solo 5 minutos! Elige el texto, selecciona una fuente, decídete por un color y haz tu pedido usando nuestra herramienta de diseño fácil de usar.",
+        "button_text": "Diseña tu texto",
+        "button_link": "https://neonsfeer.es/products/texto-en-neon",
         "class": ""
       }
     },
@@ -131,10 +131,10 @@
         "image_2": "shopify://shop_images/2two.webp",
         "image_position": "right",
         "image_width": 50,
-        "title": "Transform your (company) logo to neon",
-        "content": "We transform your logo into a unique neon lighting creation. Upload your logo and receive a preview and a quote within 24 hours.",
-        "button_text": "Neon Logo Design",
-        "button_link": "shopify://pages/logo-request",
+        "title": "Transforma tu Logotipo en Arte de Neón",
+        "content": "En 1 minuto puedes rellenar nuestro formulario y seleccionar el logotipo que quieres en neón. En menos de 24 horas de enviaremos un presupuesto para tu proyecto.",
+        "button_text": "Diseña tu logo",
+        "button_link": "https://neonsfeer.es/pages/solicitar-presupuesto",
         "class": ""
       }
     },
@@ -142,8 +142,8 @@
       "type": "featured-collection",
       "settings": {
         "custom_class": "",
-        "collection": "ninos",
-        "title": "Best Selling Neon Lighting",
+        "collection": "bestsellers",
+        "title": "Los letreros de Neón más Populares",
         "products_count": 12,
         "layout": "vertical",
         "stack_products": false,
@@ -156,34 +156,34 @@
       "type": "our_process",
       "settings": {
         "custom_class": "home-order-process",
-        "title": "Make a neon sign in 5 minutes",
+        "title": "Crea un letrero de neón en solo 5 minutos",
         "process_backgroud": "shopify://shop_images/newone.png",
         "step_1_icon": "shopify://shop_images/pen-tool.png",
         "step_2_icon": "shopify://shop_images/thai-bath.png",
         "step_3_icon": "shopify://shop_images/truck_416e4d02-4d24-432e-9b8a-8c0de54112b4.png",
-        "step_1_heading": "Submit Your Logo",
-        "step_1_desc": "Complete our 1-minute form, select the logo you'd like to transform into neon, and receive a quote within 24 hours.",
-        "step_2_heading": "Get a Personalized Quote",
-        "step_2_desc": "Receive a price and neon preview. We'll work together, adjusting based on your feedback, for the ideal design.",
-        "step_3_heading": "Fast & Free Shipping",
-        "step_3_desc": "Have your custom neon sign at your doorstep in just 6-8 business days, with zero shipping costs.",
-        "button_text": "Get free quote",
-        "button_link": "shopify://pages/logo-request"
+        "step_1_heading": "Envía tu logotipo",
+        "step_1_desc": "En 1 minuto puedes rellenar nuestro formulario y seleccionar el logotipo que quieres en neón. En menos de 24 horas de enviaremos un presupuesto para tu proyecto.",
+        "step_2_heading": "Recibe un Presupuesto Personalizado",
+        "step_2_desc": "Recibe un presupuesto y una vista previa de tu letrero de neón. Trabajaremos juntos, ajustándonos en función de tus comentarios, para conseguir el diseño perfecto.",
+        "step_3_heading": "Envío Rápido y Gratis",
+        "step_3_desc": "Recibe tu letrero de neón personalizado directamente en casa en solo 6-8 días hábiles y sin gastos de envío.",
+        "button_text": "Obtén una cotización gratuita",
+        "button_link": "https://neonsfeer.es/pages/solicitar-presupuesto"
       }
     },
     "collection_with_image_8UDryq": {
       "type": "collection-with-image",
       "settings": {
-        "collection": "baby-showers",
+        "collection": "quotes",
         "products_count": 20,
         "show_quick_buy": false,
         "background": "#ffffff",
         "text_color": "#000000",
-        "title": "Colors that Come Alive",
-        "content": "Bring walls to life with our luminous neon signs. Dive deep into a splash of colors and let your dreams shine brightly.",
+        "title": "Colores que Cobran Vida",
+        "content": "Dale vida a tus paredes o fachada con nuestros letreros luminosos de neón. Sumérgete en una explosión de colores y deja que tus sueños brillen con intensidad.",
         "button_background": "#ff13a7",
         "button_text_color": "#ffffff",
-        "button_text": "Shop Now",
+        "button_text": "Comprar ahora",
         "button_link": "shopify://collections/multiple-colors"
       }
     },
@@ -219,12 +219,12 @@
         "products_count": 12,
         "background": "shopify://shop_images/Group_8695_53046a30-4ce9-4f03-97de-26ed68cc2690.webp",
         "text_color": "#ffffff",
-        "title": "Light Up Your Story",
-        "content": "Every sign tells a story. Dive into our diverse range of LED neon signs and find the one that speaks to you.",
+        "title": "Ilumina Tu Historia",
+        "content": "Cada letreo cuenta una historia. Conoce nuestra amplia colección de letreros de neón LED y encuentra el que más te inspira.",
         "button_background": "#ff13a7",
         "button_text_color": "#ffffff",
-        "button_text": "Shop Now",
-        "button_link": "shopify://collections/animals"
+        "button_text": "Descubre Más",
+        "button_link": "shopify://collections/coleccion"
       }
     },
     "text_with_image_forarrow_JmVEjm": {
@@ -234,14 +234,14 @@
         "image": "shopify://shop_images/Group-8583_700x_700x_700x_4ad48dbf-5929-45ab-886c-8195b03e49e9.webp",
         "image_position": "left",
         "image_width": 50,
-        "title": "Neon up your life! Choose one of the popular neon quotes",
-        "content": "<p>Give power to your words, let them shine! Discover quotes that speak in neon. Let your space sparkle!</p>",
+        "title": "Frases que Brillan con Luz Propia",
+        "content": "Las palabras tienen poder, haz que iluminen tu negocio. Usa ahora en neón las frases más pegadizas y ¡haz que brille tu espacio!",
         "list_one": "",
         "list_two": "",
         "list_three": "",
         "add_to_cart_btn_text": "",
-        "button_text": "Shop Now",
-        "button_link": "shopify://collections/all",
+        "button_text": "Comprar ahora",
+        "button_link": "shopify://collections/coleccion",
         "button_text_2": "",
         "button_link_2": "shopify://collections/all",
         "class": ""
@@ -305,13 +305,13 @@
       ],
       "settings": {
         "custom_class": "",
-        "people-trust": "More than 1500 satisfied customers in USA",
+        "people-trust": "8500+ clientes satisfechos",
         "video-discription": "",
         "image": "shopify://shop_images/Frame_8079.webp",
         "button_background": "#7853f7",
         "button_text_color": "#ffffff",
-        "button_text": "Discover all reviews",
-        "button_link": "shopify://pages/klantbeoordelingen"
+        "button_text": "VER TODOS",
+        "button_link": "https://neonsfeer.es/pages/clientes-satisfechos"
       }
     },
     "page_instagram_R6Bzc3": {
@@ -361,7 +361,7 @@
         "image_Ec4ArT"
       ],
       "settings": {
-        "title": "Follow  <svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"50\" height=\"50\" viewbox=\"0,0,256,256\">\n<g fill=\"#ffffff\" fill-rule=\"nonzero\" stroke=\"none\" stroke-width=\"1\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"\" stroke-dashoffset=\"0\" font-family=\"none\" font-weight=\"none\" font-size=\"none\" text-anchor=\"none\" style=\"mix-blend-mode: normal\"><g transform=\"scale(5.12,5.12)\"><path d=\"M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z\"></path></g></g>\n</svg>  @neonsfeer on Instagram"
+        "title": "Sigue a  <svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"50\" height=\"50\" viewbox=\"0,0,256,256\">\n<g fill=\"#ffffff\" fill-rule=\"nonzero\" stroke=\"none\" stroke-width=\"1\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"\" stroke-dashoffset=\"0\" font-family=\"none\" font-weight=\"none\" font-size=\"none\" text-anchor=\"none\" style=\"mix-blend-mode: normal\"><g transform=\"scale(5.12,5.12)\"><path d=\"M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z\"></path></g></g>\n</svg>  @neonsfeer en Instagram"
       }
     }
   },
