@@ -58,7 +58,7 @@
     "image_with_text_aboutus_fyXmUt": {
       "type": "image-with-text-aboutus",
       "settings": {
-        "section_title_main": "Creemos",
+        "section_title_main": "",
         "custom_class": "rebeldes",
         "row_class": "",
         "section_title": "Rebeldes",
