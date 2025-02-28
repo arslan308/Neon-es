@@ -135,28 +135,28 @@
           "image": "shopify://shop_images/Group_8607_d20cb577-b266-4775-a4fe-4adbb163a296.webp",
           "image_position": "right",
           "image_width": 50,
-          "title": "Our customers are 99% satisfied",
-          "content": "<p>We're delighted to see our customers thrilled with their product and Néonsfeer's customer service! They're spreading the word to all their friends and family.</p>",
+          "title": "¡El 99% de nuestros clientes está que no cabe de la alegría!",
+          "content": "<p>Nada nos llena de más alegría que ver a nuestros clientes brillar de felicidad y orgullo cuando hablan de sus letreros LED de neón personalizados..</p>",
           "button_text": "",
           "button_link": "shopify://collections/all",
           "reting-img": "shopify://shop_images/Frame_8859_2048x2048_0cf77e87-6b1a-4730-bde4-b28a444bb7c1.png",
           "class": "",
           "first_user_profile": "shopify://shop_images/User_Pic_12.png",
-          "first_user_name": "Jonathan",
-          "first_user_description": "I love my neon sign from Neonsfeer!",
+          "first_user_name": "Sebastian",
+          "first_user_description": "\"¡En Neonsfeer encontrarás los toques mágicos ideales para cada evento, haciendo que cada ocasión sea única y especial!\"",
           "second_user_profile": "shopify://shop_images/User_Pic_11.png",
-          "second_user_name": "Bob",
-          "second_user_description": "The Neonsfeer team was super fast with answering my questions. They handled everything for delivery and sign pickup."
+          "second_user_name": "Pique",
+          "second_user_description": "\"El equipo de Neonsfeer se portó de maravilla, como los súper héroes de la fiesta, respondiendo todas mis preguntas y haciendo magia para que los letreros llegaran y volvieran sin problemas.\""
         }
       },
       "rich-text": {
         "type": "rich-text",
         "settings": {
           "text_width": "regular",
-          "title": "Let your neon creativity shine",
+          "title": "Desata tu creatividad y diseña en neón único.",
           "content": "",
-          "button_text": "Create, let's get started",
-          "button_link": "https://neonsfeer.com/products/design-your-neon-sign"
+          "button_text": "Diseños ahora",
+          "button_link": "https://neonsfeer.es/products/texto-en-neon"
         }
       },
       "video-slider-sec": {
@@ -166,36 +166,36 @@
             "type": "customer-slider",
             "settings": {
               "customer-img": "shopify://shop_images/101_2048x2048_1ce527db-be6a-480a-b6a4-a4f3c43868db.webp",
-              "customer-name": "Webjongens",
-              "customer-post": "Den Burg",
+              "customer-name": "Paula",
+              "customer-post": "Sevilla",
               "video-url": "https://cdn.shopify.com/videos/c/o/v/9dac062c945f4f3fa5e71c7c5254122f.mp4"
             }
           },
           "customer_slider_ciUjmK": {
             "type": "customer-slider",
             "settings": {
-              "customer-img": "shopify://shop_images/404_2048x2048-new.webp",
-              "customer-name": "Ruud de Boer<br> (Lastafelshop)",
-              "customer-post": "Koudekerk aan den Rijn",
-              "video-url": "https://cdn.shopify.com/videos/c/o/v/405d566fe2a844a886072ca89fe55bcc.mp4"
+              "customer-img": "shopify://shop_images/Screenshot_5.png",
+              "customer-name": "Luci",
+              "customer-post": "Madrid",
+              "video-url": "https://cdn.shopify.com/videos/c/o/v/78a03d0e36f048c9a097ba78927d2885.mp4"
             }
           },
           "customer_slider_yLJkDp": {
             "type": "customer-slider",
             "settings": {
-              "customer-img": "shopify://shop_images/303_2048x2048-new.webp",
-              "customer-name": "Iris (Curls by Iris)",
-              "customer-post": "Arnhem",
+              "customer-img": "shopify://shop_images/C03DEC0C-8CFF-4361-B9FF-423C3806.jpg",
+              "customer-name": "",
+              "customer-post": "",
               "video-url": "https://cdn.shopify.com/videos/c/o/v/a1e10a4ca3544986bddfb3d717f152fd.mp4"
             }
           },
           "customer_slider_WqcyCL": {
             "type": "customer-slider",
             "settings": {
-              "customer-img": "shopify://shop_images/505_2048x2048-new.webp",
-              "customer-name": "Shem",
-              "customer-post": "Uden",
-              "video-url": "https://cdn.shopify.com/videos/c/o/v/328f6e8b570048cda28efb4696061399.mp4"
+              "customer-img": "shopify://shop_images/imgpsh_fullsize_anim_3.png",
+              "customer-name": "Iris",
+              "customer-post": "Tarazona",
+              "video-url": "https://cdn.shopify.com/videos/c/o/v/78a4db8b06c4443293e1b20ea8208eef.mov"
             }
           },
           "customer_slider_nJMkHt": {
