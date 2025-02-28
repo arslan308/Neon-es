@@ -28,7 +28,7 @@
         "custom_class": "without-background",
         "row_class": "row-first",
         "section_title": "JUST DO IT",
-        "section_description": "“Life is one big party, but you have to hang the streamers yourself”? Perhaps a bit corny, but no less true. This saying was in any case the starting point for Neonsfeer, although we found streamers rather boring.",
+        "section_description": "La vida es una gran fiesta, pero tienes que colgar los adornos tú mismo.” Quizá suene un poco cursi, pero no por ello menos cierto. De todos modos, este dicho fue el punto de partida para Neonsfeer, aunque nosotros encontramos los adornos un poco aburridos.",
         "section_description2": "We wanted to convey some light, colour and atmosphere, preferably in a lasting way. That's how the idea for customised neon lighting came about, suitable for every rebel who doesn't take life too seriously, but still has something to say.",
         "section_image": "shopify://shop_images/Group_271.webp",
         "content_order": "text-left"
@@ -40,8 +40,8 @@
         "section_title_main": "",
         "custom_class": "without-background",
         "row_class": "second-row",
-        "section_title": "Don't be afraid to get creative!",
-        "section_description": "That is why we focus on the (neon) atmosphere makers, on those who are not afraid to tell a message in a creative, slightly rebellious and yet inspiring way. This can be done with custom-made neon lighting, but also with one of our standard designs.",
+        "section_title": "¡No tengas miedo de ser creativo!",
+        "section_description": "Por eso nos centramos en los creadores de atmósferas (de neón), en aquellos que no tienen miedo de transmitir un mensaje de forma creativa, ligeramente rebelde y, sin embargo, inspiradora. Esto se puede lograr con iluminación de neón personalizada, pero también con uno de nuestros diseños estándar.",
         "section_description2": "",
         "section_image": "shopify://shop_images/Group_272.webp",
         "content_order": "image-left"
@@ -50,19 +50,19 @@
     "onze_missie_3WtT8e": {
       "type": "onze-missie",
       "settings": {
-        "section_title": "OUR MISSION",
-        "section_description": "That's why we want you to make yourself heard and tell the world your message in a creative, rebellious and yet cheerful way.",
+        "section_title": "Nuestra misión",
+        "section_description": "Por eso queremos que te hagas escuchar y cuentes al mundo tu mensaje de una forma creativa, rebelde y, sin embargo, alegre.",
         "section_image": "shopify://shop_images/Mask_group_160248eb-86d9-457b-b889-49c558baebc6.webp"
       }
     },
     "image_with_text_aboutus_fyXmUt": {
       "type": "image-with-text-aboutus",
       "settings": {
-        "section_title_main": "We believe",
-        "custom_class": "rebels",
+        "section_title_main": "Creemos",
+        "custom_class": "rebeldes",
         "row_class": "",
-        "section_title": "REBELLIOUS",
-        "section_description": "Neon lighting is not for everyone. Only the real daredevils and troublemakers of this world dare to make their message so conspicuous. Do you (secretly) belong to this rebellious group? Then it is high time for some Neon atmosphere in your life.",
+        "section_title": "Rebeldes",
+        "section_description": "La iluminación de neón no es para todos. Solo los verdaderos aventureros y alborotadores de este mundo se atreven a hacer su mensaje tan llamativo. ¿Perteneces (en secreto) a este grupo rebelde? Entonces es el momento perfecto para añadir algo de atmósfera de neón a tu vida.",
         "section_description2": "",
         "section_image": "shopify://shop_images/rebel.webp",
         "content_order": "text-left"
@@ -74,8 +74,8 @@
         "section_title_main": "",
         "custom_class": "rebels2",
         "row_class": "",
-        "section_title": "PERSONAL",
-        "section_description": "The neon lighting that will hang on your wall is 100% made for you. Your lighting is unique, just like you are. We think it is important that you can distinguish yourself from the herd in this way and go your own way.",
+        "section_title": "Personal",
+        "section_description": "El alumbrado de neón que colgará en tu pared está hecho 100% para ti. Tu iluminación es única, al igual que tú. Creemos que es importante que puedas distinguirte del resto de esta manera y seguir tu propio camino.",
         "section_description2": "",
         "section_image": "shopify://shop_images/persol.webp",
         "content_order": "image-left"
@@ -87,8 +87,8 @@
         "section_title_main": "",
         "custom_class": "rebels3",
         "row_class": "",
-        "section_title": "RAISING AWARENESS",
-        "section_description": "Your opinion counts. That's why we want you to make yourself heard and tell the world your message in a creative, rebellious and yet cheerful way. Cosiness and awareness go very well together, we think.",
+        "section_title": "Concienciación",
+        "section_description": "Tu opinión cuenta. Por eso queremos que te hagas escuchar y cuentes al mundo tu mensaje de una forma creativa, rebelde y, sin embargo, alegre. Creemos que la comodidad y la concienciación van muy bien juntas.",
         "section_description2": "",
         "section_image": "shopify://shop_images/twakend.webp",
         "content_order": "text-left"
@@ -100,8 +100,8 @@
         "section_title_main": "",
         "custom_class": "rebels4",
         "row_class": "",
-        "section_title": "DURABLE",
-        "section_description": "We consciously use LED lighting. This lighting is energy-saving and gives off little to no heat. We would of course like to give your life some Neon atmosphere, but we also want to do our bit for the environment.",
+        "section_title": "Duradero",
+        "section_description": "Utilizamos conscientemente iluminación LED. Esta iluminación ahorra energía y emite poco o ningún calor. Por supuesto, nos gustaría darle un poco de atmósfera de neón a tu vida, pero también queremos hacer nuestra parte por el medio ambiente.",
         "section_description2": "",
         "section_image": "shopify://shop_images/duurzam.webp",
         "content_order": "image-left"
@@ -110,7 +110,7 @@
     "instafeed_sec_RYUWLY": {
       "type": "instafeed-sec",
       "settings": {
-        "button_text": "NEON UP YOUR LIFE"
+        "button_text": "ILUMINA TU VIDA CON NEÓN"
       }
     },
     "join_us_section_hXHF3U": {
