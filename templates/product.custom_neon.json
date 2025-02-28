@@ -531,11 +531,11 @@
         "image_position": "right",
         "image_width": 50,
         "title": "",
-        "content": "Order Your Custom Neon",
-        "list_one": "<p>Delivered in <strong>8 working days</strong></p>",
-        "list_two": "<p>Includes a <strong>free</strong> remote control</p>",
-        "list_three": "<p>Now with an exclusive <strong>25% discount</strong></p>",
-        "add_to_cart_btn_text": "Buy Now",
+        "content": "Pide Tu Neón Personalizado",
+        "list_one": "<p>Entregado en <strong>8 días hábiles</strong></p>",
+        "list_two": "<p>Incluye un control remoto <strong>gratis</strong></p>",
+        "list_three": "<p>Ahora con <strong>envío gratis</strong></p>",
+        "add_to_cart_btn_text": "Comprar ahora",
         "button_text": "",
         "button_link": "#",
         "button_text_2": "",
@@ -550,49 +550,49 @@
         "logo_gLnfBg": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/brews.png",
+            "image": "shopify://shop_images/3_3_5a301a08-f813-4fd4-bc39-56854265fce4.png",
             "link": ""
           }
         },
         "logo_fxaTDb": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/fitness.png",
+            "image": "shopify://shop_images/Asics_f9a6eeae-6e4f-4b5a-8bd5-6300edeee16d.webp",
             "link": ""
           }
         },
         "logo_Q7AfkG": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/flex.png",
+            "image": "shopify://shop_images/1_8_a85021b2-6da5-4722-a9aa-8d19d59b8725.png",
             "link": ""
           }
         },
         "logo_4MykJ4": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/redbull.webp",
+            "image": "shopify://shop_images/nokia_9b381597-6236-4505-b207-77f7a541631b.webp",
             "link": ""
           }
         },
         "logo_aLVFiR": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/brews.png",
+            "image": "shopify://shop_images/5_10a65c65-55c5-46d8-b906-7dd463a29eb7.png",
             "link": ""
           }
         },
         "logo_Rz3E9k": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/fitness.png",
+            "image": "shopify://shop_images/redbull_436e24db-37c8-4856-b1e7-ee53b031e36a.webp",
             "link": ""
           }
         },
         "logo_r3J8Wb": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/flex.png",
+            "image": "shopify://shop_images/4_1_6495b828-06e7-4597-8651-9f673802f506.png",
             "link": ""
           }
         },
@@ -615,7 +615,7 @@
         "logo_mDDkRN"
       ],
       "settings": {
-        "title": "500+ businesses preceded you",
+        "title": "Algunos de nuestros clientes",
         "link_title": "",
         "link": ""
       }
