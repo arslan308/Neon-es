@@ -693,65 +693,121 @@
         "tab_3n8cFR": {
           "type": "tab",
           "settings": {
-            "tab_title": "Product information"
+            "tab_title": "Información del producto"
           }
         },
         "tab_VXcJ3a": {
           "type": "tab",
           "settings": {
-            "tab_title": "Delivery times"
+            "tab_title": "Cotización y ajustes"
           }
         },
         "tab_qkVCfH": {
           "type": "tab",
           "settings": {
-            "tab_title": "Installation"
+            "tab_title": "Envío y pago"
           }
         },
         "tab_46zapw": {
           "type": "tab",
           "settings": {
-            "tab_title": "Warranty"
+            "tab_title": "Garantía y devoluciones"
           }
         },
         "accordion_item_jQ3QfE": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "How much does a custom neon cost?",
-            "accordion_content": "<p>Prices vary based on design, size and LED length. Text only starts at around €220. For exact costs, please submit your design for a quote.</p>",
+            "accordion_title": "La vista previa en la web coincide con el producto real?",
+            "accordion_content": "<p>Sí, garantizamos precisión absoluta. Nuestros diseños de vista previa reflejan fielmente el producto final. Desde el color hasta el texto, puedes confiar en que tu neón será tal como lo imaginaste. Diseña con confianza con nosotros.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_JjJhbw": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "What type of LED lighting is used?",
-            "accordion_content": "<p>EvoLux V23, developed in 2023, with a lifespan of 100,000 hours and 1,500 lumens—the best on the market.</p>",
+            "accordion_title": "Qué colores están disponibles?",
+            "accordion_content": "<p>Nuestro diseñador selecciona los colores en función de los tonos de tu logo y lo que mejor se adapte a la estética general. Estos colores se reflejarán en el diseño de tu cotización.</p><p>Prefieres otro color? ¡Solo avísanos! Disponemos de 12 colores LED de neón:<br/><br/></p><p>Blanco, Blanco Cálido, Rosa, Rosa Claro, Azul, Azul Hielo, Turquesa, Verde, Rojo, Naranja, Amarillo y Púrpura.<br/><br/></p><p>Quieres todos los colores en un solo neón? Elige la opción RGB, que te permite cambiar los colores con el control remoto y atenuador incluidos. Esta opción tiene un costo adicional del 25%.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_CweJzh": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Are there any costs associated with requesting a quote and sample?",
-            "accordion_content": "<p>No, this is free and without obligation.</p>",
+            "accordion_title": "Puedo usar mi logo de neón en exteriores?",
+            "accordion_content": "<p>Nuestros letreros estándar están diseñados para uso en interiores. Para exteriores, ofrecemos opciones resistentes a la intemperie con un costo adicional.</p><p>Si deseas colgar tu neón al aire libre, elige nuestra opción resistente al clima con un recargo del 20%.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_ARAezc": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Do the examples match the final boards?",
-            "accordion_content": "<p>Expect precision. Our design previews reflect the final product. From color to text, trust us to match your vision. Design with confidence with us. The final product will be created as the preview, but because it is handcrafted, it may vary slightly to ensure the best possible result</p>",
+            "accordion_title": "Puedo ajustar mi cotización?",
+            "accordion_content": "<p>Sí, por supuesto! Podemos modificar tu cotización para que se adapte perfectamente a tus necesidades. Contáctanos por correo electrónico o teléfono, y estaremos encantados de ayudarte.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_R6XbfL": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "What color choices are available?",
-            "accordion_content": "<p>Available colour options? Yes, all logos can be converted to neon and we offer 12 LED neon colours plus an RGB option. The available colours are: White, Warm White, Pink, Light Pink, Blue, Ice Blue, Turquoise, Green, Red, Orange, Yellow and Purple.</p>",
+            "accordion_title": "Puedo hacer cambios después de realizar mi pedido?",
+            "accordion_content": "<p>Una vez que realices tu pedido, comenzamos la producción de inmediato para garantizar una entrega rápida.</p><p>Si detectas un error en tu pedido, contáctanos de inmediato. Haremos todo lo posible por procesar los cambios o la cancelación antes de iniciar la producción.</p>",
             "tab_association": "1"
+          }
+        },
+        "accordion_item_BRrKNx": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Cómo pago mi logo de neón?",
+            "accordion_content": "<p>Una vez que hayas revisado y aprobado tu cotización y diseño, podrás personalizar detalles finales como tamaño, color, punto de alimentación y longitud del cable.</p><p>Cuando estés satisfecho con el diseño, podrás realizar tu pedido a través de nuestro método de pago seguro.<br/>Recibirás una confirmación del pedido, y tu logo de neón entrará en producción de inmediato.</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_CcCBgM": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Cuál es el tiempo de entrega después del pago?",
+            "accordion_content": "<p>El tiempo de entrega es de 6-8 días hábiles desde que realizas el pedido hasta la entrega.</p><p>Necesitas tu letrero de neón antes? Contáctanos durante el proceso de compra, y exploraremos opciones de envío urgente.</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_VCnG6B": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Ofrecen envío gratuito?",
+            "accordion_content": "<p>Sí! Ofrecemos envío gratuito en todos nuestros letreros de neón.<br/>Recibirás un código de seguimiento y disfrutarás de envío asegurado premium, para que tu pedido llegue seguro y sin preocupaciones.</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_eNQGDi": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Recibiré un código de seguimiento después del pago?",
+            "accordion_content": "<p>Sí, una vez que tu pago haya sido procesado y tu pedido haya sido enviado, recibirás un código de seguimiento para que puedas rastrear tu pedido fácilmente hasta su llegada</p>",
+            "tab_association": "1"
+          }
+        },
+        "accordion_item_abp6Xd": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Qué sucede si mi neón llega dañado o defectuoso?",
+            "accordion_content": "<p>Hacemos todo lo posible para que tu letrero de neón llegue en perfectas condiciones. Nuestro embalaje es seguro y reduce al mínimo el riesgo de daños.</p><p>Sin embargo, si tu neón llega dañado o con defectos, contáctanos de inmediato. Nos aseguraremos de ofrecerte una solución rápida, como reparación gratuita o reemplazo</p>",
+            "tab_association": "4"
+          }
+        },
+        "accordion_item_zG6FbA": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Mi letrero de neón tiene garantía?",
+            "accordion_content": "<p>Sí, en Neonsfeer, ofrecemos 2 años de garantía en todos nuestros letreros de neón.<br/>Si surge algún problema, nos encargaremos de encontrar la mejor solución, ya sea reparación o reemplazo.</p>",
+            "tab_association": "4"
+          }
+        },
+        "accordion_item_EBncQB": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Por qué elegir Neonsfeer?",
+            "accordion_content": "<p>✓ <strong>Más de 8,150 clientes satisfechos</strong>: Nos enorgullece la confianza de miles de clientes. Nuestro objetivo es superar tus expectativas en cada pedido.</p><p>✓ <strong>Mejor relación calidad-precio</strong>: En Neonsfeer, combinamos asequibilidad y calidad, para que obtengas lo mejor de ambos mundos.</p><p>✓ <strong>Garantía extendida</strong>: Compra con confianza con nuestra garantía de 24 meses.</p><p>✓ <strong>Durabilidad superior</strong>: Gracias a nuestra avanzada tecnología LED, nuestros neones son más ligeros y resistentes que los de vidrio.</p><p>✓ <strong>Opción ecológica</strong>: ¡Haz una elección sostenible! Los neones LED de Neonsfeer son eficientes en consumo de energía y tienen una vida útil de más de 100,000 horas.</p><p>✓ <strong>Seguridad ante todo</strong>: <br/>Olvídate del riesgo de sobrecalentamiento y vidrios frágiles. Nuestros neones LED están   diseñados con la seguridad como prioridad.</p><p>✓ <strong>Instalación sin complicaciones</strong>: Monta tu neón rápida y fácilmente, sin problemas.</p><p>✓ <strong>Control total</strong>: Personaliza tu experiencia con el control remoto incluido. Desde encender/apagar y ajustar el brillo hasta cambiar los efectos de luz, tendrás el control total.</p>",
+            "tab_association": "4"
           }
         }
       },
@@ -764,7 +820,14 @@
         "accordion_item_JjJhbw",
         "accordion_item_CweJzh",
         "accordion_item_ARAezc",
-        "accordion_item_R6XbfL"
+        "accordion_item_R6XbfL",
+        "accordion_item_BRrKNx",
+        "accordion_item_CcCBgM",
+        "accordion_item_VCnG6B",
+        "accordion_item_eNQGDi",
+        "accordion_item_abp6Xd",
+        "accordion_item_zG6FbA",
+        "accordion_item_EBncQB"
       ],
       "settings": {
         "add_class": "",
