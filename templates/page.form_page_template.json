@@ -281,7 +281,7 @@
         "heading": "Ilumina tu Logo en Neón - Un Proceso muy Sencillo",
         "label": "Solicitar un presupuesto",
         "link": "",
-        "img": "shopify://shop_images/Rectangle_3583-svg_1.jpg",
+        "img": "shopify://shop_images/cover-neonsfeer-es.png",
         "video": "https://cdn.shopify.com/videos/c/o/v/1d5234749975447eb3bdabdd639ae205.mp4"
       }
     },
@@ -292,10 +292,10 @@
         "image": "shopify://shop_images/Frame_8430_600x-svg_700x_74a78167-da26-4951-a09c-2408c0810a94.jpg",
         "image_position": "left",
         "image_width": 50,
-        "title": "Looking for a text in neon?",
-        "content": "Design your neon sign in just 5 minutes! Pick your text, select a font, choose a color, and place your order through our user-friendly design tool.",
-        "button_text": "Design your text",
-        "button_link": "https://neonsfeer.com/products/design-your-neon-sign",
+        "title": "¿Tu letrero de neón necesita texto?",
+        "content": "<p>Crea tu propio letrero de texto en menos de 5 minutos y aprovecha el envío gratuito.</p>",
+        "button_text": "¡Diseña ahora!",
+        "button_link": "https://neonsfeer.es/products/texto-en-neon",
         "class": ""
       }
     },
@@ -522,9 +522,9 @@
       ],
       "settings": {
         "add_class": "",
-        "title": "Frequently Asked Questions",
-        "description": "View our frequently asked questions for answers about specific product features, use and maintenance.",
-        "btn": "View all questions."
+        "title": "Preguntas Frecuentes",
+        "description": "Consulta nuestras preguntas frecuentes para obtener respuestas sobre características específicas de los productos, uso y mantenimiento.",
+        "btn": "Ver todas las preguntas"
       }
     },
     "page_instagram_BcCA84": {
