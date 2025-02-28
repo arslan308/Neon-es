@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "main-page",
@@ -17,7 +17,7 @@
     "about_us_banner_37faGX": {
       "type": "about-us-banner",
       "settings": {
-        "banner_heading": "For every rebel who doesn't take life too seriously.",
+        "banner_heading": "Para cada rebelde que no se toma la vida demasiado en serio.",
         "youtube_video": "https://www.youtube.com/embed/IIER1fbChFo"
       }
     },
@@ -118,7 +118,9 @@
       "settings": {
         "section_title": "Are you a daredevil? Join us",
         "button_text": "Logo to  neon",
-        "button_text2": "Text to neon"
+        "button_url": "",
+        "button_text2": "Text to neon",
+        "button_url2": ""
       }
     }
   },
