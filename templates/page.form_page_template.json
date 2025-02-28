@@ -241,30 +241,33 @@
         "order_3N73dY": {
           "type": "order",
           "settings": {
-            "title": "Submit Your Logo",
-            "subtitle": "Complete our 1-minute form, select your logo, and receive a quote within 24 hours."
+            "title": "Envía tu Logo",
+            "subtitle": "Solo necesitas 1 minuto para rellenar el formulario y seleccionar tu logotipo. En menos de 24 horas recibirás un presupuesto.",
+            "logo": "shopify://shop_images/Frame_8103_1.svg"
           }
         },
         "order_rDp3pg": {
           "type": "order",
           "settings": {
-            "title": "Personalized Quote",
-            "subtitle": "Receive a price and neon preview. We'll adjust based on your feedback.",
-            "logo": "shopify://shop_images/Frame_8103_1.svg"
+            "title": "Presupuesto Personalizado",
+            "subtitle": "Recibe un presupuesto y una vista previa del letrero de neón. Lo diseñaremos siguiendo tus comentarios.",
+            "logo": "shopify://shop_images/Frame_8103_1_1.svg"
           }
         },
         "order_yXK3KC": {
           "type": "order",
           "settings": {
-            "title": "Secure Checkout",
-            "subtitle": "Order through our secure website. Pay with Credit Card or PayPal."
+            "title": "Proceso de Pago Seguro",
+            "subtitle": "Procesamiento del pedido a través de nuestra plataforma segura. Paga con tarjeta de crédito o PayPal.",
+            "logo": "shopify://shop_images/Frame_8103_2_1.svg"
           }
         },
         "order_QwejLN": {
           "type": "order",
           "settings": {
-            "title": "Fast & Free Shipping",
-            "subtitle": "Have your custom neon sign at your doorstep in just 6-8 business days."
+            "title": "Envío Rápido y Gratis",
+            "subtitle": "Recibe tu letrero de neón donde tú quieras en solo 6-8 días laborables.",
+            "logo": "shopify://shop_images/Frame_8103_3_1.svg"
           }
         }
       },
@@ -275,11 +278,11 @@
         "order_QwejLN"
       ],
       "settings": {
-        "heading": "Illuminate Your Logo in Neon: A Simple Process",
-        "label": "",
+        "heading": "Ilumina tu Logo en Neón - Un Proceso muy Sencillo",
+        "label": "Solicitar un presupuesto",
         "link": "",
         "img": "shopify://shop_images/Rectangle_3583-svg_1.jpg",
-        "video": "https://cdn.shopify.com/videos/c/o/v/ac926312bf5b444fa756b683122f34fb.mp4"
+        "video": "https://cdn.shopify.com/videos/c/o/v/1d5234749975447eb3bdabdd639ae205.mp4"
       }
     },
     "image_and_text_WREgeB": {
