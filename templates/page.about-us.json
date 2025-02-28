@@ -116,10 +116,10 @@
     "join_us_section_hXHF3U": {
       "type": "join-us-section",
       "settings": {
-        "section_title": "Are you a daredevil? Join us",
-        "button_text": "Logo to  neon",
+        "section_title": "¿Eres un aventurero? Únete a nosotros",
+        "button_text": "Diseña tu texto",
         "button_url": "",
-        "button_text2": "Text to neon",
+        "button_text2": "Diseña tu logo",
         "button_url2": ""
       }
     }
