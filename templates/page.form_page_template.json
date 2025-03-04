@@ -183,16 +183,16 @@
             "video": "https://www.youtube.com/embed/bdz7VU7KPb4"
           }
         },
-        "youtube_video_Tx9f84": {
-          "type": "youtube-video",
-          "settings": {
-            "video": "https://www.youtube.com/embed/WbWHonx34Tc"
-          }
-        },
         "youtube_video_bpWpjr": {
           "type": "youtube-video",
           "settings": {
             "video": "https://www.youtube.com/embed/skf6To8rDec"
+          }
+        },
+        "youtube_video_Tx9f84": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
           }
         },
         "youtube_video_TiLtFw": {
@@ -216,8 +216,8 @@
       },
       "block_order": [
         "youtube_video_NQMYim",
-        "youtube_video_Tx9f84",
         "youtube_video_bpWpjr",
+        "youtube_video_Tx9f84",
         "youtube_video_TiLtFw",
         "youtube_video_aTqRUm",
         "youtube_video_EiXMXV"
