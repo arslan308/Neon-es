@@ -635,16 +635,16 @@
             "video": "https://www.youtube.com/embed/bdz7VU7KPb4"
           }
         },
-        "youtube_video_k3B9gf": {
-          "type": "youtube-video",
-          "settings": {
-            "video": "https://www.youtube.com/embed/WbWHonx34Tc"
-          }
-        },
         "youtube_video_Bdhych": {
           "type": "youtube-video",
           "settings": {
             "video": "https://www.youtube.com/embed/skf6To8rDec"
+          }
+        },
+        "youtube_video_k3B9gf": {
+          "type": "youtube-video",
+          "settings": {
+            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
           }
         },
         "youtube_video_ehRknR": {
@@ -668,8 +668,8 @@
       },
       "block_order": [
         "youtube_video_tY4DiC",
-        "youtube_video_k3B9gf",
         "youtube_video_Bdhych",
+        "youtube_video_k3B9gf",
         "youtube_video_ehRknR",
         "youtube_video_eae9FY",
         "youtube_video_bFH7Wh"
