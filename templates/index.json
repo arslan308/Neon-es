@@ -254,8 +254,8 @@
           "type": "customer-slider",
           "settings": {
             "customer-img": "shopify://shop_images/1_1.webp",
-            "customer-name": "Emily Davis",
-            "customer-post": "Los Angeles",
+            "customer-name": "Anna",
+            "customer-post": "Valencia",
             "video-url": "https://cdn.shopify.com/videos/c/o/v/742f8ef214ca45faa2849420968abc1a.mp4"
           }
         },
@@ -263,36 +263,36 @@
           "type": "customer-slider",
           "settings": {
             "customer-img": "shopify://shop_images/2_219faeb6-a391-47b2-ab86-820aaeec35ef.webp",
-            "customer-name": "Grace Walker",
-            "customer-post": "Santa Fe, New Mexico",
-            "video-url": "https://cdn.shopify.com/videos/c/o/v/5e857c2beaee418cb722427aadc25c89.mp4"
+            "customer-name": "Luci Alba",
+            "customer-post": "Madrid",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/78a03d0e36f048c9a097ba78927d2885.mp4"
           }
         },
         "customer_slider_YGLjfN": {
           "type": "customer-slider",
           "settings": {
             "customer-img": "shopify://shop_images/3_4c6d9064-bbcd-4bff-a14e-44c8a09bfdd1.webp",
-            "customer-name": "Sophia Williams",
-            "customer-post": "Portland, Oregon",
-            "video-url": "https://cdn.shopify.com/videos/c/o/v/a8b5f24654964b32bfd02251d1d9f7e0.mp4"
+            "customer-name": "Gabriela",
+            "customer-post": "Guadalest",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/7e7a39f6cdd142b6a00d560296f68db2.mp4"
           }
         },
         "customer_slider_8LeEhy": {
           "type": "customer-slider",
           "settings": {
             "customer-img": "shopify://shop_images/4_2185e8d3-95df-4553-8bd2-bb9dd6182bf8.webp",
-            "customer-name": "Chloé",
-            "customer-post": "Ann Arbor, Michigan",
-            "video-url": "https://cdn.shopify.com/videos/c/o/v/cdbe526327b64b5aa6fc74a037dcc3d6.mp4"
+            "customer-name": "Maira Alejandra Rodríguez",
+            "customer-post": "Álava",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/78a4db8b06c4443293e1b20ea8208eef.mov"
           }
         },
         "customer_slider_hBta9m": {
           "type": "customer-slider",
           "settings": {
             "customer-img": "shopify://shop_images/5_6ecd51f4-767b-465a-9b18-bfb86f3fca9e.webp",
-            "customer-name": "Alexander Foster",
-            "customer-post": "Burlington, Vermont",
-            "video-url": "https://cdn.shopify.com/videos/c/o/v/c033dc82a6d84fe7b4ea36a6eaf2e133.mp4"
+            "customer-name": "Pablo",
+            "customer-post": "Alcorcón",
+            "video-url": "https://cdn.shopify.com/videos/c/o/v/95b27a6fad1d4926bfbfd28ec4e65aed.mp4"
           }
         }
       },
