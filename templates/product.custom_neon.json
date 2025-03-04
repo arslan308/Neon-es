@@ -15,37 +15,37 @@
         "custom_options_qtamN3": {
           "type": "Custom_Options",
           "settings": {
-            "text_option": "Backboard ",
+            "text_option": "Tablero",
             "text_tooltip": "Your neon logo is mounted on a sturdy acrylic backplate for optimal stability. We cut the acrylic precisely along the contours of your logo, making it barely noticeable and giving it a luxurious look. Larger designs (over 100 cm in length or 50 cm in height) may be delivered in two parts, making assembly and transport easier.",
-            "option_value": "{{ product.metafields.custom.background_shape.value }}",
-            "class_comp": "Backboard"
+            "option_value": "Cortado a medida",
+            "class_comp": "Tablero"
           }
         },
         "custom_options_bbiFeL": {
           "type": "Custom_Options",
           "settings": {
-            "text_option": "UV-Print ",
-            "text_tooltip": "For your neon logo, we print fine details precisely onto the acrylic backplate to ensure the design matches your vision. Note that these printed details do not light up in the dark, but they add a refined touch to the overall look. Please keep in mind that using UV print may slightly increase the production time.",
+            "text_option": "Impresión UV",
+            "text_tooltip": "Para tu logotipo de neón, imprimimos detalles finos con precisión en la placa posterior de acrílico para garantizar que el diseño coincida con tu visión. Ten en cuenta que estos detalles impresos no se iluminan en la oscuridad, pero añaden un toque refinado al aspecto general. Por favor, ten en cuenta que el uso de la impresión UV puede aumentar ligeramente el tiempo de producción.",
             "option_value": "{{ product.metafields.custom.uv_print.value }}",
-            "class_comp": "UV-Print"
+            "class_comp": "Impresión UV"
           }
         },
         "custom_options_3KhGTe": {
           "type": "Custom_Options",
           "settings": {
-            "text_option": "Power point",
+            "text_option": "Tomacorriente",
             "text_tooltip": "",
             "option_value": "Medio abajo, Medio arriba, Abajo a la derecha, Arriba a la derecha, Abajo a la izquierda, Arriba a la izquierda",
-            "class_comp": "Power-point"
+            "class_comp": "Tomacorriente"
           }
         },
         "custom_options_CpG7Wz": {
           "type": "Custom_Options",
           "settings": {
-            "text_option": "Cable Length",
+            "text_option": "Cable",
             "text_tooltip": "",
-            "option_value": "2 meter, 3 meter, 4 meter",
-            "class_comp": "Cable-Length"
+            "option_value": "2 metros, 3 metros, 4 metros",
+            "class_comp": "Cable"
           }
         },
         "list_item_Ln9DfU": {
