@@ -17,7 +17,7 @@
     "about_us_banner_37faGX": {
       "type": "about-us-banner",
       "settings": {
-        "banner_heading": "Para cada rebelde que no se toma la vida demasiado en serio.",
+        "banner_heading": "PARA TODOS LOS REBELDES QUE NO SE TOMAN LA VIDA DEMASIADO EN SERIO.",
         "youtube_video": "https://www.youtube.com/embed/IIER1fbChFo"
       }
     },
@@ -27,9 +27,9 @@
         "section_title_main": "",
         "custom_class": "without-background",
         "row_class": "row-first",
-        "section_title": "JUST DO IT",
-        "section_description": "La vida es una gran fiesta, pero tienes que colgar los adornos tú mismo.” Quizá suene un poco cursi, pero no por ello menos cierto. De todos modos, este dicho fue el punto de partida para Neonsfeer, aunque nosotros encontramos los adornos un poco aburridos.",
-        "section_description2": "Queríamos transmitir luz, color y ambiente, de manera duradera a ser posible. Así nació la idea de una iluminación de neón personalizada, perfecta para cualquier rebelde que no se tome la vida demasiado en serio, pero que aún tenga algo que decir.",
+        "section_title": "HAZLO",
+        "section_description": "La vida es una fiesta, pero tienes que ser tú quien ponga las guirnaldas\", ¿verdad? En Neonsfeer, nos inspiramos en este dicho, pero pensamos que las guirnaldas eran demasiado convencionales para nosotros",
+        "section_description2": "Queríamos algo más: transmitir luz, color y ambiente de una manera única y duradera. Así nació la idea de la iluminación de neón personalizada. Es perfecta para aquellos rebeldes que no se toman la vida demasiado en serio y tienen algo que decir.",
         "section_image": "shopify://shop_images/Group_271.webp",
         "content_order": "text-left"
       }
@@ -40,8 +40,8 @@
         "section_title_main": "",
         "custom_class": "without-background",
         "row_class": "second-row",
-        "section_title": "¡No tengas miedo de ser creativo!",
-        "section_description": "Por eso nos centramos en los creadores de atmósferas (de neón), en aquellos que no tienen miedo de transmitir un mensaje de forma creativa, ligeramente rebelde y, sin embargo, inspiradora. Esto se puede lograr con iluminación de neón personalizada, pero también con uno de nuestros diseños estándar.",
+        "section_title": "NO LE TENGAS MIEDO A LA CREATIVIDAD.",
+        "section_description": "Nos encanta conectar con los amantes de la creación de ambientes únicos con neón, transmitiendo mensajes de forma creativa y rebelde. Ya sea a través de neón personalizado o nuestros diseños estándar, en Neonsfeer nos emociona ser parte de tu expresión auténtica y distintiva.",
         "section_description2": "",
         "section_image": "shopify://shop_images/Group_272.webp",
         "content_order": "image-left"
@@ -50,8 +50,8 @@
     "onze_missie_3WtT8e": {
       "type": "onze-missie",
       "settings": {
-        "section_title": "Nuestra misión",
-        "section_description": "Por eso queremos que te hagas escuchar y cuentes al mundo tu mensaje de una forma creativa, rebelde y, sin embargo, alegre.",
+        "section_title": "NUESTRA MISIÓN",
+        "section_description": "Queremos que tu voz destaque y cuentes tu mensaje al mundo de manera creativa, rebelde y alegre.",
         "section_image": "shopify://shop_images/Mask_group_160248eb-86d9-457b-b889-49c558baebc6.webp"
       }
     },
@@ -61,8 +61,8 @@
         "section_title_main": "",
         "custom_class": "rebeldes",
         "row_class": "",
-        "section_title": "Rebeldes",
-        "section_description": "La iluminación de neón no es para todos. Solo los verdaderos aventureros y alborotadores de este mundo se atreven a hacer su mensaje tan llamativo. ¿Perteneces (en secreto) a este grupo rebelde? Entonces es el momento perfecto para añadir algo de atmósfera de neón a tu vida.",
+        "section_title": "REBELS",
+        "section_description": "La iluminación de neón no es para todos. Solo los audaces se atreven a expresar su mensaje de manera tan llamativa. ¿Eres parte de este grupo rebelde en secreto? Si es así, ¡es hora de incorporar Neonsfeer en tu vida!",
         "section_description2": "",
         "section_image": "shopify://shop_images/rebel.webp",
         "content_order": "text-left"
@@ -74,8 +74,8 @@
         "section_title_main": "",
         "custom_class": "rebels2",
         "row_class": "",
-        "section_title": "Personal",
-        "section_description": "El alumbrado de neón que colgará en tu pared está hecho 100% para ti. Tu iluminación es única, al igual que tú. Creemos que es importante que puedas distinguirte del resto de esta manera y seguir tu propio camino.",
+        "section_title": "¡PUEDES PERSONALIZARLO!",
+        "section_description": "La iluminación de neón no es para todos. Solo los valientes se atreven a expresar su mensaje de manera tan llamativa. ¿Eres parte de este grupo rebelde en secreto? Si es así, ¡es hora de incorporar Neonsfeer en tu vida!",
         "section_description2": "",
         "section_image": "shopify://shop_images/persol.webp",
         "content_order": "image-left"
@@ -87,8 +87,8 @@
         "section_title_main": "",
         "custom_class": "rebels3",
         "row_class": "",
-        "section_title": "Concienciación",
-        "section_description": "Tu opinión cuenta. Por eso queremos que te hagas escuchar y cuentes al mundo tu mensaje de una forma creativa, rebelde y, sin embargo, alegre. Creemos que la comodidad y la concienciación van muy bien juntas.",
+        "section_title": "TU VOZ CUENTA",
+        "section_description": "Tu opinión es esencial. Queremos que te expreses y compartas tu mensaje con el mundo de manera creativa, rebelde y llamativa. Para nosotros, la creatividad y la conciencia son la combinación perfecta.",
         "section_description2": "",
         "section_image": "shopify://shop_images/twakend.webp",
         "content_order": "text-left"
@@ -100,8 +100,8 @@
         "section_title_main": "",
         "custom_class": "rebels4",
         "row_class": "",
-        "section_title": "Duradero",
-        "section_description": "Utilizamos conscientemente iluminación LED. Esta iluminación ahorra energía y emite poco o ningún calor. Por supuesto, nos gustaría darle un poco de atmósfera de neón a tu vida, pero también queremos hacer nuestra parte por el medio ambiente.",
+        "section_title": "SOMOS SOSTENIBLES",
+        "section_description": "Conscientes de nuestro impacto ambiental, elegimos la iluminación LED por su eficiencia energética y baja emisión de calor. En Neonsfeer, añadimos ese toque especial a tu vida mientras contribuimos a cuidar nuestro planeta.",
         "section_description2": "",
         "section_image": "shopify://shop_images/duurzam.webp",
         "content_order": "image-left"
@@ -110,16 +110,16 @@
     "instafeed_sec_RYUWLY": {
       "type": "instafeed-sec",
       "settings": {
-        "button_text": "ILUMINA TU VIDA CON NEÓN"
+        "button_text": "BRILLA CON NEÓN"
       }
     },
     "join_us_section_hXHF3U": {
       "type": "join-us-section",
       "settings": {
-        "section_title": "¿Eres un aventurero? Únete a nosotros",
-        "button_text": "Diseña tu texto",
+        "section_title": "SI TE ATREVES CON TODO, ÚNETE A NOSOTROS",
+        "button_text": "Logotipo a neón",
         "button_url": "https://neonsfeer.es/products/texto-en-neon",
-        "button_text2": "Diseña tu logo",
+        "button_text2": "Texto a neón",
         "button_url2": "https://neonsfeer.es/pages/solicitar-presupuesto"
       }
     }
