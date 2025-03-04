@@ -35,7 +35,7 @@
           "settings": {
             "text_option": "Power point",
             "text_tooltip": "",
-            "option_value": "Middle Bottom, Middle Top, Right Bottom, Right Top, Left Bottom, Left Top",
+            "option_value": "Medio abajo, Medio arriba, Abajo a la derecha, Arriba a la derecha, Abajo a la izquierda, Arriba a la izquierda",
             "class_comp": "Power-point"
           }
         },
