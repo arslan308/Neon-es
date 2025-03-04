@@ -659,8 +659,9 @@
         },
         "youtube_video_k3B9gf": {
           "type": "youtube-video",
+          "disabled": true,
           "settings": {
-            "video": "https://www.youtube.com/embed/WbWHonx34Tc"
+            "video": "https://www.youtube.com/embed/BgVBVsGK960"
           }
         },
         "youtube_video_Bdhych": {
