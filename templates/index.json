@@ -127,7 +127,7 @@
     "two_img_graphic_iaMyYy": {
       "type": "two-img-graphic",
       "settings": {
-        "image_1": "shopify://shop_images/1two.webp",
+        "image_1": "shopify://shop_images/1two.png",
         "image_2": "shopify://shop_images/2two.webp",
         "image_position": "right",
         "image_width": 50,
