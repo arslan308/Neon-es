@@ -112,28 +112,28 @@
         "image_with_review_hbKyDC": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Codigital",
-            "user-discription": "\"In CoDigital queríamos algo único para nuestra oficina, y el letrero de neón de Neonsfeer fue justo lo que buscábamos. Diseño elegante, alta calidad y una entrega rápida. ¡Nuestro espacio de trabajo ahora tiene ese toque extra de estilo!\"",
+            "user-name": "Sofía",
+            "user-discription": "\"La frase \"Bailar es soñar con los pies\" se traduce como \"Bailar es soñar con los pies\", capturando perfectamente la alegría de la danza con una estética de letrero de neón artística y soñadora. ¡El texto de luz roja brilla de manera encantadora en mi habitación!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/CleanShot_2025-01-19_at_11.37.25_2x_ef3b0e11-c7c6-4a1c-a7a4-6a7031deb9c2.png?v=1737283354"
-          }
-        },
-        "image_with_review_GxrjwH": {
-          "type": "image-with-review",
-          "settings": {
-            "user-name": "Kevin Liam",
-            "user-discription": "\"El letrero de neón de Neonsfeer encaja perfectamente con nuestra visión: 'Espacio para crecer'. Elegante, moderno y un verdadero punto focal en nuestro espacio. El acabado es excelente y la instalación fue muy sencilla.\"",
-            "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/image_2048x2048.jpg?v=1730736991"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_18.png?v=1741810866"
           }
         },
         "image_with_review_C7M4DD": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Joe Biondo III",
-            "user-discription": "\"Desde que colgamos el letrero de neón de Neonsfeer, recibimos constantes cumplidos. Los clientes se toman selfies con él y las comparten en redes sociales: ¡es un verdadero atractivo! La calidad es excelente y encaja perfectamente con nuestra imagen.\"",
+            "user-name": "Antonio Ramírez",
+            "user-discription": "\"El ambiente en general irradia el encanto de una boutique elegante o gourmet. El brillante letrero de neón azul que dice \"CHARCUTERIA\" brilla con elegancia contra la pared de patrón marmolado.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/image_1_2048x2048.jpg?v=1730736991"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_21.png?v=1741811690"
+          }
+        },
+        "image_with_review_GxrjwH": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Alejandro",
+            "user-discription": "\"La combinación de iluminación turquesa y azul contra la pared de ladrillo blanco le da una sensación fresca y costera, que encaja perfectamente con Sitges, un hermoso pueblo junto al mar en España.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_20.png?v=1741811357"
           }
         },
         "image_with_review_nzKnTH": {
@@ -184,8 +184,8 @@
       },
       "block_order": [
         "image_with_review_hbKyDC",
-        "image_with_review_GxrjwH",
         "image_with_review_C7M4DD",
+        "image_with_review_GxrjwH",
         "image_with_review_nzKnTH",
         "image_with_review_4DnYMV",
         "image_with_review_mqX64g",
