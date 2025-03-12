@@ -118,6 +118,16 @@
             "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_18.png?v=1741810866"
           }
         },
+        "image_with_review_BKQkj4": {
+          "type": "image-with-review",
+          "settings": {
+            "user-uploaded-img": "shopify://shop_images/Neon_text_designs_9.webp",
+            "user-name": "Luzia Montserrat",
+            "user-discription": "\"Un resplandor cálido y acogedor que cambia por completo el ambiente de la habitación. El tono naranja se siente tanto energizante como acogedor, lo que lo hace perfecto para mi espacio de trabajo. Está bien hecho, es liviano y fácil de montar en la pared. Definitivamente le da un toque moderno y elegante.\"",
+            "uplod-time": "",
+            "image_url": ""
+          }
+        },
         "image_with_review_C7M4DD": {
           "type": "image-with-review",
           "settings": {
@@ -134,6 +144,15 @@
             "user-discription": "\"La combinación de iluminación turquesa y azul contra la pared de ladrillo blanco le da una sensación fresca y costera, que encaja perfectamente con Sitges, un hermoso pueblo junto al mar en España.\"",
             "uplod-time": "",
             "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_20.png?v=1741811357"
+          }
+        },
+        "image_with_review_tDUrTE": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "",
+            "user-discription": "",
+            "uplod-time": "",
+            "image_url": ""
           }
         },
         "image_with_review_nzKnTH": {
@@ -175,17 +194,20 @@
         "image_with_review_TyXUW6": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Physiotherapie Schafflund",
-            "user-discription": "\"He encargado un letrero de neón en Neonsfeer para mi clínica de fisioterapia, ¡y me encanta! Le da al espacio un aire vibrante y acogedor. La calidad es fantástica y la entrega fue rápida.\"",
+            "user-uploaded-img": "shopify://shop_images/louise.png",
+            "user-name": "Elena",
+            "user-discription": "\"Pedimos este letrero de neón para una celebración especial, ¡y fue un gran éxito! Hizo que el espacio se sintiera tan personal y festivo. El suave resplandor rosa se veía hermoso con la decoración, y a todos les encantó tomarse fotos con él. ¡Gran calidad, entrega rápida y la manera perfecta de hacer que un evento sea aún más especial!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/schlaf.png?v=1737283260"
+            "image_url": ""
           }
         }
       },
       "block_order": [
         "image_with_review_hbKyDC",
+        "image_with_review_BKQkj4",
         "image_with_review_C7M4DD",
         "image_with_review_GxrjwH",
+        "image_with_review_tDUrTE",
         "image_with_review_nzKnTH",
         "image_with_review_4DnYMV",
         "image_with_review_mqX64g",
