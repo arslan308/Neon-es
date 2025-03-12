@@ -128,15 +128,6 @@
             "image_url": ""
           }
         },
-        "image_with_review_C7M4DD": {
-          "type": "image-with-review",
-          "settings": {
-            "user-name": "Antonio Ramírez",
-            "user-discription": "\"El ambiente en general irradia el encanto de una boutique elegante o gourmet. El brillante letrero de neón azul que dice \"CHARCUTERIA\" brilla con elegancia contra la pared de patrón marmolado.\"",
-            "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_21.png?v=1741811690"
-          }
-        },
         "image_with_review_GxrjwH": {
           "type": "image-with-review",
           "settings": {
@@ -146,13 +137,13 @@
             "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_20.png?v=1741811357"
           }
         },
-        "image_with_review_tDUrTE": {
+        "image_with_review_C7M4DD": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "",
-            "user-discription": "",
+            "user-name": "Antonio Ramírez",
+            "user-discription": "\"El ambiente en general irradia el encanto de una boutique elegante o gourmet. El brillante letrero de neón azul que dice \"CHARCUTERIA\" brilla con elegancia contra la pared de patrón marmolado.\"",
             "uplod-time": "",
-            "image_url": ""
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_21.png?v=1741811690"
           }
         },
         "image_with_review_nzKnTH": {
@@ -205,9 +196,8 @@
       "block_order": [
         "image_with_review_hbKyDC",
         "image_with_review_BKQkj4",
-        "image_with_review_C7M4DD",
         "image_with_review_GxrjwH",
-        "image_with_review_tDUrTE",
+        "image_with_review_C7M4DD",
         "image_with_review_nzKnTH",
         "image_with_review_4DnYMV",
         "image_with_review_mqX64g",
