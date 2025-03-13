@@ -96,6 +96,15 @@
             "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_f3554ada-882f-4757-9651-65daf3f99cc4.png?v=1741887405"
           }
         },
+        "image_with_review_4fXbfN": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Javier",
+            "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_7901e000-a633-440f-9949-b9c6f8a09619.png?v=1741887248"
+          }
+        },
         "image_with_review_C4xwKD": {
           "type": "image-with-review",
           "settings": {
@@ -151,15 +160,6 @@
             "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Neon_text_designs_16_1.webp?v=1741893792"
           }
         },
-        "image_with_review_4fXbfN": {
-          "type": "image-with-review",
-          "settings": {
-            "user-name": "Javier",
-            "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
-            "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_7901e000-a633-440f-9949-b9c6f8a09619.png?v=1741887248"
-          }
-        },
         "image_with_review_NKD4nr": {
           "type": "image-with-review",
           "settings": {
@@ -172,13 +172,13 @@
       },
       "block_order": [
         "image_with_review_HJBQC8",
+        "image_with_review_4fXbfN",
         "image_with_review_C4xwKD",
         "image_with_review_ijVc7Y",
         "image_with_review_9HFVxz",
         "image_with_review_bU7njA",
         "image_with_review_w9NcL3",
         "image_with_review_YxdDLc",
-        "image_with_review_4fXbfN",
         "image_with_review_NKD4nr"
       ],
       "settings": {
