@@ -89,28 +89,37 @@
         "image_with_review_4fXbfN": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Codigital",
-            "user-discription": "\"In CoDigital queríamos algo único para nuestra oficina, y el letrero de neón de Neonsfeer fue justo lo que buscábamos. Diseño elegante, alta calidad y una entrega rápida. ¡Nuestro espacio de trabajo ahora tiene ese toque extra de estilo!\"",
+            "user-name": "Javier",
+            "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC04063_1_2048x2048.jpg?v=1730736993"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_7901e000-a633-440f-9949-b9c6f8a09619.png?v=1741887248"
+          }
+        },
+        "image_with_review_NKD4nr": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Martínez",
+            "user-discription": "¡Esta configuración es realmente encantadora! La combinación del letrero de neón en tonos rosados y pastel, acentuada con delicados detalles florales, crea una atmósfera romántica pero vibrante. Es un punto focal impresionante que irradia alegría y festividad.",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_d533cc47-8780-4ac7-963d-57bcd13ac717.png?v=1741887324"
           }
         },
         "image_with_review_HJBQC8": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Kevin Liam",
-            "user-discription": "\"El letrero de neón de Neonsfeer encaja perfectamente con nuestra visión: 'Espacio para crecer'. Elegante, moderno y un verdadero punto focal en nuestro espacio. El acabado es excelente y la instalación fue muy sencilla.\"",
+            "user-name": "Valeria",
+            "user-discription": "\"Este letrero de neón con la palabra \"PARAÍSO\" es un detalle simple pero impactante. El contraste de las letras blancas brillantes contra la pared de azulejos texturizados le da un estilo moderno, casi de elegancia industrial.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/image_2048x2048.jpg?v=1730736991"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_f3554ada-882f-4757-9651-65daf3f99cc4.png?v=1741887405"
           }
         },
         "image_with_review_C4xwKD": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Joe Biondo III",
-            "user-discription": "\"Desde que colgamos el letrero de neón de Neonsfeer, recibimos constantes cumplidos. Los clientes se toman selfies con él y las comparten en redes sociales: ¡es un verdadero atractivo! La calidad es excelente y encaja perfectamente con nuestra imagen.\"",
+            "user-name": "Natalia Gómez",
+            "user-discription": "\"El acogedor café Elegancia, con el suave resplandor azul de su letrero de neón que añade un toque moderno a las rústicas paredes. Exuberantes plantas colgantes realzan aún más su ambiente fresco y acogedor, convirtiéndolo en el lugar perfecto para relajarse.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/image_1_2048x2048.jpg?v=1730736991"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_b2fe91f6-8ed8-4da3-9eea-4c9c4db4aa51.png?v=1741887497"
           }
         },
         "image_with_review_ijVc7Y": {
@@ -161,6 +170,7 @@
       },
       "block_order": [
         "image_with_review_4fXbfN",
+        "image_with_review_NKD4nr",
         "image_with_review_HJBQC8",
         "image_with_review_C4xwKD",
         "image_with_review_ijVc7Y",
