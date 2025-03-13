@@ -294,6 +294,7 @@
         },
         "image_with_review_C3Crkz": {
           "type": "image-with-review",
+          "disabled": true,
           "settings": {
             "user-name": "Eric Williams",
             "user-discription": "\"Nuestro logo fue entregado súper rápido a través de FedEx. En un abrir y cerrar de ojos ya estaba colgado en la pared y llamó la atención de nuestros invitados. ¡La combinación perfecta de calidad, ambiente y servicio rápido!\"",
@@ -304,10 +305,10 @@
         "image_with_review_m4zEnx": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Physiotherapie Schafflund",
-            "user-discription": "\"He encargado un letrero de neón en Neonsfeer para mi clínica de fisioterapia, ¡y me encanta! Le da al espacio un aire vibrante y acogedor. La calidad es fantástica y la entrega fue rápida.\"",
+            "user-name": "Martínez",
+            "user-discription": "\"¡Esta configuración es realmente encantadora! La combinación del letrero de neón en tonos rosados y pastel, acentuada con delicados detalles florales, crea una atmósfera romántica pero vibrante. Es un punto focal impresionante que irradia alegría y festividad.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_61_2048x2048.png?v=1730736899"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_d533cc47-8780-4ac7-963d-57bcd13ac717.png?v=1741887324"
           }
         }
       },
