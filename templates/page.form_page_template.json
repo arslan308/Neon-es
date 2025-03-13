@@ -88,6 +88,7 @@
       "blocks": {
         "image_with_review_HJBQC8": {
           "type": "image-with-review",
+          "disabled": true,
           "settings": {
             "user-name": "Valeria",
             "user-discription": "\"Este letrero de neón con la palabra \"PARAÍSO\" es un detalle simple pero impactante. El contraste de las letras blancas brillantes contra la pared de azulejos texturizados le da un estilo moderno, casi de elegancia industrial.\"",
