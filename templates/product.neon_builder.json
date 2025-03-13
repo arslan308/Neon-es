@@ -109,13 +109,13 @@
     "builder_google_review_i44VWE": {
       "type": "builder-google-review",
       "blocks": {
-        "image_with_review_hbKyDC": {
+        "image_with_review_GxrjwH": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Sofía",
-            "user-discription": "\"La frase \"Bailar es soñar con los pies\" se traduce como \"Bailar es soñar con los pies\", capturando perfectamente la alegría de la danza con una estética de letrero de neón artística y soñadora. ¡El texto de luz roja brilla de manera encantadora en mi habitación!\"",
+            "user-name": "Alejandro",
+            "user-discription": "\"La combinación de iluminación turquesa y azul contra la pared de ladrillo blanco le da una sensación fresca y costera, que encaja perfectamente con Sitges, un hermoso pueblo junto al mar en España.\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_18.png?v=1741810866"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_20.png?v=1741811357"
           }
         },
         "image_with_review_BKQkj4": {
@@ -128,22 +128,13 @@
             "image_url": ""
           }
         },
-        "image_with_review_GxrjwH": {
+        "image_with_review_hbKyDC": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Alejandro",
-            "user-discription": "\"La combinación de iluminación turquesa y azul contra la pared de ladrillo blanco le da una sensación fresca y costera, que encaja perfectamente con Sitges, un hermoso pueblo junto al mar en España.\"",
+            "user-name": "Sofía",
+            "user-discription": "\"La frase \"Bailar es soñar con los pies\" se traduce como \"Bailar es soñar con los pies\", capturando perfectamente la alegría de la danza con una estética de letrero de neón artística y soñadora. ¡El texto de luz roja brilla de manera encantadora en mi habitación!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_20.png?v=1741811357"
-          }
-        },
-        "image_with_review_C7M4DD": {
-          "type": "image-with-review",
-          "settings": {
-            "user-name": "Antonio Ramírez",
-            "user-discription": "\"El ambiente en general irradia el encanto de una boutique elegante o gourmet. El brillante letrero de neón azul que dice \"CHARCUTERIA\" brilla con elegancia contra la pared de patrón marmolado.\"",
-            "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_21.png?v=1741811690"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_18.png?v=1741810866"
           }
         },
         "image_with_review_nzKnTH": {
@@ -195,18 +186,27 @@
             "uplod-time": "",
             "image_url": ""
           }
+        },
+        "image_with_review_C7M4DD": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Antonio Ramírez",
+            "user-discription": "\"El ambiente en general irradia el encanto de una boutique elegante o gourmet. El brillante letrero de neón azul que dice \"CHARCUTERIA\" brilla con elegancia contra la pared de patrón marmolado.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_21.png?v=1741811690"
+          }
         }
       },
       "block_order": [
-        "image_with_review_hbKyDC",
-        "image_with_review_BKQkj4",
         "image_with_review_GxrjwH",
-        "image_with_review_C7M4DD",
+        "image_with_review_BKQkj4",
+        "image_with_review_hbKyDC",
         "image_with_review_nzKnTH",
         "image_with_review_4DnYMV",
         "image_with_review_mqX64g",
         "image_with_review_69Fm9y",
-        "image_with_review_TyXUW6"
+        "image_with_review_TyXUW6",
+        "image_with_review_C7M4DD"
       ],
       "settings": {
         "spacing": "",
