@@ -118,6 +118,15 @@
             "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_18.png?v=1741810866"
           }
         },
+        "image_with_review_GxrjwH": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Alejandro",
+            "user-discription": "\"La combinación de iluminación turquesa y azul contra la pared de ladrillo blanco le da una sensación fresca y costera, que encaja perfectamente con Sitges, un hermoso pueblo junto al mar en España.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_20.png?v=1741811357"
+          }
+        },
         "image_with_review_BKQkj4": {
           "type": "image-with-review",
           "settings": {
@@ -126,15 +135,6 @@
             "user-discription": "\"Un resplandor cálido y acogedor que cambia por completo el ambiente de la habitación. El tono naranja se siente tanto energizante como acogedor, lo que lo hace perfecto para mi espacio de trabajo. Está bien hecho, es liviano y fácil de montar en la pared. Definitivamente le da un toque moderno y elegante.\"",
             "uplod-time": "",
             "image_url": ""
-          }
-        },
-        "image_with_review_GxrjwH": {
-          "type": "image-with-review",
-          "settings": {
-            "user-name": "Alejandro",
-            "user-discription": "\"La combinación de iluminación turquesa y azul contra la pared de ladrillo blanco le da una sensación fresca y costera, que encaja perfectamente con Sitges, un hermoso pueblo junto al mar en España.\"",
-            "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Text_photo_-_20.png?v=1741811357"
           }
         },
         "image_with_review_nzKnTH": {
@@ -199,8 +199,8 @@
       },
       "block_order": [
         "image_with_review_hbKyDC",
-        "image_with_review_BKQkj4",
         "image_with_review_GxrjwH",
+        "image_with_review_BKQkj4",
         "image_with_review_nzKnTH",
         "image_with_review_4DnYMV",
         "image_with_review_mqX64g",
