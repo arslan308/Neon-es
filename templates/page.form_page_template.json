@@ -86,24 +86,6 @@
     "builder_google_review_DNhixX": {
       "type": "builder-google-review",
       "blocks": {
-        "image_with_review_4fXbfN": {
-          "type": "image-with-review",
-          "settings": {
-            "user-name": "Javier",
-            "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
-            "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_7901e000-a633-440f-9949-b9c6f8a09619.png?v=1741887248"
-          }
-        },
-        "image_with_review_NKD4nr": {
-          "type": "image-with-review",
-          "settings": {
-            "user-name": "Martínez",
-            "user-discription": "¡Esta configuración es realmente encantadora! La combinación del letrero de neón en tonos rosados y pastel, acentuada con delicados detalles florales, crea una atmósfera romántica pero vibrante. Es un punto focal impresionante que irradia alegría y festividad.",
-            "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_d533cc47-8780-4ac7-963d-57bcd13ac717.png?v=1741887324"
-          }
-        },
         "image_with_review_HJBQC8": {
           "type": "image-with-review",
           "settings": {
@@ -116,7 +98,7 @@
         "image_with_review_C4xwKD": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Natalia Gómez",
+            "user-name": "Cafe San Pablo",
             "user-discription": "\"El acogedor café Elegancia, con el suave resplandor azul de su letrero de neón que añade un toque moderno a las rústicas paredes. Exuberantes plantas colgantes realzan aún más su ambiente fresco y acogedor, convirtiéndolo en el lugar perfecto para relajarse.\"",
             "uplod-time": "",
             "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_b2fe91f6-8ed8-4da3-9eea-4c9c4db4aa51.png?v=1741887497"
@@ -125,7 +107,7 @@
         "image_with_review_ijVc7Y": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Ashley",
+            "user-name": "Elena",
             "user-discription": "\"Incluso antes de que los clientes entren, nuestro letrero de neón ya llama la atención. Los colores brillantes destacan y hemos notado que los transeúntes se detienen más a menudo y luego entran. Un atractivo muy divertido.\"",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_-_Copy_2048x2048.png?v=1730736899"
@@ -166,18 +148,36 @@
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_61_2048x2048.png?v=1730736899"
           }
+        },
+        "image_with_review_4fXbfN": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Javier",
+            "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_7901e000-a633-440f-9949-b9c6f8a09619.png?v=1741887248"
+          }
+        },
+        "image_with_review_NKD4nr": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Martínez",
+            "user-discription": "¡Esta configuración es realmente encantadora! La combinación del letrero de neón en tonos rosados y pastel, acentuada con delicados detalles florales, crea una atmósfera romántica pero vibrante. Es un punto focal impresionante que irradia alegría y festividad.",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_d533cc47-8780-4ac7-963d-57bcd13ac717.png?v=1741887324"
+          }
         }
       },
       "block_order": [
-        "image_with_review_4fXbfN",
-        "image_with_review_NKD4nr",
         "image_with_review_HJBQC8",
         "image_with_review_C4xwKD",
         "image_with_review_ijVc7Y",
         "image_with_review_9HFVxz",
         "image_with_review_bU7njA",
         "image_with_review_w9NcL3",
-        "image_with_review_YxdDLc"
+        "image_with_review_YxdDLc",
+        "image_with_review_4fXbfN",
+        "image_with_review_NKD4nr"
       ],
       "settings": {
         "spacing": "",
