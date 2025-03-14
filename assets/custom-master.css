@@ -44,6 +44,8 @@
         height: 240px !important;
     }
     @media (max-width: 767.98px){
+              #neon-customiser-app .npc-sidebar-price-box .npc-price{flex-direction: column !important; margin: 0 !important;}
+
         .builder_USSS .image-with-text__text-aligner h2.heading.h3{font-size: 28px !important;}
         .Color-video-section h2{font-size: 28px !important;}
         .lead_page_NL_price_with_logo_discount.custom-google-reviews h2.rev-head{
