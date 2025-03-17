@@ -141,16 +141,6 @@
             "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
           }
         },
-        "image_with_review_w9NcL3": {
-          "type": "image-with-review",
-          "disabled": true,
-          "settings": {
-            "user-name": "Eric Williams",
-            "user-discription": "\"Nuestro logo fue entregado súper rápido a través de FedEx. En un abrir y cerrar de ojos ya estaba colgado en la pared y llamó la atención de nuestros invitados. ¡La combinación perfecta de calidad, ambiente y servicio rápido!\"",
-            "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_58_1_6_2048x2048.png?v=1712056876"
-          }
-        },
         "image_with_review_YxdDLc": {
           "type": "image-with-review",
           "settings": {
@@ -158,6 +148,15 @@
             "user-discription": "\"Desde que añadimos el letrero de neón a nuestra zona de descanso, el espacio se siente de inmediato más fresco y acogedor. El brillo suave complementa perfectamente nuestra decoración, aportando un toque elegante y moderno, ideal para relajarse o reuniones informales.\"",
             "uplod-time": "",
             "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Neon_text_designs_16_1.webp?v=1741893792"
+          }
+        },
+        "image_with_review_Cmq3D9": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Ricardo Alonso",
+            "user-discription": "¡Una combinación perfecta de estilo y personalidad! El resplandor del letrero de neón en cursiva capta la atención al instante y añade un toque cálido y acogedor al espacio. El detalle de la cuchara le da un aire personal y encantador.",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_79f4dc79-3ce3-4c56-be2f-41b9641ec194.png?v=1742212475"
           }
         },
         "image_with_review_NKD4nr": {
@@ -168,6 +167,25 @@
             "uplod-time": "",
             "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_d533cc47-8780-4ac7-963d-57bcd13ac717.png?v=1741887324"
           }
+        },
+        "image_with_review_VYKFUR": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Patricia Jiménez",
+            "user-discription": "El diseño elegante y los colores vibrantes lo convierten en un punto focal perfecto. El resplandor nítido en azul y amarillo crea un contraste impactante contra la rústica pared de ladrillo, añadiendo un toque moderno al entorno natural.",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_cade6bda-3006-4347-88dc-8f759125b226.png?v=1742212321"
+          }
+        },
+        "image_with_review_w9NcL3": {
+          "type": "image-with-review",
+          "disabled": true,
+          "settings": {
+            "user-name": "Eric Williams",
+            "user-discription": "\"Nuestro logo fue entregado súper rápido a través de FedEx. En un abrir y cerrar de ojos ya estaba colgado en la pared y llamó la atención de nuestros invitados. ¡La combinación perfecta de calidad, ambiente y servicio rápido!\"",
+            "uplod-time": "",
+            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_58_1_6_2048x2048.png?v=1712056876"
+          }
         }
       },
       "block_order": [
@@ -177,9 +195,11 @@
         "image_with_review_ijVc7Y",
         "image_with_review_9HFVxz",
         "image_with_review_bU7njA",
-        "image_with_review_w9NcL3",
         "image_with_review_YxdDLc",
-        "image_with_review_NKD4nr"
+        "image_with_review_Cmq3D9",
+        "image_with_review_NKD4nr",
+        "image_with_review_VYKFUR",
+        "image_with_review_w9NcL3"
       ],
       "settings": {
         "spacing": "",
