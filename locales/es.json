@@ -361,7 +361,7 @@
       "taxes_included_but_shipping_at_checkout": "Incl. IVA | Envío gratis (6-8 días hábiles)",
       "taxes_included_and_shipping_policy_html": "Incl. IVA | Envío gratis (6-8 días hábiles)",
       "total": "Total",
-      "checkout": "Comenzar pedido"
+      "checkout": "Finalizar compra"
     },
     "items": {
       "decrease_quantity": "Disminuir la cantidad en 1",
