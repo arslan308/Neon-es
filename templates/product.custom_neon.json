@@ -190,8 +190,8 @@
         "discount_car_toltip": "",
         "discount_message_complete": "",
         "discount_message": "La oferta termina en",
-        "order_message": "Pedido antes de las 11:59 PM",
-        "delivery_date": "Entregado el",
+        "order_message": "Pedido antes de las 23:59",
+        "delivery_date": "Entrega el",
         "add_to_cart_btn_text": "Compra ahora"
       }
     },
