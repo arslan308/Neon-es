@@ -339,13 +339,6 @@
                                             <span class="del-on-t"></span>
                                             <br>
                                             <div class="delivery-date"></div>
-                                            <b>{{ formatted_delivery_date }}</b>
-
-                                            <span class="i_section tooltip">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1248 1248" width="1248" height="1248">
-                                                    ...your SVG content...
-                                                </svg>
-                                            </span>
                                         </span>
                                     </div>  
                                 </span>
@@ -973,11 +966,6 @@
                                             <span class="del-on-t"></span>
                                             <br>
                                             <div class="delivery-date"></div>
-                                            <span class="i_section tooltip">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 1248 1248" width="1248" height="1248">
-                                                    ...your SVG content...
-                                                </svg>
-                                            </span>
                                         </span>
                                     </div>  
                                 </span>
@@ -1093,56 +1081,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     </script>
-    {%- assign delivery_text = section.settings.delivery_date -%}         
-    <script>
-        class DeliveryDate {
-          constructor(selector, deliveryText) {
-            this.selector = selector;
-            this.deliveryText = deliveryText;
-            this.monthTranslations = {
-                default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], // Capitalized in English (UK)
-                fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"], // Lowercase in French
-                de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], // Capitalized in German
-                nl: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"], // Lowercase in Dutch
-                it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], // Lowercase in Italian
-                es: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"], // Lowercase in Spanish
-                sv: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"] // Lowercase in Swedish
-            };
-          }
-      
-          getStoreLanguage() {
-            let storeLang = document.documentElement.lang || "default";
-            return this.monthTranslations[storeLang] ? storeLang : "default"; // Fallback to English if not found
-          }
-      
-          calculateFutureDate(daysToAdd) {
-            let date = new Date();
-            date.setDate(date.getDate() + daysToAdd);
-            return { day: date.getDate(), monthIndex: date.getMonth() }; // Month is 0-based
-          }
-      
-          updateDeliveryDates() {
-            let storeLang = this.getStoreLanguage();
-            let futureDate = this.calculateFutureDate(9); // Add 9 days
-            let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
-      
-            document.querySelectorAll(this.selector).forEach(el => {
-              el.innerHTML = `${this.deliveryText} ${futureDate.day} ${monthName}`;
-            });
-      
-            console.log("Store Language:", storeLang);
-            console.log("Month Index:", futureDate.monthIndex);
-            console.log("Month Name:", monthName);
-            console.log("Final Date Output:", futureDate.day, monthName);
-          }
-        }
-      
-        document.addEventListener("DOMContentLoaded", function () {
-          let deliveryText = {{ delivery_text | json }}; // Get the Liquid variable from theme settings
-          let deliveryDate = new DeliveryDate(".delivery-date", deliveryText);
-          deliveryDate.updateDeliveryDates();
-        });
-    </script>
+   {%- assign delivery_text = section.settings.delivery_date -%}         
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+ let deliveryText = {{ delivery_text | json }}; // Get the Liquid variable from theme settings
+ let deliveryFormat = {{ section.settings.delivery_format | json }}; // Get the custom format from schema
+
+ let deliveryDate = new DeliveryDate(".delivery-date", deliveryText, deliveryFormat);
+ deliveryDate.updateDeliveryDates();
+});
+
+class DeliveryDate {
+ constructor(selector, deliveryText, deliveryFormat) {
+   this.selector = selector;
+   this.deliveryText = deliveryText;
+   this.deliveryFormat = deliveryFormat;
+    this.monthTranslations = {
+        default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], // Capitalized in English (UK)
+        fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"], // Lowercase in French
+        de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], // Capitalized in German
+        nl: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"], // Lowercase in Dutch
+        it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], // Lowercase in Italian
+        es: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"], // Lowercase in Spanish
+        sv: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"] // Lowercase in Swedish
+    };
+ }
+
+ getStoreLanguage() {
+   let storeLang = document.documentElement.lang || "default";
+   return this.monthTranslations[storeLang] ? storeLang : "default";
+ }
+
+ calculateFutureDate(daysToAdd) {
+   let date = new Date();
+   date.setDate(date.getDate() + daysToAdd);
+   return { day: date.getDate(), monthIndex: date.getMonth() };
+ }
+
+ updateDeliveryDates() {
+   let storeLang = this.getStoreLanguage();
+   let futureDate = this.calculateFutureDate(9);
+   let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
+
+   let finalText = this.deliveryFormat
+     .replace("${monthName}", monthName)
+     .replace("${futureDate.day}", futureDate.day);
+
+   document.querySelectorAll(this.selector).forEach(el => {
+     el.innerHTML = `${this.deliveryText} ${finalText}`;
+   });
+
+   console.log("Final Date Output:", finalText);
+ }
+}
+</script>
   <script>
       $('.slider-for').slick({
           slidesToShow: 1,
@@ -1811,6 +1803,12 @@ document.addEventListener("DOMContentLoaded", countdownToMetafieldDate);
     "id": "order_message",
     "label": "Delivery Time",
     "default": "Ordered before 11:59 PM"
+    },
+    {
+      "type": "text",
+      "id": "delivery_format",
+      "label": "Delivery Date Format",
+      "default": "${futureDate.day} ${monthName}"
     },
     {
     "type": "text",
