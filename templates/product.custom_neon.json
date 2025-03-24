@@ -191,7 +191,7 @@
         "discount_message_complete": "",
         "discount_message": "La oferta termina en",
         "order_message": "Pedido antes de las 23:59",
-        "delivery_format": "${futureDate.day} de ${monthName}",
+        "delivery_format": "de ${futureDate.day} ${monthName}",
         "delivery_date": "Entrega el",
         "add_to_cart_btn_text": "Compra ahora"
       }
