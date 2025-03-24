@@ -16,7 +16,7 @@
           "type": "Custom_Options",
           "settings": {
             "text_option": "Tablero",
-            "text_tooltip": "Tu cartel de neón LED personalizado está montado en una resistente placa de acrílico para una estabilidad óptima. Cortamos el acrílico precisamente siguiendo los contornos de tu logo, haciéndolo casi invisible y dándole un acabado lujoso. Los diseños más grandes (más de 100 cm de largo o 50 cm de alto) pueden entregarse en dos partes para facilitar el montaje y transporte.",
+            "text_tooltip": "Tu cartel de neón LED personalizado está montado en una resistente placa de acrílico para una estabilidad óptima. Cortamos el acrílico precisamente siguiendo los contornos de tu cartel de neón LED, haciéndolo casi invisible y dándole un acabado lujoso. Los diseños más grandes (más de 100 cm de largo o 50 cm de alto) pueden entregarse en dos partes para facilitar el montaje y transporte.",
             "option_value": "Cortado a medida",
             "class_comp": "Tablero"
           }
@@ -43,7 +43,7 @@
           "type": "Custom_Options",
           "settings": {
             "text_option": "Impresión UV",
-            "text_tooltip": "Para tu cartel de neón LED personalizado, imprimimos detalles finos con precisión en la placa posterior de acrílico para garantizar que el diseño coincida con tu visión. Ten en cuenta que estos detalles impresos no se iluminan en la oscuridad, pero añaden un toque refinado al aspecto general. Por favor, ten en cuenta que el uso de la impresión UV puede aumentar ligeramente el tiempo de producción.",
+            "text_tooltip": "Para tu cartel de neón LED personalizado, imprimimos detalles finos con precisión sobre la placa de acrílico para que el diseño coincida exactamente con tu idea. Ten en cuenta que estos detalles no se iluminan en la oscuridad, pero aportan un toque elegante al diseño general. El uso de impresión UV puede aumentar ligeramente el tiempo de producción.",
             "option_value": "{{ product.metafields.custom.uv_print.value }}",
             "class_comp": "Impresión UV"
           }
