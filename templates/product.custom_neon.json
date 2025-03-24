@@ -154,7 +154,7 @@
         "paymenticon_NUQCeW"
       ],
       "settings": {
-        "SectionTitle": "¡Tu presupuesto está listo!",
+        "SectionTitle": "¡Tu neon diseño está listo!",
         "timer": "",
         "atc_show": true,
         "support_id_image": "shopify://shop_images/imageProxy_1_1.png",
@@ -166,7 +166,7 @@
         "chat_link": "",
         "popup_close": "Volver",
         "support_phone": "+34 511 604 926",
-        "quote_customize_title": "Personaliza tu presupuesto",
+        "quote_customize_title": "Personaliza tu neon diseño",
         "form_user_image": "https://cdn.shopify.com/s/files/1/0446/7376/1431/files/imageProxy_1.png?v=1730875983",
         "form_email_placeholder": "Correo electrónico",
         "inc_vat": "Mostrar con IVA",
@@ -180,7 +180,7 @@
         "mbformodify": "Personalizar",
         "fordirectcart": "Compra ahora",
         "mbfordirectcart": "Compra ahora",
-        "TopPriceText": "Precio de tu logo de neón:",
+        "TopPriceText": "Precio de tu neon diseño:",
         "SectionToplist": "<li> <svg width=\"8\" height=\"7\" viewbox=\"0 0 8 7\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z\" fill=\"#EC40A4\"></path> </svg> Entrega rápida en 8 días </li> <li> <svg width=\"8\" height=\"7\" viewbox=\"0 0 8 7\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z\" fill=\"#EC40A4\"></path> </svg> Garantía de 2 años </li> <li> <svg width=\"8\" height=\"7\" viewbox=\"0 0 8 7\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z\" fill=\"#EC40A4\"></path> </svg> Envío gratis </li>",
         "accordion_text": "Recibes",
         "save_text": "Ahorra",
