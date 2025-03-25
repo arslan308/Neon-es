@@ -1318,11 +1318,13 @@ body .page-logan-cst-video-sc svg {
     border-bottom: none!important;
     margin-bottom: 30px!important;
     padding: 0 !important;
-    display: flex;
+    display: grid;
     gap: 12px;
+  grid-template-columns: auto 1fr;
 }
+.video-and-text-section.page-logan-cst-video-sc .v-t-item img{height: 39px !important; width: 47px !important;}
 .video-and-text-section.page-logan-cst-video-sc .v-t-items:before{
-  height: calc(100% - 70px);    
+  height: calc(100% - 91px);    
   display: block;
     width: 1px;
     content: "";
@@ -1331,7 +1333,7 @@ body .page-logan-cst-video-sc svg {
     top: 0;
     bottom: 0;
     border-left: 2px dashed #A7A7A7;
-    left: 4.3%;
+    left: 4.8%;
 }
 .page-logan-cst-video-sc .video-text-flex-in .v-t-item:last-child img{
   height: 39px !important;
