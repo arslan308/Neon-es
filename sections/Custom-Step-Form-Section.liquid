@@ -1,9 +1,9 @@
-
 <link rel="stylesheet" href="{{ 'custom-steps-form-section.css' | asset_url }}">
 
 <div class="custom_steps_form">
-    <div class="container">
-      <div class="step_form_inner">
+  <div class="container">
+    <div class="step_form_inner">
+      {% comment %}
         <div class="request_qu">
           {% if section.settings.sectionTitle != blank %}
           <div class="heading_top">{{section.settings.sectionTitle}}</div>
@@ -14,621 +14,935 @@
             {% endif %}
           </ul>
         </div>
-        <div class="step_form_row">
-          <div class="video_part">
-            <div class="video_potion">
-                {% if section.settings.Video_url != blank %}
-                    <video class="img-fluid" style="width: 100%;" muted playsinline autoplay>
-                      <source src="{{ section.settings.Video_url }}" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                {% endif %}
-            </div>
-            <div class="second_form">
-              <div class="second_form_inner">
-                <div class="heading_part">
-                  <h2>{{ section.settings.freeSample }}</h2>
-                  <p>{{ section.settings.freeSampleDesc }}</p>
-                </div>
-                <form id="sec_form">
-                  <div class="form_group step_one">
-                    {{ section.settings.freeSampleFormDescription }}
-                    <div class="file_group">
-                      <div class="file_wrap">
-
-                        {{section.settings.uploadPhotoFormfree }}
-                        <input class="file_field" type="file" id="wall_image" name="wall_image" accept="image/*" required>
-                        <div class="file_btn">{{ section.settings.uploadPhotobuttonfree }}</div>
-                      </div>
-                    </div>
-                    <div class="extra_text">{{ section.settings.StraightViewText }}</div>
-                  </div>
-                  <div class="form_group step_two">
-                    <h4>{{section.settings.HelpUsTtile }}</h4>
-                    <div class="radio_group">
-                      {% if section.settings.Friends != blank%}
-                      <div class="radio_box">
-                        <label for="friend">{{section.settings.Friends }}</label>
-                        <input type="radio" id="friend" name="help" />
-                      </div>
-                    {% endif %}
-
-                      {% if section.settings.SearchEngine != blank%}
-
-                      <div class="radio_box">
-                        <label for="search_engine">{{ section.settings.SearchEngine }}</label>
-                        <input type="radio" id="search_engine" name="help" />
-                      </div>
-                    {% endif %}
-
-                      {% if section.settings.FaceBook != blank%}
-
-                      <div class="radio_box">
-                        <label for="fb">{{ section.settings.FaceBook  }}</label>
-                        <input type="radio" id="fb" name="help" />
-                      </div>
-                    {% endif %}
-
-                      {% if section.settings.Insta != blank%}
-
-                      <div class="radio_box">
-                        <label for="ig">{{ section.settings.Insta }}</label>
-                        <input type="radio" id="ig" name="help" />
-                      </div>
-                    {% endif %}
-
-                      {% if section.settings.Linkdin != blank%}
-
-                      <div class="radio_box">
-                        <label for="ld">{{ section.settings.Linkdin }}</label>
-                        <input type="radio" id="ld" name="help" />
-                      </div>
-                    {% endif %}
-
-                      {% if section.settings.Youtube != blank%}
-
-                      <div class="radio_box">
-                        <label for="yt">{{ section.settings.Youtube }}</label>
-                        <input type="radio" id="yt" name="help" />
-                      </div>
-                    {% endif %}
-
-                      {% if section.settings.NewsLetter != blank%}
-
-                      <div class="radio_box">
-                        <label for="newsletter">{{ section.settings.NewsLetter }}</label>
-                        <input type="radio" id="newsletter" name="help" />
-                      </div>
-                    {% endif %}
-
-                      {% if section.settings.other != blank%}
-
-                      <div class="radio_box">
-                        <label for="other">{{ other }}</label>
-                        <input type="radio" id="other" name="help" />
-                      </div>
-                    {% endif %}
-                    </div>
-                  </div>
-                  <div class="form_group step_three">
-                    <div class="person">
-                      <div class="p_img">
-                        {% if section.settings.PersonImage != blank %}
-                          {%- assign image_url_2 = section.settings.PersonImage | image_url: width: section.settings.PersonImage.width | image_tag: loading: 'lazy', class: 'image-2', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
-                            {{ image_url_2 }}
-                        {%else %}
-                          <img src="https://cdn.shopify.com/s/files/1/0716/0542/0325/files/person.png" />
-                        {% endif %}
-                      </div>
-                      <div class="p_text">{{ section.settings.AskPersonText }}</div>
-                    </div>
-                    <textarea id="question" name="question"
-                      placeholder="{{ section.settings.AskPersonPlacholder }}"></textarea>
-                    <input type="submit" name="submit" value="Verstuur vraag" />
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="timer_box"
-              {% if section.settings.formButtonQouteImage != blank %} style="background-image: url( {{section.settings.formButtonQouteImage |img_url:"master" }});" {% endif %}>
-              <a href="#">{{ section.settings.RemoveWallPhotoText }}
-                <img src="https://cdn.shopify.com/s/files/1/0716/0542/0325/files/delete.png"/></a>
-              <div>
-                {{ section.settings.formButtonQoute }}
-              </div>
+      {% endcomment %}
+      <div class="step_form_row">
+        <div class="video_part">
+          <div class="video_potion">
+            {% if section.settings.Video_url != blank %}
+              <video class="img-fluid" style="width: 100%;" muted playsinline autoplay>
+                <source src="{{ section.settings.Video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            {% endif %}
+          </div>
+          <div
+            class="timer_box"
+            {% if section.settings.formButtonQouteImage != blank %}
+              style="background-image: url( {{section.settings.formButtonQouteImage |img_url:"master" }});"
+            {% endif %}
+          >
+            <div>
+              {{ section.settings.formButtonQoute }}
             </div>
           </div>
-          <div class="form_part">
-            <div class="form_inner">
-              <div class="tab-status">
-                <span class="tab first_tab active">
-                  <div class="tab_name">{{ section.settings.tabTitle1 }}</div>
-                </span>
-                <span class="tab sec_tab">
-                  <div class="tab_name">{{ section.settings.tabTitle2 }}</div>
-                </span>
-              </div>
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-              <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>	
-              <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?v=3.3.57597" type="text/javascript"></script>
-              <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?v=3.3.57597" type="text/javascript"></script>
-              <script src="https://cdn01.jotfor.ms/js/vendor/imageinfo.js?v=3.3.57597" type="text/javascript"></script>
-              <script src="https://cdn02.jotfor.ms/file-uploader/fileuploader.js?v=3.3.57597"
-                type="text/javascript"></script>
-              <script src="https://cdn03.jotfor.ms/js/punycode-1.4.1.min.js?v=3.3.57597" type="text/javascript"
-                defer></script>
-              <script src="https://cdn01.jotfor.ms/js/vendor/maskedinput_5.0.9.min.js?v=3.3.57597"
-                type="text/javascript"></script>
-              <script src="https://cdn02.jotfor.ms/js/vendor/smoothscroll.min.js?v=3.3.57597"
-                type="text/javascript"></script>
-              <script src="https://cdn03.jotfor.ms/js/errorNavigation.js?v=3.3.57597" type="text/javascript"></script>
-              <script type="text/javascript">
-                JotForm.newDefaultTheme = true;
-                JotForm.extendsNewTheme = false;
-                JotForm.singleProduct = false;
-                JotForm.newPaymentUIForNewCreatedForms = true;
-                JotForm.texts = { "confirmEmail": "E-mail does not match", "pleaseWait": "Please wait...", "validateEmail": "You need to validate this e-mail", "confirmClearForm": "Are you sure you want to clear the form", "lessThan": "Your score should be less than or equal to", "incompleteFields": "There are incomplete required fields. Please complete them.", "required": "This field is required.", "requireOne": "At least one field required.", "requireEveryRow": "Every row is required.", "requireEveryCell": "Every cell is required.", "email": "Enter a valid e-mail address", "alphabetic": "This field can only contain letters", "numeric": "This field can only contain numeric values", "alphanumeric": "This field can only contain letters and numbers.", "cyrillic": "This field can only contain cyrillic characters", "url": "This field can only contain a valid URL", "currency": "This field can only contain currency values.", "fillMask": "Field value must fill mask.", "uploadExtensions": "You can only upload following files:", "noUploadExtensions": "File has no extension file type (e.g. .txt, .png, .jpeg)", "uploadFilesize": "File size cannot be bigger than:", "uploadFilesizemin": "File size cannot be smaller than:", "gradingScoreError": "Score total should only be less than or equal to", "inputCarretErrorA": "Input should not be less than the minimum value:", "inputCarretErrorB": "Input should not be greater than the maximum value:", "maxDigitsError": "The maximum digits allowed is", "minCharactersError": "The number of characters should not be less than the minimum value:", "maxCharactersError": "The number of characters should not be more than the maximum value:", "freeEmailError": "Free email accounts are not allowed", "minSelectionsError": "The minimum required number of selections is ", "maxSelectionsError": "The maximum number of selections allowed is ", "pastDatesDisallowed": "Date must not be in the past.", "dateLimited": "This date is unavailable.", "dateInvalid": "This date is not valid. The date format is {format}", "dateInvalidSeparate": "This date is not valid. Enter a valid {element}.", "ageVerificationError": "You must be older than {minAge} years old to submit this form.", "multipleFileUploads_typeError": "{file} has invalid extension. Only {extensions} are allowed.", "multipleFileUploads_sizeError": "{file} is too large, maximum file size is {sizeLimit}.", "multipleFileUploads_minSizeError": "{file} is too small, minimum file size is {minSizeLimit}.", "multipleFileUploads_emptyError": "{file} is empty, please select files again without it.", "multipleFileUploads_uploadFailed": "File upload failed, please remove it and upload the file again.", "multipleFileUploads_onLeave": "The files are being uploaded, if you leave now the upload will be cancelled.", "multipleFileUploads_fileLimitError": "Only {fileLimit} file uploads allowed.", "dragAndDropFilesHere_infoMessage": "Drag and drop files here", "chooseAFile_infoMessage": "Choose a file", "maxFileSize_infoMessage": "Max. file size", "generalError": "There are errors on the form. Please fix them before continuing.", "generalPageError": "There are errors on this page. Please fix them before continuing.", "wordLimitError": "Too many words. The limit is", "wordMinLimitError": "Too few words.  The minimum is", "characterLimitError": "Too many Characters.  The limit is", "characterMinLimitError": "Too few characters. The minimum is", "ccInvalidNumber": "Credit Card Number is invalid.", "ccInvalidCVC": "CVC number is invalid.", "ccInvalidExpireDate": "Expire date is invalid.", "ccInvalidExpireMonth": "Expiration month is invalid.", "ccInvalidExpireYear": "Expiration year is invalid.", "ccMissingDetails": "Please fill up the credit card details.", "ccMissingProduct": "Please select at least one product.", "ccMissingDonation": "Please enter numeric values for donation amount.", "disallowDecimals": "Please enter a whole number.", "restrictedDomain": "This domain is not allowed", "ccDonationMinLimitError": "Minimum amount is {minAmount} {currency}", "requiredLegend": "All fields marked with * are required and must be filled.", "geoPermissionTitle": "Permission Denied", "geoPermissionDesc": "Check your browser's privacy settings.", "geoNotAvailableTitle": "Position Unavailable", "geoNotAvailableDesc": "Location provider not available. Please enter the address manually.", "geoTimeoutTitle": "Timeout", "geoTimeoutDesc": "Please check your internet connection and try again.", "selectedTime": "Selected Time", "formerSelectedTime": "Former Time", "cancelAppointment": "Cancel Appointment", "cancelSelection": "Cancel Selection", "noSlotsAvailable": "No slots available", "slotUnavailable": "{time} on {date} has been selected is unavailable. Please select another slot.", "multipleError": "There are {count} errors on this page. Please correct them before moving on.", "oneError": "There is {count} error on this page. Please correct it before moving on.", "doneMessage": "Well done! All errors are fixed.", "invalidTime": "Enter a valid time", "doneButton": "Done", "reviewSubmitText": "Review and Submit", "nextButtonText": "Next", "prevButtonText": "Previous", "seeErrorsButton": "See Errors", "notEnoughStock": "Not enough stock for the current selection", "notEnoughStock_remainedItems": "Not enough stock for the current selection ({count} items left)", "soldOut": "Sold Out", "justSoldOut": "Just Sold Out", "selectionSoldOut": "Selection Sold Out", "subProductItemsLeft": "({count} items left)", "startButtonText": "START", "submitButtonText": "Submit", "submissionLimit": "Sorry! Only one entry is allowed. <br> Multiple submissions are disabled for this form.", "reviewBackText": "Back to Form", "seeAllText": "See All", "progressMiddleText": "of", "fieldError": "field has an error.", "error": "Error" };
-                JotForm.newPaymentUI = true;
-                JotForm.originalLanguage = "en";
-                JotForm.replaceTagTest = true;
-                JotForm.uploadServerURL = "https://upload.jotform.com/upload";
-                JotForm.clearFieldOnHide = "disable";
-                JotForm.submitError = "jumpToFirstError";
-                JotForm.isFullSource = true;
-  
-                try {
-                  function isTrackingProhibited() {
-                    try {
-                      var isEUDomain = /(?:eu.jotform)|(?:jotformeu.com)/.test(window.location.host);
-                      var isHipaaDomain = /(?:hipaa.jotform)/.test(window.location.host);
-                      var isProhibitedParameterExists = /(?:wfTaskID|PCI_preSubmitRequest|wfTaskType)/.test(window.location.search);
-                      var isEditMode = JotForm.isEditMode();
-                      var isTrackingProhibited = isEUDomain || isHipaaDomain || isProhibitedParameterExists || isEditMode;
-                      return isTrackingProhibited;
-                    } catch (e) {
-                      console.log(e);
-                      return true;
-                    }
-                  }
-                  if (!isTrackingProhibited()) {
-                    var sesApiUrl = /jotform.pro/.test(window.location.host) ? '/API' : 'https://api.jotform.com';
-                    function sendOpenId(uuid, eventType) {
-                      navigator.sendBeacon(sesApiUrl + '/form/' + 242833577303054 + '/event/' + uuid + '/' + eventType, {});
-                    }
-                    var formOpenId = '';
-                    if (window.crypto) {
-                      formOpenId = window.crypto.getRandomValues(new BigUint64Array(1)).toString();
-                    } else {
-                      formOpenId = (Math.random() * 16).toString(16).slice(2);
-                    }
-                    sendOpenId = sendOpenId.bind(this, formOpenId);
-                    function sendOpenIdOnSubmit() {
-                      var currentForm = $('242833577303054');
-                      currentForm.addEventListener('submit', function () { sendOpenId('clientSubmitClick_V5'); });
-                      var openIdInput = currentForm.querySelector('[name="formOpenId_V5"]');
-                      if (!openIdInput) {
-                        openIdInput = document.createElement('input');
-                        openIdInput.setAttribute('type', 'hidden');
-                        openIdInput.setAttribute('name', 'formOpenId_V5');
-                        currentForm.appendChild(openIdInput);
-                      }
-                      openIdInput.value = formOpenId;
-                    }
-                    sendOpenId('clientFormView_V5');
-                    if (document.readyState == 'complete' || (this.jsForm && (document.readyState === undefined || document.readyState === 'interactive'))) {
-                      sendOpenIdOnSubmit();
-                    } else {
-                      document.ready(sendOpenIdOnSubmit);
-                    }
-                  }
-                } catch (openIdBlockError) {
-                  console.log(openIdBlockError);
-                }
-                JotForm.init(function () {
-                  /*INIT-START*/
-                  if (window.JotForm && JotForm.accessible) $('input_4').setAttribute('tabindex', 0);
-                  JotForm.setPhoneMaskingValidator('input_6_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023');
-                  JotForm.autoNext(15);
-                  if (window.JotForm && JotForm.accessible) $('input_9').setAttribute('tabindex', 0);
-                  JotForm.setCustomHint('input_9', 'Bijvoorbeeld: Hoi Sjoerd, hoe hang ik mijn logo op?');
-                  JotForm.alterTexts({ "ageVerificationError": "You must be older than {minAge} years old to submit this form.", "alphabetic": "This field can only contain letters", "alphanumeric": "This field can only contain letters and numbers.", "cancelAppointment": "Cancel Appointment", "cancelSelection": "Cancel Selection", "ccDonationMinLimitError": "Minimum amount is {minAmount} {currency}", "ccInvalidCVC": "CVC number is invalid.", "ccInvalidExpireDate": "Expire date is invalid.", "ccInvalidExpireMonth": "Expiration month is invalid.", "ccInvalidExpireYear": "Expiration year is invalid.", "ccInvalidNumber": "Credit Card Number is invalid.", "ccMissingDetails": "Please fill up the credit card details.", "ccMissingDonation": "Please enter numeric values for donation amount.", "ccMissingProduct": "Please select at least one product.", "characterLimitError": "Too many Characters.  The limit is", "characterMinLimitError": "Too few characters. The minimum is", "chooseAFile_infoMessage": "Choose a file", "confirmClearForm": "Are you sure you want to clear the form", "confirmEmail": "E-mail does not match", "currency": "This field can only contain currency values.", "cyrillic": "This field can only contain cyrillic characters", "dateInvalid": "This date is not valid. The date format is {format}", "dateInvalidSeparate": "This date is not valid. Enter a valid {element}.", "dateLimited": "This date is unavailable.", "disallowDecimals": "Please enter a whole number.", "doneButton": "Done", "doneMessage": "Well done! All errors are fixed.", "dragAndDropFilesHere_infoMessage": "Drag and drop files here", "email": "Enter a valid e-mail address", "error": "Error", "fieldError": "field has an error.", "fillMask": "Field value must fill mask.", "formerSelectedTime": "Former Time", "freeEmailError": "Free email accounts are not allowed", "generalError": "There are errors on the form. Please fix them before continuing.", "generalPageError": "There are errors on this page. Please fix them before continuing.", "geoNotAvailableDesc": "Location provider not available. Please enter the address manually.", "geoNotAvailableTitle": "Position Unavailable", "geoPermissionDesc": "Check your browser's privacy settings.", "geoPermissionTitle": "Permission Denied", "geoTimeoutDesc": "Please check your internet connection and try again.", "geoTimeoutTitle": "Timeout", "gradingScoreError": "Score total should only be less than or equal to", "incompleteFields": "There are incomplete required fields. Please complete them.", "inputCarretErrorA": "Input should not be less than the minimum value:", "inputCarretErrorB": "Input should not be greater than the maximum value:", "invalidTime": "Enter a valid time", "justSoldOut": "Just Sold Out", "lessThan": "Your score should be less than or equal to", "maxCharactersError": "The number of characters should not be more than the maximum value:", "maxDigitsError": "The maximum digits allowed is", "maxFileSize_infoMessage": "Max. file size", "maxSelectionsError": "The maximum number of selections allowed is ", "minCharactersError": "The number of characters should not be less than the minimum value:", "minSelectionsError": "The minimum required number of selections is ", "multipleError": "There are {count} errors on this page. Please correct them before moving on.", "multipleFileUploads_emptyError": "{file} is empty, please select files again without it.", "multipleFileUploads_fileLimitError": "Only {fileLimit} file uploads allowed.", "multipleFileUploads_minSizeError": "{file} is too small, minimum file size is {minSizeLimit}.", "multipleFileUploads_onLeave": "The files are being uploaded, if you leave now the upload will be cancelled.", "multipleFileUploads_sizeError": "{file} is too large, maximum file size is {sizeLimit}.", "multipleFileUploads_typeError": "{file} has invalid extension. Only {extensions} are allowed.", "multipleFileUploads_uploadFailed": "File upload failed, please remove it and upload the file again.", "nextButtonText": "Next", "noSlotsAvailable": "No slots available", "notEnoughStock": "Not enough stock for the current selection", "notEnoughStock_remainedItems": "Not enough stock for the current selection ({count} items left)", "noUploadExtensions": "File has no extension file type (e.g. .txt, .png, .jpeg)", "numeric": "This field can only contain numeric values", "oneError": "There is {count} error on this page. Please correct it before moving on.", "pastDatesDisallowed": "Date must not be in the past.", "pleaseWait": "Please wait...", "prevButtonText": "Previous", "progressMiddleText": "of", "required": "This field is required.", "requiredLegend": "All fields marked with * are required and must be filled.", "requireEveryCell": "Every cell is required.", "requireEveryRow": "Every row is required.", "requireOne": "At least one field required.", "restrictedDomain": "This domain is not allowed", "reviewBackText": "Back to Form", "reviewSubmitText": "Review and Submit", "seeAllText": "See All", "seeErrorsButton": "See Errors", "selectedTime": "Selected Time", "selectionSoldOut": "Selection Sold Out", "slotUnavailable": "{time} on {date} has been selected is unavailable. Please select another slot.", "soldOut": "Sold Out", "startButtonText": "START", "submissionLimit": "Sorry! Only one entry is allowed. &lt;br&gt; Multiple submissions are disabled for this form.", "submitButtonText": "Submit", "subProductItemsLeft": "({count} items left)", "uploadExtensions": "You can only upload following files:", "uploadFilesize": "File size cannot be bigger than:", "uploadFilesizemin": "File size cannot be smaller than:", "url": "This field can only contain a valid URL", "validateEmail": "You need to validate this e-mail", "wordLimitError": "Too many words. The limit is", "wordMinLimitError": "Too few words.  The minimum is" });
-                  setTimeout(function () {
-                    JotForm.noJump = true;
-                    JotForm.initMultipleUploads();
-                  }, 2);
-                });
-  
-                setTimeout(function () {
-                  JotForm.paymentExtrasOnTheFly([null, null, null, { "description": "", "name": "fileUpload", "qid": "3", "subLabel": "", "text": "", "type": "control_fileupload" }, { "description": "", "name": "typeA", "qid": "4", "subLabel": "", "text": "Naam", "type": "control_textbox" }, { "description": "", "name": "email", "qid": "5", "subLabel": "example@example.com", "text": "E-mailadres", "type": "control_email" }, { "description": "", "name": "phoneNumber", "qid": "6", "text": "Telefoonnummer", "type": "control_phone" }, { "description": "", "name": "typeA7", "qid": "7", "text": "Help ons! Via welke weg vond jij Neonsfeer?", "type": "control_radio" }, null, { "description": "", "mde": "No", "name": "typeA8", "qid": "9", "subLabel": "", "text": "", "type": "control_textarea", "wysiwyg": "Disable" }, { "name": "submit", "qid": "10", "text": "Verstuur vraag", "type": "control_button" }, { "name": "pageBreak", "qid": "11", "text": "Page Break", "type": "control_pagebreak" }, { "name": "pageBreak12", "qid": "12", "text": "Page Break", "type": "control_pagebreak" }, { "description": "", "name": "input13", "qid": "13", "subLabel": "", "text": "", "type": "control_fileupload" }, { "name": "pageBreak14", "qid": "14", "text": "Page Break", "type": "control_pagebreak" }, { "name": "pageBreak15", "qid": "15", "text": "Page Break", "type": "control_pagebreak" }]);
-                }, 20); 
-              </script>
-              <link type="text/css" rel="stylesheet"
-                href="https://cdn01.jotfor.ms/stylebuilder/static/form-common.css?v=c71a298" />
-              <style type="text/css">
-                @media print {
-                  * {
-                    -webkit-print-color-adjust: exact !important;
-                    color-adjust: exact !important;
-                  }
-  
-                  .form-section {
-                    display: inline !important
-                  }
-  
-                  .form-pagebreak {
-                    display: none !important
-                  }
-  
-                  .form-section-closed {
-                    height: auto !important
-                  }
-  
-                  .page-section {
-                    position: initial !important
-                  }
-                }
-              </style>
-              <link type="text/css" rel="stylesheet"
-                href="https://cdn02.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.57597" />
-              <link type="text/css" rel="stylesheet"
-                href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.57597" />
-              <link type="text/css" rel="stylesheet"
-                href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.57597" />
-              <style type="text/css" id="form-designer-style"> 
-              </style>
-            
-              <form class="jotform-form"
-                onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();"
-                action="https://submit.jotform.com/submit/242833577303054" method="post" enctype="multipart/form-data"
-                name="form_242833577303054" id="242833577303054" accept-charset="utf-8" autocomplete="on"><input
-                  type="hidden" name="formID" value="242833577303054" /><input type="hidden" id="JWTContainer"
-                  value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden"
-                  id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1728640802769" /><input
-                  type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden"
-                  id="buildDate" name="buildDate" value="1728640802769" /><input type="hidden" name="uploadServerUrl"
-                  value="https://upload.jotform.com/upload" />
-                <div role="main" class="form-all">
-                  <ul class="form-section page-section">
-                    <li class="form-line" data-type="control_fileupload" id="id_3">
-                      <div></div>
-                      <label
-                        class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="true">
-                      </label>
-                      {{section.settings.tabContent1 }}
-                      <div id="cid_3" class="form-input-wide" data-layout="full">
-                        <div class="jfQuestion-fields" data-wrapper-react="true">
-                          <div class="jfField isFilled">
-                            <div class="jfUpload-wrapper">
-                              <div class="jfUpload-container">
-                                <div class="jfUpload-button-container">
-                                  <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none"
-                                    data-version="v2">
-                                    {{ section.settings.uploadContent }}
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="jfUpload-files-container">
-                                <div class="validate[multipleUpload]"><input type="file" id="input_3"
-                                    name="q3_fileUpload[]" multiple="" class="form-upload-multiple"
-                                    data-imagevalidate="yes"
-                                    data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif"
-                                    data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0"
-                                    data-file-limit="" data-component="fileupload"
-                                    aria-label="Upload je logo en ontvang de laagste prijs variant in je mail" /></div>
-                              </div>
-                            </div>
-                            <div data-wrapper-react="true"></div>
-                          </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none"
-                            class="ofText">of</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li id="cid_11" class="form-input-wide" data-type="control_pagebreak">
-                      <div class="form-pagebreak" data-component="pagebreak">
-                        <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_11" type="button"
-                            class="form-pagebreak-back  button-hidden jf-form-buttons"
-                            data-component="pagebreak-back">Back</button></div>
-                        <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_11" type="button" aria-required="true"
-                            class="form-pagebreak-next  jf-form-buttons" data-component="pagebreak-next">{{ section.settings.Button1 }}</button></div>
-                        <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_11"></div>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="form-section page-section" style="display:none;">
-                      {{section.settings.FormHeading }}
-                    <li class="form-line" data-type="control_textbox" id="id_4"><label
-                        class="form-label form-label-top form-label-auto" id="label_4" for="input_4" aria-hidden="false">
-                        {{ section.settings.inputlable1 }} <sub>*</sub> </label>
-                      <div id="cid_4" class="form-input-wide" data-layout="half"> <input type="text" id="input_4"
-                          name="q4_typeA" data-type="input-textbox" class="form-textbox" data-defaultvalue=""
-                          style="width:310px" size="310" placeholder="{{ section.settings.inputplaceholder1 }}" data-component="textbox"
-                          aria-labelledby="label_4" value="" /> </div>
-                    </li>
-                    <li class="form-line" data-type="control_email" id="id_5"><label
-                        class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false">
-                        {{ section.settings.inputlable2 }} <sub>*</sub></label>
-                      <div id="cid_5" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container"
-                          style="vertical-align:top"><input type="email" id="input_5" name="q5_email"
-                            class="form-textbox validate[Email]" data-defaultvalue="" autoComplete="section-input_5 email"
-                            style="width:310px" size="310" placeholder="{{ section.settings.inputplaceholder2 }}" data-component="email"
-                            aria-labelledby="label_5 sublabel_input_5" value="" /></span> </div>
-                    </li>
-                    <li class="form-line" data-type="control_phone" id="id_6" data-compound-hint="telefoon"><label
-                        class="form-label form-label-top form-label-auto" id="label_6" for="input_6_full">  {{section.settings.inputlable3 }}
-                        <sub>*</sub></label>
-                      <div id="cid_6" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container"
-                          style="vertical-align:top"><input type="tel" id="input_6_full" name="q6_phoneNumber[full]"
-                            data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]"
-                            data-defaultvalue="" autoComplete="section-input_6 tel-national" style="width:310px"
-                            data-masked="true" placeholder="{{  section.settings.inputplaceholder3 }}" data-component="phone"
-                            aria-labelledby="label_6 sublabel_6_masked" value="" /></span> </div>
-                    </li>
-                    <li id="cid_12" class="form-input-wide" data-type="control_pagebreak">
-                      <div class="form-pagebreak" data-component="pagebreak">
-                        <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_12" type="button"
-                            class="form-pagebreak-back  button-hidden jf-form-buttons"
-                            data-component="pagebreak-back">Back</button></div>
-                        <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_12" type="button"
-                            class="form-pagebreak-next  jf-form-buttons q23232" data-component="pagebreak-next">{{ section.settings.ButtonTextForm }}</button></div>
-                        <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_12"></div>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="form-section page-section" style="display:none;">
-                    <li class="form-line" data-type="control_fileupload" id="id_13"><label
-                        class="form-label form-label-top form-label-auto" id="label_13" for="input_13" aria-hidden="true">
-                      </label>
-                      <div class="title_box">
-                        <h2>{{ section.settings.freeSample }}</h2>
-                        <p>{{ section.settings.freeSampleDesc }}</p>
-                      </div>
-                      <div id="cid_13" class="form-input-wide box_inner" data-layout="full">
-                        {{ section.settings.freeSampleFormDescription }}
-                        <div class="jfQuestion-fields" data-wrapper-react="true">
-                          <div class="jfField isFilled">
-                            <div class="jfUpload-wrapper">
-                              <div class="jfUpload-container">
-                                <div class="jfUpload-button-container">
-                                  <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none"
-                                    data-version="v2">Upload foto<div class="jfUpload-heading forDesktop">Drag and drop
-                                      files here</div>
-                                    <div class="jfUpload-heading forMobile">Choose a file</div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="jfUpload-files-container">
-                                <div class="validate[multipleUpload]"><input type="file" id="input_13"
-                                    name="q13_input13[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes"
-                                    data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif"
-                                    data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0"
-                                    data-file-limit="" data-component="fileupload"
-                                    aria-label="Upload je logo en ontvang de laagste prijs variant in je mail" /></div>
-                              </div>
-                            </div>
-                            <div data-wrapper-react="true"></div>
-                          </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none"
-                            class="ofText">of</span>
-                        </div>
-  
-                      </div>
-                    </li>
-                    <li id="cid_14" class="form-input-wide bg-1" data-type="control_pagebreak">
-                      <div class="form-pagebreak" data-component="pagebreak">
-                        <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_14" type="button"
-                            class="form-pagebreak-back  button-hidden jf-form-buttons"
-                            data-component="pagebreak-back">Back</button></div>
-                        <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_14" type="button"
-                            class="form-pagebreak-next  jf-form-buttons" data-component="pagebreak-next">{{ section.settings.uploadPhotobuttonfree }}</button></div>
-                        <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_14"></div>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="form-section page-section" style="display:none;">
-                    <li class="mt-0">
-                      <div class="title_box">
-                        <h2>{{ section.settings.freeSample }}</h2>
-                        <p>{{ section.settings.freeSampleDesc }}</p>
-                      </div>
-                    </li>
-                    <li class="form-line box_inner radio_box" data-type="control_radio" id="id_7">
-                      <label class="form-label-title" id="label_7" aria-hidden="false">{{ section.settings.HelpUsTtile }}</label>
-                      <div id="cid_7" class="form-input-wide" data-layout="full">
-                        <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_7"
-                          data-component="radio">
-                        {% if section.settings.Friends != blank%}
-                          <span class="form-radio-item">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_0" name="q7_typeA7" value="Kennis of vriend" /><label id="label_input_7_0" for="input_7_0">{{section.settings.Friends }}</label>
-                          </span>
-                        {%endif %}
-                        {% if section.settings.SearchEngine != blank%}
-                        <span class="form-radio-item">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_1" name="q7_typeA7" value="Zoekmachine" /><label id="label_input_7_1" for="input_7_1">{{section.settings.SearchEngine }}</label>
-                        </span>
-                        {% endif %}
-                        {% if section.settings.FaceBook != blank%}
-                        <span class="form-radio-item" style="clear: left;">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_2" name="q7_typeA7" value="Facebook" /><label id="label_input_7_2" for="input_7_2">{{section.settings.FaceBook }}</label>
-                        </span>
-                        {% endif %}
-                        {% if section.settings.Insta != blank%}
-                        <span class="form-radio-item">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_3" name="q7_typeA7" value="Instagram" /><label id="label_input_7_3" for="input_7_3">{{section.settings.Insta }}</label>
-                        </span>
-                        {% endif %}
-                        {% if section.settings.Linkdin != blank%}
-                        <span class="form-radio-item" style="clear: left;">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_4" name="q7_typeA7" value="LinkedIn" /><label id="label_input_7_4" for="input_7_4">{{ section.settings.Linkdin }}</label>
-                        </span>
-                      {% endif %}
-
-                        {% if section.settings.Youtube != blank%}
-
-                        <span class="form-radio-item">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_5" name="q7_typeA7" value="Youtube" /><label id="label_input_7_5" for="input_7_5">{{ section.settings.Youtube }}</label>
-                        </span>
-                      {% endif %}
-
-                      {% if section.settings.NewsLetter != blank%}
-
-                        <span class="form-radio-item" style="clear: left;">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_6" name="q7_typeA7" value="Nieuwsbrief" /><label id="label_input_7_6" for="input_7_6">{{section.settings.NewsLetter }}</label>
-                        </span>
-                      {% endif %}
-
-                      {% if section.settings.other != blank%}
-                        <span class="form-radio-item">
-                            <span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_7" name="q7_typeA7" value="Overige" /><label id="label_input_7_7" for="input_7_7">{{section.settings.other }}</label>
-                        </span>
-                      {% endif %}
-                        </div>
-                        
-                      </div>
-                    </li>
-                    <li id="cid_15" class="form-input-wide" data-type="control_pagebreak">
-                      <div class="form-pagebreak" data-component="pagebreak">
-                        <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_15" type="button"
-                            class="form-pagebreak-back  button-hidden jf-form-buttons"
-                            data-component="pagebreak-back">Back</button></div>
-                        <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_15" type="button"
-                            class="form-pagebreak-next  button-hidden jf-form-buttons"
-                            data-component="pagebreak-next">Next</button></div>
-                        <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_15"></div>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="form-section page-section" style="display:none;">
-                    <li class="mt-0">
-                      <div class="title_box">
-                        <h2>{{ section.settings.freeSample }}</h2>
-                        <p>{{ section.settings.freeSampleDesc }}</p>
-                      </div>
-                    </li>
-  
-                    <li class="form-line box_inner" data-type="control_textarea" id="id_9">
-                      <div class="user_info">
-                        {% if section.settings.PersonImage != blank %}
-                          {%- assign image_url_2 = section.settings.PersonImage | image_url: width: section.settings.PersonImage.width | image_tag: loading: 'lazy', class: 'image-2', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
-                            {{ image_url_2 }}
-                        {%else %}
-                          <img src="https://cdn.shopify.com/s/files/1/0716/0542/0325/files/person.png" />
-                        {% endif %}
-                        <p>{{ section.settings.AskPersonText }}</p>
-                      </div>
-                      <label class="form-label form-label-top form-label-auto" id="label_9" for="input_9"
-                        aria-hidden="true"> </label>
-                      <div id="cid_9" class="form-input-wide" data-layout="full"> <textarea id="input_9"
-                          class="form-textarea" name="q9_typeA8" style="width:648px;height:163px"
-                          data-component="textarea" aria-labelledby="label_9"></textarea> </div>
-                    </li>
-                    <li class="form-line" data-type="control_button" id="id_10">
-                      <div id="cid_10" class="form-input-wide" data-layout="full">
-                        <div data-align="center"
-                          class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField"><button
-                            id="input_10" type="submit"
-                            class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
-                            data-component="button" data-content="">{{ section.settings.EndButtonText }}</button></div>
-                      </div>
-                    </li>
-                    <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" />
-                    </li>
-                  </ul>
-                </div>
-                <script>
-                  JotForm.showJotFormPowered = "0";
-                </script>
-                <script>
-                  JotForm.poweredByText = "Powered by Jotform";
-                </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="242833577303054" />
-                <script type="text/javascript">
-                  var all_spc = document.querySelectorAll("form[id='242833577303054'] .si" + "mple" + "_spc");
-                  for (var i = 0; i < all_spc.length; i++) {
-                    all_spc[i].value = "242833577303054-242833577303054";
-                  }
-                </script>
-              </form>
-              <script type="text/javascript">JotForm.ownerView = true;</script>
-              <script type="text/javascript">JotForm.isNewSACL = true;</script>
-              <div class="outer_text">
-                {{ section.settings.formButtonQoute }}
-              </div>
-              <div class="timer_box">
-                {{ section.settings.formButtonQoute }}
-              </div>
+        </div>
+        <div class="form_part">
+          <div class="form_inner">
+            <div class="tab-status">
+              <span class="tab first_tab active">
+                <div class="tab_name">{{ section.settings.tabTitle1 }}</div>
+              </span>
+              <span class="tab sec_tab">
+                <div class="tab_name">{{ section.settings.tabTitle2 }}</div>
+              </span>
             </div>
-            <div class="arrive_text">
-              <span>
-                {{section.settings.QouteText }}
-                <span class="del-on-t"></span>
-                {% assign current_date = "now" | date: "%d" %}
-                {% assign current_month = "now" | date: "%B" %}
-                {% assign current_year = "now" | date: "%Y" %}
-                {% assign current_timestamp = current_year | append: "-" | append: current_month | append: "-" | append: current_date | date: "%s" %}
-                {% assign new_timestamp = current_timestamp | plus: 777600 %}
-                {% assign new_date = new_timestamp | date: "%d" %}
-                {% assign new_month = new_timestamp | date: "%B" %}
-                {% assign formatted_delivery_date = section.settings.delivery_date | replace: "{day}", new_date | replace: "{month}", new_month %}
-                <b>{{ formatted_delivery_date }}</b>. Still
-                <b id="new_timer">00:00:00</b> valid.
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+            <style type="text/css">
+              @media print {
+                * {
+                  -webkit-print-color-adjust: exact !important;
+                  color-adjust: exact !important;
+                }
+
+                .form-section {
+                  display: inline !important
+                }
+
+                .form-pagebreak {
+                  display: none !important
+                }
+
+                .form-section-closed {
+                  height: auto !important
+                }
+
+                .page-section {
+                  position: initial !important
+                }
+              }
+            </style>
+            <link
+              type="text/css"
+              rel="stylesheet"
+              href="https://cdn02.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.57597"
+            >
+            <link
+              type="text/css"
+              rel="stylesheet"
+              href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.57597"
+            >
+            <link
+              type="text/css"
+              rel="stylesheet"
+              href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.57597"
+            >
+
+            <style type="text/css" id="form-designer-style"></style>
+
+            <form class="jotform-form">
+              <input type="hidden" name="bgurl" id="bgurl">
+              <input type="hidden" name="logourl" id="logourl">
+              <input type="hidden" name="submissionid" id="submissionid">
+              <input type="hidden" name="source" id="source">
+              <input type="hidden" name="field" id="field">
+              <input type="hidden" name="gclid" id="gclid">
+              <input type="hidden" name="fbclid" id="fbclid">
+
+              <div role="main" class="form-all">
+                <ul class="form-section page-section step-1" date-step="1">
+                  <li class="form-line" data-type="control_fileupload" id="id_3">
+                    <div class="title-form-step">
+                      {{ section.settings.tabContent1 }}
+                      <ul>
+                        {% if section.settings.MainList != blank %}
+                          {{ section.settings.MainList }}
+                        {% endif %}
+                      </ul>
+                    </div>
+                    <div id="cid_3" class="form-input-wide drag-drop-area">
+                      <div class="jfUpload-wrapper">
+                        <div class="jfUpload-button-container">
+                          <input type="file" name="logo" id="fileInput" accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp">
+                          <div class="jfUpload-button">
+                            {{ section.settings.uploadContent }}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div  class="file-types">{{ section.settings.validfiles }}: JPG, JPEG, PNG, EPS, PDF, AI, SVG, HEIC, WEBP, PSD</div>
+                    <div class="file-required">{{ section.settings.required }}*</div>
+                  </li>
+
+                  <li id="file-preview"></li>
+                  <li id="cid_11" class="form-input-wide" data-type="control_pagebreak">
+                    <div class="form-pagebreak" data-component="pagebreak">
+                      <div class="form-pagebreak-next-container">
+                        <button
+                          id="form-pagebreak-next_11"
+                          type="button"
+                          aria-required="true"
+                          class="form-pagebreak-next  jf-form-buttons"
+                          data-component="pagebreak-next"
+                        >
+                          {{ section.settings.Button1 }}
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <div class="client-review">
+                    <div class="star-svg">
+                      <svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.04195 17.34L5.18195 10.98L0.0219532 7.52H6.34195L8.60195 0.699999L10.902 7.52H17.182L12.022 10.98L14.202 17.34L8.60195 13.28L3.04195 17.34ZM22.2412 17.34L24.3812 10.98L19.2212 7.52H25.5412L27.8012 0.699999L30.1012 7.52H36.3812L31.2212 10.98L33.4012 17.34L27.8012 13.28L22.2412 17.34ZM41.4404 17.34L43.5804 10.98L38.4204 7.52H44.7404L47.0004 0.699999L49.3004 7.52H55.5804L50.4204 10.98L52.6004 17.34L47.0004 13.28L41.4404 17.34ZM60.6396 17.34L62.7796 10.98L57.6196 7.52H63.9396L66.1996 0.699999L68.4996 7.52H74.7796L69.6196 10.98L71.7996 17.34L66.1996 13.28L60.6396 17.34ZM79.8388 17.34L81.9788 10.98L76.8188 7.52H83.1388L85.3988 0.699999L87.6988 7.52H93.9788L88.8188 10.98L90.9988 17.34L85.3988 13.28L79.8388 17.34Z" fill="#FFBB0E"></path>
+                      </svg>
+                    </div>
+                    <div class="star-rating">
+                      {{ section.settings.customer_review }}
+                    </div>
+                  </div>
+                </ul>
+                <ul class="form-section page-section step-2" date-step="2" style="display:none;">
+                  {{ section.settings.FormHeading }}
+                  <li class="form-line" data-type="control_textbox" id="id_4">
+                    <label
+                      class="form-label form-label-top form-label-auto"
+                      id="label_4"
+                      for="input_4"
+                      aria-hidden="false"
+                    >
+                      {{ section.settings.inputlable1 }}
+                      <sub>*</sub>
+                      <span class="required-field">{{ section.settings.required }}*</span>
+                    </label>
+                    <div id="cid_4" class="form-input-wide">
+                      <input
+                        type="text"
+                        id="input_4"
+                        name="q4_typeA"
+                        class="form-textbox"
+                        size="310"
+                        placeholder="{{ section.settings.inputplaceholder1 }}"
+                      >
+                    </div>
+                  </li>
+                  <li class="form-line" data-type="control_email" id="id_5">
+                    <label
+                      class="form-label form-label-top form-label-auto"
+                      id="label_5"
+                      for="input_5"
+                      aria-hidden="false"
+                    >
+                      {{ section.settings.inputlable2 }}
+                      <sub>*</sub>
+                      <span class="required-field">{{ section.settings.required }}*</span>
+                      <span class="email-error">{{ section.settings.emailformat }}*</span>
+                    </label>
+                    <div id="cid_5" class="form-input-wide">
+                      <span
+                        class="form-sub-label-container"
+                        style="vertical-align:top"
+                        ><input
+                          type="email"
+                          id="input_5"
+                          name="q5_email"
+                          class="form-textbox validate[Email]"
+                          autoComplete="section-input_5 email"
+                          size="310"
+                          placeholder="{{ section.settings.inputplaceholder2 }}"
+                      ></span>
+                    </div>
+                  </li>
+                  <li class="form-line" data-type="control_phone" id="id_6" data-compound-hint="telefoon">
+                    <label
+                      class="form-label form-label-top form-label-auto"
+                      id="label_6"
+                      for="input_6_full"
+                    >
+                      {{ section.settings.inputlable3 }}
+                      <sub>*</sub>
+                      <span class="required-field">{{ section.settings.required }}*</span>
+                      <span class="phone-error">{{ section.settings.phoneformat }}*</span>
+                    </label>
+                    <div id="cid_6" class="form-input-wide">
+                      <div
+                        class="form-sub-label-container"
+                        style="vertical-align:top"
+                      >
+                        <input
+                          type="tel"
+                          id="input_6_full"
+                          name="q6_phoneNumber[full]"
+                          class="mask-phone-number form-textbox validate[Fill Mask]"
+                          placeholder="{{  section.settings.inputplaceholder3 }}"
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li id="cid_12" class="form-input-wide" data-type="control_pagebreak">
+                    <div class="form-pagebreak" data-component="pagebreak">
+                      <div class="form-pagebreak-next-container">
+                        <button
+                          id="form-pagebreak-next_12"
+                          type="button"
+                          class="form-pagebreak-next  jf-form-buttons q23232"
+                          data-component="pagebreak-next"
+                        >
+                          {{ section.settings.ButtonTextForm }}
+                        </button>
+                      </div>
+                    </div>
+                    <div class="term-condition">
+                      <input type="checkbox" name="terms" id="terms" checked>
+                      <p>{{ section.settings.terms }}</p>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="form-section page-section step-3" date-step="3" style="display:none;">
+                  <li class="mt-0">
+                    <div class="title_box">
+                      <h2>{{ section.settings.freeSample }}</h2>
+                      <p>{{ section.settings.freeSampleDesc }}</p>
+                    </div>
+                  </li>
+
+                  {% for block in section.blocks %}
+                    {% if block.type == 'tab' %}
+                      <li
+                        class="form-line box_inner radio_box"
+                        id="id_7{{ forloop.index }}"
+                        step-data-index="{{ forloop.index }}"
+                        {% if forloop.index == 2 %}
+                          style="display:none;"
+                        {% endif %}
+                      >
+                        <label class="form-label-title" id="label_7{{ forloop.index }}">
+                          {{- block.settings.tab_title -}}
+                        </label>
+                        <div id="cid_7{{ forloop.index }}" class="form-input-wide">
+                          <div class="form-multiple-column" role="group" aria-labelledby="label_7{{ forloop.index }}">
+                            {% assign tabbuttons = block.settings.tab_buttons | split: ',' %}
+                            {% for tabbutton in tabbuttons %}
+                              <span class="form-radio-item">
+                                <label class="form-radio-item-label">{{ tabbutton }}</label>
+                              </span>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+                <ul class="form-section page-section step-4" date-step="4" style="display:none;">
+                  <li class="form-line" id="id_13">
+                    <div class="title_box">
+                      <h2>{{ section.settings.freeSample }}</h2>
+                      <p>{{ section.settings.freeSampleDesc }}</p>
+                    </div>
+                    <div id="cid_13" class="form-input-wide box_inner" data-layout="full">
+                      {{ section.settings.freeSampleFormDescription }}
+                      <div class="jfUpload-wrapper">
+                        <div class="jfUpload-button-container">
+                          <input type="file" name="bglogo" id="bgfileInput" accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp">
+                          <div class="jfUpload-button">
+                            {{ section.settings.uploadContent }}
+                          </div>
+                        </div>
+                      </div>
+                       <div  class="file-types">{{ section.settings.validfiles }}: JPG, JPEG, PNG, EPS, PDF, AI, SVG, HEIC, WEBP, PSD</div>
+                      <div class="bg-file-required">{{ section.settings.required }}*</div>
+                      <div id="bg-file-preview"></div>
+
+                      <div class="form-pagebreak" data-component="pagebreak">
+                        <div class="form-pagebreak-next-container">
+                          <button
+                            id="form-pagebreak-next_14"
+                            type="button"
+                            class="form-pagebreak-next  jf-form-buttons"
+                            data-component="pagebreak-next"
+                          >
+                            {{ section.settings.uploadPhotobuttonfree }}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li id="cid_14" class="form-input-wide bg-1" data-type="control_pagebreak">
+                    <div class="form-pagebreak" data-component="pagebreak">
+                      <div class="skip-text">{{ section.settings.skip }}</div>
+                    </div>
+                  </li>
+                </ul>
+
+                <ul class="form-section page-section step-5" date-step="5" style="display:none;">
+                  <li class="mt-0">
+                    <div class="title_box">
+                      <h2>{{ section.settings.freeSample }}</h2>
+                      <p>{{ section.settings.freeSampleDesc }}</p>
+                    </div>
+                  </li>
+
+                  <li class="form-line" data-type="control_textarea" id="id_9">
+                    <div class="main-section-threee-image youtube-video-and-images lead-page">
+                      <div class="wrap-sec-images">
+                        <div class="col-md-12">
+                          <div class="image-wrapper">
+                            {% for block in section.blocks %}
+                              {% if block.type == 'Image' %}
+                                <div class="img-box">
+                                  <img
+                                    class="img-fluid"
+                                    src="{{ block.settings.img-card | img_url:'master' }}"
+                                    alt="Image"
+                                  >
+                                </div>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="timer_box">
+              {{ section.settings.formButtonQoute }}
+            </div>
+          </div>
+          <div class="arrive_text">
+            <span>
+              {{ section.settings.QouteText }}
+              <span class="del-on-t"></span>
+              {% assign current_date = 'now' | date: '%d' %}
+              {% assign current_month = 'now' | date: '%B' %}
+              {% assign current_year = 'now' | date: '%Y' %}
+              {% assign current_timestamp = current_year
+                | append: '-'
+                | append: current_month
+                | append: '-'
+                | append: current_date
+                | date: '%s'
+              %}
+              {% assign new_timestamp = current_timestamp | plus: 777600 %}
+              {% assign new_date = new_timestamp | date: '%d' %}
+              {% assign new_month = new_timestamp | date: '%B' %}
+              {% assign formatted_delivery_date = section.settings.delivery_date
+                | replace: '{day}', new_date
+                | replace: '{month}', new_month
+              %}
+              <b>{{ formatted_delivery_date }}</b>.
+              <div>{{ section.settings.timer_text }}</div>
             </span>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  {% if template == "product.lead_page_logo_upload" %} 
-      <style>
-        section.section.image-with-text-sale-page.image_text_sec{background: white;}
-        .img-card-custom-form.section{background: white;}
-        .custom_steps_form{background: white; padding: 15px 0 60px;}
-        .logo-list-section{background: white;}
-        .step_form_inner .form-input-wide h4{
-          font-size: 18px;
-          font-weight: 700;
-          max-width: 220px;
-          line-height: 23px;
-          margin-bottom: 16px;
+{% if template == 'product.lead_page_logo_upload' %}
+  <style>
+    section.section.image-with-text-sale-page.image_text_sec{background: white;}
+    .img-card-custom-form.section{background: white;}
+    .custom_steps_form{background: white; padding: 15px 0 60px;}
+    .logo-list-section{background: white;}
+    .step_form_inner .form-input-wide h4{
+      font-size: 18px;
+      font-weight: 700;
+      max-width: 100%;
+      line-height: 23px;
+      margin-bottom: 16px;
+    }
+  </style>
+{% endif %}
+<script>
+    $(document).ready(function () {
+    const dropArea = $('#cid_3');
+    const fileInput = $('[name="logo"]');
+
+    // Highlight area when file is dragged over
+    dropArea.on('dragover', function (event) {
+        event.preventDefault(); // Prevent default behavior
+        event.stopPropagation();
+        $(this).addClass('drag-over'); // Add CSS class for styling
+    });
+
+    // Remove highlight when dragging out
+    dropArea.on('dragleave', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        $(this).removeClass('drag-over');
+    });
+
+    // Handle file drop
+    dropArea.on('drop', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        $(this).removeClass('drag-over');
+
+        let files = event.originalEvent.dataTransfer.files;
+        if (files.length > 0) {
+            fileInput[0].files = files; // Assign files to input
+            console.log('Files dropped:', files);
+            handleFilePreview(files[0]);
         }
-      </style>
-  {% endif %}
-  <script>
-      setTimeout(function(){
+    });
+
+    // Click event to open file input
+    dropArea.on('click', function (event) {
+      event.stopImmediatePropagation(); // Prevents duplicate event firing
+    
+    if (!fileInput.data('clicked')) {
+      fileInput.data('clicked', true); // Mark as clicked
+      fileInput.trigger('click');
+        
+        setTimeout(() => {
+          fileInput.removeData('clicked'); // Reset flag after some time
+        }, 500);
+    }
+    });
+
+    // Handle file selection from input
+    fileInput.change(function () {
+        console.log('File selected:', this.files[0]);
+        handleFilePreview(this.files[0]);
+    });
+});
+
+function handleFilePreview(file) {
+    const previewContainer = $('#file-preview');
+    const reader = new FileReader();
+    
+    reader.onload = function (e) {
+        const fileSize = (file.size / 1024).toFixed(2) + " KB"; // Convert to KB
+        let html = '';
+
+        if (file.type.startsWith('image/')) {
+            // If it's an image, display it
+            html = `
+                <div class="file-preview-item bg-file-preview-item">
+                    <div class="image-with-title">
+                        <img src="${e.target.result}" alt="${file.name}" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                        <p>${file.name} (${fileSize})</p>
+                    </div>
+                    <p class="delete-element"></p>
+                </div>
+            `;
+        } else if (file.type === "application/pdf") {
+            // If it's a PDF, use an icon or embed viewer
+            html = `
+                <div class="file-preview-item bg-file-preview-item">
+                    <div class="image-with-title">
+                        <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/81975517a51651e8f8940759360d01da.jpg?v=1743361832" alt="PDF" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                        <p>${file.name} (${fileSize})</p>
+                    </div>
+                    <p class="delete-element"></p>
+                </div>
+            `;
+        } else {
+            html = `<p>Unsupported file type</p>`;
+        }
+
+        previewContainer.html(html);
+    };
+
+    if (file.type.startsWith('image/') || file.type === "application/pdf") {
+        reader.readAsDataURL(file);
+    }
+}
+</script>
+
+<script>
+  $(document).ready(function () {
+  const dropArea = $('#cid_13 .jfUpload-wrapper');
+  const bgfileInput = $('[name="bglogo"]');
+
+  // Highlight area when file is dragged over
+  dropArea.on('dragover', function (event) {
+      event.preventDefault(); // Prevent default behavior
+      event.stopPropagation();
+      $(this).addClass('drag-over'); // Add CSS class for styling
+  });
+
+  // Remove highlight when dragging out
+  dropArea.on('dragleave', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      $(this).removeClass('drag-over');
+  });
+
+  // Handle file drop
+  dropArea.on('drop', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      $(this).removeClass('drag-over');
+
+      let files = event.originalEvent.dataTransfer.files;
+      if (files.length > 0) {
+        bgfileInput[0].files = files; // Assign files to input
+          console.log('Files dropped:', files);
+          handleFilePreview(files[0]);
+      }
+  });
+
+  // Click event to open file input
+  dropArea.on('click', function (event) {
+    event.stopImmediatePropagation(); // Prevents duplicate event firing
+  
+  if (!bgfileInput.data('clicked')) {
+    bgfileInput.data('clicked', true); // Mark as clicked
+    bgfileInput.trigger('click');
+      
+      setTimeout(() => {
+        bgfileInput.removeData('clicked'); // Reset flag after some time
+      }, 500);
+  }
+  });
+
+  // Handle file selection from input
+  bgfileInput.change(function () {
+      console.log('File selected:', this.files[0]);
+      bgHandleFilePreview(this.files[0]);
+  });
+
+  ///////////// getting gclid
+
+  function getParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+  }
+
+    const gclid = getParam('gclid');
+    if (gclid) {
+        $('#gclid').val(gclid);
+    }
+
+    const fbclid = getParam('fbclid');
+    if (fbclid) {
+        $('#fbclid').val(fbclid);
+    }
+    
+    
+});
+
+function bgHandleFilePreview(file) {
+    const previewContainer = $('#bg-file-preview');
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const fileSize = (file.size / 1024).toFixed(2) + " KB"; // Convert to KB
+        let html = '';
+
+        if (file.type.startsWith('image/')) {
+            // If it's an image, display it
+            html = `
+                <div class="file-preview-item bg-file-preview-item">
+                    <div class="image-with-title">
+                        <img src="${e.target.result}" alt="${file.name}" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                        <p>${file.name} (${fileSize})</p>
+                    </div>
+                    <p class="bg-delete-element"></p>
+                </div>
+            `;
+        } else if (file.type === "application/pdf") {
+            // If it's a PDF, use an icon or embed viewer
+            html = `
+                <div class="file-preview-item bg-file-preview-item">
+                    <div class="image-with-title">
+                        <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/81975517a51651e8f8940759360d01da.jpg?v=1743361832" alt="PDF" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                        <p>${file.name} (${fileSize})</p>
+                    </div>
+                    <p class="bg-delete-element"></p>
+                </div>
+            `;
+        } else {
+            html = `<p>Unsupported file type</p>`;
+        }
+
+        previewContainer.html(html);
+    };
+
+    if (file.type.startsWith('image/') || file.type === "application/pdf") {
+        reader.readAsDataURL(file);
+    }
+}
+</script>
+
+<script>
+
+    setTimeout(function(){
       const video2 = document.querySelector('.img-fluid');
-       video2.play().catch(error => {
+      if (video2) {
+       video2.play().catch(error => { 
         console.error('Autoplay failed:', error);
     });
-    },2000)
+    }
+    },2000);
+    $('[name="logo"]').on('click', function(event) {
+    console.log('Logo input clicked');
+  });
   
-    document.querySelector('.first_tab').addEventListener('click', function () {
-      document.getElementById('form-pagebreak-back_12').click();
+  $('body').on('click', '.bg-delete-element', function() {
+    $('#bgfileInput').val('');
+    $('.bg-file-preview-item').remove();
+  });
+  $('body').on('click', '.delete-element', function() {
+    $('#fileInput').val('');
+    $('.file-preview-item').remove();
+  });
+    $('#cid_3 .jfUpload-button-container').click(function(event) {
+        event.stopImmediatePropagation(); // Prevents duplicate event firing
+        const logoInput = $('[name="logo"]');
+        
+        if (!logoInput.data('clicked')) {
+            logoInput.data('clicked', true); // Mark as clicked
+            logoInput.trigger('click');
+            
+            setTimeout(() => {
+                logoInput.removeData('clicked'); // Reset flag after some time
+            }, 500);
+        }
     });
-    document.getElementById("form-pagebreak-next_12").addEventListener("click", function () {
-      document.querySelector(".step_form_row").classList.add('swap_sec');
-      document.querySelector(".request_qu").classList.add('swap_sec2');
-      document.querySelector(".custom_steps_form").classList.add('swap_sec_padding');
-      document.querySelector("body").classList.add('swap_sec_body');
-      document.querySelector(".form_page_DE").classList.add('hide_topbar');
+
+    $('#cid_13 .jfUpload-button-container').click(function(event) {
+        event.stopImmediatePropagation(); // Prevents duplicate event firing
+        const logoInput = $('[name="bglogo"]');
+        
+        if (!logoInput.data('clicked')) {
+            logoInput.data('clicked', true); // Mark as clicked
+            logoInput.trigger('click');
+            
+            setTimeout(() => {
+                logoInput.removeData('clicked'); // Reset flag after some time
+            }, 500);
+        }
+    });
+
+    document.querySelector('.first_tab').addEventListener('click', function () {
+      $('.step-1').show();
+      $('.step-2').hide();
+    });
+
+    // moving to step 4 from 3
+
+    $('.form-radio-item-label').click(function(){
+      var _step = $(this).parents('li.radio_box').attr('step-data-index');
+      console.log('3rd step');
+      if(_step == 1){
+      $('#field').val($(this).text());
+      $(this).parents('li.radio_box').hide();
+      $('li.radio_box[step-data-index="2"]').show();
+      } else {
+      $('#source').val($(this).text());
+      $('.step-3').hide();
+      $('.step-4').show();
+      }
+      addRecord();
+    });
+
+    // moving to step 5 from 4, the last step
+    $('.skip-text').click(function(){
+      $('.step-4').hide();
+      $('.step-5').show();
       startCountdown();
+      webhookCall('{{ section.settings.webhook2 }}'); ///webhook 2
+      
     });
     document.getElementById("form-pagebreak-next_14").addEventListener("click", function () {
-      document.querySelector(".step_form_row").classList.add('right_image_bg');
+      const fileInput = document.getElementById('bgfileInput');
+      if(fileInput.files[0]){
+        $('.bg-file-required').removeClass('show');
+      console.log('abc');
+      document.querySelector(".step_form_row").classList.add('right_image_bg', 'last-step');
+      $('.step-4').hide();
+      $('.step-5').show();
+        const file = fileInput.files[0];
+        upload_image(file, 'bgurl');
+        startCountdown();
+      } else {
+        $('.bg-file-required').addClass('show');
+        $('#cid_13 .jfUpload-wrapper').css('border-color', 'red');
+        $('#cid_13 .jfUpload-button .jfUpload-heading').addClass('color');
+      }
     });
-    document.getElementById("cid_7").addEventListener("click", function () {
-      document.querySelector(".step_form_row").classList.add('last-step');
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var input = document.querySelector("#input_6_full");
+    var iti = window.intlTelInput(input, {
+            initialCountry: "{{ section.settings.defaultcountry }}",
+            separateDialCode: true,
+            preferredCountries: ["us", "gb", "ca", "nz"],
+            geoIpLookup: function (callback) {
+                fetch("https://ipapi.co/json")
+                    .then(response => response.json())
+                    .then(data => callback(data.country_code.toLowerCase()))
+                    .catch(() => callback("{{ section.settings.defaultcountry }}")); // Default to US if lookup fails
+            },
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
+        });
+        window.iti = iti;
+    // moving to step 3 from 2
+    document.getElementById('form-pagebreak-next_12').addEventListener('click', function () {
+    let allFilled = true;
+    let emailValid = true;
+    let phoneValid = true;
+
+    var countryData = iti.getSelectedCountryData();
+    $('.step-2 input[type="text"], .step-2 input[type="email"], .step-2 input[type="tel"]').each(function() {
+        if ($(this).val().trim() == "") {
+            console.log('empty');
+            $(this).addClass('borderissue');
+            $(this).parents('li').find('.email-error').removeClass('show');
+            $(this).parents('li').find('.required-field').addClass('show');
+            allFilled = false;
+        } else {
+            $(this).removeClass('borderissue');
+            $(this).parents('li').find('.required-field').removeClass('show');
+        }
+
+        if ($(this).attr('type') === 'tel' && $(this).val().trim() !== "") {
+
+        if(iti.isValidNumber() == false){
+             $(this).parents('li').find('.phone-error').addClass('show');
+             phoneValid = false;
+          } else{
+            $(this).parents('li').find('.phone-error').removeClass('show');
+          }
+        }
+        // Email validation
+        if ($(this).attr('type') === 'email' && $(this).val().trim() !== "") {
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test($(this).val().trim())) {
+                $(this).addClass('borderissue');
+                $(this).parents('li').find('.email-error').addClass('show');
+                emailValid = false;
+            } else {
+                $(this).removeClass('borderissue');
+                $(this).parents('li').find('.email-error').removeClass('show');
+            }
+        }
     });
+
+    if (allFilled && emailValid && phoneValid) {
+      var _terms = $('[name="terms"]').prop('checked');
+      if(_terms == true){
+          window.dataLayer.push({
+            'event': 'jot_form_submit',
+            'formId': "{{ section.settings.formid }}",
+          });
+        
+        document.querySelector(".step_form_row").classList.add('swap_sec');
+        // document.querySelector(".request_qu").classList.add('swap_sec2');
+        document.querySelector(".custom_steps_form").classList.add('swap_sec_padding');
+        document.querySelector("body").classList.add('swap_sec_body');
+        $('.step-2').hide();
+        $('.step-3').show();
+        addRecord('{{ section.settings.webhook1 }}'); ///webhook 1
+        } else {
+          alert('{{ section.settings.terms_error }}');
+        }
+    }
+});
+});
+
+
+    // moving to step 2 from 1
   
-    document.getElementById("form-pagebreak-next_11").addEventListener("click", function () {
+    document.getElementById("form-pagebreak-next_11").addEventListener("click", async function () {
+      const fileInput = document.getElementById('fileInput');
+      if(fileInput.files[0]){
+      $('.file-required').removeClass('show'); 
       document.querySelector(".tab").classList.remove('active');
       document.querySelector(".sec_tab").classList.add('active');
+      $('.step-1').hide();
+      $('.step-2').show();
+      const file = fileInput.files[0];
+      await submissionStart(file);
+      } else {
+        console.log('logo required');
+        $('#cid_3 .jfUpload-wrapper').css('border-color', 'red');
+        $('#cid_3 .jfUpload-button .jfUpload-heading').addClass('color');
+        $('.file-required').addClass('show');
+      }
     });
+
+    async function submissionStart(file){
+      if($('#submissionid').val() == ''){
+        const formID = "{{ section.settings.formid }}";
+        const apiKey = 'd37f98d2a7a2cc702737ef0d068321df';
+        const submissionData = {
+            "submission": {
+                "name": "John Doe",
+                "email": "example@example.com"
+            }
+        };
+
+        fetch(`https://api.jotform.com/form/${formID}/submissions?apiKey=${apiKey}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(submissionData)
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          if (data.content && data.content.submissionID) {
+              const submissionID = data.content.submissionID;
+              document.getElementById("submissionid").value = submissionID;
+              upload_image(file, 'logourl');
+          }
+        })
+        .catch(error => console.error("Error:", error));
+      } else {
+        upload_image(file, 'logourl');
+      }
+    }
+
+  function webhookCall(url){
+      const formData = new FormData();
+      var _submissionID = $('#submissionid').val();
+      var _email = $('#input_5').val();
+      var _name = $('#input_4').val();
+      var _logo = $('#logourl').val();
+      var _phone = "+"+iti.getSelectedCountryData().dialCode+$('#input_6_full').val();
+      var _bgurl = $('#bgurl').val();
+      var _source = $('#source').val();
+      var _field = $('#field').val();
+    
+    
+      var _url = url+'?SubmissionID='+_submissionID+'&Email='+_email+'&Name='+_name+'&PhoneNumber='+_phone+'&Logo='+_logo+'&Source='+_source+'&Place='+_field+'&Background='+_bgurl;
+        $.ajax({
+            url: _url,
+            type: "POST",
+            data: formData,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function(response) {
+              console.log(response);
+            },
+            error: function(err) {
+                console.error(err);
+            }
+        });
+  }
+    async function addRecord(optionalUrl){
+      const formData = new FormData();
+      var _phone = "+"+iti.getSelectedCountryData().dialCode+$('#input_6_full').val();
+      var SUBMISSION_ID = $('#submissionid').val();
+      formData.append("submission[3][first]", $('#input_4').val());  
+      formData.append("submission[3][last]", "");
+      formData.append("submission[4]", $('#input_5').val()); // Email
+      formData.append("submission[5]", _phone); // Phone
+      formData.append("submission[6]", $('#logourl').val()); // file
+      formData.append("submission[7]", $('#bgurl').val()); // file
+      formData.append("submission[8]", $('#source').val()); // source
+      formData.append("submission[9]", $('#field').val()); // field
+      formData.append("submission[10]", $('#gclid').val()); // gclid
+      formData.append("submission[11]", $('#fbclid').val()); // fbclid
+      
+
+      try {
+          const response = await fetch(
+            `https://api.jotform.com/submission/${SUBMISSION_ID}?apiKey=d37f98d2a7a2cc702737ef0d068321df`,
+              {
+                  method: "POST",
+                  body: formData
+              }
+          );
+
+          const result = await response.json();
+          console.log("Submission Response:", result);
+          if (typeof optionalUrl !== "undefined") {
+            webhookCall(optionalUrl)
+          }
+      } catch (error) {
+          console.error("Error submitting form data:", error);
+      }
+    }
+    async function upload_image(file, id){
+      const formData = new FormData();
+      formData.append("upload_preset", "neon_unsigned_preset")
+      formData.append('file', file);
+
+        $.ajax({
+            url: "https://api.cloudinary.com/v1_1/dz5h9zbom/image/upload",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function(response) {
+              console.log(response); // The uploaded image details
+              console.log('Uploaded URL:', response.secure_url); // Direct image URL
+              $('#'+id).val(response.secure_url);
+                if (id == "bgurl") {
+                    addRecord('{{ section.settings.webhook2 }}'); ///webhook 2
+                } else {
+                    addRecord();
+                  }
+            },
+            error: function(err) {
+                $("#status").text("Upload failed.");
+                console.error(err);
+            }
+        });
+    }
   
-    document.getElementById('form-pagebreak-next_14').addEventListener('click', function () {
-      var imgSrc = document.querySelector('.qq-upload-img-container img').getAttribute('src');
-  
-      var timerBox = document.querySelector('.timer_box');
-      timerBox.style.backgroundImage = `url('${imgSrc}')`;
-    });
     document.querySelector('.timer_box a').addEventListener('click', function (event) {
       event.preventDefault();
   
@@ -636,98 +950,7 @@
       timerBox.style.backgroundImage = 'none';
     });
 
-    const nextButton = document.querySelector('#next');
-    const submitButton = document.querySelector('#submit');
-    const tabTargets = document.querySelectorAll('.tab');
-    const tabPanels = document.querySelectorAll('.tabpanel');
-    const isEmpty = (str) => !str.trim().length;
-    let currentStep = 0;
-  
-    const fileUpload = document.querySelector("#file-upload");
-    const fileNameDisplay = document.querySelector(".up_fi_name");
-
-    // Check if the elements exist before proceeding
-    if (fileUpload && fileNameDisplay) {
-      fileUpload.onchange = function () {
-        fileNameDisplay.textContent = this.files[0].name;
-      };
-      validateEntry(); // Ensure validateEntry() is defined
-    }
-  
-    nextButton.addEventListener('click', (event) => {
-      event.preventDefault();
-  
-  
-      tabPanels[currentStep].classList.add('hidden');
-      tabTargets[currentStep].classList.remove('active');
-  
-      tabPanels[currentStep + 1].classList.remove('hidden');
-      tabTargets[currentStep + 1].classList.add('active');
-      currentStep += 1
-  
-      validateEntry();
-      updateStatusDisplay();
-    })
-    function updateStatusDisplay() {
-      if (currentStep === tabTargets.length - 1) {
-        nextButton.classList.add('hidden');
-        submitButton.classList.remove('hidden');
-        validateEntry();
-  
-      } else if (currentStep == 0) {
-        nextButton.classList.remove('hidden');
-        previousButton.classList.add('hidden');
-        submitButton.classList.add('hidden');
-      } else {
-        nextButton.classList.remove('hidden');
-        submitButton.classList.add('hidden');
-      }
-    }
-  
-    function validateEntry() {
-      let input = tabPanels[currentStep].querySelector('.form-input');
-  
-      nextButton.setAttribute('disabled', true);
-      submitButton.setAttribute('disabled', true);
-  
-      setButtonPermissions(input);
-  
-      input.addEventListener('input', () => setButtonPermissions(input));
-      input.addEventListener('blur', () => setButtonPermissions(input));
-    }
-  
-    function setButtonPermissions(input) {
-      if (isEmpty(input.value)) {
-        nextButton.setAttribute('disabled', true);
-        submitButton.setAttribute('disabled', true);
-      } else {
-        nextButton.removeAttribute('disabled');
-        submitButton.removeAttribute('disabled');
-      }
-    }
-    const wallFile = document.getElementById("wall_image");
-    const fileBtn = document.querySelector(".file_btn");
-    fileBtn.addEventListener("click", function () {
-      if (wallFile.files.length == 0) {
-        console.log("error");
-      } else {
-        document.querySelector(".step_one").classList.add('hide');
-        document.querySelector(".step_two").classList.add('show');
-      }
-    });
-    function checkRadioButton() {
-      const radioButtons = document.querySelectorAll('.radio_box input[type="radio"]');
-      for (const radioButton of radioButtons) {
-        radioButton.addEventListener('change', () => {
-          if (radioButton.checked) {
-            document.querySelector(".step_two").classList.remove('show')
-            document.querySelector(".step_two").classList.add('hide');
-            document.querySelector(".step_three").classList.add('show');
-          }
-        });
-      }
-    }
-    checkRadioButton();
+    // 3rd screen timer
     function startCountdown() {
       console.log('timer');
       const timerElement = document.getElementById("timer");
@@ -754,9 +977,9 @@
         }
       }, 1000);
     }
-
-  </script>
-  <script>
+</script>
+<script>
+    // first screen timer
   function newCountdown() {
   const timerElementnew = document.getElementById("new_timer");
 
@@ -792,283 +1015,314 @@
 
 // Start the countdown
 newCountdown();
+</script>
 
-  </script>
-
-  {% schema %}
+{% schema %}
+{
+"name": "Custom Steps Form",
+"settings": [
   {
-  "name": "Custom Steps Form",
-  "settings": [
-    {
+  "type": "text",
+  "id": "formid",
+  "label": "Form ID",
+  "default":"250745462288060"
+  },
+  {
+  "type": "text",
+  "id": "webhook1",
+  "label": "Webhook 1",
+  "default":"https://hook.eu1.make.com/902w45w0qi3cgwmwnbs449wpe6r64fmh"
+  },
+  {
+  "type": "text",
+  "id": "webhook2",
+  "label": "Webhook 2",
+  "default":"https://hook.eu1.make.com/7wngere2qtprr7t16kwi68clbr56o8ly"
+  },
+  {
+  "type": "text",
+  "id": "sectionTitle",
+  "label": "Section Title",
+  "default":"Offerte aanvragen"
+  },
+  {
+  "type": "text",
+  "id": "validfiles",
+  "label": "File Type Text",
+  "default":"Valid File Types"
+  },
+  {
+  "type": "text",
+  "id": "required",
+  "label": "Required Text",
+  "default":"This field is required"
+  },
+  {
+  "type": "text",
+  "id": "emailformat",
+  "label": "Email Format Error",
+  "default":"Please enter correct email"
+  },
+  {
+  "type": "text",
+  "id": "phoneformat",
+  "label": "Phone Format Error",
+  "default":"Phone no isn't correct"
+  },
+  {
+  "type": "text",
+  "id": "terms",
+  "label": "Terms & Conditions",
+  "default":"By submitting, you agree to Neonsfeer’s terms and conditions."
+  },
+  {
+  "type": "text",
+  "id": "terms_error",
+  "label": "Terms & Conditions Error",
+  "default":"Please Agree to Term & Conditions"
+  },
+  {
+  "type": "text",
+  "id": "defaultcountry",
+  "label": "Default Country",
+  "default":"us"
+  },
+  {
+  "type": "text",
+  "id": "skip",
+  "label": "Skip Text",
+  "default":"Continue without own background"
+  },
+  {
+  "type": "html",
+  "id": "MainList",
+  "label": "Breadcrumbs Html",
+  "default":"<li>Ontvang <strong>gratis ontwerp</strong></li><li>Binnen <strong>3 uur</strong> in je mailbox</li><li>Binnen <strong>6 werkdagen geleverd</strong></li>"
+  },
+  {
+  "type":"url",
+  "id":"Video_url",
+  "label":"Video link"
+  },
+  {
+  "type": "header",
+  "content": "Tab 1 content"
+  },
+  {
     "type": "text",
-    "id": "sectionTitle",
-    "label": "Section Title",
-    "default":"Offerte aanvragen"
-    },
-    {
+    "id": "tabTitle1",
+    "label": "Tab Title 1",
+    "default":"1. Upload je logo"
+  },
+
+  {
     "type": "html",
-    "id": "MainList",
-    "label": "Li Hmtl",
-    "default":"<li>Ontvang <strong>gratis ontwerp</strong></li><li>Binnen <strong>3 uur</strong> in je mailbox</li><li>Binnen <strong>6 werkdagen geleverd</strong></li>"
-    },
-    {
-    "type":"url",
-    "id":"Video_url",
-    "label":"Video link"
-    },
-    {
-    "type": "header",
-    "content": "Tab 1 content"
-    },
-    {
-      "type": "text",
-      "id": "tabTitle1",
-      "label": "Tab Title 1",
-      "default":"1. Upload je logo"
-    },
-    
-    {
-      "type": "html",
-      "id": "tabContent1",
-      "label": "Tab content",
-      "default":"<h2>Ontvang een offerte <br>en een gratis voorbeeld ontwerp</h2>"
+    "id": "tabContent1",
+    "label": "Tab content",
+    "default":"<h2>Ontvang een offerte <br>en een gratis voorbeeld ontwerp</h2>"
 
-    },
-    {
-      "type": "html",
-      "id": "uploadContent",
-      "label": "Upload content",
-      "default":"<p>Upload your logo and receive the <span>lowest price option</span> in your mail</p><div class='jfUpload-heading forDesktop'>Drag and drop files here 1</div><div class='jfUpload-heading forMobile'>Choose a file</div>"
-    },
-    {
-      "type": "text",
-      "id": "Button1",
-      "label": "Button Text",
-      "default":"Voltooi aanvraag"
-    },
-    {
-      "type": "html",
-      "id": "QouteText",
-      "label": "Qoute Text",
-      "default":"Upload today and receive your logo on . Still <b id='new_timer'>07:13:18</b> geldig."
-    },
-    {
+  },
+  {
+    "type": "html",
+    "id": "uploadContent",
+    "label": "Upload content",
+    "default":"<div class='jfUpload-heading forDesktop'>Drag and drop files here 1</div><div class='jfUpload-heading forMobile'>Choose a file</div>"
+  },
+  {
     "type": "text",
-    "id": "delivery_date",
-    "label": "Delivery Date"
-    },
-    {
-    "type": "header",
-    "content": "Tab 2 content"
-    },
-    {
-      "type": "text",
-      "id": "tabTitle2",
-      "label": "Tab Title 2",
-      "default":"2. Je gegevens"
-    },
-    {
-      "type": "html",
-      "id": "FormHeading",
-      "label": "Form Heading",
-      "default":"<h2>Bijna klaar!<br> Vul je gegevens in </h2>"
-    },
-    {
-      "type": "text",
-      "id": "inputlable1",
-      "label": "Name Input",
-      "default":"Name"
-    },
-    {
-      "type": "text",
-      "id": "inputplaceholder1",
-      "label": "Name placeholder",
-      "default":"Bijv. Anja"
+    "id": "Button1",
+    "label": "Button Text",
+    "default":"Voltooi aanvraag"
+  },
+  {
+    "type": "html",
+    "id": "QouteText",
+    "label": "Qoute Text",
+    "default":"Upload today and receive your logo on . Still <b id='new_timer'>07:13:18</b> geldig."
+  },
+  {
+  "type": "html",
+  "id": "timer_text",
+  "label": "Timer Text",
+  "default": "Still <b id='new_timer'>00:00:00</b> valid."
+},
+  {
+    "type": "html",
+    "id": "customer_review",
+    "label": "Customer Review",
+    "default":"<p>Rated <b>4.8/5</b> 1,000+ happy customer</p>"
+  },
+  {
+  "type": "text",
+  "id": "delivery_date",
+  "label": "Delivery Date"
+  },
+  {
+  "type": "header",
+  "content": "Tab 2 content"
+  },
+  {
+    "type": "text",
+    "id": "tabTitle2",
+    "label": "Tab Title 2",
+    "default":"2. Je gegevens"
+  },
+  {
+    "type": "html",
+    "id": "FormHeading",
+    "label": "Form Heading",
+    "default":"<h2>Bijna klaar!<br> Vul je gegevens in </h2>"
+  },
+  {
+    "type": "text",
+    "id": "inputlable1",
+    "label": "Name Input",
+    "default":"Name"
+  },
+  {
+    "type": "text",
+    "id": "inputplaceholder1",
+    "label": "Name placeholder",
+    "default":"Bijv. Anja"
 
-    },
-    {
-      "type": "text",
-      "id": "inputlable2",
-      "label": "Email Input",
-      "default":"E-mailadres"
+  },
+  {
+    "type": "text",
+    "id": "inputlable2",
+    "label": "Email Input",
+    "default":"E-mailadres"
 
-    },
-    {
-      "type": "text",
-      "id": "inputplaceholder2",
-      "label": "Email placeholder",
-      "default":"Bijv. joost@bb.nl"
+  },
+  {
+    "type": "text",
+    "id": "inputplaceholder2",
+    "label": "Email placeholder",
+    "default":"Bijv. joost@bb.nl"
 
-    },
-    {
-      "type": "text",
-      "id": "inputlable3",
-      "label": "telephone Input",
-      "default":"Telefoonnummer"
+  },
+  {
+    "type": "text",
+    "id": "inputlable3",
+    "label": "Telephone Input",
+    "default":"Telefoonnummer"
 
-    },
-    {
-      "type": "text",
-      "id": "inputplaceholder3",
-      "label": "telepone placeholder",
-      "default":"telefoon"
+  },
+  {
+    "type": "text",
+    "id": "inputplaceholder3",
+    "label": "Telepone placeholder",
+    "default":"telefoon"
 
-    },
-    {
-      "type": "text",
-      "id": "ButtonTextForm",
-      "label": "Form button Text",
-      "default":"Send and receive quote within 3 hours!"
-    },
-    {
-      "type": "text",
-      "id": "freeSample",
-      "label": "Free Sample Text",
-      "default":"Jouw gratis voorbeeld wordt voorbereid"
-    },
-    {
-      "type": "text",
-      "id": "freeSampleDesc",
-      "label": "Free Sample Description",
-      "default":"Zodra het logo klaar is, verschijnt hier een voorbeeld. Bekijk intussen enkele voorbeelden of scroll verder voor FAQ’s en inspiratie!"
-    },
-    {
-      "type": "html",
-      "id": "freeSampleFormDescription",
-      "label": "Free Sample form Description",
-      "default":"<h4>Beter voorbeeld? Upload een foto van je muur!</h4> <ul> <li>Ontvang een definitieve offerte</li> <li>Jouw voorbeeld wordt gemaakt op je muurfoto</li> <li>We kunnen jouw prijs nog preciezer berekenen</li> </ul>"
-    },
-    {
-      "type": "html",
-      "id": "uploadPhotoFormfree",
-      "label": "Free Sample upload photo Description",
-      "default":"<div class='file_heading'>Upload foto</div> <label for='wall_image'>Drag and drop files here</label>"
-    },
-    {
-      "type": "text",
-      "id": "uploadPhotobuttonfree",
-      "label": "Free Sample upload photo button Text",
-      "default":"Voeg muur toe aan je voorbeeld"
-    }, 
-    {
-      "type": "header",
-      "content": "Help us! how you find us?"
-    },
-    {
-      "type": "text",
-      "id": "HelpUsTtile",
-      "label": "Help Us Title",
-      "default":"Help us! How did you find Neonsphere?"
-    },
-    {
-      "type": "text",
-      "id": "Friends",
-      "label": "Acquaintance or friend",
-      "default":"Acquaintance or friend"
-    },
-    {
-      "type": "text",
-      "id": "SearchEngine",
-      "label": "Search Engine",
-      "default":"Search Engine"
-    },
-    {
-      "type": "text",
-      "id": "FaceBook",
-      "label": "Facebook title",
-      "default":"FaceBook"
-    },
-    {
-      "type": "text",
-      "id": "Insta",
-      "label": "Insta Title",
-      "default":"Instagram"
-    },
-    {
-      "type": "text",
-      "id": "Youtube",
-      "label": "Youtube Title",
-      "default":"Youtube"
-    },
-    {
-      "type": "text",
-      "id": "Linkdin",
-      "label": "Linkdin Title",
-      "default":"Linkdin"
-    },
-    {
-      "type": "text",
-      "id": "NewsLetter",
-      "label": "NewsLetter Title",
-      "default":"Newsletter"
-    },
-    {
-      "type": "text",
-      "id": "other",
-      "label": "Other Title",
-      "default":"Other"
-    },
-    {
-      "type": "image_picker",
-      "id": "PersonImage",
-      "label": "Ask Person image",
-    },
-    {
-      "type": "text",
-      "id": "AskPersonText",
-      "label": "Ask Person Text",
-      "default":"Ask Sjoerd a question"
-    },
-    {
-      "type": "text",
-      "id": "AskPersonPlacholder",
-      "label": "Ask Person placeholder",
-      "default":"Bijvoorbeeld: Hoi Sjoerd, hoe hang ik mijn logo op?"
-    },
-    {
-      "type": "html",
-      "id": "StraightViewText",
-      "label": "Straight View Wall Text",
-      "default":"Stuur een recht aanzicht van de muur <span>(voorbeeld)</span>"
-    },
-    {
-      "type": "html",
-      "id": "formButtonQoute",
-      "label": "Form Quote Text",
-      "default":"<div class='box_head'>Jouw voorbeeld verschijnt hier binnen:</div><div class='time'><span id='timer'>2:59</span> uur</div>"
-    },
-    {
-      "type": "image_picker",
-      "id": "formButtonQouteImage",
-      "label": "TimerBox Background Image"
-    },
-    {
-      "type": "text",
-      "id": "RemoveWallPhotoText",
-      "label": "RemoveWall Photo Text",
-      "default":"Verwijder muurfoto"
-
-    },
-    {
-      "type": "text",
-      "id": "EndButtonText",
-      "label": "Question Button Text",
-      "default":"Send question"
-
-    },
-    {
-    "type": "header",
-    "content": "Timer Content"
-    },
-    {
-      "type": "html",
-      "id": "timerHmtl",
-      "label": "Timer arrive",
-      "default":"Upload vandaag en ontvang je logo op 8 september Nog <b id='new_timer'>00:00:00</b> geldig."
-    },
-  ],
-  "presets": [{
-  "name": "Custom Steps Form"
-  }]
+  },
+  {
+    "type": "text",
+    "id": "ButtonTextForm",
+    "label": "Form button Text",
+    "default":"Send and receive quote within 3 hours!"
+  },
+  {
+    "type": "text",
+    "id": "freeSample",
+    "label": "Free Sample Text",
+    "default":"Jouw gratis voorbeeld wordt voorbereid"
+  },
+  {
+    "type": "text",
+    "id": "freeSampleDesc",
+    "label": "Free Sample Description",
+    "default":"Zodra het logo klaar is, verschijnt hier een voorbeeld. Bekijk intussen enkele voorbeelden of scroll verder voor FAQ’s en inspiratie!"
+  },
+  {
+    "type": "html",
+    "id": "freeSampleFormDescription",
+    "label": "Free Sample form Description",
+    "default":"<h4>Beter voorbeeld? Upload een foto van je muur!</h4> <ul> <li>Ontvang een definitieve offerte</li> <li>Jouw voorbeeld wordt gemaakt op je muurfoto</li> <li>We kunnen jouw prijs nog preciezer berekenen</li> </ul>"
+  },
+  {
+    "type": "html",
+    "id": "uploadPhotoFormfree",
+    "label": "Free Sample upload photo Description",
+    "default":"<div class='file_heading'>Upload foto</div> <label for='wall_image'>Drag and drop files here</label>"
+  },
+  {
+    "type": "text",
+    "id": "uploadPhotobuttonfree",
+    "label": "Free Sample upload photo button Text",
+    "default":"Voeg muur toe aan je voorbeeld"
+  },
+  {
+    "type": "html",
+    "id": "formButtonQoute",
+    "label": "Form Quote Text",
+    "default":"<div class='box_head'>Jouw voorbeeld verschijnt hier binnen:</div><div class='time'><span id='timer'>2:59</span> uur</div>"
+  },
+  {
+    "type": "image_picker",
+    "id": "formButtonQouteImage",
+    "label": "TimerBox Background Image"
+  },
+  {
+  "type": "header",
+  "content": "Timer Content"
+  },
+  {
+    "type": "html",
+    "id": "timerHmtl",
+    "label": "Timer arrive",
+    "default":"Upload vandaag en ontvang je logo op 8 september Nog <b id='new_timer'>00:00:00</b> geldig."
   }
-  {% endschema %}
+],
+"blocks": [
+  {
+    "type": "tab",
+    "name": "Tab",
+    "limit": 2,
+    "settings": [
+      {
+        "type": "text",
+        "id": "tab_title",
+        "label": "Tab Title",
+        "default": "Tab Title"
+      },
+      {
+        "type": "textarea",
+        "id": "tab_buttons",
+        "label": "Tab Buttons"
+      }
+   ]
+  },
+  {
+     "type": "Image",
+     "name": "Add Image",
+     "limit": 4,
+     "settings": [
+       {
+       "type":"image_picker",
+       "id":"img-card",
+       "label":"Add Image"
+       }
+     ]
+   }
+],
+"presets": [{
+"name": "Custom Steps Form",
+"blocks": [
+    {
+      "type": "tab",
+      "settings": {
+        "tab_title": "What is Your Field",
+        "tab_buttons": "Tech, Resturent",
+
+      }
+    },
+    {
+      "type": "tab",
+      "settings": {
+        "tab_title": "Help us! How did you find Neonsfeer?",
+        "tab_buttons": "Facebook, Instagram, Linkdin, Youtube",
+      }
+    }
+]
+}]
+}
+{% endschema %}

@@ -52,7 +52,9 @@
     <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'custom-master.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'about-us.css' | asset_url }}">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    
     {% render 'microdata-schema' %}
 
     <script>
@@ -134,6 +136,7 @@
         -ms-touch-action: manipulation; /* Prevent zooming on IE/Edge */
     }
   </style>
+  
   <body
     class="warehouse--v4 {% if settings.animation_image_zoom %}features--animate-zoom{% endif%} template-{{ request.page_type | handle }} {% if request.page_type contains '/' %}template-{{ request.page_type | split: '/' | last | handle }}{% endif %}"
     data-instant-intensity="viewport"
@@ -239,7 +242,11 @@
 
                         }).catch((error) => console.error(error));
                     }).catch((error) => console.error(error));
-                {% else %}
+                  {% endif %}
+                  {% if 'product.lead_page_logo_upload' == template %}
+                             console.log('lead page logo upload');
+                             window.dataLayer = window.dataLayer || [];
+                   {% else %}
                 console.log('other product page');
                     waitForElement('.custom-layer-trigger').then((element) => {
 
