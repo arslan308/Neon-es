@@ -721,19 +721,21 @@ function bgHandleFilePreview(file) {
 
     document.addEventListener("DOMContentLoaded", function () {
     var input = document.querySelector("#input_6_full");
-    var iti = window.intlTelInput(input, {
-            initialCountry: "{{ section.settings.defaultcountry }}",
-            separateDialCode: true,
-            preferredCountries: ["us", "gb", "ca", "nz"],
-            geoIpLookup: function (callback) {
-                fetch("https://ipapi.co/json")
-                    .then(response => response.json())
-                    .then(data => callback(data.country_code.toLowerCase()))
-                    .catch(() => callback("{{ section.settings.defaultcountry }}")); // Default to US if lookup fails
-            },
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
-        });
-        window.iti = iti;
+      var preferredCountries = "{{ section.settings.preferred_countries }}".split(',');
+
+        var iti = window.intlTelInput(input, {
+          initialCountry: "{{ section.settings.defaultcountry }}",
+          separateDialCode: true,
+          preferredCountries: preferredCountries,
+          geoIpLookup: function (callback) {
+              fetch("https://ipapi.co/json")
+                  .then(response => response.json())
+                  .then(data => callback(data.country_code.toLowerCase()))
+                  .catch(() => callback("{{ section.settings.defaultcountry }}"));
+          },
+          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
+      });
+      window.iti = iti;
     // moving to step 3 from 2
     document.getElementById('form-pagebreak-next_12').addEventListener('click', function () {
     let allFilled = true;
@@ -1087,6 +1089,12 @@ newCountdown();
   "label": "Default Country",
   "default":"us"
   },
+  {
+  "type": "text",
+  "id": "preferred_countries",
+  "label": "Preferred Countries (comma-separated, e.g. us,gb,ca,nz)",
+  "default": "us,gb,ca,nz"
+},
   {
   "type": "text",
   "id": "skip",
