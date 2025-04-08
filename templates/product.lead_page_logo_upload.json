@@ -69,7 +69,7 @@
         "Video_url": "https://cdn.shopify.com/videos/c/o/v/d120017a3af34aa087840bcad5240acb.mp4",
         "tabTitle1": "1. Upload your logo",
         "tabContent1": "<h2>Upload your logo and receive a free neon design + price!</h2>",
-        "uploadContent": "<div class=\"jfUpload-heading forDesktop\">Choose file/logo...</div>\n<div class=\"jfUpload-heading forMobile\">Choose file/logo...</div>",
+        "uploadContent": "Choose file/logo...",
         "Button1": "Complete request",
         "QouteText": "Get your custom neon sign by",
         "timer_text": "Still <b id=\"new_timer\">00:00:00</b> valid.",
