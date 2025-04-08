@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "custom_step_form_section_TNdRMm": {
       "type": "Custom-Step-Form-Section",
@@ -28,27 +28,19 @@
         },
         "image_z9N7Eq": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T233413.498_96492457-655b-4c63-8378-e6745d3f3f55.png"
-          }
+          "settings": {}
         },
         "image_QaDCwc": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T233214.354_4e0f3790-3166-4299-9214-383241e818d2.png"
-          }
+          "settings": {}
         },
         "image_WrUFQm": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T233605.554_1.png"
-          }
+          "settings": {}
         },
         "image_nLtXzG": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Untitled_design_1a318de5-1847-4a05-acab-648382bb518c.png"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -71,6 +63,7 @@
         "terms": "Genom att skicka in godkänner du Neonsfeers villkor.",
         "terms_error": "Vänligen godkänn villkoren.",
         "defaultcountry": "se",
+        "preferred_countries": "us,gb,ca,nz",
         "skip": "Fortsätt utan foto",
         "MainList": "<li>\n<strong>Gratis </strong>neondesign\n</li>\n<li>Klar inom <strong>3 timmar</strong>\n</li>\n<li>\n<strong>8 dagars</strong> leverans\n</li>",
         "Video_url": "https://cdn.shopify.com/videos/c/o/v/d120017a3af34aa087840bcad5240acb.mp4",
@@ -160,7 +153,6 @@
         "logo_gLnfBg": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/nederland2_4_7.png",
             "link": ""
           }
         },
@@ -174,7 +166,6 @@
         "logo_Q7AfkG": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/nederland2_4_5.png",
             "link": ""
           }
         },
@@ -188,14 +179,12 @@
         "logo_aLVFiR": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Group_8028_c58022a2-5038-4910-9839-008c97de4d70.svg",
             "link": ""
           }
         },
         "logo_Rz3E9k": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Nieuw_project_-_2023-04-13T181424.442_280x_81377379-b9c3-4515-b020-fe5af7f41ef9.webp",
             "link": ""
           }
         },
@@ -236,10 +225,10 @@
         "image_with_review_EBjEKc": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Johan Lindström",
-            "user-discription": "Blandningen av grönt och vitt ljus sticker ut vackert mot den mörka väggen och är omöjlig att missa. Det är stilrent, retro och bidrar verkligen till den coola atmosfären i rummet. Örebro Pinball-neonskylten är helt fantastisk!",
+            "user-name": "Casillas World SL",
+            "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_df89ecf3-73ac-457c-a213-b9227c3d944a.png?v=1741882944"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_7901e000-a633-440f-9949-b9c6f8a09619.png?v=1741887248"
           }
         },
         "image_with_review_ke3UR6": {
@@ -255,26 +244,26 @@
         "image_with_review_kKVgR4": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Codigital",
-            "user-discription": "\"På CoDigital ville vi ha något unikt för vårt kontor, och neonskylten från Neonsfeer var precis vad vi letade efter. Snygg design, hög kvalitet och snabb leverans. Vår arbetsplats har nu den där extra touchen av stil!\"",
+            "user-name": "Point Açaí",
+            "user-discription": "\"La combinación de amarillo, verde y azul crea un ambiente tropical que encaja perfectamente con el aspecto fresco y moderno. ¡Recibimos muchos elogios de la gente por nuestro letrero!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0760/7163/3241/files/DSC04063_1_2048x2048_239a3f11-097b-4c21-81c4-32799261b868.webp?v=1741902675"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Neon_text_designs_1.png?v=1741899422"
           }
         },
         "image_with_review_6kFcy4": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Torsten",
-            "user-discription": "\"Sedan vi installerade vår neonskylt känns hela rummet mer professionellt och modernt.\nDen rena vita glöden framhäver vårt motto perfekt och inspirerar teamet varje dag.\nDen perfekta kombinationen av kvalitet, atmosfär och snabb service!\"",
+            "user-name": "Codigital",
+            "user-discription": "\"En CoDigital, queríamos algo único para nuestra oficina, y el letrero de neón de Neonsfeer fue exactamente lo que buscábamos. Diseño elegante, calidad superior y entrega rápida. ¡Nuestro espacio de trabajo ahora tiene ese toque extra de estilo!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0760/7163/3241/files/Neon_text_designs_18.webp?v=1741903167"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/DSC04063_1_2048x2048_1.webp?v=1741893612"
           }
         },
         "image_with_review_kUTc3a": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Elias Löfgren",
-            "user-discription": "Sedan neonskylten kom upp i vårt mötesrum har rummet direkt känts mer energiskt och inbjudande. Den subtila lila glöden skapar en modern och kreativ atmosfär – perfekt för inspirerande möten!",
+            "user-name": "Santiago",
+            "user-discription": "\"Desde que el neón está en nuestra sala de reuniones, el ambiente se siente inmediatamente más energético y acogedor. El sutil resplandor morado aporta una vibra moderna y creativa, perfecta para reuniones inspiradoras.\"",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
           }
@@ -282,28 +271,46 @@
         "image_with_review_Ncw38p": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Viktor",
-            "user-discription": "\"Sedan vi lade till neonskylten i vår loungedel känns rummet genast fräschare och mer inbjudande.\nDen mjuka glöden kompletterar vår inredning perfekt och ger en stilren och modern touch som passar utmärkt för avkoppling eller informella möten.\"",
+            "user-name": "Alejandro",
+            "user-discription": "\"El letrero de neón no solo aporta ambiente, sino que también crea esa apariencia acogedora y digna de Instagram que a nuestros invitados les encanta. La gente toma fotos, nos etiqueta y se queda un poco más de tiempo.\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0760/7163/3241/files/Neon_text_designs_16_2.webp?v=1741903338"
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
           }
         },
         "image_with_review_rqEapE": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Fredrik",
-            "user-discription": "Neonskylten skapar inte bara en härlig atmosfär, utan ger också den där mysiga, Instagram-vänliga looken som våra gäster älskar. Folk tar bilder, taggar oss och stannar kvar lite längre.",
+            "user-name": "José",
+            "user-discription": "\"Desde que añadimos el letrero de neón a nuestra zona de descanso, el espacio se siente de inmediato más fresco y acogedor. El brillo suave complementa perfectamente nuestra decoración, aportando un toque elegante y moderno, ideal para relajarse o reuniones informales.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Neon_text_designs_16_1.webp?v=1741893792"
           }
         },
         "image_with_review_7eD6wY": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Anders Sjöberg",
-            "user-discription": "Jag älskar verkligen den här neonskylten. Skylten känns så livlig och full av energi. Det lysande trädets design med olika former ger en rolig och kreativ touch. Den får genast rummet att kännas både välkomnande och professionellt.",
+            "user-name": "Ricardo Alonso",
+            "user-discription": "¡Una combinación perfecta de estilo y personalidad! El resplandor del letrero de neón en cursiva capta la atención al instante y añade un toque cálido y acogedor al espacio. El detalle de la cuchara le da un aire personal y encantador.",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/image_1_c763c8f6-f2e4-4947-adf3-fbe23d54a8fe.png?v=1742394040"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_79f4dc79-3ce3-4c56-be2f-41b9641ec194.png?v=1742212475"
+          }
+        },
+        "image_with_review_9izth7": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Martínez",
+            "user-discription": "\"¡Esta configuración es realmente encantadora! La combinación del letrero de neón en tonos rosados y pastel, acentuada con delicados detalles florales, crea una atmósfera romántica pero vibrante. Es un punto focal impresionante que irradia alegría y festividad.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_d533cc47-8780-4ac7-963d-57bcd13ac717.png?v=1741887324"
+          }
+        },
+        "image_with_review_zbhYX3": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Patricia Jiménez",
+            "user-discription": "El diseño elegante y los colores vibrantes lo convierten en un punto focal perfecto. El resplandor nítido en azul y amarillo crea un contraste impactante contra la rústica pared de ladrillo, añadiendo un toque moderno al entorno natural.",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_cade6bda-3006-4347-88dc-8f759125b226.png?v=1742212321"
           }
         },
         "image_with_review_RYYfjw": {
@@ -326,11 +333,13 @@
         "image_with_review_Ncw38p",
         "image_with_review_rqEapE",
         "image_with_review_7eD6wY",
+        "image_with_review_9izth7",
+        "image_with_review_zbhYX3",
         "image_with_review_RYYfjw"
       ],
       "settings": {
         "spacing": "",
-        "title": "Nöjda kunder"
+        "title": "Lo que dicen nuestros clientes"
       }
     },
     "image_card_custom_form_YEp9Hf": {
