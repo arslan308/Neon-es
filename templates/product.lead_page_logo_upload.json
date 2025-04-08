@@ -15,89 +15,86 @@
         "tab_DyyFnU": {
           "type": "tab",
           "settings": {
-            "tab_title": "Välj din företags typ",
-            "tab_buttons": "Gym, Kontor, Restaurang, Butik, Bar / Nattklubb, Café / Kaffebar,Skönhetssalong / Spa, Tatueringsstudio, Eventplanering / Bröllop, Bilverkstad / Garage"
+            "tab_title": "Choose your business type",
+            "tab_buttons": "Gym, Office, Restaurant, Retail Store, Bar / Nightclub, Cafe / Coffee Shop,Beauty Salon / Spa, Tattoo Studio, Event Planning / Wedding, Automotive / Garage"
           }
         },
         "tab_EFNYn4": {
           "type": "tab",
           "settings": {
-            "tab_title": "Hur hörde du talas om Neonsfeer?",
-            "tab_buttons": "Facebook, Instagram, TikTok, Google, LinkedIn, Youtube, Pinterest, Mun till mun, Nyhetsbrev, Influencer"
-          }
-        },
-        "image_z9N7Eq": {
-          "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T233413.498_96492457-655b-4c63-8378-e6745d3f3f55.png"
+            "tab_title": "How did you hear about Neonsfeer?",
+            "tab_buttons": "Facebook, Instagram, TikTok, Google, LinkedIn, Youtube, Pinterest, Word of mouth, Newsletter, Influencer"
           }
         },
         "image_QaDCwc": {
           "type": "Image",
           "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T233214.354_4e0f3790-3166-4299-9214-383241e818d2.png"
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T194914.527.png"
+          }
+        },
+        "image_z9N7Eq": {
+          "type": "Image",
+          "settings": {
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T194921.880.png"
           }
         },
         "image_WrUFQm": {
           "type": "Image",
           "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T233605.554_1.png"
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T195316.168.png"
           }
         },
         "image_nLtXzG": {
           "type": "Image",
           "settings": {
-            "img-card": "shopify://shop_images/Untitled_design_1a318de5-1847-4a05-acab-648382bb518c.png"
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T195121.731.png"
           }
         }
       },
       "block_order": [
         "tab_DyyFnU",
         "tab_EFNYn4",
-        "image_z9N7Eq",
         "image_QaDCwc",
+        "image_z9N7Eq",
         "image_WrUFQm",
         "image_nLtXzG"
       ],
       "settings": {
         "formid": "250964263877470",
-        "webhook1": "https://hook.eu1.make.com/68gxlr8gw7sf1jn6d5d2cvhuyxna2def",
-        "webhook2": "https://hook.eu1.make.com/k37a8laed8yafz6l58e8o5uw0at8lgbv",
-        "sectionTitle": "Få en gratis neondesign + pris",
-        "validfiles": "Giltiga filtyper",
-        "required": "Detta fält är obligatoriskt",
-        "emailformat": "Ange en giltig e-postadress",
-        "phoneformat": "Telefonnumret är inte korrekt",
-        "terms": "Genom att skicka in godkänner du Neonsfeers villkor.",
-        "terms_error": "Vänligen godkänn villkoren.",
-        "defaultcountry": "se",
-        "skip": "Fortsätt utan foto",
-        "MainList": "<li>\n<strong>Gratis </strong>neondesign\n</li>\n<li>Klar inom <strong>3 timmar</strong>\n</li>\n<li>\n<strong>8 dagars</strong> leverans\n</li>",
+        "sectionTitle": "Get a free neon design + price",
+        "required": "This field is required",
+        "emailformat": "Please enter correct email",
+        "phoneformat": "Phone no isn't correct",
+        "terms": "By submitting, you agree to Neonsfeer’s terms and conditions.",
+        "terms_error": "Please Agree to Term & Conditions",
+        "defaultcountry": "us",
+        "skip": "Continue without photo",
+        "MainList": "<li>\n<strong>Free </strong>neon design\n</li>\n<li>Ready in <strong>3 hours</strong>\n</li>\n<li>\n<strong>8-day</strong> delivery\n</li>",
         "Video_url": "https://cdn.shopify.com/videos/c/o/v/d120017a3af34aa087840bcad5240acb.mp4",
-        "tabTitle1": "1. Ladda upp din logotyp",
-        "tabContent1": "<h2>Ladda upp din logotyp och få en gratis neondesign + pris!</h2>",
-        "uploadContent": "<div class=\"jfUpload-heading forDesktop\">Välj fil/logotyp…</div>\n<div class=\"jfUpload-heading forMobile\">Välj fil/logotyp…</div>",
-        "Button1": "Slutför begäran",
-        "QouteText": "Få din anpassade neonskylt senast den",
-        "timer_text": "Still <b id=\"new_timer\">00:00:00</b> valid.",
-        "customer_review": "<p>Betygsatt <b>4,8/5</b> av 1 000+ nöjda kunder</p>",
-        "delivery_date": "{day} {month}",
-        "tabTitle2": "2. Dina uppgifter",
-        "FormHeading": "<h2>Nästan klart! Fyll i dina uppgifter </h2>",
-        "inputlable1": "Namn *",
-        "inputplaceholder1": "t.ex. Lars Lindved",
-        "inputlable2": "E-postadress *",
-        "inputplaceholder2": "t.ex. lars@exempel.se",
-        "inputlable3": "Telefonnummer *",
-        "inputplaceholder3": "t.ex. (+46) 40 123 4567",
-        "ButtonTextForm": "Få gratis design + pris",
-        "freeSample": "Din neonskylt designas",
-        "freeSampleDesc": "När din neonskylt är klar kommer vi att skicka den till dig via e-post och visa den här. Medan du väntar, svara gärna på några snabba frågor nedan eller scrolla ner för att utforska exempel, vanliga frågor och inspiration",
-        "freeSampleFormDescription": "<h4>Vill du se din neon på din egen vägg eller bakgrund? Ladda upp ett foto för att förhandsvisa det i ditt utrymme.\n</h4>\n<ul>\n  <li>Motta ett slutgiltigt erbjudande</li>\n  <li>Ditt prov kommer att göras på ditt väggfoto.</li>\n</ul>",
-        "uploadPhotoFormfree": "<div class=\"file_heading\">Ladda upp foto</div>\n<label for=\"wall_image\">Dra eller <span>välj filer</span></label>",
-        "uploadPhotobuttonfree": "Lägg till min vägg eller bakgrund",
-        "formButtonQoute": "<div class=\"box_head\">Din neondesign kommer att visas här om:</div>\n<div class=\"time\">\n  <span id=\"timer\">2:59</span> timmar\n</div>",
-        "timerHmtl": "Upload today and receive your logo on {month} {day}. Giltig till<b id=\"new_timer\">00:00:00</b>."
+        "tabTitle1": "1. Upload your logo",
+        "tabContent1": "<h2>Upload your logo and receive a free neon design + price!</h2>",
+        "uploadContent": "<div class=\"jfUpload-heading forDesktop\">Choose file/logo...</div>\n<div class=\"jfUpload-heading forMobile\">Choose file/logo...</div>",
+        "Button1": "Complete request",
+        "QouteText": "Get your custom neon sign by",
+        "customer_review": "<p>Rated <b>4.8/5</b> 1,000+ happy customer</p>",
+        "delivery_date": "{month} {day}",
+        "tabTitle2": "2. Your details",
+        "FormHeading": "<h2>Almost done! Fill in your details </h2>",
+        "inputlable1": "Name",
+        "inputplaceholder1": "e.g. John Doe",
+        "inputlable2": "Email address",
+        "inputplaceholder2": "e.g. john@example.com",
+        "inputlable3": "Phone number",
+        "inputplaceholder3": "e.g. (555) 123-4567",
+        "ButtonTextForm": "Get free design + price",
+        "freeSample": "Your neon design is being prepared",
+        "freeSampleDesc": "Once your neon design is ready, we’ll email it to you and display it right here. While you wait, feel free to answer a few quick questions below or scroll down to explore examples, FAQs, and inspiration.",
+        "freeSampleFormDescription": "<h4>Want to see your neon on your own wall or background? Upload a photo to preview it in your space.</h4>\n<ul>\n  <li>Receive a final quote</li>\n  <li>Your sample will be made on your wall photo</li>\n</ul>",
+        "uploadPhotoFormfree": "<div class=\"file_heading\">Upload photo</div>\n<label for=\"wall_image\">Drag or <span>choose files</span></label>",
+        "uploadPhotobuttonfree": "Add my wall or background",
+        "formButtonQoute": "<div class=\"box_head\">Your neon design will appear here within:</div>\n<div class=\"time\">\n  <span id=\"timer\">2:59</span> hours\n</div>",
+        "formButtonQouteImage": "shopify://shop_images/accae7d9ba33cbcd362459e523457bfe.webp",
+        "timerHmtl": "Upload today and receive your logo on {month} {day}. Still <b id=\"new_timer\">00:00:00</b> valid."
       }
     },
     "main": {
@@ -160,49 +157,49 @@
         "logo_gLnfBg": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/nederland2_4_7.png",
+            "image": "shopify://shop_images/brews.png",
             "link": ""
           }
         },
         "logo_fxaTDb": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Group_8035.png",
+            "image": "shopify://shop_images/fitness.png",
             "link": ""
           }
         },
         "logo_Q7AfkG": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/nederland2_4_5.png",
+            "image": "shopify://shop_images/flex.png",
             "link": ""
           }
         },
         "logo_4MykJ4": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/nokia.png",
+            "image": "shopify://shop_images/redbull.webp",
             "link": ""
           }
         },
         "logo_aLVFiR": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Group_8028_c58022a2-5038-4910-9839-008c97de4d70.svg",
+            "image": "shopify://shop_images/treats.png",
             "link": ""
           }
         },
         "logo_Rz3E9k": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Nieuw_project_-_2023-04-13T181424.442_280x_81377379-b9c3-4515-b020-fe5af7f41ef9.webp",
+            "image": "shopify://shop_images/nokia.png",
             "link": ""
           }
         },
         "logo_r3J8Wb": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Group_8037_ef5e6681-d651-42c3-bd49-590ccd33b398.png",
+            "image": "shopify://shop_images/roast_-_Copy.png",
             "link": ""
           }
         },
@@ -225,7 +222,7 @@
         "logo_mDDkRN"
       ],
       "settings": {
-        "title": "Vi hjälper dessa extraordinära varumärken att växa.",
+        "title": "We help these extraordinary brands grow.",
         "link_title": "",
         "link": ""
       }
@@ -236,79 +233,79 @@
         "image_with_review_EBjEKc": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Johan Lindström",
-            "user-discription": "Blandningen av grönt och vitt ljus sticker ut vackert mot den mörka väggen och är omöjlig att missa. Det är stilrent, retro och bidrar verkligen till den coola atmosfären i rummet. Örebro Pinball-neonskylten är helt fantastisk!",
+            "user-name": "Kevin Liam",
+            "user-discription": "\"The neon sign totally transformed our diner with a perfect vintage vibe!\nThe colors are vibrant without overpowering the decor.\nIt genuinely looks even cooler in person than in pictures!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_df89ecf3-73ac-457c-a213-b9227c3d944a.png?v=1741882944"
+            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_14.png?v=1741619607"
           }
         },
         "image_with_review_ke3UR6": {
           "type": "image-with-review",
-          "disabled": true,
           "settings": {
-            "user-name": "Multikonsult",
-            "user-discription": "\"Jag beställde en neonskylt från Neonsfeer till vårt kontor, och jag älskar den! Den ger rummet en livlig, välkomnande och hållbar känsla. Kvaliteten är fantastisk, och leveransen var snabb!\"",
+            "user-name": "Codigital",
+            "user-discription": "\"At CoDigital, we wanted something unique for our office, and the neon sign from Neonsfeer was exactly what we were looking for. Sleek design, top quality, and fast delivery. Our workspace now has that extra touch of flair!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0760/7163/3241/files/Neon_text_designs_4.png?v=1741904242"
+            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC04063_1_2048x2048.jpg?v=1730736993"
           }
         },
         "image_with_review_kKVgR4": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Codigital",
-            "user-discription": "\"På CoDigital ville vi ha något unikt för vårt kontor, och neonskylten från Neonsfeer var precis vad vi letade efter. Snygg design, hög kvalitet och snabb leverans. Vår arbetsplats har nu den där extra touchen av stil!\"",
+            "user-name": "Corner Bar",
+            "user-discription": "\"Love the vibe this sign gives our bar area.\nIt lights up beautifully and catches everyone's attention. Looks even better than we expected from the pictures.\nDefinitely adds a modern and welcoming feel to our space!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0760/7163/3241/files/DSC04063_1_2048x2048_239a3f11-097b-4c21-81c4-32799261b868.webp?v=1741902675"
+            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_13.png?v=1741618639"
           }
         },
         "image_with_review_6kFcy4": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Torsten",
-            "user-discription": "\"Sedan vi installerade vår neonskylt känns hela rummet mer professionellt och modernt.\nDen rena vita glöden framhäver vårt motto perfekt och inspirerar teamet varje dag.\nDen perfekta kombinationen av kvalitet, atmosfär och snabb service!\"",
+            "user-name": "Daniel",
+            "user-discription": "\"Since we added the neon sign to our lounge area, the space immediately feels more fresh and welcoming. The gentle glow perfectly complements our decor, giving a stylish and modern touch that's great for relaxing or casual meetings.\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0760/7163/3241/files/Neon_text_designs_18.webp?v=1741903167"
+            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_16.png?v=1741620171"
           }
         },
         "image_with_review_kUTc3a": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Elias Löfgren",
-            "user-discription": "Sedan neonskylten kom upp i vårt mötesrum har rummet direkt känts mer energiskt och inbjudande. Den subtila lila glöden skapar en modern och kreativ atmosfär – perfekt för inspirerande möten!",
+            "user-name": "Jay",
+            "user-discription": "\"Ever since we put up the neon sign, our studio feels more professional and welcoming.\nThe soft glow perfectly fits the room and makes clients feel relaxed. Installation was very easy.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
+            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_17.png?v=1741620511"
           }
         },
         "image_with_review_Ncw38p": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Viktor",
-            "user-discription": "\"Sedan vi lade till neonskylten i vår loungedel känns rummet genast fräschare och mer inbjudande.\nDen mjuka glöden kompletterar vår inredning perfekt och ger en stilren och modern touch som passar utmärkt för avkoppling eller informella möten.\"",
+            "user-name": "Ashley",
+            "user-discription": "\"The neon sign not only adds ambiance but also creates that cozy, professional, and calming look that our guests love. People take photos, tag us, and receive great compliments!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0760/7163/3241/files/Neon_text_designs_16_2.webp?v=1741903338"
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
           }
         },
         "image_with_review_rqEapE": {
           "type": "image-with-review",
+          "disabled": true,
           "settings": {
-            "user-name": "Fredrik",
-            "user-discription": "Neonskylten skapar inte bara en härlig atmosfär, utan ger också den där mysiga, Instagram-vänliga looken som våra gäster älskar. Folk tar bilder, taggar oss och stannar kvar lite längre.",
+            "user-name": "Mathias",
+            "user-discription": "\"I purchased a Neon Sign for my bar from Neonsfeer. I selected the company initially because the online tool was excellent. I then spoke to several people all of whom were very helpful and professional. I needed to sign quite quickly and it came earlier than expected and I am delighted with the quality of what I received\"",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
           }
         },
         "image_with_review_7eD6wY": {
           "type": "image-with-review",
+          "disabled": true,
           "settings": {
-            "user-name": "Anders Sjöberg",
-            "user-discription": "Jag älskar verkligen den här neonskylten. Skylten känns så livlig och full av energi. Det lysande trädets design med olika former ger en rolig och kreativ touch. Den får genast rummet att kännas både välkomnande och professionellt.",
+            "user-name": "Eric Williams",
+            "user-discription": "\"Man, these guys had my sign made and shipped to me in 9 days . I am beyond happy with my new warm white neon signage. That warm whiteis bright and the craftmanship is superb! I highly recommend Neonsfeer to anyone in the market for a beautiful neon sign for their business. Matter of fact I'm ordering myself another one but this one in white \"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/image_1_c763c8f6-f2e4-4947-adf3-fbe23d54a8fe.png?v=1742394040"
+            "image_url": "https://neonsfeer.com/cdn/shop/files/New_Project_58_1_6_2048x2048.png?v=1712056876"
           }
         },
         "image_with_review_RYYfjw": {
           "type": "image-with-review",
-          "disabled": true,
           "settings": {
             "user-name": "Eric Williams",
             "user-discription": "\"Since installing our neon sign, the entire space feels more professional and modern.\nThe clean white glow highlights our motto perfectly and inspires the team daily. The perfect combination of quality, atmosphere, and fast service!\"",
@@ -330,7 +327,7 @@
       ],
       "settings": {
         "spacing": "",
-        "title": "Nöjda kunder"
+        "title": "Happy customers"
       }
     },
     "image_card_custom_form_YEp9Hf": {
@@ -340,8 +337,9 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"9\" height=\"24\" viewbox=\"0 0 9 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.876 0.0399981V23.5H4.116V5.004L0.75 7.214V2.624L4.592 0.0399981H8.876Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Ladda upp din logotyp &amp; och fyll i <span>formuläret</span>",
-            "card_content": "Ladda upp din logotyp och fyll i vårt snabba formulär på 1 minut. Du kommer att få en gratis neondesign och offert inom 3 timmar.",
+            "upload_image": "shopify://shop_images/Rectangle_126.jpg",
+            "card_title": "Upload your logo &amp; fill out the <span>form</span>",
+            "card_content": "Upload your logo and complete our quick 1-minute form. You’ll receive a free neon design and pricing details within 3 hours.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/ce4dd3b12b8f4a43a25a9cfebfa61297.mp4"
           }
         },
@@ -349,8 +347,9 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"15\" height=\"25\" viewbox=\"0 0 15 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.718 20.488V24.5H0.234V21.44L8.088 12.192C9.55 10.492 10.264 9.064 10.264 7.534C10.264 5.63 8.87 4.678 7.34 4.678C5.742 4.678 4.552 5.664 4.416 7.534H0.2C0.2 3.488 3.532 0.733998 7.578 0.733998C11.794 0.733998 14.99 3.658 14.99 7.534C14.99 10.628 12.95 13.042 11.454 14.81L6.626 20.488H14.718Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Få en <span>gratis</span> neondesign inom <span>3 timmar</span>",
-            "card_content": "Vårt team kommer att skapa en anpassad neondesign med din logotyp—och till och med inkludera din vägg om du har laddat upp ett foto—helt gratis, inom bara 3 timmar.",
+            "upload_image": "shopify://shop_images/Rectangle_127.jpg",
+            "card_title": "Get a <span>free</span> neon design within <span>3 hours</span>",
+            "card_content": "Our team will create a custom neon design using your logo—and even include your wall if you uploaded a photo—for free, within just 3 hours.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/716afc504ddf4100be096956282d6349.mp4"
           }
         },
@@ -358,8 +357,9 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"17\" height=\"25\" viewbox=\"0 0 17 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M6.096 14.402V10.39H7.83C9.768 10.39 11.094 9.37 11.094 7.398C11.094 5.834 9.904 4.678 8.17 4.678C6.504 4.678 5.45 5.732 5.246 7.194H1.03C1.2 3.352 4.362 0.733998 8.408 0.733998C12.692 0.733998 15.82 3.692 15.82 7.194C15.82 9.846 14.188 11.478 12.624 12.328C14.63 13.314 16.16 15.15 16.16 17.938C16.16 21.746 13.508 24.806 8.68 24.806C3.716 24.806 0.894 22.018 0.724 18.21H4.906C5.144 19.706 6.266 20.794 8.374 20.794C10.278 20.794 11.434 19.434 11.434 17.7C11.434 15.626 10.244 14.402 7.83 14.402H6.096Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Lägg din beställning – leverans inom<span> 8 dagar</span>",
-            "card_content": "Älskar du designen? Lägg din beställning och få din anpassade neonskylt inom 8 dagar. Vi ser till att den passar perfekt för ditt utrymme.",
+            "upload_image": "shopify://shop_images/Rectangle_128.png",
+            "card_title": "Place your order – delivered in <span>8 days</span>",
+            "card_content": "Love the design? Place your order and receive your custom Neon Sign within 8 days. We’ll make sure it’s a perfect fit for your space.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/19630dc0f0ae4166b1d1cce0db8215e6.mp4"
           }
         },
@@ -367,8 +367,9 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"19\" height=\"24\" viewbox=\"0 0 19 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.83 0.0399981H14.032L6.722 16.122H11.21V10.138H15.97V16.122H18.112V20.168H15.97V23.5H11.21V20.168H0.806V16.87L8.83 0.0399981Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Installera din neonskylt – tar bara <span>5 minuter</span>",
-            "card_content": "Din anpassade neonskylt levereras klar för att lysa. Det tar bara 5 minuter att hänga upp den – sätt i kontakten och njut av glöden! Alla installationsverktyg ingår.",
+            "upload_image": "shopify://shop_images/Rectangle_128_1.jpg",
+            "card_title": "Install your neon sign – takes only <span>5 minutes</span>",
+            "card_content": "Your custom neon sign arrives ready to shine. It takes just 5 minutes to hang—plug it in and enjoy the glow! All installation tools are included.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/3de6221327624656b1f1bd4d40ad6e6f.mp4"
           }
         }
@@ -381,7 +382,7 @@
       ],
       "settings": {
         "add_class": "",
-        "title": "Så här fungerar det",
+        "title": "This is how it works",
         "slide_show": 4
       }
     },
@@ -393,12 +394,12 @@
         "image_position": "right",
         "image_width": 50,
         "title": "",
-        "content": "Beställ din anpassade neon",
-        "list_one": "<p>Levereras inom <strong>8 arbetsdagar</strong></p>",
-        "list_two": "<p>Inkluderar en <strong>gratis </strong>fjärrkontroll</p>",
-        "list_three": "<p>Nu med <strong>fri frakt</strong></p>",
+        "content": "Order Your Custom Neon",
+        "list_one": "<p>Delivered in <strong>8 working days</strong></p>",
+        "list_two": "<p>Includes a <strong>free</strong> remote control</p>",
+        "list_three": "<p>Now with <strong>free shipping</strong></p>",
         "add_to_cart_btn_text": "",
-        "button_text": "Begär en offert",
+        "button_text": "Request a quote",
         "button_link": "#",
         "button_text_2": "",
         "button_link_2": "shopify://pages/contact",
@@ -412,37 +413,37 @@
         "youtube_video_tY4DiC": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/n5HSjoie2T4"
+            "video": "https://www.youtube.com/embed/Y_VktCCtSjE?si=Jp95tz0A87yHWynv"
           }
         },
         "youtube_video_k3B9gf": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/Fd6IxTRfhxw"
+            "video": "https://www.youtube.com/embed/D_rUmnRczuw?si=l8vJe8aiB-f1HjJb"
           }
         },
         "youtube_video_Bdhych": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
+            "video": "https://www.youtube.com/embed/n5HSjoie2T4"
           }
         },
         "youtube_video_ehRknR": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/Y_VktCCtSjE?si=Jp95tz0A87yHWynv"
+            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
           }
         },
         "youtube_video_eae9FY": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/D_rUmnRczuw?si=l8vJe8aiB-f1HjJb"
+            "video": "https://www.youtube.com/embed/R7u1pzMz2Xo?si=BW4kLhHAB7AHIHyO"
           }
         },
         "youtube_video_bFH7Wh": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/R7u1pzMz2Xo?si=BW4kLhHAB7AHIHyO"
+            "video": "https://www.youtube.com/embed/nQ3CLUjMPXE?si=CmqxVsmXjn3aykYz"
           }
         },
         "youtube_video_ckCeJj": {
@@ -464,7 +465,7 @@
       ],
       "settings": {
         "spacing": "",
-        "title": "Klientvideor",
+        "title": "Client videos",
         "slide_show": 4
       }
     },
@@ -474,198 +475,175 @@
         "tab_3n8cFR": {
           "type": "tab",
           "settings": {
-            "tab_title": "Produktinformation"
+            "tab_title": "Product information"
           }
         },
         "tab_VXcJ3a": {
           "type": "tab",
           "settings": {
-            "tab_title": "Offertförfrågan"
-          }
-        },
-        "tab_cVCCFD": {
-          "type": "tab",
-          "settings": {
-            "tab_title": "Leveranstid"
+            "tab_title": "Delivery times & Ordering"
           }
         },
         "tab_qkVCfH": {
           "type": "tab",
           "settings": {
-            "tab_title": "Installation & Underhåll"
+            "tab_title": "Installation & Maintenance"
           }
         },
         "tab_46zapw": {
           "type": "tab",
           "settings": {
-            "tab_title": "Garanti & Returer"
+            "tab_title": "Warranty & Returns"
           }
         },
         "accordion_item_jQ3QfE": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Varför välja neon?",
-            "accordion_content": "<p>Neonbelysning ger din logotyp en djärv och iögonfallande look som omedelbart drar till sig uppmärksamhet.<br/>Med LED-neon får du en energieffektiv och hållbar lösning, perfekt för företag, organisationer och privatpersoner som vill framhäva sin varumärkesidentitet eller personliga design på ett unikt sätt.</p>",
+            "accordion_title": "How do I design my own neon sign?",
+            "accordion_content": "<p>Design your neon in just a few steps. Enter your desired text, choose a font, and select the right size.<br/> <br/>Click \"Add to Cart\" when you're done. Light up your space with a touch of you!</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_JjJhbw": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Kan alla logotyper omvandlas till neon?",
-            "accordion_content": "<p>De flesta logotyper kan omvandlas till neon. Vissa kan behöva justeras för att bli kompatibla. Skicka din logotyp till oss, så hjälper vi dig vidare!</p>",
+            "accordion_title": "How much does a neon sign cost?",
+            "accordion_content": "<p>The price depends on the size, font, and any extra options you choose. You can see the price instantly in our customizer.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_CweJzh": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Hur bestäms storleken?",
-            "accordion_content": "<p>När du laddar upp din logotyp beräknar vi den minsta storleken där logotypen ser bäst ut. Eftersom vi tillverkar varje neonskylt för hand, bestämmer vi den minsta storlek som kan skapas med hög kvalitet och detaljrikedom.</p><p>I din offert får du denna minsta storlek samt flera större alternativ, så att du kan välja den storlek som passar bäst. Större designer (över 100 cm i längd eller 50 cm i höjd) kan levereras i två delar för enklare frakt och montering.</p>",
+            "accordion_title": "My font isn’t available, what now?",
+            "accordion_content": "<p>Can’t find your desired font? No problem! Send it to us via email at info@neonsfeer.nl, and we’ll create your neon sign in your unique style.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_ARAezc": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": " Vilka färger finns tillgängliga?",
-            "accordion_content": "<p>Våra designers väljer färger utifrån din uppladdade logotyp och vad som bäst passar den övergripande designen. Dessa färger visas i din offert. Vill du ändra en färg? Inga problem – meddela oss bara!</p><p>Vi erbjuder 12 LED-neonfärger:</p><p>Vit, Varmvit, Rosa, Ljusrosa, Blå, Isblå, Turkos, Grön, Röd, Orange, Gul och Lila.</p><p>Vill du ha alla färger i en och samma neon? Välj vår RGB-option, där du kan justera färgerna med den medföljande fjärrkontrollen och dimmern. Denna option kostar 25% extra.</p>",
+            "accordion_title": "How is the size determined?",
+            "accordion_content": "<p>You choose the length, and we take care of the corresponding height. Sometimes, the height may slightly differ (1-2 cm) to keep the design well-balanced. This way, your neon sign will always look great.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_R6XbfL": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Kan min neonlogotyp användas utomhus?",
-            "accordion_content": "<p>Våra standard-neonskyltar är designade för inomhusbruk. För utomhusbruk erbjuder vi vädertåliga alternativ mot en extra kostnad.</p><p>Vill du använda din neon utomhus? Välj vår vädertåliga version för ett tillägg på 20%.</p>",
+            "accordion_title": "Can I add extra symbols or custom designs?",
+            "accordion_content": "<p>From adjusting text to adding symbols, we’re happy to assist. Send your specific requests to info@neonsfeer.nl, and we’ll bring your neon ideas to life.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_Jt3qUU": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Hur mycket kostar en anpassad neonlogotyp?",
-            "accordion_content": "<p>Priserna varierar beroende på design, storlek och LED-längd. Textbaserade designer börjar på 190 €. För en exakt offert, skicka in din logotyp!</p>",
-            "tab_association": "2"
+            "accordion_title": "Does the preview on the website match the actual product?",
+            "accordion_content": "<p>Expect precision. Our preview designs match the final product. From color to text, trust that we’ll align with your vision. Design with confidence with us.</p>",
+            "tab_association": "1"
           }
         },
         "accordion_item_tJmHy3": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": ". Hur lång tid tar det att få min offert?",
-            "accordion_content": "<p>Vi strävar efter att skicka en provdesign och offert inom 6 timmar. Ser du den inte? Kolla din skräppost!</p><p>Om du inte fått något mejl inom 24 timmar, kontakta oss gärna.</p>",
-            "tab_association": "2"
+            "accordion_title": "What colors are available?",
+            "accordion_content": "<p>We offer 12 LED neon colors:<br/> <br/>White, Warm White, Pink, Light Pink, Blue, Icy Blue, Turquoise, Green, Red, Orange, Yellow, and Purple.<br/> <br/>Want all colors in one neon? Choose our RGB option, which allows you to adjust the color with the included remote control and dimmer. This option is available for an additional 25% charge.</p>",
+            "tab_association": "1"
           }
         },
         "accordion_item_VAXgy9": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": " Kostar det något att begära en offert och en förhandsvisning?",
-            "accordion_content": "<p>Nej, att begära en offert och få en förhandsdesign är helt gratis och utan förpliktelser. Vi hjälper dig gärna att förverkliga din neonidé.</p>",
-            "tab_association": "2"
+            "accordion_title": "Can I use my neon sign outdoors?",
+            "accordion_content": "<p>Our standard neon signs are designed for indoor use. For outdoor use, we offer weather-resistant options for an additional charge.<br/> <br/>If you want to hang your neon outdoors, choose our weather-resistant option for an extra 20%.</p>",
+            "tab_association": "1"
           }
         },
         "accordion_item_zpE3kD": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Hur kan jag begära en offert för flera logotyper?",
-            "accordion_content": "<p>Vill du konvertera flera logotyper till neon? Fyll i formuläret för varje logotyp och ladda upp dem en i taget.<br/>Har du många logotyper? Kontakta oss på info@neonsfeer.se, så hjälper vi dig!</p>",
+            "accordion_title": "What is the delivery time?",
+            "accordion_content": "<p>The delivery time is 6-8 business days from the moment of order to delivery. Need your neon sign sooner? <br/> <br/>Contact us during the ordering process, and we’ll explore the possibilities for expedited delivery.</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_Q9gJDR": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Jag har ingen logotyp, kan jag ändå få en offert?",
-            "accordion_content": "<p>Ja! Vi kan skapa en neonbaserad design från en skiss eller en tydlig beskrivning av vad du har i åtanke.</p><p>Har du ingen skiss? Hör av dig så brainstormar vi tillsammans och skapar en design för dig.</p>",
+            "accordion_title": "Do you offer free shipping?",
+            "accordion_content": "<p>We offer free shipping on all our neon signs. You will receive a tracking number and benefit from premium insured shipping, ensuring your order arrives safely and hassle-free.</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_AjeTFV": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Vad är produktionstiden efter att jag godkänt offerten?",
-            "accordion_content": "<p>Vanligtvis är produktionstiden 6–8 arbetsdagar. Behöver du din neonlogotyp snabbare?</p><p>Låt oss veta vid beställning, så undersöker vi möjligheten för expressproduktion</p>",
+            "accordion_title": "Can I change or cancel my order?",
+            "accordion_content": "<p>Noticed a mistake in your order? Contact us immediately. We’ll do our best to process your change or cancellation as quickly as possible, before we start production.</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_QHPMg7": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Kan jag lägga en brådskande beställning?",
-            "accordion_content": "<p>Ja! Skicka in din logotyp så snabbt som möjligt och mejla oss om att du behöver en expressleverans.</p><p>Vi skickar dig en slutlig offert inom en timme, så vi kan påbörja din neondesign direkt!</p>",
+            "accordion_title": "Bulk Orders & Resellers",
+            "accordion_content": "<p>Are you a reseller or have a large order? We are open to bulk orders and resellers.<br/>Contact us at info@neonsfeer.com for custom offers and applicable pricing.</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_kFVDyc": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Hur lång är leveranstiden?",
-            "accordion_content": "<p>Leveranstiden är 6–8 arbetsdagar från beställning till leverans. Behöver du din neon snabbare?</p><p>Kontakta oss vid beställning, så undersöker vi möjligheterna för snabbleverans</p>",
+            "accordion_title": "How do I install my neon sign?",
+            "accordion_content": "<p>Each neon sign comes with all the necessary materials and clear instructions. Installation is quick and easy, so you can enjoy your neon sign in no time.</p>",
             "tab_association": "3"
           }
         },
         "accordion_item_EDgedG": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Erbjuder ni fri frakt?",
-            "accordion_content": "<p>Ja! Vi erbjuder fri frakt på alla våra neonskyltar. Du får spårningsnummer och försäkrad leverans, så att din order levereras säkert och problemfritt.</p>",
+            "accordion_title": "What’s included in my package?",
+            "accordion_content": "<p>We provide everything you need to easily hang your neon sign on the wall:<br/><br/><strong>1.</strong> Mounting hardware<br/><strong>2.</strong> Durable adapter<br/><strong>3.</strong> Remote control<br/><strong>4.</strong> Dimmer<br/><strong>5.</strong> Transparent cable</p>",
             "tab_association": "3"
           }
         },
         "accordion_item_tfGNf6": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Hur installerar jag min neonskylt?",
-            "accordion_content": "<p>Varje neonskylt levereras med allt nödvändigt material och tydliga instruktioner. Installation är enkel och snabb – njut av din neon på nolltid!</p>",
-            "tab_association": "4"
+            "accordion_title": "What if I don’t want to or can’t drill into my wall?",
+            "accordion_content": "<p>No problem! We offer several alternatives:<br/><br/><strong>- Ceiling mounting:</strong> Upon request, we can provide a free hanging system with cables.<br/><br/><strong>- Placing on a surface:</strong> You can place your neon on a shelf or table. We also offer an optional freestanding frame.<br/><br/><strong>- Double-sided tape:</strong> In some cases, you can use strong 3M double-sided tape, as long as the surface is smooth and suitable.<br/><br/>Need advice on the best option? Feel free to reach out!</p>",
+            "tab_association": "3"
           }
         },
         "accordion_item_bMcKgB": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Vad ingår i paketet?",
-            "accordion_content": "<p>Vi skickar allt du behöver för att hänga upp din neonskylt:</p><p>1. Monteringsmaterial<br/>2. Hållbar adapter<br/>3. Fjärrkontroll<br/>4. Dimmer<br/>5. Transparent kabel</p>",
-            "tab_association": "4"
+            "accordion_title": "How do I use my remote control and dimmer?",
+            "accordion_content": "<p>Your neon sign comes with a remote control and dimmer, allowing you to easily adjust the brightness and light effects.<br/> <br/><strong>- Standard neon (1 color):</strong> Simply turn the light on or off and adjust the brightness.<br/> <br/><strong>- RGB option: </strong>Choose a fixed color or let the colors transition smoothly.<br/> <br/>That way, you’ll always have the perfect atmosphere at your fingertips!</p>",
+            "tab_association": "3"
           }
         },
         "accordion_item_VFLdUq": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": " Vad gör jag om jag inte vill eller kan borra i väggen?",
-            "accordion_content": "<p>Inga problem! Vi erbjuder flera alternativ:</p><ul><li><strong>Takmontering:</strong> På begäran skickar vi ett gratis upphängningssystem med kablar.</li><li><strong>Placering på yta:</strong> Ställ din neon på en hylla eller ett bord. Vi erbjuder även en <strong>fristående ram</strong>.</li><li><strong>Dubbelsidig tejp:</strong> I vissa fall kan du använda stark 3M tejp, förutsatt att ytan är slät och lämplig.</li></ul>",
+            "accordion_title": "Is there a warranty on my neon sign?",
+            "accordion_content": "<p>At Neonsfeer, we offer a 2-year warranty on all our neon signs. If any issues arise, we will provide a suitable solution, such as repair or replacement.</p>",
             "tab_association": "4"
           }
         },
         "accordion_item_eJDTBr": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Hur använder jag fjärrkontrollen och dimmern?",
-            "accordion_content": "<p>Din neonskylt levereras med en fjärrkontroll och dimmer, så att du enkelt kan justera ljusstyrkan och ljuseffekterna.</p><ul><li><strong>Standard neon (1 färg):</strong> Slå av/på och justera ljusstyrkan.</li><li><strong>RGB-option:</strong> Välj en fast färg eller låt färgerna växla automatiskt.</li></ul><p>Så skapar du alltid den perfekta stämningen!</p>",
+            "accordion_title": "Why choose Neonsfeer?",
+            "accordion_content": "<p><strong>✓ Over 8,150 satisfied customers:</strong> We take pride in the trust of over 8,150 happy customers who have chosen us for their neon needs. Our goal is always to exceed expectations and provide our customers with a perfect experience, from design to delivery.<br/><br/><strong>✓ Price/Quality ratio:</strong> At Neonsfeer, affordability and quality go hand in hand. You get the best of both worlds.<br/><br/><strong>✓ Extended warranty:</strong> Enjoy peace of mind with a 24-month warranty that ensures your purchase is protected.<br/><br/><strong>✓ Superior durability:</strong> By using advanced LED technology, Neonsfeer neon signs are not only lighter but also more durable than their traditional glass counterparts.<br/><br/><strong>✓ Environmentally friendly choice:</strong> Make a green choice! Neonsfeer's LED neons are energy-efficient and have an impressive lifespan of over 100,000 hours.<br/><br/><strong>✓ Safety first:</strong> Say goodbye to the dangers of overheating and breakable glass. Neonsfeer LED neons are designed with your safety as the top priority.<br/><br/><strong>✓ Hassle-free installation:</strong> Set up your neon sign in no time. It's quick and easy.<br/><br/><strong>✓ Ultimate control:</strong> Personalize your neon experience with the included remote control. From on/off and adjusting brightness to changing flash speeds, you have full control.</p>",
             "tab_association": "4"
-          }
-        },
-        "accordion_item_4yVYxh": {
-          "type": "accordion_item",
-          "settings": {
-            "accordion_title": "Har min neonskylt garanti?",
-            "accordion_content": "<p>Ja! Vi erbjuder 2 års garanti på alla våra neonskyltar. Om problem uppstår, ser vi till att du får en lösning – reparation eller utbyte</p>",
-            "tab_association": "5"
-          }
-        },
-        "accordion_item_kPV6yM": {
-          "type": "accordion_item",
-          "settings": {
-            "accordion_title": "Varför välja Neonsfeer?",
-            "accordion_content": "<p>✓ <strong>Över 8 150 nöjda kunder:</strong> Vi är stolta över förtroendet från tusentals kunder som valt oss för sina neonbehov. Vårt mål är alltid att överträffa förväntningarna och ge en perfekt upplevelse – från design till leverans.</p><p>✓ <strong>Bästa pris/kvalitet-förhållande:</strong> På Neonsfeer får du både prisvärdhet och hög kvalitet – det bästa av två världar.</p><p>✓ <strong>Utökad garanti: </strong>Köp med trygghet! 24 månaders garanti säkerställer att din investering är skyddad.</p><p>✓ <strong>Överlägsen hållbarhet</strong>: Med avancerad LED-teknologi är våra neonskyltar lättare och mer hållbara än traditionella glaskyltar.</p><p>✓ <strong>Miljövänligt val:</strong> Gör ett grönt val! Våra LED-neonskyltar är energieffektiva och har en livslängd på över 100 000 timmar.</p><p>✓ <strong>Säkerhet först:</strong> Ingen risk för överhettning eller sprucket glas. Våra LED-neonskyltar är utvecklade med din säkerhet i fokus.</p><p>✓ <strong>Enkel installation:</strong> Montera din neonskylt snabbt och enkelt – utan krångel.</p><p>✓ <strong>Full kontroll:</strong> Anpassa din neonupplevelse med den medföljande fjärrkontrollen. Justera ljusstyrkan, växla färger och ändra blinkhastighet – du har full kontroll!</p>",
-            "tab_association": "5"
           }
         }
       },
       "block_order": [
         "tab_3n8cFR",
         "tab_VXcJ3a",
-        "tab_cVCCFD",
         "tab_qkVCfH",
         "tab_46zapw",
         "accordion_item_jQ3QfE",
@@ -685,15 +663,13 @@
         "accordion_item_tfGNf6",
         "accordion_item_bMcKgB",
         "accordion_item_VFLdUq",
-        "accordion_item_eJDTBr",
-        "accordion_item_4yVYxh",
-        "accordion_item_kPV6yM"
+        "accordion_item_eJDTBr"
       ],
       "settings": {
         "add_class": "",
-        "title": "Vanliga frågor (FAQ)",
-        "description": "Se våra vanliga frågor för svar om specifika produktegenskaper, användning och underhåll",
-        "btn": "Visa alla frågor"
+        "title": "Frequently Asked Questions",
+        "description": "View our frequently asked questions for answers about specific product features, use and maintenance.",
+        "btn": "View all questions"
       }
     },
     "image_with_text_sale_page_pDGEnC": {
@@ -704,12 +680,12 @@
         "image_position": "right",
         "image_width": 50,
         "title": "",
-        "content": "Beställ din anpassade neon",
-        "list_one": "<p>Levereras inom 8 arbetsdagar</p>",
-        "list_two": "<p>IInkluderar en <strong>gratis </strong>fjärrkontroll</p>",
-        "list_three": "<p>Nu med <strong>fri frakt</strong></p>",
+        "content": "Order Your Custom Neon",
+        "list_one": "<p>Delivered in <strong>8 working days</strong></p>",
+        "list_two": "<p>Includes a <strong>free</strong> remote control</p>",
+        "list_three": "<p>Now with <strong>free shipping</strong></p>",
         "add_to_cart_btn_text": "",
-        "button_text": "Begär en offert",
+        "button_text": "Request a quote",
         "button_link": "#",
         "button_text_2": "",
         "button_link_2": "shopify://pages/contact",
