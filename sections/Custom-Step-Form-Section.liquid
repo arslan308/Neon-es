@@ -116,7 +116,8 @@
                         <div class="jfUpload-button-container">
                           <input type="file" name="logo" id="fileInput" accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp">
                           <div class="jfUpload-button">
-                            {{ section.settings.uploadContent }}
+                            <div class="jfUpload-heading forDesktop">{{ section.settings.uploadContent }}</div>
+                            <div class="jfUpload-heading forMobile">{{ section.settings.uploadContent }}</div>
                           </div>
                         </div>
                       </div>
@@ -295,7 +296,8 @@
                         <div class="jfUpload-button-container">
                           <input type="file" name="bglogo" id="bgfileInput" accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp">
                           <div class="jfUpload-button">
-                            {{ section.settings.uploadContent }}
+                            <div class="jfUpload-heading forDesktop">{{ section.settings.uploadContent2 }}</div>
+                            <div class="jfUpload-heading forMobile">{{ section.settings.uploadContent2 }}</div>
                           </div>
                         </div>
                       </div>
@@ -929,11 +931,11 @@ function bgHandleFilePreview(file) {
             cache: false,
             processData: false,
             success: function(response) {
-              console.log(response); // The uploaded image details
-              console.log('Uploaded URL:', response.secure_url); // Direct image URL
+              console.log(response); 
+              console.log('Uploaded URL:', response.secure_url); 
               $('#'+id).val(response.secure_url);
                 if (id == "bgurl") {
-                    addRecord('{{ section.settings.webhook2 }}'); ///webhook 2
+                    addRecord('{{ section.settings.webhook2 }}'); 
                 } else {
                     addRecord();
                   }
@@ -1131,10 +1133,16 @@ newCountdown();
 
   },
   {
-    "type": "html",
+    "type": "text",
     "id": "uploadContent",
     "label": "Upload content",
-    "default":"<div class='jfUpload-heading forDesktop'>Drag and drop files here 1</div><div class='jfUpload-heading forMobile'>Choose a file</div>"
+    "default":"Choose a file" 
+  },
+  {
+    "type": "text",
+    "id": "uploadContent2",
+    "label": "Upload content step 6",
+    "default":"Choose a file"
   },
   {
     "type": "text",
