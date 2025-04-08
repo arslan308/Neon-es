@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "custom_step_form_section_TNdRMm": {
       "type": "Custom-Step-Form-Section",
@@ -28,27 +28,19 @@
         },
         "image_QaDCwc": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T194914.527.png"
-          }
+          "settings": {}
         },
         "image_z9N7Eq": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T194921.880.png"
-          }
+          "settings": {}
         },
         "image_WrUFQm": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T195316.168.png"
-          }
+          "settings": {}
         },
         "image_nLtXzG": {
           "type": "Image",
-          "settings": {
-            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T195121.731.png"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -61,13 +53,17 @@
       ],
       "settings": {
         "formid": "250964263877470",
+        "webhook1": "https://hook.eu1.make.com/902w45w0qi3cgwmwnbs449wpe6r64fmh",
+        "webhook2": "https://hook.eu1.make.com/7wngere2qtprr7t16kwi68clbr56o8ly",
         "sectionTitle": "Get a free neon design + price",
+        "validfiles": "Valid File Types",
         "required": "This field is required",
         "emailformat": "Please enter correct email",
         "phoneformat": "Phone no isn't correct",
         "terms": "By submitting, you agree to Neonsfeer’s terms and conditions.",
         "terms_error": "Please Agree to Term & Conditions",
         "defaultcountry": "us",
+        "preferred_countries": "us,gb,ca,nz",
         "skip": "Continue without photo",
         "MainList": "<li>\n<strong>Free </strong>neon design\n</li>\n<li>Ready in <strong>3 hours</strong>\n</li>\n<li>\n<strong>8-day</strong> delivery\n</li>",
         "Video_url": "https://cdn.shopify.com/videos/c/o/v/d120017a3af34aa087840bcad5240acb.mp4",
@@ -76,6 +72,7 @@
         "uploadContent": "<div class=\"jfUpload-heading forDesktop\">Choose file/logo...</div>\n<div class=\"jfUpload-heading forMobile\">Choose file/logo...</div>",
         "Button1": "Complete request",
         "QouteText": "Get your custom neon sign by",
+        "timer_text": "Still <b id=\"new_timer\">00:00:00</b> valid.",
         "customer_review": "<p>Rated <b>4.8/5</b> 1,000+ happy customer</p>",
         "delivery_date": "{month} {day}",
         "tabTitle2": "2. Your details",
@@ -93,7 +90,6 @@
         "uploadPhotoFormfree": "<div class=\"file_heading\">Upload photo</div>\n<label for=\"wall_image\">Drag or <span>choose files</span></label>",
         "uploadPhotobuttonfree": "Add my wall or background",
         "formButtonQoute": "<div class=\"box_head\">Your neon design will appear here within:</div>\n<div class=\"time\">\n  <span id=\"timer\">2:59</span> hours\n</div>",
-        "formButtonQouteImage": "shopify://shop_images/accae7d9ba33cbcd362459e523457bfe.webp",
         "timerHmtl": "Upload today and receive your logo on {month} {day}. Still <b id=\"new_timer\">00:00:00</b> valid."
       }
     },
@@ -233,55 +229,55 @@
         "image_with_review_EBjEKc": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Kevin Liam",
-            "user-discription": "\"The neon sign totally transformed our diner with a perfect vintage vibe!\nThe colors are vibrant without overpowering the decor.\nIt genuinely looks even cooler in person than in pictures!\"",
+            "user-name": "Casillas World SL",
+            "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_14.png?v=1741619607"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_7901e000-a633-440f-9949-b9c6f8a09619.png?v=1741887248"
           }
         },
         "image_with_review_ke3UR6": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Codigital",
-            "user-discription": "\"At CoDigital, we wanted something unique for our office, and the neon sign from Neonsfeer was exactly what we were looking for. Sleek design, top quality, and fast delivery. Our workspace now has that extra touch of flair!\"",
+            "user-name": "Point Açaí",
+            "user-discription": "\"La combinación de amarillo, verde y azul crea un ambiente tropical que encaja perfectamente con el aspecto fresco y moderno. ¡Recibimos muchos elogios de la gente por nuestro letrero!\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/DSC04063_1_2048x2048.jpg?v=1730736993"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Neon_text_designs_1.png?v=1741899422"
           }
         },
         "image_with_review_kKVgR4": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Corner Bar",
-            "user-discription": "\"Love the vibe this sign gives our bar area.\nIt lights up beautifully and catches everyone's attention. Looks even better than we expected from the pictures.\nDefinitely adds a modern and welcoming feel to our space!\"",
+            "user-name": "Codigital",
+            "user-discription": "\"En CoDigital, queríamos algo único para nuestra oficina, y el letrero de neón de Neonsfeer fue exactamente lo que buscábamos. Diseño elegante, calidad superior y entrega rápida. ¡Nuestro espacio de trabajo ahora tiene ese toque extra de estilo!\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_13.png?v=1741618639"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/DSC04063_1_2048x2048_1.webp?v=1741893612"
           }
         },
         "image_with_review_6kFcy4": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Daniel",
-            "user-discription": "\"Since we added the neon sign to our lounge area, the space immediately feels more fresh and welcoming. The gentle glow perfectly complements our decor, giving a stylish and modern touch that's great for relaxing or casual meetings.\"",
+            "user-name": "Santiago",
+            "user-discription": "\"Desde que el neón está en nuestra sala de reuniones, el ambiente se siente inmediatamente más energético y acogedor. El sutil resplandor morado aporta una vibra moderna y creativa, perfecta para reuniones inspiradoras.\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_16.png?v=1741620171"
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
           }
         },
         "image_with_review_kUTc3a": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Jay",
-            "user-discription": "\"Ever since we put up the neon sign, our studio feels more professional and welcoming.\nThe soft glow perfectly fits the room and makes clients feel relaxed. Installation was very easy.\"",
+            "user-name": "Alejandro",
+            "user-discription": "\"El letrero de neón no solo aporta ambiente, sino que también crea esa apariencia acogedora y digna de Instagram que a nuestros invitados les encanta. La gente toma fotos, nos etiqueta y se queda un poco más de tiempo.\"",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_17.png?v=1741620511"
+            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
           }
         },
         "image_with_review_Ncw38p": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Ashley",
-            "user-discription": "\"The neon sign not only adds ambiance but also creates that cozy, professional, and calming look that our guests love. People take photos, tag us, and receive great compliments!\"",
+            "user-name": "José",
+            "user-discription": "\"Desde que añadimos el letrero de neón a nuestra zona de descanso, el espacio se siente de inmediato más fresco y acogedor. El brillo suave complementa perfectamente nuestra decoración, aportando un toque elegante y moderno, ideal para relajarse o reuniones informales.\"",
             "uplod-time": "",
-            "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_8_2_2048x2048.png?v=1712056890"
+            "image_url": "https://cdn.shopify.com/s/files/1/0719/5217/1313/files/Neon_text_designs_16_1.webp?v=1741893792"
           }
         },
         "image_with_review_rqEapE": {
@@ -307,10 +303,28 @@
         "image_with_review_RYYfjw": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Eric Williams",
-            "user-discription": "\"Since installing our neon sign, the entire space feels more professional and modern.\nThe clean white glow highlights our motto perfectly and inspires the team daily. The perfect combination of quality, atmosphere, and fast service!\"",
+            "user-name": "Ricardo Alonso",
+            "user-discription": "¡Una combinación perfecta de estilo y personalidad! El resplandor del letrero de neón en cursiva capta la atención al instante y añade un toque cálido y acogedor al espacio. El detalle de la cuchara le da un aire personal y encantador.",
             "uplod-time": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Neon_text_designs_18.png?v=1741620922"
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_79f4dc79-3ce3-4c56-be2f-41b9641ec194.png?v=1742212475"
+          }
+        },
+        "image_with_review_Ekr3V9": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Martínez",
+            "user-discription": "\"¡Esta configuración es realmente encantadora! La combinación del letrero de neón en tonos rosados y pastel, acentuada con delicados detalles florales, crea una atmósfera romántica pero vibrante. Es un punto focal impresionante que irradia alegría y festividad.\"",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_d533cc47-8780-4ac7-963d-57bcd13ac717.png?v=1741887324"
+          }
+        },
+        "image_with_review_jFiiAp": {
+          "type": "image-with-review",
+          "settings": {
+            "user-name": "Patricia Jiménez",
+            "user-discription": "El diseño elegante y los colores vibrantes lo convierten en un punto focal perfecto. El resplandor nítido en azul y amarillo crea un contraste impactante contra la rústica pared de ladrillo, añadiendo un toque moderno al entorno natural.",
+            "uplod-time": "",
+            "image_url": "https://cdn.shopify.com/s/files/1/0717/3465/7339/files/Image_cade6bda-3006-4347-88dc-8f759125b226.png?v=1742212321"
           }
         }
       },
@@ -323,11 +337,13 @@
         "image_with_review_Ncw38p",
         "image_with_review_rqEapE",
         "image_with_review_7eD6wY",
-        "image_with_review_RYYfjw"
+        "image_with_review_RYYfjw",
+        "image_with_review_Ekr3V9",
+        "image_with_review_jFiiAp"
       ],
       "settings": {
         "spacing": "",
-        "title": "Happy customers"
+        "title": "Lo que dicen nuestros clientes"
       }
     },
     "image_card_custom_form_YEp9Hf": {
@@ -337,7 +353,6 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"9\" height=\"24\" viewbox=\"0 0 9 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.876 0.0399981V23.5H4.116V5.004L0.75 7.214V2.624L4.592 0.0399981H8.876Z\" fill=\"white\"></path>\n</svg>",
-            "upload_image": "shopify://shop_images/Rectangle_126.jpg",
             "card_title": "Upload your logo &amp; fill out the <span>form</span>",
             "card_content": "Upload your logo and complete our quick 1-minute form. You’ll receive a free neon design and pricing details within 3 hours.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/ce4dd3b12b8f4a43a25a9cfebfa61297.mp4"
@@ -347,7 +362,6 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"15\" height=\"25\" viewbox=\"0 0 15 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.718 20.488V24.5H0.234V21.44L8.088 12.192C9.55 10.492 10.264 9.064 10.264 7.534C10.264 5.63 8.87 4.678 7.34 4.678C5.742 4.678 4.552 5.664 4.416 7.534H0.2C0.2 3.488 3.532 0.733998 7.578 0.733998C11.794 0.733998 14.99 3.658 14.99 7.534C14.99 10.628 12.95 13.042 11.454 14.81L6.626 20.488H14.718Z\" fill=\"white\"></path>\n</svg>",
-            "upload_image": "shopify://shop_images/Rectangle_127.jpg",
             "card_title": "Get a <span>free</span> neon design within <span>3 hours</span>",
             "card_content": "Our team will create a custom neon design using your logo—and even include your wall if you uploaded a photo—for free, within just 3 hours.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/716afc504ddf4100be096956282d6349.mp4"
@@ -357,7 +371,6 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"17\" height=\"25\" viewbox=\"0 0 17 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M6.096 14.402V10.39H7.83C9.768 10.39 11.094 9.37 11.094 7.398C11.094 5.834 9.904 4.678 8.17 4.678C6.504 4.678 5.45 5.732 5.246 7.194H1.03C1.2 3.352 4.362 0.733998 8.408 0.733998C12.692 0.733998 15.82 3.692 15.82 7.194C15.82 9.846 14.188 11.478 12.624 12.328C14.63 13.314 16.16 15.15 16.16 17.938C16.16 21.746 13.508 24.806 8.68 24.806C3.716 24.806 0.894 22.018 0.724 18.21H4.906C5.144 19.706 6.266 20.794 8.374 20.794C10.278 20.794 11.434 19.434 11.434 17.7C11.434 15.626 10.244 14.402 7.83 14.402H6.096Z\" fill=\"white\"></path>\n</svg>",
-            "upload_image": "shopify://shop_images/Rectangle_128.png",
             "card_title": "Place your order – delivered in <span>8 days</span>",
             "card_content": "Love the design? Place your order and receive your custom Neon Sign within 8 days. We’ll make sure it’s a perfect fit for your space.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/19630dc0f0ae4166b1d1cce0db8215e6.mp4"
@@ -367,7 +380,6 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"19\" height=\"24\" viewbox=\"0 0 19 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.83 0.0399981H14.032L6.722 16.122H11.21V10.138H15.97V16.122H18.112V20.168H15.97V23.5H11.21V20.168H0.806V16.87L8.83 0.0399981Z\" fill=\"white\"></path>\n</svg>",
-            "upload_image": "shopify://shop_images/Rectangle_128_1.jpg",
             "card_title": "Install your neon sign – takes only <span>5 minutes</span>",
             "card_content": "Your custom neon sign arrives ready to shine. It takes just 5 minutes to hang—plug it in and enjoy the glow! All installation tools are included.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/3de6221327624656b1f1bd4d40ad6e6f.mp4"
