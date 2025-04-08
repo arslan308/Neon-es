@@ -487,168 +487,176 @@
         "tab_3n8cFR": {
           "type": "tab",
           "settings": {
-            "tab_title": "Product information"
+            "tab_title": "Información del producto"
           }
         },
         "tab_VXcJ3a": {
           "type": "tab",
           "settings": {
-            "tab_title": "Delivery times & Ordering"
+            "tab_title": "Cotización y ajustes"
           }
         },
         "tab_qkVCfH": {
           "type": "tab",
           "settings": {
-            "tab_title": "Installation & Maintenance"
+            "tab_title": "Envío y pago"
           }
         },
         "tab_46zapw": {
           "type": "tab",
           "settings": {
-            "tab_title": "Warranty & Returns"
+            "tab_title": "Garantía y devoluciones"
           }
         },
         "accordion_item_jQ3QfE": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "How do I design my own neon sign?",
-            "accordion_content": "<p>Design your neon in just a few steps. Enter your desired text, choose a font, and select the right size.<br/> <br/>Click \"Add to Cart\" when you're done. Light up your space with a touch of you!</p>",
+            "accordion_title": "La vista previa en la web coincide con el producto real?",
+            "accordion_content": "<p>Sí, garantizamos precisión absoluta. Nuestros diseños de vista previa reflejan fielmente el producto final. Desde el color hasta el texto, puedes confiar en que tu neón será tal como lo imaginaste. Diseña con confianza con nosotros.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_JjJhbw": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "How much does a neon sign cost?",
-            "accordion_content": "<p>The price depends on the size, font, and any extra options you choose. You can see the price instantly in our customizer.</p>",
+            "accordion_title": "Qué colores están disponibles?",
+            "accordion_content": "<p>Nuestro diseñador selecciona los colores en función de los tonos de tu logo y lo que mejor se adapte a la estética general. Estos colores se reflejarán en el diseño de tu cotización.</p><p>Prefieres otro color? ¡Solo avísanos! Disponemos de 12 colores LED de neón:<br/><br/></p><p>Blanco, Blanco Cálido, Rosa, Rosa Claro, Azul, Azul Hielo, Turquesa, Verde, Rojo, Naranja, Amarillo y Púrpura.<br/><br/></p><p>Quieres todos los colores en un solo neón? Elige la opción RGB, que te permite cambiar los colores con el control remoto y atenuador incluidos. Esta opción tiene un costo adicional del 25%.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_CweJzh": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "My font isn’t available, what now?",
-            "accordion_content": "<p>Can’t find your desired font? No problem! Send it to us via email at info@neonsfeer.nl, and we’ll create your neon sign in your unique style.</p>",
+            "accordion_title": "Puedo usar mi logo de neón en exteriores?",
+            "accordion_content": "<p>Nuestros letreros estándar están diseñados para uso en interiores. Para exteriores, ofrecemos opciones resistentes a la intemperie con un costo adicional.</p><p>Si deseas colgar tu neón al aire libre, elige nuestra opción resistente al clima con un recargo del 20%.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_ARAezc": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "How is the size determined?",
-            "accordion_content": "<p>You choose the length, and we take care of the corresponding height. Sometimes, the height may slightly differ (1-2 cm) to keep the design well-balanced. This way, your neon sign will always look great.</p>",
+            "accordion_title": "Puedo ajustar mi cotización?",
+            "accordion_content": "<p>Sí, por supuesto! Podemos modificar tu cotización para que se adapte perfectamente a tus necesidades. Contáctanos por correo electrónico o teléfono, y estaremos encantados de ayudarte.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_R6XbfL": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Can I add extra symbols or custom designs?",
-            "accordion_content": "<p>From adjusting text to adding symbols, we’re happy to assist. Send your specific requests to info@neonsfeer.nl, and we’ll bring your neon ideas to life.</p>",
+            "accordion_title": "Puedo hacer cambios después de realizar mi pedido?",
+            "accordion_content": "<p>Una vez que realices tu pedido, comenzamos la producción de inmediato para garantizar una entrega rápida.</p><p>Si detectas un error en tu pedido, contáctanos de inmediato. Haremos todo lo posible por procesar los cambios o la cancelación antes de iniciar la producción.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_Jt3qUU": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Does the preview on the website match the actual product?",
-            "accordion_content": "<p>Expect precision. Our preview designs match the final product. From color to text, trust that we’ll align with your vision. Design with confidence with us.</p>",
+            "accordion_title": "La vista previa en el sitio web coincide con el producto real?",
+            "accordion_content": "<p>Espera precisión. Nuestras vistas previas reflejan fielmente el producto final. Desde el color hasta el texto, puedes confiar en que haremos realidad tu visión. Diseña con confianza junto a nosotros.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_tJmHy3": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "What colors are available?",
-            "accordion_content": "<p>We offer 12 LED neon colors:<br/> <br/>White, Warm White, Pink, Light Pink, Blue, Icy Blue, Turquoise, Green, Red, Orange, Yellow, and Purple.<br/> <br/>Want all colors in one neon? Choose our RGB option, which allows you to adjust the color with the included remote control and dimmer. This option is available for an additional 25% charge.</p>",
+            "accordion_title": "Qué colores están disponibles?",
+            "accordion_content": "<p>Ofrecemos 12 colores de neón LED: blanco, blanco cálido, rosa, rosa claro, azul, azul hielo, turquesa, verde, rojo, naranja, amarillo y morado. ¿Quieres todos los colores en un solo neón? Elige nuestra opción RGB, que te permite cambiar el color con el control remoto y el regulador incluidos. Esta opción tiene un costo adicional del 25%.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_VAXgy9": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Can I use my neon sign outdoors?",
-            "accordion_content": "<p>Our standard neon signs are designed for indoor use. For outdoor use, we offer weather-resistant options for an additional charge.<br/> <br/>If you want to hang your neon outdoors, choose our weather-resistant option for an extra 20%.</p>",
+            "accordion_title": "Puedo usar mi letrero de neón en exteriores?",
+            "accordion_content": "<p>Nuestros letreros de neón estándar están diseñados para uso en interiores. Para exteriores, ofrecemos opciones resistentes a la intemperie por un costo adicional. Si deseas colgar tu neón al aire libre, elige la opción resistente a la intemperie por un 20% extra.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_zpE3kD": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "What is the delivery time?",
-            "accordion_content": "<p>The delivery time is 6-8 business days from the moment of order to delivery. Need your neon sign sooner? <br/> <br/>Contact us during the ordering process, and we’ll explore the possibilities for expedited delivery.</p>",
+            "accordion_title": "Cuál es el tiempo de entrega?",
+            "accordion_content": "<p>El tiempo de entrega es de 6 a 8 días hábiles desde el momento en que realizas tu pedido hasta que lo recibes. ¿Necesitas tu letrero de neón más rápido? Contáctanos durante el proceso de compra y veremos las opciones disponibles para una entrega urgente</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_Q9gJDR": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Do you offer free shipping?",
-            "accordion_content": "<p>We offer free shipping on all our neon signs. You will receive a tracking number and benefit from premium insured shipping, ensuring your order arrives safely and hassle-free.</p>",
+            "accordion_title": "Ofrecen envío gratis?",
+            "accordion_content": "<p>Sí, ofrecemos envío gratis en todos nuestros letreros de neón. Recibirás un número de seguimiento y disfrutarás de un envío premium con seguro incluido, para que tu pedido llegue seguro y sin complicaciones</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_AjeTFV": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Can I change or cancel my order?",
-            "accordion_content": "<p>Noticed a mistake in your order? Contact us immediately. We’ll do our best to process your change or cancellation as quickly as possible, before we start production.</p>",
+            "accordion_title": "Puedo cambiar o cancelar mi pedido?",
+            "accordion_content": "<p>Notaste un error en tu pedido? Contáctanos de inmediato. Haremos todo lo posible por procesar el cambio o la cancelación antes de comenzar la producción.</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_QHPMg7": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Bulk Orders & Resellers",
-            "accordion_content": "<p>Are you a reseller or have a large order? We are open to bulk orders and resellers.<br/>Contact us at info@neonsfeer.com for custom offers and applicable pricing.</p>",
+            "accordion_title": "Pedidos al por mayor y revendedores",
+            "accordion_content": "<p>Aceptamos pedidos al por mayor y colaboramos con revendedores. Contáctanos en <a><strong>info@neonsfeer.com</strong></a> para recibir ofertas personalizadas y precios especiales.</p>",
             "tab_association": "2"
           }
         },
         "accordion_item_kFVDyc": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "How do I install my neon sign?",
-            "accordion_content": "<p>Each neon sign comes with all the necessary materials and clear instructions. Installation is quick and easy, so you can enjoy your neon sign in no time.</p>",
+            "accordion_title": "Cómo pago mi logo de neón?",
+            "accordion_content": "<p>Una vez que hayas revisado y aprobado tu cotización y diseño, podrás personalizar detalles finales como tamaño, color, punto de alimentación y longitud del cable.</p><p>Cuando estés satisfecho con el diseño, podrás realizar tu pedido a través de nuestro método de pago seguro.<br/>Recibirás una confirmación del pedido, y tu logo de neón entrará en producción de inmediato.</p>",
             "tab_association": "3"
           }
         },
         "accordion_item_EDgedG": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "What’s included in my package?",
-            "accordion_content": "<p>We provide everything you need to easily hang your neon sign on the wall:<br/><br/><strong>1.</strong> Mounting hardware<br/><strong>2.</strong> Durable adapter<br/><strong>3.</strong> Remote control<br/><strong>4.</strong> Dimmer<br/><strong>5.</strong> Transparent cable</p>",
+            "accordion_title": "Cuál es el tiempo de entrega después del pago?",
+            "accordion_content": "<p>El tiempo de entrega es de 6-8 días hábiles desde que realizas el pedido hasta la entrega.</p><p>Necesitas tu letrero de neón antes? Contáctanos durante el proceso de compra, y exploraremos opciones de envío urgente.</p>",
             "tab_association": "3"
           }
         },
         "accordion_item_tfGNf6": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "What if I don’t want to or can’t drill into my wall?",
-            "accordion_content": "<p>No problem! We offer several alternatives:<br/><br/><strong>- Ceiling mounting:</strong> Upon request, we can provide a free hanging system with cables.<br/><br/><strong>- Placing on a surface:</strong> You can place your neon on a shelf or table. We also offer an optional freestanding frame.<br/><br/><strong>- Double-sided tape:</strong> In some cases, you can use strong 3M double-sided tape, as long as the surface is smooth and suitable.<br/><br/>Need advice on the best option? Feel free to reach out!</p>",
+            "accordion_title": "Ofrecen envío gratuito?",
+            "accordion_content": "<p>Sí! Ofrecemos envío gratuito en todos nuestros letreros de neón.<br/>Recibirás un código de seguimiento y disfrutarás de envío asegurado premium, para que tu pedido llegue seguro y sin preocupaciones.</p>",
             "tab_association": "3"
           }
         },
         "accordion_item_bMcKgB": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "How do I use my remote control and dimmer?",
-            "accordion_content": "<p>Your neon sign comes with a remote control and dimmer, allowing you to easily adjust the brightness and light effects.<br/> <br/><strong>- Standard neon (1 color):</strong> Simply turn the light on or off and adjust the brightness.<br/> <br/><strong>- RGB option: </strong>Choose a fixed color or let the colors transition smoothly.<br/> <br/>That way, you’ll always have the perfect atmosphere at your fingertips!</p>",
+            "accordion_title": "Cómo uso el control remoto y el regulador?",
+            "accordion_content": "<p>Tu letrero de neón incluye un control remoto y un regulador de intensidad, lo que te permite ajustar fácilmente el brillo y los efectos de luz.<br/><br/> Enciende o apaga la luz y ajusta el brillo a tu gusto.<br/><br/> Elige un color fijo o activa la transición suave entre colores.</p>",
             "tab_association": "3"
           }
         },
         "accordion_item_VFLdUq": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Is there a warranty on my neon sign?",
-            "accordion_content": "<p>At Neonsfeer, we offer a 2-year warranty on all our neon signs. If any issues arise, we will provide a suitable solution, such as repair or replacement.</p>",
+            "accordion_title": "Qué sucede si mi neón llega dañado o defectuoso?",
+            "accordion_content": "<p>Hacemos todo lo posible para que tu letrero de neón llegue en perfectas condiciones. Nuestro embalaje es seguro y reduce al mínimo el riesgo de daños.</p><p>Sin embargo, si tu neón llega dañado o con defectos, contáctanos de inmediato. Nos aseguraremos de ofrecerte una solución rápida, como reparación gratuita o reemplazo</p>",
             "tab_association": "4"
           }
         },
         "accordion_item_eJDTBr": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "Why choose Neonsfeer?",
-            "accordion_content": "<p><strong>✓ Over 8,150 satisfied customers:</strong> We take pride in the trust of over 8,150 happy customers who have chosen us for their neon needs. Our goal is always to exceed expectations and provide our customers with a perfect experience, from design to delivery.<br/><br/><strong>✓ Price/Quality ratio:</strong> At Neonsfeer, affordability and quality go hand in hand. You get the best of both worlds.<br/><br/><strong>✓ Extended warranty:</strong> Enjoy peace of mind with a 24-month warranty that ensures your purchase is protected.<br/><br/><strong>✓ Superior durability:</strong> By using advanced LED technology, Neonsfeer neon signs are not only lighter but also more durable than their traditional glass counterparts.<br/><br/><strong>✓ Environmentally friendly choice:</strong> Make a green choice! Neonsfeer's LED neons are energy-efficient and have an impressive lifespan of over 100,000 hours.<br/><br/><strong>✓ Safety first:</strong> Say goodbye to the dangers of overheating and breakable glass. Neonsfeer LED neons are designed with your safety as the top priority.<br/><br/><strong>✓ Hassle-free installation:</strong> Set up your neon sign in no time. It's quick and easy.<br/><br/><strong>✓ Ultimate control:</strong> Personalize your neon experience with the included remote control. From on/off and adjusting brightness to changing flash speeds, you have full control.</p>",
+            "accordion_title": "Mi letrero de neón tiene garantía?",
+            "accordion_content": "<p>Sí, en Neonsfeer, ofrecemos 2 años de garantía en todos nuestros letreros de neón.<br/>Si surge algún problema, nos encargaremos de encontrar la mejor solución, ya sea reparación o reemplazo.</p>",
+            "tab_association": "4"
+          }
+        },
+        "accordion_item_yHJKjp": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Por qué elegir Neonsfeer?",
+            "accordion_content": "<p>✓ <strong>Más de 8,150 clientes satisfechos</strong>: Nos enorgullece la confianza de miles de clientes. Nuestro objetivo es superar tus expectativas en cada pedido.</p><p>✓ <strong>Mejor relación calidad-precio</strong>: En Neonsfeer, combinamos asequibilidad y calidad, para que obtengas lo mejor de ambos mundos.</p><p>✓ <strong>Garantía extendida</strong>: Compra con confianza con nuestra garantía de 24 meses.</p><p>✓ <strong>Durabilidad superior</strong>: Gracias a nuestra avanzada tecnología LED, nuestros neones son más ligeros y resistentes que los de vidrio.</p><p>✓ <strong>Opción ecológica</strong>: ¡Haz una elección sostenible! Los neones LED de Neonsfeer son eficientes en consumo de energía y tienen una vida útil de más de 100,000 horas.</p><p>✓ <strong>Seguridad ante todo</strong>: <br/>Olvídate del riesgo de sobrecalentamiento y vidrios frágiles. Nuestros neones LED están   diseñados con la seguridad como prioridad.</p><p>✓ <strong>Instalación sin complicaciones</strong>: Monta tu neón rápida y fácilmente, sin problemas.</p><p>✓ <strong>Control total</strong>: Personaliza tu experiencia con el control remoto incluido. Desde encender/apagar y ajustar el brillo hasta cambiar los efectos de luz, tendrás el control total.</p>",
             "tab_association": "4"
           }
         }
@@ -675,12 +683,13 @@
         "accordion_item_tfGNf6",
         "accordion_item_bMcKgB",
         "accordion_item_VFLdUq",
-        "accordion_item_eJDTBr"
+        "accordion_item_eJDTBr",
+        "accordion_item_yHJKjp"
       ],
       "settings": {
         "add_class": "",
-        "title": "Frequently Asked Questions",
-        "description": "View our frequently asked questions for answers about specific product features, use and maintenance.",
+        "title": "Preguntas Frecuentes (FAQ)",
+        "description": "Consulta nuestras preguntas frecuentes para encontrar respuestas sobre las características específicas de los productos, su uso y mantenimiento",
         "btn": "View all questions"
       }
     },
