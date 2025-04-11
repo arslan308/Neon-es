@@ -28,19 +28,27 @@
         },
         "image_QaDCwc": {
           "type": "Image",
-          "settings": {}
+          "settings": {
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T203314.250_df79e633-a3c7-49c6-a325-0c4ace14e30d.png"
+          }
         },
         "image_z9N7Eq": {
           "type": "Image",
-          "settings": {}
+          "settings": {
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T203455.208.png"
+          }
         },
         "image_WrUFQm": {
           "type": "Image",
-          "settings": {}
+          "settings": {
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T203524.539.png"
+          }
         },
         "image_nLtXzG": {
           "type": "Image",
-          "settings": {}
+          "settings": {
+            "img-card": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-03-13T215305.628.png"
+          }
         }
       },
       "block_order": [
