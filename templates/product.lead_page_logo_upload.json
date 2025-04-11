@@ -362,8 +362,8 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"9\" height=\"24\" viewbox=\"0 0 9 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.876 0.0399981V23.5H4.116V5.004L0.75 7.214V2.624L4.592 0.0399981H8.876Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Upload your logo &amp; fill out the <span>form</span>",
-            "card_content": "Upload your logo and complete our quick 1-minute form. You’ll receive a free neon design and pricing details within 3 hours.",
+            "card_title": "Sube tu logo y completa el <span>formulario</span>",
+            "card_content": "Sube tu logo y completa nuestro breve formulario de 1 minuto. Recibirás tu diseño de neón gratuito y el presupuesto en un plazo de 3 horas.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/ce4dd3b12b8f4a43a25a9cfebfa61297.mp4"
           }
         },
@@ -371,8 +371,8 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"15\" height=\"25\" viewbox=\"0 0 15 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M14.718 20.488V24.5H0.234V21.44L8.088 12.192C9.55 10.492 10.264 9.064 10.264 7.534C10.264 5.63 8.87 4.678 7.34 4.678C5.742 4.678 4.552 5.664 4.416 7.534H0.2C0.2 3.488 3.532 0.733998 7.578 0.733998C11.794 0.733998 14.99 3.658 14.99 7.534C14.99 10.628 12.95 13.042 11.454 14.81L6.626 20.488H14.718Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Get a <span>free</span> neon design within <span>3 hours</span>",
-            "card_content": "Our team will create a custom neon design using your logo—and even include your wall if you uploaded a photo—for free, within just 3 hours.",
+            "card_title": "Recibe tu diseño de neón <span>gratis</span> en <span>3 horas</span>",
+            "card_content": "Nuestro equipo creará un diseño personalizado de neón utilizando tu logo, e incluirá tu pared si has subido una foto, de manera gratuita, en solo 3 horas.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/716afc504ddf4100be096956282d6349.mp4"
           }
         },
@@ -380,8 +380,8 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"17\" height=\"25\" viewbox=\"0 0 17 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M6.096 14.402V10.39H7.83C9.768 10.39 11.094 9.37 11.094 7.398C11.094 5.834 9.904 4.678 8.17 4.678C6.504 4.678 5.45 5.732 5.246 7.194H1.03C1.2 3.352 4.362 0.733998 8.408 0.733998C12.692 0.733998 15.82 3.692 15.82 7.194C15.82 9.846 14.188 11.478 12.624 12.328C14.63 13.314 16.16 15.15 16.16 17.938C16.16 21.746 13.508 24.806 8.68 24.806C3.716 24.806 0.894 22.018 0.724 18.21H4.906C5.144 19.706 6.266 20.794 8.374 20.794C10.278 20.794 11.434 19.434 11.434 17.7C11.434 15.626 10.244 14.402 7.83 14.402H6.096Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Place your order – delivered in <span>8 days</span>",
-            "card_content": "Love the design? Place your order and receive your custom Neon Sign within 8 days. We’ll make sure it’s a perfect fit for your space.",
+            "card_title": "Haz tu pedido: entrega en <span>8 días </span>",
+            "card_content": "¿Te gusta el diseño? Haz tu pedido y recibe tu neón personalizado en 8 días. Nos aseguraremos de que encaje perfectamente en tu espacio.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/19630dc0f0ae4166b1d1cce0db8215e6.mp4"
           }
         },
@@ -389,8 +389,8 @@
           "type": "card",
           "settings": {
             "number": "<svg width=\"19\" height=\"24\" viewbox=\"0 0 19 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.83 0.0399981H14.032L6.722 16.122H11.21V10.138H15.97V16.122H18.112V20.168H15.97V23.5H11.21V20.168H0.806V16.87L8.83 0.0399981Z\" fill=\"white\"></path>\n</svg>",
-            "card_title": "Install your neon sign – takes only <span>5 minutes</span>",
-            "card_content": "Your custom neon sign arrives ready to shine. It takes just 5 minutes to hang—plug it in and enjoy the glow! All installation tools are included.",
+            "card_title": "Instala tu neón: solo tardarás <span>5 minutos</span>",
+            "card_content": "Tu neón personalizado llega listo para brillar. Solo tardarás 5 minutos en colgarlo—conéctalo y disfruta del brillo. Incluye todas las herramientas necesarias para su instalación.",
             "video_url": "https://cdn.shopify.com/videos/c/o/v/3de6221327624656b1f1bd4d40ad6e6f.mp4"
           }
         }
@@ -403,7 +403,7 @@
       ],
       "settings": {
         "add_class": "",
-        "title": "This is how it works",
+        "title": "Así es como funciona",
         "slide_show": 4
       }
     },
