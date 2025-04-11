@@ -434,37 +434,37 @@
         "youtube_video_tY4DiC": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/Y_VktCCtSjE?si=Jp95tz0A87yHWynv"
+            "video": "https://www.youtube.com/embed/bdz7VU7KPb4"
           }
         },
         "youtube_video_k3B9gf": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/D_rUmnRczuw?si=l8vJe8aiB-f1HjJb"
+            "video": "https://www.youtube.com/embed/aIzs8V6Xnv8"
           }
         },
         "youtube_video_Bdhych": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/n5HSjoie2T4"
+            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
           }
         },
         "youtube_video_ehRknR": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/hSswhCcLxmw?si=83D8UTCrXuA4vkG2"
+            "video": "https://www.youtube.com/embed/Y_VktCCtSjE?si=Jp95tz0A87yHWynv"
           }
         },
         "youtube_video_eae9FY": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/R7u1pzMz2Xo?si=BW4kLhHAB7AHIHyO"
+            "video": "https://www.youtube.com/embed/D_rUmnRczuw?si=l8vJe8aiB-f1HjJb"
           }
         },
         "youtube_video_bFH7Wh": {
           "type": "youtube-video",
           "settings": {
-            "video": "https://www.youtube.com/embed/nQ3CLUjMPXE?si=CmqxVsmXjn3aykYz"
+            "video": "https://www.youtube.com/embed/R7u1pzMz2Xo?si=BW4kLhHAB7AHIHyO"
           }
         },
         "youtube_video_ckCeJj": {
@@ -486,7 +486,7 @@
       ],
       "settings": {
         "spacing": "",
-        "title": "Client videos",
+        "title": "Videos de clientes",
         "slide_show": 4
       }
     },
