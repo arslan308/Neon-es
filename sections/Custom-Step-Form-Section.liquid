@@ -1,29 +1,61 @@
 <link rel="stylesheet" href="{{ 'custom-steps-form-section.css' | asset_url }}">
-
+{% if template == 'product.lead_page_logo_upload' %}
+  <style>
+        section.section.image-with-text-sale-page.image_text_sec{background: white;}
+        .img-card-custom-form.section{background: white;}
+        .custom_steps_form{background: white; padding: 15px 0 60px;}
+        .logo-list-section{background: white;}
+        .step_form_inner .form-input-wide h4{
+          font-size: 18px;
+          font-weight: 700;
+          max-width: 100%;
+          line-height: 23px;
+          margin-bottom: 16px;
+        }
+        .video_potion .video_potion-for-desktop{
+          display: block;
+        }
+    @media screen and (max-width: 600px) {
+      .video_potion .video_potion-for-desktop{
+          display: none;
+        }
+        .video_potion .video_potion-for-mobile{
+          display: block !important;
+        }
+    }
+  </style>
+{% endif %}
 <div class="custom_steps_form">
   <div class="container">
     <div class="step_form_inner">
-      {% comment %}
-        <div class="request_qu">
-          {% if section.settings.sectionTitle != blank %}
-          <div class="heading_top">{{section.settings.sectionTitle}}</div>
-          {%endif %}
-          <ul>
-            {% if section.settings.MainList != blank %}
-                {{ section.settings.MainList }}
-            {% endif %}
-          </ul>
-        </div>
-      {% endcomment %}
       <div class="step_form_row">
         <div class="video_part">
           <div class="video_potion">
-            {% if section.settings.Video_url != blank %}
-              <video class="img-fluid" style="width: 100%;" muted playsinline autoplay>
+            <div class="video_potion-for-desktop">
+              <video class="img-fluid desktop-video" style="width: 100%;" muted playsinline autoplay>
                 <source src="{{ section.settings.Video_url }}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-            {% endif %}
+            </div>
+            <div class="video_potion-for-mobile" style="display:none;">
+              {% if section.settings.Mobile_video_url != blank %}
+                <video class="img-fluid mobile-video" style="width: 100%;" muted playsinline autoplay>
+                  <source src="{{ section.settings.Mobile_video_url }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              {% else %}
+                <video
+                  class="img-fluid desktop-video fallback-on-mobile"
+                  style="width: 100%;"
+                  muted
+                  playsinline
+                  autoplay
+                >
+                  <source src="{{ section.settings.Video_url }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              {% endif %}
+            </div>
           </div>
           <div
             class="timer_box"
@@ -55,19 +87,15 @@
                   -webkit-print-color-adjust: exact !important;
                   color-adjust: exact !important;
                 }
-
                 .form-section {
                   display: inline !important
                 }
-
                 .form-pagebreak {
                   display: none !important
                 }
-
                 .form-section-closed {
                   height: auto !important
                 }
-
                 .page-section {
                   position: initial !important
                 }
@@ -89,8 +117,6 @@
               href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.57597"
             >
 
-            <style type="text/css" id="form-designer-style"></style>
-
             <form class="jotform-form">
               <input type="hidden" name="bgurl" id="bgurl">
               <input type="hidden" name="logourl" id="logourl">
@@ -99,6 +125,7 @@
               <input type="hidden" name="field" id="field">
               <input type="hidden" name="gclid" id="gclid">
               <input type="hidden" name="fbclid" id="fbclid">
+              <input type="hidden" name="msclkid" id="msclkid">
 
               <div role="main" class="form-all">
                 <ul class="form-section page-section step-1" date-step="1">
@@ -114,15 +141,22 @@
                     <div id="cid_3" class="form-input-wide drag-drop-area">
                       <div class="jfUpload-wrapper">
                         <div class="jfUpload-button-container">
-                          <input type="file" name="logo" id="fileInput" accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp">
+                          <input
+                            type="file"
+                            name="logo"
+                            id="fileInput"
+                            accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp"
+                          >
                           <div class="jfUpload-button">
-                            <div class="jfUpload-heading forDesktop">{{ section.settings.uploadContent }}</div>
-                            <div class="jfUpload-heading forMobile">{{ section.settings.uploadContent }}</div>
+                            <div class="jfUpload-heading">{{ section.settings.uploadContent }}</div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div  class="file-types">{{ section.settings.validfiles }}: JPG, JPEG, PNG, EPS, PDF, AI, SVG, HEIC, WEBP, PSD</div>
+                    <div id="file-error" style="color: red; margin-top: 5px; font-size: 11px;"></div>
+                    <div class="file-types">
+                      {{ section.settings.validfiles }}: JPG, JPEG, PNG, EPS, PDF, AI, SVG, HEIC, WEBP, PSD
+                    </div>
                     <div class="file-required">{{ section.settings.required }}*</div>
                   </li>
 
@@ -294,14 +328,21 @@
                       {{ section.settings.freeSampleFormDescription }}
                       <div class="jfUpload-wrapper">
                         <div class="jfUpload-button-container">
-                          <input type="file" name="bglogo" id="bgfileInput" accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp">
+                          <input
+                            type="file"
+                            name="bglogo"
+                            id="bgfileInput"
+                            accept=".jpg, .jpeg, .png, .svg, .eps, .pdf, .ai, .heic, .psd, .webp"
+                          >
                           <div class="jfUpload-button">
-                            <div class="jfUpload-heading forDesktop">{{ section.settings.uploadContent2 }}</div>
-                            <div class="jfUpload-heading forMobile">{{ section.settings.uploadContent2 }}</div>
+                            <div class="jfUpload-heading">{{ section.settings.uploadContent2 }}</div>
                           </div>
                         </div>
                       </div>
-                       <div  class="file-types">{{ section.settings.validfiles }}: JPG, JPEG, PNG, EPS, PDF, AI, SVG, HEIC, WEBP, PSD</div>
+                      <div id="file-error-2" style="color: red; margin-top: 5px; font-size: 11px;"></div>
+                      <div class="file-types">
+                        {{ section.settings.validfiles }}: JPG, JPEG, PNG, EPS, PDF, AI, SVG, HEIC, WEBP, PSD
+                      </div>
                       <div class="bg-file-required">{{ section.settings.required }}*</div>
                       <div id="bg-file-preview"></div>
 
@@ -347,6 +388,7 @@
                                     class="img-fluid"
                                     src="{{ block.settings.img-card | img_url:'master' }}"
                                     alt="Image"
+                                    width="auto"
                                   >
                                 </div>
                               {% endif %}
@@ -395,41 +437,60 @@
   </div>
 </div>
 
-{% if template == 'product.lead_page_logo_upload' %}
-  <style>
-    section.section.image-with-text-sale-page.image_text_sec{background: white;}
-    .img-card-custom-form.section{background: white;}
-    .custom_steps_form{background: white; padding: 15px 0 60px;}
-    .logo-list-section{background: white;}
-    .step_form_inner .form-input-wide h4{
-      font-size: 18px;
-      font-weight: 700;
-      max-width: 100%;
-      line-height: 23px;
-      margin-bottom: 16px;
-    }
-  </style>
-{% endif %}
 <script>
-    $(document).ready(function () {
+document.getElementById('fileInput').addEventListener('change', function () {
+  const file = this.files[0];
+  const errorContainer = document.getElementById('file-error');
+  if (!file) return;
+  const fileSizeKB = file.size / 1024;
+  const fileSizeMB = fileSizeKB / 1024;
+
+  if (fileSizeKB < 1) {
+    errorContainer.textContent = "{{ section.settings.filesizemin }}";
+    this.value = '';
+  } else if (fileSizeMB > 20) {
+    errorContainer.textContent = "{{ section.settings.filesizemax }}";
+    this.value = '';
+  } else {
+    errorContainer.textContent = '';
+    console.log('File is valid:', file.name, `${fileSizeMB.toFixed(2)} MB`);
+  }
+});
+
+$(document).ready(function () {
     const dropArea = $('#cid_3');
     const fileInput = $('[name="logo"]');
+    const errorContainer = $('<div id="file-error" style="color:red; margin-top:5px; font-size: 11px;"></div>');
+    dropArea.after(errorContainer);
 
-    // Highlight area when file is dragged over
+    function validateFileSize(file) {
+        const sizeKB = file.size / 1024;
+        const sizeMB = sizeKB / 1024;
+
+        if (sizeKB < 1) {
+            errorContainer.text("{{ section.settings.filesizemin }}");
+            return false;
+        } else if (sizeMB > 20) {
+            errorContainer.text("{{ section.settings.filesizemax }}");
+            return false;
+        } else {
+            errorContainer.text(""); // Clear any error
+            return true;
+        }
+    }
+
     dropArea.on('dragover', function (event) {
-        event.preventDefault(); // Prevent default behavior
+        event.preventDefault();
         event.stopPropagation();
-        $(this).addClass('drag-over'); // Add CSS class for styling
+        $(this).addClass('drag-over');
     });
 
-    // Remove highlight when dragging out
     dropArea.on('dragleave', function (event) {
         event.preventDefault();
         event.stopPropagation();
         $(this).removeClass('drag-over');
     });
 
-    // Handle file drop
     dropArea.on('drop', function (event) {
         event.preventDefault();
         event.stopPropagation();
@@ -437,43 +498,59 @@
 
         let files = event.originalEvent.dataTransfer.files;
         if (files.length > 0) {
-            fileInput[0].files = files; // Assign files to input
-            console.log('Files dropped:', files);
-            handleFilePreview(files[0]);
+            const file = files[0];
+            if (validateFileSize(file)) {
+                fileInput[0].files = files;
+                console.log('Files dropped:', file);
+                handleFilePreview(file);
+            } else {
+                fileInput.val('');
+            }
         }
     });
 
-    // Click event to open file input
     dropArea.on('click', function (event) {
-      event.stopImmediatePropagation(); // Prevents duplicate event firing
-    
-    if (!fileInput.data('clicked')) {
-      fileInput.data('clicked', true); // Mark as clicked
-      fileInput.trigger('click');
-        
-        setTimeout(() => {
-          fileInput.removeData('clicked'); // Reset flag after some time
-        }, 500);
-    }
+        event.stopImmediatePropagation();
+
+        if (!fileInput.data('clicked')) {
+            fileInput.data('clicked', true);
+            fileInput.trigger('click');
+
+            setTimeout(() => {
+                fileInput.removeData('clicked');
+            }, 500);
+        }
     });
 
-    // Handle file selection from input
     fileInput.change(function () {
-        console.log('File selected:', this.files[0]);
-        handleFilePreview(this.files[0]);
+        const file = this.files[0];
+        if (file && validateFileSize(file)) {
+            console.log('File selected:', file);
+            handleFilePreview(file);
+        } else {
+            $(this).val('');
+        }
     });
 });
-
+function generateRandomId() {
+    return 'file-' + Math.random().toString(36).substr(2, 9); // Generates a random ID
+}
+  
 function handleFilePreview(file) {
+  console.log('in handleFilePreview function');
     const previewContainer = $('#file-preview');
     const reader = new FileReader();
-    
+    const fileId = generateRandomId(); // Generate a random ID for each file
+  
     reader.onload = function (e) {
+        console.log('in reader onload');
+        console.log(file.type);
         const fileSize = (file.size / 1024).toFixed(2) + " KB"; // Convert to KB
         let html = '';
+        let previewHtml = '';
 
         if (file.type.startsWith('image/')) {
-            // If it's an image, display it
+            console.log('uploading image')
             html = `
                 <div class="file-preview-item bg-file-preview-item">
                     <div class="image-with-title">
@@ -483,35 +560,96 @@ function handleFilePreview(file) {
                     <p class="delete-element"></p>
                 </div>
             `;
+            previewHtml = `
+                      <div class="file-preview-item bg-file-preview-item" id="${fileId}">
+                          <div class="image-with-title">
+                                 <img src="${e.target.result}" alt="${file.name}" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                                 <p>Uploading ${file.name} (${fileSize})</p>
+                          </div>
+                              <p class="uploadContainer"><span id="loading-dots">{%- render 'icon', icon: 'loader' %}</span></p>
+                      </div>
+            `;
         } else if (file.type === "application/pdf") {
-            // If it's a PDF, use an icon or embed viewer
+            console.log('uploading pdf');
             html = `
                 <div class="file-preview-item bg-file-preview-item">
                     <div class="image-with-title">
-                        <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/81975517a51651e8f8940759360d01da.jpg?v=1743361832" alt="PDF" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                        <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/81975517a51651e8f8940759360d01da.jpg?v=1743361832" alt="${file.name}" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
                         <p>${file.name} (${fileSize})</p>
                     </div>
                     <p class="delete-element"></p>
                 </div>
             `;
+            previewHtml = `
+            <div class="file-preview-item bg-file-preview-item" id="${fileId}">
+                <div class="image-with-title">
+                       <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/81975517a51651e8f8940759360d01da.jpg?v=1743361832" alt="${file.name}" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                        <p>Uploading ${file.name} (${fileSize})</p>
+                  </div>
+                    <p class="uploadContainer"><span id="loading-dots">{%- render 'icon', icon: 'loader' %}</span></p>
+            </div>
+            `;
         } else {
-            html = `<p>Unsupported file type</p>`;
+             const errorContainer = document.getElementById('file-error');
+             errorContainer.textContent = "{{ section.settings.unsupport }}.";
         }
-
-        previewContainer.html(html);
+      if (file.type.startsWith('image/') || file.type === "application/pdf") {
+          previewContainer.html(previewHtml);
+          upload_image(file, 'logourl', fileId, html, previewContainer);
+      }
     };
 
     if (file.type.startsWith('image/') || file.type === "application/pdf") {
         reader.readAsDataURL(file);
+    } else {
+        const errorContainer = document.getElementById('file-error');
+        errorContainer.textContent = "{{ section.settings.unsupport }}";
     }
 }
 </script>
 
 <script>
+    document.getElementById('bgfileInput').addEventListener('change', function () {
+      const file = this.files[0];
+      const errorContainer = document.getElementById('file-error-2');
+      if (!file) return;
+      const fileSizeKB = file.size / 1024;
+      const fileSizeMB = fileSizeKB / 1024;
+
+      if (fileSizeKB < 1) {
+        errorContainer.textContent = "File is too small. Minimum size is 1KB.";
+        this.value = '';
+      } else if (fileSizeMB > 20) {
+        errorContainer.textContent = "File is too large. Maximum size is 20MB.";
+        this.value = '';
+      } else {
+        errorContainer.textContent = '';
+        console.log('File is valid:', file.name, `${fileSizeMB.toFixed(2)} MB`);
+      }
+    });
+
+
   $(document).ready(function () {
   const dropArea = $('#cid_13 .jfUpload-wrapper');
   const bgfileInput = $('[name="bglogo"]');
+  const errorContainersec = $('<div id="file-error-2" style="color:red; margin-top:5px; font-size: 11px;"></div>');
+  dropArea.after(errorContainersec);
 
+  function validateFileSize(file) {
+        const sizeKB = file.size / 1024;
+        const sizeMB = sizeKB / 1024;
+
+        if (sizeKB < 1) {
+            errorContainersec.text("File is too small. Minimum size is 1KB.");
+            return false;
+        } else if (sizeMB > 20) {
+            errorContainersec.text("File is too large. Maximum size is 20MB.");
+            return false;
+        } else {
+            errorContainersec.text(""); // Clear any error
+            return true;
+        }
+    }
   // Highlight area when file is dragged over
   dropArea.on('dragover', function (event) {
       event.preventDefault(); // Prevent default behavior
@@ -526,7 +664,6 @@ function handleFilePreview(file) {
       $(this).removeClass('drag-over');
   });
 
-  // Handle file drop
   dropArea.on('drop', function (event) {
       event.preventDefault();
       event.stopPropagation();
@@ -534,10 +671,15 @@ function handleFilePreview(file) {
 
       let files = event.originalEvent.dataTransfer.files;
       if (files.length > 0) {
-        bgfileInput[0].files = files; // Assign files to input
-          console.log('Files dropped:', files);
-          handleFilePreview(files[0]);
-      }
+            const file = files[0];
+            if (validateFileSize(file)) {
+                bgfileInput[0].files = files;
+                console.log('Files dropped:', file);
+                bgHandleFilePreview(file);
+            } else {
+                bgfileInput.val('');
+            }
+        }
   });
 
   // Click event to open file input
@@ -561,32 +703,74 @@ function handleFilePreview(file) {
   });
 
   ///////////// getting gclid
-
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+        const [key, value] = cookie.trim().split('=');
+        if (key === name) return decodeURIComponent(value);
+    }
+    return null;
+}
   function getParam(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
   }
 
-    const gclid = getParam('gclid');
-    if (gclid) {
-        $('#gclid').val(gclid);
-    }
-
-    const fbclid = getParam('fbclid');
-    if (fbclid) {
-        $('#fbclid').val(fbclid);
-    }
+    /////////gclid value login///////
+    let gclidValue = null;
+    const gcl = getCookie('_gcl_aw');
+  if (gcl) {
+      const parts = gcl.split('.');
+      gclidValue = parts[parts.length - 1]; // get the last part
+  } else {
+      gclidValue = getParam('gclid');
+  }
+  
+  if (gclidValue) {
+      $('#gclid').val(gclidValue);
+  }
     
-    
+    /////////fbclid value login///////
+   let fbclidValue = null;
+  
+  const fbc = getCookie('_fbc');
+  if (fbc) {
+      console.log('fbc');
+      console.log(fbc);
+      const parts = fbc.split('.');
+      fbclidValue = parts[parts.length - 1]; // get the last part
+  } else {
+      console.log('getting fbclid from url');
+      fbclidValue = getParam('fbclid');
+  }
+  
+  if (fbclidValue) {
+      $('#fbclid').val(fbclidValue);
+  }
+    // ===== MSCLKID Logic =====
+  let msclkidValue = null;
+  const uetmsclkid = getCookie('_uetmsclkid');
+  if (uetmsclkid) {
+       msclkidValue = uetmsclkid.replace(/^_uet/, '');
+  } else {
+      msclkidValue = getParam('msclkid');
+  }
+  if (msclkidValue) {
+    $('#msclkid').val(msclkidValue);
+  }
 });
 
 function bgHandleFilePreview(file) {
+    console.log('in bgHandleFilePreview function');
     const previewContainer = $('#bg-file-preview');
     const reader = new FileReader();
+    const fileId = generateRandomId(); // Generate a random ID for each file
 
     reader.onload = function (e) {
+        console.log('in reader onload');
         const fileSize = (file.size / 1024).toFixed(2) + " KB"; // Convert to KB
         let html = '';
+        let previewHtml = '';
 
         if (file.type.startsWith('image/')) {
             // If it's an image, display it
@@ -599,6 +783,15 @@ function bgHandleFilePreview(file) {
                     <p class="bg-delete-element"></p>
                 </div>
             `;
+            previewHtml = `
+                      <div class="file-preview-item bg-file-preview-item" id="${fileId}">
+                          <div class="image-with-title">
+                                 <img src="${e.target.result}" alt="${file.name}" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                                 <p>Uploading ${file.name} (${fileSize})</p>
+                          </div>
+                              <p class="uploadContainer"><span id="loading-dots">{%- render 'icon', icon: 'loader' %}</span></p>
+                      </div>
+            `;
         } else if (file.type === "application/pdf") {
             // If it's a PDF, use an icon or embed viewer
             html = `
@@ -610,15 +803,30 @@ function bgHandleFilePreview(file) {
                     <p class="bg-delete-element"></p>
                 </div>
             `;
+              previewHtml = `
+            <div class="file-preview-item bg-file-preview-item" id="${fileId}">
+                <div class="image-with-title">
+                       <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/81975517a51651e8f8940759360d01da.jpg?v=1743361832" alt="${file.name}" class="file-preview-image" style="max-width: 25px; max-height: 25px;">
+                        <p>Uploading ${file.name} (${fileSize})</p>
+                  </div>
+                    <p class="uploadContainer"><span id="loading-dots">{%- render 'icon', icon: 'loader' %}</span></p>
+            </div>
+            `;
         } else {
-            html = `<p>Unsupported file type</p>`;
+            const errorContainer = document.getElementById('file-error-2');
+             errorContainer.textContent = "{{ section.settings.unsupport }}.";
         }
-
-        previewContainer.html(html);
+      if (file.type.startsWith('image/') || file.type === "application/pdf") {
+          previewContainer.html(previewHtml);
+          upload_image(file, 'bgurl', fileId, html, previewContainer);
+      }
     };
 
     if (file.type.startsWith('image/') || file.type === "application/pdf") {
         reader.readAsDataURL(file);
+    } else {
+        const errorContainer = document.getElementById('file-error-2');
+        errorContainer.textContent = "{{ section.settings.unsupport }}";
     }
 }
 </script>
@@ -707,13 +915,12 @@ function bgHandleFilePreview(file) {
       const fileInput = document.getElementById('bgfileInput');
       if(fileInput.files[0]){
         $('.bg-file-required').removeClass('show');
-      console.log('abc');
-      document.querySelector(".step_form_row").classList.add('right_image_bg', 'last-step');
-      $('.step-4').hide();
-      $('.step-5').show();
-        const file = fileInput.files[0];
-        upload_image(file, 'bgurl');
+        document.querySelector(".step_form_row").classList.add('right_image_bg', 'last-step');
+        $('.step-4').hide();
+        $('.step-5').show();
+        webhookCall('{{ section.settings.webhook2 }}'); ///webhook 2
         startCountdown();
+        addRecord();
       } else {
         $('.bg-file-required').addClass('show');
         $('#cid_13 .jfUpload-wrapper').css('border-color', 'red');
@@ -789,12 +996,11 @@ function bgHandleFilePreview(file) {
           });
         
         document.querySelector(".step_form_row").classList.add('swap_sec');
-        // document.querySelector(".request_qu").classList.add('swap_sec2');
         document.querySelector(".custom_steps_form").classList.add('swap_sec_padding');
         document.querySelector("body").classList.add('swap_sec_body');
         $('.step-2').hide();
         $('.step-3').show();
-        addRecord('{{ section.settings.webhook1 }}'); ///webhook 1
+         addRecord('{{ section.settings.webhook1 }}'); ///webhook 1
         } else {
           alert('{{ section.settings.terms_error }}');
         }
@@ -813,8 +1019,7 @@ function bgHandleFilePreview(file) {
       document.querySelector(".sec_tab").classList.add('active');
       $('.step-1').hide();
       $('.step-2').show();
-      const file = fileInput.files[0];
-      await submissionStart(file);
+      await submissionStart();
       } else {
         console.log('logo required');
         $('#cid_3 .jfUpload-wrapper').css('border-color', 'red');
@@ -823,7 +1028,7 @@ function bgHandleFilePreview(file) {
       }
     });
 
-    async function submissionStart(file){
+    async function submissionStart(){
       if($('#submissionid').val() == ''){
         const formID = "{{ section.settings.formid }}";
         const apiKey = 'd37f98d2a7a2cc702737ef0d068321df';
@@ -847,12 +1052,9 @@ function bgHandleFilePreview(file) {
           if (data.content && data.content.submissionID) {
               const submissionID = data.content.submissionID;
               document.getElementById("submissionid").value = submissionID;
-              upload_image(file, 'logourl');
           }
         })
         .catch(error => console.error("Error:", error));
-      } else {
-        upload_image(file, 'logourl');
       }
     }
 
@@ -866,9 +1068,13 @@ function bgHandleFilePreview(file) {
       var _bgurl = $('#bgurl').val();
       var _source = $('#source').val();
       var _field = $('#field').val();
+      var _msclkid = $('#msclkid').val();
+      var _gclid = $('#gclid').val();
+      var _fbclid = $('#fbclid').val();
+      var _code =  iti.getSelectedCountryData().dialCode;
     
     
-      var _url = url+'?SubmissionID='+_submissionID+'&Email='+_email+'&Name='+_name+'&PhoneNumber='+_phone+'&Logo='+_logo+'&Source='+_source+'&Place='+_field+'&Background='+_bgurl;
+      var _url = url+'?SubmissionID='+_submissionID+'&Email='+_email+'&Name='+_name+'&PhoneNumber='+_phone+'&Logo='+_logo+'&Source='+_source+'&Place='+_field+'&Background='+_bgurl+'&country_code='+_code+'&fbclid='+_fbclid+'&gclid='+_gclid+'&msclkid='+_msclkid;
         $.ajax({
             url: _url,
             type: "POST",
@@ -898,6 +1104,7 @@ function bgHandleFilePreview(file) {
       formData.append("submission[9]", $('#field').val()); // field
       formData.append("submission[10]", $('#gclid').val()); // gclid
       formData.append("submission[11]", $('#fbclid').val()); // fbclid
+      formData.append("submission[12]", $('#msclkid').val()); // msclkid
       
 
       try {
@@ -918,7 +1125,12 @@ function bgHandleFilePreview(file) {
           console.error("Error submitting form data:", error);
       }
     }
-    async function upload_image(file, id){
+    async function upload_image(file, id, fieldID, html, previewContainer){
+       if (id == "bgurl") {
+            $('#form-pagebreak-next_14').prop('disabled', true);
+         } else {
+          $('#form-pagebreak-next_11').prop('disabled', true);
+       }
       const formData = new FormData();
       formData.append("upload_preset", "neon_unsigned_preset")
       formData.append('file', file);
@@ -932,17 +1144,42 @@ function bgHandleFilePreview(file) {
             processData: false,
             success: function(response) {
               console.log(response); 
-              console.log('Uploaded URL:', response.secure_url); 
-              $('#'+id).val(response.secure_url);
-                if (id == "bgurl") {
-                    addRecord('{{ section.settings.webhook2 }}'); 
-                } else {
-                    addRecord();
+              if(response.secure_url){
+                console.log('Uploaded URL:', response.secure_url); 
+                $('#'+id).val(response.secure_url);
+                  if (id == "bgurl") {
+                      $(`#${fieldID}`).parents('#bg-file-preview').html(html);
+                      $('#form-pagebreak-next_14').prop('disabled', false);
+                  } else {
+                      $(`#${fieldID}`).parents('#file-preview').html(html);
+                      $('#form-pagebreak-next_11').prop('disabled', false);
                   }
+            } else {
+                if (id == "bgurl") {
+                  const dropArea = $('#cid_13 .jfUpload-wrapper');
+                  const errorContainersec = $('<div id="file-error-2" style="color:red; margin-top:5px; font-size: 11px;">{{ section.settings.fileerror }}.</div>');
+                  dropArea.after(errorContainersec);
+                  $(`#${previewContainer}`).html('');
+                } else {
+                 const dropArea = $('#cid_3 .jfUpload-wrapper');
+                  const errorContainersec = $('<div id="file-error" style="color:red; margin-top:5px; font-size: 11px;">{{ section.settings.fileerror }}</div>');
+                  dropArea.after(errorContainersec);
+                  $(`#${previewContainer}`).html('');
+                }
+            }
             },
             error: function(err) {
-                $("#status").text("Upload failed.");
-                console.error(err);
+                   if (id == "bgurl") {
+                  const dropArea = $('#cid_13 .jfUpload-wrapper');
+                  const errorContainersec = $('<div id="file-error-2" style="color:red; margin-top:5px; font-size: 11px;">{{ section.settings.fileerror }}.</div>');
+                  dropArea.after(errorContainersec);
+                  $(`#${previewContainer}`).html('');
+                } else {
+                 const dropArea = $('#cid_3 .jfUpload-wrapper');
+                  const errorContainersec = $('<div id="file-error" style="color:red; margin-top:5px; font-size: 11px;">{{ section.settings.fileerror }}</div>');
+                  dropArea.after(errorContainersec);
+                  $(`#${previewContainer}`).html('');
+                }
             }
         });
     }
@@ -1057,10 +1294,35 @@ newCountdown();
   },
   {
   "type": "text",
+  "id": "unsupport",
+  "label": "Unsupport File Type Text",
+  "default":"Unsupported file type"
+  },
+    {
+  "type": "text",
+  "id": "filesizemin",
+  "label": "Min File Size Text",
+  "default":"File is too small. Minimum size is 1KB."
+  },
+    {
+  "type": "text",
+  "id": "filesizemax",
+  "label": "Min File Size Text",
+  "default":"File is too large. Maximun size is 20MB."
+  },
+  {
+  "type": "text",
   "id": "required",
   "label": "Required Text",
   "default":"This field is required"
   },
+    {
+  "type": "text",
+  "id": "fileerror",
+  "label": "File Upload Error",
+  "default":"Something went wrong in file upload, please try again."
+  },
+
   {
   "type": "text",
   "id": "emailformat",
@@ -1115,6 +1377,11 @@ newCountdown();
   "label":"Video link"
   },
   {
+  "type":"url",
+  "id":"Mobile_video_url",
+  "label":"Video link Mobile"
+  },
+  {
   "type": "header",
   "content": "Tab 1 content"
   },
@@ -1136,7 +1403,7 @@ newCountdown();
     "type": "text",
     "id": "uploadContent",
     "label": "Upload content",
-    "default":"Choose a file" 
+    "default":"Choose a file"
   },
   {
     "type": "text",

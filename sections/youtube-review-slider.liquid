@@ -2,10 +2,10 @@
   .youtube-thumbnail {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     cursor: pointer;
   }
-  
+
   .youtube-thumbnail img {
     position: absolute;
     width: 100%;
@@ -15,7 +15,7 @@
     scale: 1.3;
     object-fit: cover;
   }
-  
+
   .youtube-thumbnail .play-button {
     position: absolute;
     width: 64px;
@@ -28,58 +28,79 @@
   }
 </style>
 
-
 <div class="youtube-review {{ section.settings.spacing }} builder_USSS">
-    <div class="container">
-      <div class="custom-rev-head-flex">
-        <h2 class="rev-head">{{ section.settings.title }}</h2>
-        <div class="slider-toggle">
-          <div class="buttons-slider-tg">
-           <button class="custom-slide-arrows custom-prev-arrows">
-              {% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder' or template == "page.form_page_template" or template == 'product.custom_neon'   %}
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.13998 5.50882L2.11875 5.4875H2.14884H10.1879V4.5125H2.14884H2.11875L2.13998 4.49118L5.9131 0.702565L5.22095 0.0176493L0.258981 5L5.22095 9.98235L5.9131 9.29744L2.13998 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/></svg>
-              {% else %}
-              <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="21.98" cy="21" r="20.25" stroke="black" stroke-width="1.5"></circle><path d="M24.98 13L16.98 21L24.98 29" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path></g></svg>
-              {% endif %}
-              </button>
-            <button class="custom-slide-arrows custom-next-arrows">
-              {% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder' or template == "page.form_page_template" or template == 'product.custom_neon'  %}
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.15433 5.50882L8.17556 5.4875H8.14547H0.106372V4.5125H8.14547H8.17556L8.15433 4.49118L4.38121 0.702565L5.07336 0.0176493L10.0353 5L5.07336 9.98235L4.38121 9.29744L8.15433 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/></svg>
-              {% else %}
-              <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="21.98" cy="21" r="20.25" transform="rotate(-180 21.98 21)" stroke="black" stroke-width="1.5"></circle><path d="M18.98 29L26.98 21L18.98 13" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path></g></svg>
-              {% endif %}
-              </button>  
-          </div>
-        </div>
-      </div>  
-      <div class="youtube-review-main-new">
-        <div class="youtube-review-items-new">
-          {% for block in section.blocks %}
-                    {%- case block.type -%}                  
-                    {%- when 'youtube-video' -%}
-                      {% assign video_url = block.settings.video %}
-                      {% assign video_id = video_url | replace: "https://www.youtube.com/embed/", "" | split: "?" | first %}
-                      <div class="youtube-video google-review">
-                        <div class="youtube-thumbnail lazy-load" data-video-id="{{ video_id }}" style="width: 100%; height: 100%;" onclick="loadVideo(this)">
-                          <img 
-                            src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg" 
-                            alt="YouTube video thumbnail" 
-                            loading="lazy" 
-                            style="width: 100%; height: 100%; object-fit: cover;"
-                            class="thumbnail-img"
-                          />
-                          <div class="play-button"></div>
-                        </div>
-                      </div>
-                    {%- endcase -%}
-                
-            {%- endfor -%}
+  <div class="container">
+    <div class="custom-rev-head-flex">
+      <h2 class="rev-head">{{ section.settings.title }}</h2>
+      <div class="slider-toggle">
+        <div class="buttons-slider-tg">
+          <button class="custom-slide-arrows custom-prev-arrows">
+            {% if template contains 'product.lead_page'
+              or template contains 'product.builder_'
+              or template == 'product.neon_builder'
+              or template == 'page.form_page_template'
+              or template == 'product.custom_neon'
+            %}
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.13998 5.50882L2.11875 5.4875H2.14884H10.1879V4.5125H2.14884H2.11875L2.13998 4.49118L5.9131 0.702565L5.22095 0.0176493L0.258981 5L5.22095 9.98235L5.9131 9.29744L2.13998 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/>
+              </svg>
+            {% else %}
+              <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g><circle cx="21.98" cy="21" r="20.25" stroke="black" stroke-width="1.5"></circle><path d="M24.98 13L16.98 21L24.98 29" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path></g>
+              </svg>
+            {% endif %}
+          </button>
+          <button class="custom-slide-arrows custom-next-arrows">
+            {% if template contains 'product.lead_page'
+              or template contains 'product.builder_'
+              or template == 'product.neon_builder'
+              or template == 'page.form_page_template'
+              or template == 'product.custom_neon'
+            %}
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.15433 5.50882L8.17556 5.4875H8.14547H0.106372V4.5125H8.14547H8.17556L8.15433 4.49118L4.38121 0.702565L5.07336 0.0176493L10.0353 5L5.07336 9.98235L4.38121 9.29744L8.15433 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/>
+              </svg>
+            {% else %}
+              <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g><circle cx="21.98" cy="21" r="20.25" transform="rotate(-180 21.98 21)" stroke="black" stroke-width="1.5"></circle><path d="M18.98 29L26.98 21L18.98 13" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path></g>
+              </svg>
+            {% endif %}
+          </button>
         </div>
       </div>
-    </div> 
-      <div class="reputon-google-reviews-widget container" id="47782490-f962-11ec-9541-d3f22c760941"></div>
+    </div>
+    <div class="youtube-review-main-new">
+      <div class="youtube-review-items-new">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+            {%- when 'youtube-video' -%}
+              {% assign video_url = block.settings.video %}
+              {% assign video_id = video_url | replace: 'https://www.youtube.com/embed/', '' | split: '?' | first %}
+              <div class="youtube-video google-review">
+                <div
+                  class="youtube-thumbnail lazy-load"
+                  data-video-id="{{ video_id }}"
+                  style="width: 100%; height: 100%;"
+                  onclick="loadVideo(this)"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/{{ video_id }}/maxresdefault.jpg"
+                    alt="YouTube video thumbnail"
+                    loading="lazy"
+                    style="width: 100%; height: 100%; object-fit: cover;"
+                    class="thumbnail-img"
+                  >
+                  <div class="play-button"></div>
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
   </div>
-  <script>
+  <div class="reputon-google-reviews-widget container" id="47782490-f962-11ec-9541-d3f22c760941"></div>
+</div>
+<script>
     function loadVideo(thumbnail) {
       const videoId = thumbnail.getAttribute('data-video-id');
       const iframe = document.createElement('iframe');
@@ -90,7 +111,7 @@
       thumbnail.parentNode.replaceChild(iframe, thumbnail);
     }
   jQuery(document).ready(function($){
-    $('.youtube-review-items-new').slick({
+     $('.youtube-review-items-new').slick({
     dots: true,
     arrows: true,
     slidesToShow: {{ section.settings.slide_show }},
@@ -156,7 +177,6 @@
       }
     ]
 });
-  
     $(".youtube-review .custom-rev-head-flex button.custom-slide-arrows.custom-next-arrows").on("click", function(){
       $(".youtube-review-main-new  button.slick-next").trigger("click");
     })
@@ -184,210 +204,210 @@
     }
   });
   });
-  </script>
-  
-  
-  
-  <style>
-    .slick-list {
-      padding-left: 0px!important;
-    }
-    .carousel-holder--2XSx7 {
-        display: none;
-    }
-    .custom-google-section {
-        background: #F7F4F1;
-        padding: 70px 0px;
-    }
-    .youtube-review-items-new button{
-      opacity:0;
-    }
-    .youtube-review-items-new .slick-track{
-        display:flex;
-        gap:10px;
-    }
-    .youtube-review-main-new iframe {
-      width: 100% !important;
-      height: 100% !important;
-    }
-    .review-image {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    .youtube-review-items-new .google-review .pro-image {
-        height: 250px;
-        object-fit: fill;
-    }
-    .youtube-review-main-new .google-review {
-        height: 468px;
-    }
-    .google-review {
-        border-radius: 10px;
-        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.03);
-        overflow: hidden;
-        background-color: #fff;
-        height: auto;
-        margin-bottom: 10px;
-        display:-webkit-inline-box;
-    }
-    .google-reviews {
-      flex-wrap: wrap;
-      column-gap: 20px;
-      row-gap: 20px;
-      columns: 4;
-    }
-    .customers-review {
-        text-align: center;
-        padding: 0px 23px 30px;
-    }
-    .customers-review > img {
-        margin-top: -40px;
-    }
-    .customers-review.simple-user-review > img {
-        margin-top: 0px;
-    } 
-    .customers-review h2 {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 26px;
-        color: #1F2430;
-        display: flex;
-        justify-content: center;
-        column-gap: 5px;
-        margin: 24px 0px 10px;
-        align-items: center;
-    }
-    .customers-review > p {
-        color: #1F2430;
-        font-size: 14px;
-        line-height: 20px;
-        margin: 16px 0px 11px;
-    }
-    .customers-review h2 img {
-        height: 20px;
-        width: 20px;
-    }
-    .customers-review .google-upload-time {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 8px;
-    }
-    .customers-review .google-upload-time p {
-        font-size: 12px;
-        font-weight: 500;
-        color: #363D41;
-    }
-    .customers-review.simple-user-review {
-        padding-top: 30px;
-    }
-  
-    .custom-google-section h1.custom-review-heading {
-        text-align: center;
-        color: #000;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: normal;
-        margin-bottom: 15px;
-    }
-    .custom-google-section .custom-review-discription {
-        color: #677279;
-        text-align: center;
-        font-weight: 400;
-        line-height: normal;
-        margin-bottom: 50px;
-    }
-   
-  @media(max-width:1199.98px){
-  
-  .google-reviews {
-      columns: 3;
-  }
-  
-  }
-  @media(max-width:991.98px){
-  
-  .google-reviews {
-      columns: 2;
-  }
-  
-  }
-  @media(max-width:767.98px){
-    .google-reviews {
-        columns: 1;
-    }
-    .builder-page-review .rev-head {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
-    .youtube-review .rev-head img {
-        display: none !important;
-    } 
-    .youtube-review .slider-toggle {
-        top: 0px;
-    }
-    .youtube-review .slider-toggle button svg {
-        width: 42px !important;
-    }
-      .youtube-review-items-new .google-review .pro-image {
-        height: 200px;
-    }
-    .youtube-review-items-new .customers-review {
-        text-align: center;
-        padding: 0px 23px 0px;
-    }
-  }
-    
-  </style>
-  
-  
-  {% schema %}
-    {
-      "name": "Youtube Review Slider",
-      "settings": [
-        {
-          "type":"text",
-          "id":"spacing",
-          "label":"Add Class"
-        },
-        {
-          "type":"text",
-          "id":"title",
-          "label":"Heading"
-        },
-        {
-          "type":"range",
-          "id":"slide_show",
-          "min": 4,
-          "max": 7,
-          "default" : 4,
-          "label":"Slide Show"
-        }
-      ],
-      "blocks": [
-      {
-        "type": "youtube-video",
-        "name": "Youtube Review",
-        "settings": [
-            {
-            "type": "header",
-            "content": "Youtube Link"
-            },
-            {
-              "type":"html",
-              "id":"video",
-              "label":"Add Video"
-              }
-        ]
+</script>
+
+<style>
+      .slick-list {
+        padding-left: 0px!important;
       }
-  ],
-      "presets":[
-        {
-          "name":"Youtube Review Slider"
-        }      
+      .carousel-holder--2XSx7 {
+          display: none;
+      }
+      .custom-google-section {
+          background: #F7F4F1;
+          padding: 70px 0px;
+      }
+      .youtube-review-items-new button{
+        opacity:0;
+      }
+      .youtube-review-items-new .slick-track{
+          display:flex;
+          gap:10px;
+      }
+      .youtube-review-main-new iframe {
+        width: 100% !important;
+        height: 100% !important;
+      }
+      .review-image {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+      }
+      .youtube-review-items-new .google-review .pro-image {
+          height: 250px;
+          object-fit: fill;
+      }
+      .youtube-review-main-new .google-review {
+          height: 468px;
+      }
+      .google-review {
+          border-radius: 10px;
+          box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.03);
+          overflow: hidden;
+          background-color: #fff;
+          height: auto;
+          margin-bottom: 10px;
+          display:-webkit-inline-box;
+      }
+      .google-reviews {
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
+        columns: 4;
+      }
+      .customers-review {
+          text-align: center;
+          padding: 0px 23px 30px;
+      }
+      .customers-review > img {
+          margin-top: -40px;
+      }
+      .customers-review.simple-user-review > img {
+          margin-top: 0px;
+      }
+      .customers-review h2 {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 26px;
+          color: #1F2430;
+          display: flex;
+          justify-content: center;
+          column-gap: 5px;
+          margin: 24px 0px 10px;
+          align-items: center;
+      }
+      .customers-review > p {
+          color: #1F2430;
+          font-size: 14px;
+          line-height: 20px;
+          margin: 16px 0px 11px;
+      }
+      .customers-review h2 img {
+          height: 20px;
+          width: 20px;
+      }
+      .customers-review .google-upload-time {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 8px;
+      }
+      .customers-review .google-upload-time p {
+          font-size: 12px;
+          font-weight: 500;
+          color: #363D41;
+      }
+      .customers-review.simple-user-review {
+          padding-top: 30px;
+      }
+
+      .custom-google-section h1.custom-review-heading {
+          text-align: center;
+          color: #000;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 15px;
+      }
+      .custom-google-section .custom-review-discription {
+          color: #677279;
+          text-align: center;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 50px;
+      }
+
+    @media(max-width:1199.98px){
+
+    .google-reviews {
+        columns: 3;
+    }
+
+    }
+    @media(max-width:991.98px){
+      .customers-review h2 img {
+      height: 15px;
+      width: 15px;
+  }
+    .customers-review h2 {
+      font-size: 16px;
+    }
+    .google-reviews {
+        columns: 2;
+    }
+
+    }
+    @media(max-width:767.98px){
+      .google-reviews {
+          columns: 1;
+      }
+      .builder-page-review .rev-head {
+          width: 100% !important;
+          margin-bottom: 20px;
+      }
+      .youtube-review .rev-head img {
+          display: none !important;
+      }
+      .youtube-review .slider-toggle {
+          top: 0px;
+      }
+      .youtube-review .slider-toggle button svg {
+          width: 42px !important;
+      }
+        .youtube-review-items-new .google-review .pro-image {
+          height: 200px;
+      }
+      .youtube-review-items-new .customers-review {
+          text-align: center;
+          padding: 0px 23px 0px;
+      }
+    }
+</style>
+
+{% schema %}
+  {
+    "name": "Youtube Review Slider",
+    "settings": [
+      {
+        "type":"text",
+        "id":"spacing",
+        "label":"Add Class"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Heading"
+      },
+      {
+        "type":"range",
+        "id":"slide_show",
+        "min": 4,
+        "max": 7,
+        "default" : 4,
+        "label":"Slide Show"
+      }
+    ],
+    "blocks": [
+    {
+      "type": "youtube-video",
+      "name": "Youtube Review",
+      "settings": [
+          {
+          "type": "header",
+          "content": "Youtube Link"
+          },
+          {
+            "type":"html",
+            "id":"video",
+            "label":"Add Video"
+            }
       ]
     }
-  {% endschema %}
-  
-  
+],
+    "presets":[
+      {
+        "name":"Youtube Review Slider"
+      }
+    ]
+  }
+{% endschema %}

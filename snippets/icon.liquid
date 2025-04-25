@@ -575,4 +575,11 @@
         <path d="M6 0h6M9 0v1" stroke="{{ settings.accent_color }}"></path>
       </g>
     </svg>
+    {% when 'loader' %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="#3498db" stroke-width="4" fill="none" stroke-linecap="round">
+          <animate attributeName="stroke-dasharray" from="1, 200" to="100, 200" dur="1.5s" repeatCount="indefinite" />
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="1.5s" repeatCount="indefinite" />
+        </circle>
+      </svg>
 {%- endcase -%}

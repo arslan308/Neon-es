@@ -315,7 +315,7 @@ text-align: left;
 .lead_page_UK_price_with_logo_discount .quote-ready {
 max-width: 100%;
 width: 100%;
-padding: 10px 0;
+padding: 30px 0;
 }
 .lead_page_UK_price_with_logo_discount #shopify-section-header-announcement-bar {
 display: none;
@@ -863,9 +863,9 @@ border-radius: 8px;
 .lead_page_UK_price_with_logo_discount .arrive_text {
   text-align: center;
   margin: 16px auto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17.86px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
   color: #fff;
 }
 .lead_page_UK_price_with_logo_discount .arrive_text #new_timer{
@@ -983,7 +983,7 @@ text-align: center;
 border-right: 1px solid #E9E8F9;
 }
 .lead_page_UK_price_with_logo_discount .accessoires-wrapper {
-  margin: 16px 0 16px;
+  margin: 16px 0 33px;
   position: relative;
   text-align: justify;
 }
@@ -3017,10 +3017,10 @@ body.template-product .product-image-section>.container .product-title-discripti
 }
 
 .template-product .product-image-section>.container .product-images {
-    margin: 5px 0;
+    margin: 24px 0;
     padding-right: 0;
-} 
-  
+}
+
 .lead_page_UK_price_with_logo_discount .flex-in-button-add .a-d-button {
     font-size: 14px;
     line-height: 20px;
@@ -3976,7 +3976,7 @@ padding: 10px 22px !important;
   padding: 12px;
 }
 .lead_page_UK_price_with_logo_discount .quote-ready {
-padding: 10px 0 0;
+padding: 20px 0 0;
 }
 .lead_page_UK_price_with_logo_discount .discount-price {
 font-size: 34px;
@@ -4000,7 +4000,7 @@ line-height: 17.86px;
   padding: 0 20px!important;
 }
 .lead_page_UK_price_with_logo_discount .box-design-btn-text {
-padding: 10px 0 10px;
+padding: 24px 0 10px;
 }
 .lead_page_UK_price_with_logo_discount .logo-list {
   padding: 0!important;

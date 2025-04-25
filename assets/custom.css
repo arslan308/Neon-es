@@ -5,7 +5,7 @@
     text-decoration: none;
     position: relative;
     display: inline-block;
-    padding: 0 30px !important;
+    padding: 0 30px;
     line-height: 48px;
     border-radius: 30px !important;
     text-align: center;
@@ -60,18 +60,23 @@ a.custom-button.button.button--primary.hide-mobile{white-space: nowrap;}
 .template-change-header .call_us .call-us-img{
   width: 43px;
 }
+
 @media screen and (max-width: 1000px) {
   .requid-btn {
     display: none !important;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .product-gallery__carousel-item{padding: 0 !important;}
   .requid-btn {
     display: none !important;
   }
 }
-
+.product-form__buy-buttons .custom-layer-trigger{
+  padding: 24px 16px !important;
+  min-width: 98%;
+  line-height: 12px !important;
+}
 .breadcrumbs__item:not(:last-child):after {
     border-style: solid;
     border-width: 0.1em 0.1em 0 0;
@@ -779,6 +784,13 @@ ul.splide__list li video {
 
 
 /* FAQ tabing section start */
+.tabing2{
+  padding: 80px 0;
+  background: #f7f5ff !important;
+}
+.tabing2 .accordion-title{
+  background-color: white !important;
+}
 .faq-tabing {
     padding: 64px 0;
     background: #fff;
@@ -1041,7 +1053,66 @@ ul.splide__list li video {
     }
     .builder_USSS .rte{display: grid; justify-items: center; grid-gap: 15px;}
     .builder_USSS .rte:after{display: none !important;}
+
+
+    .product-info-time{
+      color: #2DB218 !important;
+      line-height: 20px; 
+      font-size: 15px !important; 
+      font-weight: 600; 
+      align-items: center; 
+      text-align: justify; 
+      background: #DEFDD9; 
+      width: 100%; 
+      padding: 10px 24px; 
+      margin-top: 16px; 
+      border-radius: 8px; 
+      display: flex; 
+      gap: 13px;
+    }
+    .product-info-time-custom{
+      color: white !important;
+      line-height: 20px; 
+      font-size: 15px !important; 
+      font-weight: 600; 
+      align-items: center; 
+      text-align: justify; 
+      border: 1px solid #ffffff;
+      width: 100%; 
+      padding: 10px 24px; 
+      margin-top: 16px; 
+      border-radius: 8px; 
+      display: flex; 
+      gap: 13px;
+    }
+    .product-info-time .icon-holder{
+      height: 20px; 
+      width: 20px;
+      overflow: hidden;
+      display: flex;
+    }
+    .product-info-time-custom .icon-holder{
+      height: 13px; 
+      width: 20px;
+    }
+    .product-info-time .order-message-res,
+    .product-info-time-custom .order-message-res-custom{
+      display: flex; 
+      gap: 2px; 
+      font-size: 12px;
+      align-items: center;
+    }
+@media screen and (max-width: 480px){
+  .product-info-time-custom .order-message-res-custom{
+    flex-wrap: wrap;
+    line-height: 12px;
+  }
+  .product-info-time .order-message-res{
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 600px){
+  /* .order-message-res{flex-direction: column !important;} */
     .three-image_graphic .image-with-text__text-container{margin-bottom: 50px;}
     .three-image_graphic .image-graphic{height: 500px !important; margin: 0 !important;}
     .three-image_graphic .image-graphic img{max-width: 80% !important;}
@@ -1315,25 +1386,25 @@ body .page-logan-cst-video-sc svg {
 }
 
 .video-and-text-section.page-logan-cst-video-sc .v-t-item {
-    border-bottom: none!important;
-    margin-bottom: 30px!important;
-    padding: 0 !important;
-    display: grid;
-    gap: 12px;
-  grid-template-columns: auto 1fr;
+  border-bottom: none!important;
+  margin-bottom: 30px!important;
+  padding: 0 !important;
+  display: grid;
+  gap: 12px;
+grid-template-columns: auto 1fr;
 }
 .video-and-text-section.page-logan-cst-video-sc .v-t-item img{height: 39px !important; width: 47px !important;}
 .video-and-text-section.page-logan-cst-video-sc .v-t-items:before{
-  height: calc(100% - 91px);    
-  display: block;
-    width: 1px;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    border-left: 2px dashed #A7A7A7;
-    left: 4.8%;
+height: calc(100% - 91px);    
+display: block;
+  width: 1px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dashed #A7A7A7;
+  left: 4.8%;
 }
 .page-logan-cst-video-sc .video-text-flex-in .v-t-item:last-child img{
   height: 39px !important;

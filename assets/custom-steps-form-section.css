@@ -7,6 +7,14 @@ body{
   font-size: .70em;
   width: 100%;
 }
+.form-all li {
+    list-style-type: none;
+}
+.uploadContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .form-label.form-label-auto {
     display: block;
     float: none;
@@ -68,6 +76,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .jfUpload-button {
   display: flex;
@@ -155,7 +164,7 @@ body{
   .step_form_inner .form-pagebreak-next-container {
     width: 100%;
   }
-  .step_form_inner .form-input-wide input {
+  .step_form_inner .form-input-wide input[type="text"], .step_form_inner .form-input-wide input[type="email"], .step_form_inner .form-input-wide input[type="tel"] {
     font-family: 'DIN NEXT' !important;
     font-size: 15px !important;
     font-weight: 400;
@@ -165,6 +174,7 @@ body{
     border: 0 !important;
     padding: 16px;
     min-height: 42px;
+    width: 100%;
   }
   .step_form_inner ul.page-section .title_box{margin-bottom: 15px;}
   .swap_sec .step_form_inner li[data-type=control_fileupload] .qq-upload-button{border: 1px dashed #715AEF !important;}
@@ -203,7 +213,6 @@ p.delete-element, .bg-delete-element {
   .step_form_inner .form-input-wide{margin: 5 !important;}
   button#form-pagebreak-next_12{margin-top: 24px !important;}
   .step_form_inner .form-input-wide li::before{
-    /* content: url('https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check_small_a05e62c7-662b-4ac7-b09b-b27ab4570e2f.png?v=1736944757'); */
     content: url('data:image/svg+xml;charset=UTF-8,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21"><rect y="0.862305" width="20" height="20" fill="%23D9D9D9"/></mask><g mask="url(%23mask5)"><path d="M8.33333 14.5291L5 11.1958L6.16667 10.0291L8.33333 12.1958L13.8333 6.6958L15 7.86247L8.33333 14.5291Z" fill="%232CB118"/></g></svg>');
     margin-right: 8px;
   }
@@ -232,21 +241,19 @@ p.delete-element, .bg-delete-element {
   .swap_sec .form_part {
     order: 1;
   }
-
   .swap_sec .video_part .video_potion {
     display: none;
   }
-
-  .jfUpload-heading.forDesktop, .jfUpload-heading.forMobile {
+  .jfUpload-heading {
     color: #7853f7 !important;
     font-size: 13px !important;
   }
-  .jfUpload-heading.forDesktop.color{
+  .jfUpload-heading.color{
     color: red !important;
   }
-  .jfUpload-heading.forMobile.color{
-    color: red !important;
-  }
+.jfUpload-wrapper.drag-over {
+    background: white !important;
+}
   li#cid_14 {
     margin-top: 6px !important;
     border-radius: 5px;
@@ -270,6 +277,14 @@ a.custom-button.button.button--primary.requid-btn {
 li#file-preview {
   width: 100%;
 }
+button#form-pagebreak-next_11:disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+button#form-pagebreak-next_14:disabled {
+    opacity: .5;
+    pointer-events: none;
+}
 .image-with-title {
   display: flex;
   gap: 5px;
@@ -287,6 +302,7 @@ li#file-preview {
   font-weight: 500;
   background: #dae6ff;
   padding: 7px;
+  width: 100%;
   margin-bottom: 15px;
 }
   .swap_sec .video_part .timer_box {
