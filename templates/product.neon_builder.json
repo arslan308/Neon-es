@@ -121,7 +121,6 @@
         "image_with_review_BKQkj4": {
           "type": "image-with-review",
           "settings": {
-            "user-uploaded-img": "shopify://shop_images/Neon_text_designs_9.webp",
             "user-name": "Luzia Montserrat",
             "user-discription": "\"Un resplandor cálido y acogedor que cambia por completo el ambiente de la habitación. El tono naranja se siente tanto energizante como acogedor, lo que lo hace perfecto para mi espacio de trabajo. Está bien hecho, es liviano y fácil de montar en la pared. Definitivamente le da un toque moderno y elegante.\"",
             "uplod-time": "",
@@ -140,7 +139,6 @@
         "image_with_review_nzKnTH": {
           "type": "image-with-review",
           "settings": {
-            "user-uploaded-img": "shopify://shop_images/Neon_text_designs_10.webp",
             "user-name": "Nails By Mams",
             "user-discription": "\"Una pieza impresionante que atrae la atención al instante. El resplandor rosa contrasta maravillosamente contra el fondo de las pampas. Le da un toque elegante y artístico que eleva el ambiente de mi salón. No podría estar más feliz con la calidad y el efecto.\"",
             "uplod-time": "",
@@ -150,7 +148,6 @@
         "image_with_review_4DnYMV": {
           "type": "image-with-review",
           "settings": {
-            "user-uploaded-img": "shopify://shop_images/Neon_text_designs_7.webp",
             "user-name": "Lucia",
             "user-discription": "\"El resplandor es vibrante y le da a mi habitación una sensación acogedora y moderna. La calidad de construcción es excelente, con un diseño robusto y elegante. Montarlo fue fácil, y la intensidad de la luz es la adecuada. Es una adición hermosa que completa el espacio.\"",
             "uplod-time": "",
@@ -160,7 +157,6 @@
         "image_with_review_mqX64g": {
           "type": "image-with-review",
           "settings": {
-            "user-uploaded-img": "shopify://shop_images/just-fucking-do-it.png",
             "user-name": "Gustav",
             "user-discription": "\"¡Este letrero de neón le da el impulso perfecto a mi gimnasio en casa! Se ve increíble, y el resplandor brillante hace que el espacio se sienta más energético. La calidad es excelente, y ya he tenido amigos que me han preguntado dónde lo conseguí. ¡Definitivamente una gran adición para cualquiera que necesite ese empujón extra!\"",
             "uplod-time": "",
@@ -170,7 +166,6 @@
         "image_with_review_69Fm9y": {
           "type": "image-with-review",
           "settings": {
-            "user-uploaded-img": "shopify://shop_images/Neon_text_designs_12.webp",
             "user-name": "Freja Lindholm",
             "user-discription": "\"¡Hombre, estos chicos hicieron y enviaron mi letrero en 9 días! Estoy más que feliz con mi nuevo letrero de neón blanco cálido. Ese blanco cálido es brillante y la calidad de la artesanía es excelente. ¡Recomiendo encarecidamente Neonsfeer a cualquiera que esté buscando un hermoso letrero de neón para su negocio!\"",
             "uplod-time": "",
@@ -180,7 +175,6 @@
         "image_with_review_TyXUW6": {
           "type": "image-with-review",
           "settings": {
-            "user-uploaded-img": "shopify://shop_images/louise.png",
             "user-name": "Elena",
             "user-discription": "\"Pedimos este letrero de neón para una celebración especial, ¡y fue un gran éxito! Hizo que el espacio se sintiera tan personal y festivo. El suave resplandor rosa se veía hermoso con la decoración, y a todos les encantó tomarse fotos con él. ¡Gran calidad, entrega rápida y la manera perfecta de hacer que un evento sea aún más especial!\"",
             "uplod-time": "",
@@ -190,6 +184,7 @@
         "image_with_review_C7M4DD": {
           "type": "image-with-review",
           "settings": {
+            "user-uploaded-img-desktop": "shopify://shop_images/Spain_Store_418x384px_4.png",
             "user-name": "Antonio Ramírez",
             "user-discription": "\"El ambiente en general irradia el encanto de una boutique elegante o gourmet. El brillante letrero de neón azul que dice \"CHARCUTERIA\" brilla con elegancia contra la pared de patrón marmolado.\"",
             "uplod-time": "",
