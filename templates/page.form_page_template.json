@@ -99,6 +99,7 @@
         "image_with_review_4fXbfN": {
           "type": "image-with-review",
           "settings": {
+            "user-uploaded-img-desktop": "shopify://shop_images/Spain_Store_418x384px.png",
             "user-name": "Casillas World SL",
             "user-discription": "\"El contraste entre el neón blanco y rojo crea un efecto visual dinámico pero equilibrado. Este es exactamente el tipo de señalización de alta calidad y llamativa que realza un entorno exclusivo de pódcast o lounge.\"",
             "uplod-time": "",
@@ -117,6 +118,7 @@
         "image_with_review_ijVc7Y": {
           "type": "image-with-review",
           "settings": {
+            "user-uploaded-img-desktop": "shopify://shop_images/FR_Store_418x384_px.png",
             "user-name": "Codigital",
             "user-discription": "\"En CoDigital, queríamos algo único para nuestra oficina, y el letrero de neón de Neonsfeer fue exactamente lo que buscábamos. Diseño elegante, calidad superior y entrega rápida. ¡Nuestro espacio de trabajo ahora tiene ese toque extra de estilo!\"",
             "uplod-time": "",
@@ -171,6 +173,7 @@
         "image_with_review_VYKFUR": {
           "type": "image-with-review",
           "settings": {
+            "user-uploaded-img-desktop": "shopify://shop_images/Patrica.webp",
             "user-name": "Patricia Jiménez",
             "user-discription": "El diseño elegante y los colores vibrantes lo convierten en un punto focal perfecto. El resplandor nítido en azul y amarillo crea un contraste impactante contra la rústica pared de ladrillo, añadiendo un toque moderno al entorno natural.",
             "uplod-time": "",
