@@ -120,6 +120,7 @@
         },
         "image_with_review_BKQkj4": {
           "type": "image-with-review",
+          "disabled": true,
           "settings": {
             "user-name": "Luzia Montserrat",
             "user-discription": "\"Un resplandor cálido y acogedor que cambia por completo el ambiente de la habitación. El tono naranja se siente tanto energizante como acogedor, lo que lo hace perfecto para mi espacio de trabajo. Está bien hecho, es liviano y fácil de montar en la pared. Definitivamente le da un toque moderno y elegante.\"",
@@ -174,6 +175,7 @@
         },
         "image_with_review_TyXUW6": {
           "type": "image-with-review",
+          "disabled": true,
           "settings": {
             "user-name": "Elena",
             "user-discription": "\"Pedimos este letrero de neón para una celebración especial, ¡y fue un gran éxito! Hizo que el espacio se sintiera tan personal y festivo. El suave resplandor rosa se veía hermoso con la decoración, y a todos les encantó tomarse fotos con él. ¡Gran calidad, entrega rápida y la manera perfecta de hacer que un evento sea aún más especial!\"",
