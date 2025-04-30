@@ -175,6 +175,12 @@
     >
     {% assign product_currency = shop.enabled_currencies.first.iso_code %}
     {% case template.name %}
+    {% when 'index' %}
+      var customPageName = 'homepage'; // common name for both templates
+       window.clarity = window.clarity || function() {
+         (window.clarity.q = window.clarity.q || []).push(arguments);
+       };
+       clarity("set", "custom_page_name", customPageName);
         {% when 'product' %}
             function waitForElement(selector) {
                 return new Promise((resolve, reject) => {
@@ -203,8 +209,23 @@
                 });
             }
             document.addEventListener('DOMContentLoaded', function() {
-                {% if 'product.neon_builder' == template %}
-                  console.log('neon builder');
+              {% if 'product.custom_neon' == template %}
+                var customPageName = 'custom_neon'; // common name for both templates
+                window.clarity = window.clarity || function() {
+                  (window.clarity.q = window.clarity.q || []).push(arguments);
+                };
+                clarity("set", "custom_page_name", customPageName);
+                {% endif %}
+
+                    {% if 'product.neon_builder' == template %}
+                      console.log('neon builder');
+
+                        var customPageName = 'neon_builder'; // common name for both templates
+                        window.clarity = window.clarity || function() {
+                          (window.clarity.q = window.clarity.q || []).push(arguments);
+                        };
+                        clarity("set", "custom_page_name", customPageName);
+                  
                     waitForElement('#neon-customiser-app .npc-main-container').then((element) => {
                         var button = element.querySelector('.npc-sidebar .npc-sidebar-price-button-container button[type="button"]');
                         var product_title = "custom_12345";
@@ -244,10 +265,20 @@
                     }).catch((error) => console.error(error));
                   {% endif %}
                   {% if 'product.lead_page_logo_upload' == template %}
+                    var customPageName = 'Logo_upload'; // common name for both templates
+                    window.clarity = window.clarity || function() {
+                      (window.clarity.q = window.clarity.q || []).push(arguments);
+                    };
+                    clarity("set", "custom_page_name", customPageName);
                              console.log('lead page logo upload');
                              window.dataLayer = window.dataLayer || [];
                    {% else %}
                 console.log('other product page');
+                    var customPageName = 'collection_prodcut_page'; // common name for both templates
+                    window.clarity = window.clarity || function() {
+                      (window.clarity.q = window.clarity.q || []).push(arguments);
+                    };
+                    clarity("set", "custom_page_name", customPageName);
                     waitForElement('.custom-layer-trigger').then((element) => {
 
                         var product_title = "{{ product.title }}";

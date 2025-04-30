@@ -493,7 +493,7 @@
                                             <span class="icon-holder"
                                               ><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back_29870cd3-80f1-4855-a1e9-b3df56f7daea.svg?v=1744134856"
                                             ></span>
-                                            <span class="back-text">Go Back</span>
+                                            <span class="back-text">{{ section.settings.go_back }}</span>
                                           </div>
                                         </div>
                                       </div>
@@ -643,7 +643,7 @@
                         ></span>
                         <div class="inner-content" style="display: grid; grid-gap: 24px;">
                           <div class="title">
-                            <span class="tooltip-name">Included</span>
+                            <span class="tooltip-name">{{ section.settings.include_icon }}</span>
                           </div>
                           <p style="color: #656565; line-height: 18px; font-size: 15px !important; font-weight: 400; margin: 0 !important;">
                             {{ section.settings.include_icon_toolip }}
@@ -652,7 +652,7 @@
                             <span class="icon-holder"
                               ><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back_29870cd3-80f1-4855-a1e9-b3df56f7daea.svg?v=1744134856"
                             ></span>
-                            <span class="back-text">Go Back</span>
+                            <span class="back-text">{{ section.settings.go_back }}</span>
                           </div>
                         </div>
                       </div>
@@ -961,7 +961,7 @@
                                               <span class="icon-holder"
                                                 ><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back_29870cd3-80f1-4855-a1e9-b3df56f7daea.svg?v=1744134856"
                                               ></span>
-                                              <span class="back-text">Go Back</span>
+                                              <span class="back-text">{{ section.settings.go_back }}</span>
                                             </div>
                                           </div>
                                         </div>
@@ -1136,7 +1136,7 @@
                           ></span>
                           <div class="inner-content" style="display: grid; grid-gap: 24px;">
                             <div class="title">
-                              <span class="tooltip-name">Included</span>
+                              <span class="tooltip-name">{{ section.settings.include_icon }}</span>
                             </div>
                             <p style="color: #656565; line-height: 18px; font-size: 15px !important; font-weight: 400; margin: 0 !important;">
                               {{ section.settings.include_icon_toolip }}
@@ -1145,7 +1145,7 @@
                               <span class="icon-holder"
                                 ><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back_29870cd3-80f1-4855-a1e9-b3df56f7daea.svg?v=1744134856"
                               ></span>
-                              <span class="back-text">Go Back</span>
+                              <span class="back-text">{{ section.settings.go_back }}</span>
                             </div>
                           </div>
                         </div>
@@ -2361,6 +2361,12 @@ class DeliveryDate {
     "id": "include_icon",
     "label": "Include icon Text",
     "default": "Included"
+  },
+  {
+    "type": "text",
+    "id": "go_back",
+    "label": "Go Back",
+    "default": "Go Back"
   },
   {
     "type": "text",
