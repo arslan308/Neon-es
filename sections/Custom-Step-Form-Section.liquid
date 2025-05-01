@@ -1052,6 +1052,7 @@ function bgHandleFilePreview(file) {
           if (data.content && data.content.submissionID) {
               const submissionID = data.content.submissionID;
               document.getElementById("submissionid").value = submissionID;
+              addRecord();
           }
         })
         .catch(error => console.error("Error:", error));
