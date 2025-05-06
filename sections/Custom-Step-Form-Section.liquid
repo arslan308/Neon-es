@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ 'custom-steps-form-section.css' | asset_url }}">
+
 {% if template == 'product.lead_page_logo_upload' %}
   <style>
         section.section.image-with-text-sale-page.image_text_sec{background: white;}
@@ -57,16 +58,44 @@
               {% endif %}
             </div>
           </div>
-          <div
-            class="timer_box"
-            {% if section.settings.formButtonQouteImage != blank %}
-              style="background-image: url( {{section.settings.formButtonQouteImage |img_url:"master" }});"
-            {% endif %}
-          >
+          <div class="timer_box" {% if section.settings.formButtonQouteImage != blank %} style="background-image: url( {{section.settings.formButtonQouteImage |img_url:"master" }});" {% endif %}>
             <div>
               {{ section.settings.formButtonQoute }}
             </div>
           </div>
+
+          {% assign video = '' %}
+          {% assign is_one = 0 %}
+          {% assign duration = '' %}
+
+          <div class="hidden-agents-videos" style="display: none;">
+          {% for block in section.blocks %}
+            {% if block.type == 'agent' %}
+            <div class="agent-video" style="display: none;">
+              <span class="agent_video">{{ block.settings.agent_video }}</span>
+              <span class="agent_name">{{ block.settings.agent_name }}</span>
+              <span class="agent_duration">{{ block.settings.agent_duration }}</span>
+             </div>
+            {% endif %}
+          {% endfor %}
+          </div>
+          <div class="custom-video-wrapper" style="display: none;">
+            {% if section.settings.custom_video_title != blank %}
+              <h3 class="custom-video-title">{{ section.settings.custom_video_title }}</h3>
+            {% endif %}
+              <div class="custom-video-container">
+                <video preload="metadata" id="customVideo" class="custom-video" muted playsinline preload="metadata" style="width:100%; height:auto;">
+                  <source src="" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+          
+                <div class="custom-video-overlay" id="customPlayButton">
+                  <button class="play-button"></button>
+                  <div class="video-duration" style="color: white;width:100%;" id="videoDuration">0:00</div>
+                </div>
+          
+              </div>
+          </div>          
         </div>
         <div class="form_part">
           <div class="form_inner">
@@ -274,6 +303,7 @@
                           data-component="pagebreak-next"
                         >
                           {{ section.settings.ButtonTextForm }}
+                          <span class="loading-dots" style="display: none;">{%- render 'icon', icon: 'newloader' %}</span>
                         </button>
                       </div>
                     </div>
@@ -281,6 +311,12 @@
                       <input type="checkbox" name="terms" id="terms" checked>
                       <p>{{ section.settings.terms }}</p>
                     </div>
+                    {% if section.settings.newterms != blank %}
+                    <div class="term-condition-new">
+                      <input type="checkbox" name="terms-new" id="terms-new" checked>
+                      <p>{{ section.settings.newterms }}</p>
+                    </div>
+                    {% endif %}
                   </li>
                 </ul>
                 <ul class="form-section page-section step-3" date-step="3" style="display:none;">
@@ -995,12 +1031,19 @@ function bgHandleFilePreview(file) {
             'formId': "{{ section.settings.formid }}",
           });
         
+        if($('.agent-video').length <= 1){
         document.querySelector(".step_form_row").classList.add('swap_sec');
         document.querySelector(".custom_steps_form").classList.add('swap_sec_padding');
         document.querySelector("body").classList.add('swap_sec_body');
-        $('.step-2').hide();
-        $('.step-3').show();
          addRecord('{{ section.settings.webhook1 }}'); ///webhook 1
+          $('.step-2').hide();
+          $('.step-3').show();
+        } else {
+          $('#form-pagebreak-next_12').prop('disabled', true);
+          $('.loading-dots').addClass('show');
+          webhookCall('{{ section.settings.webhook1 }}', 'webhook_1');
+          addRecord('{{ section.settings.webhook1 }}', 'webhook_1'); ///webhook 1
+        }
         } else {
           alert('{{ section.settings.terms_error }}');
         }
@@ -1027,7 +1070,31 @@ function bgHandleFilePreview(file) {
         $('.file-required').addClass('show');
       }
     });
+    function agentVideo(){
+      const video = document.getElementById('customVideo');
+      const playButton = document.getElementById('customPlayButton');
+      console.log('agentVideo function');
+      // Play video and hide button
+      document.addEventListener('click', function (e) {
+        console.log(e.target);
+        if (
+            e.target &&
+            (e.target.id === 'customPlayButton' || e.target.classList.contains('play-button'))
+          ) {
+            video.muted = false;
+            video.currentTime = 0;
+            video.play();
+            $('#customVideo').attr('controls', true);
+            playButton.style.display = 'none';
+          }
+      });
 
+      // Show button again when video ends
+      video.addEventListener('ended', function () {
+        $('#customVideo').attr('controls', false);
+        playButton.style.display = 'flex';
+      });
+  }
     async function submissionStart(){
       if($('#submissionid').val() == ''){
         const formID = "{{ section.settings.formid }}";
@@ -1059,7 +1126,7 @@ function bgHandleFilePreview(file) {
       }
     }
 
-  function webhookCall(url){
+  function webhookCall(url, optionalWebhook){
       const formData = new FormData();
       var _submissionID = $('#submissionid').val();
       var _email = $('#input_5').val();
@@ -1084,14 +1151,58 @@ function bgHandleFilePreview(file) {
             cache: false,
             processData: false,
             success: function(response) {
+              if(typeof optionalWebhook !== 'undefined'){
+                const responseName = response.trim().toLowerCase();;
+                addVideo(responseName);
+              }
               console.log(response);
             },
             error: function(err) {
+                addVideo('error');
                 console.error(err);
             }
         });
   }
-    async function addRecord(optionalUrl){
+
+    function addVideo(responseName) {
+                var matchFound = false;
+                $('.agent-video').each(function () {
+                    const agentName = $(this).find('.agent_name').text().trim().toLowerCase();
+                    const video_duration = $(this).find('.agent_duration').text().trim();
+                    
+                    const responseMatch = responseName.trim().toLowerCase();
+                    console.log(agentName+ ' = '+responseMatch);
+                    if (agentName === responseMatch) {
+                      console.log('matched');
+                      var _txt = $('.custom-video-title').text();
+                      $('.custom-video-title').text('👋 '+agentName.charAt(0).toUpperCase() + agentName.slice(1)+' '+_txt);
+                      const videoSrc = $(this).find('.agent_video').text().trim();
+                      const video = document.getElementById('customVideo');
+                      const source = video.querySelector('source');
+                      source.setAttribute('src', videoSrc);
+                      video.load();
+                      setTimeout(function(){
+                      video.play();
+                      }, 3000);
+                      agentVideo();
+                      matchFound = true;
+                      $('#videoDuration').text(video_duration);
+                      return false;
+                    }
+                });
+                if (!matchFound) {
+                  $('.custom-video-wrapper').addClass('no-video');
+                  $('.timer_box').addClass('no-video');
+                }
+                setTimeout(function(){
+                document.querySelector(".step_form_row").classList.add('swap_sec');
+                document.querySelector(".custom_steps_form").classList.add('swap_sec_padding');
+                document.querySelector("body").classList.add('swap_sec_body');
+                  $('.step-2').hide();
+                  $('.step-3').show();
+                }, 500);
+    }
+    async function addRecord(optionalUrl, optionalWebhook){
       const formData = new FormData();
       var _phone = "+"+iti.getSelectedCountryData().dialCode+$('#input_6_full').val();
       var SUBMISSION_ID = $('#submissionid').val();
@@ -1119,7 +1230,7 @@ function bgHandleFilePreview(file) {
 
           const result = await response.json();
           console.log("Submission Response:", result);
-          if (typeof optionalUrl !== "undefined") {
+          if (typeof optionalUrl !== "undefined" && typeof optionalWebhook == "undefined") {
             webhookCall(optionalUrl)
           }
       } catch (error) {
@@ -1258,6 +1369,28 @@ function bgHandleFilePreview(file) {
 // Start the countdown
 newCountdown();
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+  if($('.agent-video').length == 0){ 
+    $('.custom-video-wrapper').addClass('no-video');
+    $('.timer_box').addClass('no-video');
+  }
+   if($('.agent-video').length == 1){
+        const videoSrc = $('.agent_video').text().trim();
+        const video = document.getElementById('customVideo');
+        const source = video.querySelector('source');
+        source.setAttribute('src', videoSrc);
+        video.load();
+        const video_duration = $('.agent_duration').text().trim();
+        $('#videoDuration').text(video_duration);
+        setTimeout(function(){
+        agentVideo();
+        }, 500);
+   }
+
+  });
+</script>
 
 {% schema %}
 {
@@ -1341,6 +1474,11 @@ newCountdown();
   "id": "terms",
   "label": "Terms & Conditions",
   "default":"By submitting, you agree to Neonsfeer’s terms and conditions."
+  },
+  {
+  "type": "text",
+  "id": "newterms",
+  "label": "Send quote & unsubscribe",
   },
   {
   "type": "text",
@@ -1445,6 +1583,12 @@ newCountdown();
   "type": "header",
   "content": "Tab 2 content"
   },
+  {
+  "type": "text",
+  "id": "custom_video_title",
+  "label": "Video Title",
+  "default": "More information about your order"
+},
   {
     "type": "text",
     "id": "tabTitle2",
@@ -1557,6 +1701,30 @@ newCountdown();
   }
 ],
 "blocks": [
+  {
+    "type": "agent",
+    "name": "Agent",
+    "limit": 5,
+    "settings": [
+      {
+        "type": "text",
+        "id": "agent_name",
+        "label": "Agent Name",
+        "default": "Jan"
+      },
+      {
+        "type": "text",
+        "id": "agent_video",
+        "label": "Agent Video"
+      },
+      {
+        "type": "text",
+        "id": "agent_duration",
+        "label": "Video Duration"
+      }
+      
+   ]
+  },
   {
     "type": "tab",
     "name": "Tab",

@@ -1,0 +1,288 @@
+<div class="container container--flush">
+  <section class="{{ section.settings.className }} section section--tight" data-section-id="{{ section.id }}" data-section-type="text-with-icons">
+  <div class="section-title">{{ section.settings.section_title }}</div>
+  <div class="text-with-icons">
+    {%- for block in section.blocks -%}
+      <div class="text-with-icons__item" data-block-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+        <div class="text-with-icons__icon-wrapper">
+          {%- if block.settings.custom_icon != blank -%}
+            <img loading="lazy" src="{{ block.settings.custom_icon | img_url: '60x' }}" alt="{{ block.settings.custom_icon.alt | escape }}">
+          {%- else -%}
+            {%- render 'icon', icon: block.settings.icon, stroke_width: 1.5 -%}
+          {%- endif -%}
+        </div>
+
+        {%- if block.settings.title != blank or block.settings.content != blank -%}
+          <div class="text-with-icons__content-wrapper">
+            {%- if block.settings.title != blank -%}
+              <p class="text-with-icons__title text--strong">{{ block.settings.title | escape }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.content != blank -%}
+              <div class="text-with-icons__content rte">
+                {{ block.settings.content  }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+  </section>
+</div>
+<style>
+.icons-with-text2 .text-with-icons__item{background: #F7F5FF; padding: 24px; display: flex ; flex-direction: column; flex-basis: 100% !important; margin: 0; border-radius: 8px;}
+.icons-with-text2  .text-with-icons{
+gap: 24px;
+display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+.icons-with-text2  .text-with-icons__title{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.icons-with-text2  .section-title{
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 600px) {
+.icons-with-text2 .text-with-icons {
+  grid-template-columns: 1fr !important;
+}
+}
+</style>
+{% schema %}
+{
+"name": "icon with text 2",
+"max_blocks": 4,
+"settings": [
+  {
+    "type": "checkbox",
+    "id": "stack_mobile",
+    "label": "Stack on mobile",
+    "default": false
+  },
+  {
+      "type": "text",
+      "id":"className",
+      "label": "Class Name"
+  },
+  {
+      "type": "text",
+      "id":"section_title",
+      "label": "Section Title"
+  }
+],
+"blocks": [
+  {
+    "type": "item",
+    "name": "Item",
+    "settings": [
+      {
+        "type": "select",
+        "id": "icon",
+        "label": "Icon",
+        "options": [
+          {
+            "value": "bi-add-to-cart",
+            "label": "Add to cart",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-gift-wrap",
+            "label": "Gift wrap",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-gift-box",
+            "label": "Gift box",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-heart",
+            "label": "Heart",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-ecology",
+            "label": "Ecology",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-plant",
+            "label": "Plant",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-shop",
+            "label": "Shop",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-shop-pin",
+            "label": "Shop with pin",
+            "group": "Shop"
+          },
+          {
+            "value": "bi-alert",
+            "label": "Alert",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-chat",
+            "label": "Chat",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-comment",
+            "label": "Comment",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-customer-support",
+            "label": "Customer support",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-email",
+            "label": "Email",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-network",
+            "label": "Network",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-newsletter",
+            "label": "Newsletter",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-love",
+            "label": "Love",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-phone",
+            "label": "Phone",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-share",
+            "label": "Share",
+            "group": "Communication"
+          },
+          {
+            "value": "bi-delivery",
+            "label": "Delivery",
+            "group": "Delivery"
+          },
+          {
+            "value": "bi-fast-delivery",
+            "label": "Fast delivery",
+            "group": "Delivery"
+          },
+          {
+            "value": "bi-returns",
+            "label": "Returns",
+            "group": "Delivery"
+          },
+          {
+            "value": "bi-time",
+            "label": "Time",
+            "group": "Delivery"
+          },
+          {
+            "value": "bi-secure-payment",
+            "label": "Secure payment",
+            "group": "Security"
+          },
+          {
+            "value": "bi-mobile-payment",
+            "label": "Mobile payment",
+            "group": "Security"
+          },
+          {
+            "value": "bi-computer-payment",
+            "label": "Computer payment",
+            "group": "Security"
+          },
+          {
+            "value": "bi-credit-card",
+            "label": "Credit card",
+            "group": "Security"
+          },
+          {
+            "value": "bi-shield",
+            "label": "Shield",
+            "group": "Security"
+          }
+        ],
+        "default": "bi-customer-support"
+      },
+      {
+        "type": "image_picker",
+        "id": "custom_icon",
+        "label": "Custom icon",
+        "info": "60 x 60px .png with transparency recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Your title"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>Short content about your store</p>"
+      }
+    ]
+  }
+],
+"presets": [
+  {
+    "category": "Text",
+    "name": "icon with text 2",
+    "blocks": [
+      {
+        "type": "item",
+        "settings": {
+          "icon": "bi-delivery",
+          "title": "Free delivery worldwide"
+        }
+      },
+      {
+        "type": "item",
+        "settings": {
+          "icon": "bi-returns",
+          "title": "Satisfied or refunded"
+        }
+      },
+      {
+        "type": "item",
+        "settings": {
+          "icon": "bi-customer-support",
+          "title": "Top-notch support"
+        }
+      },
+      {
+        "type": "item",
+        "settings": {
+          "icon": "bi-secure-payment",
+          "title": "Secure payments"
+        }
+      }
+    ]
+  }
+]
+}
+{% endschema %}

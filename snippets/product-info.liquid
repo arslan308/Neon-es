@@ -13,6 +13,9 @@
             {%- case block.type -%}
               {%- when 'product_meta' -%}
                 {%- render 'product-meta', product: product, block: block, update_url: update_url -%}
+                
+                {%- when 'buy_buttons' -%}
+                  {%- render 'product-buy-buttons', product: product, form: form, block: block -%}
 
               {%- when 'variant_selector' -%}
                 {%- render 'product-variant-selector', product: product, product_form_id: product_form_id, update_url: update_url, block: block -%}
@@ -20,8 +23,6 @@
               {%- when 'volume_pricing' -%}
                 {%- render 'volume-pricing-table', variant: product.selected_or_first_available_variant -%}
 
-              {%- when 'buy_buttons' -%}
-                {%- render 'product-buy-buttons', product: product, form: form, block: block -%}
 
               {%- when 'text' -%}
                 {%- if block.settings.content != blank -%}
@@ -87,6 +88,20 @@
             </ul>
           </div>
         {%- endif -%}
+        <span style="width: 100%;" class="product-info-date">
+           <div class="product-title-discription-add-to-cart-main-payment" style="margin-top: 24px; display: flex ; justify-content: center; gap: 12px;">
+              {% for type in shop.enabled_payment_types %}
+                  {{ type | payment_type_svg_tag: class: 'payment-list__item' }}
+              {% endfor %}
+          </div>
+          <div class="time-date product-info-time">
+              <div class="icon-holder"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_shipping_1.svg?v=1742552931"/></div>
+              <span class="order-message-res">
+                  {{ section.settings.order_message }}:
+                  <div class="delivery-date" style="font-weight: 400;"></div>
+              </span>
+          </div>  
+      </span>
       {%- endform -%}
     </product-form>
   </div>

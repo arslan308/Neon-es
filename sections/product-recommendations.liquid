@@ -1,83 +1,145 @@
 {%- capture section_settings -%}
-{
-  "stackable": false,
-  "layout": "vertical",
-  "productId": {{ product.id | json }},
-  "useRecommendations": true,
-  "recommendationsCount": 10
-}
-{%- endcapture -%}
-
-<section class="section" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings="{{ section_settings | escape_once }}">
-  <div class="container">
-    {%- if section.settings.heading != blank -%}
-      <header class="section__header">
-        <h2 class="section__title heading h3">{{ section.settings.heading | escape }}</h2>
-      </header>
-    {%- endif -%}
-
-    <div class="product-recommendations">
-      {%- if recommendations.performed -%}
-        <div class="scroller">
-          <div class="scroller__inner">
-            <div class="product-list product-list--vertical product-list--scrollable">
-              {%- for product in recommendations.products -%}
-                {%- render 'product-item', product: product, grid_classes: '1/4--lap 1/5--desk 1/6--wide', show_add_to_cart: section.settings.show_quick_buy -%}
-              {%- else -%}
-                <style>
-                  #shopify-section-{{ section.id }} {
-                    display: none;
-                  }
-                </style>
-              {%- endfor -%}
+  {
+    "stackable": false,
+    "layout": "vertical",
+    "productId": {{ product.id | json }},
+    "useRecommendations": true,
+    "recommendationsCount": 10
+  }
+  {%- endcapture -%}
+  
+  <section class="section related-product" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings="{{ section_settings | escape_once }}">
+    <div class="container">
+      {%- if section.settings.heading != blank -%}
+        <header class="section__header">
+          <h2 class="section__title heading h3">{{ section.settings.heading | escape }}</h2>
+        </header>
+      {%- endif -%}
+  
+      <div class="product-recommendations">
+        {%- if recommendations.performed -%}
+          <div class="scroller">
+            <div class="scroller__inner">
+              <div class="product-list product-list--vertical product-list--scrollable">
+                {%- for product in recommendations.products -%}
+                  {%- render 'product-item', product: product, grid_classes: '1/4--lap 1/5--desk 1/6--wide', show_add_to_cart: section.settings.show_quick_buy -%}
+                {%- else -%}
+                  <style>
+                    #shopify-section-{{ section.id }} {
+                      display: none;
+                    }
+                  </style>
+                {%- endfor -%}
+              </div>
             </div>
           </div>
-        </div>
-      {%- endif -%}
-    </div>
-  </div>
-  <div id="modal-quick-view-{{ section.id }}" class="modal" aria-hidden="true">
-    <div class="modal__dialog modal__dialog--stretch" role="dialog">
-      <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
-        {%- render 'icon', icon: 'close' -%}
-      </button>
-
-      <div class="modal__loader">
-        {%- render 'icon', icon: 'search-loader' -%}
+        {%- endif -%}
       </div>
-
-      <div class="modal__inner"></div>
     </div>
-  </div>
-</section>
+    <div id="modal-quick-view-{{ section.id }}" class="modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+  
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+  
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .related-product .section__header{justify-content: flex-start;}
+    .related-product{
+      background: #F7F5FF;
+      padding: 80px 0 30px 0;  
+      }
+  </style>
+  {% if template == 'product' %}
+    
+    <style>
+    svg.payment-list__item{
+      height: 20px !important;
+      width: 25px !important;
+    }
+    .product-item {
+        margin-right: 20px;
+        padding: 0 !important;
+        width: 216px !important;
+        border-radius: 8px;
+      }
 
-{% schema %}
-{
-  "name": "Related products",
-  "templates": ["product"],
-  "settings": [
-    {
-      "type": "paragraph",
-      "content": "Dynamic recommendations change and improve with time. Create manual product recommendations using the Shopify Search & Discovery app. [Learn more](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations)."
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "You may also like"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_quick_buy",
-      "label": "Show quick buy",
-      "default": false
+      .product-list--scrollable .product-item .aspect-ratio img{border-radius: 8px 8px 0 0;}
+      .flickity-prev-next-button.previous {
+    left: 93.9%;
+    height: 40px; 
+      width: 40px;
+      border: 2px solid #715AEF;
+      border-radius: 10px 0 0 10px;
+  }
+  @media screen and (min-width: 1280px) {
+    .flickity-prev-next-button.previous {
+      left: 94.4% !important;
     }
-  ],
-  "presets": [
-    {
-      "category": "Product",
-      "name": "Related products"
+  }
+  .flickity-prev-next-button svg{
+    fill: #715AEF;
+  }
+  .flickity-prev-next-button{top: calc(-21%);}
+  .flickity-prev-next-button.next {
+    right: 0;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    margin-left: -4px;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #715AEF;
+  }
+  .flickity-prev-next-button[disabled] {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .product-item--vertical .product-item__info {
+    justify-content: space-between;
+    padding: 22px;
+      text-align: center;
     }
-  ]
-}
-{% endschema %}
+    /* @media screen and (max-width: 600px) {
+      .product-item--vertical .product-item__info{
+        padding: 22px !important;
+      }
+    } */
+    </style>
+  {% endif %}
+  {% schema %}
+  {
+    "name": "Related products",
+    "templates": ["product"],
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Dynamic recommendations change and improve with time. Create manual product recommendations using the Shopify Search & Discovery app. [Learn more](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations)."
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Related products"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_quick_buy",
+        "label": "Show quick buy",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "category": "Product",
+        "name": "Related products"
+      }
+    ]
+  }
+  {% endschema %}

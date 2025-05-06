@@ -1,8 +1,12 @@
 
 {%- liquid
+if image != blank
+  assign color_swatch_image =  image | image_url: width: 60
+  assign color_swatch_style = 'background-image: url(' | append: color_swatch_image | append: ')'
+else
   if swatch.image != blank
     assign color_swatch_image = swatch.image | image_url: width: 72
-    assign color_swatch_style = 'background-image: url(' | append: color_swatch_image | append: ')'
+    assign color_swatch_style = 'background-imageasdfg: url(' | append: color_swatch_image | append: ')'
   elsif swatch.color != blank
     assign color_swatch_style = 'background-color: ' | append: swatch.color
   else
@@ -22,11 +26,10 @@
           assign color_swatch_image = images[color_swatch_value] | image_url: width: 72
           assign color_swatch_style = 'background-image: url(' | append: color_swatch_image | append: ')'
         endif
-
         break
       endif
     endfor
   endif
-
-  echo color_swatch_style
--%}
+endif
+  echo color_swatch_style 
+  -%}

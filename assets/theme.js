@@ -7031,6 +7031,7 @@ var ProductItemColorSwatch = class {
     window.removeEventListener("resize", this._recalculateSwatchesListener);
   }
   recalculateSwatches() {
+    console.log("clicked");
     import_fastdom2.default.measure(() => {
       this.element.querySelectorAll(".product-item__swatch-list").forEach((swatchList) => {
         const currentWidth = swatchList.clientWidth, maxAllowedWidth = parseInt(Math.min(currentWidth, 200));
@@ -7106,6 +7107,7 @@ var _VariantPicker = class _VariantPicker extends HTMLElement {
    * in the case of a combination that does not exist
    */
   async selectCombination({ optionValues, productChange }) {
+
     const previousVariant = this.selectedVariant;
     const newContent = document.createRange().createContextualFragment(await __privateMethod(this, _VariantPicker_instances, renderForCombination_fn).call(this, optionValues));
     if (!productChange) {
@@ -7143,6 +7145,42 @@ var _VariantPicker = class _VariantPicker extends HTMLElement {
       }
     }));
     Shopify?.PaymentButton?.init();
+      var toggle = document.getElementById("vat-toggle");
+      var priceValue = document.getElementById("price-value");
+      var vatText = document.getElementById("vat-text");
+  
+      if (toggle && priceValue) {
+          console.log(" INNNNNN ");
+          var priceExclVat = priceValue.getAttribute("data-price-excl");
+          var priceInclVat = priceValue.getAttribute("data-price-incl");
+
+          var textExclVat = toggle.getAttribute("data-exclude");
+          var textInclVat = toggle.getAttribute("data-include");
+  
+          // Ensure toggle keeps its previous state
+          var isChecked = localStorage.getItem("vatToggle") === "true";
+          toggle.checked = isChecked;
+          updatePrice();
+  
+          toggle.addEventListener("change", function() {
+              localStorage.setItem("vatToggle", toggle.checked);
+              updatePrice();
+          });
+  
+          function updatePrice() { 
+              if (toggle.checked) {
+                  console.log(" change Include VAT ");
+                  priceValue.innerHTML = priceInclVat;
+                  vatText.innerHTML = textExclVat;
+              } else {
+                  console.log(" change Exclude VAT");
+                  priceValue.innerHTML = priceExclVat;
+                  vatText.innerHTML = textInclVat;
+              }
+          }
+      } else {
+          console.log(" ELSSSS ");
+      }
   }
 };
 _preloadedHtml = new WeakMap();

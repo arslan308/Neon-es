@@ -1478,7 +1478,6 @@ display: block;
     width:100% !important;
       padding-left:0 !important;
   }
-
 }
 
 /* price with logo */
@@ -1506,4 +1505,82 @@ display: block;
 }
 
 /* price with logo end */
+
+.custom-video-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin-top: 35px;
+}
+.custom-video-wrapper .custom-video-title{font-size: 20px; font-weight: 700; margin-bottom: 16px !important;}
+.custom-video-wrapper .custom-video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-video-wrapper .custom-video {
+  width: 100%;
+  height: 370px !important;
+  display: block;
+}
+
+.custom-video-wrapper .custom-video-overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.custom-video-wrapper .play-button {
+  width: 70px;
+  height: 70px;
+  background: url('https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Group_319.png?v=1745604267') no-repeat center center;
+  background-size: contain;
+  border: none;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.custom-video-wrapper .custom-video-wrapper .video-duration {
+  font-size: 14px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.swap_sec .video_part .custom-video-wrapper{display: block !important;}
+.product-info__block-item.product-info__block-item--buy-buttons{
+  margin-top: 20px;
+}
+@media only screen and (max-width: 767.9px) {
+  .custom-video-wrapper .custom-video-title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px !important;
+    text-align: center;
+  }
+  .swap_sec .video_part .custom-video-wrapper{    margin-top: 16px;}
+  .custom-video-wrapper .play-button{
+    width: 48px;
+    height: 48px;
+  }
+  .custom-video-wrapper .custom-video-overlay{
+    flex-direction: column;
+    top: 60%;
+  }
+  .custom-video-wrapper .custom-video{
+    height: 180px !important;
+  }
+  .right_image_bg .timer_box > div{
+    padding: 10px;
+  }
+}
+
+.cart-recap__secure-payment svg.payment-list__item{
+  margin-right: 15px !important; 
+  margin-bottom: 10px !important;
+}
 

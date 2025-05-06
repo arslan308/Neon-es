@@ -1,7 +1,7 @@
 {%- if product.media.size > 0 -%}
   {%- assign show_thumbnails_if_one_media = true -%}
 
-  <div class="card">
+  <div class="card" style="background: transparent;">
     <div class="card__section card__section--tight">
       <div class="product-gallery {% if show_thumbnails_if_one_media %}product-gallery--with-thumbnails{% endif %}">
         {%- assign selected_media = product.selected_variant.featured_media | default: product.featured_media -%}

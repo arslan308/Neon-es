@@ -1,0 +1,248 @@
+<div class="container secondry-tabs-section">
+  <div class="accordion-video-wrapper">
+    <!-- Right Side: Video (Shown Only If URL Exists) -->
+    {% if section.settings.video_url != blank %}
+      <div class="faq-video" style="width: 100%; display: grid ; grid-template-columns: 1fr 1fr 1fr; grid-gap: 10px;">
+        <video style="border-radius: 8px; aspect-ratio: 9 / 16; width: 100%;" autoplay muted playsinline loop controls>
+          <source src="{{ section.settings.video_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video style="border-radius: 8px; aspect-ratio: 9 / 16; width: 100%;" autoplay muted playsinline loop controls>
+          <source src="{{ section.settings.video_url2 }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video style="border-radius: 8px; aspect-ratio: 9 / 16; width: 100%;" autoplay muted playsinline loop controls>
+          <source src="{{ section.settings.video_url3 }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div> 
+    {% endif %}
+
+    <!-- Left Side: Accordion -->
+    <div class="accordion">
+      {% comment %} <div class="tabs-title" style="margin-bottom: 24px;">{{ section.settings.tab_section_title }}</div> {% endcomment %}
+      {% for block in section.blocks %}
+        <div class="accordion-item2 {% if forloop.first %}active{% endif %}">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-title">{{ block.settings.title }}</span>
+            <img class="accordion-icon2" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/keyboard_arrow_up_1.png?v=1741977186" alt="Toggle">
+          </div>
+          <div class="accordion-content2" style="display: {% if forloop.first %}block{% else %}none{% endif %};">
+            <p>{{ block.settings.content }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+  {% if template == 'product' %}
+    <style>
+.secondry-tabs-section .accordion {
+  width: 100%;
+}
+.secondry-tabs-section .accordion .accordion-title{
+  font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+section.icons-with-text2.section.section--tight{padding: 0 0 40px 0;}
+.secondry-tabs-section .accordion .tabs-title{
+  margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+}
+.secondry-tabs-section .accordion-item2 {
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.secondry-tabs-section .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 2px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f8f7fc; /* Inactive color */
+  transition: background 0.3s ease;
+}
+
+.secondry-tabs-section .accordion-item2.active .accordion-header {
+  background: #fde8eb; /* Active color */
+}
+
+.secondry-tabs-section .accordion-content2 {
+  display: none;
+  padding: 0 16px 24px;
+  background: #fde8eb; /* Background matches active tab */
+}
+.secondry-tabs-section .accordion-content2 p{
+  margin: 0;
+  font-size: 14px;
+    font-weight: 400;
+    color: #656565;
+}
+.secondry-tabs-section .accordion-icon2 {
+  width: 20px;
+  height: 12px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-video-wrapper {
+  display: grid;
+    grid-template-columns: 58% 40%;
+    padding: 15px 0 40px 0;
+    gap: 28px;
+}
+
+@media screen and (max-width: 768px){
+  .secondry-tabs-section .accordion{padding: 0 !important;}
+  .secondry-tabs-section .accordion-item2{width: 100% !important}
+  .accordion-video-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 10px ;
+}
+  .accordion-video-wrapper .faq-video video{height: 220px !important;}
+  .accordion-video-wrapper .faq-video{
+    margin-top: 0 !important;
+}
+  }
+
+
+.accordion {
+  width: 58%;
+}
+
+.faq-video {
+  width: 40%;
+}
+.video-section-in-rght .video-container-v-t video{
+  height: 443px !important; 
+    margin-top: 15px !important; 
+}
+@media screen and (max-width: 768px) {
+  .accordion-video-wrapper {
+    flex-direction: column;
+  }
+  .accordion, .faq-video {
+    width: 100%;
+  }
+}
+
+</style>
+  {% endif %}
+
+<script>
+function toggleAccordion(element) {
+  let allItems = document.querySelectorAll('.accordion-item2');
+
+  allItems.forEach(item => {
+    let content = item.querySelector('.accordion-content2');
+    let icon = item.querySelector('.accordion-icon2');
+
+    if (item.contains(element)) {
+      let isActive = item.classList.contains('active');
+      allItems.forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.accordion-content2').style.display = 'none';
+        i.querySelector('.accordion-icon2').style.transform = 'rotate(0deg)';
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        content.style.display = 'block';
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+  });
+}
+
+// Ensure the first accordion is open on page load
+document.addEventListener("DOMContentLoaded", function() {
+  let firstItem = document.querySelector(".accordion-item2");
+  if (firstItem) {
+    firstItem.classList.add("active");
+    firstItem.querySelector(".accordion-content2").style.display = "block";
+    firstItem.querySelector(".accordion-icon2").style.transform = "rotate(180deg)";
+  }
+});
+</script>
+
+{% schema %}
+  {
+    "name": "Tabs Accordion",
+    "settings": [
+      {
+        "type": "url",
+        "id": "video_url",
+        "label": "FAQ Video URL",
+        "info": "Add a YouTube or Vimeo video link to display next to the FAQ."
+      },
+      {
+        "type": "url",
+        "id": "video_url2",
+        "label": "FAQ Video URL",
+        "info": "Add a YouTube or Vimeo video link to display next to the FAQ."
+      },
+      {
+        "type": "url",
+        "id": "video_url3",
+        "label": "FAQ Video URL",
+        "info": "Add a YouTube or Vimeo video link to display next to the FAQ."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tab",
+        "name": "Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Tab Title",
+            "default": "Product Information"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Tab Content",
+            "default": "<p>Prijzen variëren op basis van ontwerp, grootte en LED-lengte. Alleen tekst begint bij ongeveer €220. Voor precieze kosten kun je je ontwerp insturen voor een offerte.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Tabs Accordion",
+        "blocks": [
+          {
+            "type": "tab",
+            "settings": {
+              "title": "Product Information",
+              "content": "<p>Details about the product.</p>"
+            }
+          },
+          {
+            "type": "tab",
+            "settings": {
+              "title": "Delivery",
+              "content": "<p>Delivery details and estimated time.</p>"
+            }
+          },
+          {
+            "type": "tab",
+            "settings": {
+              "title": "Returns",
+              "content": "<p>Return policy and refund process.</p>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+  

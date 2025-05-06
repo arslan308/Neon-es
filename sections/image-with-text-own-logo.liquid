@@ -1,0 +1,365 @@
+<style>
+  .image-with-text-sale-page .discount-btn-main{display: flex; align-items: center; flex-wrap: wrap;}
+  @media screen and (max-width: 767.98px){
+    .image-with-text-sale-page .discount-btn-main{flex-wrap: wrap; gap: 10px;}
+    .own-custom .customize-logo .image-with-text{padding-top: 0 !important;}
+    /* .own-custom .customize-logo .image-with-text{flex-direction: column !important;} */
+    .own-custom .image-with-text__text-aligner{padding: 20px !important;}
+    .own-custom .customize-logo{flex-direction: column;}
+    .own-custom .image-with-text__image-container{
+      border-radius: 0 0 8px 8px !important;
+      
+    }
+    .secondry-tabs-section .accordion .tabs-title{text-align: center;}
+    .faq-tabing{padding: 20px 0 !important;}
+    .secondry-tabs-section .accordion{padding: 40px 0;}
+  }
+  .image-with-text-sale-page.image_text_sec a.button{
+    margin-right:1rem;
+  }
+  .image-with-text-sale-page.image_text_sec a.button:last-child {
+    border: 1px solid #fff;
+    background: transparent;
+  } 
+  .image-with-text-sale-page.image_text_sec a.button:last-child:hover {
+    background: #ff13a7;
+    border: 1px solid #ff13a7;
+  } 
+  .image-with-text-sale-page video{height: 460px !important;}
+
+  .own-custom .image-with-text__image-container{
+    min-height: 261px;
+    background: #D9D9D9;
+    width: 100% !important;
+    border-radius: 8px 8px 0 0;
+  }
+  .own-custom  .customize-logo{
+    display: flex;
+    justify-content: space-between;
+    gap: 43px;
+  }
+  .own-custom .image-with-text__text-container{padding: 0 !important; width: 100% !important;}
+  .own-custom .image-with-text__text-aligner{
+    padding: 64px 48px;
+  }
+  .own-custom .customize-logo .image-with-text{
+    flex-direction: column-reverse;
+  }
+  .own-custom .shapes{width: 100%;}
+</style>
+<section class="section image-with-text-sale-page own-custom {{ section.settings.custom_class }}" data-section-id="{{ section.id }}" data-section-type="image-with-text">
+  <div class="container custom-for-grid">
+    <div class="section-headings-text" style="width: 100%; text-align: center;">
+      <div class="image-text-main-title" style="font-size: 28px; color: black; font-weight: 700;">{{ section.settings.main_title }}</div>
+      <div class="image-text-main-description" style="color: #656565; font-size: 16px; font-weight: 400; margin: 16px 0 24px 0;">{{ section.settings.main_description }}</div>
+    </div>
+    <div class="customize-logo">
+      <div class="shapes">
+        {%- capture image -%}
+          <div class="image-with-text__image-container" style="width: {{ section.settings.image_width }}%;">
+            {%- if template == "product.custom_neon" and product.images.size > 0 -%}
+              {%- assign image_url = product.images.first | image_url: width: product.images.first.width | image_tag: loading: 'lazy', class: 'image-1 PaddingDyn', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+              {{ image_url }}
+        
+            {%- elsif section.settings.Video_url != blank and template == "product.lead_page_logo_upload" -%}
+              <video autoplay muted playsinline loop preload="auto">
+                <source src="{{ section.settings.Video_url }}" type="video/mp4">
+              </video>
+        
+            {%- elsif section.settings.image_1 != blank -%}
+              {{ section.settings.image_1 | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'fallback-image', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200' }}
+        
+            {%- else -%}
+              <p>No image or video available.</p>
+            {%- endif -%}
+          </div>
+        {%- endcapture -%}
+        
+      
+          {%- capture text -%}
+            <div class="image-with-text__text-container">
+              <div class="image-with-text__text-aligner">
+                {%- if section.settings.title != blank -%}
+                  <h2 class="heading h3 section-title">
+                    {{ section.settings.title | escape }}
+                  {% comment %} {%- if template contains 'product.lead_page_' or template =="product.custom_neon" -%}
+                      <span class="logo_discount">{{ product.selected_or_first_available_variant.price | divided_by:1.25 | times:0.75 | money }}</span>
+                    {% endif %} {% endcomment %}
+                  </h2>
+                {%- endif -%}
+      
+                <div class="rte">
+                  <p>{{ section.settings.content }}</p>
+                  {% if section.settings.list_one != blank %}
+                    <ul>
+                      <li>
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
+                        </svg>
+                        {{ section.settings.list_one }}
+                      </li>
+                      <li>
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
+                        </svg>
+                        {{ section.settings.list_two }}
+                      </li>
+                      <li>
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
+                        </svg>
+                        {{ section.settings.list_three }}
+                      </li>
+                    </ul>
+                  {% endif %}
+                  <div class="discount-btn-main">
+                    {%- if template == "product.custom_neon"-%}
+                        <a class="btn button trigger-add-to-cart custom-layer-trigger">{{ section.settings.add_to_cart_btn_text }}</a>
+                    {%- else section.settings.button_link != blank and section.settings.button_text != blank -%}
+                      <a href="{{ section.settings.button_link }}" class="button button--primary" link-title="{{section.settings.class}}">{{ section.settings.button_text | escape }}</a>
+                    {%- endif -%}
+        
+                    {%- if section.settings.button_link_2 != blank and section.settings.button_text_2 != blank -%}
+                      <a href="{{ section.settings.button_link_2 }}" class="button button--primary" link-title="{{section.settings.class}}" >{{ section.settings.button_text_2 | escape }}</a>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endcapture -%}
+      
+          <div class="image-with-text">
+            {%- if section.settings.image_position == 'left' -%}
+              {{ image }}
+              {{ text }}
+            {%- else -%}
+              {{ text }}
+              {{ image }}
+            {%- endif -%}
+          </div>
+      </div>
+      <div class="shapes">
+        {%- capture image -%}
+          <div class="image-with-text__image-container" style="width: {{ section.settings.image_width }}%;">
+            {%- if template == "product.custom_neon" and product.images.size > 0 -%}
+              {%- assign image_url = product.images.first | image_url: width: product.images.first.width | image_tag: loading: 'lazy', class: 'image-1 PaddingDyn', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
+              {{ image_url }}
+        
+            {%- elsif section.settings.Video_url != blank and template == "product.lead_page_logo_upload" -%}
+              <video autoplay muted playsinline loop preload="auto">
+                <source src="{{ section.settings.Video_url }}" type="video/mp4">
+              </video>
+        
+            {%- elsif section.settings.image_2 != blank -%}
+              {{ section.settings.image_2 | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'fallback-image', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200' }}
+        
+            {%- else -%}
+              <p>No image or video available.</p>
+            {%- endif -%}
+          </div>
+        {%- endcapture -%}
+        
+          {%- capture text -%}
+            <div class="image-with-text__text-container">
+              <div class="image-with-text__text-aligner">
+                {%- if section.settings.title != blank -%}
+                  <h2 class="heading h3 section-title">
+                    {{ section.settings.title | escape }}
+                  {% comment %} {%- if template contains 'product.lead_page_' or template =="product.custom_neon" -%}
+                      <span class="logo_discount">{{ product.selected_or_first_available_variant.price | divided_by:1.25 | times:0.75 | money }}</span>
+                    {% endif %} {% endcomment %}
+                  </h2>
+                {%- endif -%}
+      
+                <div class="rte">
+                  <p>{{ section.settings.content }}</p>
+                  {% if section.settings.list_one != blank %}
+                    <ul>
+                      <li>
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
+                        </svg>
+                        {{ section.settings.list_one }}
+                      </li>
+                      <li>
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
+                        </svg>
+                        {{ section.settings.list_two }}
+                      </li>
+                      <li>
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
+                        </svg>
+                        {{ section.settings.list_three }}
+                      </li>
+                    </ul>
+                  {% endif %}
+                  <div class="discount-btn-main">
+                    {%- if template == "product.custom_neon"-%}
+                        <a class="btn button trigger-add-to-cart custom-layer-trigger">{{ section.settings.add_to_cart_btn_text }}</a>
+                    {%- else section.settings.button_link != blank and section.settings.button_text != blank -%}
+                      <a href="{{ section.settings.button_link }}" class="button button--primary" link-title="{{section.settings.class}}">{{ section.settings.button_text | escape }}</a>
+                    {%- endif -%}
+        
+                    {%- if section.settings.button_link_2 != blank and section.settings.button_text_2 != blank -%}
+                      <a href="{{ section.settings.button_link_2 }}" class="button button--primary" link-title="{{section.settings.class}}" >{{ section.settings.button_text_2 | escape }}</a>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endcapture -%}
+      
+          <div class="image-with-text">
+            {%- if section.settings.image_position == 'left' -%}
+              {{ image }}
+              {{ text }}
+            {%- else -%}
+              {{ text }}
+              {{ image }}
+            {%- endif -%}
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with text custom",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Title"
+    },
+    {
+      "type": "text",
+      "id": "main_description",
+      "label": "Main Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image",
+      "info": "1200 x 800px .jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image",
+      "info": "1200 x 800px .jpg recommended"
+    },
+    {
+      "type": "text",
+      "id": "PaddingImage",
+      "label": "Image Padding"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 20,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "label": "Image width",
+      "default": 50
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Your title"
+    },  
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers.<br>Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "list_one",
+      "label": "List One"
+    },
+    {
+      "type": "richtext",
+      "id": "list_two",
+      "label": "List Two"
+    },
+    {
+      "type": "richtext",
+      "id": "list_three",
+      "label": "List Three"
+    },
+    {
+      "type":"text",
+      "id":"add_to_cart_btn_text",
+      "label":"Add to cart label"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Our products"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "button_text_2",
+      "label": "Second Button text",
+      "default": "Our products"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Second Button link",
+      "default": "/collections/all"
+    },
+	{
+      "type": "text",
+      "id": "class",
+      "label": "Custom Attribute"
+    },
+    {
+    "type":"url",
+    "id":"Video_url",
+    "label":"Video link"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Image with text custom",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

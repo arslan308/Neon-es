@@ -87,7 +87,7 @@
                 {%- endif -%}
 
                 <div class="customers-review">
-                  <div style="display: flex ; align-items: center; justify-content: space-between; margin: 34px 0 16px 0 !important;">
+                  <div style="display: flex ; align-items: center; justify-content: space-between; margin: 34px 0 16px 0 !important; gap: 8px;">
                     {%- if block.settings['user-img'] != blank -%}
                       <img src="{{ block.settings.user-img | img_url: '2048x2048' }}" class="image-review-size">
                     {%- endif -%}
@@ -219,7 +219,7 @@
     infinite: false,
     arrows:true,
     speed: 300,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     adaptiveHeight: false,
     responsive: [
@@ -234,7 +234,7 @@
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           dots: true
         }
@@ -258,14 +258,14 @@
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       }
@@ -306,6 +306,7 @@
     {% if template contains 'product.lead_page' or template contains 'page.form_page_' or template contains 'product.builder_'  or template == 'product.neon_builder' or template=="product.custom_neon" or template contains  'product.neon_maken' or template contains 'price-calculator' or template == 'product' %}
       .slick-list {
       padding: 0 115px !important;
+      padding-left: 0px !important;
   }
       {% endif %}
   .carousel-holder--2XSx7 {
@@ -433,8 +434,14 @@
   }
   @media(max-width:767.98px){
       .slick-list {
-      padding: 0 95px !important;
+      padding: 0 90px !important;
+      padding-left: 0px !important;
   }
+  .customers-review h2{
+    font-size: 16px;
+  }
+  .customers-review h2 img{height: 15px; width: 15px;}
+
   .google-reviews {
       columns: 1;
   }
@@ -459,6 +466,12 @@
       padding: 0px 23px 0px;
   }
   }
+
+    @media(max-width: 400px){
+      .customers-review h2{font-size: 12px; line-height: 17px;}
+      .customers-review h2 img{width: 12px; height: 12px;}
+      .customers-review .review-image svg{width: 80px;}
+    }
 </style>
 
 {% schema %}

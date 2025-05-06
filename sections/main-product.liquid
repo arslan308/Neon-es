@@ -17,43 +17,45 @@
 
 <section data-section-id="{{ section.id }}" data-section-type="product" data-section-settings="{{ section_settings | escape_once }}">
   <div class="container container--flush">
-    <div class="page__sub-header">
-      <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
-        <ol class="breadcrumb__list" role="list">
-          <li class="breadcrumb__item">
-            <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
-          </li>
+    {% if template != 'product' %}
+      <div class="page__sub-header">
+        <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
+          <ol class="breadcrumb__list" role="list">
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+            </li>
 
-          <li class="breadcrumb__item">
-            {%- if collection -%}
-              <a class="breadcrumb__link link" href="{{ collection.url }}">{{ collection.title }}</a> {%- render 'icon', icon: 'arrow-right' -%}
-            {%- else -%}
-              <a class="breadcrumb__link link" href="{{ routes.all_products_collection_url }}">{{- 'collection.general.all_products' | t -}}</a> {%- render 'icon', icon: 'arrow-right' -%}
+            <li class="breadcrumb__item">
+              {%- if collection -%}
+                <a class="breadcrumb__link link" href="{{ collection.url }}">{{ collection.title }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+              {%- else -%}
+                <a class="breadcrumb__link link" href="{{ routes.all_products_collection_url }}">{{- 'collection.general.all_products' | t -}}</a> {%- render 'icon', icon: 'arrow-right' -%}
+              {%- endif -%}
+            </li>
+
+            <li class="breadcrumb__item">
+              <span class="breadcrumb__link" aria-current="page">{{ product.title | truncate: 40 }}</span>
+            </li>
+          </ol>
+        </nav>
+
+        {%- if collection.previous_product or collection.next_product -%}
+          <div class="page__navigation">
+            {%- if collection.previous_product -%}
+              <span class="page__navigation-item page__navigation-item--prev">
+                <a href="{{ collection.previous_product.url }}" class="link" rel="prev">{%- render 'icon', icon: 'arrow-left' -%} {{- 'product.general.previous_product' | t -}}</a>
+              </span>
             {%- endif -%}
-          </li>
 
-          <li class="breadcrumb__item">
-            <span class="breadcrumb__link" aria-current="page">{{ product.title | truncate: 40 }}</span>
-          </li>
-        </ol>
-      </nav>
-
-      {%- if collection.previous_product or collection.next_product -%}
-        <div class="page__navigation">
-          {%- if collection.previous_product -%}
-            <span class="page__navigation-item page__navigation-item--prev">
-              <a href="{{ collection.previous_product.url }}" class="link" rel="prev">{%- render 'icon', icon: 'arrow-left' -%} {{- 'product.general.previous_product' | t -}}</a>
-            </span>
-          {%- endif -%}
-
-          {%- if collection.next_product -%}
-            <span class="page__navigation-item page__navigation-item--next">
-              <a href="{{ collection.next_product.url }}" class="link" rel="next">{{- 'product.general.next_product' | t -}} {%- render 'icon', icon: 'arrow-right' -%}</a>
-            </span>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
-    </div>
+            {%- if collection.next_product -%}
+              <span class="page__navigation-item page__navigation-item--next">
+                <a href="{{ collection.next_product.url }}" class="link" rel="next">{{- 'product.general.next_product' | t -}} {%- render 'icon', icon: 'arrow-right' -%}</a>
+              </span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {% endif %}
 
     {%- capture product_form_id -%}product-form-main-{{ product.id }}-{{ section.id }}{%- endcapture -%}
 
@@ -378,7 +380,78 @@
     </product-rerender>
   </section>
 </template>
+<style>
+    .trust_list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+  }
 
+  .trust_list li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.trust_list li .check-icon {
+  width: 18px; /* Adjust based on your needs */
+  height: 18px;
+  margin-right: 10px;
+}
+.trust_list li.has-tick::before {
+  display: block; /* Show only if the list item exists */
+}
+.trust_list li .check-icon {
+  stroke: {{ section.settings.checkmark_color }};
+}
+</style>
+{% if template == 'product' %}
+  <style>
+    .card--collapsed .card__header, .card--collapsed .card__section{padding-top: 20px;}
+    .product-block-list__item--info > .card{background: #f7f5ff !important; border-radius: 8px;}
+    .product-list--scrollable .product-item:first-child{border-radius: 8px;}
+    .aspect-ratio img, .aspect-ratio video, .aspect-ratio svg {
+      border-radius: 8px 8px;  
+  }
+    .product-item__title{
+      font-size: 18px !important;
+    font-weight: 600;
+    }
+    .product-item__price-list .price{
+      font-size: 15px !important;
+    font-weight: 400;
+    }
+    .section__header h2.section__title.heading.h3{font-size: 24px; font-weight: 700}
+        .builder_USSS.video-and-text-section {
+        background: #f7f5ff;    
+        border: 0;
+    }
+    .video-and-text-section.builder_USSS {
+      padding-top: 40px !important;
+    }
+    .product-block-list{margin-top: 24px;}
+    .video-section-in-rght .video-container-v-t video{
+      border-radius: 8px;
+    height: 100%;
+    }
+    .image-with-text-sale-page.image_text_sec .image-with-text__image-container img{
+      border-radius: 8px 8px 0 0;
+    height: 340px !important;
+    }
+    .specification-section .custom-section-image-and-text{grid-template-columns: 40% 2fr !important;}
+    /* .video-section-in-rght .overlay-banner-v img{border-radius: 8px !important;} */
+    @media screen and (max-width: 600px){
+      .product-form__buy-buttons .custom-layer-trigger{padding: 16px !important;}
+      .color-swatch-list--large .color-swatch{margin: 3px;}
+      .color-swatch-list--large .color-swatch__item{height: 52px; width: 52px;}
+    }
+    @media screen and (max-width: 375px){
+      .color-swatch-list--large .color-swatch__item{height: 44px; width: 44px;}
+      .option-color-value{font-size: 8px !important;}
+    }
+  </style>
+{% endif %}
 <script>
   window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
   ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
@@ -398,11 +471,161 @@
     }
   })();
 </script>
+{%- assign delivery_text = section.settings.delivery_date -%}         
+    <script>
+        class DeliveryDate {
+          constructor(selector, deliveryText) {
+            this.selector = selector;
+            this.deliveryText = deliveryText;
+            this.monthTranslations = {
+              default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+              fr: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+              es: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+              de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+              nl: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
+            };
+          }
+      
+          getStoreLanguage() {
+            let storeLang = document.documentElement.lang || "default";
+            return this.monthTranslations[storeLang] ? storeLang : "default";
+          }
+      
+          calculateFutureDate(daysToAdd) {
+            let date = new Date();
+            date.setDate(date.getDate() + daysToAdd);
+            return { day: date.getDate(), monthIndex: date.getMonth() };
+          }
+      
+          updateDeliveryDates() {
+            let storeLang = this.getStoreLanguage();
+            let futureDate = this.calculateFutureDate(9);
+            let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
+      
+            document.querySelectorAll(this.selector).forEach(el => {
+              el.innerHTML = `${this.deliveryText} ${futureDate.day} ${monthName}`;
+            });
+      
+            console.log("Store Language:", storeLang);
+            console.log("Month Index:", futureDate.monthIndex);
+            console.log("Month Name:", monthName);
+            console.log("Final Date Output:", futureDate.day, monthName);
+          }
+        }
+      
+        document.addEventListener("DOMContentLoaded", function () {
+          let deliveryText = {{ delivery_text | json }};
+          let deliveryDate = new DeliveryDate(".delivery-date", deliveryText);
+          deliveryDate.updateDeliveryDates();
+        });
+      </script>
 
+      
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var toggle = document.getElementById("vat-toggle");
+    var priceValue = document.getElementById("price-value");
+    var vatText = document.getElementById("vat-text");
+
+    if (toggle && priceValue) {
+        var priceExclVat = priceValue.getAttribute("data-price-excl");
+        var priceInclVat = priceValue.getAttribute("data-price-incl");
+
+        // Ensure toggle keeps its previous state
+        var isChecked = localStorage.getItem("vatToggle") === "true";
+        toggle.checked = isChecked;
+        updatePrice();
+
+        toggle.addEventListener("change", function () {
+            localStorage.setItem("vatToggle", toggle.checked);
+            updatePrice();
+        });
+
+        function updatePrice() {
+            if (toggle.checked) {
+                priceValue.innerHTML = priceInclVat;
+                vatText.innerHTML = "{{ section.settings.vat_included_text }}";
+            } else {
+                priceValue.innerHTML = priceExclVat;
+                vatText.innerHTML = "{{ section.settings.vat_excluded_text }}";
+            }
+        }
+
+        // Jab bhi variant change ho, price update ho jaye lekin toggle ka state na badle
+        document.addEventListener("variantChanged", function () {
+            console.log("Variant changed, updating price...");
+            // Updated prices ko dobara read karain
+            priceExclVat = priceValue.getAttribute("data-price-excl");
+            priceInclVat = priceValue.getAttribute("data-price-incl");
+            updatePrice();
+        });
+    }
+});
+
+
+</script>
+<style>
+  .price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .vat-toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  .vat-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    /* transition: .4s; */
+    border-radius: 20px;
+  }
+  .vat-toggle input:checked + .toggle-slider {
+    background-color: #7853f7;
+  }
+  .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .vat-toggle input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+  }
+</style>
 {% schema %}
 {
   "name": "Product",
   "blocks": [
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon_text",
+          "label": "List Item Text",
+          "default": "Feature description"
+        }
+      ]
+    },
     {
       "type": "product_meta",
       "name": "Product meta",
@@ -800,6 +1023,67 @@
     {
       "type": "paragraph",
       "content": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
+    },
+    {
+      "type": "text",
+      "id": "vat_included_text",
+      "label": "VAT Included Text",
+      "default": "Include VAT"
+    },
+    {
+      "type": "text",
+      "id": "vat_excluded_text",
+      "label": "VAT Excluded Text",
+      "default": "Exclude VAT"
+    },
+    {
+      "type": "image_picker",
+      "id": "trust_pilot_img",
+      "label": "Trust Pilot Image"
+    },
+    {
+      "type": "color",
+      "id": "checkmark_color",
+      "label": "Checkmark Color",
+      "default": "#00A651"
+    },
+    {
+      "type": "text",
+      "id": "list_point1",
+      "label": "Trust List 1"
+    },
+    {
+      "type": "text",
+      "id": "list_point2",
+      "label": "Trust List 2"
+    },
+    {
+      "type": "text",
+      "id": "list_point3",
+      "label": "Trust List 3"
+    },
+    {
+      "type": "text",
+      "id": "list_point4",
+      "label": "Trust List 4"
+    },
+    {
+    "type": "text",
+    "id": "order_message",
+    "label": "Delivery Time",
+    "default": "Ordered before 11:59 PM"
+    },
+    {
+    "type": "text",
+    "id": "delivery_date",
+    "label": "Delivery Date",
+    "default": "Delivered on"
+    },
+    {
+      "type": "text",
+      "id": "accordion_text",
+      "label": "Accordion Title",
+      "default": "What You Will Receive"
     },
     {
       "type": "select",
