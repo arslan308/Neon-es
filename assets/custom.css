@@ -1582,5 +1582,7 @@ display: block;
 .cart-recap__secure-payment svg.payment-list__item{
   margin-right: 15px !important; 
   margin-bottom: 10px !important;
+      height: 20px;
+    width: 30px;
 }
 
