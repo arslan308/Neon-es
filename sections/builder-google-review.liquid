@@ -16,6 +16,8 @@
               or template contains 'product.neon_maken'
               or template contains 'price-calculator'
               or template == 'product'
+              or template contains 'updated_product'
+              
             %}
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.13998 5.50882L2.11875 5.4875H2.14884H10.1879V4.5125H2.14884H2.11875L2.13998 4.49118L5.9131 0.702565L5.22095 0.0176493L0.258981 5L5.22095 9.98235L5.9131 9.29744L2.13998 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/>
@@ -35,6 +37,7 @@
               or template contains 'product.neon_maken'
               or template contains 'price-calculator'
               or template == 'product'
+              or template contains 'updated_product'
             %}
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.15433 5.50882L8.17556 5.4875H8.14547H0.106372V4.5125H8.14547H8.17556L8.15433 4.49118L4.38121 0.702565L5.07336 0.0176493L10.0353 5L5.07336 9.98235L4.38121 9.29744L8.15433 5.50882Z" fill="#715AEF" stroke="black" stroke-width="0.025"/>
@@ -101,6 +104,7 @@
                         or template contains 'product.neon_maken'
                         or template contains 'price-calculator'
                         or template == 'product'
+                        or template contains 'updated_product'
                       %}
                         {% comment %}
                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,6 +130,7 @@
                         or template contains 'product.neon_maken'
                         or template contains 'price-calculator'
                         or template == 'product'
+                        or template contains 'updated_product'
                       %}
                         <svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M3.04195 17.34L5.18195 10.98L0.0219532 7.52H6.34195L8.60195 0.699999L10.902 7.52H17.182L12.022 10.98L14.202 17.34L8.60195 13.28L3.04195 17.34ZM22.2412 17.34L24.3812 10.98L19.2212 7.52H25.5412L27.8012 0.699999L30.1012 7.52H36.3812L31.2212 10.98L33.4012 17.34L27.8012 13.28L22.2412 17.34ZM41.4404 17.34L43.5804 10.98L38.4204 7.52H44.7404L47.0004 0.699999L49.3004 7.52H55.5804L50.4204 10.98L52.6004 17.34L47.0004 13.28L41.4404 17.34ZM60.6396 17.34L62.7796 10.98L57.6196 7.52H63.9396L66.1996 0.699999L68.4996 7.52H74.7796L69.6196 10.98L71.7996 17.34L66.1996 13.28L60.6396 17.34ZM79.8388 17.34L81.9788 10.98L76.8188 7.52H83.1388L85.3988 0.699999L87.6988 7.52H93.9788L88.8188 10.98L90.9988 17.34L85.3988 13.28L79.8388 17.34Z" fill="#FFBB0E"/>
@@ -150,7 +155,7 @@
   <div class="reputon-google-reviews-widget container" id="47782490-f962-11ec-9541-d3f22c760941"></div>
 </div>
 <script>
-  {% if template contains 'product.lead_page' or template contains 'product.builder_'  or template == 'product.neon_builder' or template contains 'page.form_page_' or template=="product.custom_neon" or template contains  'product.neon_maken' or template contains 'price-calculator' or template == 'product' %}
+  {% if template contains 'product.lead_page' or template contains 'product.builder_' or template contains 'updated_product' or template == 'product.neon_builder' or template contains 'page.form_page_' or template=="product.custom_neon" or template contains  'product.neon_maken' or template contains 'price-calculator' or template == 'product' %}
   jQuery(document).ready(function($){
     $('.google-review-items-new').slick({
     dots: false,
@@ -303,7 +308,7 @@
 </script>
 
 <style>
-    {% if template contains 'product.lead_page' or template contains 'page.form_page_' or template contains 'product.builder_'  or template == 'product.neon_builder' or template=="product.custom_neon" or template contains  'product.neon_maken' or template contains 'price-calculator' or template == 'product' %}
+    {% if template contains 'product.lead_page' or template contains 'page.form_page_' or template contains 'updated_product' or template contains 'product.builder_'  or template == 'product.neon_builder' or template=="product.custom_neon" or template contains  'product.neon_maken' or template contains 'price-calculator' or template == 'product' %}
       .slick-list {
       padding: 0 115px !important;
       padding-left: 0px !important;

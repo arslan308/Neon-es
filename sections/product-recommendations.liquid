@@ -8,7 +8,7 @@
   }
   {%- endcapture -%}
   
-  <section class="section related-product" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings="{{ section_settings | escape_once }}">
+  <section class="section related-product {{ section.settings.custom_style_class }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings="{{ section_settings | escape_once }}">
     <div class="container">
       {%- if section.settings.heading != blank -%}
         <header class="section__header">
@@ -57,7 +57,7 @@
       padding: 80px 0 30px 0;  
       }
   </style>
-  {% if template == 'product' %}
+  {% if template == 'product' or template contains 'updated_product' %}
     
     <style>
     svg.payment-list__item{
@@ -127,6 +127,11 @@
         "id": "heading",
         "label": "Heading",
         "default": "Related products"
+      },
+      {
+        "type": "text",
+        "id": "custom_style_class",
+        "label": "Custom Class"
       },
       {
         "type": "checkbox",

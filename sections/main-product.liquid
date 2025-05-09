@@ -17,8 +17,8 @@
 
 <section data-section-id="{{ section.id }}" data-section-type="product" data-section-settings="{{ section_settings | escape_once }}">
   <div class="container container--flush">
-    {% if template != 'product' %}
-      <div class="page__sub-header">
+    {% if template == 'product' %}
+      <div class="page__sub-header" style="margin-top: 5px !important;">
         <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
           <ol class="breadcrumb__list" role="list">
             <li class="breadcrumb__item">
@@ -60,7 +60,7 @@
     {%- capture product_form_id -%}product-form-main-{{ product.id }}-{{ section.id }}{%- endcapture -%}
 
     <product-rerender id="product-info-{{ product.id }}-{{ section.id }}" observe-form="{{ product_form_id }}" allow-partial-rerender>
-      <div class="product-block-list product-block-list--{{ section.settings.image_size }}">
+      <div class="{{ section.settings.custom_product_class }} product-block-list product-block-list--{{ section.settings.image_size }}">
         <div class="product-block-list__wrapper">
           {%- if product.media.size > 0 -%}
             <div class="product-block-list__item product-block-list__item--gallery">
@@ -408,7 +408,7 @@
 </style>
 {% if template == 'product' %}
   <style>
-    .card--collapsed .card__header, .card--collapsed .card__section{padding-top: 20px;}
+    .default-custom-product .card--collapsed .card__header, .card--collapsed .card__section{padding-top: 30px;}
     .product-block-list__item--info > .card{background: #f7f5ff !important; border-radius: 8px;}
     .product-list--scrollable .product-item:first-child{border-radius: 8px;}
     .aspect-ratio img, .aspect-ratio video, .aspect-ratio svg {
@@ -1029,6 +1029,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "id": "vat_included_text",
       "label": "VAT Included Text",
       "default": "Include VAT"
+    },
+    {
+      "type": "text",
+      "id": "custom_product_class",
+      "label": "Custom Class"
     },
     {
       "type": "text",

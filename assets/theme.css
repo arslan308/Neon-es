@@ -2403,7 +2403,7 @@ body:not(.is-tabbing) [tabindex]:focus, body:not(.is-tabbing) label:focus, body:
   /* .card__section--tight {
     padding: 20px 25px;
   } */
-  .card__section.card__section--tight{padding: 0 !important;}
+  .card__section.card__section--tight{padding: 0;}
   .card__section--tight .card__separator {
     margin: 20px 0;
   }
@@ -8035,12 +8035,12 @@ section.section.related-product{margin: 0;}
 .product-form__info-list {
   border-spacing: 0 22px;
   width: 100%;
-  margin: -22px 0 6px;
-  display: table;
+  /* margin: -22px 0 6px; */
+  /* display: table; */
 }
 
 .product-form__info-item {
-  padding: 0 0 20px 0;
+  padding: 0 0 23px 0;
   display: block;
 }
 
@@ -8048,7 +8048,7 @@ section.section.related-product{margin: 0;}
   vertical-align: baseline;
   white-space: nowrap;
   padding-right: 12px;
-  display: table-cell;
+  /* display: table-cell; */
   font-size: 14px;
     font-weight: 700;
 }
@@ -8060,7 +8060,7 @@ section.section.related-product{margin: 0;}
 
 .product-form__info-content {
   width: 100%;
-  display: table-cell;
+  /* display: table-cell; */
 }
 
 .product-form__price-info {
@@ -8235,7 +8235,6 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
 
   .product-block-list__item--info {
     width: calc(50% - 137px);
-    height: 100%;
     position: absolute;
     top: 0;
     right: 0; 

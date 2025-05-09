@@ -6,7 +6,7 @@ if image != blank
 else
   if swatch.image != blank
     assign color_swatch_image = swatch.image | image_url: width: 72
-    assign color_swatch_style = 'background-imageasdfg: url(' | append: color_swatch_image | append: ')'
+    assign color_swatch_style = 'background-image: url(' | append: color_swatch_image | append: ')'
   elsif swatch.color != blank
     assign color_swatch_style = 'background-color: ' | append: swatch.color
   else

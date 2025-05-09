@@ -137,8 +137,8 @@
     }
   </style>
   
-  <body
-    class="warehouse--v4 {% if settings.animation_image_zoom %}features--animate-zoom{% endif%} template-{{ request.page_type | handle }} {% if request.page_type contains '/' %}template-{{ request.page_type | split: '/' | last | handle }}{% endif %}"
+  <body {% if template == 'product' %} style="background-color: white;" {% endif %}
+    class="warehouse--v4 {% if settings.animation_image_zoom %}features--animate-zoom{% endif %} template-{{ request.page_type | handle }} {% if request.page_type contains '/' %}template-{{ request.page_type | split: '/' | last | handle }}{% endif %}"
     data-instant-intensity="viewport"
   >
     {%- comment -%}Common SVG definitions that we are re-using in several places{%- endcomment -%}
@@ -215,17 +215,13 @@
                   (window.clarity.q = window.clarity.q || []).push(arguments);
                 };
                 clarity("set", "custom_page_name", customPageName);
-                {% endif %}
-
-                    {% if 'product.neon_builder' == template %}
-                      console.log('neon builder');
-
-                        var customPageName = 'neon_builder'; // common name for both templates
-                        window.clarity = window.clarity || function() {
-                          (window.clarity.q = window.clarity.q || []).push(arguments);
-                        };
-                        clarity("set", "custom_page_name", customPageName);
-                  
+               {% endif %}
+                {% if 'product.neon_builder' == template %}
+                  var customPageName = 'neon_builder'; // common name for both templates
+                  window.clarity = window.clarity || function() {
+                    (window.clarity.q = window.clarity.q || []).push(arguments);
+                  };
+                  clarity("set", "custom_page_name", customPageName);
                     waitForElement('#neon-customiser-app .npc-main-container').then((element) => {
                         var button = element.querySelector('.npc-sidebar .npc-sidebar-price-button-container button[type="button"]');
                         var product_title = "custom_12345";
@@ -274,11 +270,11 @@
                              window.dataLayer = window.dataLayer || [];
                    {% else %}
                 console.log('other product page');
-                    var customPageName = 'collection_prodcut_page'; // common name for both templates
-                    window.clarity = window.clarity || function() {
-                      (window.clarity.q = window.clarity.q || []).push(arguments);
-                    };
-                    clarity("set", "custom_page_name", customPageName);
+                var customPageName = 'collection_prodcut_page'; // common name for both templates
+                window.clarity = window.clarity || function() {
+                  (window.clarity.q = window.clarity.q || []).push(arguments);
+                };
+                clarity("set", "custom_page_name", customPageName);
                     waitForElement('.custom-layer-trigger').then((element) => {
 
                         var product_title = "{{ product.title }}";
