@@ -1,44 +1,49 @@
 <div class="container secondry-tabs-section">
   <div class="accordion-video-wrapper">
-    <!-- Right Side: Video (Shown Only If URL Exists) -->
-    {% if section.settings.video_url != blank %}
-      <div class="faq-video" style="width: 100%; display: grid ; grid-template-columns: 1fr 1fr 1fr; grid-gap: 10px;">
-        <video style="border-radius: 8px; aspect-ratio: 9 / 16; width: 100%;" autoplay muted playsinline loop controls>
-          <source src="{{ section.settings.video_url }}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video style="border-radius: 8px; aspect-ratio: 9 / 16; width: 100%;" autoplay muted playsinline loop controls>
-          <source src="{{ section.settings.video_url2 }}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <video style="border-radius: 8px; aspect-ratio: 9 / 16; width: 100%;" autoplay muted playsinline loop controls>
-          <source src="{{ section.settings.video_url3 }}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div> 
+    {% assign has_videos = false %}
+    {% if section.settings.video_url != blank or section.settings.video_url2 != blank or section.settings.video_url3 != blank %}
+      {% assign has_videos = true %}
     {% endif %}
-
-    <!-- Left Side: Accordion -->
-    <div class="accordion">
-      {% comment %} <div class="tabs-title" style="margin-bottom: 24px;">{{ section.settings.tab_section_title }}</div> {% endcomment %}
+  
+    {% if has_videos %}
+      <div class="faq-video">
+        {% if section.settings.video_url != blank %}
+          <video autoplay muted playsinline loop controls>
+            <source src="{{ section.settings.video_url }}" type="video/mp4">
+          </video>
+        {% endif %}
+        {% if section.settings.video_url2 != blank %}
+          <video autoplay muted playsinline loop controls>
+            <source src="{{ section.settings.video_url2 }}" type="video/mp4">
+          </video>
+        {% endif %}
+        {% if section.settings.video_url3 != blank %}
+          <video autoplay muted playsinline loop controls>
+            <source src="{{ section.settings.video_url3 }}" type="video/mp4">
+          </video>
+        {% endif %}
+      </div>
+    {% endif %}
+  
+    <div class="accordion{% unless has_videos %} full-width{% endunless %}">
       {% for block in section.blocks %}
-        <div class="accordion-item2 {% if forloop.first %}active{% endif %}">
+        <div class="accordion-item2">
           <div class="accordion-header" onclick="toggleAccordion(this)">
             <span class="accordion-title">{{ block.settings.title }}</span>
             <img class="accordion-icon2" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/keyboard_arrow_up_1.png?v=1741977186" alt="Toggle">
           </div>
-          <div class="accordion-content2" style="display: {% if forloop.first %}block{% else %}none{% endif %};">
+          <div class="accordion-content2">
             <p>{{ block.settings.content }}</p>
           </div>
         </div>
       {% endfor %}
     </div>
   </div>
+  
 </div>
-  {% if template contains 'updated_product' %}
     <style>
 .secondry-tabs-section .accordion {
-  width: 100%;
+  width: 58%;
 }
 .secondry-tabs-section .accordion .accordion-title{
   font-size: 20px;
@@ -93,14 +98,39 @@ section.icons-with-text2.section.section--tight{padding: 0 0 40px 0;}
 }
 
 .accordion-video-wrapper {
-  display: grid;
-    grid-template-columns: 58% 40%;
-    padding: 15px 0 40px 0;
-    gap: 28px;
+  display: flex;
+  margin-top: 15px;
+  gap: 20px;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
+/* VIDEO LEFT */
+.accordion-video-wrapper .faq-video {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 58%;
+}
+
+.accordion-video-wrapper .faq-video video {
+  width: 100%;
+  height: auto;
+}
+
+/* FAQ RIGHT */
+.accordion-video-wrapper .accordion {
+  width: 40%;
+}
+
+/* When no video: accordion takes full width */
+.accordion-video-wrapper .accordion.full-width {
+  width: 58%;
+}
 @media screen and (max-width: 768px){
-  .secondry-tabs-section .accordion{padding: 0 !important;}
+  .secondry-tabs-section .accordion{padding: 0 !important; width: 100%;}
   .secondry-tabs-section .accordion-item2{width: 100% !important}
   .accordion-video-wrapper {
     grid-template-columns: 1fr !important;
@@ -109,17 +139,18 @@ section.icons-with-text2.section.section--tight{padding: 0 0 40px 0;}
   .accordion-video-wrapper .faq-video video{height: 220px !important;}
   .accordion-video-wrapper .faq-video{
     margin-top: 0 !important;
+    width: 100%;
 }
   }
 
 
-.accordion {
+/* .accordion {
   width: 58%;
 }
 
 .faq-video {
   width: 40%;
-}
+} */
 .video-section-in-rght .video-container-v-t video{
   height: 443px !important; 
     margin-top: 15px !important; 
@@ -128,13 +159,24 @@ section.icons-with-text2.section.section--tight{padding: 0 0 40px 0;}
   .accordion-video-wrapper {
     flex-direction: column;
   }
-  .accordion, .faq-video {
+
+  .accordion-video-wrapper .faq-video,
+  .accordion-video-wrapper .accordion,
+  .accordion-video-wrapper .accordion.full-width {
     width: 100%;
   }
+
+  .accordion-video-wrapper .faq-video video {
+    height: 220px;
+  }
+
+  .accordion-video-wrapper .faq-video {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
 }
 
 </style>
-  {% endif %}
 
 <script>
 function toggleAccordion(element) {
@@ -161,16 +203,19 @@ function toggleAccordion(element) {
   });
 }
 
-// Ensure the first accordion is open on page load
-document.addEventListener("DOMContentLoaded", function() {
-  let firstItem = document.querySelector(".accordion-item2");
+// Open the first accordion item by default
+document.addEventListener("DOMContentLoaded", function () {
+  const firstItem = document.querySelector('.accordion-item2');
   if (firstItem) {
-    firstItem.classList.add("active");
-    firstItem.querySelector(".accordion-content2").style.display = "block";
-    firstItem.querySelector(".accordion-icon2").style.transform = "rotate(180deg)";
+    firstItem.classList.add('active');
+    const content = firstItem.querySelector('.accordion-content2');
+    const icon = firstItem.querySelector('.accordion-icon2');
+    if (content) content.style.display = 'block';
+    if (icon) icon.style.transform = 'rotate(180deg)';
   }
 });
 </script>
+
 
 {% schema %}
   {

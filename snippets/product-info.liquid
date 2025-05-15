@@ -87,6 +87,22 @@
             </ul>
           </div>
         {%- endif -%}
+        {% if template contains 'updated_product' %}
+          <span style="width: 100%;" class="product-info-date">
+            <div class="product-title-discription-add-to-cart-main-payment" style="margin-top: 24px; display: flex ; justify-content: center; gap: 12px;">
+              {% for type in shop.enabled_payment_types %}
+                  {{ type | payment_type_svg_tag: class: 'payment-list__item' }}
+              {% endfor %}
+          </div>
+          <div class="time-date product-info-time">
+              <div class="icon-holder"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_shipping_1.svg?v=1742552931"/></div>
+              <span class="order-message-res">
+                  {{ section.settings.order_message }}:
+                  <div class="delivery-date" style="font-weight: 400;"></div>
+              </span>
+          </div>  
+        </span>
+      {% endif %}
       {%- endform -%}
     </product-form>
   </div>
