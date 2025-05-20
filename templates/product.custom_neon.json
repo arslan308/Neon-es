@@ -162,6 +162,7 @@
         "accessoires_title": "Accesorios",
         "include_icon_toolip": "Tu cartel de neón LED personalizado se entrega con un regulador de intensidad, control remoto, adaptador y todos los materiales de montaje necesarios. Gracias al sistema plug & play, puedes instalar la iluminación en solo 5 minutos y disfrutarla de inmediato.",
         "include_icon": "Incluido",
+        "go_back": "Go Back",
         "chat_text": "Chatea con Pablo",
         "chat_link": "",
         "popup_close": "Volver",
@@ -231,7 +232,7 @@
         "image_gQtYRU"
       ],
       "settings": {
-        "image_heading": "Se fueron antes que tú",
+        "image_heading": "Compraron antes que tu",
         "content_heading": "Vídeo",
         "video": "<iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/aL1uIilM_U4?si=Gy1TLO9YzBRa4UFl\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"\"></iframe>"
       }
@@ -518,6 +519,17 @@
       ],
       "disabled": true,
       "settings": {
+        "vat_included_text": "Include VAT",
+        "custom_product_class": "",
+        "vat_excluded_text": "Exclude VAT",
+        "checkmark_color": "#00a651",
+        "list_point1": "",
+        "list_point2": "",
+        "list_point3": "",
+        "list_point4": "",
+        "order_message": "Ordered before 11:59 PM",
+        "delivery_date": "Delivered on",
+        "accordion_text": "What You Will Receive",
         "image_size": "medium",
         "enable_video_looping": false,
         "enable_image_zoom": true,
