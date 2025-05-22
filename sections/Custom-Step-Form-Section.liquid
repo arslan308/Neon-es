@@ -1098,7 +1098,7 @@ function bgHandleFilePreview(file) {
     async function submissionStart(){
       if($('#submissionid').val() == ''){
         const formID = "{{ section.settings.formid }}";
-        const apiKey = 'd37f98d2a7a2cc702737ef0d068321df';
+        const apiKey = '544c28cc9e12d4f364554d517534d132';
         const submissionData = {
             "submission": {
                 "name": "John Doe",
@@ -1221,7 +1221,7 @@ function bgHandleFilePreview(file) {
 
       try {
           const response = await fetch(
-            `https://api.jotform.com/submission/${SUBMISSION_ID}?apiKey=d37f98d2a7a2cc702737ef0d068321df`,
+            `https://api.jotform.com/submission/${SUBMISSION_ID}?apiKey=544c28cc9e12d4f364554d517534d132`,
               {
                   method: "POST",
                   body: formData
