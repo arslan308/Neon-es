@@ -7,13 +7,13 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "updated-main-product",
       "blocks": {
         "product_meta": {
-          "type": "product_meta", 
+          "type": "product_meta",
           "settings": {
             "show_vendor": false,
             "show_sku": false,
@@ -24,7 +24,7 @@
         "variant_selector": {
           "type": "variant_selector",
           "settings": {
-            "selector_mode": "block", 
+            "selector_mode": "block",
             "color_mode": "swatch",
             "variant_image_options": "Color",
             "show_quantity_selector": true,
@@ -45,7 +45,7 @@
           "type": "description",
           "disabled": true,
           "settings": {
-            "display_mode": "collapse"
+            "display_mode": "show_all"
           }
         }
       },
@@ -59,14 +59,13 @@
         "updated_product": "updated-product-class",
         "vat_included_text": "Include VAT",
         "vat_excluded_text": "Exclude VAT",
-        "trust_pilot_img": "shopify://shop_images/23_d5a6fa7e-d3da-4df7-8bfb-c945684ec795.png",
         "checkmark_color": "#00a651",
-        "list_point1": "Incl. Dimmer and remote",
-        "list_point2": "PowerLED Neon Lighting",
-        "list_point3": "Free shipping worldwide",
-        "list_point4": "Including a free mountkit",
-        "order_message": "Ordered before 11:59 PM",
-        "delivery_date": "Delivered on",
+        "list_point1": "Incluye regulador de la intensidad y mando a distancia",
+        "list_point2": "Iluminación Neón PowerLED",
+        "list_point3": "Envío gratuito a todo el mundo",
+        "list_point4": "Incluye kit de montaje gratuito",
+        "order_message": "Ordenado antes de las 11:59 PM",
+        "delivery_date": "Entregado el",
         "accordion_text": "",
         "image_size": "small",
         "enable_video_looping": false,
@@ -635,7 +634,7 @@
   "order": [
     "main",
     "new_sty_faq_4xHcyF",
-    "icons_with_text2_MGNh3M", 
+    "icons_with_text2_MGNh3M",
     "builder_google_review_HAamXg",
     "product_video_and_text_9LX98U",
     "specification_section_iYBnYk",
