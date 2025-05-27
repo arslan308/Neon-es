@@ -80,22 +80,22 @@
         "tab_TtpQqw": {
           "type": "tab",
           "settings": {
-            "title": "Product Information",
-            "content": "<p>Prijzen variëren op basis van ontwerp, grootte en LED-lengte. Alleen tekst begint bij ongeveer €220. Voor precieze kosten kun je je ontwerp insturen voor een offerte.</p>"
+            "title": "Información del producto",
+            "content": "<p>Los precios varían según el diseño, tamaño y longitud de los LED. Solo el texto empieza desde aproximadamente 220 €. Para un costo exacto, puedes enviar tu diseño para una cotización.</p>"
           }
         },
         "tab_M9yt7e": {
           "type": "tab",
           "settings": {
-            "title": "Delivery",
-            "content": "<p>Delivery details and estimated time.</p>"
+            "title": "Entrega",
+            "content": "<p>Detalles de entrega y tiempo estimado.</p>"
           }
         },
         "tab_yhknNY": {
           "type": "tab",
           "settings": {
-            "title": "Returns",
-            "content": "<p>Return policy and refund process.</p>"
+            "title": "Devoluciones",
+            "content": "<p>Política de devoluciones y proceso de reembolso.</p>"
           }
         }
       },
@@ -118,8 +118,8 @@
           "settings": {
             "icon": "bi-delivery",
             "custom_icon": "shopify://shop_images/backlight_high.svg",
-            "title": "PowerLED Neon technology",
-            "content": "<p>Our neon signs are equipped with energy-efficient PowerLED technology. This ensures intense, durable, and safe lighting that lasts up to 100,000 hours.</p>"
+            "title": "Tecnología PowerLED",
+            "content": "<p>Nuestros neones cuentan con tecnología PowerLED de bajo consumo. Esta tecnología garantiza una iluminación intensa, duradera y segura con una duración útil de hasta 100.000 horas.</p>"
           }
         },
         "item_rPzYnY": {
@@ -127,8 +127,8 @@
           "settings": {
             "icon": "bi-returns",
             "custom_icon": "shopify://shop_images/home_improvement_and_tools.svg",
-            "title": "Incl. Dimmer, remote and free mountkit",
-            "content": "<p>With the included dimmer and remote control, you can easily adjust the brightness to your preference. Additionally, you receive a free mounting kit, allowing you to quickly and easily hang your neon sign.</p>"
+            "title": "Incluye regulador de la intensidad, mando a distancia y kit de montaje gratuito",
+            "content": "<p>Con el regulador de intensidad y el mando a distancia incluidos, puedes adaptar fácilmente el brillo a tu gusto. Además, tu pedido incluye un kit de montaje gratuito para que cuelgues tu letrero de forma rápida y sencilla.</p>"
           }
         },
         "item_cRekKR": {
@@ -136,8 +136,8 @@
           "settings": {
             "icon": "bi-customer-support",
             "custom_icon": "shopify://shop_images/brightness_empty.svg",
-            "title": "Free 2 year product warranty",
-            "content": "<p>At Neonsfeer, we offer a 2-year warranty on all our neon lighting. If any issues arise, we will provide a suitable solution, such as repair or replacement.</p>"
+            "title": "2 años de garantía",
+            "content": "<p>En Neonsfeer, todos nuestros letreros de neón cuentan con una garantía de 2 años. Si llegara a surgir algún problema, nos encargaremos de ofrecerte una solución adecuada, ya sea mediante reparación o reemplazo.</p>"
           }
         },
         "item_qBbdx7": {
@@ -145,8 +145,8 @@
           "settings": {
             "icon": "bi-secure-payment",
             "custom_icon": "shopify://shop_images/local_shipping_2.svg",
-            "title": "Free shipping (6-8 business days)",
-            "content": "<p>No extra shipping costs! We deliver your neon sign for free, carefully packaged and quickly shipped to your doorstep. You'll receive a Track & Trace code with your order.</p>"
+            "title": "Envío gratuito ( en 6-8 días hábiles)",
+            "content": "<p>¡Sin gastos de envío! Enviamos tu letrero de neón cuidadosamente embalado, rápidamente y de forma gratuita a la dirección que nos indiques. Además, en tu pedido recibirás un código de seguimiento para que puedas seguir tu pedido en todo momento.</p>"
           }
         }
       },
@@ -168,8 +168,10 @@
         "image_with_review_9Cex9Y": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Codigital",
-            "user-discription": "\"A high-quality product that provides a unique, top-tier appearance. Exactly what we were looking for at Codigital.\"",
+            "user-uploaded-img-desktop": "shopify://shop_images/Untitled_design_94.webp",
+            "user-uploaded-img-mobile": "shopify://shop_images/Untitled_design_94.webp",
+            "user-name": "Carlos García López",
+            "user-discription": "“El neón de Pac-Man queda perfecto! Ayuda a crear ese aire retro pero a la vez moderno que buscaba. No es excesivamente brillante o demasiado tenue, aportando exactamente la luz que buscaba.”",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/DSC04063_1_2048x2048.jpg?v=1730736993"
           }
@@ -177,8 +179,10 @@
         "image_with_review_Y6cJV4": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Kevin Liam",
-            "user-discription": "“Absolutely great! We are very happy with it!”",
+            "user-uploaded-img-desktop": "shopify://shop_images/Untitled_design_91.webp",
+            "user-uploaded-img-mobile": "shopify://shop_images/Untitled_design_91.webp",
+            "user-name": "Ana Martínez Rodríguez",
+            "user-discription": "“A todo el mundo le encanta mi neón. El efecto goteo lo hace super original y combina con el resto de la decoración. Se ve increíble tanto de día como de noche, aportando un tono rosa muy bonito a la habitación.”",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/image_2048x2048.jpg?v=1730736991"
           }
@@ -186,8 +190,10 @@
         "image_with_review_EfHhwj": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Joe Biondo III",
-            "user-discription": "\" The design process was very easy, and our sign was shipped in a timely manner. The quality of our sign was excellent and very easy to install. I would definitely recommend Neonsfeer for all your neon sign needs.\"",
+            "user-uploaded-img-desktop": "shopify://shop_images/Untitled_design_92.webp",
+            "user-uploaded-img-mobile": "shopify://shop_images/Untitled_design_92.webp",
+            "user-name": "Luis Fernández Pérez",
+            "user-discription": "\"¡Me encanta como queda! El neón de color rojo sobre el ladrillo y el metal da un ambiente industrial pero elegante al gimnasio. Parece que estoy entrenando en un centro pro.”",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/image_1_2048x2048.jpg?v=1730736991"
           }
@@ -195,8 +201,10 @@
         "image_with_review_iBWA9f": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Ashley",
-            "user-discription": "\"We ordered a sign for our companies open house and I am shocked how quickly it was shipped to us and how great it looks! It had all necessary parts to hang and a remote as well with all setting options. We are looking to order more for other offices in various states!\"",
+            "user-uploaded-img-desktop": "shopify://shop_images/Untitled_design.webp",
+            "user-uploaded-img-mobile": "shopify://shop_images/Untitled_design.webp",
+            "user-name": "María Sánchez Gómez",
+            "user-discription": "“Súper fácil de instalar. Conseguí colgarlo en tan solo unos minutos. Que sea tan ligero facilita colgarlo, y una vez encendido, se ve increíble. Si estás buscando una luz de neón divertida pero elegante, esta opción es perfecta.”",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/DSC01898_-_Copy_2048x2048.png?v=1730736899"
           }
@@ -204,8 +212,10 @@
         "image_with_review_UiTtbz": {
           "type": "image-with-review",
           "settings": {
-            "user-name": "Daniel",
-            "user-discription": "\"The quality is insane! makes my office space look amazing and the glow from it makes me feel like I'm in time square! \"",
+            "user-uploaded-img-desktop": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-05-19T210247.125.webp",
+            "user-uploaded-img-mobile": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-05-19T210247.125.webp",
+            "user-name": "Juan Rodríguez Díaz",
+            "user-discription": "\"El letrero de neón \"ON AIR\" destaca con una luz intensa pero sin ser exagerada. El brillo sutil aporta un toque especial al ambiente. La combinación del neón con cuadros y piezas decorativas, transforma la pared en un espacio lleno de personalidad y estilo.”",
             "uplod-time": "",
             "image_url": "https://neonsfeer.com/cdn/shop/files/imageProxy_3_1_2048x2048.png?v=1712056933"
           }
@@ -213,6 +223,8 @@
         "image_with_review_HjMCDn": {
           "type": "image-with-review",
           "settings": {
+            "user-uploaded-img-desktop": "shopify://shop_images/Untitled_design_89.webp",
+            "user-uploaded-img-mobile": "shopify://shop_images/Untitled_design_89.webp",
             "user-name": "Angela",
             "user-discription": "\"Few issues with delivery with fed ex but sorted out in the end.\nCommunication with Neonsfeer was second to none sorted out professionally by Olivia thankyou by the way.\nOverall the product is very good quality and I love it .\"",
             "uplod-time": "",
@@ -261,7 +273,7 @@
       "name": "Builder Google Reviews",
       "settings": {
         "spacing": "",
-        "title": "What our customers say"
+        "title": "Lo que dicen nuestros clientes"
       }
     },
     "product_video_and_text_9LX98U": {
