@@ -1806,6 +1806,13 @@ ul.form-section.page-section.step-3.unique-third{
   .unique-form-button {
     border: 2px solid #D8DADC;
   }
+    .specification-section .section-title{
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .builder_USSS .video-text-flex-in .v-t-img img{
+    height: 30px;
+  }
 }
 .page-trust-list{display: grid; grid-gap: 8px;}
 .page-trust-list{
