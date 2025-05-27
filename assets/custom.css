@@ -1478,6 +1478,7 @@ display: block;
     width:100% !important;
       padding-left:0 !important;
   }
+
 }
 
 /* price with logo */
@@ -1505,6 +1506,12 @@ display: block;
 }
 
 /* price with logo end */
+.cart-recap__secure-payment svg.payment-list__item{
+  margin-right: 15px !important; 
+  margin-bottom: 10px !important;
+  height: 20px;
+    width: 30px;
+}
 
 .custom-video-wrapper {
   position: relative;
@@ -1581,12 +1588,12 @@ display: block;
   }
 }
 
-.cart-recap__secure-payment svg.payment-list__item{
+/* .cart-recap__secure-payment svg.payment-list__item{
   margin-right: 15px !important; 
   margin-bottom: 10px !important;
   height: 20px;
   width: 30px;
-}
+} */
 
 
 .default-custom-product .color-swatch-list--large .color-swatch__item{
@@ -1748,4 +1755,80 @@ span.price.main_price{font-size: 15px !important; font-weight: 400;}
   .updated-product-class .product-form__option-name{
     margin: 0 !important;
   }
+}
+
+ul.form-section.page-section.step-3.unique-third{
+  background: #f7f5ff;
+  border-radius: 8px;
+  padding: 20px 20px 20px;
+}
+.unique-third .form-line.box_inner{background-color: unset !important;}
+.unique-form-button {
+  border: 2px solid #D8DADC;
+  color: #555454;
+  border-radius: 13px;
+  background: white;
+  padding: 6px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.unique-form-button.selected {
+  border: 2px solid #7853f7;
+  color: black;
+  background-color: #fff;
+}
+.form-label-title.disabled {
+  color: grey !important;
+}
+.global-error {
+  visibility: hidden;
+  height: auto;
+}
+.hidden {
+  display: none !important;
+}
+.unique-third input[type="radio"] {
+  accent-color: #7853f7; /* change this to your desired color */
+}
+.unique-third input[type="radio"]:hover {
+  accent-color: #7853f7;
+}
+@media only screen and (max-width: 767.9px){
+  button.unique-form-button.toggle-select.dropdown-1.selected{
+    padding: 3px 16px;
+  }
+  .unique-form-button.selected {
+    border: 2px solid #7853f7;
+  }
+  .unique-form-button {
+    border: 2px solid #D8DADC;
+  }
+}
+.page-trust-list{display: grid; grid-gap: 8px;}
+.page-trust-list{
+  font-size: 16px;
+  font-weight: 400;
+  color: #656565;
+  position: relative;
+  padding-left: 19px;
+}
+
+.unique-third input[type="radio"] {
+  -webkit-appearance: radio !important; /* For Safari */
+  appearance: radio !important; 
+  accent-color: #7853f7 !important;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+.faq-tabing .tab-content.current .open-item .accordion-title.active{
+  background-color: #FFEBF7 !important;
+} 
+.faq-tabing .accordion-title{
+  border-radius: 8px;
 }

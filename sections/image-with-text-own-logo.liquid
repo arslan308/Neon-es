@@ -145,9 +145,9 @@
               {%- assign image_url = product.images.first | image_url: width: product.images.first.width | image_tag: loading: 'lazy', class: 'image-1 PaddingDyn', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
               {{ image_url }}
         
-            {%- elsif section.settings.Video_url != blank and template == "product.lead_page_logo_upload" -%}
+            {%- elsif section.settings.Video_url1 != blank and template == "product.lead_page_logo_upload" -%}
               <video autoplay muted playsinline loop preload="auto">
-                <source src="{{ section.settings.Video_url }}" type="video/mp4">
+                <source src="{{ section.settings.Video_url1 }}" type="video/mp4">
               </video>
         
             {%- elsif section.settings.image_2 != blank -%}
@@ -164,7 +164,7 @@
               <div class="image-with-text__text-aligner">
                 {%- if section.settings.title != blank -%}
                   <h2 class="heading h3 section-title">
-                    {{ section.settings.title | escape }}
+                    {{ section.settings.title1 | escape }}
                   {% comment %} {%- if template contains 'product.lead_page_' or template =="product.custom_neon" -%}
                       <span class="logo_discount">{{ product.selected_or_first_available_variant.price | divided_by:1.25 | times:0.75 | money }}</span>
                     {% endif %} {% endcomment %}
@@ -172,38 +172,38 @@
                 {%- endif -%}
       
                 <div class="rte">
-                  <p>{{ section.settings.content }}</p>
-                  {% if section.settings.list_one != blank %}
+                  <p>{{ section.settings.content1 }}</p>
+                  {% if section.settings.list_one1 != blank %}
                     <ul>
                       <li>
                         <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
                         </svg>
-                        {{ section.settings.list_one }}
+                        {{ section.settings.list_one1 }}
                       </li>
                       <li>
                         <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
                         </svg>
-                        {{ section.settings.list_two }}
+                        {{ section.settings.list_two1 }}
                       </li>
                       <li>
                         <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 9.4L0 5.4L1.4 4L4 6.6L10.6 0L12 1.4L4 9.4Z" fill="#EC40A4"/>
                         </svg>
-                        {{ section.settings.list_three }}
+                        {{ section.settings.list_three1 }}
                       </li>
                     </ul>
                   {% endif %}
                   <div class="discount-btn-main">
                     {%- if template == "product.custom_neon"-%}
-                        <a class="btn button trigger-add-to-cart custom-layer-trigger">{{ section.settings.add_to_cart_btn_text }}</a>
-                    {%- else section.settings.button_link != blank and section.settings.button_text != blank -%}
-                      <a href="{{ section.settings.button_link }}" class="button button--primary" link-title="{{section.settings.class}}">{{ section.settings.button_text | escape }}</a>
+                        <a class="btn button trigger-add-to-cart custom-layer-trigger">{{ section.settings.add_to_cart_btn_text1 }}</a>
+                    {%- else section.settings.button_link1 != blank and section.settings.button_text != blank -%}
+                      <a href="{{ section.settings.button_link1 }}" class="button button--primary" link-title="{{section.settings.class1 }}">{{ section.settings.button_text1 | escape }}</a>
                     {%- endif -%}
         
-                    {%- if section.settings.button_link_2 != blank and section.settings.button_text_2 != blank -%}
-                      <a href="{{ section.settings.button_link_2 }}" class="button button--primary" link-title="{{section.settings.class}}" >{{ section.settings.button_text_2 | escape }}</a>
+                    {%- if section.settings.button_link_21 != blank and section.settings.button_text_2 != blank -%}
+                      <a href="{{ section.settings.button_link_21 }}" class="button button--primary" link-title="{{section.settings.class1 }}" >{{ section.settings.button_text_21 | escape }}</a>
                     {%- endif -%}
                   </div>
                 </div>
@@ -343,14 +343,69 @@
       "label": "Second Button link",
       "default": "/collections/all"
     },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Heading Text second"
+    },  
+    {
+      "type": "textarea",
+      "id": "content1",
+      "label": "Text second",
+      "default": "Order Your Custom Neon"
+    },
+    {
+      "type": "richtext",
+      "id": "list_one1",
+      "label": "List One Second"
+    },
+    {
+      "type": "richtext",
+      "id": "list_two1",
+      "label": "List Two Second"
+    },
+    {
+      "type": "richtext",
+      "id": "list_three1",
+      "label": "List Three Second"
+    },
+    {
+      "type":"text",
+      "id":"add_to_cart_btn_text1",
+      "label":"Add to cart label"
+    },
+    {
+      "type": "text",
+      "id": "button_text1",
+      "label": "Button text",
+      "default": "Start designing"
+    },
+    {
+      "type": "url",
+      "id": "button_link1",
+      "label": "Button link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "button_text_21",
+      "label": "Second Button text",
+      "default": "#"
+    },
+    {
+      "type": "url",
+      "id": "button_link_21",
+      "label": "Second Button link",
+      "default": "/collections/all"
+    },
 	{
       "type": "text",
-      "id": "class",
+      "id": "class1",
       "label": "Custom Attribute"
     },
     {
     "type":"url",
-    "id":"Video_url",
+    "id":"Video_url1",
     "label":"Video link"
     }
   ],

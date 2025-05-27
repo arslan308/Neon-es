@@ -155,6 +155,9 @@
               <input type="hidden" name="gclid" id="gclid">
               <input type="hidden" name="fbclid" id="fbclid">
               <input type="hidden" name="msclkid" id="msclkid">
+              <input type="hidden" name="budget" id="budget">
+              <input type="hidden" name="timeline" id="timeline">
+              <input type="hidden" name="company_type" id="company_type">
 
               <div role="main" class="form-all">
                 <ul class="form-section page-section step-1" date-step="1">
@@ -165,7 +168,7 @@
                         {% if section.settings.MainList != blank %}
                           {{ section.settings.MainList }}
                         {% endif %}
-                      </ul>
+                      </ul> 
                     </div>
                     <div id="cid_3" class="form-input-wide drag-drop-area">
                       <div class="jfUpload-wrapper">
@@ -319,49 +322,90 @@
                     {% endif %}
                   </li>
                 </ul>
-                <ul class="form-section page-section step-3" date-step="3" style="display:none;">
+                <ul class="form-section page-section step-3 unique-third" date-step="3" style="display:none;">
                   <li class="mt-0">
                     <div class="title_box">
                       <h2>{{ section.settings.freeSample }}</h2>
                       <p>{{ section.settings.freeSampleDesc }}</p>
                     </div>
                   </li>
-
+                  <input type="hidden" name="custom_answers" id="customAnswers">
                   {% for block in section.blocks %}
                     {% if block.type == 'tab' %}
-                      <li
-                        class="form-line box_inner radio_box"
-                        id="id_7{{ forloop.index }}"
-                        step-data-index="{{ forloop.index }}"
-                        {% if forloop.index == 2 %}
-                          style="display:none;"
-                        {% endif %}
-                      >
+                      <li class="form-line box_inner radio_box {{ block.settings.drop_Type }} {{ block.settings.company_types }}" id="id_7{{ forloop.index }}" step-data-index="{{ forloop.index }}">
                         <label class="form-label-title" id="label_7{{ forloop.index }}">
                           {{- block.settings.tab_title -}}
                         </label>
-                        <div id="cid_7{{ forloop.index }}" class="form-input-wide">
-                          <div class="form-multiple-column" role="group" aria-labelledby="label_7{{ forloop.index }}">
-                            {% assign tabbuttons = block.settings.tab_buttons | split: ',' %}
-                            {% for tabbutton in tabbuttons %}
-                              <span class="form-radio-item">
-                                <label class="form-radio-item-label">{{ tabbutton }}</label>
-                              </span>
-                            {% endfor %}
-                          </div>
+                        <div id="cid_7{{ forloop.index }}" class="form-input-wide" data-required="{{ block.settings.required }}">
+                          {% assign options = block.settings.tab_buttons | split: ',' %}
+                          {% case block.settings.customization_type %}
+                            
+                            {% when 'dropdown' %}
+                              <select class="form-dropdown unique-dropdown" data-target="#{{ block.settings.drop_Type }}">
+                                <option disabled selected>{{ section.settings.selectoption }}</option>
+                                {% for option in options %}
+                                  <option value="{{ option | strip }}">{{ option | strip }}</option>
+                                {% endfor %}
+                              </select>
+                            
+                              {% when 'radio' %}
+                                {% assign tabbuttons = block.settings.tab_buttons | split: ',' %}
+                                <div class="form-multiple-column" role="radiogroup" aria-labelledby="label_7{{ forloop.index }}">
+                                  {% for tabbutton in tabbuttons %}
+                                    <label class="form-radio-item radio-button-form">
+                                      <input
+                                        type="radio"
+                                        name="radio_group_{{ forloop.parentloop.index }}"
+                                        id="radio_{{ forloop.parentloop.index }}_{{ forloop.index }}"
+                                        value="{{ tabbutton | strip }}" data-target="#{{ block.settings.drop_Type }}"
+                                      />
+                                      <div style="display: inline-block;" for="radio_{{ forloop.parentloop.index }}_{{ forloop.index }}">
+                                        <button type="button" class="form-button">{{ tabbutton | strip }}</button>
+                                      </div>
+                                    </label>
+                                  {% endfor %}
+                                </div>
+                            
+                                {% when 'button' %}
+                                  <div class="form-multiple-column buttons-group">
+                                    {% assign indx = 0 %}
+                                    {% for option in options %}
+                                    <div class="form-radio-item">
+                                        <button data-type="{% if indx == 0 %}business{% else %}personal{% endif %}"
+                                          type="button" 
+                                          class="unique-form-button toggle-select form-radio-item-label"
+                                          data-group="button_group_{{ forloop.parentloop.index }}">
+                                          {{ option | strip }}
+                                        </button>
+                                      </div>
+                                      {% assign indx =  1 %}
+                                    {% endfor %}
+                                  </div>
+                          {% endcase %}
                         </div>
                       </li>
                     {% endif %}
                   {% endfor %}
+                  <div style="width: 100%; text-align: center; padding: 10px 0 0 0;">
+                      <div style="width: 100%; display: flex ; justify-content: center;">
+                        <button id="form-pagebreak-next_13" type="button" class="start-design" style="width: 100%; border-radius: 30px !important; color: #fff; white-space: nowrap; background: #ff13a7; text-decoration: none; position: relative; display: flex ; padding: 0 30px !important; line-height: 48px; text-align: center; font-weight: var(--text-font-bolder-weight); font-size: 16px; cursor: pointer; transition: background .25s ease-in-out, color .25s ease-in-out, box-shadow .25s ease-in-out; justify-content: center; align-items: center;">{{ section.settings.start_my_design }}</button>               
+                      </div>
+                      <div class="error-message global-error" style="color:red; font-size:14px; margin-top:4px;">
+                        {{ section.settings.field_error }}
+                      </div>
+                  </div>
                 </ul>
                 <ul class="form-section page-section step-4" date-step="4" style="display:none;">
                   <li class="form-line" id="id_13">
-                    <div class="title_box">
-                      <h2>{{ section.settings.freeSample }}</h2>
-                      <p>{{ section.settings.freeSampleDesc }}</p>
-                    </div>
                     <div id="cid_13" class="form-input-wide box_inner" data-layout="full">
+                      <div class="title_box">
+                        <h2>{{ section.settings.freeSample }}</h2>
+                        <p>{{ section.settings.freeSampleDesc }}</p>
+                      </div>
                       {{ section.settings.freeSampleFormDescription }}
+                      {% if section.settings.trust_lists != blank %}
+                        <ul clas="page-trust-list">{{ section.settings.trust_lists }}</ul>
+                      {% endif %}
                       <div class="jfUpload-wrapper">
                         <div class="jfUpload-button-container">
                           <input
@@ -383,7 +427,7 @@
                       <div id="bg-file-preview"></div>
 
                       <div class="form-pagebreak" data-component="pagebreak">
-                        <div class="form-pagebreak-next-container">
+                        <div class="form-pagebreak-next-container" style="display: grid;">
                           <button
                             id="form-pagebreak-next_14"
                             type="button"
@@ -392,16 +436,16 @@
                           >
                             {{ section.settings.uploadPhotobuttonfree }}
                           </button>
+                          <div class="skip-text">{{ section.settings.skip }}</div>
                         </div>
                       </div>
                     </div>
                   </li>
-
+{% comment %} 
                   <li id="cid_14" class="form-input-wide bg-1" data-type="control_pagebreak">
                     <div class="form-pagebreak" data-component="pagebreak">
-                      <div class="skip-text">{{ section.settings.skip }}</div>
                     </div>
-                  </li>
+                  </li> {% endcomment %}
                 </ul>
 
                 <ul class="form-section page-section step-5" date-step="5" style="display:none;">
@@ -472,6 +516,107 @@
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.radio-button-form').forEach(function(item) {
+      item.addEventListener('click', function () {
+        const radioInput = item.querySelector('input[type="radio"]');
+        if (radioInput) {
+          radioInput.checked = true;
+          radioInput.dispatchEvent(new Event('change')); // trigger any change listeners
+        }
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    $('.form-radio-item-label').on('click', function () {
+        $('.form-radio-item-label').removeClass('active');
+        $(this).addClass('active');
+        var selectedValue = $(this).text().trim();
+        $('#field').val(selectedValue);
+        addRecord();
+      });
+
+      $(".unique-dropdown").on("change", function () {
+        const selectedValue = $(this).val();
+        const targetInput = $(this).data("target");
+        $(targetInput).val(selectedValue);
+      });
+
+      $('input[type="radio"]').on("change", function () {
+        const selectedValue = $(this).val();
+        const targetInput = $(this).data("target");
+        $(targetInput).val(selectedValue);
+      });
+
+
+    const startBtn = document.querySelector('.start-design');
+    const globalError = document.querySelector('.global-error');
+
+    globalError.style.visibility = 'hidden';
+
+    startBtn.addEventListener('click', function (e) {
+      e.preventDefault(); 
+
+      let hasError = false;
+
+      document.querySelectorAll('.form-input-wide').forEach(function (wrapper) {
+        const parent = wrapper.closest('li');
+        const isRequired = wrapper.getAttribute('data-required') === 'true';
+
+        let value = '';
+        const select = wrapper.querySelector('select');
+        const radios = wrapper.querySelectorAll('input[type="radio"]');
+        const selectedBtn = wrapper.querySelector('.toggle-select.selected');
+
+        if (select) {
+          value = select.value !== '{{ section.settings.selectoption }}' ? select.value : '';
+          if (isRequired && !value) hasError = true;
+        }
+        else if (radios.length > 0) {
+          const checked = Array.from(radios).find(r => r.checked);
+          if (checked) value = checked.value;
+          else if (isRequired) hasError = true;
+        }
+        else if (selectedBtn) {
+          value = selectedBtn.textContent.trim();
+        }
+        else if (isRequired) {
+          hasError = true;
+        }
+
+        const labelEl = parent?.querySelector('.form-label-title');
+        if (isRequired && !value && labelEl) {
+          labelEl.style.color = 'red';
+          if (!labelEl.querySelector('.required-asterisk')) {
+            const star = document.createElement('span');
+            star.classList.add('required-asterisk');
+            star.style.color = 'red';
+            star.textContent = ' *';
+            labelEl.appendChild(star);
+          }
+        } else if (labelEl) {
+          labelEl.style.color = '';
+          const existingAsterisk = labelEl.querySelector('.required-asterisk');
+          if (existingAsterisk) existingAsterisk.remove();
+        }
+      });
+
+      if (hasError) {
+        globalError.style.visibility = 'visible';
+      } else {
+        globalError.style.visibility = 'hidden';
+
+        document.querySelector('.step-3').style.display = 'none';
+        document.querySelector('.step-4').style.display = 'block';
+        addRecord();
+        webhookCall('{{ section.settings.webhook2 }}'); ///webhook 2
+      }
+    });
+  });
+</script>
 
 <script>
 document.getElementById('fileInput').addEventListener('change', function () {
@@ -642,6 +787,48 @@ function handleFilePreview(file) {
         errorContainer.textContent = "{{ section.settings.unsupport }}";
     }
 }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const businessBlock = document.querySelector('.business-type');
+    const companyBlock = document.querySelector('.business-type-block');
+    const personalBlock = document.querySelector('.personal-type-block'); 
+    const companySelect = companyBlock?.querySelector('select');
+    const disabledClass = document.querySelector('#label_72');
+    const businessButtons = businessBlock?.querySelectorAll('.toggle-select');
+
+    if (!businessBlock || !companyBlock || !personalBlock || businessButtons.length === 0) return;
+    companyBlock.classList.remove('hidden');
+    personalBlock.classList.add('hidden');
+
+    if (companySelect) {
+      companySelect.disabled = true;
+    }
+    disabledClass.classList.add('disabled');
+
+    businessButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const selectedValue = this.getAttribute('data-type').trim().toLowerCase();
+
+        if (selectedValue === 'business') {
+          companyBlock.classList.remove('hidden');
+          personalBlock.classList.add('hidden');
+
+          if (companySelect) companySelect.disabled = false;
+          disabledClass.classList.remove('disabled');
+        } else if (selectedValue === 'personal') {
+          personalBlock.classList.remove('hidden');
+          companyBlock.classList.add('hidden');
+
+          if (companySelect) {
+            companySelect.value = '{{ section.settings.selectoption }}';
+            companySelect.disabled = true;
+          }
+          disabledClass.classList.add('disabled');
+        }
+      });
+    });
+  });
 </script>
 
 <script>
@@ -866,7 +1053,23 @@ function bgHandleFilePreview(file) {
     }
 }
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.toggle-select');
 
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const group = button.getAttribute('data-group');
+        // Unselect other buttons in the same group
+        document.querySelectorAll(`.toggle-select[data-group="${group}"]`).forEach(btn => {
+          btn.classList.remove('selected');
+        });
+        // Select current button
+        button.classList.add('selected');
+      });
+    });
+  });
+</script>
 <script>
 
     setTimeout(function(){
@@ -922,29 +1125,12 @@ function bgHandleFilePreview(file) {
       $('.step-2').hide();
     });
 
-    // moving to step 4 from 3
-
-    $('.form-radio-item-label').click(function(){
-      var _step = $(this).parents('li.radio_box').attr('step-data-index');
-      console.log('3rd step');
-      if(_step == 1){
-      $('#field').val($(this).text());
-      $(this).parents('li.radio_box').hide();
-      $('li.radio_box[step-data-index="2"]').show();
-      } else {
-      $('#source').val($(this).text());
-      $('.step-3').hide();
-      $('.step-4').show();
-      }
-      addRecord();
-    });
-
     // moving to step 5 from 4, the last step
     $('.skip-text').click(function(){
       $('.step-4').hide();
       $('.step-5').show();
       startCountdown();
-      webhookCall('{{ section.settings.webhook2 }}'); ///webhook 2
+      webhookCall('{{ section.settings.webhook3 }}'); ///webhook 3
       
     });
     document.getElementById("form-pagebreak-next_14").addEventListener("click", function () {
@@ -954,7 +1140,7 @@ function bgHandleFilePreview(file) {
         document.querySelector(".step_form_row").classList.add('right_image_bg', 'last-step');
         $('.step-4').hide();
         $('.step-5').show();
-        webhookCall('{{ section.settings.webhook2 }}'); ///webhook 2
+        webhookCall('{{ section.settings.webhook3 }}'); ///webhook 3
         startCountdown();
         addRecord();
       } else {
@@ -1035,14 +1221,18 @@ function bgHandleFilePreview(file) {
         document.querySelector(".step_form_row").classList.add('swap_sec');
         document.querySelector(".custom_steps_form").classList.add('swap_sec_padding');
         document.querySelector("body").classList.add('swap_sec_body');
-         addRecord('{{ section.settings.webhook1 }}'); ///webhook 1
+         addRecord('{{ section.settings.webhook1 }}');
           $('.step-2').hide();
           $('.step-3').show();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
         } else {
           $('#form-pagebreak-next_12').prop('disabled', true);
           $('.loading-dots').addClass('show');
           webhookCall('{{ section.settings.webhook1 }}', 'webhook_1');
-          addRecord('{{ section.settings.webhook1 }}', 'webhook_1'); ///webhook 1
+          addRecord('{{ section.settings.webhook1 }}', 'webhook_1');
         }
         } else {
           alert('{{ section.settings.terms_error }}');
@@ -1136,13 +1326,16 @@ function bgHandleFilePreview(file) {
       var _bgurl = $('#bgurl').val();
       var _source = $('#source').val();
       var _field = $('#field').val();
+      var _timeline = $('#timeline').val();
+      var company_type = $('#company_type').val();
+      var _budget = $('#budget').val();
       var _msclkid = $('#msclkid').val();
       var _gclid = $('#gclid').val();
       var _fbclid = $('#fbclid').val();
       var _code =  iti.getSelectedCountryData().dialCode;
     
     
-      var _url = url+'?SubmissionID='+_submissionID+'&Email='+_email+'&Name='+_name+'&PhoneNumber='+_phone+'&Logo='+_logo+'&Source='+_source+'&Place='+_field+'&Background='+_bgurl+'&country_code='+_code+'&fbclid='+_fbclid+'&gclid='+_gclid+'&msclkid='+_msclkid;
+      var _url = url+'?SubmissionID='+_submissionID+'&Email='+_email+'&Name='+_name+'&PhoneNumber='+_phone+'&Logo='+_logo+'&Source='+_source+'&Place='+_field+'&Background='+_bgurl+'&country_code='+_code+'&fbclid='+_fbclid+'&gclid='+_gclid+'&msclkid='+_msclkid+'&budget='+_budget+'&company_type='+company_type+'&timeline='+_timeline;
         $.ajax({
             url: _url,
             type: "POST",
@@ -1201,6 +1394,7 @@ function bgHandleFilePreview(file) {
                   $('.step-2').hide();
                   $('.step-3').show();
                 }, 500);
+
     }
     async function addRecord(optionalUrl, optionalWebhook){
       const formData = new FormData();
@@ -1217,11 +1411,14 @@ function bgHandleFilePreview(file) {
       formData.append("submission[10]", $('#gclid').val()); // gclid
       formData.append("submission[11]", $('#fbclid').val()); // fbclid
       formData.append("submission[12]", $('#msclkid').val()); // msclkid
+      formData.append("submission[13]", $('#company_type').val()); // company_type
+      formData.append("submission[14]", $('#timeline').val()); // timeline
+      formData.append("submission[15]", $('#budget').val()); // budget
       
 
       try {
           const response = await fetch(
-            `https://api.jotform.com/submission/${SUBMISSION_ID}?apiKey=544c28cc9e12d4f364554d517534d132`,
+            `https://api.jotform.com/submission/${SUBMISSION_ID}?apiKey=544c28cc9e12d4f364554d517534d132`, 
               {
                   method: "POST",
                   body: formData
@@ -1412,7 +1609,19 @@ newCountdown();
   "type": "text",
   "id": "webhook2",
   "label": "Webhook 2",
+  "default":"https://hook.eu1.make.com/64y9f2gm0v5f9t8hv4y4ozp5cgpl0nu5"
+  },
+  {
+  "type": "text",
+  "id": "webhook3",
+  "label": "Webhook 3",
   "default":"https://hook.eu1.make.com/7wngere2qtprr7t16kwi68clbr56o8ly"
+  },
+  {
+    "type": "text",
+    "id": "start_my_design",
+    "label": "Start my design",
+    "default":"Start my design"
   },
   {
   "type": "text",
@@ -1449,6 +1658,12 @@ newCountdown();
   "id": "required",
   "label": "Required Text",
   "default":"This field is required"
+  },
+  {
+  "type": "text",
+  "id": "selectoption",
+  "label": "Select Option Text",
+  "default":"Select an option"
   },
     {
   "type": "text",
@@ -1508,6 +1723,12 @@ newCountdown();
   "type": "html",
   "id": "MainList",
   "label": "Breadcrumbs Html",
+  "default":"<li>Ontvang <strong>gratis ontwerp</strong></li><li>Binnen <strong>3 uur</strong> in je mailbox</li><li>Binnen <strong>6 werkdagen geleverd</strong></li>"
+  },
+  {
+  "type": "html",
+  "id": "trust_lists",
+  "label": "Trust List",
   "default":"<li>Ontvang <strong>gratis ontwerp</strong></li><li>Binnen <strong>3 uur</strong> in je mailbox</li><li>Binnen <strong>6 werkdagen geleverd</strong></li>"
   },
   {
@@ -1656,6 +1877,12 @@ newCountdown();
   },
   {
     "type": "text",
+    "id": "field_error",
+    "label": "Error Text",
+    "default": "Please Select required fields"
+  },
+  {
+    "type": "text",
     "id": "freeSampleDesc",
     "label": "Free Sample Description",
     "default":"Zodra het logo klaar is, verschijnt hier een voorbeeld. Bekijk intussen enkele voorbeelden of scroll verder voor FAQ’s en inspiratie!"
@@ -1727,9 +1954,14 @@ newCountdown();
   },
   {
     "type": "tab",
-    "name": "Tab",
-    "limit": 2,
+    "name": "Questions",
+    "limit": 8,
     "settings": [
+      {
+        "type": "text",
+        "id": "drop_Type",
+        "label": "Block Type Name"
+      },
       {
         "type": "text",
         "id": "tab_title",
@@ -1740,8 +1972,36 @@ newCountdown();
         "type": "textarea",
         "id": "tab_buttons",
         "label": "Tab Buttons"
-      }
-   ]
+      },
+      {
+        "type": "select",
+        "id": "customization_type",
+        "label": "Input Type",
+        "options": [
+          { "value": "dropdown", "label": "Dropdown" },
+          { "value": "radio", "label": "Radio Buttons" },
+          { "value": "button", "label": "Buttons" }
+        ],
+        "default": "button"
+      },
+      {
+        "type": "select",
+        "id": "company_types",
+        "label": "Company Type",
+        "options": [
+          { "value": "personal-type-block", "label": "Personal" },
+          { "value": "business-type-block", "label": "Business" },
+          { "value": "notset", "label": "NA" }
+        ],
+        "default": "notset"
+      },
+      {
+      "type": "checkbox",
+      "id": "required",
+      "label": "Required",
+      "default": false
+    }
+    ]
   },
   {
      "type": "Image",

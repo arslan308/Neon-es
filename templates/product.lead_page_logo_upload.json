@@ -12,18 +12,70 @@
     "custom_step_form_section_TNdRMm": {
       "type": "Custom-Step-Form-Section",
       "blocks": {
+        "tab_JgGFbL": {
+          "type": "tab",
+          "settings": {
+            "drop_Type": "business-type",
+            "tab_title": "Business or personal?",
+            "tab_buttons": "Business , Personal",
+            "customization_type": "button",
+            "company_types": "notset",
+            "required": true
+          }
+        },
         "tab_DyyFnU": {
           "type": "tab",
           "settings": {
-            "tab_title": "Elige el sector de tu negocio:",
-            "tab_buttons": "Gimnasio, Oficina, Restaurante, Tienda minorista, Bar/Discoteca, Cafetería / Café,Salón de Belleza / Spa, Estudio de tatuajes, Eventos / Bodas, Otro / Consumidor"
+            "drop_Type": "company_type",
+            "tab_title": "What type of business is this for?",
+            "tab_buttons": "Restaurant, Bar / Cafe, Store, Salon, Barber, Gym, Tattoo, Event, Club, Other",
+            "customization_type": "dropdown",
+            "company_types": "business-type-block",
+            "required": false
+          }
+        },
+        "tab_ie6BMC": {
+          "type": "tab",
+          "settings": {
+            "drop_Type": "company_type",
+            "tab_title": "What room or occasion is this for?",
+            "tab_buttons": "Home Decor, Bedroom / Kids Room, Living Room, Game Room / Mancave, Home, Bar, Wedding or Party, Gift for Someone, Just for Fun, Other",
+            "customization_type": "dropdown",
+            "company_types": "personal-type-block",
+            "required": false
+          }
+        },
+        "tab_X9DzAE": {
+          "type": "tab",
+          "settings": {
+            "drop_Type": "timeline",
+            "tab_title": "When do you need it?",
+            "tab_buttons": "Within 1 week, Within 3 weeks, Within 2 months, Not sure yet",
+            "customization_type": "radio",
+            "company_types": "notset",
+            "required": false
+          }
+        },
+        "tab_eqABRK": {
+          "type": "tab",
+          "settings": {
+            "drop_Type": "budget",
+            "tab_title": "What is your budget?",
+            "tab_buttons": "Less than $300, $300 – $750, $750 – $1500, More than $1500, Not sure / Depends on the design",
+            "customization_type": "dropdown",
+            "company_types": "notset",
+            "required": true
           }
         },
         "tab_EFNYn4": {
           "type": "tab",
           "settings": {
-            "tab_title": "¿Cómo has descubierto Neonsfeer?",
-            "tab_buttons": "Facebook, Instagram, TikTok, Google, LinkedIn, Youtube, Pinterest, Boca-Oreja, Newsletter, Influencer"
+            "drop_Type": "source",
+            "tab_title": "How did you hear about Neonsfeer?",
+            "tab_buttons": "Instagram, TikTok, Facebook, Google, Pinterest, YouTube, LinkedIn, Word of Mouth / Friend, Influencer / Creator, Returning Customer",
+            "customization_type": "dropdown",
+            "company_types": "notset",
+            "required": true
           }
         },
         "image_QaDCwc": {
@@ -52,7 +104,11 @@
         }
       },
       "block_order": [
+        "tab_JgGFbL",
         "tab_DyyFnU",
+        "tab_ie6BMC",
+        "tab_X9DzAE",
+        "tab_eqABRK",
         "tab_EFNYn4",
         "image_QaDCwc",
         "image_z9N7Eq",
@@ -62,7 +118,8 @@
       "settings": {
         "formid": "250964263877470",
         "webhook1": "https://hook.eu1.make.com/3l7nea0flo26j14ohwxf1d678jgbxmmn",
-        "webhook2": "https://hook.eu1.make.com/om3g9befs5eocmqd5syas6kuuwp3xy6h",
+        "webhook2": "https://hook.eu1.make.com/iyh7s3n7kxbse6x4q52zx8chqtm268vz",
+        "webhook3": "https://hook.eu1.make.com/om3g9befs5eocmqd5syas6kuuwp3xy6h",
         "sectionTitle": "Consigue tu diseño de neon gratis + presupuesto personalizado",
         "validfiles": "Archivos válidos",
         "unsupport": "Tipo de archivo no compatible",

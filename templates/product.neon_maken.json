@@ -356,7 +356,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "How much does a custom neon cost?",
-            "accordion_content": "Prices vary based on design, size and LED length. Text only starts at around €220. For exact costs, please submit your design for a quote.",
+            "accordion_content": "<p>Prices vary based on design, size and LED length. Text only starts at around €220. For exact costs, please submit your design for a quote.</p>",
             "tab_association": "1"
           }
         },
@@ -364,7 +364,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What type of LED lighting is used?",
-            "accordion_content": "EvoLux V23, developed in 2023, with a lifespan of 100,000 hours and 1,500 lumens—the best on the market.",
+            "accordion_content": "<p>EvoLux V23, developed in 2023, with a lifespan of 100,000 hours and 1,500 lumens—the best on the market.</p>",
             "tab_association": "1"
           }
         },
@@ -372,7 +372,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Are there any costs associated with requesting a quote and sample?",
-            "accordion_content": "No, this is free and without obligation.",
+            "accordion_content": "<p>No, this is free and without obligation.</p>",
             "tab_association": "1"
           }
         },
@@ -380,7 +380,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Do the examples match the final boards?",
-            "accordion_content": "Expect precision. Our design previews reflect the final product. From color to text, trust us to match your vision. Design with confidence with us. The final product will be created as the preview, but because it is handcrafted, it may vary slightly to ensure the best possible result",
+            "accordion_content": "<p>Expect precision. Our design previews reflect the final product. From color to text, trust us to match your vision. Design with confidence with us. The final product will be created as the preview, but because it is handcrafted, it may vary slightly to ensure the best possible result</p>",
             "tab_association": "1"
           }
         },
@@ -388,7 +388,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "What color choices are available?",
-            "accordion_content": "Available colour options? Yes, all logos can be converted to neon and we offer 12 LED neon colours plus an RGB option. The available colours are: White, Warm White, Pink, Light Pink, Blue, Ice Blue, Turquoise, Green, Red, Orange, Yellow and Purple.",
+            "accordion_content": "<p>Available colour options? Yes, all logos can be converted to neon and we offer 12 LED neon colours plus an RGB option. The available colours are: White, Warm White, Pink, Light Pink, Blue, Ice Blue, Turquoise, Green, Red, Orange, Yellow and Purple.</p>",
             "tab_association": "1"
           }
         }
