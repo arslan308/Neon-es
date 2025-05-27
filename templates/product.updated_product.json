@@ -159,7 +159,7 @@
       "settings": {
         "stack_mobile": false,
         "className": "icons-with-text2",
-        "section_title": "Why buy with Neonsfeer"
+        "section_title": "Por qué comprar con Neonsfeer"
       }
     },
     "builder_google_review_HAamXg": {
@@ -329,8 +329,8 @@
       ],
       "settings": {
         "position": "left",
-        "heading": "What’s in the box?",
-        "subheading": "We deliver everything you need to mount, attach and light up your Neon",
+        "heading": "¿Qué hay en la caja?",
+        "subheading": "Le entregamos todo lo que necesita para montar, fijar e iluminar su Neon",
         "img": "shopify://shop_images/Rectangle_18-svg_2.svg",
         "video": "https://cdn.shopify.com/videos/c/o/v/ac926312bf5b444fa756b683122f34fb.mp4",
         "v_head": "",
@@ -548,8 +548,18 @@
         "button_link": "#",
         "button_text_2": "",
         "button_link_2": "#",
-        "class": "",
-        "Video_url": ""
+        "title1": "",
+        "content1": "Ordene su neón personalizado",
+        "list_one1": "<p>Diseño gratuito, sin compromiso</p>",
+        "list_two1": "<p>Diseño en su bandeja de entrada en 3 horas</p>",
+        "list_three1": "<p>Entrega gratuita en 8 días laborables</p>",
+        "add_to_cart_btn_text1": "",
+        "button_text1": "Empezar a diseñar",
+        "button_link1": "shopify://collections/all",
+        "button_text_21": "#",
+        "button_link_21": "shopify://collections/all",
+        "class1": "",
+        "Video_url1": ""
       }
     },
     "faq_new_TVMGmd": {
@@ -558,25 +568,25 @@
         "tab_mhe7AV": {
           "type": "tab",
           "settings": {
-            "tab_title": "Product information"
+            "tab_title": "Información sobre el producto"
           }
         },
         "tab_QxwBLy": {
           "type": "tab",
           "settings": {
-            "tab_title": "Delivery times"
+            "tab_title": "Plazos de entrega"
           }
         },
         "tab_c9bdVw": {
           "type": "tab",
           "settings": {
-            "tab_title": "Installation"
+            "tab_title": "Instalación"
           }
         },
         "tab_ai9t7R": {
           "type": "tab",
           "settings": {
-            "tab_title": "Warranty"
+            "tab_title": "Garantía"
           }
         },
         "accordion_item_yj7KFd": {
