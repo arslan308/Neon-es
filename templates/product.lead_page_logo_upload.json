@@ -60,8 +60,8 @@
           "type": "tab",
           "settings": {
             "drop_Type": "budget",
-            "tab_title": "What is your budget?",
-            "tab_buttons": "Less than $300, $300 – $750, $750 – $1500, More than $1500, Not sure / Depends on the design",
+            "tab_title": "¿Cuál es tu presupuesto?",
+            "tab_buttons": "Menos de €300, €300 – €750, €750 – €1500, Más de €1500, No estoy seguro / Depende del diseño",
             "customization_type": "dropdown",
             "company_types": "notset",
             "required": true
