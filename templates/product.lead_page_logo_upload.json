@@ -28,7 +28,7 @@
           "settings": {
             "drop_Type": "company_type",
             "tab_title": "¿Qué tipo de negocio tienes?",
-            "tab_buttons": "Restaurante, Bar / Café, Tienda, Salón de belleza, Barbería, Gimnasio, Estudio de tatuajes, Evento, Club, Otr",
+            "tab_buttons": "Restaurante, Bar / Café, Tienda, Salón de belleza, Barbería, Gimnasio, Estudio de tatuajes, Evento, Club, Otro",
             "customization_type": "dropdown",
             "company_types": "business-type-block",
             "required": false
@@ -38,8 +38,8 @@
           "type": "tab",
           "settings": {
             "drop_Type": "company_type",
-            "tab_title": "What room or occasion is this for?",
-            "tab_buttons": "Home Decor, Bedroom / Kids Room, Living Room, Game Room / Mancave, Home, Bar, Wedding or Party, Gift for Someone, Just for Fun, Other",
+            "tab_title": "¿Para qué habitación o ocasión es?",
+            "tab_buttons": "Decoración del hogar, Dormitorio / Habitación infantil, Sala de estar, Cuarto de juegos / Cueva masculina, Casa, Bar, Boda o fiesta, Regalo para alguien, Solo por diversión, Otro",
             "customization_type": "dropdown",
             "company_types": "personal-type-block",
             "required": false
