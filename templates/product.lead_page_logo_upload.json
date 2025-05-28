@@ -50,7 +50,7 @@
           "settings": {
             "drop_Type": "timeline",
             "tab_title": "¿Cuándo necesitas el letrero de neón?",
-            "tab_buttons": "En 1 semana, En 3 semanas, En 2 meses, Aún no estoy seguro",
+            "tab_buttons": "En 1 semana, En 3 semanas, En 2 meses, No estoy seguro",
             "customization_type": "radio",
             "company_types": "notset",
             "required": false
