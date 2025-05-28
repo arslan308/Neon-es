@@ -628,6 +628,38 @@
             "tab_association": "1"
           }
         },
+        "accordion_item_4YXzjD": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿Cuál es el plazo de entrega?",
+            "accordion_content": "<p>Los pedidos se entregan en un plazo medio de 6-8 días laborables.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_yiGiwt": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿Qué ocurre si se retrasa mi entrega?",
+            "accordion_content": "<p> If your order is delayed beyond 6–8 business days, contact us and we’ll investigate and update you promptly.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_P7BrHe": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿Ofrecen envío gratuito?",
+            "accordion_content": "<p>¡Absolutamente! En Neonsfeer, ofrecemos envío gratuito en todos nuestros carteles de neón sin excepciones, sin costes ocultos.<br/><br/>Su arte de neón se entrega a su puerta sin cargo adicional, para que pueda centrarse en la iluminación de su espacio sin preocuparse por los gastos de envío.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_PMLWeE": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Pedidos al por mayor y revendedores",
+            "accordion_content": "<p>¿Es usted revendedor o tiene un pedido grande? Estamos abiertos a pedidos al por mayor y a revendedores.<br/>Póngase en contacto con nosotros en info@neonsfeer.com para ofertas personalizadas y precios aplicables.</p>",
+            "tab_association": "2"
+          }
+        },
         "accordion_item_WQgjU3": {
           "type": "accordion_item",
           "settings": {
@@ -687,6 +719,10 @@
         "accordion_item_9dMzAC",
         "accordion_item_N3pP3y",
         "accordion_item_BzVhTp",
+        "accordion_item_4YXzjD",
+        "accordion_item_yiGiwt",
+        "accordion_item_P7BrHe",
+        "accordion_item_PMLWeE",
         "accordion_item_WQgjU3",
         "accordion_item_p4apxq",
         "accordion_item_799w3t",
