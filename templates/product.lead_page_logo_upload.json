@@ -71,8 +71,8 @@
           "type": "tab",
           "settings": {
             "drop_Type": "source",
-            "tab_title": "How did you hear about Neonsfeer?",
-            "tab_buttons": "Instagram, TikTok, Facebook, Google, Pinterest, YouTube, LinkedIn, Word of Mouth / Friend, Influencer / Creator, Returning Customer",
+            "tab_title": "¿Cómo supiste de Neonsfeer?",
+            "tab_buttons": "Instagram, TikTok, Facebook, Google, Pinterest, YouTube, LinkedIn, Recomendación / Amigo, Influencer / Creador, Cliente recurrente",
             "customization_type": "dropdown",
             "company_types": "notset",
             "required": true
