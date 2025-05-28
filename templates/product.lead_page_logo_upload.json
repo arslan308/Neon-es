@@ -16,8 +16,8 @@
           "type": "tab",
           "settings": {
             "drop_Type": "business-type",
-            "tab_title": "Business or personal?",
-            "tab_buttons": "Business , Personal",
+            "tab_title": "¿Negocios o personal?",
+            "tab_buttons": "Negocio, Personal",
             "customization_type": "button",
             "company_types": "notset",
             "required": true
@@ -27,8 +27,8 @@
           "type": "tab",
           "settings": {
             "drop_Type": "company_type",
-            "tab_title": "What type of business is this for?",
-            "tab_buttons": "Restaurant, Bar / Cafe, Store, Salon, Barber, Gym, Tattoo, Event, Club, Other",
+            "tab_title": "¿Qué tipo de negocio tienes?",
+            "tab_buttons": "Restaurante, Bar / Café, Tienda, Salón de belleza, Barbería, Gimnasio, Estudio de tatuajes, Evento, Club, Otr",
             "customization_type": "dropdown",
             "company_types": "business-type-block",
             "required": false
