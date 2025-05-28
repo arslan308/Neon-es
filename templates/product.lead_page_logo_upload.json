@@ -165,7 +165,7 @@
         "freeSampleDesc": "Ya empezamos con tu diseño. Cuéntanos un poco más para que se ajuste a tu estilo y espacio.",
         "freeSampleFormDescription": "¿Quieres ver cómo queda tu neón en tu espacio? Sube una foto del fondo (no tu logo) y te mandamos una vista realista.",
         "uploadPhotoFormfree": "<div class=\"file_heading\">Subir foto</div>\n<label for=\"wall_image\">Arrastra o <span>elige un archivo</span></label>",
-        "uploadPhotobuttonfree": "Añadir mi pared o fondo",
+        "uploadPhotobuttonfree": "Sube foto de fondo",
         "formButtonQoute": "<div class=\"box_head\">Tu diseño de neón personalizado aparecerá aquí en:</div>\n<div class=\"time\">\n  <span id=\"timer\">2:59</span> horas\n</div>",
         "timerHmtl": "Upload today and receive your logo on {month} {day}. Still <b id=\"new_timer\">00:00:00</b> valid."
       }
