@@ -651,6 +651,14 @@
             "accordion_content": "<p> ¡No hay problema! Tenemos varias alternativas:</p><ul><li><strong>Montaje en el techo:</strong> Te podemos enviar un sistema de suspensión con cables, gratis bajo pedido.<br/></li><li><strong>Sobre superficies planas:</strong> Puedes colocar tu neón sobre una mesa o estante. También ofrecemos una base autoportante opcional.<br/></li><li><strong>Cinta adhesiva de doble cara:</strong> En algunas superficies lisas, se puede usar cinta 3M fuerte.</li></ul><p>¿Necesitas ayuda para elegir qué solución se adapta mejor a tu situación? ¡Contáctanos!</p>",
             "tab_association": "3"
           }
+        },
+        "accordion_item_jMJ4wx": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Mando a distancia y dimmer",
+            "accordion_content": "<p>Con el mando a distancia puedes ajustar la intensidad y los efectos de luz fácilmente:</p><ul><li><strong>Neón de un solo color:</strong> Encender/apagar y ajustar la intensidad<br/></li><li><strong>Neón RGB (multicolor):</strong> Selecciona un color fijo o activa una transición de colores</li></ul><p>¡Crea el ambiente perfecto en cada momento!</p>",
+            "tab_association": "3"
+          }
         }
       },
       "block_order": [
@@ -665,7 +673,8 @@
         "accordion_item_BzVhTp",
         "accordion_item_WQgjU3",
         "accordion_item_p4apxq",
-        "accordion_item_799w3t"
+        "accordion_item_799w3t",
+        "accordion_item_jMJ4wx"
       ],
       "custom_css": [],
       "settings": {
