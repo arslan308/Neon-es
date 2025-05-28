@@ -531,24 +531,24 @@
       "settings": {
         "custom_class": "image_text_sec",
         "main_title": "Personaliza tu propio neón",
-        "main_description": "Elige tu propio texto personalizado o, mejor aún, ¡un logotipo en neón! Solicitamos opciones personalizadas en todos los colores y tamaños.",
+        "main_description": "Elige tu propio texto o, aún mejor, convierte tu logo en un increíble neón. Ofrecemos opciones personalizadas en todos los colores y tamaños.",
         "image_1": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-05-26T174126.113.webp",
         "image_2": "shopify://shop_images/Ontwerp_zonder_titel_-_2025-05-26T174046.393.webp",
         "PaddingImage": "",
         "image_position": "right",
         "image_width": 50,
         "title": "",
-        "content": "Ordene su neón personalizado",
-        "list_one": "<p>Entregado en <strong>8 días laborables</strong></p>",
-        "list_two": "<p>Incluye un control remoto gratuito</p>",
-        "list_three": "<p>Ahora con un <strong>descuento </strong>exclusivo del 25%</p>",
+        "content": "Haz tu pedido personalizado",
+        "list_one": "<p>Entrega en 8 días hábiles</p>",
+        "list_two": "<p>Incluye mando a distancia gratuito</p>",
+        "list_three": "<p>Envío sin coste</p>",
         "add_to_cart_btn_text": "Buy Now",
         "button_text": "Empezar a diseñar",
         "button_link": "#",
         "button_text_2": "",
         "button_link_2": "#",
         "title1": "",
-        "content1": "Ordene su neón personalizado",
+        "content1": "Haz tu pedido personalizado",
         "list_one1": "<p>Diseño gratuito, sin compromiso</p>",
         "list_two1": "<p>Diseño en su bandeja de entrada en 3 horas</p>",
         "list_three1": "<p>Entrega gratuita en 8 días laborables</p>",
@@ -627,6 +627,30 @@
             "accordion_content": "<p>¿Opciones de color? ¡Claro! Todos los logotipos pueden convertirse en neón y ofrecemos 12 colores LED más una opción RGB.</p><p>Los colores disponibles son: Blanco, Blanco Cálido, Rosa, Rosa Claro, Azul, Azul Hielo, Turquesa, Verde, Rojo, Naranja, Amarillo y Morado.</p>",
             "tab_association": "1"
           }
+        },
+        "accordion_item_WQgjU3": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿Cómo instalo mi cartel de neón?",
+            "accordion_content": "<p>Recibirás tu neón con instrucciones claras y todo lo necesario para montarlo. ¡Instalarlo es rápido y sencillo!</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_p4apxq": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿Qué incluye el paquete?",
+            "accordion_content": "<p>Le proporcionamos todo lo que necesita para colgar fácilmente su rótulo de neón en la pared:<br/><br/>1.Material de montaje<br/>2.Adaptador resistente<br/>3.Mando a distancia<br/>4.Regulador de intensidad (dimmer)<br/>5.Cable transparente</p>",
+            "tab_association": "3"
+          }
+        },
+        "accordion_item_799w3t": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿No quieres o no puedes perforar la pared?",
+            "accordion_content": "<p> ¡No hay problema! Tenemos varias alternativas:</p><ul><li><strong>Montaje en el techo:</strong> Te podemos enviar un sistema de suspensión con cables, gratis bajo pedido.<br/></li><li><strong>Sobre superficies planas:</strong> Puedes colocar tu neón sobre una mesa o estante. También ofrecemos una base autoportante opcional.<br/></li><li><strong>Cinta adhesiva de doble cara:</strong> En algunas superficies lisas, se puede usar cinta 3M fuerte.</li></ul><p>¿Necesitas ayuda para elegir qué solución se adapta mejor a tu situación? ¡Contáctanos!</p>",
+            "tab_association": "3"
+          }
         }
       },
       "block_order": [
@@ -638,7 +662,10 @@
         "accordion_item_D7w4BT",
         "accordion_item_9dMzAC",
         "accordion_item_N3pP3y",
-        "accordion_item_BzVhTp"
+        "accordion_item_BzVhTp",
+        "accordion_item_WQgjU3",
+        "accordion_item_p4apxq",
+        "accordion_item_799w3t"
       ],
       "custom_css": [],
       "settings": {
