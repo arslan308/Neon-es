@@ -127,7 +127,7 @@
         "filesizemin": "El archivo es demasiado pequeño. El tamaño mínimo es de 1 KB.",
         "filesizemax": "El archivo es demasiado grande. El tamaño máximo es de 20 MB.",
         "required": "Este campo es obligatorio",
-        "selectoption": "Select an option",
+        "selectoption": "Elige una opción",
         "fileerror": "Hubo un error al subir el archivo. Por favor, inténtelo de nuevo.",
         "emailformat": "Por favor, añade un email válido",
         "phoneformat": "Número de teléfono incorrecto",
