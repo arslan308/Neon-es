@@ -536,7 +536,6 @@
         $(this).addClass('active');
         var selectedValue = $(this).text().trim();
         $('#field').val(selectedValue);
-        addRecord();
       });
 
       $(".unique-dropdown").on("change", function () {
@@ -611,7 +610,6 @@
 
         document.querySelector('.step-3').style.display = 'none';
         document.querySelector('.step-4').style.display = 'block';
-        addRecord();
         webhookCall('{{ section.settings.webhook2 }}'); ///webhook 2
       }
     });
@@ -1142,7 +1140,6 @@ function bgHandleFilePreview(file) {
         $('.step-5').show();
         webhookCall('{{ section.settings.webhook3 }}'); ///webhook 3
         startCountdown();
-        addRecord();
       } else {
         $('.bg-file-required').addClass('show');
         $('#cid_13 .jfUpload-wrapper').css('border-color', 'red');
@@ -1221,7 +1218,7 @@ function bgHandleFilePreview(file) {
         document.querySelector(".step_form_row").classList.add('swap_sec');
         document.querySelector(".custom_steps_form").classList.add('swap_sec_padding');
         document.querySelector("body").classList.add('swap_sec_body');
-         addRecord('{{ section.settings.webhook1 }}');
+         webhookCall('{{ section.settings.webhook1 }}');
           $('.step-2').hide();
           $('.step-3').show();
           window.scrollTo({
@@ -1232,7 +1229,6 @@ function bgHandleFilePreview(file) {
           $('#form-pagebreak-next_12').prop('disabled', true);
           $('.loading-dots').addClass('show');
           webhookCall('{{ section.settings.webhook1 }}', 'webhook_1');
-          addRecord('{{ section.settings.webhook1 }}', 'webhook_1');
         }
         } else {
           alert('{{ section.settings.terms_error }}');
@@ -1245,6 +1241,13 @@ function bgHandleFilePreview(file) {
     // moving to step 2 from 1
   
     document.getElementById("form-pagebreak-next_11").addEventListener("click", async function () {
+      const storeCode = "{{ shop.locale }}";
+      const timestamp = Math.floor(Date.now() / 1000);
+      const randomId = Math.floor(Math.random() * 1e6);
+      const uniqueId = `${storeCode}${timestamp}${randomId}`;
+      console.log("Generated Unique ID:", uniqueId);
+      document.getElementById("submissionid").value = uniqueId;
+
       const fileInput = document.getElementById('fileInput');
       if(fileInput.files[0]){
       $('.file-required').removeClass('show'); 
@@ -1252,7 +1255,6 @@ function bgHandleFilePreview(file) {
       document.querySelector(".sec_tab").classList.add('active');
       $('.step-1').hide();
       $('.step-2').show();
-      await submissionStart();
       } else {
         console.log('logo required');
         $('#cid_3 .jfUpload-wrapper').css('border-color', 'red');
@@ -1278,8 +1280,6 @@ function bgHandleFilePreview(file) {
             playButton.style.display = 'none';
           }
       });
-
-      // Show button again when video ends
       video.addEventListener('ended', function () {
         $('#customVideo').attr('controls', false);
         playButton.style.display = 'flex';
@@ -2023,7 +2023,7 @@ newCountdown();
       "type": "tab",
       "settings": {
         "tab_title": "What is Your Field",
-        "tab_buttons": "Tech, Resturent",
+        "tab_buttons": "Tech, Resturent"
 
       }
     },
@@ -2031,7 +2031,7 @@ newCountdown();
       "type": "tab",
       "settings": {
         "tab_title": "Help us! How did you find Neonsfeer?",
-        "tab_buttons": "Facebook, Instagram, Linkdin, Youtube",
+        "tab_buttons": "Facebook, Instagram, Linkdin, Youtube"
       }
     }
 ]
