@@ -119,7 +119,7 @@
             "icon": "bi-delivery",
             "custom_icon": "shopify://shop_images/backlight_high.svg",
             "title": "Tecnología PowerLED",
-            "content": "<p>Nuestros neones cuentan con tecnología PowerLED de bajo consumo. Esta tecnología garantiza una iluminación intensa, duradera y segura con una duración útil de hasta 100.000 horas.</p>"
+            "content": "<p><br/>Nuestros letreros de neón utilizan tecnología PowerLED de bajo consumo, ofreciendo una luz intensa, segura y duradera. Gracias a su eficiencia, tienen una vida útil de hasta 100.000 horas, ideales para uso prolongado en interiores o exteriores</p>"
           }
         },
         "item_rPzYnY": {
@@ -127,8 +127,8 @@
           "settings": {
             "icon": "bi-returns",
             "custom_icon": "shopify://shop_images/home_improvement_and_tools.svg",
-            "title": "Incluye regulador de la intensidad, mando a distancia y kit de montaje gratuito",
-            "content": "<p>Con el regulador de intensidad y el mando a distancia incluidos, puedes adaptar fácilmente el brillo a tu gusto. Además, tu pedido incluye un kit de montaje gratuito para que cuelgues tu letrero de forma rápida y sencilla.</p>"
+            "title": "Incluye regulador y mando a distancia",
+            "content": "<p>Incluyen regulador de intensidad y mando a distancia, para ajustar el brillo fácilmente a tu preferencia. También recibirás un kit de montaje gratuito, que facilita colgar tu letrero de forma rápida, sin herramientas especiales</p>"
           }
         },
         "item_cRekKR": {
@@ -137,7 +137,7 @@
             "icon": "bi-customer-support",
             "custom_icon": "shopify://shop_images/brightness_empty.svg",
             "title": "2 años de garantía",
-            "content": "<p>En Neonsfeer, todos nuestros letreros de neón cuentan con una garantía de 2 años. Si llegara a surgir algún problema, nos encargaremos de ofrecerte una solución adecuada, ya sea mediante reparación o reemplazo.</p>"
+            "content": "<p><br/>Todos nuestros neones están cubiertos por una garantía gratuita de 2 años. Si ocurre algún inconveniente, ofrecemos una solución rápida: reparación o reemplazo. Nuestro equipo está disponible para ayudarte en todo momento.</p>"
           }
         },
         "item_qBbdx7": {
@@ -146,7 +146,7 @@
             "icon": "bi-secure-payment",
             "custom_icon": "shopify://shop_images/local_shipping_2.svg",
             "title": "Envío gratuito ( en 6-8 días hábiles)",
-            "content": "<p>¡Sin gastos de envío! Enviamos tu letrero de neón cuidadosamente embalado, rápidamente y de forma gratuita a la dirección que nos indiques. Además, en tu pedido recibirás un código de seguimiento para que puedas seguir tu pedido en todo momento.</p>"
+            "content": "<p>El envío es completamente gratuito. Empacamos tu letrero con cuidado y lo enviamos con rapidez a la dirección que elijas. Además, recibirás un código de seguimiento para saber en todo momento dónde está tu pedido.</p>"
           }
         }
       },
