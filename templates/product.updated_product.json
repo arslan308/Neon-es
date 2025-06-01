@@ -725,9 +725,9 @@
       "custom_css": [],
       "settings": {
         "add_class": "tabing2",
-        "title": "Veelgestelde vragen",
-        "description": "Bekijk onze FAQ voor antwoorden op vragen over specifieke productkenmerken, gebruik en onderhoud",
-        "btn": "Bekijk alle vragen"
+        "title": "Preguntas frecuentes",
+        "description": "Consulta nuestras preguntas frecuentes para obtener respuestas sobre características del producto, uso y mantenimiento.",
+        "btn": "Ver todas las preguntas"
       }
     },
     "recently-viewed-products": {
