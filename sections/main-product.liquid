@@ -406,7 +406,7 @@
   stroke: {{ section.settings.checkmark_color }};
 }
 </style>
-{% if template == 'product' %}
+{% if template == 'product' or template == 'product.updated_product' %}
   <style>
     .default-custom-product .card--collapsed .card__header, .card--collapsed .card__section{padding-top: 30px;}
     .product-block-list__item--info > .card{background: #f7f5ff !important; border-radius: 8px;}
