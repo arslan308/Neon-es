@@ -943,8 +943,7 @@ function getCookie(name) {
   if (fbc) {
       console.log('fbc');
       console.log(fbc);
-      const parts = fbc.split('.');
-      fbclidValue = parts[parts.length - 1]; // get the last part
+      fbclidValue = fbc;
   } else {
       console.log('getting fbclid from url');
       fbclidValue = getParam('fbclid');
