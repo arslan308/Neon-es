@@ -592,15 +592,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "¿Qué tipo de iluminación LED se utiliza?",
-            "accordion_content": "<p>EvoLux V23, desarrollada en 2023, con una vida útil de 100.000 horas y 1.500 lúmenes. Lo mejor del mercado.</p>",
-            "tab_association": "1"
-          }
-        },
-        "accordion_item_9dMzAC": {
-          "type": "accordion_item",
-          "settings": {
-            "accordion_title": "¿Tiene algún coste solicitar un presupuesto o una muestra?",
-            "accordion_content": "<p>No, es completamente gratis y sin compromiso.</p>",
+            "accordion_content": "<p>EcoLED Ultra, desarrollada en 2023, con una vida útil de 100.000 horas y 1.500 lúmenes. Lo mejor del mercado.</p>",
             "tab_association": "1"
           }
         },
@@ -708,7 +700,6 @@
         "tab_ai9t7R",
         "accordion_item_yj7KFd",
         "accordion_item_D7w4BT",
-        "accordion_item_9dMzAC",
         "accordion_item_N3pP3y",
         "accordion_item_BzVhTp",
         "accordion_item_4YXzjD",
