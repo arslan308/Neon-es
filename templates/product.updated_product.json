@@ -583,8 +583,8 @@
         "accordion_item_yj7KFd": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "¿Cuánto cuesta un neón personalizado?",
-            "accordion_content": "<p>El precio varía en función del diseño, el tamaño y la longitud del LED. El preció de los letreros de neón con sólo texto comienza a partir de aproximadamente 220€. Para saber el precio exacto, envíanos tu diseño y te enviaremos un presupuesto personalizado. </p>",
+            "accordion_title": "¿Por qué elegir neón?",
+            "accordion_content": "<p>La iluminación de neón es una excelente manera de dar vida a tu espacio y crear una atmósfera única. Proporciona una luz cálida y colorida que es perfecta para darle a tu interior un aspecto personal y vibrante. Ya sea que estés buscando una pieza llamativa para tu sala, dormitorio u oficina, los diseños de neón añaden un toque moderno y divertido que no pasa desapercibido.<br/><br/></p>",
             "tab_association": "1"
           }
         },
@@ -592,23 +592,23 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "¿Qué tipo de iluminación LED se utiliza?",
-            "accordion_content": "<p>EcoLED Ultra, desarrollada en 2023, con una vida útil de 100.000 horas y 1.500 lúmenes. Lo mejor del mercado.</p>",
+            "accordion_content": "<p>Usamos iluminación EcoLED Ultra, especialmente diseñada para ser eficiente y duradera. Proporciona una salida brillante de 1500 lúmenes, consume poca energía (clasificación A++) y tiene una vida útil de hasta 100,000 horas, por lo que no tendrás que preocuparte por reemplazos. La iluminación es regulable, silenciosa durante su uso y fácil de instalar con una sencilla conexión plug-and-play.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_N3pP3y": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "¿Los ejemplos coinciden con el producto final?",
-            "accordion_content": "<p>Nuestras previsualizaciones reflejan fielmente el resultado final. Desde el color hasta el texto, puedes confiar en que plasmaremos tu idea tal como la imaginaste. Diseña con total confianza: el producto final se elaborará según la vista previa. Sin embargo, al estar hecho a mano, puede presentar pequeñas variaciones para garantizar el mejor resultado posible.</p>",
+            "accordion_title": "¿Puedo cambiar el color?",
+            "accordion_content": "<p>Los colores de nuestros diseños de neón de la colección estándar han sido cuidadosamente seleccionados para complementar a la perfección diversos estilos de interior. Si deseas personalizar un color específico, por favor contáctanos antes de realizar tu pedido para hablar sobre las opciones disponibles.</p>",
             "tab_association": "1"
           }
         },
         "accordion_item_BzVhTp": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "¿Qué opciones de colores están disponibles? ",
-            "accordion_content": "<p>¿Opciones de color? ¡Claro! Todos los logotipos pueden convertirse en neón y ofrecemos 12 colores LED más una opción RGB.</p><p>Los colores disponibles son: Blanco, Blanco Cálido, Rosa, Rosa Claro, Azul, Azul Hielo, Turquesa, Verde, Rojo, Naranja, Amarillo y Morado.</p>",
+            "accordion_title": "¿El letrero de neón en el sitio web corresponde al producto real?",
+            "accordion_content": "<p>Las imágenes en nuestro sitio web ofrecen una representación realista del diseño final del letrero de neón. Desde el color hasta el tamaño, nos aseguramos de que el producto sea exactamente como se muestra. Haz tu pedido con confianza con nosotros. </p>",
             "tab_association": "1"
           }
         },
@@ -620,11 +620,19 @@
             "tab_association": "2"
           }
         },
+        "accordion_item_MgVKAn": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿Puedo usar mi letrero de neón en exteriores?",
+            "accordion_content": "<p>Nuestros diseños de neón estándar están pensados para uso en interiores. Si deseas colocar tu letrero de neón en exteriores, por favor contáctanos para que podamos ofrecerte una versión impermeable. Esta personalización tiene un costo adicional del 20%.</p>",
+            "tab_association": "1"
+          }
+        },
         "accordion_item_yiGiwt": {
           "type": "accordion_item",
           "settings": {
             "accordion_title": "¿Qué ocurre si se retrasa mi entrega?",
-            "accordion_content": "<p> If your order is delayed beyond 6–8 business days, contact us and we’ll investigate and update you promptly.</p>",
+            "accordion_content": "<p>El tiempo de entrega es de 6 a 8 días hábiles desde el momento en que se realiza el pedido hasta la entrega. ¿Necesitas tu letrero de neón antes?</p><p>Contáctanos durante el proceso de compra y exploraremos las posibilidades de una entrega exprés.</p>",
             "tab_association": "2"
           }
         },
@@ -632,7 +640,15 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "¿Ofrecen envío gratuito?",
-            "accordion_content": "<p>¡Absolutamente! En Neonsfeer, ofrecemos envío gratuito en todos nuestros carteles de neón sin excepciones, sin costes ocultos.<br/><br/>Su arte de neón se entrega a su puerta sin cargo adicional, para que pueda centrarse en la iluminación de su espacio sin preocuparse por los gastos de envío.</p>",
+            "accordion_content": "<p>Sí, ofrecemos envío gratuito en todos nuestros letreros de neón. Recibirás un número de seguimiento y contarás con un envío premium asegurado, lo que garantiza que tu pedido llegue de forma segura y sin complicaciones.</p>",
+            "tab_association": "2"
+          }
+        },
+        "accordion_item_kAXnnL": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "¿Puedo cambiar o cancelar mi pedido?",
+            "accordion_content": "<p>¿Notaste un error en tu pedido? Contáctanos de inmediato. Haremos todo lo posible por procesar tu cambio o cancelación lo más rápido posible, antes de que comencemos la producción.</p>",
             "tab_association": "2"
           }
         },
@@ -640,7 +656,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Pedidos al por mayor y revendedores",
-            "accordion_content": "<p>¿Es usted revendedor o tiene un pedido grande? Estamos abiertos a pedidos al por mayor y a revendedores.<br/>Póngase en contacto con nosotros en info@neonsfeer.com para ofertas personalizadas y precios aplicables.</p>",
+            "accordion_content": "<p> ¡Sí! Estamos abiertos a pedidos al por mayor y a revendedores.</p><p>Contáctanos en info@neonsfeer.com para ofertas personalizadas y precios aplicables.</p>",
             "tab_association": "2"
           }
         },
@@ -648,7 +664,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "¿Cómo instalo mi cartel de neón?",
-            "accordion_content": "<p>Recibirás tu neón con instrucciones claras y todo lo necesario para montarlo. ¡Instalarlo es rápido y sencillo!</p>",
+            "accordion_content": "<p>Cada letrero de neón incluye todos los materiales necesarios e instrucciones claras. La instalación es rápida y sencilla, para que puedas disfrutar de tu letrero de neón en muy poco tiempo.</p>",
             "tab_association": "3"
           }
         },
@@ -664,12 +680,13 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "¿No quieres o no puedes perforar la pared?",
-            "accordion_content": "<p> ¡No hay problema! Tenemos varias alternativas:</p><ul><li><strong>Montaje en el techo:</strong> Te podemos enviar un sistema de suspensión con cables, gratis bajo pedido.<br/></li><li><strong>Sobre superficies planas:</strong> Puedes colocar tu neón sobre una mesa o estante. También ofrecemos una base autoportante opcional.<br/></li><li><strong>Cinta adhesiva de doble cara:</strong> En algunas superficies lisas, se puede usar cinta 3M fuerte.</li></ul><p>¿Necesitas ayuda para elegir qué solución se adapta mejor a tu situación? ¡Contáctanos!</p>",
+            "accordion_content": "<p> ¡No hay problema! Tenemos varias alternativas:</p><p><strong>- Montaje en el techo:</strong> Te podemos enviar un sistema de suspensión con cables, gratis bajo pedido.<br/><strong>- Sobre superficies planas:</strong> Puedes colocar tu neón sobre una mesa o estante. También ofrecemos una base autoportante opcional.<br/><strong>- Cinta adhesiva de doble cara:</strong> En algunas superficies lisas, se puede usar cinta 3M fuerte.</p><p>¿Necesitas ayuda para elegir qué solución se adapta mejor a tu situación? ¡Contáctanos!</p>",
             "tab_association": "3"
           }
         },
         "accordion_item_jMJ4wx": {
           "type": "accordion_item",
+          "disabled": true,
           "settings": {
             "accordion_title": "Mando a distancia y dimmer",
             "accordion_content": "<p>Con el mando a distancia puedes ajustar la intensidad y los efectos de luz fácilmente:</p><ul><li><strong>Neón de un solo color:</strong> Encender/apagar y ajustar la intensidad<br/></li><li><strong>Neón RGB (multicolor):</strong> Selecciona un color fijo o activa una transición de colores</li></ul><p>¡Crea el ambiente perfecto en cada momento!</p>",
@@ -679,8 +696,8 @@
         "accordion_item_aNtFDd": {
           "type": "accordion_item",
           "settings": {
-            "accordion_title": "¿Mi neón tiene garantía?",
-            "accordion_content": "<p>Sí, en Neonsfeer ofrecemos una <strong>garantía de 2 años</strong> en todos nuestros productos.<br/> Si ocurre algún problema, lo solucionaremos: ya sea reparación o reemplazo.</p>",
+            "accordion_title": "¿Mi letrero de neón tiene garantía?",
+            "accordion_content": "<p> En Neonsfeer, ofrecemos una garantía de 2 años en todos nuestros letreros de neón. Si surge algún problema, te ofreceremos una solución adecuada, como reparación o reemplazo.</p>",
             "tab_association": "4"
           }
         },
@@ -688,7 +705,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "¿Por qué elegir Neonsfeer?",
-            "accordion_content": "<p>✓ <strong>Más de 8.150 clientes satisfechos<br/></strong> ✓ <strong>Excelente relación calidad-precio<br/></strong> ✓ <strong>Garantía extendida de 24 meses<br/></strong> ✓ <strong>Tecnología LED ligera y duradera<br/></strong> ✓ <strong>Ecológico – más de 100.000 horas de vida útil<br/></strong> ✓ <strong>Seguro – sin cristal ni sobrecalentamiento<br/></strong> ✓ <strong>Instalación fácil<br/></strong> ✓ <strong>Control total con el mando incluido</strong></p>",
+            "accordion_content": "<p>✓ <strong>Más de 8,150 clientes satisfechos</strong>: Nos enorgullece contar con la confianza de más de 8,150 clientes felices que nos han elegido para sus necesidades de neón. Nuestro objetivo es siempre superar las expectativas y ofrecer una experiencia perfecta, desde el diseño hasta la entrega.</p><p>✓ <strong>Relación calidad/precio</strong>: En Neonsfeer, la accesibilidad y la calidad van de la mano. Obtienes lo mejor de ambos mundos.</p><p>✓ <strong>Garantía extendida</strong>: Disfruta de tranquilidad con una garantía de 24 meses que protege tu compra.</p><p>✓ <strong>Durabilidad superior</strong>: Gracias a la tecnología LED avanzada, los letreros de neón de Neonsfeer son más livianos y duraderos que los tradicionales de vidrio.</p><p>✓ <strong>Opción ecológica</strong>: ¡Haz una elección sostenible! Los letreros LED de Neonsfeer son energéticamente eficientes y tienen una impresionante vida útil de más de 100,000 horas.</p><p>✓ <strong>Seguridad ante todo</strong>: Olvídate de los riesgos de sobrecalentamiento o rotura de vidrio. Los neones LED de Neonsfeer están diseñados con tu seguridad como prioridad.</p><p>✓ <strong>Instalación sin complicaciones</strong>: Coloca tu letrero de neón en muy poco tiempo. Es rápido y sencillo.</p><p>✓ <strong>Control total</strong>: Personaliza tu experiencia con el mando a distancia incluido. Desde encendido/apagado y ajuste de brillo hasta cambios en la velocidad de parpadeo, tienes el control total.</p>",
             "tab_association": "4"
           }
         }
@@ -703,8 +720,10 @@
         "accordion_item_N3pP3y",
         "accordion_item_BzVhTp",
         "accordion_item_4YXzjD",
+        "accordion_item_MgVKAn",
         "accordion_item_yiGiwt",
         "accordion_item_P7BrHe",
+        "accordion_item_kAXnnL",
         "accordion_item_PMLWeE",
         "accordion_item_WQgjU3",
         "accordion_item_p4apxq",
