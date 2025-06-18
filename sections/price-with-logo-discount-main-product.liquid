@@ -1785,7 +1785,7 @@ class DeliveryDate {
 
  updateDeliveryDates() {
    let storeLang = this.getStoreLanguage();
-   let futureDate = this.calculateFutureDate(9); // Add 9 days
+   let futureDate = this.calculateFutureDate(11); // Add 9 days
    let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
 
    let finalText = this.deliveryFormat
