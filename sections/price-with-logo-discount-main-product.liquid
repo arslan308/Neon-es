@@ -1750,55 +1750,59 @@
 </script>
 {%- assign delivery_text = section.settings.delivery_date -%}
 <script>
-      document.addEventListener("DOMContentLoaded", function () {
- let deliveryText = {{ delivery_text | json }}; // Get the Liquid variable from theme settings
- let deliveryFormat = {{ section.settings.delivery_format | json }}; // Get the custom format from schema
+    document.addEventListener("DOMContentLoaded", function () {
+        let deliveryText = {{ delivery_text | json }}; // Get the Liquid variable from theme settings
+        let deliveryFormat = {{ section.settings.delivery_format | json }}; // Get the custom format from schema
 
- let deliveryDate = new DeliveryDate(".delivery-date", deliveryText, deliveryFormat);
- deliveryDate.updateDeliveryDates();
-});
+        let deliveryDate = new DeliveryDate(".delivery-date", deliveryText, deliveryFormat);
+        deliveryDate.updateDeliveryDates();
+    });
 
-class DeliveryDate {
- constructor(selector, deliveryText, deliveryFormat) {
-   this.selector = selector;
-   this.deliveryText = deliveryText;
-   this.deliveryFormat = deliveryFormat;
-   this.monthTranslations = {
-     default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-     fr: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
-     es: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-     de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-     nl: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
-   };
- }
+    class DeliveryDate {
+        constructor(selector, deliveryText, deliveryFormat) {
+            this.selector = selector;
+            this.deliveryText = deliveryText;
+            this.deliveryFormat = deliveryFormat;
+            this.monthTranslations = {
+                default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                fr: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+                es: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+                nl: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
+            };
+        }
 
- getStoreLanguage() {
-   let storeLang = document.documentElement.lang || "default";
-   return this.monthTranslations[storeLang] ? storeLang : "default";
- }
+        getStoreLanguage() {
+            let storeLang = document.documentElement.lang || "default";
+            return this.monthTranslations[storeLang] ? storeLang : "default";
+        }
 
- calculateFutureDate(daysToAdd) {
-   let date = new Date();
-   date.setDate(date.getDate() + daysToAdd);
-   return { day: date.getDate(), monthIndex: date.getMonth() };
- }
+        calculateFutureDate(daysToAdd) {
+            let date = new Date();
+            date.setDate(date.getDate() + daysToAdd);
+            return { day: date.getDate(), monthIndex: date.getMonth() };
+        }
 
- updateDeliveryDates() {
-   let storeLang = this.getStoreLanguage();
-   let futureDate = this.calculateFutureDate(11); // Add 9 days
-   let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
+        updateDeliveryDates() {
+            let storeLang = this.getStoreLanguage();
 
-   let finalText = this.deliveryFormat
-     .replace("${monthName}", monthName)
-     .replace("${futureDate.day}", futureDate.day);
+            const deliveryData = document.querySelector('.delivery-date');
+            const daysOffset = deliveryData ? parseInt(deliveryData.dataset.deliveryDays) : 11;
 
-   document.querySelectorAll(this.selector).forEach(el => {
-     el.innerHTML = `${this.deliveryText} ${finalText}`;
-   });
+            let futureDate = this.calculateFutureDate(daysOffset);
+            let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
 
-   console.log("Final Date Output:", finalText);
- }
-}
+            let finalText = this.deliveryFormat
+            .replace("${monthName}", monthName)
+            .replace("${futureDate.day}", futureDate.day);
+
+            document.querySelectorAll(this.selector).forEach(el => {
+                el.innerHTML = `${this.deliveryText} ${finalText}`;
+            });
+
+            console.log("Final Date Output:", finalText);
+        }
+    }
 </script>
 <script>
   $('.slider-for').slick({
@@ -2533,6 +2537,12 @@ class DeliveryDate {
   "id": "order_message",
   "label": "Delivery Time",
   "default": "Ordered before 11:59 PM"
+  },
+  {
+    "type": "number",
+    "id": "delivery_days_offset",
+    "label": "Delivery Day Offset",
+    "default": 11
   },
   {
     "type": "text",
