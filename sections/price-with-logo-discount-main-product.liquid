@@ -420,7 +420,7 @@
                 </div>
                 <span class="order-message-res-custom">
                   {{ section.settings.order_message }}:
-                  <div class="delivery-date" style="font-weight: 400;"></div>
+                  <div class="delivery-date" data-delivery-days="{{ section.settings.delivery_days_offset }}"></div>
                 </span>
               </div>
               <div class="variationwrapper desktop-variation">
@@ -1395,7 +1395,7 @@
                     </div>
                     <span class="order-message-res-custom">
                       {{ section.settings.order_message }}:
-                      <div class="delivery-date" style="font-weight: 400;"></div>
+                      <div class="delivery-date" data-delivery-days="{{ section.settings.delivery_days_offset }}"></div>
                     </span>
                   </div>
                 </div>
