@@ -1372,19 +1372,19 @@
                     <div class="countdown-boxes">
                       <div class="time-box">
                         <span class="num days" id="days">00</span>
-                        <span class="label">days</span>
+                        <span class="label">{{ section.settings.label_days }}</span>
                       </div>
                       <div class="time-box">
                         <span class="num hours" id="hours">00</span>
-                        <span class="label">hours</span>
+                        <span class="label">{{ section.settings.label_hours }}</span>
                       </div>
                       <div class="time-box">
                         <span class="num minutes" id="minutes">00</span>
-                        <span class="label">minutes</span>
+                        <span class="label">{{ section.settings.label_minutes }}</span>
                       </div>
                       <div class="time-box">
                         <span class="num seconds" id="seconds">00</span>
-                        <span class="label">seconds</span>
+                        <span class="label">{{ section.settings.label_seconds }}</span>
                       </div>
                     </div>
                   </div>
@@ -1797,7 +1797,7 @@
             .replace("${futureDate.day}", futureDate.day);
 
             document.querySelectorAll(this.selector).forEach(el => {
-                el.innerHTML = `${this.deliveryText} ${finalText}`; 
+                el.innerHTML = `${this.deliveryText} ${finalText}`;settin
             });
 
             console.log("Final Date Output:", finalText);
