@@ -1797,7 +1797,7 @@
             .replace("${futureDate.day}", futureDate.day);
 
             document.querySelectorAll(this.selector).forEach(el => {
-                el.innerHTML = `${this.deliveryText} ${finalText}`;
+                el.innerHTML = `${this.deliveryText} ${finalText}`; 
             });
 
             console.log("Final Date Output:", finalText);
