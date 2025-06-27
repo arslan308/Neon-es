@@ -497,7 +497,6 @@
         nl: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
       };
     }
-
     getStoreLanguage() {
       let storeLang = document.documentElement.lang || "default";
       return this.monthTranslations[storeLang] ? storeLang : "default";
@@ -535,7 +534,7 @@
 
       console.log("Final Date Output:", finalText);
     }
-  } 
+  }
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
