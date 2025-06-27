@@ -22,6 +22,17 @@
       }
     ]
   },
+    {
+    "name": "Theme settings",
+    "settings": [
+      {
+        "type": "number",
+        "id": "delivery_days_offset",
+        "label": "Delivery Days Offset",
+        "default": 11
+      }
+    ]
+  },
   {
     "name": "GoogleTagManager",
     "settings": [
