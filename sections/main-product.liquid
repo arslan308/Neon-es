@@ -497,22 +497,22 @@
         nl: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
       };
     }
-    getStoreLanguage() {
-      let storeLang = document.documentElement.lang || "default";
-      return this.monthTranslations[storeLang] ? storeLang : "default";
-    }
-
-    calculateFutureDate(daysToAdd) {
-      let date = new Date();
-      date.setDate(date.getDate() + daysToAdd);
-
-      return {
-        day: date.getDate(),
-        monthIndex: date.getMonth(),
-        year: date.getFullYear(),
-        dayName: date.toLocaleDateString('en', { weekday: 'long' })
-      };
-    }
+      getStoreLanguage() {
+        let storeLang = document.documentElement.lang || "default";
+        return this.monthTranslations[storeLang] ? storeLang : "default";
+      }
+  
+      calculateFutureDate(daysToAdd) {
+        let date = new Date();
+        date.setDate(date.getDate() + daysToAdd);
+  
+        return {
+          day: date.getDate(),
+          monthIndex: date.getMonth(),
+          year: date.getFullYear(),
+          dayName: date.toLocaleDateString('en', { weekday: 'long' })
+        };
+      }
 
     updateDeliveryDates() {
       const deliveryData = document.querySelector(this.selector);
