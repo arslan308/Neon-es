@@ -395,19 +395,19 @@
                 <div class="countdown-boxes">
                   <div class="time-box">
                     <span class="num days" id="days">00</span>
-                    <span class="label">days</span>
+                    <span class="label">{{ section.settings.label_days }}</span>
                   </div>
                   <div class="time-box">
                     <span class="num hours" id="hours">00</span>
-                    <span class="label">hours</span>
+                    <span class="label">{{ section.settings.label_hours }}</span>
                   </div>
                   <div class="time-box">
                     <span class="num minutes" id="minutes">00</span>
-                    <span class="label">minutes</span>
+                    <span class="label">{{ section.settings.label_minutes }}</span>
                   </div>
                   <div class="time-box">
                     <span class="num seconds" id="seconds">00</span>
-                    <span class="label">seconds</span>
+                    <span class="label">{{ section.settings.label_seconds }}</span>
                   </div>
                 </div>
               </div>
@@ -2526,6 +2526,30 @@
   "label": "Discount Complete Message",
   "default": "Complete your order to keep your discount"
   },
+  {
+      "type": "text",
+      "id": "label_days",
+      "label": "Label for Days",
+      "default": "days"
+    },
+    {
+      "type": "text",
+      "id": "label_hours",
+      "label": "Label for Hours",
+      "default": "hours"
+    },
+    {
+      "type": "text",
+      "id": "label_minutes",
+      "label": "Label for Minutes",
+      "default": "minutes"
+    },
+    {
+      "type": "text",
+      "id": "label_seconds",
+      "label": "Label for Seconds",
+      "default": "seconds"
+    },
   {
       "type": "text",
       "id": "discount_message",
