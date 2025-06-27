@@ -22,8 +22,8 @@
       }
     ]
   },
-    {
-    "name": "Theme settings",
+  {
+    "name": "Delivery Date settings",
     "settings": [
       {
         "type": "number",
