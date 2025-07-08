@@ -135,11 +135,13 @@
         width: 100%;
     }
     .specification-section .text-area-left-t{
-        background-color: #F7F5FF; 
-        display: block !important; 
-        padding: 28px 48px; 
-        white-space: nowrap; 
-        border-right: 1px solid #b9b5cc;
+      background-color: #F7F5FF; 
+      padding-top: 25px;
+      white-space: nowrap;
+      border-right: 1px solid #b9b5cc;
+      display: flex !important;
+      justify-content: center;
+      align-items: baseline;
     }
     .specification-section .subtitle-description-main .subtitle-main{
         display: flex; 
@@ -214,10 +216,17 @@
         display: none; 
         background-color: transparent;
     }
-    @media only screen and (max-width: 767.9px){
-        .specification-section .image-with-text__text-container img{border-radius: 16px 16px 0 0;}
-        .specification-section .image-with-text.custom-section-image-and-text{display: flex !important;}
+    @media only screen and (max-width: 1000px){
+      .specification-section .image-with-text.custom-section-image-and-text{display: flex !important; flex-direction: column-reverse;}
+      .specification-section .image-with-text__text-container img{border-radius: 16px 16px 0 0;}
+      .specification-section .image-with-text__image-container{border-radius: 0 0 16px 16px;}
+      .specification-section .image-container-flex-right{border-radius: 0 0 16px 16px;}
+      body .specification-section .text-area-left-t{display: none !important;}
+      .specification-section .container-block-specs{grid-template-columns: 1fr;}
+        
         .specification-section .image-with-text__text-container{border-radius: 16px 16px 0 0;}
+    }
+    @media only screen and (max-width: 967.9px){
         .specification-section .text-area-right-t{padding: 0 !important;}
         .specification-section .image-container-flex-right{border-radius: 0 0 16px 16px;}
         .product-form__option-name{margin-bottom: 23px;}
