@@ -608,7 +608,15 @@
         left: 0;
         opacity: .5;
     }
+    @media only screen and (max-width: 967.9px) {
+        body .specification-section .text-area-left-t {
+            display: none !important;
+        }
+    }
     @media only screen and (max-width: 767.9px) {
+        body .specification-section .text-area-left-t {
+            display: none !important;
+       }
         .image-with-text.custom-section-image-and-text {
             display: flex;
             flex-direction: column-reverse;
