@@ -28,7 +28,7 @@
           "settings": {
             "drop_Type": "company_type",
             "tab_title": "¿Qué tipo de negocio tienes?",
-            "tab_buttons": "Restaurante, Bar / Café, Tienda, Salón de belleza, Barbería, Gimnasio, Estudio de tatuajes, Evento, Club, Otro",
+            "tab_buttons": "Restaurante, Bar / Café, Tienda, Salón de belleza, Oficina, Barbería, Gimnasio, Estudio de tatuajes, Evento, Club, Otro",
             "customization_type": "dropdown",
             "company_types": "business-type-block",
             "required": false
