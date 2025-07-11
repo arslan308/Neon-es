@@ -1177,7 +1177,7 @@ body:not(.is-tabbing) [tabindex]:focus, body:not(.is-tabbing) label:focus, body:
   vertical-align: top;
   width: 100%;
   margin: 0;
-  padding: 0 0 18px 18px;
+  padding: 0 0 18px 18px !important;
   font-size: 1rem;
   display: inline-block;
 }
@@ -1200,7 +1200,7 @@ body:not(.is-tabbing) [tabindex]:focus, body:not(.is-tabbing) label:focus, body:
   }
 
   .grid__cell {
-    padding: 0 0 30px 30px;
+    padding: 0 0 30px 24px;
   }
 }
 
@@ -3963,7 +3963,7 @@ body:not(.is-tabbing) [tabindex]:focus, body:not(.is-tabbing) label:focus, body:
 }
 
 .collection-block-item {
-  border-radius: 3px;
+  border-radius: 8px;
   display: block;
   position: relative;
   overflow: hidden;

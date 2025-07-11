@@ -1,0 +1,135 @@
+<div class="Collection-list-banner-main">
+    <div class="container">
+        <div class="Collection-list-banner">
+            <div class="section-info">
+              <div class="heading">{{ section.settings.collection_banner_heading }}</div>
+              <div class="description">{{ section.settings.collection_banner_description }}</div>
+            </div>
+            <div class="logo-design-card">
+                <div class="design-card">
+                  <div class="design-card-heading">{{ section.settings.card_heading }}</div>
+                  <div class="points-list">
+                    <ul>
+                      {% if section.settings.point_list != blank %}
+                        {% assign points = section.settings.point_list | split: ',' %}
+                        {% for point in points %}
+                          <li>{{ point | strip }}</li>
+                        {% endfor %}
+                      {% endif %}
+                    </ul>
+                  </div>
+                  {% if section.settings.design_card_btn != blank %}
+                      <div class="design-card-btn">
+                        <button><a href="{{ section.settings.design_card_btn_url }}">{{ section.settings.design_card_btn }}</a></button>
+                      </div>
+                  {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .Collection-list-banner-main{
+        background: #FFEBF7; 
+        color: black;
+        padding: 57px 0 123px 0;
+        position: relative;
+      }
+    .Collection-list-banner{
+        display: flex;
+        justify-content: space-between;
+        /* padding: 57px 0 63px 0; */
+        align-items: center;
+    }
+    .Collection-list-banner .section-info{
+        max-width: 580px;
+    }
+    .Collection-list-banner .section-info .heading{
+        font-size: 28px; 
+        font-weight: 700;
+    }
+    .Collection-list-banner .section-info .description{
+        font-size: 16px; 
+        line-height: 100%;
+        font-weight: 400;
+    }
+    .Collection-list-banner .design-card{
+        background: #EC40A4; 
+        color: white; 
+        padding: 35px 78px 36px 36px;
+        border-radius: 8px; 
+        display: grid; 
+        grid-gap: 16px;
+    }
+    .Collection-list-banner .design-card .design-card-heading{
+        font-size: 20px; 
+        font-weight: 700;
+    }
+    .Collection-list-banner .design-card .points-list ul{
+        display: flex; 
+        gap: 8px;
+    }
+    .Collection-list-banner .design-card .points-list ul li{
+        color: white; 
+        font-size: 14px; 
+        font-weight: 400;
+        position: relative;
+        list-style: none;
+        padding-left: 19px;
+    }
+    .Collection-list-banner .design-card .design-card-btn button{background: #715AEF; color: white; border-radius: 99px; padding: 12px; line-height: 100%;}
+    .Collection-list-banner .design-card .points-list ul li:after {
+        content: url('data:image/svg+xml;charset=UTF-8,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21"><rect y="0.862305" width="20" height="20" fill="%23D9D9D9"/></mask><g mask="url(%23mask5)"><path d="M8.33333 14.5291L5 11.1958L6.16667 10.0291L8.33333 12.1958L13.8333 6.6958L15 7.86247L8.33333 14.5291Z" fill="%23FFFFFF"/></g></svg>');
+      position: absolute;
+      left: 0;
+      top: 2px;
+      background-repeat: no-repeat;
+      background-size: 11px;
+      width: 20px;
+      height: 20px;
+      background-position: center center;
+    }
+</style>
+{% schema %}
+    {
+      "name": "Collections Banner",
+      "settings": [
+        {
+          "type": "text",
+          "id": "collection_banner_heading",
+          "label": "Banner Heading"
+        },
+        {
+          "type": "text",
+          "id": "collection_banner_description",
+          "label": "Banner Description"
+        },
+        {
+          "type": "text",
+          "id": "card_heading",
+          "label": "Banner Card Heading"
+        },
+        {
+          "type": "text",
+          "id": "point_list",
+          "label": "Card Points"
+        },
+        {
+          "type": "text",
+          "id": "design_card_btn",
+          "label": "Card Button"
+        },
+        {
+          "type": "url",
+          "id": "design_card_btn_url",
+          "label": "Card Button Url"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Collections Banner"
+        }
+      ]
+    }
+{% endschema %}
+    

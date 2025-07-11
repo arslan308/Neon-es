@@ -9183,6 +9183,7 @@ var CollectionSection = class {
     this.mobileFilterDrawer = new CollectionFilterDrawer(this.options);
     this.displayByValuePicker = new ValuePicker("display-by-selector", { onValueSelect: this._showingCountChanged.bind(this) });
     this.sortByValuePicker = new ValuePicker("sort-by-selector", { onValueSelect: this._sortByChanged.bind(this) });
+    this.sortByValuePickers = new ValuePicker("sort-by-selectores", { onValueSelect: this._sortByChanged.bind(this) });
     this.productItemColorSwatch = new ProductItemColorSwatch(this.element);
     if (window.theme.pageType === "search") {
       this._loadContentResults();
@@ -9198,6 +9199,7 @@ var CollectionSection = class {
     this.mobileFilterDrawer.destroy();
     this.displayByValuePicker.destroy();
     this.sortByValuePicker.destroy();
+    this.sortByValuePickers.destroy();
     this.productItemColorSwatch.destroy();
   }
   onSelect(event2) {
@@ -9283,7 +9285,13 @@ var CollectionSection = class {
   _sortByChanged(value) {
     this.currentUrl.searchParams.set("sort_by", value);
     this.currentUrl.searchParams.delete("page");
+
     this._reload(true);
+    // --- ADD THIS LINE AFTER HTML IS REPLACED ---
+      if (typeof setupAllFilterListeners === 'function') {
+          setupAllFilterListeners(); // Re-attach event listeners to new filter buttons
+      }
+    // --- END ADDITION ---
   }
   /**
    * When the number of items has changed
@@ -9301,6 +9309,9 @@ var CollectionSection = class {
       }
     }).then(() => {
       this._reload(true);
+      if (typeof setupAllFilterListeners === 'function') {
+        setupAllFilterListeners(); // This will re-attach listeners and re-sync activeFilters state
+      }
     });
   }
   /**
@@ -9311,7 +9322,7 @@ var CollectionSection = class {
     this.currentUrl.searchParams.set("page", parseInt(target.getAttribute("data-page")));
     this._reload(true);
   }
-  _onFilterChanged(event2, target) {
+  _onFilterChanged(event2, target) { 
     const formData = new FormData(target.closest("form"));
     const searchParamsAsString = new URLSearchParams(formData).toString();
     this.currentUrl = new URL(`${window.location.pathname}?${searchParamsAsString}`, window.location.origin);

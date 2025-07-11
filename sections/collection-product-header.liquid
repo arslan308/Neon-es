@@ -1,0 +1,148 @@
+{% assign position_class = section.settings.text_position | replace: '_', '-' %}
+{% assign bg_image = collection.metafields.custom.bg_image | image_url: width: 1600 %}
+{% assign bg_image_mobile = collection.metafields.custom.mobile_banner | image_url %}
+{% assign checklist = collection.metafields.custom.checklist_point.value %}
+<section class="collection-product-banner {{ position_class }}{% unless bg_image %} withoutimage{% endunless %}" style="{% if bg_image %}background-image: url('{{ bg_image }}');{% endif %}">
+  {% if bg_image_mobile %}
+    <style>
+      @media (max-width: 767px) {
+        .collection-product-banner {
+          background-image: url('{{ bg_image_mobile }}') !important;
+          background-size: contain !important;
+          background-repeat: no-repeat;
+          height: 720px !important;
+        }
+      }
+    </style>
+  {% endif %}
+  <div class="banner-overlay"> 
+    <div class="banner-text">
+      {% if collection.metafields.custom.product_type %}
+        <p class="subheading">{{ collection.metafields.custom.product_type.value }}</p>
+      {% endif %}
+      <h2>{{ collection.title }}</h2>
+      {% if collection.description != blank %}
+        {{ collection.description }}
+      {% endif %}
+      {% if checklist != blank %}
+        <ul class="checklist">
+          {% for point in checklist %}
+            <li>
+              <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check_small_1.svg?v=1748599359" alt="check" class="check-icon" />
+              {{ point }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+.collection-product-banner .banner-text h2{
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: inline;
+    line-height: 100%;
+}
+.collection-product-banner .banner-text p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    display: inline;
+    max-width: 495px;
+    line-height: 100%;
+}
+.collection-product-banner .banner-text .subheading{
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+.collection-product-banner {
+  background-size: cover;
+  background-position: unset;
+  height: 540px;
+  display: flex;
+  position: relative;
+  color: white;
+  text-align: left;
+}
+.collection-product-banner .checklist li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 16px;
+  line-height: 100%;
+}
+.collection-product-banner .checklist .check-icon {
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+}
+.collection-product-banner .collection-hero-banner .banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+}
+.collection-product-banner .banner-text {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 0 46px 46px;
+  margin: auto;
+  display: flex;
+flex-direction: column;
+}
+.collection-product-banner .checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+    gap: 8px;
+}
+
+/* Positioning classes */
+.collection-product-banner.top-left     { justify-content: flex-start; align-items: flex-start; }
+.collection-product-banner.top-center   { justify-content: center; align-items: flex-start; }
+.collection-product-banner.top-right    { justify-content: flex-end; align-items: flex-start; }
+.collection-product-banner.center-left  { justify-content: flex-start; align-items: center; }
+.collection-product-banner.center-center{ justify-content: center; align-items: center; }
+.collection-product-banner.center-right { justify-content: flex-end; align-items: center; }
+.collection-product-banner.bottom-left  { justify-content: flex-start; align-items: flex-end; }
+.collection-product-banner.bottom-center{ justify-content: center; align-items: flex-end; }
+.collection-product-banner.bottom-right { justify-content: flex-end; align-items: flex-end; }
+</style>
+
+{% schema %}
+    {
+      "name": "products Banner",
+      "settings": [
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Text Position",
+          "default": "center_center",
+          "options": [
+            { "value": "top_left", "label": "Top Left" },
+            { "value": "top_center", "label": "Top Center" },
+            { "value": "top_right", "label": "Top Right" },
+            { "value": "center_left", "label": "Center Left" },
+            { "value": "center_center", "label": "Center Center" },
+            { "value": "center_right", "label": "Center Right" },
+            { "value": "bottom_left", "label": "Bottom Left" },
+            { "value": "bottom_center", "label": "Bottom Center" },
+            { "value": "bottom_right", "label": "Bottom Right" }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "products Banner",
+          "category": "Collection"
+        }
+      ]
+    }
+    {% endschema %}

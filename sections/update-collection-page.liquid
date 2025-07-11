@@ -1,0 +1,94 @@
+{% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'theme_filter' %}
+        <div class="filter theme">
+          <h4>{{ block.settings.label }}</h4>
+          {% assign options = block.settings.options | split: ',' %}
+          {% for option in options %}
+            <button>{{ option }}</button>
+          {% endfor %}
+        </div>
+      {% when 'branch_filter' %}
+        <div class="filter branch">
+          <h4>{{ block.settings.label }}</h4>
+          {% assign options = block.settings.options | split: ',' %}
+          {% for option in options %}
+            <button>{{ option }}</button>
+          {% endfor %}
+        </div>
+      {% when 'events_filter' %}
+        <div class="filter events">
+          <h4>{{ block.settings.label }}</h4>
+          {% assign options = block.settings.options | split: ',' %}
+          {% for option in options %}
+            <button>{{ option }}</button>
+          {% endfor %}
+        </div>
+      {% when 'area_filter' %}
+        <div class="filter area">
+          <h4>{{ block.settings.label }}</h4>
+          {% assign options = block.settings.options | split: ',' %}
+          {% for option in options %}
+            <button>{{ option }}</button>
+          {% endfor %}
+        </div>
+      {% when 'collection_list' %}
+        <div class="collection-list">
+          <h3>{{ block.settings.title }}</h3>
+          <div class="grid">
+            {% for collection in collections %}
+              <div class="collection-card">
+                <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
+                <p>{{ collection.title }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+  {% schema %}
+    {
+      "name": "Collections Page",
+      "settings": [],
+      "blocks": [
+        {
+          "type": "theme_filter",
+          "name": "Theme Filter"
+        },
+        {
+          "type": "branch_filter",
+          "name": "Branch Filter"
+        },
+        {
+          "type": "events_filter",
+          "name": "Events Filter"
+        },
+        {
+          "type": "area_filter",
+          "name": "Area Filter"
+        },
+        {
+          "type": "collection_list",
+          "name": "Most Popular"
+        },
+        {
+          "type": "more_collections",
+          "name": "More Collections"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Collections Page",
+          "blocks": [
+            { "type": "theme_filter" },
+            { "type": "branch_filter" },
+            { "type": "events_filter" },
+            { "type": "area_filter" },
+            { "type": "collection_list" },
+            { "type": "collection_list" }
+          ]
+        }
+      ]
+    }
+    {% endschema %}
+      

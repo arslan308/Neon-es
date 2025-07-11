@@ -1,1 +1,121 @@
-{"sections":{"main":{"type":"main-collections-list","settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "collection_header_VhqWmq": {
+      "type": "Collection-header",
+      "settings": {
+        "collection_banner_heading": "Neonsfeer collections",
+        "collection_banner_description": "Whether you're looking for a striking statement piece for your interior, a standout gift, or a personal message in light – you'll find all styles, colors, and vibes right here. Get inspired by our diverse collections and find the neon that suits you best.",
+        "card_heading": "Design your own Neon Logo",
+        "point_list": "Free neon design, Ready in 3 hours, No credit card no hassle",
+        "design_card_btn": "Free design",
+        "design_card_btn_url": "https://theneonsfeer.com/products/design-your-neon-logo"
+      }
+    },
+    "main": {
+      "type": "main-collections-list",
+      "blocks": {
+        "menu_9B9Mty": {
+          "type": "menu",
+          "settings": {
+            "collection_class": "sdfghj",
+            "title": "Categorías",
+            "menu_items": "Varios colores,Letras de Neon,Animales,cifras,Niños,Amor,Música,Espacio"
+          }
+        },
+        "icon_collection_block_dLHRzz": {
+          "type": "icon_collection_block",
+          "settings": {
+            "collection_class_bar": "icon-block right",
+            "title_sec": "Para empresas",
+            "menu_items_sec": "Peluquería, Belleza , comida-bares-y-discotecas, Gimnasio ,comida-y-bebida",
+            "icons": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/content_cut_1.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/health_and_beauty.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_bar.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/exercise.svg?v=1748606489\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_bar.svg?v=1748606488"
+          }
+        },
+        "icon_collection_block_dbQwtW": {
+          "type": "icon_collection_block",
+          "settings": {
+            "collection_class_bar": "icon-block reverse",
+            "title_sec": "Eventos",
+            "menu_items_sec": "Bodas ,baby-showers,Festivales ,Cumpleaños",
+            "icons": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/favorite.svg?v=1748606489\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/pediatrics.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_activity.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/celebration.svg?v=1748606488"
+          }
+        },
+        "icon_collection_block_CR8DTW": {
+          "type": "icon_collection_block",
+          "settings": {
+            "collection_class_bar": "icon-block reverse",
+            "title_sec": "Para casa",
+            "menu_items_sec": "sala-de-juegos, sala-de-estar,Comedor ,Dormitorio",
+            "icons": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/chair.svg?v=1748607559\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/hotel.svg?v=1748607559\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/table_restaurant.svg?v=1748607559\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/joystick.svg?v=1748607559"
+          }
+        },
+        "popular_collection_JyR6bU": {
+          "type": "popular_collection",
+          "settings": {
+            "collection_class": "collection-class-custom",
+            "popular_collection": "",
+            "popular_product": "logotipo-en-neon",
+            "product_description": "Design your neon sign in just 5 minutes! Pick your text, select a font, choose a color, and place your order through our user-friendly design tool."
+          }
+        },
+        "popular_collection_UwdLVi": {
+          "type": "popular_collection",
+          "settings": {
+            "collection_class": "collection-class-custom",
+            "popular_collection": "",
+            "popular_product": "texto-en-neon",
+            "product_description": "Turn your neon in neon magic. Complete our 1-minute form, upload your logo, and receive a quote within 3 hours.--"
+          }
+        },
+        "popular_collection_4E9bwE": {
+          "type": "popular_collection",
+          "settings": {
+            "collection_class": "collection-class-custom",
+            "popular_collection": "el-mas-vendido",
+            "popular_product": "",
+            "product_description": ""
+          }
+        },
+        "collection_title_block_BigdAV": {
+          "type": "collection_title_block",
+          "settings": {
+            "section_name_all": "morecollection_all",
+            "collection_title": "More Collections"
+          }
+        }
+      },
+      "block_order": [
+        "menu_9B9Mty",
+        "icon_collection_block_dLHRzz",
+        "icon_collection_block_dbQwtW",
+        "icon_collection_block_CR8DTW",
+        "popular_collection_JyR6bU",
+        "popular_collection_UwdLVi",
+        "popular_collection_4E9bwE",
+        "collection_title_block_BigdAV"
+      ],
+      "settings": {
+        "collections_to_show": "selected",
+        "collection_linklist": "",
+        "show_collection_title": true,
+        "section_name": "Más vendidos",
+        "section_name_all": "More Collection",
+        "show_collection_overlay": true,
+        "collection_overlay_opacity": 20
+      }
+    }
+  },
+  "order": [
+    "collection_header_VhqWmq",
+    "main"
+  ]
+}
