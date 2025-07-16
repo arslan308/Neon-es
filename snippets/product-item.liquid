@@ -112,7 +112,13 @@
 
               <span class="price price--highlight">
                 <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
-                {{- 'collection.product.from_price_html' | t: price: price_min, price: price_max -}}
+                {% assign price_min = product.price_min %}
+
+                {% if product.price_min > 0 %}
+                  From {{ price_min | money }}
+                {% else %}
+                  {{ 'products.product.price_html' | t }} {% comment %} Fallback for free products or other cases {% endcomment %}
+                {% endif %}
               </span>
 
               <span class="price price--compare">

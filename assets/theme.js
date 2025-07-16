@@ -9215,7 +9215,7 @@ var CollectionSection = class {
     this.delegateElement.on("click", ".pagination [data-page]", this._paginationPageChanged.bind(this));
     this.delegateElement.on("click", '[data-secondary-action="open-quick-view"]', this._openQuickView.bind(this));
     this.delegateElement.on("click", '[data-action="add-to-cart"]', this._addToCart.bind(this));
-    this.delegateElement.on("change", '[name^="filter."]', this._onFilterChanged.bind(this));
+    this.delegateElement.on("click", '[name^="filter."]', this._onFilterChanged.bind(this));
     this.delegateElement.on("click", '[data-action="clear-filters"]', this._onFiltersCleared.bind(this));
   }
   _openQuickView(event2, target) {
@@ -9244,9 +9244,6 @@ var CollectionSection = class {
       });
     });
   }
-  /**
-   * Switch layout mode
-   */
   _changeLayout(event2, target) {
     if (target.classList.contains("is-selected")) {
       return;
@@ -9263,7 +9260,6 @@ var CollectionSection = class {
       headers: {
         "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest"
-        // This is needed as currently there is a bug in Shopify that assumes this header
       }
     });
     import_fastdom4.default.mutate(() => {
@@ -9279,23 +9275,14 @@ var CollectionSection = class {
       this.productItemColorSwatch.recalculateSwatches();
     });
   }
-  /**
-   * Update the URL and reload products
-   */
   _sortByChanged(value) {
     this.currentUrl.searchParams.set("sort_by", value);
     this.currentUrl.searchParams.delete("page");
-
     this._reload(true);
-    // --- ADD THIS LINE AFTER HTML IS REPLACED ---
-      if (typeof setupAllFilterListeners === 'function') {
-          setupAllFilterListeners(); // Re-attach event listeners to new filter buttons
-      }
-    // --- END ADDITION ---
+    if (typeof setupAllFilterListeners === 'function') {
+      setupAllFilterListeners();
+    }
   }
-  /**
-   * When the number of items has changed
-   */
   _showingCountChanged(value) {
     this.currentUrl.searchParams.delete("page");
     fetch(`${window.routes.cartUrl}/update.js`, {
@@ -9305,38 +9292,61 @@ var CollectionSection = class {
       headers: {
         "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest"
-        // This is needed as currently there is a bug in Shopify that assumes this header
       }
     }).then(() => {
       this._reload(true);
       if (typeof setupAllFilterListeners === 'function') {
-        setupAllFilterListeners(); // This will re-attach listeners and re-sync activeFilters state
+        setupAllFilterListeners();
       }
     });
   }
-  /**
-   * When the page has changed
-   */
   _paginationPageChanged(event2, target) {
     event2.preventDefault();
     this.currentUrl.searchParams.set("page", parseInt(target.getAttribute("data-page")));
     this._reload(true);
   }
-  _onFilterChanged(event2, target) { 
+  _onFilterChanged(event2, target) {
+    console.log("i am called");
     const formData = new FormData(target.closest("form"));
-    const searchParamsAsString = new URLSearchParams(formData).toString();
-    this.currentUrl = new URL(`${window.location.pathname}?${searchParamsAsString}`, window.location.origin);
+    const newSearchParams = new URLSearchParams();
+    const colorFilterElement = document.getElementById("ColorFilterOptionDynamic");
+    const ColorFilterOptionDynamic = colorFilterElement ? colorFilterElement.value : null;
+    const excludedFields = [
+      "ColorFilterOptionDynamic",
+      "formin",
+      "formax",
+      "forminmob",
+      "formaxmob",
+    ];
+    for (const [key, value] of formData.entries()) {
+      if (excludedFields.includes(key)) {
+        continue;
+      }
+      if (ColorFilterOptionDynamic && key === ColorFilterOptionDynamic) {
+        value.split(",").forEach((item) => {
+          newSearchParams.append(key, item.trim());
+        });
+      } else {
+        newSearchParams.append(key, value);
+      }
+    }
+    console.log("formData (processed for URLSearchParams)");
+    console.log(newSearchParams.toString());
+    const currentSearchParams = new URLSearchParams(window.location.search);
+    if (currentSearchParams.has("view")) {
+      newSearchParams.set("view", currentSearchParams.get("view"));
+    }
+    const searchParamsAsString = newSearchParams.toString();
+    this.currentUrl = new URL(
+      `${window.location.pathname}?${searchParamsAsString}`,
+      window.location.origin
+    );
     this._reload(true);
   }
   _onFiltersCleared(event2, target) {
     this.currentUrl = new URL(target.getAttribute("data-url"), window.location.origin);
     this._reload(true);
   }
-  /**
-   * Reload all products from the current URL
-   *
-   * @private
-   */
   _reload(pushState) {
     if (this.abortController) {
       this.abortController.abort();
@@ -9348,10 +9358,12 @@ var CollectionSection = class {
     const computedStyles = window.getComputedStyle(document.documentElement);
     let sectionUrl = "";
     if (this.currentUrl.search) {
-      sectionUrl = `${this.currentUrl.pathname}/${this.currentUrl.search}&section_id=${this.element.getAttribute("data-section-id")}`;
+      sectionUrl = `${this.currentUrl.pathname}/${this.currentUrl.search}&section_id=${this.element.getAttribute("data-section-id")}&view=updated_collection`;
     } else {
-      sectionUrl = `${this.currentUrl.pathname}?section_id=${this.element.getAttribute("data-section-id")}`;
+      sectionUrl = `${this.currentUrl.pathname}?section_id=${this.element.getAttribute("data-section-id")}&view=updated_collection`;
     }
+    console.log("sectionUrl");
+    console.log(sectionUrl);
     try {
       this.abortController = new AbortController();
       return fetch(sectionUrl, {
@@ -9383,8 +9395,6 @@ var CollectionSection = class {
                 }
               }
             });
-            desktopFilters.innerHTML = tempElement.querySelector("#desktop-filters-form").innerHTML;
-            mobileFilters.innerHTML = tempElement.querySelector("#mobile-collection-filters").innerHTML;
             mobileFilters.querySelector(".collection-drawer__inner").scrollTop = previousMobileScrollTop;
             this.mobileFilterDrawer._computeDrawerHeight();
           }
@@ -9400,16 +9410,12 @@ var CollectionSection = class {
           }
           this.element.querySelector(".collection__products-count-total").innerHTML = countJson["productsCount"];
           document.dispatchEvent(new CustomEvent("theme:loading:end"));
+          setupAllFilterListeners();
         });
       });
     } catch (e) {
     }
   }
-  /**
-   * ---------------------------------------------------------------------------------------------------
-   * SEARCH PAGE SPECIFIC METHOD
-   * ---------------------------------------------------------------------------------------------------
-   */
   _loadContentResults() {
     let currentUrl = new URL(window.location.href);
     fetch(`${window.routes.searchUrl}?section_id=search-content&q=${currentUrl.searchParams.get("q")}&type=article,page`, {
@@ -9425,11 +9431,6 @@ var CollectionSection = class {
       });
     });
   }
-  /**
-   * ---------------------------------------------------------------------------------------------------
-   * INTERNAL CODE THAT HANDLE PRODUCT ADD TO CART
-   * ---------------------------------------------------------------------------------------------------
-   */
   _addToCart(event2, target) {
     if (window.theme.cartType === "page") {
       return;
@@ -9446,7 +9447,6 @@ var CollectionSection = class {
       headers: {
         "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest"
-        // This is needed as currently there is a bug in Shopify that assumes this header
       }
     }).then((response) => {
       target.removeAttribute("disabled");

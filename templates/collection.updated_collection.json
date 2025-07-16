@@ -8,15 +8,14 @@
  * ------------------------------------------------------------
  */
  {
-  "sections": { 
+  "sections": {
     "collection_product_header_ch9yHJ": {
       "type": "collection-product-header",
       "custom_css": [
         "@media (max-width: 767px) {{background: black; padding: 0 0 48px; }}"
       ],
       "settings": {
-        "text_position": "bottom_left",
-        "banner_vendor": "Neon Lighting"
+        "text_position": "bottom_left"
       }
     },
     "main": {
@@ -26,15 +25,17 @@
           "type": "filter_price",
           "settings": {
             "price_title": "Price",
-            "filters_price": "100-150,150-200,200-250,250-300,300-350,350-400"
+            "filters_price": "100-150,150-200,200-250,250-300,300-350,350-400",
+            "filters_price_text": "Price range"
           }
         },
         "filter_block_jTcdg6": {
           "type": "filter_block",
           "settings": {
             "filter_title_2": "Colours",
-            "filters_text_2": "Yellow,Red,White,Orange, Multi",
-            "filters_image_2": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/image_50bb76b5-7070-4ea6-94c9-699495d7f1c1.png?v=1749565348\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/red.png?v=1749742832\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/white.png?v=1749742833\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/orange.png?v=1749742832\nhttps://neonsfeer.com/cdn/shop/products/10.png?v=1695734761"
+            "optionName": "Color",
+            "filters_text_2": "Single, Multi",
+            "filters_image_2": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/image_50bb76b5-7070-4ea6-94c9-699495d7f1c1.png?v=1749565348\nhttps://neonsfeer.com/cdn/shop/products/10.png?v=1695734761"
           }
         },
         "filter_group_m4djA7": {
@@ -54,6 +55,7 @@
       "settings": {
         "show_collection_image": true,
         "collapse_collection_description": false,
+        "ProductCountText": "Products Found",
         "collection_image_size": "small",
         "products_per_row": "3",
         "default_products_per_page": 24,
@@ -72,6 +74,7 @@
       "disabled": true,
       "settings": {
         "title": "Recently viewed",
+        "recomend_custom_class": "",
         "show_quick_buy": false
       }
     }
