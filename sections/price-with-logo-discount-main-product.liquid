@@ -1780,30 +1780,51 @@
         }
 
         calculateFutureDate(daysToAdd) {
-            let date = new Date();
-            date.setDate(date.getDate() + daysToAdd);
-            return { day: date.getDate(), monthIndex: date.getMonth() };
-        }
+              const date = new Date();
+              date.setDate(date.getDate() + daysToAdd);
+              return { day: date.getDate(), monthIndex: date.getMonth() };
+          }
 
-        updateDeliveryDates() {
-            let storeLang = this.getStoreLanguage();
+          updateDeliveryDates() {
+                let storeLang = this.getStoreLanguage();
 
-            const deliveryData = document.querySelector('.delivery-date');
-            const daysOffset = deliveryData ? parseInt(deliveryData.dataset.deliveryDays) : 11;
+                const deliveryData = document.querySelector('.delivery-date');
+                const rawInput = deliveryData ? deliveryData.dataset.deliveryDays.trim() : "11";
 
-            let futureDate = this.calculateFutureDate(daysOffset);
-            let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
+                let dayFrom = 0, dayTo = null;
 
-            let finalText = this.deliveryFormat
-            .replace("${monthName}", monthName)
-            .replace("${futureDate.day}", futureDate.day);
+                if (rawInput.includes('-')) {
+                    const parts = rawInput.split('-').map(val => parseInt(val.trim()));
+                    [dayFrom, dayTo] = parts;
+                } else {
+                    dayFrom = parseInt(rawInput);
+                }
 
-            document.querySelectorAll(this.selector).forEach(el => {
-                el.innerHTML = `${this.deliveryText} ${finalText}`;settin
-            });
+                const futureDateFrom = this.calculateFutureDate(dayFrom);
+                const futureDateTo = dayTo ? this.calculateFutureDate(dayTo) : null;
 
-            console.log("Final Date Output:", finalText);
-        }
+                const monthNameFrom = this.monthTranslations[storeLang][futureDateFrom.monthIndex] || "UNKNOWN";
+                const monthNameTo = futureDateTo ? this.monthTranslations[storeLang][futureDateTo.monthIndex] || "UNKNOWN" : "";
+
+                let finalText = "";
+
+                if (futureDateTo && futureDateFrom.monthIndex === futureDateTo.monthIndex) {
+                    // Same month range
+                    finalText = `${futureDateFrom.day}–${futureDateTo.day} ${monthNameFrom}`;
+                } else if (futureDateTo) {
+                    // Cross-month range
+                    finalText = `${futureDateFrom.day} ${monthNameFrom} – ${futureDateTo.day} ${monthNameTo}`;
+                } else {
+                    // Single date
+                    finalText = `${futureDateFrom.day} ${monthNameFrom}`;
+                }
+
+                document.querySelectorAll(this.selector).forEach(el => {
+                    el.innerHTML = `${this.deliveryText} ${finalText}`;
+                });
+
+                console.log("Final Date Output:", finalText);
+          }
     }
 </script>
 <script>
