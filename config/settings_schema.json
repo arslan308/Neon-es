@@ -26,10 +26,10 @@
     "name": "Delivery Date settings",
     "settings": [
       {
-        "type": "number",
+        "type": "text",
         "id": "delivery_days_offset",
         "label": "Delivery Days Offset",
-        "default": 11
+        "default": "11"
       }
     ]
   },
