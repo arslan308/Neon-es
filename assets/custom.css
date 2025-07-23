@@ -2024,7 +2024,7 @@ button.color-filter-item.color-filter-btn.active .color-filter-label{
     line-height: 100%;
     margin-bottom: 16px;
 }
-@media only screen and (max-width: 767.9px){
+@media only screen and (max-width: 768px){
 
   .collections-filter:hover{border: 2px solid #F7F5FF !important;}
   .collections-filter{
@@ -2043,6 +2043,7 @@ button.color-filter-item.color-filter-btn.active .color-filter-label{
   }
   .collection-product-banner .banner-text{
     padding: 0 0 24px 24px !important;
+    max-width: 370px !important;
   }
 }
 @media only screen and (min-width: 767.9px){
