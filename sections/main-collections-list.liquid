@@ -274,81 +274,77 @@
                   {%- endif -%}
                 </div>
             </div>
-
-              {%- assign excluded_handles = '' -%}
-              {%- for block in section.blocks -%}
-                {%- assign popular = block.settings.popular_collection -%}
-                {%- if popular -%}
-                  {%- assign excluded_handles = excluded_handles | append: popular.handle | append: ',' -%}
-                {%- endif -%}
-              {%- endfor -%}
-
-              {%- comment -%}
-                Show More Collections only if section title is not blank
-              {%- endcomment -%}
-              {%- if section.settings.section_name_all != blank -%}
-                <div class="all-collection-main">
-                  <h2 class="section-title">{{ section.settings.section_name_all }}</h2>
-                  <div class="grid more-collections-grid">
-
-                    {%- for collection in collections -%}
-                      {%- assign title_down = collection.title | downcase -%}
-                      {%- assign handle_down = collection.handle | downcase -%}
-                      
-                      {%- unless 
-                        excluded_handles contains collection.handle
-                        or title_down == 'all'
-                        or handle_down == 'all'
-                        or handle_down == 'custom-logo'
-                        or collection.template_suffix contains 'brand'
-                        or collection.featured_image == blank
-                      -%}
-
-                        <div class="grid__cell 1/2--tablet 1/3--lap-and-up">
-                          <div class="collection-block-item-wrapper">
-                            <a href="{{ collection.url }}" class="collection-block-item {% if section.settings.show_collection_overlay %}collection-block-item--overlay{% endif %}">
-                              <div class="aspect-ratio" style="padding-bottom: 61%">
-                                {{ collection.featured_image | image_url: width: collection.featured_image.width | image_tag:
-                                    loading: 'lazy',
-                                    sizes: 'min(100vw, 850px)',
-                                    widths: '200,300,400,500,600,800,1000,1200,1400',
-                                    class: 'collection-block-item__image image-background'
-                                }}
-                              </div>
-                            </a>
-
-                            {%- if section.settings.show_collection_title -%}
-                              <div class="collection-block-item__text">
-                                <p class="collection-block-item__title heading h2">
-                                  <a href="{{ collection.url }}">{{ collection.title }}</a>
-                                  {%- if collection.products_count > 0 -%}
-                                    <span class="collection-badge">{{ collection.products_count }}+</span>
-                                  {%- endif -%}
-                                </p>
-
-                                {%- if collection.description != blank -%}
-                                  <div class="collection-block-item__description">
-                                    {{ collection.description | strip_html | truncate: 100 }}
-                                  </div>
-                                {%- endif -%}
-                              </div>
-                            {%- endif -%}
-                          </div>
-                        </div>
-
-                      {%- endunless -%}
-                    {%- endfor -%}
-
-                  </div>
-                </div>
+            {%- assign excluded_handles = '' -%}
+            {%- for block in section.blocks -%}
+              {%- assign popular = block.settings.popular_collection -%}
+              {%- if popular != blank -%}
+                {%- assign excluded_handles = excluded_handles | append: popular.handle | append: ',' -%}
               {%- endif -%}
+            {%- endfor -%}
+            {%- if section.settings.excluded_collections != blank -%}
+              {%- assign manual_excludes = section.settings.excluded_collections  -%}
+              {%- assign excluded_handles = excluded_handles | append: manual_excludes  -%}
+            {%- endif -%}
+            {% comment %} {%- assign excluded_handles2 = excluded_handles | split: ',' | map: 'strip' | map: 'handleize' -%} {% endcomment %}
+            {%- if section.settings.section_name_all != blank -%}
+              <div class="all-collection-main"> 
+                <h2 class="section-title">{{ section.settings.section_name_all }}</h2>
+                <div class="grid more-collections-grid">
+                  {%- for collection in collections -%}
+                    {%- assign handle_down = collection.handle | downcase -%}
+                    {%- assign title_down = collection.title | handleize -%}
+                    {%- unless 
+                      excluded_handles contains handle_down
+                      or excluded_handles contains title_down
+                      or handle_down == 'all'
+                      or handle_down == 'custom-logo'
+                      or collection.template_suffix contains 'brand'
+                      or collection.featured_image == blank
+                    -%}
+            
+                      <div class="grid__cell 1/2--tablet 1/3--lap-and-up">
+                        <div class="collection-block-item-wrapper">
+                          <a href="{{ collection.url }}" class="collection-block-item {% if section.settings.show_collection_overlay %}collection-block-item--overlay{% endif %}">
+                            <div class="aspect-ratio" style="padding-bottom: 61%">
+                              {{ collection.featured_image | image_url: width: collection.featured_image.width | image_tag:
+                                  loading: 'lazy',
+                                  sizes: 'min(100vw, 850px)',
+                                  widths: '200,300,400,500,600,800,1000,1200,1400',
+                                  class: 'collection-block-item__image image-background'
+                              }}
+                            </div>
+                          </a>
+            
+                          {%- if section.settings.show_collection_title -%}
+                            <div class="collection-block-item__text">
+                              <p class="collection-block-item__title heading h2">
+                                <a href="{{ collection.url }}">{{ collection.title }}</a>
+                                {%- if collection.products_count > 0 -%}
+                                  <span class="collection-badge">{{ collection.products_count }}+</span>
+                                {%- endif -%}
+                              </p>
+            
+                              {%- if collection.description != blank -%}
+                                <div class="collection-block-item__description">
+                                  {{ collection.description | strip_html | truncate: 100 }}
+                                </div>
+                              {%- endif -%}
+                            </div>
+                          {%- endif -%}
+                        </div>
+                      </div>
+            
+                    {%- endunless -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
           </div>
             {%- if section.settings.collections_to_show == 'all' -%}
               {%- render 'pagination', paginate: paginate -%}
             {%- endif -%}
         {%- endpaginate -%}
       {%- endif -%}
-      
       {%- if has_brand_collections -%}
         <div class="collection-list__section">
           <header class="page__header page__header--stack page__header--centered">
@@ -695,7 +691,7 @@
       .more-collections-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-        gap: 15px; /* Gap between items */
+        /* gap: 15px; Gap between items */
       }
       .more-collections-grid .grid__cell {
         width: auto; /* Let grid handle width */
@@ -735,7 +731,7 @@
           padding: 24px;
         }
         .slick-track{
-          margin-left: -16px !important;
+          margin-left: -6px !important;
         }
         .all-collection-main{
           margin-top: 0 !important;
@@ -1018,6 +1014,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "id": "show_collection_overlay",
       "label": "Show collection overlay",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "excluded_collections",
+      "label": "Excluded Collection (, splite)"
     },
     {
       "type": "range",

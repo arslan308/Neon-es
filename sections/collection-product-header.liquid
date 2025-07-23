@@ -7,15 +7,15 @@
     <style>
       @media (max-width: 767px) {
         .collection-product-banner {
-          background-image: url('{{ bg_image_mobile }}') !important;
+          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000000 100%), url('{{ bg_image_mobile }}') !important;
           background-size: contain !important;
           background-repeat: no-repeat;
-          height: 720px !important;
+          height: 480px !important;
         }
       }
     </style>
   {% endif %}
-  <div class="banner-overlay"> 
+  <div class="banner-overlay">
     <div class="banner-text">
       {% if collection.metafields.custom.product_type %}
         <p class="subheading">{{ collection.metafields.custom.product_type.value }}</p>

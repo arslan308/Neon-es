@@ -13,11 +13,11 @@
       "type": "Collection-header",
       "settings": {
         "collection_banner_heading": "Neonsfeer collections",
-        "collection_banner_description": "Whether you're looking for a striking statement piece for your interior, a standout gift, or a personal message in light – you'll find all styles, colors, and vibes right here. Get inspired by our diverse collections and find the neon that suits you best.",
-        "card_heading": "Design your own Neon Logo",
-        "point_list": "Free neon design, Ready in 3 hours, No credit card no hassle",
-        "design_card_btn": "Free design",
-        "design_card_btn_url": "https://theneonsfeer.com/products/design-your-neon-logo"
+        "collection_banner_description": "Tanto si buscas una pieza llamativa para tu interior, un regalo que destaque o un mensaje personal con luz, aquí encontrarás todos los estilos, colores y vibraciones. Déjate inspirar por nuestras diversas colecciones y encuentra el neón que mejor se adapte a ti.",
+        "card_heading": "Diseñe su propio logotipo de neón",
+        "point_list": "Diseña gratis, En 3 horas, Sin obligación",
+        "design_card_btn": "Diseño libre",
+        "design_card_btn_url": "https://neonsfeer.es/products/logotipo-en-neon"
       }
     },
     "main": {
@@ -36,7 +36,7 @@
           "settings": {
             "collection_class_bar": "icon-block right",
             "title_sec": "Para empresas",
-            "menu_items_sec": "Peluquería, Belleza , comida-bares-y-discotecas, Gimnasio ,comida-y-bebida",
+            "menu_items_sec": "Comida-y-bebida,  Peluquería, Belleza , comida-bares-y-discotecas, Gimnasio",
             "icons": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/content_cut_1.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/health_and_beauty.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_bar.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/exercise.svg?v=1748606489\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_bar.svg?v=1748606488"
           }
         },
@@ -45,7 +45,7 @@
           "settings": {
             "collection_class_bar": "icon-block reverse",
             "title_sec": "Eventos",
-            "menu_items_sec": "Bodas ,baby-showers,Festivales ,Cumpleaños",
+            "menu_items_sec": "baby-showers,Bodas,Festivales ,Cumpleaños",
             "icons": "https://cdn.shopify.com/s/files/1/0779/7686/3066/files/favorite.svg?v=1748606489\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/pediatrics.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/local_activity.svg?v=1748606488\nhttps://cdn.shopify.com/s/files/1/0779/7686/3066/files/celebration.svg?v=1748606488"
           }
         },
@@ -108,7 +108,7 @@
         "collection_linklist": "",
         "show_collection_title": true,
         "section_name": "Más vendidos",
-        "section_name_all": "More Collection",
+        "section_name_all": "Más colección",
         "show_collection_overlay": true,
         "collection_overlay_opacity": 20
       }
