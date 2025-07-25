@@ -131,8 +131,8 @@
         "fileerror": "Hubo un error al subir el archivo. Por favor, inténtelo de nuevo.",
         "emailformat": "Por favor, añade un email válido",
         "phoneformat": "Número de teléfono incorrecto",
-        "terms": "Al enviar, aceptas los términos y condiciones generales de Neonsfeer.",
-        "newterms": "",
+        "terms": "Acepto los Términos y Condiciones.",
+        "newterms": "Acepto recibir información por correo electrónico y WhatsApp.",
         "terms_error": "Por favor, acepta los términos y condiciones generales de Neonsfeer.",
         "defaultcountry": "es",
         "preferred_countries": "es",
@@ -218,7 +218,6 @@
       "disabled": true,
       "settings": {
         "vat_included_text": "Include VAT",
-        "custom_product_class": "",
         "vat_excluded_text": "Exclude VAT",
         "checkmark_color": "#00a651",
         "list_point1": "",
