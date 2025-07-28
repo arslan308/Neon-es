@@ -48,6 +48,15 @@
             "class_comp": "Impresión UV"
           }
         },
+        "custom_options_mCazi6": {
+          "type": "Custom_Options",
+          "settings": {
+            "text_option": "Accesorios",
+            "text_tooltip": "Tu cartel de neón LED personalizado se entrega con un regulador de intensidad, control remoto, adaptador y todos los materiales de montaje necesarios. Gracias al sistema plug & play, puedes instalar la iluminación en solo 5 minutos y disfrutarla de inmediato.",
+            "option_value": "Incluido",
+            "class_comp": "Accesorios"
+          }
+        },
         "list_item_Ln9DfU": {
           "type": "list_item",
           "settings": {
@@ -139,6 +148,7 @@
         "custom_options_3KhGTe",
         "custom_options_CpG7Wz",
         "custom_options_bbiFeL",
+        "custom_options_mCazi6",
         "list_item_Ln9DfU",
         "list_item_iQRMjX",
         "list_item_JdR7nF",
