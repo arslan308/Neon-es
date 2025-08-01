@@ -98,12 +98,12 @@
 {% endif %}
 <div class="product-image-section lead_page_UK_price_with_logo_discount">
   <div class="container width-100">
-    <div class="quote-ready">
+    {% comment %} <div class="quote-ready">
       <h2>{{ section.settings.SectionTitle }}</h2>
       <ul>
         {{ section.settings.SectionToplist }}
       </ul>
-    </div>
+    </div> {% endcomment %}
     <div class="product-title-discription-add-to-cart-main mobile_view">
       <div class="product-title-discription-add-to-cart-main-content-section dd">
         <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5>
@@ -211,9 +211,22 @@
       <div class="product-title-discription-add-to-cart-main-content-section">
         <form method="post" action="/cart/add">
           <div class="box-design-btn-text">
+            <div class="just-for-mobile">
+              {% if product.images.size > 0 %}
+                {%- assign image_url_1 = product.images.first
+                  | image_url: width: product.images.first.width
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'image-1',
+                    sizes: 'min(100vw, 520px)',
+                    widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000'
+                -%}
+                {{ image_url_1 }}
+              {% endif %}
+            </div>
             <div class="product-image-title-discription-price-Prijs-main-class price-containt-text">
               <div class="toggle-container">
-                <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5>
+                {% comment %} <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5> {% endcomment %}
                 {% if settings.vat_percent != blank and template.suffix != 'custom_neon_no_vat' %}
                   <div class="toggle-box">
                     <p class="toggle-label IncByExc">{{ section.settings.inc_vat }}</p>
@@ -420,7 +433,7 @@
                 </div>
                 <span class="order-message-res-custom">
                   {{ section.settings.order_message }}:
-                  <div class="delivery-date" data-delivery-days="{{ settings.delivery_days_offset }}"></div> 
+                  <div class="delivery-date" data-delivery-days="{{ settings.delivery_days_offset }}"></div>
                 </span>
               </div>
               <div class="variationwrapper desktop-variation">
@@ -620,11 +633,11 @@
                     {% endif %}
                   </div>
                   <span class="cstm_alert_section" style="display:none">{{ section.settings.alert_section }}</span>
-                  <div class="accessoires-wrapper-main">
+                  <!-- <div class="accessoires-wrapper-main">
                     <div class="accessoires-wrapper">
-                      <h6>{{ section.settings.accessoires_title }}</h6>
+                      <h6>{ { section.settings.accessoires_title }}</h6>
                       <span class="icon-wrapper">
-                        <span>{{ section.settings.include_icon }}</span>
+                        <span>{ { section.settings.include_icon }}</span>
                         <svg
                           class="custom-icon"
                           width="15px"
@@ -658,7 +671,7 @@
                       </div>
                     </div>
                     <div class="popup-overlay"></div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="mobile-accodion-2 mobaile-vieww">
                   <div class="receive-list">
@@ -1113,11 +1126,11 @@
                           </span>
                       </div>
                     {% endcomment %}
-                    <div class="accessoires-wrapper-main">
+                    <!-- <div class="accessoires-wrapper-main">
                       <div class="accessoires-wrapper">
-                        <h6>{{ section.settings.accessoires_title }}</h6>
+                        <h6>{ { section.settings.accessoires_title }}</h6>
                         <span class="icon-wrapper">
-                          <span>{{ section.settings.include_icon }}</span>
+                          <span>{ { section.settings.include_icon }}</span>
                           <svg
                             class="custom-icon"
                             width="15px"
@@ -1151,24 +1164,40 @@
                         </div>
                       </div>
                       <div class="popup-overlay"></div>
-                    </div>
+                    </div> -->
+                          
+      {% assign AgentName = product.metafields.custom.a_name | strip %}
+      {% assign matched_image = section.settings.form_user_image %}
+      {% assign matched_name = section.settings.support_name %}
+      {% assign matched_phone = section.settings.support_phone %}
+      {% for block in section.blocks %}
+        {% if block.type == 'Custom_Agent' %}
+          {% assign this_agent_block_name = block.settings.Agent_name | strip %}
+          {% if this_agent_block_name == AgentName %}
+            {% assign matched_image = block.settings.Agent_image %}
+            {% assign matched_phone = block.settings.Agent_phone %}
+            {% assign matched_name = this_agent_block_name %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
                     <div class="support-widget">
                       <div class="support-container">
                         <img
-                          src="{{ section.settings.support_id_image | img_url: '100x100' }}"
+                          src="{{ matched_image }}"
                           alt="Support Image"
                           class="support-image"
                         >
                         <div class="support-content">
-                          <p class="support-title">{{ section.settings.support_text }}</p>
+                          <p class="support-title">{{ section.settings.support_text }} {{ matched_name }} </p>
                           <div class="support-actions">
                             {% comment %}
                               <a href="{{ section.settings.chat_link }}" class="support-button">
                                   {{ section.settings.chat_text }}
                               </a>
                             {% endcomment %}
-                            <a href="tel:{{ section.settings.support_phone }}" class="support-phone">
-                              {{ section.settings.support_phone }}
+                            <a href="tel:{{matched_phone}}" class="support-phone">
+                              {{ matched_phone }}
                             </a>
                           </div>
                         </div>
@@ -1193,7 +1222,7 @@
                 </div>
                 <div class="pop-product-detail product-image-title-discription-price-Prijs-main-class price-containt-text">
                   <div class="toggle-container">
-                    <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5>
+                    {% comment %} <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5> {% endcomment %}
                     {% if settings.vat_percent != blank and template.suffix != 'custom_neon_no_vat' %}
                       <div class="toggle-box">
                         <p class="toggle-label IncByExc">{{ section.settings.inc_vat }}</p>
@@ -1370,23 +1399,23 @@
                     {{ section.settings.discount_message }}
 
                     <div class="countdown-boxes">
-                      <div class="time-box">
-                        <span class="num days" id="days">00</span>
-                        <span class="label">{{ section.settings.label_days }}</span>
-                      </div>
-                      <div class="time-box">
-                        <span class="num hours" id="hours">00</span>
-                        <span class="label">{{ section.settings.label_hours }}</span>
-                      </div>
-                      <div class="time-box">
-                        <span class="num minutes" id="minutes">00</span>
-                        <span class="label">{{ section.settings.label_minutes }}</span>
-                      </div>
-                      <div class="time-box">
-                        <span class="num seconds" id="seconds">00</span>
-                        <span class="label">{{ section.settings.label_seconds }}</span>
-                      </div>
-                    </div>
+                  <div class="time-box">
+                    <span class="num days" id="days">00</span>
+                    <span class="label">{{ section.settings.label_days }}</span>
+                  </div>
+                  <div class="time-box">
+                    <span class="num hours" id="hours">00</span>
+                    <span class="label">{{ section.settings.label_hours }}</span>
+                  </div>
+                  <div class="time-box">
+                    <span class="num minutes" id="minutes">00</span>
+                    <span class="label">{{ section.settings.label_minutes }}</span>
+                  </div>
+                  <div class="time-box">
+                    <span class="num seconds" id="seconds">00</span>
+                    <span class="label">{{ section.settings.label_seconds }}</span>
+                  </div>
+                </div>
                   </div>
 
                   <div class="time-date product-info-time-custom">
@@ -1417,11 +1446,14 @@
         -%}
         {{ image_url_1 }}
       {% endif %}
+
+
       <div class="request-form-wrapper">
         <div class="avtar-wrapper">
-          <img src="{{ section.settings.form_user_image }}" alt="">
-          <h4>{{ section.settings.form_question }}</h4>
+          <img src="{{ matched_image }}" alt="">
+          <h4>{{ section.settings.form_question }} {{ matched_name }}</h4>
         </div>
+
         {% form 'contact' %}
           {{ form.errors | default_errors }}
           <div class="email">
@@ -1469,7 +1501,22 @@
   <button class="scroll_down_btn_cstm kreep"><i class="fa-sharp fa-solid fa-arrow-down"></i></button>
 </div>
 <style>
+  .just-for-mobile img{
+    margin-bottom: 8px;
+    height: 337px;
+    border-radius: 8px;
+    display: none;
+  }
       @media only screen and (max-width: 767.9px) {
+        .lead_page_UK_price_with_logo_discount .mobile-wrapper-1{
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 10px;
+        }
+        .template-product .lead_page_UK_price_with_logo_discount .product-images>img{display: none;}
+        .just-for-mobile img {
+            display: block;
+           }
           .product-image-title-discription-price-shipping .time-date{width: 100% !important;}
       }
       .price-for-flex{
@@ -2341,215 +2388,231 @@
 </script>
 {% schema %}
 {
-"name": "Logo Discount Product",
-"settings": [
-  {
+  "name": "Logo Discount Product",
+  "settings": [
+    {
       "id": "SectionTitle",
       "type": "text",
       "label": "Title",
       "default": "Your Quote is Ready!"
-  },
-  {
+    },
+    {
       "id": "timer",
       "type": "text",
       "label": "Timer"
-  },
-  {
-    "type": "checkbox",
-    "id": "atc_show",
-    "label": "Add to cart div",
-    "default": true
-  },
-  {
-    "type": "image_picker",
-    "id": "support_id_image",
-    "label": "Support Image"
-  },
-  {
-    "type": "text",
-    "id": "support_text",
-    "label": "Support Message",
-    "default": "Hulp nodig? Bel of chat met Sjoerd!"
-  },
-  {
-    "type": "text",
-    "id": "accessoires_title",
-    "label": "Accessoires Title",
-    "default": "Accessories"
-  },
-  {
-      "type":"text",
-      "id":"include_icon_toolip",
-      "label":"Title For Tooltip",
+    },
+    {
+      "type": "checkbox",
+      "id": "atc_show",
+      "label": "Enable Sticky Bar",
+      "default": true
+    },
+   
+    {
+      "type": "text",
+      "id": "support_text",
+      "label": "Support Message",
+      "default": "Hulp nodig? Bel of chat met Sjoerd!"
+    },
+
+    {
+      "type": "text",
+      "id": "accessoires_title",
+      "label": "Accessoires Title",
+      "default": "Accessories"
+    },
+    {
+      "type": "text",
+      "id": "include_icon_toolip",
+      "label": "Title For Tooltip",
       "default": "Your neon logo comes complete with a dimmer, remote control, adapter, and all necessary mounting materials. Thanks to the plug & play system, you can set up the lighting within 5 minutes and enjoy it right away."
-  },
-  {
-    "type": "text",
-    "id": "include_icon",
-    "label": "Include icon Text",
-    "default": "Included"
-  },
-  {
-    "type": "text",
-    "id": "go_back",
-    "label": "Go Back",
-    "default": "Go Back"
-  },
-  {
-    "type": "text",
-    "id": "chat_text",
-    "label": "Chat Button Text",
-    "default": "Chat met Sjoerd"
-  },
-  {
-    "type": "url",
-    "id": "chat_link",
-    "label": "Chat Link"
-  },
-  {
-    "type": "text",
-    "id": "popup_close",
-    "label": "Back Popup",
-    "default": "Back"
-  },
-  {
-    "type": "text",
-    "id": "support_phone",
-    "label": "Phone Number",
-    "default": "+31 850 000 749"
-  },
-  {
-    "type": "text",
-    "id": "quote_customize_title",
-    "label": "Quote Title",
-    "default": "Customize your quote"
-  },
-  {
-      "id": "form_user_image",
+    },
+    {
+      "type": "text",
+      "id": "include_icon",
+      "label": "Include icon Text",
+      "default": "Included"
+    },
+    {
+      "type": "text",
+      "id": "go_back",
+      "label": "Go Back",
+      "default": "Go Back"
+    },
+    {
+      "type": "text",
+      "id": "chat_text",
+      "label": "Chat Button Text",
+      "default": "Chat met Sjoerd"
+    },
+    {
       "type": "url",
-      "label": "Form User Image"
-  },
-  {
+      "id": "chat_link",
+      "label": "Chat Link"
+    },
+    {
+      "type": "text",
+      "id": "popup_close",
+      "label": "Back Popup",
+      "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "support_phone",
+      "label": "Phone Number",
+      "default": "+31 850 000 749"
+    },
+    {
+      "type": "text",
+      "id": "quote_customize_title",
+      "label": "Quote Title",
+      "default": "Customize your quote"
+    },
+    
+    {
       "id": "form_email_placeholder",
       "type": "text",
       "label": "Form Placeholder",
       "default": "Email"
-  },
-  {
-   "type":"text",
-   "id":"inc_vat",
-   "label":"Include Vat",
-   "default":"Display incl. VAT"
-  },
-  {
-   "type":"text",
-   "id":"price_inc_vat",
-   "label":"Include Vat",
-   "default":"incl. VAT"
-  },
-  {
-   "type":"text",
-   "id":"exclu_vat",
-   "label":"Exclusive Vat",
-   "default":"Display excl. VAT"
-  },
-  {
-   "type":"text",
-   "id":"price_exclu_vat",
-   "label":"Exclusive Vat",
-   "default":"excl. VAT"
-  },
-  {
+    },
+    {
+      "type": "text",
+      "id": "inc_vat",
+      "label": "Include Vat",
+      "default": "Display incl. VAT"
+    },
+    {
+      "type": "text",
+      "id": "price_inc_vat",
+      "label": "Include Vat",
+      "default": "incl. VAT"
+    },
+    {
+      "type": "text",
+      "id": "exclu_vat",
+      "label": "Exclusive Vat",
+      "default": "Display excl. VAT"
+    },
+    {
+      "type": "text",
+      "id": "price_exclu_vat",
+      "label": "Exclusive Vat",
+      "default": "excl. VAT"
+    },
+    {
       "id": "form_text_placeholder",
       "type": "text",
       "label": "Form Placeholder 2",
-      "default":"For example: Hi John, how do I hang my logo?"
-  },
-  {
+      "default": "For example: Hi John, how do I hang my logo?"
+    },
+    {
+      "id": "form_user_image",
+      "type": "url",
+      "label": "Default Agent User Image"
+    },
+    {
       "id": "form_question",
       "type": "text",
-      "label": "Form Title",
-      "default": "Ask a question to John"
-  },
-  {
+      "label": "Defualt Agent Title",
+      "default": "Ask a question to "
+    },
+    {
+      "type": "text",
+      "id": "support_name",
+      "label": "Default Agent Name",
+      "default": "John"
+    },
+    {
       "id": "form_questionsubmittext",
       "type": "text",
       "label": "Form submit button",
       "default": "Send question"
-  },
-  {
+    },
+    {
       "id": "formodify",
       "type": "text",
       "label": "Modify btn"
-  },
-  {
+    },
+    {
       "id": "mbformodify",
       "type": "text",
       "label": "Mobile Modify btn"
-  },
-  {
+    },
+    {
       "id": "fordirectcart",
       "type": "text",
       "label": "order btn"
-  },
-  {
+    },
+    {
       "id": "mbfordirectcart",
       "type": "text",
       "label": "Mobile order btn"
-  },
-  {
+    },
+    {
       "id": "TopPriceText",
       "type": "text",
       "label": "Top price small title",
       "default": "Price for your Neon Logo:"
-  },
-  {
+    },
+    {
       "id": "SectionToplist",
       "type": "html",
       "label": "List",
       "default": "<li> <svg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z' fill='#2CB118'/> </svg> Fast 8-Day Delivery </li> <li> <svg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z' fill='#2CB118'/> </svg> 2-year warranty </li> <li> <svg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M2.66667 6.93317L0 4.2665L0.933333 3.33317L2.66667 5.0665L7.06667 0.666504L8 1.59984L2.66667 6.93317Z' fill='#2CB118'/> </svg> Free shipping </li>"
-  },
-  {
-    "id": "accordion_text",
-    "type": "text",
-    "label": "Accordion Toggle Text",
-    "default": "You receive"
-  },
-  {
-   "type":"text",
-   "id":"save_text",
-   "label":"Total Saving"
-  },
-  {
-  "type":"image_picker",
-  "id":"image_shipping",
-  "label":"Shipping Logo"
-  },
-  {
-  "type":"text",
-  "id":"alert_section",
-  "label":"Enter text"
-  },
-  {
+    },
+    {
+      "id": "accordion_text",
+      "type": "text",
+      "label": "Accordion Toggle Text",
+      "default": "You receive"
+    },
+    {
+      "type": "text",
+      "id": "save_text",
+      "label": "Total Saving"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_shipping",
+      "label": "Shipping Logo"
+    },
+    {
+      "type": "text",
+      "id": "alert_section",
+      "label": "Enter text"
+    },
+    {
       "type": "text",
       "id": "discount_card_message",
       "label": "Discount Card Message",
       "default": "25% Off Black Friday Deal Applied! "
-  },
+    },
 
-  {
+    {
       "type": "text",
       "id": "discount_car_toltip",
       "label": "Discount Card Toltip",
       "default": "The biggest sale of the year is live! 🎉 Grab 25% off on your order today and enjoy incredible Black Friday savings. Complete your purchase now to secure this exclusive discount! 🛍️💸"
-  },
-  {
-  "type": "text",
-  "id": "discount_message_complete",
-  "label": "Discount Complete Message",
-  "default": "Complete your order to keep your discount"
-  },
-  {
+    },
+    {
+      "type": "text",
+      "id": "discount_message_complete",
+      "label": "Discount Complete Message",
+      "default": "Complete your order to keep your discount"
+    },
+    {
+      "type": "text",
+      "id": "discount_message",
+      "label": "Discount Arrives",
+      "default": "Discount ends in"
+    },
+    {
+      "type": "text",
+      "id": "order_message",
+      "label": "Delivery Time",
+      "default": "Ordered before 11:59 PM"
+    },
+    {
       "type": "text",
       "id": "label_days",
       "label": "Label for Days",
@@ -2573,97 +2636,116 @@
       "label": "Label for Seconds",
       "default": "seconds"
     },
-  {
+    {
       "type": "text",
-      "id": "discount_message",
-      "label": "Discount Arrives",
-      "default": "Discount ends in"
-  },
-  {
-  "type": "text",
-  "id": "order_message",
-  "label": "Delivery Time",
-  "default": "Ordered before 11:59 PM"
-  },
-  {
-    "type": "text",
-    "id": "delivery_format",
-    "label": "Delivery Date Format",
-    "default": "${monthName} ${futureDate.day}"
-  },
-  {
-  "type": "text",
-  "id": "delivery_date",
-  "label": "Delivery Date",
-  "default": "Delivered on"
-  },
-  {
-  "type":"text",
-  "id":"add_to_cart_btn_text",
-  "label":"Add to cart label"
-  }
-],
-  "blocks":[
-      {
-      "type":"paymenticon",
-      "name":"Payment Icons",
-      "settings":[
-          {
-          "type":"image_picker",
-          "id":"image",
-          "label":"Image"
-          },
-          {
-          "type":"checkbox",
-          "id":"check",
-          "label":"Hide icon in mobile"
-          }
+      "id": "delivery_format",
+      "label": "Delivery Date Format",
+      "default": "${monthName} ${futureDate.day}"
+    },
+    {
+      "type": "text",
+      "id": "delivery_date",
+      "label": "Delivery Date",
+      "default": "Delivered on"
+    },
+    {
+      "type": "text",
+      "id": "add_to_cart_btn_text",
+      "label": "Add to cart label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paymenticon",
+      "name": "Payment Icons",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "check",
+          "label": "Hide icon in mobile"
+        }
       ]
-  },
-  {
-    "type": "list_item",
-    "name": "List Item",
-    "settings": [
-      {
-        "id": "icon_text",
-        "type": "text",
-        "label": "List Item Text"
-      }
-    ]
-  },
-  {
-      "type":"Custom_Options",
-      "name":"Custom Product options",
-      "settings":[
-          {
-              "type":"text",
-              "id":"text_option",
-              "label":"Title For Option"
-          },
-          {
-              "type":"text",
-              "id":"text_tooltip",
-              "label":"Title For Tooltip"
-          },
-          {
-              "type":"text",
-              "id":"option_value",
-              "label":"Option Values"
-          },
-          {
-              "type":"text",
-              "id":"class_comp",
-              "label":"Class should be exactly one of them",
-              "info":"Backboard,UV-Print,Power-point,Cable-Length"
-          }
-
+    },
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "id": "icon_text",
+          "type": "text",
+          "label": "List Item Text"
+        }
       ]
-  }
-],
+    },
+    {
+      "type": "Custom_Options",
+      "name": "Custom Product options",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_option",
+          "label": "Title For Option"
+        },
+        {
+          "type": "text",
+          "id": "text_tooltip",
+          "label": "Title For Tooltip"
+        },
+        {
+          "type": "text",
+          "id": "option_value",
+          "label": "Option Values"
+        },
+        {
+          "type": "text",
+          "id": "class_comp",
+          "label": "Class should be exactly one of them",
+          "info": "Backboard,UV-Print,Power-point,Cable-Length"
+        }
+      ]
+    },
+    {
+      "type": "Custom_Agent",
+      "name": "Agent Details",
+      "settings": [
+        {
+          "type": "text",
+          "id": "Agent_name",
+          "label": "Agent Name",
+          "info": "Enter Agent Name"
+        },
+        {
+          "type": "text",
+          "id": "Agent_email",
+          "label": "Agent Email",
+          "info": "Enter Agent Email"
+        },
+        {
+          "type": "text",
+          "id": "Agent_phone",
+          "label": "Agent Phone",
+          "info": "Enter Agent Phone Number"
+        },
+        {
+          "type": "text",
+          "id": "Agent_image",
+          "label": "Agent Image",
+          "info": "Enter Agent Phone Image"
+        }
+      ]
+    }
+  ],
 
-"presets":[{
-"category":"image_product",
-"name":"Logo Discount Product"
-}]
+  "presets": [
+    {
+      "category": "image_product",
+      "name": "Logo Discount Product"
+    }
+  ]
 }
 {% endschema %}

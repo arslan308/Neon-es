@@ -140,7 +140,6 @@
               {%- if quick_links_menu.links.size > 0 -%}
                 <div class="card__section card__section--tight">
                   <p class="card__title--small heading">{{ quick_links_menu.title }}</p>
-
                   <ul class="collection__filter-linklist" role="list">
                     {%- for link in quick_links_menu.links -%}
                       <li>
@@ -307,311 +306,264 @@
                     {%- endfor -%}
 
                     {%- if active_filter_values > 0 -%}
-                      <button
-                        type="button"
-                        class="collection__clear-filter button button--small button--transparent button--full"
-                        data-action="clear-filters"
-                        data-url="{{ collection.url }}?sort_by={{ sort_by }}"
-                      >
-                        {{ 'collection.filter.clear_all' | t }}
-                      </button>
+                        <button type="button" class="collection__clear-filter button button--small button--transparent button--full" data-action="clear-filters" data-url="{{ collection.url }}?sort_by={{ sort_by }}">
+                            {{ 'collection.filter.clear_all' | t }}
+                        </button>
                     {%- endif -%}
                   </div>
 
                   <div class="collection__filter-group-list">
-                    {%- for filter in collection.filters -%}
-                      {%- if template.suffix == 'brand'
-                        and filter.param_name == 'filter.p.vendor'
-                        and filter.values.size == 1
-                      -%}
-                        {%- continue -%}
-                      {%- endif -%}
-
-                      {%- assign filter_label_downcase = filter.label | downcase -%}
-                      {%- assign is_filter_expanded = false -%}
-
-                      {%- if color_label contains filter_label_downcase
-                        and section.settings.show_filter_color_swatch
-                      -%}
-                        {%- assign show_color_swatch = true -%}
-                      {%- else -%}
-                        {%- assign show_color_swatch = false -%}
-                      {%- endif -%}
-
-                      {%- if section.settings.open_group_filters_mode == 'all_open'
-                        or section.settings.open_group_filters_mode == 'first_open'
-                        and forloop.first
-                      -%}
-                        {%- assign is_filter_expanded = true -%}
-                      {%- endif -%}
-
-                      <div class="collection__filter-group">
-                        {%- if filter.type == 'price_range' or filter.type == 'list' -%}
-                          <button
-                            type="button"
-                            class="collection__filter-group-name link link--secondary text--strong"
-                            data-action="toggle-collapsible"
-                            aria-controls="{{ filter.param_name | handle | escape }}"
-                            data-close-siblings="false"
-                            data-collapsible-force-overflow="true"
-                            {% if is_filter_expanded %}
-                              aria-expanded="true"
-                            {% else %}
-                              aria-expanded="false"
-                            {% endif %}
-                          >
-                            {{- filter.label -}}
-                            {%- render 'icon', icon: 'arrow-bottom' -%}
-                          </button>
-                        {%- elsif filter.type == 'boolean' -%}
-                          <div class="collection__filter-group-name link link--secondary text--strong">
-                            <label for="{{ filter.param_name }}">{{- filter.label -}}</label>
-                            <input
-                              class="switch-checkbox"
-                              type="checkbox"
-                              name="{{ filter.param_name }}"
-                              id="{{ filter.param_name }}"
-                              value="1"
-                              {% if filter.true_value.active %}
-                                checked
-                              {% endif %}
-                            >
-                          </div>
-                        {%- endif -%}
-
-                        {%- unless filter.type == 'boolean' %}
-                          <div
-                            id="{{ filter.param_name | handle | escape }}"
-                            class="collection__filter-collapsible"
-                            {% if is_filter_expanded %}
-                              aria-hidden="false" style="height: auto; overflow: visible"
-                            {% else %}
-                              aria-hidden="true"
-                            {% endif %}
-                          >
-                            {%- case filter.type -%}
-                              {%- when 'list' -%}
-                                {%- if filter.presentation == 'image' -%}
-                                  <div class="collection__filter-visual-filter-list">
-                                    <div class="visual-filter-list">
-                                      {%- for filter_value in filter.values -%}
-                                        {%- assign downcased_label = filter_value.label | downcase -%}
-
-                                        <div class="visual-filter">
-                                          <input
-                                            class="visual-filter__radio"
-                                            type="checkbox"
-                                            name="{{ filter_value.param_name }}"
-                                            id="{{ filter_value.param_name }}-{{ filter_value.value }}"
-                                            value="{{ filter_value.value }}"
-                                            {% if filter_value.active %}
-                                              checked
-                                            {% endif %}
-                                          >
-
-                                          <label
-                                            for="{{ filter_value.param_name }}-{{ filter_value.value }}"
-                                            class="visual-filter__item {% if filter_value.active %}is-selected{% endif %}"
-                                          >
-                                            {%- if filter_value.image != blank -%}
-                                              {{-
-                                                filter_value.image
-                                                | image_url: width: filter_value.image.width
-                                                | image_tag: loading: 'lazy', widths: '32,64,96'
-                                              -}}
-                                            {%- endif -%}
-
-                                            <span>{{- filter_value.label -}}</span>
-                                          </label>
-                                        </div>
-                                      {%- endfor -%}
-                                    </div>
+                      {%- for filter in collection.filters -%}
+                          {%- if template.suffix == 'brand' and filter.param_name == 'filter.p.vendor' and filter.values.size == 1 -%}
+                              {%- continue -%}
+                          {%- endif -%}
+                          {%- assign filter_label_downcase = filter.label | downcase -%}
+                          {%- assign is_filter_expanded = false -%}
+                          {%- if color_label contains filter_label_downcase and section.settings.show_filter_color_swatch -%}
+                              {%- assign show_color_swatch = true -%}
+                          {%- else -%}
+                              {%- assign show_color_swatch = false -%}
+                          {%- endif -%}
+                          {%- if section.settings.open_group_filters_mode == 'all_open' or section.settings.open_group_filters_mode == 'first_open' and forloop.first -%}
+                              {%- assign is_filter_expanded = true -%}
+                          {%- endif -%}
+                          <div class="collection__filter-group">
+                              {%- if filter.type == 'price_range' or filter.type == 'list' -%}
+                                <button type="button" class="collection__filter-group-name link link--secondary text--strong" data-action="toggle-collapsible" aria-controls="{{ filter.param_name | handle | escape }}" data-close-siblings="false" data-collapsible-force-overflow="true"
+                                    {% if is_filter_expanded %}aria-expanded="true"{% else %}aria-expanded="false"{% endif %}>
+                                    {{- filter.label -}}
+                                    {%- render 'icon', icon: 'arrow-bottom' -%}
+                                </button>
+                              {%- elsif filter.type == 'boolean' -%}
+                                  <div class="collection__filter-group-name link link--secondary text--strong">
+                                      <label for="{{ filter.param_name }}">{{- filter.label -}}</label>
+                                      <input class="switch-checkbox" type="checkbox" name="{{ filter.param_name }}" id="{{ filter.param_name }}" value="1" {% if filter.true_value.active %}checked{% endif %}>
                                   </div>
-                                {%- elsif filter.presentation == 'swatch' -%}
-                                  <div class="collection__filter-color-list">
-                                    <div class="color-swatch-list color-swatch-list--large">
-                                      {%- for filter_value in filter.values -%}
-                                        {%- assign downcased_label = filter_value.label | downcase -%}
+                              {%- endif -%}
+                              {%- unless filter.type == 'boolean' %}
+                                  <div id="{{ filter.param_name | handle | escape }}" class="collection__filter-collapsible" {% if is_filter_expanded %}aria-hidden="false" style="height: auto; overflow: visible"{% else %}aria-hidden="true" {% endif %}>
+                                      {%- case filter.type -%}
+                                        {%- when 'list' -%}
+                                          {%- if filter.presentation == 'image' -%}
+                                            <div class="collection__filter-visual-filter-list">
+                                              <div class="visual-filter-list">
+                                                {%- for filter_value in filter.values -%}
+                                                  {%- assign downcased_label = filter_value.label | downcase -%}
 
-                                        <div
-                                          class="color-swatch {% if downcased_label == 'white' or downcased_label == 'blanc' %}color-swatch--white{% endif %}"
-                                          data-tooltip="{{ filter_value.label | escape }}"
-                                        >
-                                          <input
-                                            class="color-swatch__radio"
-                                            type="checkbox"
-                                            name="{{ filter_value.param_name }}"
-                                            id="{{ filter_value.param_name }}-{{ filter_value.value }}"
-                                            value="{{ filter_value.value }}"
-                                            {% if filter_value.active %}
-                                              checked
-                                            {% endif %}
-                                          >
+                                                  <div class="visual-filter">
+                                                    <input
+                                                      class="visual-filter__radio"
+                                                      type="checkbox"
+                                                      name="{{ filter_value.param_name }}"
+                                                      id="{{ filter_value.param_name }}-{{ filter_value.value }}"
+                                                      value="{{ filter_value.value }}"
+                                                      {% if filter_value.active %}
+                                                        checked
+                                                      {% endif %}
+                                                    >
 
-                                          <label
-                                            for="{{ filter_value.param_name }}-{{ filter_value.value }}"
-                                            class="color-swatch__item {% if filter_value.active %}is-selected{% endif %}"
-                                            aria-label="{{ filter_value.label | escape }}"
-                                          >
-                                            <span
-                                              class="color-swatch__item"
-                                              style="{% render 'color-swatch-style', swatch: filter_value.swatch %}"
-                                            ></span>
-                                          </label>
-                                        </div>
-                                      {%- endfor -%}
-                                    </div>
-                                  </div>
-                                {%- elsif show_color_swatch -%}
-                                  <div class="collection__filter-color-list">
-                                    <div class="color-swatch-list color-swatch-list--large">
-                                      {%- assign color_swatch_config = settings.color_swatch_config
-                                        | newline_to_br
-                                        | split: '<br />'
-                                      -%}
+                                                    <label
+                                                      for="{{ filter_value.param_name }}-{{ filter_value.value }}"
+                                                      class="visual-filter__item {% if filter_value.active %}is-selected{% endif %}"
+                                                    >
+                                                      {%- if filter_value.image != blank -%}
+                                                        {{-
+                                                          filter_value.image
+                                                          | image_url: width: filter_value.image.width
+                                                          | image_tag: loading: 'lazy', widths: '32,64,96'
+                                                        -}}
+                                                      {%- endif -%}
 
-                                      {%- for filter_value in filter.values -%}
-                                        {%- capture color_id -%}filter-color-{% increment color_index %}{%- endcapture -%}
+                                                      <span>{{- filter_value.label -}}</span>
+                                                    </label>
+                                                  </div>
+                                                {%- endfor -%}
+                                              </div>
+                                            </div>
+                                          {%- elsif filter.presentation == 'swatch' -%}
+                                            <div class="collection__filter-color-list">
+                                              <div class="color-swatch-list color-swatch-list--large">
+                                                {%- for filter_value in filter.values -%}
+                                                  {%- assign downcased_label = filter_value.label | downcase -%}
 
-                                        {%- assign downcased_value = filter_value.label | downcase -%}
+                                                  <div
+                                                    class="color-swatch {% if downcased_label == 'white' or downcased_label == 'blanc' %}color-swatch--white{% endif %}"
+                                                    data-tooltip="{{ filter_value.label | escape }}"
+                                                  >
+                                                    <input
+                                                      class="color-swatch__radio"
+                                                      type="checkbox"
+                                                      name="{{ filter_value.param_name }}"
+                                                      id="{{ filter_value.param_name }}-{{ filter_value.value }}"
+                                                      value="{{ filter_value.value }}"
+                                                      {% if filter_value.active %}
+                                                        checked
+                                                      {% endif %}
+                                                    >
 
-                                        <div
-                                          class="color-swatch {% if downcased_value == 'white' or downcased_value == 'blanc' %}color-swatch--white{% endif %}"
-                                          data-tooltip="{{ filter_value.label | escape }}"
-                                        >
-                                          <input
-                                            class="color-swatch__radio"
-                                            type="checkbox"
-                                            name="{{ filter.param_name }}"
-                                            id="{{ filter_value.param_name }}-{{ filter_value.value }}"
-                                            value="{{ filter_value.value }}"
-                                            {% if filter_value.active %}
-                                              checked
-                                            {% endif %}
-                                          >
+                                                    <label
+                                                      for="{{ filter_value.param_name }}-{{ filter_value.value }}"
+                                                      class="color-swatch__item {% if filter_value.active %}is-selected{% endif %}"
+                                                      aria-label="{{ filter_value.label | escape }}"
+                                                    >
+                                                      <span
+                                                        class="color-swatch__item"
+                                                        style="{% render 'color-swatch-style', swatch: filter_value.swatch %}"
+                                                      ></span>
+                                                    </label>
+                                                  </div>
+                                                {%- endfor -%}
+                                              </div>
+                                            </div>
+                                          {%- elsif show_color_swatch -%}
+                                            <div class="collection__filter-color-list">
+                                              <div class="color-swatch-list color-swatch-list--large">
+                                                {%- assign color_swatch_config = settings.color_swatch_config
+                                                  | newline_to_br
+                                                  | split: '<br />'
+                                                -%}
 
-                                          <label
-                                            for="{{ filter_value.param_name }}-{{ filter_value.value }}"
-                                            class="color-swatch__item {% if filter_value.active %}is-selected{% endif %}"
-                                            aria-label="{{ filter_value.label | escape }}"
-                                          >
-                                            <span
-                                              class="color-swatch__item"
-                                              style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: downcased_value %}"
-                                            ></span>
-                                          </label>
-                                        </div>
-                                      {%- endfor -%}
-                                    </div>
-                                  </div>
-                                {%- else -%}
-                                  <ul class="collection__filter-checkbox-list" role="list">
-                                    {%- for filter_value in filter.values -%}
-                                      <li class="collection__filter-checkbox">
-                                        <div class="checkbox-wrapper">
-                                          <input
-                                            type="checkbox"
-                                            class="checkbox"
-                                            id="{{ filter_value.param_name }}-{{ filter_value.value }}"
-                                            name="{{ filter.param_name }}"
-                                            value="{{ filter_value.value }}"
-                                            {% if filter_value.active %}
-                                              checked="checked"
-                                            {% endif %}
-                                          >
-                                          {% render 'icon', icon: 'check' %}
-                                        </div>
+                                                {%- for filter_value in filter.values -%}
+                                                  {%- capture color_id -%}filter-color-{% increment color_index %}{%- endcapture -%}
 
-                                        <label for="{{ filter_value.param_name }}-{{ filter_value.value }}">
-                                          {{- filter_value.label }}
-                                          {% if section.settings.quick_links_show_products_count -%}
-                                            ({{ filter_value.count }})
+                                                  {%- assign downcased_value = filter_value.label | downcase -%}
+
+                                                  <div
+                                                    class="color-swatch {% if downcased_value == 'white' or downcased_value == 'blanc' %}color-swatch--white{% endif %}"
+                                                    data-tooltip="{{ filter_value.label | escape }}"
+                                                  >
+                                                    <input
+                                                      class="color-swatch__radio"
+                                                      type="checkbox"
+                                                      name="{{ filter.param_name }}"
+                                                      id="{{ filter_value.param_name }}-{{ filter_value.value }}"
+                                                      value="{{ filter_value.value }}"
+                                                      {% if filter_value.active %}
+                                                        checked
+                                                      {% endif %}
+                                                    >
+
+                                                    <label
+                                                      for="{{ filter_value.param_name }}-{{ filter_value.value }}"
+                                                      class="color-swatch__item {% if filter_value.active %}is-selected{% endif %}"
+                                                      aria-label="{{ filter_value.label | escape }}"
+                                                    >
+                                                      <span
+                                                        class="color-swatch__item"
+                                                        style="{% render 'color-swatch-style', color_swatch_config: color_swatch_config, value: downcased_value %}"
+                                                      ></span>
+                                                    </label>
+                                                  </div>
+                                                {%- endfor -%}
+                                              </div>
+                                            </div>
+                                          {%- else -%}
+                                            <ul class="collection__filter-checkbox-list" role="list">
+                                              {%- for filter_value in filter.values -%}
+                                                <li class="collection__filter-checkbox">
+                                                  <div class="checkbox-wrapper">
+                                                    <input
+                                                      type="checkbox"
+                                                      class="checkbox"
+                                                      id="{{ filter_value.param_name }}-{{ filter_value.value }}"
+                                                      name="{{ filter.param_name }}"
+                                                      value="{{ filter_value.value }}"
+                                                      {% if filter_value.active %}
+                                                        checked="checked"
+                                                      {% endif %}
+                                                    >
+                                                    {% render 'icon', icon: 'check' %}
+                                                  </div>
+
+                                                  <label for="{{ filter_value.param_name }}-{{ filter_value.value }}">
+                                                    {{- filter_value.label }}
+                                                    {% if section.settings.quick_links_show_products_count -%}
+                                                      ({{ filter_value.count }})
+                                                    {%- endif -%}
+                                                  </label>
+                                                </li>
+                                              {%- endfor -%}
+                                            </ul>
                                           {%- endif -%}
-                                        </label>
-                                      </li>
-                                    {%- endfor -%}
-                                  </ul>
-                                {%- endif -%}
 
-                              {%- when 'price_range' -%}
-                                <price-range class="price-range">
-                                  {%- assign min_value = filter.min_value.value | default: 0.0 | divided_by: 100.0 -%}
-                                  {%- assign max_value = filter.max_value.value
-                                    | default: filter.range_max
-                                    | divided_by: 100.0
-                                  -%}
-                                  {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
+                                        {%- when 'price_range' -%}
+                                          <price-range class="price-range">
+                                            {%- assign min_value = filter.min_value.value | default: 0.0 | divided_by: 100.0 -%}
+                                            {%- assign max_value = filter.max_value.value
+                                              | default: filter.range_max
+                                              | divided_by: 100.0
+                                            -%}
+                                            {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
 
-                                  {% assign lower_bound_progress = min_value | divided_by: range_max | times: 100.0 %}
-                                  {% assign higher_bound_progress = max_value | divided_by: range_max | times: 100.0 %}
+                                            {% assign lower_bound_progress = min_value | divided_by: range_max | times: 100.0 %}
+                                            {% assign higher_bound_progress = max_value | divided_by: range_max | times: 100.0 %}
 
-                                  <div
-                                    class="price-range__range-group range-group"
-                                    style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%"
-                                  >
-                                    <input
-                                      type="range"
-                                      aria-label="{{ 'collection.filter.price_filter_from' | t }}"
-                                      class="range"
-                                      min="0"
-                                      max="{{ range_max | ceil }}"
-                                      value="{{ min_value | ceil }}"
-                                    >
-                                    <input
-                                      type="range"
-                                      aria-label="{{ 'collection.filter.price_filter_to' | t }}"
-                                      class="range"
-                                      min="0"
-                                      max="{{ range_max | ceil }}"
-                                      value="{{ max_value | ceil }}"
-                                    >
+                                            <div
+                                              class="price-range__range-group range-group"
+                                              style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%"
+                                            >
+                                              <input
+                                                type="range"
+                                                aria-label="{{ 'collection.filter.price_filter_from' | t }}"
+                                                class="range"
+                                                min="0"
+                                                max="{{ range_max | ceil }}"
+                                                value="{{ min_value | ceil }}"
+                                              >
+                                              <input
+                                                type="range"
+                                                aria-label="{{ 'collection.filter.price_filter_to' | t }}"
+                                                class="range"
+                                                min="0"
+                                                max="{{ range_max | ceil }}"
+                                                value="{{ max_value | ceil }}"
+                                              >
+                                            </div>
+
+                                            <div class="price-range__input-group">
+                                              <div class="price-range__input input-prefix">
+                                                <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                                <input
+                                                  aria-label="{{ 'collection.filter.price_filter_from' | t }}"
+                                                  class="input-prefix__field"
+                                                  type="number"
+                                                  inputmode="numeric"
+                                                  {% if filter.min_value.value %}
+                                                    value="{{ min_value | ceil }}"
+                                                  {% endif %}
+                                                  name="{{ filter.min_value.param_name }}"
+                                                  min="0"
+                                                  max="{{ max_value | ceil }}"
+                                                  placeholder="0"
+                                                >
+                                              </div>
+
+                                              <span class="price-range__delimiter text--small">-</span>
+
+                                              <div class="price-range__input input-prefix">
+                                                <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                                <input
+                                                  aria-label="{{ 'collection.filter.price_filter_to' | t }}"
+                                                  class="input-prefix__field"
+                                                  type="number"
+                                                  inputmode="numeric"
+                                                  {% if filter.max_value.value %}
+                                                    value="{{ max_value | ceil }}"
+                                                  {% endif %}
+                                                  name="{{ filter.max_value.param_name }}"
+                                                  min="{{ min_value | ceil }}"
+                                                  max="{{ range_max | ceil }}"
+                                                  placeholder="{{ range_max | ceil }}"
+                                                >
+                                              </div>
+                                            </div>
+                                          </price-range>
+                                      {%- endcase -%}
                                   </div>
-
-                                  <div class="price-range__input-group">
-                                    <div class="price-range__input input-prefix">
-                                      <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
-                                      <input
-                                        aria-label="{{ 'collection.filter.price_filter_from' | t }}"
-                                        class="input-prefix__field"
-                                        type="number"
-                                        inputmode="numeric"
-                                        {% if filter.min_value.value %}
-                                          value="{{ min_value | ceil }}"
-                                        {% endif %}
-                                        name="{{ filter.min_value.param_name }}"
-                                        min="0"
-                                        max="{{ max_value | ceil }}"
-                                        placeholder="0"
-                                      >
-                                    </div>
-
-                                    <span class="price-range__delimiter text--small">-</span>
-
-                                    <div class="price-range__input input-prefix">
-                                      <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
-                                      <input
-                                        aria-label="{{ 'collection.filter.price_filter_to' | t }}"
-                                        class="input-prefix__field"
-                                        type="number"
-                                        inputmode="numeric"
-                                        {% if filter.max_value.value %}
-                                          value="{{ max_value | ceil }}"
-                                        {% endif %}
-                                        name="{{ filter.max_value.param_name }}"
-                                        min="{{ min_value | ceil }}"
-                                        max="{{ range_max | ceil }}"
-                                        placeholder="{{ range_max | ceil }}"
-                                      >
-                                    </div>
-                                  </div>
-                                </price-range>
-                            {%- endcase -%}
+                              {%- endunless -%}
                           </div>
-                        {%- endunless -%}
-                      </div>
-                    {%- endfor -%}
+                      {%- endfor -%}
                   </div>
-
                   <noscript>
                     <button type="submit" class="button button--secondary button--full" style="margin-top: 10px">
                       {{ 'collection.filter.view_results' | t }}
@@ -622,666 +574,572 @@
             </div>
           </div>
         {% else %}
-          {%- if section.settings.show_filters and collection.filters != empty -%}
-            <form id="desktop-filters-form" class="card__section card__section--tight customForm">
-              <input type="hidden" name="sort_by" value="{{ sort_by }}">
-              {%- if collection.current_type != blank or collection.current_vendor != blank -%}
-                <input
-                  type="hidden"
-                  name="q"
-                  value="{{ collection.current_vendor | default: collection.current_type | escape }}"
-                >
-              {%- endif -%}
-              <div class="mobile-filter-btn">
-                <button id="openMobileFilterBtn2" type="button" class="filter-button">
-                  <img
-                    style="height: 20px; width: 20px;"
-                    src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/page_info.svg?v=1748611226"
-
-                  ><span style="line-height: 100%;">Filter</span>
-                </button>
-                <div class="filter-modal2">
-                  <div class="filter-modal-header" style="display: flex ; align-items: center; gap: 11px;">
-                    <div
-                      id="closeMobileFilterBtn2"
-                      style="display: flex ; align-items: center; gap: 9px; }"
-                      class="filter-modal-close-btn"
-                    >
-                      <div style="height: 28px; width: 28px; border-radius: 50%; padding: 7px; background: #715AEF;">
-                        <img
-                          style="height 13px; width: 13px;"
-                          src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back_1.svg?v=1748616366"
-                        >
-                      </div>
-                      <span style="font-size: 15px; font-weight: 400;">Terug</span>
-                    </div>
-                    <div class="reset-apply-btn" type="button" style="display: flex ; gap: 11px; align-items: center;">
-                      <button
-                        class="reset-btn reset-filters-btn"
-                        type="button"
-                        style="background: #715AEF; padding: 10px; border-radius: 8px; color: white; display: flex ; align-items: center; gap: 10px; line-height: 100%;"
-                      >
-                        <img
-                          style="height: 16px; width: 16px;"
-                          src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/autorenew.svg?v=1748616532"
-                        >
-                        <span>Reset</span>
-                      </button>
-                      <button
-                        class="apply-btn"
-                        type="button"
-                        id="applyHeaderBtn"
-                        style="background: #EC40A4; border-radius: 8px; padding: 10px; display: flex ; align-items: center; gap: 10px; color: white; line-height: 100%;"
-                      >
-                        <img
-                          style="height: 16px; width: 16px;"
-                          src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/page_info_1.svg?v=1748617845"
-                        >
-                        <span>Apply</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="filters-block-main">
-                    <div class="price-filter-wrapper 12345678">
-                      {% for block in section.blocks %}
-                        {% if block.settings.price_title == 'Price' %}
-                          <div class="price-title">{{ block.settings.price_title }}</div>
-                        {% endif %}
-                        {% assign ranges = block.settings.filters_price | split: ',' %}
-                        <div class="price-buttons">
-                          {% for range in ranges %}
-                            {% assign parts = range | split: '-' %}
-                            {% assign min = parts[0] | strip %}
-                            {% assign max = parts[1] | strip %}
-                            {% assign index = forloop.index0 %}
-                            <div class="price-filter-btn-mainwrapper {% if index > 3 %}hidden-price{% endif %}">
-                              <div class="price-icon-holder">
-                                <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
-                              </div>
-                              <button class="price-filter-btn" type="button" data-min="{{ min }}" data-max="{{ max }}">
-                                From {{ cart.currency.symbol -}}
-                                {{- min }} to {{ cart.currency.symbol -}}
-                                {{- max }}
-                              </button>
+            {%- if section.settings.show_filters and collection.filters != empty -%}
+                <form id="desktop-filters-form" class="card__section card__section--tight customForm">
+                    <input type="hidden" name="sort_by" value="{{ sort_by }}">
+                    {%- if collection.current_type != blank or collection.current_vendor != blank -%}
+                        <input type="hidden" name="q" value="{{ collection.current_vendor | default: collection.current_type | escape }}">
+                    {%- endif -%}
+                    <div class="mobile-filter-btn">
+                        <button id="openMobileFilterBtn2" type="button" class="filter-button">
+                            <img style="height: 20px; width: 20px;" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/page_info.svg?v=1748611226">
+                            <span style="line-height: 100%;">Filter</span>
+                        </button>
+                        <div class="filter-modal2">
+                          <div class="filter-modal-header" style="display: flex ; align-items: center; gap: 11px;">
+                            <div id="closeMobileFilterBtn2" style="display: flex ; align-items: center; gap: 9px;" class="filter-modal-close-btn">
+                                <div style="height: 28px; width: 28px; border-radius: 50%; padding: 7px; background: #715AEF;">
+                                    <img style="height 13px; width: 13px;" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back_1.svg?v=1748616366">
+                                </div>
+                                <span style="font-size: 15px; font-weight: 400;">Terug</span>
                             </div>
-                            {% if forloop.last %}
-                              {% if block.settings.price_title == 'Price' %}
-                                <div class="price-filter-btn-mainwrapper hidden-price forCustomCss ">
-                                  <div class="price-icon-holder">
-                                    <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
-                                  </div>
-                                  <div
-                                    class="price-filter-btn price-filter-btn-customs"
-                                    data-min="0"
-                                    data-max="1000"
-                                  ></div>
-
-                                  <div class="priceinputholder">
-                                    <span class="forfullwidthSpan form__input-wrapper form__input-wrapper--labelled">
-                                      {{- block.settings.filters_price_text -}}
-                                    </span>
-                                    {% for filter in collection.filters %}
-                                      {% if filter.type == 'price_range' %}
-                                        <price-range class="price-range ForDisplayNone">
-                                          {%- assign min_value = filter.min_value.value
-                                            | default: 0.0
-                                            | divided_by: 100.0
-                                          -%}
-                                          {%- assign max_value = filter.max_value.value
-                                            | default: filter.range_max
-                                            | divided_by: 100.0
-                                          -%}
-                                          {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
-
-                                          {% assign lower_bound_progress = min_value
-                                            | divided_by: range_max
-                                            | times: 100.0
-                                          %}
-                                          {% assign higher_bound_progress = max_value
-                                            | divided_by: range_max
-                                            | times: 100.0
-                                          %}
-
-                                          <div
-                                            class="price-range__range-group range-group"
-                                            style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%"
-                                          >
-                                            <input
-                                              type="range"
-                                              aria-label="{{ 'collection.filter.price_filter_from' | t }}"
-                                              class="range"
-                                              min="0"
-                                              max="{{ range_max | ceil }}"
-                                              value="{{ min_value | ceil }}"
-                                            >
-                                            <input
-                                              type="range"
-                                              aria-label="{{ 'collection.filter.price_filter_to' | t }}"
-                                              class="range"
-                                              min="0"
-                                              max="{{ range_max | ceil }}"
-                                              value="{{ max_value | ceil }}"
-                                            >
-                                          </div>
-                                          <div class="price-range__input-group">
-                                            <div class="price-range__input input-prefix">
-                                              <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
-                                              <input
-                                                id="disabledrangeminMob"
-                                                aria-label="{{ 'collection.filter.price_filter_from' | t }}"
-                                                class="input-prefix__field"
-                                                type="number"
-                                                disabled="disabled"
-                                                inputmode="numeric"
-                                                {% if filter.min_value.value %}
-                                                  value="{{ min_value | ceil }}"
+                            <div class="reset-apply-btn" type="button" style="display: flex ; gap: 11px; align-items: center;">
+                                <button class="reset-btn reset-filters-btn" type="button" style="background: #715AEF; padding: 10px; border-radius: 8px; color: white; display: flex ; align-items: center; gap: 10px; line-height: 100%;">
+                                    <img style="height: 16px; width: 16px;" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/autorenew.svg?v=1748616532">
+                                    <span>Reset</span>
+                                </button>
+                                <button class="apply-btn" type="button" id="applyHeaderBtn" style="background: #EC40A4; border-radius: 8px; padding: 10px; display: flex ; align-items: center; gap: 10px; color: white; line-height: 100%;">
+                                  <img style="height: 16px; width: 16px;" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/page_info_1.svg?v=1748617845">
+                                  <span>Apply</span>
+                                </button>
+                            </div>
+                          </div>
+                          <div class="filters-block-main">
+                              <div class="price-filter-wrapper 12345678">
+                                {% for block in section.blocks %}
+                                    {% case block.type  %}
+                                        {% when 'filter_price' %}
+                                          {% if block.settings.price_title == 'Price' or block.settings.price_title == 'Prix' %}
+                                            <div class="price-title">{{ block.settings.price_title }}</div>
+                                          {% endif %}
+                                          {% assign ranges = block.settings.filters_price | split: ',' %}
+                                          <div class="price-buttons">
+                                            {% for range in ranges %}
+                                              {% assign parts = range | split: '-' %}
+                                              {% assign min = parts[0] | strip %}
+                                              {% assign max = parts[1] | strip %}
+                                              {% assign index = forloop.index0 %}
+                                              <div class="price-filter-btn-mainwrapper {% if index > 3 %}hidden-price{% endif %}">
+                                                <div class="price-icon-holder">
+                                                  <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
+                                                </div>
+                                                <button class="price-filter-btn" type="button" data-min="{{ min }}" data-max="{{ max }}">
+                                                  From {{ cart.currency.symbol -}}
+                                                  {{- min }} to {{ cart.currency.symbol -}}
+                                                  {{- max }}
+                                                </button>
+                                              </div>
+                                              {% if forloop.last %}
+                                                {% if block.settings.price_title == 'Price' or block.settings.price_title == 'Prix' %}                                
+                                                  <div class="price-filter-btn-mainwrapper hidden-price forCustomCss ">
+                                                    <div class="price-icon-holder">
+                                                      <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
+                                                    </div>
+                                                    <div class="price-filter-btn price-filter-btn-customs"data-min="0"data-max="1000"></div>
+                                                    <div class="priceinputholder">
+                                                      <span class="forfullwidthSpan form__input-wrapper form__input-wrapper--labelled">
+                                                        {{- block.settings.filters_price_text -}}
+                                                      </span>
+                                                      {% for filter in collection.filters %}
+                                                        {% if filter.type == 'price_range' %}
+                                                          <price-range class="price-range ForDisplayNone">
+                                                            {%- assign min_value = filter.min_value.value
+                                                              | default: 0.0
+                                                              | divided_by: 100.0
+                                                            -%}
+                                                            {%- assign max_value = filter.max_value.value
+                                                              | default: filter.range_max
+                                                              | divided_by: 100.0
+                                                            -%}
+                                                            {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
+                  
+                                                            {% assign lower_bound_progress = min_value
+                                                              | divided_by: range_max
+                                                              | times: 100.0
+                                                            %}
+                                                            {% assign higher_bound_progress = max_value
+                                                              | divided_by: range_max
+                                                              | times: 100.0
+                                                            %}
+                  
+                                                            <div
+                                                              class="price-range__range-group range-group"
+                                                              style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%"
+                                                            >
+                                                              <input
+                                                                type="range"
+                                                                aria-label="{{ 'collection.filter.price_filter_from' | t }}"
+                                                                class="range"
+                                                                min="0"
+                                                                max="{{ range_max | ceil }}"
+                                                                value="{{ min_value | ceil }}"
+                                                              >
+                                                              <input
+                                                                type="range"
+                                                                aria-label="{{ 'collection.filter.price_filter_to' | t }}"
+                                                                class="range"
+                                                                min="0"
+                                                                max="{{ range_max | ceil }}"
+                                                                value="{{ max_value | ceil }}"
+                                                              >
+                                                            </div>
+                                                            <div class="price-range__input-group">
+                                                              <div class="price-range__input input-prefix">
+                                                                <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                                                <input
+                                                                  id="disabledrangeminMob"
+                                                                  aria-label="{{ 'collection.filter.price_filter_from' | t }}"
+                                                                  class="input-prefix__field"
+                                                                  type="number"
+                                                                  disabled="disabled"
+                                                                  inputmode="numeric"
+                                                                  {% if filter.min_value.value %}
+                                                                    value="{{ min_value | ceil }}"
+                                                                  {% endif %}
+                                                                  name="{{ filter.min_value.param_name }}"
+                                                                  min="0"
+                                                                  max="{{ max_value | ceil }}"
+                                                                  placeholder="0"
+                                                                >
+                                                              </div>
+                  
+                                                              <span class="price-range__delimiter text--small">-</span>
+                  
+                                                              <div class="price-range__input input-prefix">
+                                                                <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                                                <input
+                                                                  aria-label="{{ 'collection.filter.price_filter_to' | t }}"
+                                                                  class="input-prefix__field"
+                                                                  type="number"
+                                                                  id="disabledrangemaxMob"
+                                                                  disabled="disabled"
+                                                                  inputmode="numeric"
+                                                                  {% if filter.max_value.value %}
+                                                                    value="{{ max_value | ceil }}"
+                                                                  {% endif %}
+                                                                  name="{{ filter.max_value.param_name }}"
+                                                                  min="{{ min_value | ceil }}"
+                                                                  max="{{ range_max | ceil }}"
+                                                                  placeholder="{{ range_max | ceil }}"
+                                                                >
+                                                              </div>
+                                                            </div>
+                                                          </price-range>
+                                                        {% endif %}
+                                                      {% endfor %}
+                                                    </div>
+                                                  </div>
                                                 {% endif %}
-                                                name="{{ filter.min_value.param_name }}"
-                                                min="0"
-                                                max="{{ max_value | ceil }}"
-                                                placeholder="0"
-                                              >
-                                            </div>
-
-                                            <span class="price-range__delimiter text--small">-</span>
-
-                                            <div class="price-range__input input-prefix">
-                                              <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
-                                              <input
-                                                aria-label="{{ 'collection.filter.price_filter_to' | t }}"
-                                                class="input-prefix__field"
-                                                type="number"
-                                                id="disabledrangemaxMob"
-                                                disabled="disabled"
-                                                inputmode="numeric"
-                                                {% if filter.max_value.value %}
-                                                  value="{{ max_value | ceil }}"
-                                                {% endif %}
-                                                name="{{ filter.max_value.param_name }}"
-                                                min="{{ min_value | ceil }}"
-                                                max="{{ range_max | ceil }}"
-                                                placeholder="{{ range_max | ceil }}"
-                                              >
-                                            </div>
+                                              {% endif %}
+                                            {% endfor %}
                                           </div>
-                                        </price-range>
-                                      {% endif %}
-                                    {% endfor %}
-                                  </div>
-                                </div>
-                              {% endif %}
-                            {% endif %}
-                          {% endfor %}
-                        </div>
-                        {% if ranges.size > 4 %}
-                          <div class="price-toggle-buttons">
-                            <button
-                              id="showMorePrices"
-                              type="button"
-                              class="showMorePrices"
-                              style="text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
-                            >
-                              Show more
-                            </button>
-                            <button
-                              id="showLessPrices"
-                              type="button"
-                              class="showLessPrices"
-                              style="display: none; text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
-                            >
-                              Show less
-                            </button>
-                          </div>
-                        {% endif %}
-                      {% endfor %}
-                    </div>
-                    <div class="color-filter-wrapper" style="width: 277px; padding-bottom: 32px; padding-top: 32px;">
-                      {% for block in section.blocks %}
-                        {% assign color_labels = block.settings.filters_text_2 | split: ',' %}
-                        {% assign color_images = block.settings.filters_image_2 | newline_to_br | split: '<br />' %}
-                        <div class="color-filter-block">
-                          <div
-                            class="color-filter-title"
-                            style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;"
-                          >
-                            {{ block.settings.filter_title_2 }}
-                          </div>
-                          <div class="color-filter-list">
-                            {% assign optionname = block.settings.optionName | downcase %}
-                            {% assign multi_colors_string = '' %}
-                            {% assign single_colors_string = '' %}
-
-                            {% if block.type == 'filter_block' %}
-                              {% for filter in collection.filters %}
-                                {% assign filter_name = filter.label | downcase %}
-                                {% if filter_name == optionname %}
-                                  {% for value in filter.values %}
-                                    {% if value.label contains '+' %}
-                                      {% if multi_colors_string == '' %}
-                                        {% assign multi_colors_string = value.label %}
-                                      {% else %}
-                                        {% assign multi_colors_string = multi_colors_string
-                                          | append: ','
-                                          | append: value.label
-                                        %}
-                                      {% endif %}
-                                    {% else %}
-                                      {% if single_colors_string == '' %}
-                                        {% assign single_colors_string = value.label %}
-                                      {% else %}
-                                        {% assign single_colors_string = single_colors_string
-                                          | append: ','
-                                          | append: value.label
-                                        %}
-                                      {% endif %}
-                                    {% endif %}
-                                  {% endfor %}
-                                {% endif %}
-                              {% endfor %}
-                            {% endif %}
-                            {% for label in color_labels %}
-                              {% assign img_index = forloop.index0 %}
-                              {% assign img_url = color_images[img_index] | strip %}
-                              <button
-                                type="button"
-                                class="color-filter-item color-filter-btn"
-                                data-filter-color="{% if label == color_labels[0] %} {{ single_colors_string }} {%else %} {{ multi_colors_string }} {% endif %}"
-                              >
-                                <span
-                                  class="color-filter-swatch"
-                                  style="background-image: url('{{ img_url }}');"
-                                ></span>
-                                <span class="color-filter-label">{{ label | strip }}</span>
-                              </button>
-                            {% endfor %}
-                          </div>
-                        </div>
-                      {% endfor %}
-                    </div>
-                    <div
-                      class="sidebar-menu"
-                      style="width: 277px; padding: 32px 0;border-top: 1px solid rgba(247, 245, 255, 1);"
-                    >
-                      {% for block in section.blocks %}
-                        {% assign filter_texts = block.settings.filters_text | split: ',' %}
-                        {% assign filter_images = block.settings.filters_image | newline_to_br | split: '<br />' %}
-                        <div class="filter-block">
-                          <div
-                            class="block-title"
-                            style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;"
-                          >
-                            {{ block.settings.title }}
-                          </div>
-                          <div class="blocktype-filter" style="display: grid ; grid-gap: 8px;">
-                            {% for text in filter_texts %}
-                              {% assign image_index = forloop.index0 %}
-                              {% assign image_url = filter_images[image_index] | strip %}
-                              <button
-                                type="button"
-                                class="filter-btn  Button_filter"
-                                data-filter="{{ text | strip | downcase }}"
-                              >
-                                <div class="filter-img">
-                                  <img
-                                    style="width: 90px; height: 64px; object-fit: cover; border-radius: 8px 0 0 8px;"
-                                    src="{{ image_url }}"
-                                  >
-                                </div>
-                                <span class="filter-label">{{ text | strip }}</span>
-                              </button>
-                            {% endfor %}
-                          </div>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                  <div
-                    class="reset-apply-btn"
-                    type="button"
-                    style="display: grid; grid-gap: 11px; align-items: center; padding: 25px 0 52px 0;"
-                  >
-                    <button
-                      type="button"
-                      type="button"
-                      class="apply-btn"
-                      id="applyFilterBtn"
-                      style="justify-content: center; background: #EC40A4; border-radius: 8px; padding: 10px; display: flex ; align-items: center; gap: 10px; color: white; line-height: 100%;"
-                    >
-                      <img
-                        style="height: 16px; width: 16px;"
-                        src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/page_info_1.svg?v=1748617845"
-                      >
-                      <span>Apply Filter</span>
-                    </button>
-                    <button
-                      type="button"
-                      type="button"
-                      class="reset-btn reset-filters-btn"
-                      style="justify-content: center; background: #715AEF; padding: 10px; border-radius: 8px; color: white; display: flex ; align-items: center; gap: 10px; line-height: 100%;"
-                    >
-                      <img
-                        style="height: 16px; width: 16px;"
-                        src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/autorenew.svg?v=1748616532"
-                      >
-                      <span>Reset</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              {% comment %}
-                {%for filter in collection.filters  %}
-                  {{filter.type }}
-                  {{filter.lable }}
-                {% endfor %}
-              {% endcomment %}
-              <div class="filters-block-main">
-                <div class="price-filter-wrapper">
-                  {% for block in section.blocks %}
-                    {% if block.settings.price_title == 'Price' %}
-                      <input
-                        class="PriceStartFilter"
-                        style="display:none;"
-                        type="number"
-                        value=""
-                        inputmode="numeric"
-                        name="filter.v.price.gte"
-                      >
-                      <input
-                        class="PriceEndFilter"
-                        style="display:none;"
-                        type="number"
-                        value=""
-                        inputmode="numeric"
-                        name="filter.v.price.lte"
-                      >
-                      <div class="price-title">{{ block.settings.price_title }}</div>
-                    {% endif %}
-                    {% assign ranges = block.settings.filters_price | split: ',' %}
-                    <div class="price-buttons">
-                      {% for range in ranges %}
-                        {% assign parts = range | split: '-' %}
-                        {% assign min = parts[0] | strip %}
-                        {% assign max = parts[1] | strip %}
-                        {% assign index = forloop.index0 %}
-                        <div class="price-filter-btn-mainwrapper {% if index > 3 %}hidden-price{% endif %}">
-                          <div class="price-icon-holder">
-                            <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
-                          </div>
-                          <button type="button" class="price-filter-btn" data-min="{{ min }}" data-max="{{ max }}">
-                            From {{ cart.currency.symbol -}}
-                            {{- min }} to {{ cart.currency.symbol -}}
-                            {{- max }}
-                          </button>
-                        </div>
-                        {% if forloop.last %}
-                          {% if block.settings.price_title == 'Price' %}
-                            <div class="price-filter-btn-mainwrapper hidden-price forCustomCss">
-                              <div class="price-icon-holder">
-                                <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
-                              </div>
-                              <div class="price-filter-btn price-filter-btn-customs" data-min="0" data-max="1000"></div>
-
-                              <div class="priceinputholder">
-                                <span class="forfullwidthSpan form__input-wrapper form__input-wrapper--labelled">
-                                  {{- block.settings.filters_price_text -}}
-                                </span>
-                                {% for filter in collection.filters %}
-                                  {% if filter.type == 'price_range' %}
-                                    <price-range class="price-range ForDisplayNone">
-                                      {%- assign min_value = filter.min_value.value
-                                        | default: 0.0
-                                        | divided_by: 100.0
-                                      -%}
-                                      {%- assign max_value = filter.max_value.value
-                                        | default: filter.range_max
-                                        | divided_by: 100.0
-                                      -%}
-                                      {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
-
-                                      {% assign lower_bound_progress = min_value
-                                        | divided_by: range_max
-                                        | times: 100.0
-                                      %}
-                                      {% assign higher_bound_progress = max_value
-                                        | divided_by: range_max
-                                        | times: 100.0
-                                      %}
-
-                                      <div
-                                        class="price-range__range-group range-group"
-                                        style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%"
-                                      >
-                                        <input
-                                          type="range"
-                                          aria-label="{{ 'collection.filter.price_filter_from' | t }}"
-                                          class="range"
-                                          min="0"
-                                          max="{{ range_max | ceil }}"
-                                          value="{{ min_value | ceil }}"
-                                        >
-                                        <input
-                                          type="range"
-                                          aria-label="{{ 'collection.filter.price_filter_to' | t }}"
-                                          class="range"
-                                          min="0"
-                                          max="{{ range_max | ceil }}"
-                                          value="{{ max_value | ceil }}"
-                                        >
-                                      </div>
-                                      <div class="price-range__input-group">
-                                        <div class="price-range__input input-prefix">
-                                          <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
-                                          <input
-                                            id="disabledrangeminDesk"
-                                            aria-label="{{ 'collection.filter.price_filter_from' | t }}"
-                                            class="input-prefix__field"
-                                            type="number"
-                                            disabled="disabled"
-                                            inputmode="numeric"
-                                            {% if filter.min_value.value %}
-                                              value="{{ min_value | ceil }}"
-                                            {% endif %}
-                                            name="{{ filter.min_value.param_name }}"
-                                            min="0"
-                                            max="{{ max_value | ceil }}"
-                                            placeholder="0"
-                                          >
-                                        </div>
-
-                                        <span class="price-range__delimiter text--small">-</span>
-
-                                        <div class="price-range__input input-prefix">
-                                          <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
-                                          <input
-                                            aria-label="{{ 'collection.filter.price_filter_to' | t }}"
-                                            class="input-prefix__field"
-                                            type="number"
-                                            id="disabledrangemaxDesk"
-                                            disabled="disabled"
-                                            inputmode="numeric"
-                                            {% if filter.max_value.value %}
-                                              value="{{ max_value | ceil }}"
-                                            {% endif %}
-                                            name="{{ filter.max_value.param_name }}"
-                                            min="{{ min_value | ceil }}"
-                                            max="{{ range_max | ceil }}"
-                                            placeholder="{{ range_max | ceil }}"
-                                          >
-                                        </div>
-                                      </div>
-                                    </price-range>
-                                  {% endif %}
+                                          {% if ranges.size > 4 %}
+                                            <div class="price-toggle-buttons">
+                                              <button
+                                                id="showMorePrices"
+                                                type="button"
+                                                class="showMorePrices"
+                                                style="text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
+                                              >
+                                                Show more
+                                              </button>
+                                              <button
+                                                id="showLessPrices"
+                                                type="button"
+                                                class="showLessPrices"
+                                                style="display: none; text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
+                                              >
+                                                Show less
+                                              </button>
+                                            </div>
+                                          {% endif %}
+                                    {% endcase %}
                                 {% endfor %}
                               </div>
-                            </div>
-                          {% endif %}
-                        {% endif %}
-                      {% endfor %}
+                              <div class="color-filter-wrapper" style="width: 277px; padding-bottom: 32px; padding-top: 32px;">
+                                  {% for block in section.blocks %}
+                                      {% case block.type  %}
+                                          {% when 'filter_block' %}
+                                            {% assign color_labels = block.settings.filters_text_2 | split: ',' %}
+                                            {% assign color_images = block.settings.filters_image_2 | newline_to_br | split: '<br />' %}
+                                            <div class="color-filter-block">
+                                                <div class="color-filter-title" style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;">
+                                                  {{ block.settings.filter_title_2 }}
+                                                </div>
+                                                <div class="color-filter-list">
+                                                    {% assign optionname = block.settings.optionName | downcase %}
+                                                    {% assign multi_colors_string = '' %}
+                                                    {% assign single_colors_string = '' %}
+                                                    {% if block.type == 'filter_block' %}
+                                                      {% for filter in collection.filters %}
+                                                        {% assign filter_name = filter.label | downcase %}
+                                                        {% if filter_name == optionname %}
+                                                          {% for value in filter.values %}
+                                                            {% if value.label contains '+' %}
+                                                              {% if multi_colors_string == '' %}
+                                                                {% assign multi_colors_string = value.label %}
+                                                              {% else %}
+                                                                {% assign multi_colors_string = multi_colors_string
+                                                                  | append: ','
+                                                                  | append: value.label
+                                                                %}
+                                                              {% endif %}
+                                                            {% else %}
+                                                              {% if single_colors_string == '' %}
+                                                                {% assign single_colors_string = value.label %}
+                                                              {% else %}
+                                                                {% assign single_colors_string = single_colors_string
+                                                                  | append: ','
+                                                                  | append: value.label
+                                                                %}
+                                                              {% endif %}
+                                                            {% endif %}
+                                                          {% endfor %}
+                                                        {% endif %}
+                                                      {% endfor %}
+                                                    {% endif %}
+                                                    {% for label in color_labels %}
+                                                      {% assign img_index = forloop.index0 %}
+                                                      {% assign img_url = color_images[img_index] | strip %}
+                                                      <button type="button" class="color-filter-item color-filter-btn" data-filter-color="{% if label == color_labels[0] %} {{ single_colors_string }} {%else %} {{ multi_colors_string }} {% endif %}">
+                                                        <span
+                                                          class="color-filter-swatch"
+                                                          style="background-image: url('{{ img_url }}');"
+                                                        ></span>
+                                                        <span class="color-filter-label">{{ label | strip }}</span>
+                                                      </button>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                      {% endcase %}
+                                  {% endfor %}
+                              </div>
+                              <div class="sidebar-menu" style="width: 277px; padding: 32px 0;border-top: 1px solid rgba(247, 245, 255, 1);">
+                                {% for block in section.blocks %}
+                                    {% case block.type  %}
+                                        {% when 'filter_group' %}
+                                          {% assign filter_texts = block.settings.filters_text | split: ',' %}
+                                          {% assign filter_images = block.settings.filters_image | newline_to_br | split: '<br />' %}
+                                          <div class="filter-block">
+                                            <div
+                                              class="block-title"
+                                              style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;"
+                                            >
+                                              {{ block.settings.title }}
+                                            </div>
+                                            <div class="blocktype-filter" style="display: grid ; grid-gap: 8px;">
+                                              {% for text in filter_texts %}
+                                                {% assign image_index = forloop.index0 %}
+                                                {% assign image_url = filter_images[image_index] | strip %}
+                                                <button
+                                                  type="button"
+                                                  class="filter-btn  Button_filter"
+                                                  data-filter="{{ text | strip | downcase }}"
+                                                >
+                                                  <div class="filter-img">
+                                                    <img
+                                                      style="width: 90px; height: 64px; object-fit: cover; border-radius: 8px 0 0 8px;"
+                                                      src="{{ image_url }}"
+                                                    >
+                                                  </div>
+                                                  <span class="filter-label">{{ text | strip }}</span>
+                                                </button>
+                                              {% endfor %}
+                                            </div>
+                                          </div>
+                                      {% endcase %}
+                                {% endfor %}
+                              </div>
+                          </div>
+                          <div class="reset-apply-btn" type="button" style="display: grid; grid-gap: 11px; align-items: center; padding: 25px 0 52px 0;">
+                            <button type="button" class="apply-btn" id="applyFilterBtn" style="justify-content: center; background: #EC40A4; border-radius: 8px; padding: 10px; display: flex ; align-items: center; gap: 10px; color: white; line-height: 100%;">
+                                <img style="height: 16px; width: 16px;" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/page_info_1.svg?v=1748617845">
+                                <span>Apply Filter</span>
+                            </button>
+                            <button type="button" class="reset-btn reset-filters-btn" style="justify-content: center; background: #715AEF; padding: 10px; border-radius: 8px; color: white; display: flex ; align-items: center; gap: 10px; line-height: 100%;">
+                              <img style="height: 16px; width: 16px;" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/autorenew.svg?v=1748616532">
+                              <span>Reset</span>
+                            </button>
+                          </div>
+                        </div>
                     </div>
-                    {% if ranges.size > 4 %}
-                      <div class="price-toggle-buttons">
-                        <button
-                          id="showMorePrices"
-                          type="button"
-                          class="showMorePrices"
-                          style="text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
-                        >
-                          Show more
-                        </button>
-                        <button
-                          id="showLessPrices"
-                          type="button"
-                          class="showLessPrices"
-                          style="display: none; text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
-                        >
-                          Show less
-                        </button>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-                <div class="color-filter-wrapper" style="width: 277px; padding-bottom: 32px; padding-top: 32px;">
-                  {%- assign color_labels = 'color,colour,couleur,cor,colore,kleur,farbe,색,色,カラー,färg,farve,szín,barva'
-                    | split: ','
-                  -%} 
-                  {% assign has_color_filter = false %}
-                  {% assign color_filter_label = '' %}
-
-                  {% for filter in collection.filters %}
-                    {% assign filter_label_downcased = filter.label | downcase %}
-                    {% if color_labels contains filter_label_downcased %}
-                      {% assign has_color_filter = true %}
-                      {% assign color_filter_label = filter.label %}
-                      {% break %}
-                    {% endif %}
-                  {% endfor %}
-
-                  {% if has_color_filter %}
-                    <input
-                      id="ColorFilterOptionDynamic"
-                      style="display:none;"
-                      hidden
-                      type="text"
-                      name="ColorFilterOptionDynamic"
-                      value="filter.v.option.{{color_filter_label | downcase }}"
-                    >
-                    <input
-                      class="ColorFilter"
-                      style="display:none;"
-                      type="text"
-                      name="filter.v.option.{{color_filter_label | downcase }}"
-                      value=""
-                    >
-                    
-                {% endif %}
-
-
-                  {% for block in section.blocks %}
-                    {% assign color_labels = block.settings.filters_text_2 | split: ',' %}
-                    {% assign color_images = block.settings.filters_image_2 | newline_to_br | split: '<br />' %}
-                    <div class="color-filter-block">
-                      <div
-                        class="color-filter-title"
-                        style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;"
-                      >
-                        {{ block.settings.filter_title_2 }}
-                      </div>
-                      <div class="color-filter-list">
-                        {% assign optionname = block.settings.optionName | downcase %}
-                        {% assign multi_colors_string = '' %}
-                        {% assign single_colors_string = '' %}
-                        {% if block.type == 'filter_block' %}
-                          {% for filter in collection.filters %}
-                            {% assign filter_name = filter.label | downcase %}
-                            {% if filter_name == optionname %}
-                              {% for value in filter.values %}
-                                {% if value.label contains '+' %}
-                                  {% if multi_colors_string == '' %}
-                                    {% assign multi_colors_string = value.label %}
-                                  {% else %}
-                                    {% assign multi_colors_string = multi_colors_string
-                                      | append: ','
-                                      | append: value.label
-                                    %}
-                                  {% endif %}
-                                {% else %}
-                                  {% if single_colors_string == '' %}
-                                    {% assign single_colors_string = value.label %}
-                                  {% else %}
-                                    {% assign single_colors_string = single_colors_string
-                                      | append: ','
-                                      | append: value.label
-                                    %}
-                                  {% endif %}
+                    <div class="filters-block-main">
+                        <div class="price-filter-wrapper gfdsaffghfds">
+                            {% for block in section.blocks %}
+                                {% if block.settings.price_title == 'Price' or block.settings.price_title == 'Prix' %}
+                                    <input class="PriceStartFilter" style="display:none;" type="number" value="" inputmode="numeric" name="filter.v.price.gte">
+                                    <input class="PriceEndFilter" style="display:none;" type="number" value="" inputmode="numeric" name="filter.v.price.lte">
+                                    <div class="price-title">{{ block.settings.price_title }}</div>
                                 {% endif %}
-                              {% endfor %}
-                            {% endif %}
-                          {% endfor %}
-                        {% endif %}
-                        {% for label in color_labels %}
-                          {% assign img_index = forloop.index0 %}
-                          {% assign img_url = color_images[img_index] | strip %}
-                          <button
-                            type="button"
-                            class="color-filter-item color-filter-btn"
-                            data-filter-color="{% if label == color_labels[0] %} {{ single_colors_string }} {%else %} {{ multi_colors_string }} {% endif %}"
-                          >
-                            <span class="color-filter-swatch" style="background-image: url('{{ img_url }}');"></span>
-                            <span class="color-filter-label">{{ label | strip }}</span>
-                          </button>
-                        {% endfor %}
-                      </div>
-                    </div>
-                  {% endfor %}
-                </div>
-                <div
-                  class="sidebar-menu"
-                  style="width: 277px; padding: 32px 0; border-top: 1px solid rgba(247, 245, 255, 1);"
-                >
-                  <input
-                    class="MetaFilter"
-                    style="display:none;"
-                    type="text"
-                    name="filter.p.m.custom.product_type"
-                    value=""
-                  >
+                                {% assign ranges = block.settings.filters_price | split: ',' %}
+                                <div class="price-buttons">
+                                    {% for range in ranges %}
+                                        {% assign parts = range | split: '-' %}
+                                        {% assign min = parts[0] | strip %}
+                                        {% assign max = parts[1] | strip %}
+                                        {% assign index = forloop.index0 %}
+                                        <div class="price-filter-btn-mainwrapper {% if index > 3 %}hidden-price{% endif %}">
+                                            <div class="price-icon-holder">
+                                              <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
+                                            </div>
+                                            <button type="button" class="price-filter-btn" data-min="{{ min }}" data-max="{{ max }}">
+                                              From {{ cart.currency.symbol -}} {{- min }} to {{ cart.currency.symbol -}}{{- max }}
+                                            </button>
+                                        </div>
+                                        {% if forloop.last %}
+                                            {% if block.settings.price_title == 'Price' or block.settings.price_title == 'Prix' %}
+                                                <div class="price-filter-btn-mainwrapper hidden-price forCustomCss">
+                                                  <div class="price-icon-holder">
+                                                    <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/check.svg?v=1749640887">
+                                                  </div>
+                                                  <div class="price-filter-btn price-filter-btn-customs" data-min="0" data-max="1000"></div>
+                                                  <div class="priceinputholder">
+                                                      <span class="forfullwidthSpan form__input-wrapper form__input-wrapper--labelled">
+                                                        {{- block.settings.filters_price_text -}}
+                                                      </span>
+                                                      {% for filter in collection.filters %}
+                                                        {% if filter.type == 'price_range' %}
+                                                              <price-range class="price-range ForDisplayNone">
+                                                                {%- assign min_value = filter.min_value.value
+                                                                  | default: 0.0
+                                                                  | divided_by: 100.0
+                                                                -%}
+                                                                {%- assign max_value = filter.max_value.value
+                                                                  | default: filter.range_max
+                                                                  | divided_by: 100.0
+                                                                -%}
+                                                                {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
 
-                  {% for block in section.blocks %}
-                    {% assign filter_texts = block.settings.filters_text | split: ',' %}
-                    {% assign filter_images = block.settings.filters_image | newline_to_br | split: '<br />' %}
+                                                                {% assign lower_bound_progress = min_value
+                                                                  | divided_by: range_max
+                                                                  | times: 100.0
+                                                                %}
+                                                                {% assign higher_bound_progress = max_value
+                                                                  | divided_by: range_max
+                                                                  | times: 100.0
+                                                                %}
 
-                    <div class="filter-block">
-                      <div
-                        class="block-title"
-                        style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;"
-                      >
-                        {{ block.settings.title }}
-                      </div>
-                      <div class="blocktype-filter" style="display: grid ; grid-gap: 8px;">
-                        {% for text in filter_texts %}
-                          {% assign image_index = forloop.index0 %}
-                          {% assign image_url = filter_images[image_index] | strip %}
-                          <button
-                            type="button"
-                            class="filter-btn Button_filter"
-                            data-filter="{{ text | strip | downcase }}"
-                          >
-                            <div class="filter-img">
-                              <img
-                                style="width: 90px; height: 64px; object-fit: cover; border-radius: 8px 0 0 8px;"
-                                src="{{ image_url }}"
+                                                                <div
+                                                                  class="price-range__range-group range-group"
+                                                                  style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%"
+                                                                >
+                                                                  <input
+                                                                    type="range"
+                                                                    aria-label="{{ 'collection.filter.price_filter_from' | t }}"
+                                                                    class="range"
+                                                                    min="0"
+                                                                    max="{{ range_max | ceil }}"
+                                                                    value="{{ min_value | ceil }}"
+                                                                  >
+                                                                  <input
+                                                                    type="range"
+                                                                    aria-label="{{ 'collection.filter.price_filter_to' | t }}"
+                                                                    class="range"
+                                                                    min="0"
+                                                                    max="{{ range_max | ceil }}"
+                                                                    value="{{ max_value | ceil }}"
+                                                                  >
+                                                                </div>
+                                                                <div class="price-range__input-group">
+                                                                  <div class="price-range__input input-prefix">
+                                                                    <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                                                    <input
+                                                                      id="disabledrangeminDesk"
+                                                                      aria-label="{{ 'collection.filter.price_filter_from' | t }}"
+                                                                      class="input-prefix__field"
+                                                                      type="number"
+                                                                      disabled="disabled"
+                                                                      inputmode="numeric"
+                                                                      {% if filter.min_value.value %}
+                                                                        value="{{ min_value | ceil }}"
+                                                                      {% endif %}
+                                                                      name="{{ filter.min_value.param_name }}"
+                                                                      min="0"
+                                                                      max="{{ max_value | ceil }}"
+                                                                      placeholder="0"
+                                                                    >
+                                                                  </div>
+
+                                                                  <span class="price-range__delimiter text--small">-</span>
+
+                                                                  <div class="price-range__input input-prefix">
+                                                                    <span class="input-prefix__value">{{ cart.currency.symbol }}</span>
+                                                                    <input
+                                                                      aria-label="{{ 'collection.filter.price_filter_to' | t }}"
+                                                                      class="input-prefix__field"
+                                                                      type="number"
+                                                                      id="disabledrangemaxDesk"
+                                                                      disabled="disabled"
+                                                                      inputmode="numeric"
+                                                                      {% if filter.max_value.value %}
+                                                                        value="{{ max_value | ceil }}"
+                                                                      {% endif %}
+                                                                      name="{{ filter.max_value.param_name }}"
+                                                                      min="{{ min_value | ceil }}"
+                                                                      max="{{ range_max | ceil }}"
+                                                                      placeholder="{{ range_max | ceil }}"
+                                                                    >
+                                                                  </div>
+                                                                </div>
+                                                              </price-range>
+                                                                    {% endif %}
+                                                      {% endfor %}
+                                                  </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                {% if ranges.size > 4 %}
+                                  <div class="price-toggle-buttons">
+                                    <button
+                                      id="showMorePrices"
+                                      type="button"
+                                      class="showMorePrices"
+                                      style="text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
+                                    >
+                                      Show more
+                                    </button>
+                                    <button
+                                      id="showLessPrices"
+                                      type="button"
+                                      class="showLessPrices"
+                                      style="display: none; text-decoration: underline; margin-top: 10px; color: #e6007e; background: none; border: none; cursor: pointer;"
+                                    >
+                                      Show less
+                                    </button>
+                                  </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="color-filter-wrapper" style="width: 277px; padding-bottom: 32px; padding-top: 32px;">
+                            {%- assign color_labels = 'color,colour,couleur,cor,colore,kleur,farbe,색,色,カラー,färg,farve,szín,barva' | split: ',' -%} 
+                            {% assign has_color_filter = false %}
+                            {% assign color_filter_label = '' %}
+                            {% for filter in collection.filters %}
+                              {% assign filter_label_downcased = filter.label | downcase %}
+                              {% if color_labels contains filter_label_downcased %}
+                                {% assign has_color_filter = true %}
+                                {% assign color_filter_label = filter.label %}
+                                {% break %}
+                              {% endif %}
+                            {% endfor %}
+                            {% if has_color_filter %}
+                              <input
+                                id="ColorFilterOptionDynamic"
+                                style="display:none;"
+                                hidden
+                                type="text"
+                                name="ColorFilterOptionDynamic"
+                                value="filter.v.option.{{color_filter_label | downcase }}"
                               >
-                            </div>
-                            <span class="filter-label">{{ text | strip }}</span>
-                          </button>
-                        {% endfor %}
-                      </div>
+                              <input
+                                class="ColorFilter"
+                                style="display:none;"
+                                type="text"
+                                name="filter.v.option.{{color_filter_label | downcase }}"
+                                value=""
+                              >
+                              
+                            {% endif %}
+                            {% for block in section.blocks %}
+                                {% case block.type  %}
+                                    {% when 'filter_block' %}
+                                      {% assign color_labels = block.settings.filters_text_2 | split: ',' %}
+                                      {% assign color_images = block.settings.filters_image_2 | newline_to_br | split: '<br />' %}
+                                      <div class="color-filter-block">
+                                        <div
+                                          class="color-filter-title"
+                                          style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;"
+                                        >
+                                          {{ block.settings.filter_title_2 }}
+                                        </div>
+                                        <div class="color-filter-list">
+                                          {% assign optionname = block.settings.optionName | downcase %}
+                                          {% assign multi_colors_string = '' %}
+                                          {% assign single_colors_string = '' %}
+                                          {% if block.type == 'filter_block' %}
+                                            {% for filter in collection.filters %}
+                                              {% assign filter_name = filter.label | downcase %}
+                                              {% if filter_name == optionname %}
+                                                {% for value in filter.values %}
+                                                  {% if value.label contains '+' %}
+                                                    {% if multi_colors_string == '' %}
+                                                      {% assign multi_colors_string = value.label %}
+                                                    {% else %}
+                                                      {% assign multi_colors_string = multi_colors_string
+                                                        | append: ','
+                                                        | append: value.label
+                                                      %}
+                                                    {% endif %}
+                                                  {% else %}
+                                                    {% if single_colors_string == '' %}
+                                                      {% assign single_colors_string = value.label %}
+                                                    {% else %}
+                                                      {% assign single_colors_string = single_colors_string
+                                                        | append: ','
+                                                        | append: value.label
+                                                      %}
+                                                    {% endif %}
+                                                  {% endif %}
+                                                {% endfor %}
+                                              {% endif %}
+                                            {% endfor %}
+                                          {% endif %}
+                                          {% for label in color_labels %}
+                                            {% assign img_index = forloop.index0 %}
+                                            {% assign img_url = color_images[img_index] | strip %}
+                                            <button
+                                              type="button"
+                                              class="color-filter-item color-filter-btn"
+                                              data-filter-color="{% if label == color_labels[0] %} {{ single_colors_string }} {%else %} {{ multi_colors_string }} {% endif %}"
+                                            >
+                                              <span class="color-filter-swatch" style="background-image: url('{{ img_url }}');"></span>
+                                              <span class="color-filter-label">{{ label | strip }}</span>
+                                            </button>
+                                          {% endfor %}
+                                        </div>
+                                      </div>
+                              {% endcase %}
+                            {% endfor %}
+                        </div>
+                        <div class="sidebar-menu" style="width: 277px; padding: 32px 0; border-top: 1px solid rgba(247, 245, 255, 1);">
+                            <input class="MetaFilter" style="display:none;" type="text" name="filter.p.m.custom.product_type" value="">
+                            {% for block in section.blocks %}
+                                {% case block.type  %}
+                                    {% when 'filter_group' %}
+                                      {% assign filter_texts = block.settings.filters_text | split: ',' %}
+                                      {% assign filter_images = block.settings.filters_image | newline_to_br | split: '<br />' %}
+                                      <div class="filter-block">
+                                          <div class="block-title" style="font-size: 18px; font-weight: 700; color: black; line-height: 100%; margin-bottom: 16px;">
+                                            {{ block.settings.title }}
+                                          </div>
+                                          <div class="blocktype-filter" style="display: grid ; grid-gap: 8px;">
+                                            {% for text in filter_texts %}
+                                              {% assign image_index = forloop.index0 %}
+                                              {% assign image_url = filter_images[image_index] | strip %}
+                                              <button
+                                                type="button"
+                                                class="filter-btn Button_filter"
+                                                data-filter="{{ text | strip | downcase }}"
+                                              >
+                                                <div class="filter-img">
+                                                  <img
+                                                    style="width: 90px; height: 64px; object-fit: cover; border-radius: 8px 0 0 8px;"
+                                                    src="{{ image_url }}"
+                                                  >
+                                                </div>
+                                                <span class="filter-label">{{ text | strip }}</span>
+                                              </button>
+                                            {% endfor %}
+                                          </div>
+                                      </div>
+                                {% endcase %}
+                            {% endfor %}
+                        </div>
                     </div>
-                  {% endfor %}
-                </div>
-              </div>
-            </form>
-          {%- endif -%}
+                </form>
+            {%- endif -%}
         {% endif %}
       {%- endif -%}
       {%- paginate collection.products by items_per_page -%}
@@ -2414,18 +2272,7 @@
       background: #f7f5ff;
       padding: 0 24px;
     }
-    .color-filter-wrapper > .color-filter-block:first-child {
-      display: none;
-    }
-    .color-filter-wrapper > .color-filter-block:last-child {
-      display: none;
-    }
-    .sidebar-menu .filter-block {
-      display: none;
-    }
-    .sidebar-menu > .filter-block:last-child {
-      display: block;
-    }
+
     .pagination__next svg {
       display: none;
     }

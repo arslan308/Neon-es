@@ -40,10 +40,11 @@ input.cart-recap__checkout.button.button--primary.button--full.button--large{bor
 a.custom-button.button.button--primary.hide-mobile{white-space: nowrap;}
 .header__inner .template-change-header{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 5px 0 !important;
     width: 100%;
+    height: 50px;
 } 
 .template-change-header .call_us{
   display: flex;
@@ -453,6 +454,7 @@ span.cart-recap__amount-saved{color: #2db218;}
   background: #715aef;
   border-radius: 50%;
   margin-right: 17px;
+  object-fit: cover;
 }
 
 .popup-content .support-content {
@@ -1831,6 +1833,9 @@ ul.form-section.page-section.step-3.unique-third{
   }
   .builder_USSS .video-text-flex-in .v-t-img img{
     height: 30px;
+  }
+  .lead_page_UK_price_with_logo_discount .variationwrapper{
+    padding: 8px 0 12px !important;
   }
 }
 .page-trust-list{display: grid; grid-gap: 8px;}

@@ -40,12 +40,12 @@
             {%- else -%}
               <div class="header__logo">{{ header_logo }}</div>
             {%- endif -%} 
-            <div class="call_us">
+            {% comment %} <div class="call_us">
               {%- assign image_url_3 = section.settings.profile_img | image_url: width: section.settings.profile_img.width | image_tag: loading: 'lazy', class: 'image-3 call-us-img', sizes: 'min(100vw, 520px)', widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' -%}
               {{ image_url_3 }}
               {% comment %} <img class="call-us-img" src="{{ section.settings.profile_img }}" alt=""> {% endcomment %}
               <a href="tel:+31 850 000 749" class="our-contact-no" target="_blank" rel="noopener" aria-describedby="a11y-new-window-message">{{ section.settings.our_contact_no}}</a>
-           </div>
+           </div> {% endcomment %}
           </div> 
         {% else %}
           {%- if navigation_menu.links.size > 0 -%}
