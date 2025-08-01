@@ -3782,7 +3782,8 @@ body.lead_page_UK_price_with_logo_discount .main-slider-flex .slick-track {
 }
 
 .lead_page_UK_price_with_logo_discount .main-list-text tbody {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .lead_page_UK_price_with_logo_discount .main-list-text tr {
