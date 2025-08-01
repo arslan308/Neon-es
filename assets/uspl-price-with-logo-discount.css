@@ -384,7 +384,10 @@ top: 0;
 }
 
 .lead_page_UK_price_with_logo_discount .request-form-wrapper .avtar-wrapper img {
-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
 }
 
 .lead_page_UK_price_with_logo_discount .request-form-wrapper .avtar-wrapper {
@@ -1045,8 +1048,8 @@ justify-content: space-between;
 }
 
 .template-product .product-image-section {
-padding: 0 0 40px 0;
-background-color: #fff;
+    padding: 30px 0 40px 0;
+    background-color: #fff;
 }
 
 /* .template-product .product-image-section .discount-card{
@@ -2996,7 +2999,7 @@ body.template-product .product-image-section>.container .product-title-discripti
 }
 
 .lead_page_UK_price_with_logo_discount .price-containt-text {
-    padding: 24px 24px !important;
+    padding: 15px !important;
     margin-top: 0px !important;
     /* margin-top: 40px !important; */
     flex-direction: column;
@@ -3527,7 +3530,7 @@ body.lead_page_UK_price_with_logo_discount .main-slider-flex .slick-track {
 
 .lead_page_UK_price_with_logo_discount .header {
     padding: 0 !important;
-    min-height: 50px !important;
+    min-height: 64px !important;
 }
 
 .lead_page_UK_price_with_logo_discount.product-image-section>.container .product-images .slick-slider-small {
@@ -3958,7 +3961,7 @@ margin: 16px 0;
 .lead_page_UK_price_with_logo_discount .variationwrapper .logo img {
 width: 55%;
 }
-.header{padding: 8px 0 !important;}
+.header{padding: 0px 0 !important;}
 .lead_page_UK_price_with_logo_discount .product-image-title-discription-price-Prijs-main-class .product-image-title-discription-price-shipping {
 height: max-content;
 align-items: center !important;

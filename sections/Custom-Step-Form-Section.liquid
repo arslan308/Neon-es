@@ -1192,8 +1192,9 @@ function bgHandleFilePreview(file) {
 
     if (allFilled && emailValid && phoneValid) {
       var _terms = $('[name="terms"]').prop('checked');
-      if(_terms == true){
-          window.dataLayer.push({
+      var _watsap = ($('[name="terms-new"]').length === 0 || $('[name="terms-new"]').prop('checked') === true);
+      if(_terms == true && _watsap == true){
+            window.dataLayer.push({
             'event': 'jot_form_submit',
             'formId': "{{ section.settings.formid }}",
           });

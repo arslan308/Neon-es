@@ -7,11 +7,29 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "price_with_logo_discount_main_product_XipGip": {
       "type": "price-with-logo-discount-main-product",
       "blocks": {
+        "custom_agent_rzwPQP": {
+          "type": "Custom_Agent",
+          "settings": {
+            "Agent_name": "Agent2Name",
+            "Agent_email": "agent@gmail.com",
+            "Agent_phone": "+92301010101",
+            "Agent_image": "https://cdn.shopify.com/s/files/1/0806/6672/2650/files/confident-middle-aged-business-man-260nw-2516789501.webp?v=1753978590"
+          }
+        },
+        "custom_agent_kkz8M4": {
+          "type": "Custom_Agent",
+          "settings": {
+            "Agent_name": "AgentName",
+            "Agent_email": "agent@gmail.com",
+            "Agent_phone": "+92301010101",
+            "Agent_image": "https://cdn.shopify.com/s/files/1/0806/6672/2650/files/images.jpg?v=1753977102"
+          }
+        },
         "custom_options_qtamN3": {
           "type": "Custom_Options",
           "settings": {
@@ -144,6 +162,8 @@
         }
       },
       "block_order": [
+        "custom_agent_rzwPQP",
+        "custom_agent_kkz8M4",
         "custom_options_qtamN3",
         "custom_options_3KhGTe",
         "custom_options_CpG7Wz",
@@ -167,8 +187,7 @@
         "SectionTitle": "",
         "timer": "",
         "atc_show": true,
-        "support_id_image": "shopify://shop_images/imageProxy_1_1.png",
-        "support_text": "¿Necesitas ayuda? Llama o chatea con Pablo",
+        "support_text": "¿Necesitas ayuda? Llama o chatea con",
         "accessoires_title": "Accesorios",
         "include_icon_toolip": "Tu cartel de neón LED personalizado se entrega con un regulador de intensidad, control remoto, adaptador y todos los materiales de montaje necesarios. Gracias al sistema plug & play, puedes instalar la iluminación en solo 5 minutos y disfrutarla de inmediato.",
         "include_icon": "Incluido",
@@ -178,14 +197,15 @@
         "popup_close": "Volver",
         "support_phone": "+34 511 604 926",
         "quote_customize_title": "Personaliza tu diseño de neón",
-        "form_user_image": "https://cdn.shopify.com/s/files/1/0446/7376/1431/files/imageProxy_1.png?v=1730875983",
         "form_email_placeholder": "Correo electrónico",
         "inc_vat": "Mostrar con IVA",
         "price_inc_vat": "con IVA",
         "exclu_vat": "Mostrar sin IVA",
         "price_exclu_vat": "sin IVA",
         "form_text_placeholder": "Por ejemplo: Hola Pablo, ¿cómo cuelgo mi logo?",
-        "form_question": "Hazle una pregunta a Pablo",
+        "form_user_image": "https://cdn.shopify.com/s/files/1/0446/7376/1431/files/imageProxy_1.png?v=1730875983",
+        "form_question": "Hazle una pregunta a",
+        "support_name": "Pablo",
         "form_questionsubmittext": "Enviar pregunta",
         "formodify": "Personalizar",
         "mbformodify": "Personalizar",
@@ -200,12 +220,12 @@
         "discount_card_message": "",
         "discount_car_toltip": "",
         "discount_message_complete": "",
-        "label_days": "días",
-        "label_hours": "horas",
-        "label_minutes": "minutos",
-        "label_seconds": "segundos",
         "discount_message": "La oferta termina en",
         "order_message": "Pedido antes de las 23:59",
+        "label_days": "days",
+        "label_hours": "hours",
+        "label_minutes": "minutes",
+        "label_seconds": "seconds",
         "delivery_format": "${futureDate.day} de ${monthName}",
         "delivery_date": "Entrega el",
         "add_to_cart_btn_text": "Compra ahora"
