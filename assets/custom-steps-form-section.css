@@ -1266,7 +1266,7 @@ li#id_3 {
       cursor: pointer;
       transform: scale(.5); /* Prevent unwanted scaling */
     }
-    .term-condition {
+    .term-condition,.term-condition-new {
       gap: 5px;
       font-size: 10px;
     }
