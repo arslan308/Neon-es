@@ -228,7 +228,8 @@
         "label_seconds": "seconds",
         "delivery_format": "${futureDate.day} de ${monthName}",
         "delivery_date": "Entrega el",
-        "add_to_cart_btn_text": "Compra ahora"
+        "add_to_cart_btn_text": "Compra ahora",
+        "webhook_url": "https://hook.eu1.make.com/91h5277h39m5l974mnsh86fdlv6zj6iq"
       }
     },
     "youtube_video_and_images_TcVPHa": {

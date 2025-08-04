@@ -1454,7 +1454,7 @@
           <h4>{{ section.settings.form_question }} {{ matched_name }}</h4>
         </div>
 
-        {% form 'contact' %}
+        {% comment %} {% form 'contact' %}
           {{ form.errors | default_errors }}
           <div class="email">
             {% if customer.email != blank %}
@@ -1492,7 +1492,64 @@
           <div class="submit">
             <input type="submit" value="{{ section.settings.form_questionsubmittext }}">
           </div>
-        {% endform %}
+        {% endform %} {% endcomment %}
+        <form id="contact-form-make">
+          <!-- Error messages would be handled by your Make.com scenario. -->
+          <!-- You can add a div here to display success/error messages from Make.com if you configure it. -->
+          {% comment %} <div id="form-messages" class="text-sm font-medium p-3 rounded-lg hidden"></div> {% endcomment %}
+  
+          <div class="email mb-4">
+            <!-- This logic is translated from Liquid, but the value must be set by your Liquid code -->
+            {% if customer.email != blank %}
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value="{{ customer.email }}"
+                placeholder="{{ customer.email }}"
+              >
+            {% else %}
+              <input
+                type="email"
+                name="email"
+                placeholder="{{ section.settings.form_email_placeholder }}"
+                id="email"
+                class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value=""
+              >
+            {% endif %}
+  
+            <!-- Product Title Input -->
+            <input
+              type="input"
+              name="product_title"
+              placeholder="{{ section.settings.form_email_placeholder }}"
+              id="Ptitle"
+              class="w-full mt-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value="{{ product.title }}"
+            >
+          </div>
+  
+          <!-- Hidden fields for product handle, product ID, and store country -->
+          <input type="hidden" name="product_handle" value="{{product.handle }}">
+          <input type="hidden" name="product_id" value="{{product.id }}">
+          <input type="hidden" name="store_country" value="{{ localization.country.name }}">
+  
+          <div class="message mb-4">
+            <textarea
+              name="message"
+              placeholder="{{ section.settings.form_text_placeholder }}"
+              id="message"
+              rows="5"
+              class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+  
+          <div class="submit">
+            <input type="submit" value="{{ section.settings.form_questionsubmittext }}" class="w-full p-3 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700 cursor-pointer transition-colors duration-200">
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -1658,6 +1715,43 @@
       display: flex;
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form-make');
+    if (!form) return;
+    const webhookUrl = "{{ section.settings.webhook_url | escape }}"; // Safe escaping for Liquid output
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const urlEncodedData = new URLSearchParams(formData).toString();
+
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: urlEncodedData,
+        });
+
+        const responseText = await response.text();
+        console.log("Response Text:", responseText);
+        if (responseText.trim() === 'Accepted') {
+          console.log('Form submitted successfully!');
+          setTimeout(() => { 
+            window.location.reload();
+          }, 500);
+        } else {
+          console.error('Unexpected response:', responseText);
+        }
+      } catch (error) {
+        console.error('Fetch error:', error);
+
+      }
+    });
+  });
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
       var tooltipIcons = document.querySelectorAll(".tooltip-icon");
@@ -2657,7 +2751,12 @@
       "type": "text",
       "id": "add_to_cart_btn_text",
       "label": "Add to cart label"
-    }
+    },
+    {
+    "type": "text",
+    "id": "webhook_url",
+    "label": "Webhook URL"
+   }
   ],
   "blocks": [
     {
