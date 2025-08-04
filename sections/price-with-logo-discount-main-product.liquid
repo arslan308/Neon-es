@@ -2071,7 +2071,10 @@
                   // Hide specific elements if the price is greater than $0.00
                   document.querySelector("#exclude_vat").style.display = "none";
                   document.querySelector("#exclude_vat_popup").style.display = "none";
-                  document.querySelector("#exclude_vat_popup_bar").style.display = "none";
+                  const bar = document.querySelector("#exclude_vat_popup_bar");
+                  if (bar) {
+                    bar.style.display = "none";
+                  }
                   if(document.querySelector(".static_save_text_updated")){
                       document.querySelector(".static_save_text_updated").style.display = "none";
                   }
