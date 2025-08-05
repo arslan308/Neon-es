@@ -106,7 +106,7 @@
     </div> {% endcomment %}
     <div class="product-title-discription-add-to-cart-main mobile_view">
       <div class="product-title-discription-add-to-cart-main-content-section dd">
-        <h5 class="cost-title">{{ section.settings.TopPriceText }}</h5>
+        <!-- <h5 class="cost-title">{ { section.settings.TopPriceText }}</h5> -->
         <div class="product-image-title-discription-price-Prijs-main-class">
           <div class="product-image-title-discription-price rr">
             <div class="normal-price 111">
@@ -436,6 +436,12 @@
                   <div class="delivery-date" data-delivery-days="{{ settings.delivery_days_offset }}"></div>
                 </span>
               </div>
+              <!-- <div class="quote-ready">
+                  <!-- <h2>{ { section.settings.SectionTitle }}</h2>
+                  <ul>
+                    { { section.settings.SectionToplist }}
+                  </ul>
+              </div> -->
               <div class="variationwrapper desktop-variation">
                 <div class="mobile-wrapper-1">
                   <div class="product-containt-text">
@@ -1181,6 +1187,7 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+
                     <div class="support-widget">
                       <div class="support-container">
                         <img
@@ -1189,9 +1196,9 @@
                           class="support-image"
                         >
                         <div class="support-content">
-                          <p class="support-title">{{ section.settings.support_text }} {{ matched_name }} </p>
+                          <p class="support-title">{{ section.settings.support_text | replace: 'agent_name', matched_name }}</p>
                           <div class="support-actions">
-                            {% comment %}
+                            {% comment %} 
                               <a href="{{ section.settings.chat_link }}" class="support-button">
                                   {{ section.settings.chat_text }}
                               </a>
@@ -1451,7 +1458,7 @@
       <div class="request-form-wrapper">
         <div class="avtar-wrapper">
           <img src="{{ matched_image }}" alt="">
-          <h4>{{ section.settings.form_question }} {{ matched_name }}</h4>
+          <h4>{{ section.settings.form_question | replace: 'agent_name', matched_name }}</h4>
         </div>
 
         {% comment %} {% form 'contact' %}
@@ -1469,15 +1476,15 @@
               <input
                 type="email"
                 name="contact[email]"
-                placeholder="{{ section.settings.form_email_placeholder }}"
+                placeholder="{{ section.settings.form_email_placeholder  | replace: 'agent_name', matched_name }}"
                 id="email"
                 value=""
-              >
+              > 
             {% endif %}
             <input
               type="input"
               name="contact[product_title]"
-              placeholder="{{ section.settings.form_email_placeholder }}"
+              placeholder="{{ section.settings.form_email_placeholder  | replace: 'agent_name', matched_name }}"
               id="Ptitle"
               value="{{ product.title }}"
             >
@@ -1513,7 +1520,7 @@
               <input
                 type="email"
                 name="email"
-                placeholder="{{ section.settings.form_email_placeholder }}"
+                placeholder="{{ section.settings.form_email_placeholder | replace: 'agent_name', matched_name  }}"
                 id="email"
                 class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value=""
@@ -1524,7 +1531,7 @@
             <input
               type="input"
               name="product_title"
-              placeholder="{{ section.settings.form_email_placeholder }}"
+              placeholder="{{ section.settings.form_email_placeholder  | replace: 'agent_name', matched_name }}"
               id="Ptitle"
               class="w-full mt-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value="{{ product.title }}"
@@ -1539,7 +1546,7 @@
           <div class="message mb-4">
             <textarea
               name="message"
-              placeholder="{{ section.settings.form_text_placeholder }}"
+              placeholder="{{ section.settings.form_text_placeholder | replace: 'agent_name', matched_name }}"
               id="message"
               rows="5"
               class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -1714,6 +1721,10 @@
   .tooltip-popup.active {
       display: flex;
   }
+    @media screen and (max-width: 768px){
+      .just-for-mobile img{display: block;}
+       .template-product .lead_page_UK_price_with_logo_discount .product-images>img{display: none;}
+    }
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -2852,4 +2863,4 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} 
