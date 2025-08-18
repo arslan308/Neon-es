@@ -227,7 +227,7 @@
                         var product_title = "custom_12345";
                         var product_id = "custom";
                         button.addEventListener('click', function() {
-                          var priceText = document.querySelector('#P0-1').innerText;
+                          var priceText = document.querySelector('#:re:').innerText;
                           var product_price = parseFloat(priceText.replace(/[^\d,.-]/g, '').replace(',', ''));
                             window.dataLayer = window.dataLayer || [];
                             window.dataLayer.push({
@@ -246,10 +246,10 @@
                         });
 
                         
-                        waitForElement('#P0-1').then((element) => {
+                        waitForElement('#:re:').then((element) => {
 
                         setTimeout(function(){ 
-                        var priceText1 = document.querySelector('#P0-1').innerText;
+                        var priceText1 = document.querySelector('#:re:').innerText;
                         console.log(priceText1);
                         var product_price1 = parseFloat(priceText1.replace(/[^\d,.-]/g, '').replace(',', ''));
                         console.log('neon builder 2');
