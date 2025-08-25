@@ -472,71 +472,83 @@
   })();
 </script>
 {%- assign delivery_text = section.settings.delivery_date -%}
-{%- assign delivery_format = section.settings.delivery_format | default: "${futureDate.day} ${monthName}" -%}
-
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let deliveryText = {{ delivery_text | json }}; // From theme settings
-    let deliveryFormat = {{ delivery_format | json }}; // From theme settings
+    document.addEventListener("DOMContentLoaded", function () {
+        let deliveryText = {{ delivery_text | json }}; // Get the Liquid variable from theme settings
+        let deliveryFormat = {{ section.settings.delivery_format | json }}; // Get the custom format from schema
 
-    let deliveryDate = new DeliveryDate(".delivery-date", deliveryText, deliveryFormat);
-    deliveryDate.updateDeliveryDates();
-  });
+        let deliveryDate = new DeliveryDate(".delivery-date", deliveryText, deliveryFormat);
+        deliveryDate.updateDeliveryDates();
+    });
 
-  class DeliveryDate {
-    constructor(selector, deliveryText, deliveryFormat) {
-      this.selector = selector;
-      this.deliveryText = deliveryText;
-      this.deliveryFormat = deliveryFormat;
+    class DeliveryDate {
+        constructor(selector, deliveryText, deliveryFormat) {
+            this.selector = selector;
+            this.deliveryText = deliveryText;
+            this.deliveryFormat = deliveryFormat;
+            this.monthTranslations = {
+              default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], // English: Capitalized
+              fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],       // French: lowercase
+              es: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],   // Spanish: lowercase
+              de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],         // German: Capitalized
+              nl: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"],     // Dutch: lowercase
+              it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], // Italian: lowercase
+              sv: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"]       // Swedish: lowercase
+            };
+        }
 
-      this.monthTranslations = {
-          default: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], // English: Capitalized
-          fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],       // French: lowercase
-          es: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],   // Spanish: lowercase
-          de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],         // German: Capitalized
-          nl: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"],     // Dutch: lowercase
-          it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], // Italian: lowercase
-          sv: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"]       // Swedish: lowercase
-        };
+        getStoreLanguage() {
+            let storeLang = document.documentElement.lang || "default";
+            return this.monthTranslations[storeLang] ? storeLang : "default";
+        }
+
+        calculateFutureDate(daysToAdd) {
+              const date = new Date();
+              date.setDate(date.getDate() + daysToAdd);
+              return { day: date.getDate(), monthIndex: date.getMonth() };
+          }
+
+          updateDeliveryDates() {
+                let storeLang = this.getStoreLanguage();
+
+                const deliveryData = document.querySelector('.delivery-date');
+                const rawInput = deliveryData ? deliveryData.dataset.deliveryDays.trim() : "11";
+
+                let dayFrom = 0, dayTo = null;
+
+                if (rawInput.includes('-')) {
+                    const parts = rawInput.split('-').map(val => parseInt(val.trim()));
+                    [dayFrom, dayTo] = parts;
+                } else {
+                    dayFrom = parseInt(rawInput);
+                }
+
+                const futureDateFrom = this.calculateFutureDate(dayFrom);
+                const futureDateTo = dayTo ? this.calculateFutureDate(dayTo) : null;
+
+                const monthNameFrom = this.monthTranslations[storeLang][futureDateFrom.monthIndex] || "UNKNOWN";
+                const monthNameTo = futureDateTo ? this.monthTranslations[storeLang][futureDateTo.monthIndex] || "UNKNOWN" : "";
+
+                let finalText = "";
+
+                if (futureDateTo && futureDateFrom.monthIndex === futureDateTo.monthIndex) {
+                    // Same month range
+                    finalText = `${futureDateFrom.day}–${futureDateTo.day} ${monthNameFrom}`;
+                } else if (futureDateTo) {
+                    // Cross-month range
+                    finalText = `${futureDateFrom.day} ${monthNameFrom} – ${futureDateTo.day} ${monthNameTo}`;
+                } else {
+                    // Single date
+                    finalText = `${futureDateFrom.day} ${monthNameFrom}`;
+                }
+
+                document.querySelectorAll(this.selector).forEach(el => {
+                    el.innerHTML = `${this.deliveryText} ${finalText}`;
+                });
+
+                console.log("Final Date Output:", finalText);
+          }
     }
-      getStoreLanguage() {
-        let storeLang = document.documentElement.lang || "default";
-        return this.monthTranslations[storeLang] ? storeLang : "default";
-      }
-  
-      calculateFutureDate(daysToAdd) {
-        let date = new Date();
-        date.setDate(date.getDate() + daysToAdd);
-  
-        return {
-          day: date.getDate(),
-          monthIndex: date.getMonth(),
-          year: date.getFullYear(),
-          dayName: date.toLocaleDateString('en', { weekday: 'long' })
-        };
-      }
-
-    updateDeliveryDates() {
-      const deliveryData = document.querySelector(this.selector);
-      const daysOffset = deliveryData ? parseInt(deliveryData.dataset.deliveryDays) : 11;
-
-      let storeLang = this.getStoreLanguage();
-      let futureDate = this.calculateFutureDate(daysOffset);
-      let monthName = this.monthTranslations[storeLang][futureDate.monthIndex] || "UNKNOWN";
-
-      let finalText = this.deliveryFormat
-        .replace("${futureDate.day}", futureDate.day)
-        .replace("${monthName}", monthName)
-        .replace("${futureDate.year}", futureDate.year)
-        .replace("${futureDate.dayName}", futureDate.dayName);
-
-      document.querySelectorAll(this.selector).forEach(el => {
-        el.innerHTML = `${this.deliveryText} ${finalText}`;
-      });
-
-      console.log("Final Date Output:", finalText);
-    }
-  }
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
