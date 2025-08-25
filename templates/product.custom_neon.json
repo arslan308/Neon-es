@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "price_with_logo_discount_main_product_XipGip": {
       "type": "price-with-logo-discount-main-product",
@@ -863,7 +863,7 @@
           "type": "accordion_item",
           "settings": {
             "accordion_title": "Cuál es el tiempo de entrega después del pago?",
-            "accordion_content": "<p>El tiempo de entrega es de 6-8 días hábiles desde que realizas el pedido hasta la entrega.</p><p>Necesitas tu letrero de neón antes? Contáctanos durante el proceso de compra, y exploraremos opciones de envío urgente.</p>",
+            "accordion_content": "<p>El tiempo de entrega es de 8-10 días hábiles desde que realizas el pedido hasta la entrega.</p><p>Necesitas tu letrero de neón antes? Contáctanos durante el proceso de compra, y exploraremos opciones de envío urgente.</p>",
             "tab_association": "3"
           }
         },
