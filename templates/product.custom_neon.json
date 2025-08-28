@@ -7,11 +7,25 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "price_with_logo_discount_main_product_XipGip": {
       "type": "price-with-logo-discount-main-product",
       "blocks": {
+        "waranty_button_daaATj": {
+          "type": "waranty_button",
+          "settings": {
+            "icon": "shopify://shop_images/shield-3.svg",
+            "text": "2-Year Warranty"
+          }
+        },
+        "waranty_button_tTWP9k": {
+          "type": "waranty_button",
+          "settings": {
+            "icon": "shopify://shop_images/hugeicons_energy.svg",
+            "text": "Energy Efficient"
+          }
+        },
         "custom_agent_rzwPQP": {
           "type": "Custom_Agent",
           "settings": {
@@ -162,6 +176,8 @@
         }
       },
       "block_order": [
+        "waranty_button_daaATj",
+        "waranty_button_tTWP9k",
         "custom_agent_rzwPQP",
         "custom_agent_kkz8M4",
         "custom_options_qtamN3",
@@ -184,9 +200,20 @@
         "paymenticon_NUQCeW"
       ],
       "settings": {
+        "show_chatbot": true,
+        "chatbot_delay": 10,
+        "chatbot_icon_delay": 10,
+        "chatbot_message": "<p>Do you have a question about your neon design? I'm here to assist you personally.</p>",
+        "whatsapp_text": "Message on WhatsApp",
+        "email_text": "Send an Email",
+        "thanks_message": "Thanks! Your message has been received.",
+        "speacialist_msg": "Neon Specialist",
+        "model_detail_message": "<p>Hey, this is [name] from Neonsfeer. Do you have a question? <br/><br/>For example: Can I change the color of my neon design? You can contact me directly via: [phone] . <br/><br/>Or use the contact options below to get in touch. I usually reply within 15 minutes.</p>",
+        "custom_text": "<p>We'll do our best to reply via email <strong>within 15 minutes.</strong></p>",
+        "contact_number": "",
         "SectionTitle": "",
         "timer": "",
-        "atc_show": true,
+        "atc_show": false,
         "support_text": "¿Necesitas ayuda? Llama o chatea con agent_name",
         "accessoires_title": "Accesorios",
         "include_icon_toolip": "Tu cartel de neón LED personalizado se entrega con un regulador de intensidad, control remoto, adaptador y todos los materiales de montaje necesarios. Gracias al sistema plug & play, puedes instalar la iluminación en solo 5 minutos y disfrutarla de inmediato.",

@@ -922,6 +922,7 @@ pointer-events: none;
 
   .arrive_text {
     font-size: 13px;
+    display: none !important;
     text-align: center;
     line-height: 17px;
     font-family: 'DIN Next';
@@ -1243,7 +1244,7 @@ li#id_3 {
   object-fit: cover;
 }
 .image-wrapper {
-  display: flex;
+  display: flex; 
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px 10px;
@@ -1255,6 +1256,7 @@ li#id_3 {
   font-size: 12px;
 }
   @media only screen and (max-width: 767.98px) {
+
     .file-types {
       font-size: 0.55em;
     }
