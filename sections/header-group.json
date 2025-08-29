@@ -31,6 +31,7 @@
         "mega_menu_RYgcmj"
       ],
       "settings": {
+        "show_discount_top_bar_header": true,
         "enable_sticky_header": true,
         "logo": "shopify://shop_images/Neonsfeer_logo_high_quality_b0625196-d790-4dd6-9f8d-85d8dba5a51b.png",
         "profile_img": "shopify://shop_images/sales-rep2.png",
@@ -40,6 +41,7 @@
         "show_country_selector": false,
         "navigation_menu": "main-menu",
         "navigation_mobile_menu": "",
+        "discount_bar_text": "El [discount_percentage] de descuento termina en [timer]",
         "desktop_navigation_layout": "inline",
         "desktop_navigation_open_trigger": "hover",
         "show_navigation_social_media": false,
