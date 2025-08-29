@@ -23,7 +23,14 @@
     {% assign sale_price1 = current_variant.price %}
     {% assign discount = original_price1 | minus: sale_price1 %}
     {% assign discount_percentage1 = discount | times: 100 | divided_by: original_price1 %}
-  
+    {%- assign labels = section.settings.timer_labels | split: ',' -%}
+
+    {%- assign days_label = labels[0] | default: 'd' -%}
+    {%- assign hours_label = labels[1] | default: 'h' -%}
+    {%- assign minutes_label = labels[2] | default: 'm' -%}
+    {%- assign seconds_label = labels[3] | default: 's' -%}
+    
+    {%- assign off_label = section.settings.off_label -%}
     <div 
       class="discount-top-bar-header" 
       data-endtime="{{ discount_end_time }}"
@@ -31,40 +38,39 @@
       data-price="{{ sale_price1 }}"
       style="display:none">
       {%- assign custom_text = section.settings.discount_bar_text -%}
-  
       {%- assign discount_text = '<strong><span id="dbh-percent">' 
-        | append: discount_percentage1 | append: '%</span> off</strong>' -%}
-      
-      {%- assign timer_html = '<span class="dbh-timer">
-        <div><strong><span id="dbh-days">00</span></strong><strong><span>d</span></strong></div>
-        <div><strong><span id="dbh-hours">00</span></strong><strong><span>h</span></strong></div>
-        <div><strong><span id="dbh-minutes">00</span></strong><strong><span>m</span></strong></div>
-        <div><strong><span id="dbh-seconds">00</span></strong><strong><span>s</span></strong></div>
-      </span>' -%}
-      
+        | append: discount_percentage1 
+        | append: '% ' 
+        | append: off_label 
+        | append: '</span></strong>' -%}
+        {%- assign timer_html = '<span class="dbh-timer">
+          <div><strong><span id="dbh-days">00</span></strong><strong><span>' 
+          | append: days_label | append: '</span></strong></div>
+          <div><strong><span id="dbh-hours">00</span></strong><strong><span>' 
+          | append: hours_label | append: '</span></strong></div>
+          <div><strong><span id="dbh-minutes">00</span></strong><strong><span>' 
+          | append: minutes_label | append: '</span></strong></div>
+          <div><strong><span id="dbh-seconds">00</span></strong><strong><span>' 
+          | append: seconds_label | append: '</span></strong></div>
+        </span>' -%}
       {%- assign replaced_text = custom_text | replace: '[timer]', timer_html -%}
       {%- assign replaced_text = replaced_text | replace: '[discount_percentage]', discount_text -%}
-      
       <span class="discount-bar-content">
         {{ replaced_text }}
       </span>
-      
-      
-      
-      
       <div class="cross-icon">
-        <svg focusable="false" aria-hidden="true" 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24" 
-      width="25" height="25" 
-      fill="white">
-   <path d="M19 6.41L17.59 5 12 10.59 
-            6.41 5 5 6.41 10.59 12 
-            5 17.59 6.41 19 12 13.41 
-            17.59 19 19 17.59 13.41 12z"></path>
-  </svg>
-  
-  </div>
+          <svg focusable="false" aria-hidden="true" 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24" 
+              width="25" height="25" 
+              fill="white">
+              <path d="M19 6.41L17.59 5 12 10.59 
+                  6.41 5 5 6.41 10.59 12 
+                  5 17.59 6.41 19 12 13.41 
+                  17.59 19 19 17.59 13.41 12z">
+              </path>
+          </svg>
+      </div>
     </div>
   {% endif %}
   
@@ -753,6 +759,18 @@
         "id": "discount_bar_text",
         "label": "Discount Bar Text",
         "default": "Order within [timer] for [discount_percentage]"
+      },
+      {
+        "type": "text",
+        "id": "timer_labels",
+        "label": "Timer Labels (comma separated: d,h,m,s)",
+        "default": "d,h,m,s"
+      },
+      {
+        "type": "text",
+        "id": "off_label",
+        "label": "Discount suffix (OFF text)",
+        "default": "OFF"
       },
       {
         "type": "select",
