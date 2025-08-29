@@ -4004,6 +4004,7 @@ body.lead_page_UK_price_with_logo_discount .image-with-text__text-aligner .rte >
     padding: 0 18px 20px;
     margin: 0 15px 15px;
     border-radius: 0 0 10px 10px;
+    display: none;
 }
 .template-product .lead_page_UK_price_with_logo_discount .container.width-100{padding: 0 !important;}
 /* .lead_page_UK_price_with_logo_discount .variationwrapper ul{
