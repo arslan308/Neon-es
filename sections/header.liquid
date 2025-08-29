@@ -30,7 +30,7 @@
     {%- assign minutes_label = labels[2] | default: 'm' -%}
     {%- assign seconds_label = labels[3] | default: 's' -%}
     
-    {%- assign off_label = section.settings.off_label -%}
+    {% comment %} {%- assign off_label = section.settings.off_label -%} {% endcomment %}
     <div 
       class="discount-top-bar-header" 
       data-endtime="{{ discount_end_time }}"
@@ -41,7 +41,6 @@
       {%- assign discount_text = '<strong><span id="dbh-percent">' 
         | append: discount_percentage1 
         | append: '% ' 
-        | append: off_label 
         | append: '</span></strong>' -%}
         {%- assign timer_html = '<span class="dbh-timer">
           <div><strong><span id="dbh-days">00</span></strong><strong><span>' 
@@ -765,12 +764,6 @@
         "id": "timer_labels",
         "label": "Timer Labels (comma separated: d,h,m,s)",
         "default": "d,h,m,s"
-      },
-      {
-        "type": "text",
-        "id": "off_label",
-        "label": "Discount suffix (OFF text)",
-        "default": "OFF"
       },
       {
         "type": "select",
