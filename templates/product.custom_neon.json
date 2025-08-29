@@ -92,7 +92,7 @@
         "list_item_Ln9DfU": {
           "type": "list_item",
           "settings": {
-            "icon_text": "Cartel de neón LED personalizado"
+            "icon_text": "Cartel de neón"
           }
         },
         "list_item_iQRMjX": {
@@ -230,7 +230,7 @@
         "exclu_vat": "IVA",
         "price_exclu_vat": "sin IVA",
         "form_text_placeholder": "Por ejemplo: Hola agent_name, ¿cómo cuelgo mi logo?",
-        "form_user_image": "https://cdn.shopify.com/s/files/1/0446/7376/1431/files/imageProxy_1.png?v=1730875983",
+        "form_user_image": "https://s3.eu-central-1.amazonaws.com/trengo/media/signature_264799_JI6ZzJkJlUKCA6P76Q00wB4aaiWD6L9JomJut2o7_man-4-4-fotor-20250324114938.man%204-4-fotor-20250324114938.png",
         "form_question": "Hazle una pregunta a agent_name",
         "support_name": "Pablo",
         "form_questionsubmittext": "Enviar pregunta",
