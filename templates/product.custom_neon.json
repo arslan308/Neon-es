@@ -95,28 +95,34 @@
             "icon_text": "Cartel de neón"
           }
         },
-        "list_item_iQRMjX": {
+        "list_item_JDyYBC": {
           "type": "list_item",
           "settings": {
-            "icon_text": "Envío gratis"
+            "icon_text": "Adaptador"
           }
         },
         "list_item_JdR7nF": {
           "type": "list_item",
           "settings": {
-            "icon_text": "Regulador y mando gratis"
+            "icon_text": "Regulador"
           }
         },
-        "list_item_JDyYBC": {
+        "list_item_gK7igq": {
           "type": "list_item",
           "settings": {
-            "icon_text": "Adaptador gratis"
+            "icon_text": "Mando"
           }
         },
         "list_item_A8LJa3": {
           "type": "list_item",
           "settings": {
-            "icon_text": "Kit de montaje gratis"
+            "icon_text": "Kit de montaje"
+          }
+        },
+        "list_item_iQRMjX": {
+          "type": "list_item",
+          "settings": {
+            "icon_text": "Envío gratis"
           }
         },
         "paymenticon_iJ3x4F": {
@@ -186,10 +192,11 @@
         "custom_options_bbiFeL",
         "custom_options_mCazi6",
         "list_item_Ln9DfU",
-        "list_item_iQRMjX",
-        "list_item_JdR7nF",
         "list_item_JDyYBC",
+        "list_item_JdR7nF",
+        "list_item_gK7igq",
         "list_item_A8LJa3",
+        "list_item_iQRMjX",
         "paymenticon_iJ3x4F",
         "paymenticon_6nqyq6",
         "paymenticon_4qa6bb",
