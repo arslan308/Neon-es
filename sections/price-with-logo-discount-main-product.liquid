@@ -99,109 +99,108 @@
 <div class="product-image-section lead_page_UK_price_with_logo_discount">
   <div class="container width-100">
     {% assign agent_name = product.metafields.custom.a_name | strip %}
-    {% assign matched_image = section.settings.form_user_image %}
-    {% assign matched_name = section.settings.support_name %}
-    {% assign matched_phone = section.settings.support_phone %}
-    
-    {% for block in section.blocks %}
-      {% if block.type == 'Custom_Agent' %}
-        {% assign block_agent_name = block.settings.Agent_name | strip %}
-        {% if block_agent_name == agent_name %}
-          {% assign matched_image = block.settings.Agent_image %}
-          {% assign matched_phone = block.settings.Agent_phone %}
-          {% assign matched_name  = block_agent_name %}
-          {% break %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-    
-    {% assign show_chatbot = section.settings.show_chatbot %}
-    {% assign chatbot_delay = section.settings.chatbot_delay | default: 0 | times: 1000 %}
-    {% assign chatbot_icon_delay = section.settings.chatbot_icon_delay | default: 0 | times: 1000 %}
-    {% assign chatbot_message = section.settings.chatbot_message %}
-    {% assign whatsapp_url = 'https://wa.me/' | append: matched_phone %}
-    
-    {% if show_chatbot %}
-      <div id="chatbot-icon" onclick="toggleChatbotModal('open')">
-        <img src="{{ matched_image | escape }}" alt="{{ matched_name | escape }}">
-        <div class="online-dot"></div>
-      </div>
-    
-      {% if chatbot_message != blank %} 
-        <div class="chatbot-message" id="chatbot-message">
-          <div class="bot-name-wrapper"><strong>{{ matched_name }}</strong>
-          {% comment %} <div class="online-dot-bot"></div> {% endcomment %}
-          </div>
-          <span class="chatbot-custom-message" onclick="toggleChatbotModal('open')">{{ chatbot_message }}</span>
-          <span class="chatbot-modal-close" onclick="toggleChatbotModal('close')"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
-        </div>
-      {% endif %}
-    
-      <div class="chatbot-modal" id="chatbot-modal">
-        <div class="chatbot-modal-header">
-          <div class="bot-model-detail">
-            <div class="bot-model-image">
-              <img style="height: 41px; width: 41px;" src="{{ matched_image | escape }}" alt="{{ matched_name | escape }}">
-              <div class="online-dot"></div>
-            </div>
-            <div style="display: grid ; grid-gap: 5px;">
-              <h4>{{ matched_name }}</h4>
-              {% if section.settings.speacialist_msg != blank %}
-                <p class="bot-contact-header">{{ section.settings.speacialist_msg }}</p>
-              {% endif %}
-            </div>
-          </div>
-          {%- assign model_message = section.settings.model_detail_message | replace: '[name]', matched_name | replace: '[phone]', matched_phone -%}
-    
-          <div class="model-detail-message">
-            {{ model_message }}
-          </div>
-          <span class="chatbot-modal-close" onclick="toggleChatbotModal('close')"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
-        </div>
-        <div class="chatbot-modal-content">
-          <div class="chatbot-modal-buttons">
-            {% if matched_phone != blank %}
-              <a href="{{ whatsapp_url  | replace: '(', '' 
-                | replace: ')', '' 
-                | replace: ' ', '' 
-                | replace: '-', ''  }}" target="_blank">
-                <button style="display: flex ; align-items: center; justify-content: center; gap: 22px;" class="whatsapp-button"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_4.svg?v=1755004785"/><span>{{ section.settings.whatsapp_text }}</span></button>
-              </a>
-            {% endif %}
-            <button style="display: flex ; justify-content: center; align-items: center; gap: 10px;" class="email-button" onclick="showEmailForm()"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_5.svg?v=1755004785"/><span>{{ section.settings.email_text }}</span></button>
-          </div>
-        </div>
-      </div>
-    
-      <div class="chatbot-modal email-form-modal" id="email-form-modal">
-        <div class="chatbot-modal-header">
-          <h4><img style="cursor: pointer;" onclick="hideEmailForm()" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_6.svg?v=1755005168"/>{{ section.settings.mailsend_header }}</h4>
-          <span class="chatbot-modal-close" onclick="hideEmailForm()"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
-        </div>
-        <div class="chatbot-modal-content">
-          <p>{{ section.settings.mail_sendmodel }}</p>
-          <form id="chatbot-email-form" class="contact-form-make">
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Enter a message" required></textarea>
-            <button style="display: flex ; align-items: center; justify-content: center; gap: 10px;" type="submit" class="email-button"><span>{{ section.settings.mailsend_button }}</span><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/iconamoon_send-fill.svg?v=1755006012"/></button>
-          </form>
-        </div>
-      </div>
-      
-      <div class="chatbot-modal email-success-modal" id="email-success-modal">
-        <div class="chatbot-modal-header" style="justify-items: center; align-items: center; grid-gap: 15px;">
-          <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/chat-check.svg?v=1755006807"/>
-          <h4 style="text-align: center;">{{ section.settings.thanks_message }}</h4>
-          <span class="chatbot-modal-close" onclick="hideEmailSuccess()"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
-        </div>
-        {% if section.settings.custom_text != blank %}
-          <div class="chatbot-modal-content" style="text-align: center;">
-            {{ section.settings.custom_text }}
-          </div>
-        {% endif %}    
-      </div>
-    {% endif %}
+{% assign matched_image = section.settings.form_user_image %}
+{% assign matched_name = section.settings.support_name %}
+{% assign matched_phone = section.settings.support_phone %}
 
+{% for block in section.blocks %}
+  {% if block.type == 'Custom_Agent' %}
+    {% assign block_agent_name = block.settings.Agent_name | strip %}
+    {% if block_agent_name == agent_name %}
+      {% assign matched_image = block.settings.Agent_image %}
+      {% assign matched_phone = block.settings.Agent_phone %}
+      {% assign matched_name  = block_agent_name %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign show_chatbot = section.settings.show_chatbot %}
+{% assign chatbot_delay = section.settings.chatbot_delay | default: 0 | times: 1000 %}
+{% assign chatbot_icon_delay = section.settings.chatbot_icon_delay | default: 0 | times: 1000 %}
+{% assign chatbot_message = section.settings.chatbot_message %}
+{% assign whatsapp_url = 'https://wa.me/' | append: matched_phone %}
+
+{% if show_chatbot %}
+  <div id="chatbot-icon" onclick="toggleChatbotModal('open')">
+    <img src="{{ matched_image | escape }}" alt="{{ matched_name | escape }}">
+    <div class="online-dot"></div>
+  </div>
+
+  {% if chatbot_message != blank %} 
+    <div class="chatbot-message" id="chatbot-message">
+      <div class="bot-name-wrapper"><strong>{{ matched_name }}</strong>
+      {% comment %} <div class="online-dot-bot"></div> {% endcomment %}
+      </div>
+      <span class="chatbot-custom-message" onclick="toggleChatbotModal('open')">{{ chatbot_message }}</span>
+      <span class="chatbot-modal-close" onclick="toggleChatbotModal('close')"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
+    </div>
+  {% endif %}
+
+  <div class="chatbot-modal" id="chatbot-modal">
+    <div class="chatbot-modal-header">
+      <div class="bot-model-detail">
+        <div class="bot-model-image">
+          <img style="height: 41px; width: 41px;" src="{{ matched_image | escape }}" alt="{{ matched_name | escape }}">
+          <div class="online-dot"></div>
+        </div>
+        <div style="display: grid ; grid-gap: 5px;">
+          <h4>{{ matched_name }}</h4>
+          {% if section.settings.speacialist_msg != blank %}
+            <p class="bot-contact-header">{{ section.settings.speacialist_msg }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {%- assign model_message = section.settings.model_detail_message | replace: '[name]', matched_name | replace: '[phone]', matched_phone -%}
+
+      <div class="model-detail-message">
+        {{ model_message }}
+      </div>
+      <span class="chatbot-modal-close" onclick="toggleChatbotModal('close')"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
+    </div>
+    <div class="chatbot-modal-content">
+      <div class="chatbot-modal-buttons">
+        {% if matched_phone != blank %}
+          <a href="{{ whatsapp_url  | replace: '(', '' 
+            | replace: ')', '' 
+            | replace: ' ', '' 
+            | replace: '-', ''  }}" target="_blank">
+            <button style="display: flex ; align-items: center; justify-content: center; gap: 22px;" class="whatsapp-button"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_4.svg?v=1755004785"/><span>{{ section.settings.whatsapp_text }}</span></button>
+          </a>
+        {% endif %}
+        <button style="display: flex ; justify-content: center; align-items: center; gap: 10px;" class="email-button" onclick="showEmailForm()"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_5.svg?v=1755004785"/><span>{{ section.settings.email_text }}</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chatbot-modal email-form-modal" id="email-form-modal">
+    <div class="chatbot-modal-header">
+      <h4><img style="cursor: pointer;" onclick="hideEmailForm()" src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_6.svg?v=1755005168"/>{{ section.settings.mailsend_header }}</h4>
+      <span class="chatbot-modal-close" onclick="hideEmailForm()"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
+    </div>
+    <div class="chatbot-modal-content">
+      <p>{{ section.settings.mail_sendmodel }}</p>
+      <form id="chatbot-email-form" class="contact-form-make">
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Enter a message" required></textarea>
+        <button style="display: flex ; align-items: center; justify-content: center; gap: 10px;" type="submit" class="email-button"><span>{{ section.settings.mailsend_button }}</span><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/iconamoon_send-fill.svg?v=1755006012"/></button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="chatbot-modal email-success-modal" id="email-success-modal">
+    <div class="chatbot-modal-header" style="justify-items: center; align-items: center; grid-gap: 15px;">
+      <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/chat-check.svg?v=1755006807"/>
+      <h4 style="text-align: center;">{{ section.settings.thanks_message }}</h4>
+      <span class="chatbot-modal-close" onclick="hideEmailSuccess()"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
+    </div>
+    {% if section.settings.custom_text != blank %}
+      <div class="chatbot-modal-content" style="text-align: center;">
+        {{ section.settings.custom_text }}
+      </div>
+    {% endif %}    
+  </div>
+{% endif %}
     {% comment %} <div class="quote-ready">
       <h2>{{ section.settings.SectionTitle }}</h2>
       <ul>
@@ -1998,41 +1997,41 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.contact-form-make');
-    if (!form) return;
+    const forms = document.querySelectorAll('.contact-form-make');
+    if (!forms.length) return;
     const webhookUrl = "{{ section.settings.webhook_url | escape }}"; // Safe escaping for Liquid output
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
 
-      const formData = new FormData(form);
-      const urlEncodedData = new URLSearchParams(formData).toString();
+    forms.forEach((form) => {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-      try {
-        const response = await fetch(webhookUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: urlEncodedData,
-        });
+        const formData = new FormData(form);
+        const urlEncodedData = new URLSearchParams(formData).toString();
 
-        const responseText = await response.text();
-        console.log("Response Text:", responseText);
-        if (responseText.trim() === 'Accepted') {
-          console.log('Form submitted successfully!');
-          setTimeout(() => { 
-            window.location.reload();
-          }, 500);
-        } else {
-          console.error('Unexpected response:', responseText);
+        try {
+          if (webhookUrl) {
+            const response = await fetch(webhookUrl, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+              },
+              body: urlEncodedData,
+            });
+
+            const responseText = await response.text();
+            console.log('Response Text:', responseText);
+          }
+        } catch (error) {
+          console.error('Fetch error:', error);
+        } finally {
+          if (form.id === 'chatbot-email-form' && typeof showEmailSuccess === 'function') {
+            showEmailSuccess();
+          }
+          form.reset();
         }
-      } catch (error) {
-        console.error('Fetch error:', error);
-
-      }
+      });
     });
   });
-
 </script>
 {% comment %}
   Chatbot Widget
@@ -2339,7 +2338,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const chatbotMessage = document.getElementById('chatbot-message');
     const chatbotIcon = document.getElementById('chatbot-icon');
     
-    if (showChatbot) {
+    if (showChatbot) { 
       setTimeout(() => {
         if (chatbotIcon) chatbotIcon.classList.add('visible');
       }, iconDelay);
