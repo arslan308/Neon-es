@@ -181,6 +181,9 @@
     <div class="chatbot-modal-content">
       <p>{{ section.settings.mail_sendmodel }}</p>
       <form id="chatbot-email-form" class="contact-form-make">
+        <input type="hidden" name="product_handle" value="{{product.handle }}">
+        <input type="hidden" name="product_id" value="{{product.id }}">
+        <input type="hidden" name="store_country" value="{{ localization.country.name }}">
         <input type="email" name="email" placeholder="Email" required>
         <textarea name="message" placeholder="Enter a message" required></textarea>
         <button style="display: flex ; align-items: center; justify-content: center; gap: 10px;" type="submit" class="email-button"><span>{{ section.settings.mailsend_button }}</span><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/iconamoon_send-fill.svg?v=1755006012"/></button>
