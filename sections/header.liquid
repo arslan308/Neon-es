@@ -15,15 +15,24 @@
   <section data-section-id="{{ section.id }}" data-section-type="header" data-section-settings="{{ section_settings | escape_once }}">
   {% comment %} Global discount top bar shown above header on product pages {% endcomment %}
   {% assign header_show_bar = section.settings.show_discount_top_bar_header %}
+  {% if settings.global_discount_date != blank %}
+  {% assign discount_end_time = settings.global_discount_date %}
+  {% else %}
   {% assign discount_end_time = product.metafields.custom.discount_time %}
-  
-  {% if header_show_bar and template.suffix == 'custom_neon' %}
+ {% endif %}
+
+  {% if header_show_bar and template.suffix == 'custom_neon' or  settings.global_discount_date != blank %}
     {% assign current_variant = product.selected_or_first_available_variant %}
     {% assign original_price1 = current_variant.compare_at_price %}
     {% assign sale_price1 = current_variant.price %}
     {% assign discount = original_price1 | minus: sale_price1 %}
-    {% assign discount_percentage1 = discount | times: 100 | divided_by: original_price1 %}
-    {%- assign labels = section.settings.timer_labels | split: ',' -%}
+    {% if settings.global_discount_date != blank %}
+      {% assign discount_percentage1 = settings.global_discount %}
+    {% else %}
+      {% assign discount_percentage1 = discount | times: 100 | divided_by: original_price1 %}
+    {% endif %}
+    
+    {%- assign labels = section.settings.timer_labels | split: ',' -%} 
 
     {%- assign days_label = labels[0] | default: 'd' -%}
     {%- assign hours_label = labels[1] | default: 'h' -%}
@@ -36,6 +45,7 @@
       data-endtime="{{ discount_end_time }}"
       data-compare="{{ original_price1 }}"
       data-price="{{ sale_price1 }}"
+      data-global-discount="{% if settings.global_discount_date != blank %}true{% else %}false{% endif %}"
       style="display:none">
       {%- assign custom_text = section.settings.discount_bar_text -%}
       {%- assign discount_text = '<strong><span id="dbh-percent">' 
@@ -411,26 +421,29 @@
           {% endif %}
         </div>
       </div>
-    </header>
-  
-  
-  </section>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var bar = document.querySelector(".discount-top-bar-header");
-      if (!bar) return;
-  
-      var cmp = parseFloat((bar.getAttribute("data-compare") || '').replace(/[^0-9.-]+/g, ''));
-      var price = parseFloat((bar.getAttribute("data-price") || '').replace(/[^0-9.-]+/g, ''));
-      var endTimeStr = bar.getAttribute("data-endtime");
-  
-      var hasCompare = !isNaN(cmp) && cmp > 0; // show if compare-at price exists (> 0)
-      var hasEndTime = !!endTimeStr;
-  
+  </header>
+
+
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var bar = document.querySelector(".discount-top-bar-header");
+    if (!bar) return;
+
+    var cmp = parseFloat((bar.getAttribute("data-compare") || '').replace(/[^0-9.-]+/g, ''));
+    var price = parseFloat((bar.getAttribute("data-price") || '').replace(/[^0-9.-]+/g, ''));
+    var endTimeStr = bar.getAttribute("data-endtime");
+
+    var hasCompare = !isNaN(cmp) && cmp > 0; // show if compare-at price exists (> 0)
+    var hasEndTime = !!endTimeStr;
+    if(bar.getAttribute("data-global-discount") == "true"){
+        bar.style.display = "block";
+    } else{
       if (!(hasCompare && hasEndTime)) {
         bar.style.display = "none";
         return;
       }
+    }
   
       // Robustly parse end time (supports MM/DD/YYYY[ HH:MM[:SS]], YYYY-MM-DD, and ISO strings)
       var endTime;

@@ -98,7 +98,7 @@
 {% endif %}
 <div class="product-image-section lead_page_UK_price_with_logo_discount">
   <div class="container width-100">
-    {% assign agent_name = product.metafields.custom.a_name | strip %}
+{% assign agent_name = product.metafields.custom.a_name | strip %}
 {% assign matched_image = section.settings.form_user_image %}
 {% assign matched_name = section.settings.support_name %}
 {% assign matched_phone = section.settings.support_phone %}
@@ -136,7 +136,6 @@
       <span class="chatbot-modal-close" onclick="toggleChatbotModal('close')"><img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_7.svg?v=1755006364"/></span>
     </div>
   {% endif %}
-
   <div class="chatbot-modal" id="chatbot-modal">
     <div class="chatbot-modal-header">
       <div class="bot-model-detail">
@@ -152,7 +151,6 @@
         </div>
       </div>
       {%- assign model_message = section.settings.model_detail_message | replace: '[name]', matched_name | replace: '[phone]', matched_phone -%}
-
       <div class="model-detail-message">
         {{ model_message }}
       </div>
@@ -204,6 +202,7 @@
     {% endif %}    
   </div>
 {% endif %}
+
     {% comment %} <div class="quote-ready">
       <h2>{{ section.settings.SectionTitle }}</h2>
       <ul>
@@ -330,16 +329,27 @@
                 {{ image_url_1 }}
               {% endif %}
               <div class="for-mobile-tag">
-                {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
-                {% assign Current = product.selected_or_first_available_variant.price %}
-                {% assign vatPercentDecimal = settings.vat_percent | times: 0.01 | plus: 1 %}
+                {% assign global_discount = settings.global_discount | plus: 0 %}
+                {% if settings.global_discount != blank and global_discount > 0 %}
+                {%- assign discount_percent = settings.global_discount | default: 0 -%}
+                {%- assign discount_factor = 100 | minus: discount_percent | divided_by: 100.0 -%}
+                {%- assign variant_price = product.selected_or_first_available_variant.price 
+                  | times: discount_factor -%}
+                {%- assign variant_compare_at_price = product.selected_or_first_available_variant.price  %}
+              {% else %}
+                {%- assign  variant_compare_at_price = product.selected_or_first_available_variant.compare_at_price %}
+                {%- assign variant_price = product.selected_or_first_available_variant.price  %}
+              {% endif %}
+
+                {% assign Compare = variant_compare_at_price %}
+                {% assign Current = variant_price %}
+
                 {% assign C1 = Compare | divided_by: vatPercentDecimal %}
                 {% assign P1 = Current | divided_by: vatPercentDecimal %}
                 {% if Compare > Current %}
                   {% assign discount_percentage_incl = Compare | minus: Current | times: 100 | divided_by: Compare %}
                   <div class="static-save-text hidePrice static_save_text_incl" id="static_save_text_incl">
                     -{{ discount_percentage_incl | round }}% 
-                    {% comment %} {{ section.settings.save_text }} {% endcomment %}
                   </div>
                 {% endif %}
                 {% if C1 > P1 %}
@@ -400,15 +410,24 @@
                     {% assign C1 = 0 %}
                     <div class="exclude_vat">
                       <div class="calculated-vat-price" id="exclude_vat">
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
+                          or settings.global_discount != blank
                         %} 
+                        {% if settings.global_discount != blank %}
                           {{
-                            product.selected_or_first_available_variant.compare_at_price
+                            variant_price
                             | divided_by: vatPercentDecimal
                             | money
                           }}
-                          {% assign C1 = product.selected_or_first_available_variant.compare_at_price
+                        {% else %}
+                            {{
+                            variant_compare_at_price
+                            | divided_by: vatPercentDecimal
+                            | money
+                          }}
+                        {% endif %}
+                          {% assign C1 = variant_compare_at_price
                             | divided_by: vatPercentDecimal
                           %}
                           {% assign C1 = C1 | plus: 0 | round: 2 %}
@@ -416,17 +435,26 @@
                           <span style="display: none;"></span>
                         {% endif %}
                       </div>
-                      {% if product.selected_or_first_available_variant.compare_at_price != blank
-                        and product.selected_or_first_available_variant.compare_at_price > 0
+                      {% if variant_compare_at_price != blank
+                        and variant_compare_at_price > 0
                       %}
                         <div class="price-for-flex">
-                          <h3 class="discount-price exclude_vat_discount">
-                            {{
-                              product.selected_or_first_available_variant.price
-                              | divided_by: vatPercentDecimal
-                              | money
-                            }}
-                            {% assign P1 = product.selected_or_first_available_variant.price
+                          <h3 class="discount-price exclude_vat_discount 55555">
+                            {% if settings.global_discount != blank %}
+                            {%- assign discount_percent = settings.global_discount | default: 0 -%}
+                            {%- assign discount_factor = 100 | minus: discount_percent | divided_by: 100.0 -%}
+                            {%- assign discounted_price = variant_price 
+                              | divided_by: vatPercentDecimal 
+                              | times: discount_factor -%}
+                            {{ discounted_price | money }}
+                              {% else %}
+                              {{
+                                variant_price
+                                | divided_by: vatPercentDecimal
+                                | money
+                              }}
+                              {% endif %} 
+                            {% assign P1 = variant_price
                               | divided_by: vatPercentDecimal
                             %}
                             {% assign P1 = P1 | plus: 0 | round: 2 %}
@@ -437,9 +465,9 @@
                         </div>
                       {% else %}
                         <div class="price-for-flex">
-                          <h3 class="discount-price exclude_vat_discount">
+                          <h3 class="discount-price exclude_vat_discount 666666">
                             {{
-                              product.selected_or_first_available_variant.price
+                              variant_price
                               | divided_by: vatPercentDecimal
                               | money
                             }}
@@ -453,75 +481,52 @@
   
                     <div class="include_vat hidePrice">
                       <div class="calculated-vat-price" 
-                      {% if product.selected_or_first_available_variant.compare_at_price != blank
-                        and product.selected_or_first_available_variant.compare_at_price > 0
+                      {% if variant_compare_at_price != blank
+                        and variant_compare_at_price > 0
                       %}{% else %}style="display: none;"{% endif %}
                       id="include_vat">
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
                         %}
-                          {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                          {{ variant_compare_at_price | money }}
                         {% else %}
                           <span style="display: none;"></span>
                         {% endif %}
                       </div>
   
-                      {% if product.selected_or_first_available_variant.compare_at_price != blank
-                        and product.selected_or_first_available_variant.compare_at_price > 0
+                      {% if variant_compare_at_price != blank
+                        and variant_compare_at_price > 0
                       %}
                         <div class="price-for-flex">
                           <h3 class="discount-price include_vat_discount" id="include_vat_discount">
-                            {{ product.selected_or_first_available_variant.price | money }}
+                            {{ variant_price | money }}
                           </h3>
                           <span>{{ section.settings.price_inc_vat }}</span>
                         </div> 
                       {% else %}
                         <div class="price-for-flex">
                           <h3 class="discount-price include_vat_discount" id="include_vat_discount">
-                            {{ product.selected_or_first_available_variant.price | money }}
+                            {{ variant_price | money }}
                           </h3>
                           <span>{{ section.settings.price_inc_vat }}</span>
                         </div>
                       {% endif %}
                     </div>
                   </div>
-                  {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
-                  {% assign Current = product.selected_or_first_available_variant.price %}
+                  {% assign Compare = variant_compare_at_price %}
+                  {% assign Current = variant_price %}
   
-                  {% comment %} {% if Compare > Current %}
-                    <div class="static-save-text hidePrice static_save_text_incl" id="static_save_text_incl">
-                      {{ section.settings.save_text }}
-                      {{ Compare | minus: Current | money }}
-                    </div>
-                  {% endif %}
-  
-                  {% if C1 > P1 %}
-                    <div class="static-save-text static_save_text_updated" id="static_save_text">
-                      {{ section.settings.save_text }}
-                      {{ C1 | minus: P1 | money }}
-                    </div>
-                  {% endif %} {% endcomment %}
                 </div>
   
-                {% if product.selected_or_first_available_variant.compare_at_price != blank
-                    and product.selected_or_first_available_variant.compare_at_price > 0
-                    and product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price
+                {% if variant_compare_at_price != blank
+                    and variant_compare_at_price > 0
+                    and variant_compare_at_price > variant_price
                 %}
                   {% assign discount = C1 | minus: P1 %}
                   {% assign discount_percentage = discount | times: 100 | divided_by: C1 %}
-                  {% comment %}
-                    <div class="discount-card includedDiscountCard">
-                        <h5 class="discount-text-dark"><span class="discount_percentage | round }}</span>% off {{ section.settings.discount_card_message }}
-                            <span tooltip="{{ section.settings.discount_car_toltip }}" flow="down">
-                                ⓘ
-                            </span>
-                        </h5>
-                        <p class="discount-text-light">{{ section.settings.discount_message_complete }}</p>
-                    </div>
-                  {% endcomment %}
 
-                  {% assign original_price1 = product.selected_or_first_available_variant.compare_at_price %}
-                  {% assign sale_price1 = product.selected_or_first_available_variant.price %}
+                  {% assign original_price1 = variant_compare_at_price %}
+                  {% assign sale_price1 = variant_price %}
 
                   {% assign discount = original_price1 | minus: sale_price1 %}
                   {% assign discount_percentage1 = discount | times: 100 | divided_by: original_price1 %}
@@ -561,7 +566,7 @@
                 </div>
                 <div
                   class="arrive_text"
-                  {% if product.selected_or_first_available_variant.compare_at_price > 0
+                  {% if variant_compare_at_price > 0
                     and product.metafields.custom.discount_time != blank
                   %}
                     style="display: block;"
@@ -696,27 +701,44 @@
                           {% endfor %}
                         </table>
                       </div>
-                      <div class="allVariationDiv">
+                      <div class="allVariationDiv allVariationDiv_desktop_view">
                         {% for variant in product.variants %}
-                          {% assign org_price_attr = variant.price | divided_by: vatPercentDecimal %}
-                          {% assign div_price_attr = variant.compare_at_price | divided_by: vatPercentDecimal %}
+                          {% assign global_discount = settings.global_discount | plus: 0 %}
+                        {% if settings.global_discount != blank and global_discount > 0 %}
+                            {%- assign discount_percent = settings.global_discount | default: 0 -%}
+                            {%- assign discount_factor = 100 | minus: discount_percent | divided_by: 100.0 -%}
+                            {%- assign variant_price = variant.price 
+                              | times: discount_factor -%}
+                            {%- assign variant_compare_at_price = variant.price  %}
+                            {% else %}
+                              {%- assign  variant_compare_at_price = variant.compare_at_price %}
+                               {%- assign variant_price = variant.price  %}
+                            {% endif %}
+
+                          {% assign org_price_attr = variant_price | divided_by: vatPercentDecimal %}
+                          {% assign div_price_attr = variant_compare_at_price | divided_by: vatPercentDecimal %}
                           {% assign main_price_attr = div_price_attr %}
                           {% assign cal_price_attr = main_price_attr | minus: org_price_attr %}
   
-                          {% assign toggle_org_price_attr = variant.price %}
-                          {% assign toggle_div_price_attr = variant.price %}
+                          {% assign toggle_org_price_attr = variant_price %}
+                          {% assign toggle_div_price_attr = variant_price %}
                           {% assign toggle_main_price_attr = toggle_div_price_attr %}
                           {% assign toggle_cal_price_attr = toggle_org_price_attr | minus: toggle_main_price_attr %}
+                          {%- assign final_price_1 = variant_price | divided_by:vatPercentDecimal| money %}
+                          {%- assign final_compare_price_2 = variant_compare_at_price | divided_by:vatPercentDecimal| money %}
+                          {%- assign price_new = variant_price %}
+                          {%- assign v_price = variant_price | money %}
+
                           <input
                             class="block-swatch__radio product-form__single-selector"
-                            price_1="{{ variant.price | divided_by:vatPercentDecimal| money }}"
-                            price_2="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ variant.compare_at_price | divided_by:vatPercentDecimal  | money }}{% endif %}"
+                            price_1="{{ final_price_1 }}"
+                            price_2="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ final_compare_price_2 }}{% endif %}"
                             media_id="{{ variant.image.id }}"
-                            price_new="{{ variant.price }}"
-                            price="{{ variant.price | money }}"
-                            incl_price="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{  variant.compare_at_price | money }}{% endif %}"
-                            minus_price="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ cal_price_attr | money }}{% endif %}"
-                            minus_price_without_vat="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ variant.compare_at_price| minus: variant.price | money }}{% endif %}"
+                            price_new="{{ price_new }}"
+                            price="{{ v_price }}"
+                            incl_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{  variant_compare_at_price | money }}{% endif %}"
+                            minus_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ cal_price_attr | money }}{% endif %}"
+                            minus_price_without_vat="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ variant_compare_at_price| minus: variant_price | money }}{% endif %}"
                             toggle_incl_price="{{ toggle_cal_price_attr | money }}"
                             minus_price_label="{{ section.settings.save_text }}"
                             value="{{ variant.id }}"
@@ -904,15 +926,15 @@
                       {% assign C1 = 0 %}
                       <div class="exclude_vat">
                         <div class="calculated-vat-price" id="exclude_vat_popup_bar">
-                          {% if product.selected_or_first_available_variant.compare_at_price != blank
-                            and product.selected_or_first_available_variant.compare_at_price > 0
+                          {% if variant_compare_at_price != blank
+                            and variant_compare_at_price > 0
                           %}
                             {{
-                              product.selected_or_first_available_variant.compare_at_price
+                              variant_compare_at_price
                               | divided_by: vatPercentDecimal
                               | money
                             }}
-                            {% assign C1 = product.selected_or_first_available_variant.compare_at_price
+                            {% assign C1 = variant_compare_at_price
                               | divided_by: vatPercentDecimal
                             %}
                             {% assign C1 = C1 | plus: 0 | round: 2 %}
@@ -921,17 +943,17 @@
                           {% endif %}
                         </div>
 
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
                         %}
                           <div class="price-for-flex">
-                            <h3 class="discount-price exclude_vat_discount">
+                            <h3 class="discount-price exclude_vat_discount 1111">
                               {{
-                                product.selected_or_first_available_variant.price
+                                variant_price
                                 | divided_by: vatPercentDecimal
                                 | money
                               }}
-                              {% assign P1 = product.selected_or_first_available_variant.price
+                              {% assign P1 = variant_price
                                 | divided_by: vatPercentDecimal
                               %}
                               {% assign P1 = P1 | plus: 0 | round: 2 %}
@@ -942,9 +964,9 @@
                           </div>
                         {% else %}
                           <div class="price-for-flex">
-                            <h3 class="discount-price exclude_vat_discount">
+                            <h3 class="discount-price exclude_vat_discount 222222">
                               {{
-                                product.selected_or_first_available_variant.price
+                                variant_price
                                 | divided_by: vatPercentDecimal
                                 | money
                               }}
@@ -957,39 +979,39 @@
                       </div>
                       <div class="include_vat hidePrice">
                         <div class="calculated-vat-price" 
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
                         %}{% else %}style="display: none;"{% endif %}
                         id="include_vat">
-                          {% if product.selected_or_first_available_variant.compare_at_price != blank
-                            and product.selected_or_first_available_variant.compare_at_price > 0
+                          {% if variant_compare_at_price != blank
+                            and variant_compare_at_price > 0
                           %}
-                            {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                            {{ variant_compare_at_price | money }}
                           {% else %}
                             <span style="display: none;"></span>
                           {% endif %}
                         </div>
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
                         %}
                           <div class="price-for-flex">
                             <h3 class="discount-price include_vat_discount" id="include_vat_discount">
-                              {{ product.selected_or_first_available_variant.price | money }}
+                              {{ variant_price | money }}
                             </h3>
                             <span>{{ section.settings.price_inc_vat }}</span>
                           </div>
                         {% else %}
                           <div class="price-for-flex">
                             <h3 class="discount-price include_vat_discount" id="include_vat_discount">
-                              {{ product.selected_or_first_available_variant.price | money }}
+                              {{ variant_price | money }}
                             </h3>
                             <span>{{ section.settings.price_inc_vat }}</span>
                           </div>
                         {% endif %}
                       </div>
                     </div>
-                    {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
-                    {% assign Current = product.selected_or_first_available_variant.price %}
+                    {% assign Compare = variant_compare_at_price %}
+                    {% assign Current = variant_price %}
 
                     {% comment %} {% if Compare > Current %}
                       <div
@@ -1077,7 +1099,7 @@
                         <table>
                           {%- for option in product.options_with_values -%}
                             <tr classs="custom-tr">
-                              <th>{{ option.name }}</th>
+                              <th data-priority-id="{{ option.name | handleize }}">{{ option.name }}</th>
                               <td>
                                 <div class="select-wrapper select-wrapper--primary">
                                   {%- render 'icon', icon: 'arrow-bottom' -%}
@@ -1163,27 +1185,45 @@
                           {% endfor %}
                         </table>
                       </div>
-                      <div class="allVariationDiv">
+                          <div class="allVariationDiv">
                         {% for variant in product.variants %}
-                          {% assign org_price_attr = variant.price | divided_by: vatPercentDecimal %}
-                          {% assign div_price_attr = variant.compare_at_price | divided_by: vatPercentDecimal %}
+                         {% assign global_discount = settings.global_discount | plus: 0 %}
+                        {% if settings.global_discount != blank and global_discount > 0 %}
+                            {%- assign discount_percent = settings.global_discount | default: 0 -%}
+                            {%- assign discount_factor = 100 | minus: discount_percent | divided_by: 100.0 -%}
+                            {%- assign variant_price = variant.price 
+                              | times: discount_factor -%}
+                            {%- assign variant_compare_at_price = variant.price  %}
+                            {% else %}
+                              {%- assign variant_compare_at_price = variant.compare_at_price %}
+                               {%- assign variant_price = variant.price  %}
+                            {% endif %}
+
+                          {% assign org_price_attr = variant_price | divided_by: vatPercentDecimal %}
+                          {% assign div_price_attr = variant_compare_at_price | divided_by: vatPercentDecimal %}
                           {% assign main_price_attr = div_price_attr %}
                           {% assign cal_price_attr = main_price_attr | minus: org_price_attr %}
-
-                          {% assign toggle_org_price_attr = variant.price %}
-                          {% assign toggle_div_price_attr = variant.price %}
+  
+                          {% assign toggle_org_price_attr = variant_price %}
+                          {% assign toggle_div_price_attr = variant_price %}
                           {% assign toggle_main_price_attr = toggle_div_price_attr %}
                           {% assign toggle_cal_price_attr = toggle_org_price_attr | minus: toggle_main_price_attr %}
+
+                          {%- assign final_price_1 = variant_price | divided_by:vatPercentDecimal| money %}
+                          {%- assign final_compare_price_2 = variant_compare_at_price | divided_by:vatPercentDecimal| money %}
+                          {%- assign price_new = variant_price %}
+                          {%- assign v_price = variant_price | money %}
+
                           <input
                             class="block-swatch__radio product-form__single-selector"
-                            price_1="{{ variant.price | divided_by:vatPercentDecimal| money }}"
-                            price_2="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ variant.compare_at_price | divided_by:vatPercentDecimal  | money }}{% endif %}"
+                            price_1="{{ final_price_1 }}"
+                            price_2="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ final_compare_price_2 }}{% endif %}"
                             media_id="{{ variant.image.id }}"
-                            price_new="{{ variant.price }}"
-                            price="{{ variant.price | money }}"
-                            incl_price="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{  variant.compare_at_price | money }}{% endif %}"
-                            minus_price="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ cal_price_attr | money }}{% endif %}"
-                            minus_price_without_vat="{% if variant.compare_at_price and variant.compare_at_price > 0 %}{{ variant.compare_at_price| minus: variant.price | money }}{% endif %}"
+                            price_new="{{ price_new }}"
+                            price="{{ v_price }}"
+                            incl_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{  variant_compare_at_price | money }}{% endif %}"
+                            minus_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ cal_price_attr | money }}{% endif %}"
+                            minus_price_without_vat="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ variant_compare_at_price| minus: variant_price | money }}{% endif %}"
                             toggle_incl_price="{{ toggle_cal_price_attr | money }}"
                             minus_price_label="{{ section.settings.save_text }}"
                             value="{{ variant.id }}"
@@ -1406,15 +1446,15 @@
                       {% assign C1 = 0 %}
                       <div class="exclude_vat">
                         <div class="calculated-vat-price" id="exclude_vat_popup">
-                          {% if product.selected_or_first_available_variant.compare_at_price != blank
-                            and product.selected_or_first_available_variant.compare_at_price > 0
+                          {% if variant_compare_at_price != blank
+                            and variant_compare_at_price > 0
                           %}
                             {{
-                              product.selected_or_first_available_variant.compare_at_price
+                              variant_compare_at_price
                               | divided_by: vatPercentDecimal
                               | money
                             }}
-                            {% assign C1 = product.selected_or_first_available_variant.compare_at_price
+                            {% assign C1 = variant_compare_at_price
                               | divided_by: vatPercentDecimal
                             %}
                             {% assign C1 = C1 | plus: 0 | round: 2 %}
@@ -1423,17 +1463,29 @@
                           {% endif %}
                         </div>
 
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
                         %}
                           <div class="price-for-flex">
-                            <h3 class="discount-price exclude_vat_discount">
+                            <h3 class="discount-price exclude_vat_discount 333333">
+                            {% if settings.global_discount != blank and  settings.global_discount > 0 %}
+                            {%- assign discount_percent = settings.global_discount | default: 0 -%}
+                            {%- assign base_price = variant_price | divided_by: vatPercentDecimal -%}
+                            {%- assign discounted_price = base_price | times: 1.0 | minus: base_price | times: discount_percent | divided_by: 100 -%}
+                            {{ discounted_price | money }} 
                               {{
-                                product.selected_or_first_available_variant.price
+                                variant_price
                                 | divided_by: vatPercentDecimal
                                 | money
                               }}
-                              {% assign P1 = product.selected_or_first_available_variant.price
+                              {% else %}
+                              {{
+                                variant_price
+                                | divided_by: vatPercentDecimal
+                                | money
+                              }}
+                              {% endif %}
+                              {% assign P1 = variant_price
                                 | divided_by: vatPercentDecimal
                               %}
                               {% assign P1 = P1 | plus: 0 | round: 2 %}
@@ -1444,9 +1496,26 @@
                           </div>
                         {% else %}
                           <div class="price-for-flex">
-                            <h3 class="discount-price exclude_vat_discount">
+                            <h3 class="discount-price exclude_vat_discount 444444">
+                              {% if settings.global_discount != blank and  settings.global_discount > 0 %}
+                            {%- assign discount_percent = settings.global_discount | default: 0 -%}
+                            {%- assign base_price = variant_price | divided_by: vatPercentDecimal -%}
+                            {%- assign discounted_price = base_price | times: 1.0 | minus: base_price | times: discount_percent | divided_by: 100 -%}
+                            {{ discounted_price | money }} 
                               {{
-                                product.selected_or_first_available_variant.price
+                                variant_price
+                                | divided_by: vatPercentDecimal
+                                | money
+                              }}
+                              {% else %}
+                              {{
+                                variant_price
+                                | divided_by: vatPercentDecimal
+                                | money
+                              }}
+                              {% endif %}
+                              {{
+                                variant_price
                                 | divided_by: vatPercentDecimal
                                 | money
                               }}
@@ -1460,40 +1529,40 @@
 
                       <div class="include_vat hidePrice">
                         <div class="calculated-vat-price" 
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
                         %}{% else %}style="display: none;"{% endif %}
                         id="include_vat">
-                          {% if product.selected_or_first_available_variant.compare_at_price != blank
-                            and product.selected_or_first_available_variant.compare_at_price > 0
+                          {% if variant_compare_at_price != blank
+                            and variant_compare_at_price > 0
                           %}
-                            {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                            {{ variant_compare_at_price | money }}
                           {% else %}
                             <span style="display: none;"></span>
                           {% endif %}
                         </div>
 
-                        {% if product.selected_or_first_available_variant.compare_at_price != blank
-                          and product.selected_or_first_available_variant.compare_at_price > 0
+                        {% if variant_compare_at_price != blank
+                          and variant_compare_at_price > 0
                         %}
                           <div class="price-for-flex">
                             <h3 class="discount-price include_vat_discount" id="include_vat_discount">
-                              {{ product.selected_or_first_available_variant.price | money }}
+                              {{ variant_price | money }}
                             </h3>
                             <span>{{ section.settings.price_inc_vat }}</span>
                           </div>
                         {% else %}
                           <div class="price-for-flex">
                             <h3 class="discount-price include_vat_discount" id="include_vat_discount">
-                              {{ product.selected_or_first_available_variant.price | money }}
+                              {{ variant_price | money }}
                             </h3>
                             <span>{{ section.settings.price_inc_vat }}</span>
                           </div>
                         {% endif %}
                       </div>
                     </div>
-                    {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
-                    {% assign Current = product.selected_or_first_available_variant.price %}
+                    {% assign Compare = variant_compare_at_price %}
+                    {% assign Current = variant_price %}
 {% comment %} 
                     {% if Compare > Current %}
                       <div class="static-save-text hidePrice static_save_text_incl" id="static_save_text_incl">
@@ -1510,9 +1579,9 @@
                     {% endif %} {% endcomment %}
                   </div>
 
-                  {% if product.selected_or_first_available_variant.compare_at_price != blank 
-                      and product.selected_or_first_available_variant.compare_at_price > 0
-                      and product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price
+                  {% if variant_compare_at_price != blank 
+                      and variant_compare_at_price > 0
+                      and variant_compare_at_price > variant_price
                   %}
                     {% assign discount = C1 | minus: P1 %}
                     {% assign discount_percentage = discount | times: 100 | divided_by: C1 %}
@@ -1527,8 +1596,8 @@
                       </div>
                     {% endcomment %}
 
-                    {% assign original_price1 = product.selected_or_first_available_variant.compare_at_price %}
-                    {% assign sale_price1 = product.selected_or_first_available_variant.price %}
+                    {% assign original_price1 = variant_compare_at_price %}
+                    {% assign sale_price1 = variant_price %}
 
                     {% assign discount = original_price1 | minus: sale_price1 %}
                     {% assign discount_percentage1 = discount | times: 100 | divided_by: original_price1 %}
@@ -1560,7 +1629,7 @@
 
                   <div
                     class="arrive_text"
-                    {% if product.selected_or_first_available_variant.compare_at_price > 0
+                    {% if variant_compare_at_price > 0
                       and product.metafields.custom.discount_time != blank
                     %}
                       style="display: block;"
@@ -1619,11 +1688,23 @@
         {{ image_url_1 }}
       {% endif %}
       <div class="for-desktop-tag">
-        {% assign Compare = product.selected_or_first_available_variant.compare_at_price %}
-        {% assign Current = product.selected_or_first_available_variant.price %}
+        {% assign global_discount = settings.global_discount | plus: 0 %}
+        {% if settings.global_discount != blank and global_discount > 0 %}
+          {%- assign discount_percent = settings.global_discount | default: 0 -%}
+          {%- assign discount_factor = 100 | minus: discount_percent | divided_by: 100.0 -%}
+          {%- assign variant_price = product.selected_or_first_available_variant.price 
+            | times: discount_factor -%}
+          {%- assign variant_compare_at_price = product.selected_or_first_available_variant.price  %}
+        {% else %}
+          {%- assign  variant_compare_at_price = product.selected_or_first_available_variant.compare_at_price %}
+          {%- assign variant_price = product.selected_or_first_available_variant.price  %}
+        {% endif %}
+
+        {% assign Compare = variant_compare_at_price %}
+        {% assign Current = variant_price %}
 
         {%- comment -%} Exclude VAT ke liye calculated values {%- endcomment -%} 
-        {% assign vatPercentDecimal = settings.vat_percent | times: 0.01 | plus: 1 %}
+        {% assign vatPercentDecimal = settings.vat_percent | plus: 100 | divided_by: 100 %}
         {% assign C1 = Compare | divided_by: vatPercentDecimal %}
         {% assign P1 = Current | divided_by: vatPercentDecimal %}
  
@@ -1644,24 +1725,11 @@
           </div>
         {% endif %}
 
-        {% comment %} {% if Compare > Current %}
-          <div class="static-save-text hidePrice static_save_text_incl" id="static_save_text_incl">
-            {{ section.settings.save_text }}
-            {{ Compare | minus: Current | money }}
-          </div>
-        {% endif %}
-
-        {% if C1 > P1 %}
-          <div class="static-save-text static_save_text_updated" id="static_save_text">
-            {{ section.settings.save_text }}
-            {{ C1 | minus: P1 | money }}
-          </div>
-        {% endif %} {% endcomment %}
       </div>  
       <div class="request-form-wrapper">
         <div class="mobile-request-form">
           <div class="avtar-wrapper">
-            <img src="{{ matched_image }}" alt="">
+            <img src="{{ matched_image }}" alt="agent_img">
             <h4>{{ section.settings.form_question | replace: 'agent_name', matched_name }}</h4>
           </div>
   
@@ -1770,6 +1838,15 @@
   <button class="scroll_down_btn_cstm kreep"><i class="fa-sharp fa-solid fa-arrow-down"></i></button>
 </div>
 <style>
+  .priority-icon{
+    background: purple;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+    display: flex;
+    border-radius: 50px;
+    padding: 2px;
+  }
   .just-for-mobile{position: relative;}
   .just-for-mobile img{
     margin-bottom: 8px;
@@ -1782,7 +1859,7 @@
           display: none;
         }
       @media only screen and (max-width: 767.9px) {
-         .mobile-product-description{
+        .mobile-product-description{
           margin: 0 15px 15px;
         background: #F7F5FF;
         padding: 8px 16px 16px;
@@ -1838,6 +1915,7 @@
       text-align: center;
       position: relative;
   }
+  .priority-modal-header .go-back .icon-holder,
   .tooltip-content .go-back .icon-holder,
   .popup-content2 .go-back .icon-holder{
       height: 16px;
@@ -1849,6 +1927,7 @@
       display: flex;
       justify-content: center;
   }
+  .priority-modal-header .go-back,
   .tooltip-content .go-back,
   .popup-content2 .go-back{
       display: flex;
@@ -2369,7 +2448,6 @@ document.addEventListener("DOMContentLoaded", function() {
                   tooltipPopup.querySelector(".tooltip-name").textContent = extractedName;
                   tooltipPopup.querySelector(".tooltip-type").textContent = selectedOption;
               }
-
               popups[index].classList.add("active");
           });
       });
@@ -2741,8 +2819,6 @@ document.addEventListener("DOMContentLoaded", function() {
               }
               initializeDiscountVisibility();
               updatePricesForCurrentVariant();
-              // Default view should be Exclude VAT (toggle OFF)
-              try { if (typeof checkCheckboxStatus === 'function') { checkCheckboxStatus(false); } } catch(e) {}
           }, 50);
       });
       
@@ -2754,24 +2830,27 @@ document.addEventListener("DOMContentLoaded", function() {
               const price2 = selectedVariant.attr('price_2');
               const price = selectedVariant.attr('price');
               const inclPrice = selectedVariant.attr('incl_price');
-              
+              console.log('adding pric1', price1);
+              console.log('adding price2', price2);
+
               // Update exclude VAT prices
               if (price1) jQuery('.exclude_vat_discount').text(price1);
               if (price2) jQuery('#exclude_vat, #exclude_vat_popup, #exclude_vat_popup_bar').text(price2);
               
-                             // Update include VAT prices
+              // Update include VAT prices
                if (price) jQuery('.include_vat_discount').text(price);
                if (inclPrice) jQuery('#include_vat, #include_vat_popup, #include_vat_popup_bar').text(inclPrice);
               
               // Update discount card percentage
-                             if (price2 && price2 !== "$0.00" && price2 !== "€0.00" && price2 !== "£0.00") {
+              if (price2 && price2 !== "$0.00" && price2 !== "€0.00" && price2 !== "£0.00") {
                    const price1Decimal = parseFloat(price1.replace(/[^0-9.-]+/g, ""));
                    const price2Decimal = parseFloat(price2.replace(/[^0-9.-]+/g, ""));
                    if (price2Decimal > 0) {
                        const discountPercent = ((price2Decimal - price1Decimal) / price2Decimal * 100).toFixed(0);
+                       console.log('discountPercent', discountPercent)
                        jQuery('.ForPercentage').text(discountPercent);
-                       if (jQuery('#static_save_text').length) {
-                         jQuery('#static_save_text').text('-' + discountPercent + '% ' + {{ section.settings.save_text | json }});
+                       if (jQuery('.static_save_text_updated').length) {
+                         jQuery('.static_save_text_updated').text('-' + discountPercent + '% ' + {{ section.settings.save_text | json }});
                        }
                    }
                }
@@ -2794,7 +2873,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }
       jQuery(document).on('change', '.variation_option', function() {
-      var variation_title = '';
+          var variation_title = '';
           jQuery('.variation_option').each(function () {
               var selected_value = jQuery(this).val();
               if (selected_value) {
@@ -2841,7 +2920,6 @@ document.addEventListener("DOMContentLoaded", function() {
                   jQuery('.static_save_text_updated').hide();
                   jQuery('.discount-card.includedDiscountCard').hide();
               }
-              
               // Update all prices for the new variant
               updatePricesForCurrentVariant();
           }, 50);
@@ -2926,7 +3004,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   document.querySelector("#exclude_vat_popup").style.display = "block";
                   document.querySelector("#exclude_vat_popup_bar").style.display = "block";
                   if(document.querySelector(".static_save_text_updated")){
-                      document.querySelector(".static_save_text_updated").style.display = "block";
+                     document.querySelector(".static_save_text_updated").style.display = "block";
                   }
                   
                   // Also show the discount card in the main product section
@@ -3005,7 +3083,7 @@ document.addEventListener("DOMContentLoaded", function() {
               }
           }
 
-
+          console.log('pric_1', pric_1);
           jQuery('.normal-price .exclude_vat_discount').text(pric_1);
           jQuery('.exclude_vat_discount').text(pric_1);
           jQuery('#include_vat, #include_vat_popup, #include_vat_popup_bar').text(incl_price);
@@ -3089,7 +3167,6 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(_name);
       console.log(_val);
       $('.product-form__single-selector[name="'+_name+'"]').val(_val).trigger('change');
-      
       // Update prices for popup as well
       setTimeout(function() {
           updatePricesForCurrentVariant();
@@ -3303,6 +3380,98 @@ document.addEventListener("DOMContentLoaded", function() {
 <script>
   cdtd();
 </script>
+
+<script>
+  // Priority modal script with debugging
+  document.addEventListener('DOMContentLoaded', function(){
+    function toHandle(str){ return (str || '').toString().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
+    function openPriorityModal(id){
+      var handle = toHandle(id);
+      var modal = document.querySelector('.priority-modal[data-priority-id="'+handle+'"]');
+      var overlay = document.querySelector('#priority-modals-root .priority-modal-overlay');
+      console.log('[priority-modal] open request:', { raw:id, handle:handle, modalFound: !!modal, overlayFound: !!overlay });
+      if(modal && overlay){ modal.classList.add('active'); overlay.classList.add('active'); } else { console.warn('[priority-modal] modal or overlay not found for', handle); }
+    }
+    function closePriorityModals(){
+      document.querySelectorAll('.priority-modal.active').forEach(function(m){m.classList.remove('active')});
+      var overlay = document.querySelector('#priority-modals-root .priority-modal-overlay');
+      if(overlay){ overlay.classList.remove('active'); }
+      console.log('[priority-modal] closed');
+    }
+    document.addEventListener('click', function(e){
+      var icon = e.target.closest('.priority-icon, th[data-priority-id]');
+      if(icon){
+        var id = icon.getAttribute('data-priority-id') || (icon.closest('th') ? icon.closest('th').getAttribute('data-priority-id') : '');
+        console.log('[priority-modal] icon/header click', { target:e.target, resolvedId:id });
+        if(id){ e.preventDefault(); openPriorityModal(id); }
+      }
+      if(e.target.closest('[data-close]') || e.target.matches('#priority-modals-root [data-overlay]')){ closePriorityModals(); }
+    });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closePriorityModals(); } });
+  });
+</script>
+<style>
+  /* Priority modal styles */
+  .priority-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000020;display:none}
+  .priority-modal-overlay.active{display:block}
+  .priority-modal{position:fixed;inset:0;z-index:1000021;display:none}
+  .priority-modal.active{display:flex}
+  .priority-modal .priority-modal-inner{background:#fff;width:100%;height:100vh;display:flex;flex-direction:column}
+  .priority-modal .priority-modal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;}
+  .priority-modal .priority-modal-title{font-size:18px;font-weight:600}
+  .priority-modal .priority-modal-close{cursor:pointer;height:32px;width:32px; display:flex;align-items:center;justify-content:center}
+  .priority-modal .priority-modal-body{padding:16px;overflow:auto}
+  .priority-modal .priority-card-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+  .priority-modal .priority-card{padding:12px;display:flex;flex-direction:column;align-items:center;text-align:center;flex:1 1 14%;min-width:180px;max-width:260px}
+  .priority-modal .priority-card img{max-width:100%;height:auto;border-radius:8px}
+  @media(max-width:1200px){.priority-modal .priority-card{flex:1 1 30%}}
+  @media(max-width:768px){.priority-modal .priority-card{flex:1 1 48%}}
+</style>
+<div id="priority-modals-root">
+  {% for block in section.blocks %}
+    {% if block.type == 'priority_info' %}
+      <div class="priority-modal" data-priority-id="{{ block.settings.priority_id | handleize }}">
+        <div class="priority-modal-inner">
+          <div class="priority-modal-header">
+            <div class="go-back">
+              <span class="icon-holder">
+                <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/arrow_back_29870cd3-80f1-4855-a1e9-b3df56f7daea.svg?v=1744134856">
+              </span>
+              <span class="back-text">{{ section.settings.go_back }}</span>
+            </div>
+            <div class="priority-modal-title">{{ block.settings.title }}</div>
+            <div class="priority-modal-close" data-close>
+              <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/close.svg?v=1744134856" width="16" height="16"/>
+            </div>
+          </div>
+          <div class="priority-modal-body">
+                         <div class="priority-card-grid">
+               {% for i in (1..7) %}
+                 {% assign img_key = 'image_' | append: i %}
+                 {% assign t_key = 'title_' | append: i %}
+                 {% assign d_key = 'desc_' | append: i %}
+                 {% assign img = block.settings[img_key] %}
+                 {% assign t = block.settings[t_key] %}
+                 {% assign d = block.settings[d_key] %}
+                 {% if img != blank or t != blank or d != blank %}
+                   <div class="priority-card">
+                     {% if img %}
+                       <img src="{{ img | img_url: '600x' }}" alt="{{ t | escape }}" width="600" height="400">
+                     {% endif %}
+                     {% if t %}<h5>{{ t }}</h5>{% endif %}
+                     {% if d %}<p>{{ d }}</p>{% endif %}
+                   </div>
+                 {% endif %}
+               {% endfor %}
+             </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="priority-modal-overlay" data-overlay></div>
+</div>
+
 {% schema %}
 {
   "name": "Logo Discount Product",

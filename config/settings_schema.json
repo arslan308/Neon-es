@@ -23,6 +23,25 @@
     ]
   },
   {
+    "name": "Global Discount",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Discount"
+      },
+      {
+        "type": "text",
+        "id": "global_discount",
+        "label": "Global Discount"
+      },
+      {
+        "type": "text",
+        "id": "global_discount_date",
+        "label": "Discount end date"
+      }
+    ]
+  },
+  {
     "name": "Delivery Date settings",
     "settings": [
       {
