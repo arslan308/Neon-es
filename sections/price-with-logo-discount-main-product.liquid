@@ -731,15 +731,15 @@
 
                           <input
                             class="block-swatch__radio product-form__single-selector"
-                            price_1="{{ final_price_1 }}"
-                            price_2="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ final_compare_price_2 }}{% endif %}"
+                            price_1="{{ final_price_1 | remove: '.' }}"
+                            price_2="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ final_compare_price_2 | remove: '.' }}{% endif %}"
                             media_id="{{ variant.image.id }}"
                             price_new="{{ price_new }}"
-                            price="{{ v_price }}"
+                            price="{{ v_price | remove: '.' }}"
                             incl_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{  variant_compare_at_price | money }}{% endif %}"
-                            minus_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ cal_price_attr | money }}{% endif %}"
-                            minus_price_without_vat="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ variant_compare_at_price| minus: variant_price | money }}{% endif %}"
-                            toggle_incl_price="{{ toggle_cal_price_attr | money }}"
+                            minus_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ cal_price_attr | money | remove: '.' }}{% endif %}"
+                            minus_price_without_vat="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ variant_compare_at_price| minus: variant_price | money | remove: '.' }}{% endif %}"
+                            toggle_incl_price="{{ toggle_cal_price_attr | money | remove: '.' }}"
                             minus_price_label="{{ section.settings.save_text }}"
                             value="{{ variant.id }}"
                             translate="no"
@@ -1209,22 +1209,22 @@
                           {% assign toggle_main_price_attr = toggle_div_price_attr %}
                           {% assign toggle_cal_price_attr = toggle_org_price_attr | minus: toggle_main_price_attr %}
 
-                          {%- assign final_price_1 = variant_price | divided_by:vatPercentDecimal| money %}
+                          {%- assign final_price_1 = variant_price | divided_by:vatPercentDecimal | money %}
                           {%- assign final_compare_price_2 = variant_compare_at_price | divided_by:vatPercentDecimal| money %}
                           {%- assign price_new = variant_price %}
                           {%- assign v_price = variant_price | money %}
 
                           <input
                             class="block-swatch__radio product-form__single-selector"
-                            price_1="{{ final_price_1 }}"
-                            price_2="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ final_compare_price_2 }}{% endif %}"
+                            price_1="{{ final_price_1 | remove: '.' }}"
+                            price_2="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ final_compare_price_2 | remove: '.' }}{% endif %}"
                             media_id="{{ variant.image.id }}"
                             price_new="{{ price_new }}"
-                            price="{{ v_price }}"
-                            incl_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{  variant_compare_at_price | money }}{% endif %}"
-                            minus_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ cal_price_attr | money }}{% endif %}"
-                            minus_price_without_vat="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ variant_compare_at_price| minus: variant_price | money }}{% endif %}"
-                            toggle_incl_price="{{ toggle_cal_price_attr | money }}"
+                            price="{{ v_price | remove: '.' }}"
+                            incl_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{  variant_compare_at_price | money | remove: '.' }}{% endif %}"
+                            minus_price="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ cal_price_attr | money | remove: '.' }}{% endif %}"
+                            minus_price_without_vat="{% if variant_compare_at_price and variant_compare_at_price > 0 %}{{ variant_compare_at_price| minus: variant_price | money | remove: '.' }}{% endif %}"
+                            toggle_incl_price="{{ toggle_cal_price_attr | money | remove: '.' }}"
                             minus_price_label="{{ section.settings.save_text }}"
                             value="{{ variant.id }}"
                             translate="no"
