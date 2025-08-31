@@ -10,6 +10,8 @@
 {
   "current": {
     "vat_percent": "21",
+    "global_discount": "25",
+    "global_discount_date": "9/4/2025",
     "delivery_days_offset": "11-15",
     "google_tag_manager": "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n    })(window,document,'script','dataLayer','GTM-N53RS5D');</script>\n\n<!-- Microsoft Clarity base tracking -->\n<script type=\"text/javascript\">\n  (function(c,l,a,r,i,t,y){\n    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n    t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n  })(window, document, \"clarity\", \"script\", \"mfjj4ho3el\");\n</script>",
     "google_site_verification": "hLChpdehPdyY2Wrb4e5kj3zcdE0c-qgayw5HAnT3DdU",
@@ -547,7 +549,6 @@
         "disabled": false,
         "settings": {
           "initial_screen": "VISUALISER",
-          "experimental": false,
           "scroll_order": false,
           "height": 100,
           "height_reduction": 0,
