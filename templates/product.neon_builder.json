@@ -20,7 +20,7 @@
             "initial_screen": "VISUALISER",
             "scroll_order": false,
             "height": 100,
-            "height_reduction": 60,
+            "height_reduction": 100,
             "height_reduction_mobile": 220,
             "price_box_options": "bottom",
             "rtl": false
@@ -98,6 +98,16 @@
       ],
       "disabled": true,
       "settings": {
+        "vat_included_text": "Include VAT",
+        "vat_excluded_text": "Exclude VAT",
+        "checkmark_color": "#00a651",
+        "list_point1": "",
+        "list_point2": "",
+        "list_point3": "",
+        "list_point4": "",
+        "order_message": "Ordered before 11:59 PM",
+        "delivery_date": "Delivered on",
+        "accordion_text": "What You Will Receive",
         "image_size": "small",
         "enable_video_looping": false,
         "enable_image_zoom": true,
@@ -1081,6 +1091,7 @@
       "disabled": true,
       "settings": {
         "heading": "You may also like",
+        "custom_style_class": "",
         "show_quick_buy": false
       }
     }
