@@ -408,6 +408,13 @@
 </style>
 {% if template == 'product' or template == 'product.updated_product' %}
   <style>
+    .product-info__block-item.product-info__block-item--variant-selector{
+          padding-bottom: 12px;
+    }
+  </style>
+{% endif %}
+{% if template == 'product' or template == 'product.updated_product' %}
+  <style>
     .card--collapsed .card__header, .card--collapsed .card__section{padding-top: 20px;}
     .product-block-list__item--info > .card{background: #f7f5ff !important; border-radius: 8px;}
     .product-list--scrollable .product-item:first-child{border-radius: 8px;}
