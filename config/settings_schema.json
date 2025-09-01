@@ -22,7 +22,7 @@
       }
     ]
   },
-  {
+    {
     "name": "Global Discount",
     "settings": [
       {
@@ -38,6 +38,36 @@
         "type": "text",
         "id": "global_discount_date",
         "label": "Discount end date"
+      },
+      {
+        "type": "color",
+        "id": "discount_bar_bg",
+        "label": "Discount Bar Background",
+        "default": "#FFFF33"
+      },
+      {
+        "type": "color",
+        "id": "discount_bar_color",
+        "label": "Discount Bar color",
+        "default": "#181059"
+      },
+      {
+        "type": "color",
+        "id": "cross_icon_color",
+        "label": "Cross Icon Color",
+        "default": "#181059"
+      },
+      {
+        "type": "color",
+        "id": "discount_badge_bg",
+        "label": "Image Badge bg",
+        "default": "#FFFF33"
+      },
+      {
+        "type": "color",
+        "id": "discount_badge_color",
+        "label": "Image Badge Color",
+        "default": "#181059"
       }
     ]
   },
@@ -112,7 +142,7 @@
         "type": "color",
         "id": "background",
         "label": "Background",
-        "default": "#f3f5f6"
+        "default": "#ffffff"
       },
       {
         "type": "color",
@@ -603,6 +633,6 @@
         "label": "Image",
         "info": "96 x 96px .png recommended"
       }
-    ]
+    ] 
   }
 ]

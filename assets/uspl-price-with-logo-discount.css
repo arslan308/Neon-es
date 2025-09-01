@@ -31,13 +31,11 @@ margin-bottom: 10px;
 }
 /* checkbox to radio css start */
 .lead_page_UK_price_with_logo_discount .static-save-text {
-background: #715AEF;
 padding: 10px 24px;
 position: absolute;
 top: 2%;
 right: 2%;
 font-family: SF Pro Display Bold;
-color: #fff;
 font-size: 13px;
 font-weight: 700;
 line-height: 16.59px;
@@ -3472,6 +3470,18 @@ body.lead_page_UK_price_with_logo_discount button.custom-slide-arrow svg {
 }
 }
 
+.toggle-container .product-rating-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.toggle-container .product-rating-wrapper .rating-star-images{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 @media screen and (max-width: 640px) {
     .rating-text{
         font-size: 12px;
@@ -3922,7 +3932,7 @@ body.lead_page_UK_price_with_logo_discount .image-with-text__text-aligner .rte >
 }
 .lead_page_UK_price_with_logo_discount .variationwrapper .receive-list{padding: 0;}
   .lead_page_UK_price_with_logo_discount .normal-price {
-    width: 65%;
+    width: 54%;
 }
 .lead_page_UK_price_with_logo_discount .mobile-wrapper-1 {
   padding: 0 24px;
@@ -4181,7 +4191,7 @@ padding: 0;
 }
 
 .lead_page_UK_price_with_logo_discount .popup .close {
-    color: #Fff;
+    color: #Fff; 
     font-size: 50px;
     height: 30px;
 }
