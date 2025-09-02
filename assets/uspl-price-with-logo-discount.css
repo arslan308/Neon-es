@@ -1858,6 +1858,7 @@ flex: 0 0 40%;
     height: 533px;
     object-fit: cover;
     object-position: top;
+    width: 100%;
 }
 .lead_page_UK_price_with_logo_discount.product-image-section .product-images {
     max-width: calc(60% - 10px) !important;
