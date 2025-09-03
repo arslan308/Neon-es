@@ -4,7 +4,7 @@
     <span class="product-form__info-title text--strong">{{ 'product.form.price' | t }}:</span>
 
       {% assign global_discount = settings.global_discount | plus: 0 %}
-      {% if settings.global_discount != blank and global_discount > 0 %}
+          {% if settings.global_discount != blank and global_discount > 0 and template.name != 'product' %}
           {%- assign discount_percent = settings.global_discount | default: 0 -%}
           {%- assign discount_factor = 100 | minus: discount_percent | divided_by: 100.0 -%}
           {%- assign variant_price = selected_variant.price 
