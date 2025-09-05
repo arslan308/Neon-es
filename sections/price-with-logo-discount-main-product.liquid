@@ -398,7 +398,10 @@
                       <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_9.svg?v=1756727063" alt="Star Rating" /> 
                       <img src="https://cdn.shopify.com/s/files/1/0779/7686/3066/files/Vector_9.svg?v=1756727063" alt="Star Rating" /> 
                     </div>
-                    <span class="rating-text"><strong>4.9 </strong>(934 reviews)</span>
+                    <span class="rating-text">
+                        <strong>{{ section.settings.rating_number }}</strong> 
+                        ({{ section.settings.review_count }})
+                    </span>
                     {% comment %} {% assign rating_data = product.metafields.custom.rating_and_reviews | split: "|" %}
                     {% assign rating = rating_data[0] %}
                     {% assign review_count = rating_data[1] %}
