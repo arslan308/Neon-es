@@ -124,6 +124,7 @@
 {% assign matched_image = section.settings.form_user_image %}
 {% assign matched_name = section.settings.support_name %}
 {% assign matched_phone = section.settings.support_phone %}
+{% assign whatsapp_number = section.settings.contact_number %}
 
 {% for block in section.blocks %}
   {% if block.type == 'Custom_Agent' %}
@@ -131,6 +132,7 @@
     {% if block_agent_name == agent_name %}
       {% assign matched_image = block.settings.Agent_image %}
       {% assign matched_phone = block.settings.Agent_phone %}
+      {% assign whatsapp_number = block.settings.Agent_whatsapp %}
       {% assign matched_name  = block_agent_name %}
       {% break %}
     {% endif %}
@@ -141,7 +143,11 @@
 {% assign chatbot_delay = section.settings.chatbot_delay | default: 0 | times: 1000 %}
 {% assign chatbot_icon_delay = section.settings.chatbot_icon_delay | default: 0 | times: 1000 %}
 {% assign chatbot_message = section.settings.chatbot_message %}
-{% assign whatsapp_url = 'https://wa.me/' | append: matched_phone %}
+{% if whatsapp_number != blank %}
+  {% assign whatsapp_url = 'https://wa.me/' | append: whatsapp_number %}
+{% else %}
+  {% assign whatsapp_url = 'https://wa.me/' | append: matched_phone %}
+{% endif %}
 
 {% if show_chatbot %}
   <div id="chatbot-icon" onclick="toggleChatbotModal('open')">
@@ -3902,6 +3908,12 @@ document.addEventListener("DOMContentLoaded", function() {
           "id": "Agent_phone",
           "label": "Agent Phone",
           "info": "Enter Agent Phone Number"
+        },
+        {
+          "type": "text",
+          "id": "Agent_whatsapp",
+          "label": "Agent Whatsapp",
+          "info": "Enter Agent Whatsapp Number"
         },
         {
           "type": "text",
