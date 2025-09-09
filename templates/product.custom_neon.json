@@ -32,6 +32,7 @@
             "Agent_name": "Agent2Name",
             "Agent_email": "agent@gmail.com",
             "Agent_phone": "+92301010101",
+            "Agent_whatsapp": "",
             "Agent_image": "https://cdn.shopify.com/s/files/1/0806/6672/2650/files/confident-middle-aged-business-man-260nw-2516789501.webp?v=1753978590"
           }
         },
@@ -41,6 +42,7 @@
             "Agent_name": "AgentName",
             "Agent_email": "agent@gmail.com",
             "Agent_phone": "+92301010101",
+            "Agent_whatsapp": "",
             "Agent_image": "https://cdn.shopify.com/s/files/1/0806/6672/2650/files/images.jpg?v=1753977102"
           }
         },
@@ -218,9 +220,11 @@
         "mail_sendmodel": "Deja tu pregunta a continuación y te responderé en breve, normalmente en menos de 15 minutos.",
         "mailsend_button": "Enviar",
         "speacialist_msg": "Neon Specialist",
-        "model_detail_message": "<p>¿Tienes alguna pregunta? No dudes en llamarme al [phone] o utiliza cualquiera de las opciones de contacto que aparecen a continuación. Normalmente respondo en un plazo de 15 minutos.</p>",
+        "model_detail_message": "<p>¿Tienes preguntas? Llámame directamente al <strong>[phone]</strong> o escríbeme por WhatsApp/Email. Normalmente respondo en menos de 15 minutos.</p>",
         "custom_text": "Haré todo lo posible por responder por correo electrónico en un plazo de 15 minutos.",
         "contact_number": "",
+        "rating_number": "4.9",
+        "review_count": "934 reviews",
         "SectionTitle": "",
         "timer": "",
         "atc_show": false,
