@@ -41,7 +41,7 @@
         "show_country_selector": false,
         "navigation_menu": "main-menu",
         "navigation_mobile_menu": "",
-        "discount_bar_text": "[discount_percentage] de descuento Back2Work termina en [timer]",
+        "discount_bar_text": "[discount_percentage] de descuento termina en [timer]",
         "timer_labels": "d,h,m,s",
         "desktop_navigation_layout": "inline",
         "desktop_navigation_open_trigger": "hover",
